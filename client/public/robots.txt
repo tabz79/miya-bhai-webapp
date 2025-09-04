@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://miya-bhai-food-court.repl.co/sitemap.xml
+
+# Allow search engines to index our menu and restaurant info
+Allow: /menu
+Allow: /profile
+
+# Disallow cart and admin areas
+Disallow: /cart
+Disallow: /admin
+
+# Crawl delay for better performance
+Crawl-delay: 1

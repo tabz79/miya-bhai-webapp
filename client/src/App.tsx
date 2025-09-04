@@ -1,17 +1,27 @@
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { MobileFrame } from "@/components/ui/MobileFrame";
 import NotFound from "@/pages/not-found";
 
-import { HomeScreen } from "@/pages/HomeScreen";
+import { Home } from "@/pages/Home";
+import { Menu } from "@/pages/Menu";
+import { Cart } from "@/pages/Cart";
+import { Profile } from "@/pages/Profile";
+import { FAQ } from "@/pages/FAQ";
 
 function Router() {
   return (
     <Switch>
       {/* Add pages below */}
-      <Route path="/" component={HomeScreen} />
+      <Route path="/" component={Home} />
+      <Route path="/menu" component={Menu} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/faq" component={FAQ} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
@@ -21,10 +31,14 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
+      <HelmetProvider>
+        <TooltipProvider>
+          <Toaster />
+          <MobileFrame>
+            <Router />
+          </MobileFrame>
+        </TooltipProvider>
+      </HelmetProvider>
     </QueryClientProvider>
   );
 }

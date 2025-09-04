@@ -7,6 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Design tokens from tokens.json
+        'app-background': '#EDE9E4', // Background.Beige
+        'app-foreground': '#000000', // Text.HeroPrimary
+        'bestseller-bg': '#4E4739', // BestSeller.Background
+        'brand-tuatara': '#3c3c3b',
+        'brand-teak': '#ae905c',
+        'brand-tobacco': '#675b46',
+        'brand-goben': '#746d52',
+        
+        // Existing colors
         colorbackgroundbeige: "var(--colorbackgroundbeige)",
         colorbackgroundbestseller: "var(--colorbackgroundbestseller)",
         colorbackgroundcartbutton: "var(--colorbackgroundcartbutton)",
@@ -104,6 +114,11 @@ module.exports = {
         ],
       },
       boxShadow: {
+        // Design tokens shadows
+        'searchbox': '0px 1px 4px rgba(0,0,0,0.25)',
+        'card': '0px 2px 8px rgba(0,0,0,0.10)',
+        
+        // Existing shadows
         "color-background-bestseller-shadow":
           "var(--color-background-bestseller-shadow)",
         "effect-card-shadow": "var(--effect-card-shadow)",
