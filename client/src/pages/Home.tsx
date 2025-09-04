@@ -38,25 +38,28 @@ export function Home() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-app-background">
+    <div className="w-[393px] min-h-screen bg-app-background mx-auto">
       <MetaTags
         title="Miya Bhai Food Court - Authentic Middle Eastern & Indian Cuisine"
         description="Experience the finest Arabian Mandi, Chicken Biryani, Kebabs, and Shawarma at Miya Bhai Food Court. Fresh ingredients, traditional recipes, and exceptional flavors since 1995."
       />
       <JsonLD type="restaurant" />
-      {/* 1. Toolbar (56px) with SearchBarPill */}
+      
+      {/* 1. Toolbar (exact 56px height) */}
       <Toolbar />
 
-      {/* 2. HeroCarousel (393×215) */}
+      {/* 2. HeroCarousel (exact 393×215) */}
       <HeroCarousel />
 
-      {/* 3. BestSellersStrip (137px, bg dark) */}
+      {/* 3. BestSellersStrip (exact 137px height, dark bg) */}
       <BestSellersStrip />
 
-      {/* 4. DeliveryAd (104px, white, card shadow) */}
-      <DeliveryAd />
+      {/* 4. DeliveryAd (exact 104px height, with proper spacing) */}
+      <div className="px-4 py-4">
+        <DeliveryAd />
+      </div>
 
-      {/* 5. MenuHeader + MenuGrid (8 cards) */}
+      {/* 5. MenuHeader + MenuGrid (8 cards in 4x2 layout) */}
       <MenuHeader
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
@@ -73,7 +76,7 @@ export function Home() {
         onPageChange={setCurrentPage}
       />
 
-      {/* 6. Spacer for BottomNav */}
+      {/* 6. Spacer for BottomNav (exact 49px) */}
       <div className="h-[49px]" />
 
       {/* BottomNav */}

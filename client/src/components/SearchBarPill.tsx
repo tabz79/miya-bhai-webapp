@@ -7,8 +7,8 @@ export function SearchBarPill() {
   return (
     <div 
       className={`
-        h-9 bg-white shadow-searchbox rounded-[20px] flex items-center px-4
-        ${isExpanded ? 'w-full' : 'w-[180px]'}
+        h-[36px] bg-white shadow-searchbox rounded-[20px] flex items-center px-4
+        ${isExpanded ? 'w-full max-w-[280px]' : 'w-[180px]'}
         transition-all duration-200 ease-in-out
       `}
       onClick={() => setIsExpanded(true)}
