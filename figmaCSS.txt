@@ -1,0 +1,3023 @@
+/* Home Screen */
+
+position: relative;
+width: 393px;
+height: 852px;
+
+background: #FFFFFF;
+
+
+/* Bottom Navigation */
+
+position: absolute;
+width: 393px;
+height: 49px;
+left: 0px;
+top: 803px;
+
+
+
+/* menu frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0px 14px;
+gap: 15px;
+
+position: absolute;
+width: 393px;
+height: 235px;
+left: 0px;
+top: 559px;
+
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart ButtonAdd-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Menu card-1 */
+
+width: 80px;
+height: 110px;
+
+/* Color/Surface/MenuCard */
+background: #FFFFFF;
+/* Effect/Shadow/MenuCard */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+
+
+/* Frame 30 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 9px;
+left: 0px;
+top: 84px;
+
+
+
+/* Chicken Biryani */
+
+width: 78px;
+height: 7px;
+
+/* Typography/Menu/DishName */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuDishName */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 18px;
+height: 7px;
+left: 22px;
+top: 96px;
+
+
+
+/* ₹ 250 */
+
+width: 18px;
+height: 7px;
+
+/* Typography/Menu/Price */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuPrice */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Add-to-Cart Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 3px;
+gap: 10px;
+
+position: absolute;
+width: 10px;
+height: 10px;
+left: 51px;
+top: 95px;
+
+/* Color/Background/CartButton */
+background: #ECECEC;
+/* Effect/Shadow/CartButton */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px;
+
+
+/* Vector */
+
+width: 5px;
+height: 4px;
+
+/* Color/Icon/Cart */
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 9 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 80px;
+height: 82px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* chickenbiryani-menu.png */
+
+width: 80px;
+height: 82px;
+
+background: url(Untitled design (8).png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* menu title frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 3px;
+isolation: isolate;
+
+position: absolute;
+width: 200px;
+height: 27px;
+left: calc(50% - 200px/2 - 81.5px);
+top: 523px;
+
+
+
+/* Frame 28 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px;
+gap: 10px;
+
+width: 85px;
+height: 27px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Our Signatures */
+
+width: 85px;
+height: 7px;
+
+/* Typography/Menu/Title */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 7px;
+/* identical to box height, or 58% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/MenuTitle */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 27 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 6px;
+gap: 7px;
+
+position: absolute;
+width: 39px;
+height: 10px;
+left: 161px;
+top: 9px;
+
+opacity: 0.7;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Grid Navigation Button-left */
+
+box-sizing: border-box;
+
+width: 10px;
+height: 10px;
+
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 32.33%;
+right: 30.17%;
+top: 51.27%;
+bottom: 46.23%;
+
+background: #000000;
+transform: rotate(-135deg);
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 32.34%;
+right: 30.16%;
+top: 22.98%;
+bottom: 74.52%;
+
+background: #000000;
+transform: rotate(135deg);
+
+
+/* Grid Navigation Button-right */
+
+box-sizing: border-box;
+
+width: 10px;
+height: 10px;
+
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 37.63%;
+right: 24.87%;
+top: 49.48%;
+bottom: 48.02%;
+
+background: #000000;
+transform: rotate(-45deg);
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 37.61%;
+right: 24.89%;
+top: 24.75%;
+bottom: 72.75%;
+
+background: #000000;
+transform: rotate(45deg);
+
+
+/* Category Pill */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 5px 7px;
+gap: 3px;
+
+position: absolute;
+width: 60px;
+height: 20px;
+left: 93px;
+top: 4px;
+
+/* Color/Background/CategorySelector */
+border: 2px solid #E5E7EB;
+border-radius: 53px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Main Course */
+
+width: 29px;
+height: 5px;
+
+/* Typography/Menu/CategoryText */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 5px;
+line-height: 5px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+/* Color/Text/CategoryText */
+color: #000000;
+
+/* Effect/Text Shadow/CategoryText */
+text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Dropdown Toggle Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 2px;
+gap: 10px;
+
+width: 10px;
+height: 10px;
+
+/* Color/Text/CategoryText */
+background: #ECECEC;
+border-radius: 45px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 6px;
+height: 3px;
+
+background: #000000;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* delivery ad frame */
+
+position: absolute;
+width: 393px;
+height: 104px;
+left: 0px;
+top: 408px;
+
+/* Effect/Image Shadow/Card */
+filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+
+/* DeliveryGuy.png */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 96px;
+height: 83px;
+left: calc(50% - 96px/2 + 48.5px);
+top: calc(50% - 83px/2 + 5.5px);
+
+background: url(.png);
+
+
+/* Frame 24 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 9px;
+
+position: absolute;
+width: 162px;
+height: 53px;
+left: 17px;
+top: 48px;
+
+
+
+/* We Guarantee */
+
+width: 162px;
+height: 7px;
+
+/* Typography/DeliveryAd/Heading */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 7px;
+/* identical to box height, or 47% */
+display: flex;
+align-items: center;
+
+/* Color/Text/DeliveryAdHeading */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 20 Minutes Delivery! */
+
+width: 162px;
+height: 7px;
+
+/* Typography/DeliveryAd/Highlight */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 7px;
+/* identical to box height, or 70% */
+display: flex;
+align-items: center;
+
+/* Color/Text/DeliveryAdHighlight */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 20-Minutes Delivery Guarantee! Miya Bhai is the only restaurant chain
+in Khammam that runs in house delivery & guarantees 
+your order will arrive within 20 minutes or we’ll give you a free Regular. */
+
+width: 162px;
+height: 21px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 5px;
+line-height: 7px;
+/* or 140% */
+display: flex;
+align-items: center;
+
+/* Color/Text/DeliveryAdBody */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 26 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 5px;
+
+position: absolute;
+width: 62px;
+height: 22px;
+left: 314px;
+top: 77px;
+
+
+
+/* 125 */
+
+width: 62px;
+height: 7px;
+
+/* Typography/DeliveryAd/CTA */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 18px;
+/* or 180% */
+display: flex;
+align-items: center;
+
+/* Color/Text/DeliveryAdCTA */
+color: #222222;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 25 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 3px;
+
+width: 62px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* delivery-icon.png */
+
+width: 7px;
+height: 5.5px;
+
+background: url(.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vertical Divider */
+
+width: 1px;
+height: 7px;
+
+/* Color/Icon/Delivery */
+background: #E3E3E3;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* +91 9581481515 */
+
+width: 41px;
+height: 10px;
+
+/* Typography/DeliveryAd/PhoneNumber */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 5px;
+line-height: 24px;
+/* or 480% */
+display: flex;
+align-items: center;
+
+/* Color/Text/DeliveryAdPhone */
+color: #222222;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* full best seller frame */
+
+position: absolute;
+width: 393px;
+height: 137px;
+left: 0px;
+top: 271px;
+
+/* Color/Background/BestSeller */
+background: #4E4739;
+/* Color/Background/BestSeller/Shadow */
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+
+/* Frame 22 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+position: absolute;
+width: 26px;
+height: 10px;
+left: 32px;
+top: 91px;
+
+
+
+/* Scroll Control Buttons */
+
+box-sizing: border-box;
+
+width: 10px;
+height: 10px;
+
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 32.33%;
+right: 30.17%;
+top: 51.27%;
+bottom: 46.23%;
+
+background: #000000;
+transform: rotate(-135deg);
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 32.34%;
+right: 30.16%;
+top: 22.98%;
+bottom: 74.52%;
+
+background: #000000;
+transform: rotate(135deg);
+
+
+/* Scroll Control Buttons */
+
+box-sizing: border-box;
+
+width: 10px;
+height: 10px;
+
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 37.62%;
+right: 24.88%;
+top: 49.48%;
+bottom: 48.02%;
+
+background: #000000;
+transform: rotate(-45deg);
+
+
+/* Horizontal Divider */
+
+position: absolute;
+left: 37.61%;
+right: 24.89%;
+top: 24.75%;
+bottom: 72.75%;
+
+background: #000000;
+transform: rotate(45deg);
+
+
+/* Frame 21 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 6px;
+
+position: absolute;
+width: 62px;
+height: 40px;
+left: 14px;
+top: 46px;
+
+
+
+/* Signature */
+
+width: 62px;
+height: 17px;
+
+/* Typography/Section/Title */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 17px;
+/* identical to box height, or 106% */
+display: flex;
+align-items: center;
+
+/* Color/Text/SectionTitle */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Best Sellers */
+
+width: 62px;
+height: 17px;
+
+/* Typography/Section/Title */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 17px;
+/* identical to box height, or 106% */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Best seller cards frame */
+
+position: absolute;
+width: 315px;
+height: 137px;
+left: 78px;
+top: 271px;
+
+
+
+/* Frame 23 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 15px;
+
+position: absolute;
+width: 285px;
+height: 100px;
+left: 12px;
+top: 19px;
+
+
+
+/* Background+Shadow */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 16px;
+gap: 4px;
+isolation: isolate;
+
+width: 60px;
+height: 100px;
+
+/* Color/Surface/Card */
+background: #FFFFFF;
+/* Effect/Card Shadow */
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+border-radius: 95px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* chickenbiryani-bestseller.png */
+
+width: 45px;
+height: 45px;
+
+background: url(Untitled design (7).png);
+/* Effect/Image Shadow/Card */
+filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Chicken Biryani */
+
+position: absolute;
+width: 47px;
+height: 7px;
+left: 7px;
+top: 58px;
+
+/* Typography/Card/Title */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Effect/Text Shadow/CardTitle */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Slow cooked rice, Chicken, enriched with Nizami spices */
+
+position: absolute;
+width: 34px;
+height: 26px;
+left: 13px;
+top: 69px;
+
+/* Typography/Card/Description */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 6px;
+/* or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/CardDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Background+Shadow */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 16px;
+gap: 4px;
+isolation: isolate;
+
+width: 60px;
+height: 100px;
+
+/* Color/Surface/Card */
+background: #FFFFFF;
+/* Effect/Card Shadow */
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+border-radius: 95px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* arabianmandi-bestseller.png */
+
+width: 45px;
+height: 45px;
+
+background: url(Untitled design (6).png);
+/* Effect/Image Shadow/Card */
+filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Arabian Mandi */
+
+position: absolute;
+width: 45px;
+height: 7px;
+left: 8px;
+top: 58px;
+
+/* Typography/Card/Title */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Effect/Text Shadow/CardTitle */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Aromatic rice, tender Meat with Middle Eastern spices. */
+
+position: absolute;
+width: 34px;
+height: 26px;
+left: 13px;
+top: 69px;
+
+/* Typography/Card/Description */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 6px;
+/* or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/CardDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Background+Shadow */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 16px;
+gap: 4px;
+isolation: isolate;
+
+width: 60px;
+height: 100px;
+
+/* Color/Surface/Card */
+background: #FFFFFF;
+/* Effect/Card Shadow */
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+border-radius: 95px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Shawarma-bestseller.png */
+
+width: 45px;
+height: 45px;
+
+background: url(Untitled design (3).png);
+/* Effect/Image Shadow/Card */
+filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Shawarma */
+
+position: absolute;
+width: 33px;
+height: 7px;
+left: 13px;
+top: 58px;
+
+/* Typography/Card/Title */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Effect/Text Shadow/CardTitle */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Juicy nizami meat rolled in a bread */
+
+position: absolute;
+width: 34px;
+height: 26px;
+left: 13px;
+top: 69px;
+
+/* Typography/Card/Description */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 6px;
+/* or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/CardDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Background+Shadow */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 16px;
+gap: 4px;
+isolation: isolate;
+
+width: 60px;
+height: 100px;
+
+/* Color/Surface/Card */
+background: #FFFFFF;
+/* Effect/Card Shadow */
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+border-radius: 95px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* kebeb-bestseller.png */
+
+width: 45px;
+height: 45px;
+
+background: url(Untitled design (4).png);
+/* Effect/Image Shadow/Card */
+filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Kebeb */
+
+position: absolute;
+width: 20px;
+height: 7px;
+left: 20px;
+top: 58px;
+
+/* Typography/Card/Title */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 6.5px;
+line-height: 7px;
+/* identical to box height, or 108% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Effect/Text Shadow/CardTitle */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Charcoal grilled meat, marinated in Nizami blends. */
+
+position: absolute;
+width: 34px;
+height: 26px;
+left: 13px;
+top: 67px;
+
+/* Typography/Card/Description */
+font-family: 'Carattere';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 6px;
+/* or 100% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Color/Text/CardDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Hero frame */
+
+position: absolute;
+width: 393px;
+height: 215px;
+left: 0px;
+top: 56px;
+
+/* Color/Background/Beige */
+background: #EDE9E4;
+
+
+/* Carousel Indicators */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 3px 5px;
+gap: 5px;
+
+position: absolute;
+width: 36px;
+height: 11px;
+left: 260px;
+top: 180px;
+
+
+
+/* Overlay+Shadow */
+
+width: 4px;
+height: 4px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 0px 0px 1px #007A4B;
+border-radius: 18px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Tab - 2 of 3 */
+
+width: 3px;
+height: 3px;
+
+background: #000000;
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Tab - 3 of 3 */
+
+width: 7px;
+height: 3px;
+
+background: #000000;
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 17 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 130px;
+height: 85px;
+left: 16px;
+top: 95px;
+
+
+
+/* Experience the Legendary */
+
+width: 130px;
+height: 17px;
+
+/* Typography/Hero/Description */
+font-family: 'Aref Ruqaa';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* taste that has made */
+
+width: 130px;
+height: 17px;
+
+/* Typography/Hero/Description */
+font-family: 'Aref Ruqaa';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Miya Bhai */
+
+width: 130px;
+height: 17px;
+
+/* Typography/Hero/Description-b */
+font-family: 'Aref Ruqaa';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* a household name across */
+
+width: 130px;
+height: 17px;
+
+/* Typography/Hero/Description */
+font-family: 'Aref Ruqaa';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* generations. */
+
+width: 130px;
+height: 17px;
+
+/* Typography/Hero/Description */
+font-family: 'Aref Ruqaa';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroDescription */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 16 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 230px;
+height: 114px;
+left: 163px;
+top: 66px;
+
+
+
+/* HeroImage */
+
+width: 210px;
+height: 95.45px;
+
+background: url(b2efd82f-845e-427a-852f-27f1fb4c1bd6.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0px;
+gap: 6px 8px;
+
+position: absolute;
+width: 197px;
+height: 40px;
+left: 16px;
+top: 26px;
+
+
+
+/* Nizam’s */
+
+width: 78px;
+height: 17px;
+
+/* Typography/Hero/H1 */
+font-family: 'Aref Ruqaa Ink';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 17px;
+/* identical to box height, or 85% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroPrimary */
+color: #000000;
+
+/* Effect/Text Shadow/HeroH1 */
+text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Royal Flavours, */
+
+width: 111px;
+height: 17px;
+
+/* Typography/Hero/H2 */
+font-family: 'Aref Ruqaa Ink';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 17px;
+/* identical to box height, or 113% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroPrimary */
+color: #000000;
+
+/* Effect/Text Shadow/HeroH2 */
+text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Perfected since 1960 */
+
+width: 136px;
+height: 17px;
+
+/* Typography/Her/Tagline */
+font-family: 'Aref Ruqaa Ink';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height, or 121% */
+display: flex;
+align-items: center;
+
+/* Color/Text/HeroPrimary */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* top tool bar(logo + Search) frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 16px;
+gap: 10px;
+isolation: isolate;
+
+position: absolute;
+width: 393px;
+height: 56px;
+left: 0px;
+top: 0px;
+
+/* Color/Background/Beige */
+background: #EDE9E4;
+
+
+/* logo 2 */
+
+width: 70px;
+height: 44px;
+
+background: url(logo.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* SearchBarPill */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 10px;
+gap: 66px;
+
+position: absolute;
+width: 180px;
+height: 36px;
+left: 197px;
+top: 10px;
+
+/* Color/Background/SearchField */
+background: #F3F4F6;
+/* Effect/Shadow/SearchBox */
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Search Dishes */
+
+width: 70px;
+height: 17px;
+
+/* Typography/Body/SearchPlaceholder */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 17px;
+/* identical to box height, or 155% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Search
+
+Keywords: find, magnifier, magnifying glass
+*/
+
+width: 20px;
+height: 20px;
+
+/* Color/Background/SearchField */
+background: #F3F4F6;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Icon */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #1E1E1E;
