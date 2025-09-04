@@ -1,0 +1,334 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --color-background-bestseller-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  --colorbackgroundbeige: rgba(237, 233, 228, 1);
+  --colorbackgroundbestseller: rgba(78, 71, 57, 1);
+  --colorbackgroundcartbutton: rgba(236, 236, 236, 1);
+  --colorbackgroundcategoryselector: rgba(229, 231, 235, 1);
+  --colorbackgroundsearchfield: rgba(243, 244, 246, 1);
+  --coloriconcart: rgba(0, 0, 0, 1);
+  --coloricondelivery: rgba(227, 227, 227, 1);
+  --colorsurfacecard: rgba(255, 255, 255, 1);
+  --colorsurfacemenucard: rgba(255, 255, 255, 1);
+  --colortextcarddescription: rgba(0, 0, 0, 1);
+  --colortextcategorytext: rgba(236, 236, 236, 1);
+  --colortextdeliveryadcta: rgba(34, 34, 34, 1);
+  --colortextdeliveryadheading: rgba(0, 0, 0, 1);
+  --colortextdeliveryadhighlight: rgba(0, 0, 0, 1);
+  --colortextdeliveryadphone: rgba(34, 34, 34, 1);
+  --colortextherodescription: rgba(0, 0, 0, 1);
+  --colortextheroprimary: rgba(0, 0, 0, 1);
+  --colortextmenudishname: rgba(0, 0, 0, 1);
+  --colortextmenuprice: rgba(0, 0, 0, 1);
+  --colortextmenutitle: rgba(0, 0, 0, 1);
+  --colortextsectiontitle: rgba(255, 255, 255, 1);
+  --effect-card-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  --effect-image-shadow-card: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-shadow-cartbutton: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-shadow-menucard: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-shadow-searchbox: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-text-shadow-categorytext: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-text-shadow-heroh1: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  --effect-text-shadow-heroh2: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  --effecttext-shadowcardtitle: rgba(0, 0, 0, 1);
+  --typography-body-searchplaceholder-font-family: "Nunito", Helvetica;
+  --typography-body-searchplaceholder-font-size: 11px;
+  --typography-body-searchplaceholder-font-style: normal;
+  --typography-body-searchplaceholder-font-weight: 400;
+  --typography-body-searchplaceholder-letter-spacing: 0px;
+  --typography-body-searchplaceholder-line-height: 17px;
+  --typography-card-description-font-family: "Carattere", Helvetica;
+  --typography-card-description-font-size: 6px;
+  --typography-card-description-font-style: normal;
+  --typography-card-description-font-weight: 400;
+  --typography-card-description-letter-spacing: 0px;
+  --typography-card-description-line-height: 6px;
+  --typography-card-title-font-family: "Nunito", Helvetica;
+  --typography-card-title-font-size: 6.5px;
+  --typography-card-title-font-style: normal;
+  --typography-card-title-font-weight: 700;
+  --typography-card-title-letter-spacing: 0px;
+  --typography-card-title-line-height: 7px;
+  --typography-deliveryad-CTA-font-family: "Nunito", Helvetica;
+  --typography-deliveryad-CTA-font-size: 10px;
+  --typography-deliveryad-CTA-font-style: normal;
+  --typography-deliveryad-CTA-font-weight: 700;
+  --typography-deliveryad-CTA-letter-spacing: 0px;
+  --typography-deliveryad-CTA-line-height: 18px;
+  --typography-deliveryad-heading-font-family: "Carattere", Helvetica;
+  --typography-deliveryad-heading-font-size: 15px;
+  --typography-deliveryad-heading-font-style: normal;
+  --typography-deliveryad-heading-font-weight: 400;
+  --typography-deliveryad-heading-letter-spacing: 0px;
+  --typography-deliveryad-heading-line-height: 7px;
+  --typography-deliveryad-highlight-font-family: "Nunito", Helvetica;
+  --typography-deliveryad-highlight-font-size: 10px;
+  --typography-deliveryad-highlight-font-style: normal;
+  --typography-deliveryad-highlight-font-weight: 700;
+  --typography-deliveryad-highlight-letter-spacing: 0px;
+  --typography-deliveryad-highlight-line-height: 7px;
+  --typography-deliveryad-phonenumber-font-family: "Nunito", Helvetica;
+  --typography-deliveryad-phonenumber-font-size: 5px;
+  --typography-deliveryad-phonenumber-font-style: normal;
+  --typography-deliveryad-phonenumber-font-weight: 700;
+  --typography-deliveryad-phonenumber-letter-spacing: 0px;
+  --typography-deliveryad-phonenumber-line-height: 24px;
+  --typography-her-tagline-font-family: "Aref Ruqaa Ink", Helvetica;
+  --typography-her-tagline-font-size: 14px;
+  --typography-her-tagline-font-style: normal;
+  --typography-her-tagline-font-weight: 700;
+  --typography-her-tagline-letter-spacing: 0px;
+  --typography-her-tagline-line-height: 17px;
+  --typography-hero-description-b-font-family: "Aref Ruqaa", Helvetica;
+  --typography-hero-description-b-font-size: 11px;
+  --typography-hero-description-b-font-style: normal;
+  --typography-hero-description-b-font-weight: 700;
+  --typography-hero-description-b-letter-spacing: 0px;
+  --typography-hero-description-b-line-height: 17px;
+  --typography-hero-description-font-family: "Aref Ruqaa", Helvetica;
+  --typography-hero-description-font-size: 11px;
+  --typography-hero-description-font-style: normal;
+  --typography-hero-description-font-weight: 400;
+  --typography-hero-description-letter-spacing: 0px;
+  --typography-hero-description-line-height: 17px;
+  --typography-hero-h1-font-family: "Aref Ruqaa Ink", Helvetica;
+  --typography-hero-h1-font-size: 20px;
+  --typography-hero-h1-font-style: normal;
+  --typography-hero-h1-font-weight: 700;
+  --typography-hero-h1-letter-spacing: 0px;
+  --typography-hero-h1-line-height: 17px;
+  --typography-hero-h2-font-family: "Aref Ruqaa Ink", Helvetica;
+  --typography-hero-h2-font-size: 15px;
+  --typography-hero-h2-font-style: normal;
+  --typography-hero-h2-font-weight: 700;
+  --typography-hero-h2-letter-spacing: 0px;
+  --typography-hero-h2-line-height: 17px;
+  --typography-menu-categorytext-font-family: "Nunito", Helvetica;
+  --typography-menu-categorytext-font-size: 5px;
+  --typography-menu-categorytext-font-style: normal;
+  --typography-menu-categorytext-font-weight: 600;
+  --typography-menu-categorytext-letter-spacing: 0px;
+  --typography-menu-categorytext-line-height: 5px;
+  --typography-menu-dishname-font-family: "Nunito", Helvetica;
+  --typography-menu-dishname-font-size: 6.5px;
+  --typography-menu-dishname-font-style: normal;
+  --typography-menu-dishname-font-weight: 700;
+  --typography-menu-dishname-letter-spacing: 0px;
+  --typography-menu-dishname-line-height: 7px;
+  --typography-menu-price-font-family: "Nunito", Helvetica;
+  --typography-menu-price-font-size: 6.5px;
+  --typography-menu-price-font-style: normal;
+  --typography-menu-price-font-weight: 700;
+  --typography-menu-price-letter-spacing: 0px;
+  --typography-menu-price-line-height: 7px;
+  --typography-menu-title-font-family: "Nunito", Helvetica;
+  --typography-menu-title-font-size: 12px;
+  --typography-menu-title-font-style: normal;
+  --typography-menu-title-font-weight: 700;
+  --typography-menu-title-letter-spacing: 0px;
+  --typography-menu-title-line-height: 7px;
+  --typography-section-title-font-family: "Carattere", Helvetica;
+  --typography-section-title-font-size: 16px;
+  --typography-section-title-font-style: normal;
+  --typography-section-title-font-weight: 400;
+  --typography-section-title-letter-spacing: 0px;
+  --typography-section-title-line-height: 17px;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
