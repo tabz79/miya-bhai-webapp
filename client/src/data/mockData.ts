@@ -10,6 +10,7 @@ export interface Bestseller {
   name: string;
   price: number;
   image: string;
+  description: string;
 }
 
 export interface MenuItem {
@@ -28,12 +29,36 @@ export interface HeroSlide {
   description?: string;
 }
 
-// Bestsellers data (4 items as specified)
+// Bestsellers data - exact Figma content
 export const bestsellers: Bestseller[] = [
-  { id: "b1", name: "Arabian Mandi", price: 599, image: bestArabian },
-  { id: "b2", name: "Chicken Biryani", price: 249, image: bestChicken },
-  { id: "b3", name: "Kebeb", price: 199, image: bestKebeb },
-  { id: "b4", name: "Shawarma", price: 149, image: bestShawarma }
+  { 
+    id: "b1", 
+    name: "Chicken Biryani", 
+    price: 250, 
+    image: bestChicken,
+    description: "Slow cooked rice, Chicken, enriched with Nizami spices"
+  },
+  { 
+    id: "b2", 
+    name: "Arabian Mandi", 
+    price: 599, 
+    image: bestArabian,
+    description: "Aromatic rice, tender Meat with Middle Eastern spices."
+  },
+  { 
+    id: "b3", 
+    name: "Shawarma", 
+    price: 149, 
+    image: bestShawarma,
+    description: "Juicy nizami meat rolled in a bread"
+  },
+  { 
+    id: "b4", 
+    name: "Kebeb", 
+    price: 199, 
+    image: bestKebeb,
+    description: "Charcoal grilled meat, marinated in Nizami blends."
+  }
 ];
 
 // Hero carousel data (1 image now, expandable for ≥3 future)

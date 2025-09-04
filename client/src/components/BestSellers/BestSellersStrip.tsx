@@ -39,32 +39,21 @@ export function BestSellersStrip() {
   };
 
   return (
-    <section className="relative w-full h-[137px] bg-bestseller-bg">
-      {/* Title */}
-      <div className="pt-4 pb-3 px-4">
-        <h2 className="text-white font-semibold text-lg">Best Sellers</h2>
+    <section className="w-full h-[137px] bg-colorbackgroundbestseller relative">
+      {/* Bestseller cards - exact Figma layout */}
+      <div className="flex items-center gap-[15px] px-3 pt-[19px]">
+        {bestsellers.map((item) => (
+          <BestSellerCard key={item.id} item={item} />
+        ))}
       </div>
 
-      {/* Scrollable container */}
-      <div className="relative">
-        <div
-          ref={scrollRef}
-          className="flex gap-[15px] px-4 pb-4 overflow-x-auto scrollbar-hide"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {bestsellers.map((item) => (
-            <BestSellerCard key={item.id} item={item} />
-          ))}
-        </div>
-
-        {/* Scroll control buttons */}
-        <ScrollControlButtons
-          onScrollLeft={scrollLeft}
-          onScrollRight={scrollRight}
-          showLeft={showLeftButton}
-          showRight={showRightButton}
-        />
-      </div>
+      {/* Scroll control buttons */}
+      <ScrollControlButtons
+        onScrollLeft={scrollLeft}
+        onScrollRight={scrollRight}
+        showLeft={showLeftButton}
+        showRight={showRightButton}
+      />
     </section>
   );
 }

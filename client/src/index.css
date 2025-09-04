@@ -331,4 +331,48 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Figma font family classes */
+  .font-typography-hero-h1 {
+    font-family: var(--typography-hero-h1-font-family);
+  }
+  .font-typography-hero-h2 {
+    font-family: var(--typography-hero-h2-font-family);
+  }
+  .font-typography-her-tagline {
+    font-family: var(--typography-her-tagline-font-family);
+  }
+  .font-typography-hero-description {
+    font-family: var(--typography-hero-description-font-family);
+  }
+  .font-typography-hero-description-b {
+    font-family: var(--typography-hero-description-b-font-family);
+  }
+  .font-typography-card-title {
+    font-family: var(--typography-card-title-font-family);
+  }
+  .font-typography-card-description {
+    font-family: var(--typography-card-description-font-family);
+  }
+  .font-typography-deliveryad-heading {
+    font-family: var(--typography-deliveryad-heading-font-family);
+  }
+  .font-typography-deliveryad-highlight {
+    font-family: var(--typography-deliveryad-highlight-font-family);
+  }
+  .font-typography-deliveryad-CTA {
+    font-family: var(--typography-deliveryad-CTA-font-family);
+  }
+  .font-typography-deliveryad-phonenumber {
+    font-family: var(--typography-deliveryad-phonenumber-font-family);
+  }
+  .font-typography-menu-dishname {
+    font-family: var(--typography-menu-dishname-font-family);
+  }
+  .font-typography-menu-price {
+    font-family: var(--typography-menu-price-font-family);
+  }
+  .font-typography-body-searchplaceholder {
+    font-family: var(--typography-body-searchplaceholder-font-family);
+  }
 }

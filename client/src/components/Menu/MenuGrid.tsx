@@ -18,9 +18,8 @@ export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: 
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="w-[393px] px-4 pb-4">
-      {/* Grid container - exact 4x2 layout with proper spacing */}
-      <div className="grid grid-cols-4 gap-3 justify-items-center">
+    <section className="w-full px-3.5 py-0 relative">
+      <div className="grid grid-cols-4 gap-[15px] w-full max-w-[393px]">
         {currentItems.map((item) => (
           <MenuCard
             key={item.id}
@@ -32,7 +31,7 @@ export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: 
         {/* Fill empty slots if needed */}
         {currentItems.length < itemsPerPage && 
           Array.from({ length: itemsPerPage - currentItems.length }).map((_, index) => (
-            <div key={`empty-${index}`} className="w-[80px] h-[110px]" />
+            <div key={`empty-${index}`} className="w-20 h-[110px]" />
           ))
         }
       </div>
@@ -52,6 +51,6 @@ export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: 
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

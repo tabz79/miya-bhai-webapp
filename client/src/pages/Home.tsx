@@ -55,7 +55,7 @@ export function Home() {
       <BestSellersStrip />
 
       {/* 4. DeliveryAd (exact 104px height, with proper spacing) */}
-      <div className="px-4 py-4">
+      <div className="px-4">
         <DeliveryAd />
       </div>
 
