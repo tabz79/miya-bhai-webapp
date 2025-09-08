@@ -420,3 +420,30 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Suggested Approach for Fix (don’t fix yet):**
 *   The most direct fix would be to remove the `shadow-effect-text-shadow-heroh1` and `shadow-effect-text-shadow-heroh2` classes from the `div` elements in `HeroCarousel.tsx`. The `[text-shadow:...]` arbitrary values already present on these elements correctly apply the desired text shadow. The custom `shadow-effect-text-shadow-*` classes are redundant and incorrectly implemented as `box-shadows`.
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Hero Section Shadow/Box Fix)
+
+**Story Correlation:** Fix for Hero Section shadow/box issue.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement HeroCarousel Functionality
+
+**Sync with Tester:**
+*   Confirmed via `TEST_REPORT.md` that unwanted rectangular shadow/box was appearing behind hero titles "Nizam’s" and "Royal Flavours".
+*   Issue was traced to incorrect `box-shadow` application via `shadow-effect-text-shadow-heroh1` and `shadow-effect-text-shadow-heroh2` classes.
+
+**Changes Implemented:**
+1.  Removed `shadow-effect-text-shadow-heroh1` class from the `div` containing "Nizam's" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+2.  Removed `shadow-effect-text-shadow-heroh2` class from the `div` containing "Royal Flavours," in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+3.  The existing `[text-shadow:...]` arbitrary utility classes were kept intact to ensure the soft glow text-shadow remains.
+
+**Files Touched:**
+*   `client/src/components/HeroCarousel/HeroCarousel.tsx` (Modified)
+
+**Result:**
+*   The unwanted rectangular shadow/box effect has been removed.
+*   The text shadow now renders correctly without any unintended background box.
+*   No visual regression for "Nizam’s", "Royal Flavours," and tagline text.
+
+**Hand-off:**
+*   PO and Tester to validate visuals and confirm the fix.

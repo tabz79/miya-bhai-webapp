@@ -178,7 +178,6 @@ Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
 4:32:25 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist? (x3)
 4:32:25 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist? (x4)
 4:32:26 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/components/HeroCarousel/HeroCarousel.tsx". Does the file exist?
-4:32:26 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist?
 4:32:26 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist? (x2)
 4:32:26 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist? (x3)
 4:32:26 pm [vite] Pre-transform error: Failed to resolve import "@/assets/HeroImage.png" from "client/src/data/mockData.ts". Does the file exist? (x4)
@@ -375,6 +374,7 @@ The expected layout per Figma is not being followed.
 
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements
 
 **Story:** Implement HeroCarousel Functionality — PO Feedback on Image Placement (Figma Compliance)
@@ -439,6 +439,7 @@ PO confirmed that the arrow navigation buttons are visible — these are not req
 
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements
 
 **Story:** Implement HeroCarousel Functionality — Code Changes Applied by PO
@@ -465,3 +466,33 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 **Status:** Functional ✅ — Carousel now works as intended (images rotate, indicators functional, text overlay static).
 
 ```
+
+### Epic: Home Screen Fixes & Enhancements
+**Story:** Implement HeroCarousel Functionality
+
+**PO Feedback on Hero Section Shadow/Box Issue**.
+
+- PO observed unwanted rectangular shadow/box behind hero titles "Nizam’s" and "Royal Flavours".
+- Issue traced to extra shadow-effect utility classes applied to text elements.
+- Expected: Text should only have soft text-shadow, no background box.
+- Status: Blocked / Needs Fix.
+- Next Step for Dev (S2): Audit confirmed redundant `shadow-effect-text-shadow-heroh1` and `shadow-effect-text-shadow-heroh2` classes in HeroCarousel.tsx. Dev should remove these while keeping the `[text-shadow:...]` arbitrary values intact.
+
+```
+
+```
+
+### Epic: Home Screen Fixes & Enhancements
+**Story:** Implement HeroCarousel Functionality — PO Verification (Shadow issue)
+
+**PO Verification (date: 2025-09-08):**
+- After the recent fix, "Royal Flavours," no longer shows the rectangular shadow/box. ✅
+- "Nizam's" still shows the rectangular shadow/box and requires further fix. ❌
+
+**Observed:** The boxed shadow remains visible only for the "Nizam's" title element in the Hero section.
+
+**Action requested:** Dev (S2) to re-audit `client/src/components/HeroCarousel/HeroCarousel.tsx` and remove the source of the box shadow for "Nizam's". Tester: do not perform fixes.
+
+**Status:** Blocked — partial fix verified; one remaining item.
+
+---
