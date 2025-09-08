@@ -3,7 +3,7 @@ import bestChicken from "@/assets/chickenbiryani-bestseller.png";
 import bestKebeb from "@/assets/kebeb-bestseller.png";
 import bestShawarma from "@/assets/Shawarma-bestseller.png";
 import menuChicken from "@/assets/chickenbiryani-menu.png";
-import heroImage from "@/assets/HeroImage.png";
+import heroImage from "@/assets/HeroImage1.png";
 
 export interface Bestseller {
   id: string;

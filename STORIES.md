@@ -1,6 +1,6 @@
 ## 2025-09-06 Backlog Refinement
 
-### Epic: Backend API Foundation
+### Epic: Backend API Foundation ✅
 
 **Story: Implement Liveness & Readiness Route and Menu Routes**
 - **Description:** Set up initial backend API skeleton to support frontend integration. Includes implementing a basic liveness/readiness check endpoint and mock menu routes. These routes will return mock data for now, but must follow the agreed JSON schema for future extension.
@@ -12,8 +12,39 @@
     - Responses include proper status codes and JSON schema (status + payload).
     - Jest/Playwright (or similar) tests confirm all three routes respond as expected.
     - Routes are mounted under `/api` prefix in Express server.
+- **Status:** Done
+
+### Epic: Home Screen Fixes & Enhancements
+
+**Story: Implement HeroCarousel Functionality**
+- **Description:** Add multiple images support, indicators, and auto-scroll. Current Hero has only one image and no slots.
+- **Acceptance Criteria:**
+    - HeroCarousel can display multiple images, auto-plays (~4500ms), shows indicators, and allows manual slide change.
 - **Status:** Backlog
 
+**Story: Fix Hero Shadow Styling**
+- **Description:** “Nizam’s Royal Flavours” text block has a weird framed box. Match Figma: subtle drop shadow effect, consistent with “Perfected since 1960.”
+- **Acceptance Criteria:**
+    - Shadow matches Figma, no unwanted box backgrounds.
+- **Status:** Backlog
+
+**Story: Add Signature Best Seller Heading & Controls**
+- **Description:** Signature Best Seller section missing its heading and navigation controls.
+- **Acceptance Criteria:**
+    - Heading visible, horizontal strip scrolls with prev/next buttons, swipe supported.
+- **Status:** Backlog
+
+**Story: Fix DeliveryAd Layout & Image Quality**
+- **Description:** Delivery ad card does not stretch full width, delivery guy image is blurry.
+- **Acceptance Criteria:**
+    - Card stretches edge-to-edge within page container, delivery image crisp, responsive.
+- **Status:** Backlog
+
+**Story: Fix MenuGrid Layout to 4x2**
+- **Description:** Current menu grid shows only 4 cards. Enforce strict 4×2 layout with placeholders if fewer items.
+- **Acceptance Criteria:**
+    - Grid always displays 8 slots (4 columns × 2 rows), each card matches size spec.
+- **Status:** Backlog
 
 ### Epic: Implement Missing Components
 
@@ -40,46 +71,12 @@
 
 ### Epic: Fix Incorrect Implementations
 
-**Story: Correct BestSellersStrip Scroll Behavior**
-- **Description:** The `BestSellersStrip` component currently uses `scroll-snap`. It should be refactored to use `Carousel` from `shadcn/ui` for horizontal scrolling, with specific card dimensions and spacing.
-- **Acceptance Criteria:**
-    - The `BestSellersStrip.tsx` is refactored to use the `Carousel` component.
-    - Best seller cards are fixed at 60x100px with a 95px border-radius and a 15px gap.
-    - The strip supports swipe gestures and has circular navigation buttons.
-    - The strip can dynamically display more than 4 items.
-- **Status:** Backlog
-
-**Story: Fix MenuGrid Layout**
-- **Description:** The `MenuGrid` is implemented with a simple grid, but the design specifies a strict 4x2 layout with specific card and image dimensions.
-- **Acceptance Criteria:**
-    - The `MenuGrid.tsx` is updated to a strict 4x2 layout, displaying exactly 8 cards.
-    - Each `MenuCard` is 80x110px.
-    - The image within the card is 80x82px.
-    - A circular "add to cart" button (20x20px) is present on each card.
-- **Status:** Backlog
-
 **Story: Implement SearchBarPill Interaction**
 - **Description:** The `SearchBarPill` component needs to be implemented with an inline expand/collapse behavior.
 - **Acceptance Criteria:**
     - The `SearchBarPill` has a fixed size of 180x36px with a 20px border-radius.
     - The component expands inline on click to reveal a search input.
     - A search icon is displayed on the right, which triggers the search.
-- **Status:** Backlog
-
-**Story: Implement HeroCarousel Functionality**
-- **Description:** The current static `HeroCarousel` needs to be updated to support multiple images with auto-play, looping, and navigation controls.
-- **Acceptance Criteria:**
-    - The `HeroCarousel.tsx` can display at least 3 images.
-    - The carousel auto-plays with a ~4500ms delay and loops continuously.
-    - Carousel indicators and circular prev/next navigation buttons are present and functional.
-- **Status:** Backlog
-
-**Story: Fix DeliveryAd Styling and Layout**
-- **Description:** The `DeliveryAd` component's styling is incorrect. It should have a white background, a card shadow, and correctly sized images.
-- **Acceptance Criteria:**
-    - The `DeliveryAd` component has a white background and a subtle card shadow.
-    - The `delivery-guy.png` image is displayed at 96x83px.
-    - The delivery icon is included if applicable, as per `design_specs.md`.
 - **Status:** Backlog
 
 **Story: Fix BottomNav Styling and Behavior**

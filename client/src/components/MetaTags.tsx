@@ -13,7 +13,7 @@ export function MetaTags({
   title, 
   description, 
   url = window.location.href, 
-  image = '/src/assets/HeroImage.png',
+  image = '/src/assets/HeroImage1.png',
   type = 'website'
 }: MetaTagsProps) {
   const fullTitle = title.includes('Miya Bhai') ? title : `${title} - Miya Bhai Food Court`;

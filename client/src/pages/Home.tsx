@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Toolbar } from '../components/Toolbar';
 import { MetaTags } from '../components/MetaTags';
 import { JsonLD } from '../components/JsonLD';
-import { HeroCarousel } from '../components/HeroCarousel/HeroCarousel';
+import { HeroSection } from './sections/HeroSection';
 import { BestSellersStrip } from '../components/BestSellers/BestSellersStrip';
 import { DeliveryAd } from '../components/DeliveryAd';
 import { MenuHeader } from '../components/Menu/MenuHeader';
@@ -48,8 +48,8 @@ export function Home() {
       {/* 1. Toolbar (exact 56px height) */}
       <Toolbar />
 
-      {/* 2. HeroCarousel (exact 393×215) */}
-      <HeroCarousel />
+      {/* 2. Hero Section (HeroSection provides heroImages -> HeroCarousel) */}
+      <HeroSection />
 
       {/* 3. BestSellersStrip (exact 137px height, dark bg) */}
       <BestSellersStrip />

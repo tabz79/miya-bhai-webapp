@@ -10,7 +10,7 @@ export function JsonLD({ type }: JsonLDProps) {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": restaurantInfo.name,
-    "image": "/src/assets/HeroImage.png",
+    "image": "/src/assets/HeroImage1.png",
     "url": window.location.origin,
     "telephone": restaurantInfo.phone,
     "email": restaurantInfo.email,
