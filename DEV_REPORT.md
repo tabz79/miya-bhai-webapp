@@ -447,3 +447,27 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Hand-off:**
 *   PO and Tester to validate visuals and confirm the fix.
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Hero Section Shadow Fix - Nizam's Title)
+
+**Story Correlation:** Fix for remaining rectangular shadow/box on "Nizam's" title.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement HeroCarousel Functionality
+
+**Sync with Tester:**
+*   Confirmed via `TEST_REPORT.md` that "Nizam's" title still showed a rectangular shadow/box after the previous fix.
+
+**Changes Implemented:**
+1.  Removed the `shadow-effect-text-shadow-heroh1` class from the `div` element containing "Nizam's" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+2.  The `[text-shadow:...]` arbitrary utility class was kept intact to ensure the soft glow text-shadow remains.
+
+**Files Touched:**
+*   `client/src/components/HeroCarousel/HeroCarousel.tsx` (Modified)
+
+**Result:**
+*   The unwanted rectangular shadow/box effect on "Nizam's" title has been removed.
+*   The text shadow now renders correctly without any unintended background box.
+
+**Hand-off:**
+*   PO and Tester to validate visuals and confirm the fix.

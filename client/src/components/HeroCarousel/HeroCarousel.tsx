@@ -84,7 +84,7 @@ export function HeroCarousel({ images = [] }: HeroCarouselProps) {
       {/* Static Text Overlay */}
       <div className="absolute z-10 top-0 left-0 p-4 pointer-events-none">
         <div className="flex flex-wrap w-[197px] items-start gap-[6px_8px] absolute top-[26px] left-4">
-          <div className="relative w-fit mt-[-1px] [text-shadow:0px_0px_4px_#00000040] font-typography-hero-h1 font-[number:var(--typography-hero-h1-font-weight)] text-colortextheroprimary text-[length:var(--typography-hero-h1-font-size)] tracking-[var(--typography-hero-h1-letter-spacing)] leading-[var(--typography-hero-h1-line-height)] whitespace-nowrap [font-style:var(--typography-hero-h1-font-style)] shadow-effect-text-shadow-heroh1">
+          <div className="relative w-fit mt-[-1px] [text-shadow:0px_0px_4px_#00000040] font-typography-hero-h1 font-[number:var(--typography-hero-h1-font-weight)] text-colortextheroprimary text-[length:var(--typography-hero-h1-font-size)] tracking-[var(--typography-hero-h1-letter-spacing)] leading-[var(--typography-hero-h1-line-height)] whitespace-nowrap [font-style:var(--typography-hero-h1-font-style)]">
             Nizam's
           </div>
           <div className="relative w-fit mt-[-1px] [text-shadow:0px_0px_15px_#00000040] font-typography-hero-h2 font-[number:var(--typography-hero-h2-font-weight)] text-colortextheroprimary text-[length:var(--typography-hero-h2-font-size)] tracking-[var(--typography-hero-h2-letter-spacing)] leading-[var(--typography-hero-h2-line-height)] whitespace-nowrap [font-style:var(--typography-hero-h2-font-style)]">
