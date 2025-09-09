@@ -54,10 +54,8 @@ export function Home() {
       {/* 3. BestSellersStrip (exact 137px height, dark bg) */}
       <BestSellersStrip />
 
-      {/* 4. DeliveryAd (exact 104px height, with proper spacing) */}
-      <div className="px-4">
-        <DeliveryAd />
-      </div>
+      {/* 4. DeliveryAd (exact 104px height, full-bleed; DeliveryAd manages its own padding) */}
+      <DeliveryAd />
 
       {/* 5. MenuHeader + MenuGrid (8 cards in 4x2 layout) */}
       <MenuHeader

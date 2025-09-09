@@ -492,6 +492,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements  
 **Story:** Implement HeroCarousel Functionality — PO Verification + New Search Icon Bug
 
@@ -516,6 +517,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements  
 **Story:** Implement HeroCarousel Functionality — PO Verification & Closure
 
@@ -524,6 +526,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 - Verified fixes:
   - Hero images now auto-scroll correctly at 230×114px, positioned per Figma (x=163, y=66).
   - Overlay text (“Nizam’s”, “Royal Flavours,”, tagline) remains static and free of shadow-box artifacts.
+
   - Indicators functional.
   - Navigation arrows removed (per spec).
   - Top search bar magnifying-glass icon now sits fully inside the search input, right-aligned and visible.
@@ -534,6 +537,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 
 **Status:** ✅ Hero Section complete.
 ---
+
 
 ### Epic: Home Screen Fixes & Enhancements  
 **Story:** Best Sellers — PO Feedback: Cards overlapping heading
@@ -555,6 +559,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 **Status:** Blocked — layout adjustment required before acceptance.
 
 ---
+
 
 ### Epic: Home Screen Fixes & Enhancements
 
@@ -588,6 +593,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 **Status:** Ready — awaiting Dev (S2) implementation.  
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements  
 
 **Story:** Implement Best Sellers Section — Card Layout, Spacing, and Fonts  
@@ -614,4 +620,65 @@ PO and Orchestrator (manual edits outside DevAgent) reviewed and fixed the Best 
 - ✅ Best Sellers frame marked complete.  
 
 ---
-```
+
+### Epic: Home Screen Fixes & Enhancements  
+**Story:** PO Verification — Hero, Best Sellers & Delivery Ad (2025-09-09)
+
+**PO ran:** `npm run dev:client`
+
+**Environment:** Local dev server at http://localhost:5173/
+
+**Hero Section**
+- Verified that HeroSection is wired into Home.tsx and that the carousel rotates images.
+  - File(s): `client/src/pages/Home.tsx`, `client/src/pages/sections/HeroSection.tsx`, `client/src/components/HeroCarousel/HeroCarousel.tsx`
+- Confirmed carousel indicators and autoplay behavior work when multiple images provided.
+- Confirmed overlay text remains static while only the hero image animates.
+- Note: PO confirmed hero image sizing and positioning matches Figma (image container 230x114, positioned at left:163px top:66px).
+
+**Hero Shadow/Text Fixes**
+- Confirmed removal of unwanted rectangular box shadow on hero titles by removing incorrect box-shadow class mappings.
+  - File: `client/src/components/HeroCarousel/HeroCarousel.tsx`
+- PO verified: "Nizam's" and "Royal Flavours" no longer show the rectangular box.
+
+**Search Bar Icon Fix**
+- Confirmed magnifying-glass icon is now positioned inside the search input, right-aligned and fully visible.
+  - File: `client/src/components/SearchBarPill.tsx`
+
+**Best Sellers**
+- Confirmed "Signature / Best Sellers" heading added at correct position with typography.
+  - File: `client/src/components/BestSellers/BestSellersStrip.tsx`
+- Confirmed cards frame adjusted per Figma (cards are within the frame x=78, y=271, w=315, h=137) and heading no longer overlapped.
+- Confirmed scroll behavior: by default first 4 cards are visible; additional cards are revealed by right/left scroll buttons (dev created mock cards and enabled scroll).
+  - File(s): `client/src/components/BestSellers/BestSellersStrip.tsx`, `client/src/components/BestSellers/BestSellerCard.tsx`, `client/src/components/BestSellers/ScrollControlButtons.tsx`, `client/src/data/mockData.ts` (new mock entries added)
+- PO verified: Best Sellers frame visually matches Figma.
+
+**Scroll Buttons Audit**
+- Confirmed initial issue: scroll buttons not appearing because container lacked overflow-x-auto. Dev added/validated the scroll container and button logic.
+  - File: `client/src/components/BestSellers/BestSellersStrip.tsx`
+- PO verified behavior: left/right buttons now reveal additional cards when more than 4 cards exist.
+
+**Delivery Ad Frame**
+- Confirmed frame is restored to PO-approved copy and layout (PO rolled back to safe version and only requested the frame stretch across screen edges).
+- Confirmed dev adjusted contact block vertical offset and delivery icon alignment.
+  - File: `client/src/components/DeliveryAd.tsx`
+- Final icon alignment: delivery icon positioned with top: 5px relative nudge to match phone-number baseline. PO verified visually.
+- Confirmed delivery guy image loaded (path fixed) and frame stretches full width of the app container.
+
+**Files Touched (summary)**
+- `client/src/components/HeroCarousel/HeroCarousel.tsx`
+- `client/src/pages/sections/HeroSection.tsx`
+- `client/src/pages/Home.tsx`
+- `client/src/components/SearchBarPill.tsx`
+- `client/src/components/BestSellers/BestSellersStrip.tsx`
+- `client/src/components/BestSellers/BestSellerCard.tsx`
+- `client/src/components/BestSellers/ScrollControlButtons.tsx`
+- `client/src/components/DeliveryAd.tsx`
+- `client/src/data/mockData.ts` (mock additions)
+- `DEV_REPORT.md` has detailed dev agent entries for each change (dev should have appended — PO had to restore at times; note that PO restored file from Git when overwritten).
+
+**PO Acceptance / Notes**
+- PO ran verification: hero section, best sellers frame, and delivery ad frame are accepted and marked complete.
+- PO notes: Tester should not overwrite files; only append. Tester must preserve existing TEST_REPORT.md content and append this PR verification entry.
+
+**Status:** ✅ All sections verified and complete.
+---
