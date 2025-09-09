@@ -40,8 +40,21 @@ export function BestSellersStrip() {
 
   return (
     <section className="w-full h-[137px] bg-colorbackgroundbestseller relative">
-      {/* Bestseller cards - exact Figma layout */}
-      <div className="flex items-center gap-[15px] px-3 pt-[19px]">
+      {/* Heading */}
+      <div className="absolute top-[46px] left-[14px] w-[62px] h-[40px] flex flex-col gap-[6px]">
+        <h2 className="font-typography-section-title text-[16px] leading-[17px] font-normal text-colortextsectiontitle">
+          Signature
+        </h2>
+        <h2 className="font-typography-section-title text-[16px] leading-[17px] font-normal text-colortextsectiontitle">
+          Best Sellers
+        </h2>
+      </div>
+
+      {/* Bestseller cards - align to strip top; 12px inset from the cards frame edge */}
+      <div
+        ref={scrollRef}
+        className="absolute top-0 left-[78px] w-[315px] h-[137px] flex items-center gap-[15px] pl-[12px] box-border overflow-x-auto"
+      >
         {bestsellers.map((item) => (
           <BestSellerCard key={item.id} item={item} />
         ))}

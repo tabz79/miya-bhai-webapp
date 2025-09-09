@@ -22,6 +22,10 @@ Output:
 Output:
 (payload shows page:1, limit:10, total:12 — first item id: a1b2c3d4-e5f6-7890-1234-567890abcdef)
 
+[VERIFIED PASS] GET /api/menu/:id
+Command used: /api/menu/a1b2c3d4-e5f6-7890-1234-567890abcdef
+Output: single item JSON (name: Classic Chicken Biryani)
+
 [VERIFIED PASS] Invalid pagination handling
 Command used:
 Invoke-WebRequest "http://localhost:3000/api/menu?page=0&limit=abc"
@@ -493,7 +497,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 ---
 
 ### Epic: Home Screen Fixes & Enhancements  
-**Story:** Implement HeroCarousel Functionality — PO Verification & New Search Icon Bug
+**Story:** Implement HeroCarousel Functionality — PO Verification + New Search Icon Bug
 
 **PO Verification (date: 2025-09-08):
 - PO ran `npm run dev:client`.
@@ -534,3 +538,26 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 
 **Status:** ✅ Hero Section complete.
 ---
+
+### Epic: Home Screen Fixes & Enhancements  
+**Story:** Best Sellers — PO Feedback: Cards overlapping heading
+
+**PO Verification (date: 2025-09-08):
+- PO observed that the Best Sellers cards are currently overlapping the "Signature Best Sellers" heading.
+- Figma reference (for cards container in Best Sellers strip):
+  - x = **78**, y = **271** (constraints: left, top)
+  - width = **315px**, height = **137px**
+  - These 4 cards should sit inside this 315×137 frame comfortably and not overlap the heading.
+
+**Observed:** Cards overlap heading; layout needs to be adjusted so heading and cards respect the Figma frames.
+
+**Action requested:** Dev (S2) to:
+- Read TEST_REPORT.md, DEV_REPORT.md, and the BestSellersStrip code.
+- Reposition cards container to x=78, y=271 and size to 315×137 (or adjust heading if needed), ensuring no overlap and correct spacing.
+- Report changes in DEV_REPORT.md (append-only).
+
+**Status:** Blocked — layout adjustment required before acceptance.
+
+---
+
+```

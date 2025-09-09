@@ -498,3 +498,53 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Hand-off:**
 *   PO and Tester to validate visuals in dev build.
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Add: Best Sellers Heading)
+
+**Story Correlation:** Add "Signature Best Sellers" heading to Best Sellers strip.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement Best Sellers Section
+
+**Sync with PO/Figma:**
+*   Implemented heading text "Signature" and "Best Sellers" as two separate lines.
+*   Positioned heading at x=14px, y=46px relative to the Best Sellers container.
+*   Set layout box to 62x40px for the combined heading area.
+*   Applied top-left alignment.
+*   Ensured a 6px gap between "Signature" and "Best Sellers" lines.
+*   Used `font-typography-section-title` (Carattere, Helvetica fallback), `text-[16px]`, `leading-[17px]`, `font-normal`, and `text-colortextsectiontitle` (white) for typography and color.
+*   Used `<h2>` for semantic markup.
+
+**Files Touched:**
+*   `client/src/components/BestSellers/BestSellersStrip.tsx` (Modified)
+
+**Result:**
+*   The "Signature Best Sellers" heading is now displayed in the Best Sellers strip at the specified position and with the correct typography and layout.
+
+**Hand-off:**
+*   PO and Tester to validate visuals and confirm the fix.
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Fix: Best Sellers Cards Overlap)
+
+**Story Correlation:** Fix Best Sellers layout so product cards do not overlap the heading.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement Best Sellers Section
+
+**Sync with PO/Figma:**
+*   Confirmed via `TEST_REPORT.md` that product cards were overlapping the "Signature Best Sellers" heading.
+*   Figma coordinates for the cards container: x=78, y=271, width=315px, height=137px.
+
+**Changes Implemented:**
+1.  Modified `client/src/components/BestSellers/BestSellersStrip.tsx`.
+2.  Applied `absolute left-[78px] top-[271px] w-[315px] h-[137px]` to the `div` element containing the `BestSellerCard` components.
+3.  Removed the previous `px-3` and `pt-[19px]` as they are now handled by the absolute positioning.
+
+**Files Touched:**
+*   `client/src/components/BestSellers/BestSellersStrip.tsx` (Modified)
+
+**Result:**
+*   The product cards are now correctly positioned according to Figma specifications and no longer overlap the heading.
+
+**Hand-off:**
+*   PO and Tester to validate visuals and confirm the fix.
