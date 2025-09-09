@@ -19,3 +19,13 @@ Notes:
 **Commit Message:** "fix(hero): finalize Hero Section layout & carousel functionality"
 **Status:** Commit and tag pushed successfully.
 **Context Review:** Confirmed changes against DEV_REPORT.md, TEST_REPORT.md, and STORIES.md.
+
+---
+**Date:** 2025-09-08T20:30:00Z
+**Action:** Finalize Best Sellers Frame
+**Branch Pushed:** dev
+**Commit Hash:** 0761470c66a231db50b49b79eee6f36fe7363182
+**Tag Created:** best-sellers-frame-complete
+**Commit Message:** "feat(ui): Best Sellers frame marked complete — synced with Figma design"
+**Status:** Commit and tag pushed successfully.
+**Context Review:** Confirmed changes against DEV_REPORT.md and TEST_REPORT.md.
