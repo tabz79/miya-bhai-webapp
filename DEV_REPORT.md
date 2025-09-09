@@ -548,3 +548,55 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Hand-off:**
 *   PO and Tester to validate visuals and confirm the fix.
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Audit: Best Sellers Scroll Buttons)
+
+**Story Correlation:** Audit why Best Sellers scroll buttons are not appearing.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement Best Sellers Section
+
+**Files Reviewed:**
+*   `client/src/components/BestSellers/BestSellersStrip.tsx`
+*   `client/src/components/BestSellers/ScrollControlButtons.tsx`
+
+**Findings:**
+1.  **Missing `overflow-x-auto`:** The `div` element intended to be the scrollable container for the `BestSellerCard` components (where `scrollRef` is attached) in `BestSellersStrip.tsx` does not have the `overflow-x-auto` or `overflow-x-scroll` CSS property applied.
+2.  **`scrollRef` Correctly Attached:** The `scrollRef` is correctly attached to the `div` containing the `bestsellers.map`.
+3.  **No Scrollable Area:** Due to the missing `overflow-x-auto`, the browser does not create a scrollable area for the content. Consequently, `scrollWidth` and `clientWidth` within the `checkScrollButtons` function are effectively equal (or very close), preventing the conditions for `showLeftButton` and `showRightButton` from ever becoming true.
+4.  **Layout Sizing:** The current layout of cards within the `w-[315px]` container, even if the total width of cards + gaps exceeds 315px, will not trigger a scrollbar without the `overflow-x-auto` property.
+
+**Root Cause:**
+*   The primary root cause for the scroll buttons not appearing is the **absence of `overflow-x-auto` on the `div` element that `scrollRef` is attached to**. This prevents the creation of a scrollable area and thus the activation of the scroll buttons.
+
+**No Fix Applied.**
+---
+
+### Dev Agent (S2) Report - 2025-09-08 (Implement: Best Sellers Scroll Functionality)
+
+**Story Correlation:** Implement Best Sellers scroll functionality.
+*   **Epic:** Home Screen Fixes & Enhancements
+*   **Story:** Implement Best Sellers Section
+
+**Sync with Tester:**
+*   Confirmed via `TEST_REPORT.md` that scroll buttons were invisible due to lack of overflow.
+*   Decision made to add more mock data and implement chunked scrolling.
+
+**Changes Implemented:**
+1.  **`client/src/data/mockData.ts`**: Added 4 new mock best-seller items (total of 8 items) to ensure content overflow.
+2.  **`client/src/components/BestSellers/BestSellersStrip.tsx`**:
+    *   Confirmed `overflow-x-auto` is present on the scrollable container `div`.
+    *   Updated `scrollLeft` and `scrollRight` functions to scroll by a calculated `scrollAmount` (413px), representing the width of 4 cards plus their gaps, enabling chunked scrolling.
+
+**Files Touched:**
+*   `client/src/data/mockData.ts` (Modified)
+*   `client/src/components/BestSellers/BestSellersStrip.tsx` (Modified)
+
+**Result:**
+*   The Best Sellers section now has enough items to cause horizontal overflow.
+*   The scroll buttons should now appear when overflow exists.
+*   Scrolling will occur in chunks of 4 cards when the left/right buttons are pressed.
+*   The first 4 cards are visible by default.
+
+**Hand-off:**
+*   PO and Tester to validate the scroll functionality and button visibility.

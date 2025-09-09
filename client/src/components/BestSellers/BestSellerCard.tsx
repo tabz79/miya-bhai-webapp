@@ -6,22 +6,104 @@ interface BestSellerCardProps {
 }
 
 export function BestSellerCard({ item }: BestSellerCardProps) {
+  // Figma specs:
+  // Image: 45x45 at x=7, top=6
+  // Dish name: Nunito Bold, 6.5px, line-height 7px, box 47x7 at (7,58), align center
+  // Description: Carattere Regular, 6px, line-height 6px, box 34x26 at (13,69), align center
+
   return (
-    <div className="flex flex-col w-[60px] h-[100px] items-center gap-1 px-4 py-2 bg-colorsurfacecard rounded-[95px] shadow-effect-card-shadow cursor-pointer hover:shadow-lg transition-shadow">
-      <div className="relative p-0 flex flex-col items-center">
+    <div
+      className="relative w-[60px] h-[100px] bg-colorsurfacecard rounded-[95px] shadow-effect-card-shadow box-border"
+      role="group"
+      aria-label={item.name}
+      style={{ overflow: 'hidden' }}
+    >
+      {/* Image */}
+      <div
+        style={{
+          width: '45px',
+          height: '45px',
+          left: '7px',
+          top: '6px',
+          position: 'absolute',
+          borderRadius: '9999px',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         <img
-          className="relative w-[53px] h-[53px] mt-[-3.00px] ml-[-12.50px] mr-[-12.50px] object-cover"
-          alt={item.name}
           src={item.image}
+          alt={item.name}
+          className="block w-full h-full object-cover object-center"
         />
+      </div>
 
-        <h3 className="absolute h-[7px] top-[57px] left-1/2 transform -translate-x-1/2 font-typography-card-title font-[number:var(--typography-card-title-font-weight)] text-effecttext-shadowcardtitle text-[length:var(--typography-card-title-font-size)] text-center tracking-[var(--typography-card-title-letter-spacing)] leading-[var(--typography-card-title-line-height)] whitespace-nowrap [font-style:var(--typography-card-title-font-style)]">
+      {/* Dish name */}
+      <div
+        style={{
+          position: 'absolute',
+          left: '7px',
+          top: '58px',
+          width: '47px',
+          height: '7px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center', // center align horizontally
+          overflow: 'hidden',
+        }}
+      >
+        <span
+          style={{
+            fontFamily: 'Nunito, sans-serif',
+            fontWeight: 700,
+            fontSize: '6.5px',
+            lineHeight: '7px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            textAlign: 'center', // text alignment
+            width: '100%',
+          }}
+          title={item.name}
+        >
           {item.name}
-        </h3>
+        </span>
+      </div>
 
-        <p className="absolute w-[34px] h-[26px] top-[68px] left-1/2 transform -translate-x-1/2 font-typography-card-description font-[number:var(--typography-card-description-font-weight)] text-colortextcarddescription text-[length:var(--typography-card-description-font-size)] text-center tracking-[var(--typography-card-description-letter-spacing)] leading-[var(--typography-card-description-line-height)] [font-style:var(--typography-card-description-font-style)]">
+      {/* Dish description */}
+      <div
+        style={{
+          position: 'absolute',
+          left: '13px',
+          top: '69px',
+          width: '34px',
+          height: '26px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center', // center align horizontally
+          overflow: 'hidden',
+          textAlign: 'center',
+        }}
+      >
+        <span
+          style={{
+            fontFamily: 'Carattere, cursive',
+            fontWeight: 400,
+            fontSize: '6px',
+            lineHeight: '6px',
+            display: 'block',
+            maxHeight: '26px',
+            overflow: 'hidden',
+            whiteSpace: 'normal',
+            textAlign: 'center',
+            width: '100%',
+          }}
+          title={item.description}
+        >
           {item.description}
-        </p>
+        </span>
       </div>
     </div>
   );

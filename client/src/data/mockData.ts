@@ -58,6 +58,34 @@ export const bestsellers: Bestseller[] = [
     price: 199, 
     image: bestKebeb,
     description: "Charcoal grilled meat, marinated in Nizami blends."
+  },
+  { 
+    id: "b5", 
+    name: "Mutton Biryani", 
+    price: 300, 
+    image: bestChicken,
+    description: "Rich mutton biryani with aromatic spices"
+  },
+  { 
+    id: "b6", 
+    name: "Fish Fry", 
+    price: 220, 
+    image: bestArabian,
+    description: "Crispy fried fish with special seasoning"
+  },
+  { 
+    id: "b7", 
+    name: "Paneer Tikka", 
+    price: 180, 
+    image: bestKebeb,
+    description: "Grilled paneer cubes marinated in spices"
+  },
+  { 
+    id: "b8", 
+    name: "Veg Pulao", 
+    price: 150, 
+    image: bestShawarma,
+    description: "Flavorful vegetable rice dish"
   }
 ];
 
