@@ -2,25 +2,17 @@ import React, { useState } from 'react';
 import { CategoryPill } from './CategoryPill';
 import { DropdownToggleButton } from './DropdownToggleButton';
 import { CategoryDropdown } from './CategoryDropdown';
-import { GridNavigationButtons } from './GridNavigationButtons';
-import { categories } from '@/data/mockData';
 
 interface MenuHeaderProps {
+  categories: string[];
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
-  onPreviousPage: () => void;
-  onNextPage: () => void;
-  showPrevious: boolean;
-  showNext: boolean;
 }
 
 export function MenuHeader({ 
+  categories,
   selectedCategory, 
-  onCategoryChange, 
-  onPreviousPage, 
-  onNextPage, 
-  showPrevious, 
-  showNext 
+  onCategoryChange,
 }: MenuHeaderProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -55,14 +47,6 @@ export function MenuHeader({
             />
           </div>
         </div>
-
-        {/* Right side: Grid navigation buttons */}
-        <GridNavigationButtons
-          onPrevious={onPreviousPage}
-          onNext={onNextPage}
-          showPrevious={showPrevious}
-          showNext={showNext}
-        />
       </div>
     </div>
   );

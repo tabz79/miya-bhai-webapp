@@ -5,11 +5,17 @@ import { JsonLD } from '../components/JsonLD';
 import { MenuHeader } from '../components/Menu/MenuHeader';
 import { MenuGrid } from '../components/Menu/MenuGrid';
 import { BottomNav } from '../components/BottomNav';
-import { menu, categories, MenuItem } from '../data/mockData';
+import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
 
 export function Menu() {
+  const [menu, setMenu] = useState<MenuItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [currentPage, setCurrentPage] = useState(0);
+
+  useEffect(() => {
+    // TODO: Replace with actual API call, e.g., fetch('/api/menu')
+    setMenu(mockMenu);
+  }, []);
 
   // Filter menu items by selected category
   const filteredItems = menu.filter(item => item.category === selectedCategory);

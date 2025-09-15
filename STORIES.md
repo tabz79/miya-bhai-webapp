@@ -46,6 +46,36 @@
     - Grid always displays 8 slots (4 columns × 2 rows), each card matches size spec.
 - **Status:** Backlog
 
+### Epic: Menu
+
+**Story: Wire frontend to Cloudinary and migrate 61 menu images**  
+- **Description:** Prepare the frontend to consume CDN-backed menu images and migrate local raw images to Cloudinary. Ensure images are served as rounded rectangles and circular avatars at high densities (4x/5x/6x). Keep originals intact in `client/src/assets/raw`. Provide deterministic public IDs to avoid rework.
+- **Acceptance Criteria:**
+  - `client/src/data/images-map.json` exists and maps `basename` → `{ public_id, url }`.
+  - All raw images from `client/src/assets/raw` are uploaded to Cloudinary under `menu/<slug>`.
+  - Frontend component `MenuImageCloudinaryHighRes.tsx` exists and produces Cloudinary `srcset` for 4x/5x/6x densities and correct radius params for card/avatar variants.
+  - `MenuCard.tsx` is patched to lookup `images-map.json` and render CDN images when a `public_id` exists; otherwise falls back to `item.image`.
+  - Dev server renders at least a subset of menu cards from Cloudinary transforms (manual visual check).
+- **Status:** In Progress (Uploads done; frontend wiring partial)
+- **Notes / Implementation Artifacts**
+  - Scripts created:
+    - `scripts/generate-images-map-placeholders.mjs` — generate placeholder map from filenames.
+    - `scripts/test-upload.mjs` — Cloudinary test uploader.
+    - `scripts/upload-images-to-cloudinary.mjs` — batch uploader; uploaded 61 files and updated `client/src/data/images-map.json` (backup saved as `.bak`).
+  - Files added/updated:
+    - `client/src/components/MenuImageCloudinaryHighRes.tsx` — Cloudinary URL builder + `srcset`.
+    - `client/src/data/images-map.json` — generated map file.
+    - `client/src/components/Menu/MenuCard.tsx` — patched to use `images-map.json` and `MenuImageCloudinaryHighRes`.
+  - Observed behaviour:
+    - All 61 images uploaded successfully to Cloudinary (`menu/<slug>`). Uploader logs confirm.
+    - Frontend path import issues fixed, but some cards still fall back to local `item.image`. Likely slug mismatch or cache — needs Dev audit.
+- **Next Steps (Dev Audit)**
+  1. Verify slug generation consistency between uploader and `MenuCard`.
+  2. Restart dev server and clear HMR cache; re-test.
+  3. Inspect failing card(s) in browser DevTools, confirm Cloudinary URL response.
+  4. Make `CLOUD_NAME` configurable via env instead of hard-coded.
+  5. Add integration test comparing `images-map.json` keys vs menu data keys.
+
 ### Epic: Implement Missing Components
 
 **Story: Implement OfferCarousel on Menu Page**

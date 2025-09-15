@@ -1,84 +1,220 @@
-import React, { useState } from 'react';
-import { Toolbar } from '../components/Toolbar';
-import { MetaTags } from '../components/MetaTags';
-import { JsonLD } from '../components/JsonLD';
-import { HeroSection } from './sections/HeroSection';
-import { BestSellersStrip } from '../components/BestSellers/BestSellersStrip';
-import { DeliveryAd } from '../components/DeliveryAd';
-import { MenuHeader } from '../components/Menu/MenuHeader';
-import { MenuGrid } from '../components/Menu/MenuGrid';
-import { BottomNav } from '../components/BottomNav';
-import { menu, categories, MenuItem } from '../data/mockData';
+import React, { useEffect, useMemo, useState } from "react";
+import { Toolbar } from "../components/Toolbar";
+import { MetaTags } from "../components/MetaTags";
+import { JsonLD } from "../components/JsonLD";
+import { HeroSection } from "./sections/HeroSection";
+import { BestSellersStrip } from "../components/BestSellers/BestSellersStrip";
+import { DeliveryAd } from "../components/DeliveryAd";
+import { MenuHeader } from "../components/Menu/MenuHeader";
+import { MenuGrid } from "../components/Menu/MenuGrid";
+import { BottomNav } from "../components/BottomNav";
+// canonical client-side menu (preferred client fallback)
+import canonicalMenu from "@/data/menu.canonical.json";
+// images map produced by uploader -> public_id/url mapping produced earlier
+import imagesMapRaw from "../data/images-map.json";
+import { sortCategories } from "../lib/category-mapper";
 
-export function Home() {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [currentPage, setCurrentPage] = useState(0);
+/**
+ * Home page
+ * - Uses client-side canonical menu only (no mock data, no /api/menu fetch)
+ * - Shows only items that have images (imageUrl / images-map / resolved cloudinary public_id)
+ * - Keeps existing layout: Hero, BestSellersStrip, DeliveryAd, MenuHeader, MenuGrid, BottomNav
+ */
 
-  // Filter menu items by selected category
-  const filteredItems = menu.filter(item => item.category === selectedCategory);
-  const itemsPerPage = 8;
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+type MenuItem = any;
+
+const imagesMap = (imagesMapRaw as Record<string, any>) || {};
+const CLOUD_NAME =
+  import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME ||
+  import.meta.env?.VITE_CLOUD_NAME ||
+  null;
+
+const slugify = (s?: string) =>
+  (s || "")
+    .toString()
+    .normalize?.("NFKD")
+    .replace(/[\u0300-\u036F]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+
+const buildCloudinaryUrlFromPublicId = (publicId: string | undefined | null) => {
+  if (!publicId) return null;
+  if (!CLOUD_NAME) {
+    // no cloud name configured — cannot build CDN urls
+    return null;
+  }
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${publicId}`;
+};
+
+const findImageEntryFor = (item: MenuItem) => {
+  if (!item) return null;
+  const candidates: string[] = [];
+
+  if (item.id) candidates.push(String(item.id));
+  if (item.sku) candidates.push(String(item.sku));
+  if (item.name) candidates.push(slugify(item.name));
+
+  const imageField = item.imageUrl || item.image || item.image_url || "";
+  if (typeof imageField === "string" && imageField.length) {
+    const parts = imageField.split("/").pop()?.split("?")[0] || "";
+    const nameOnly = parts.replace(/\.[a-zA-Z0-9]+$/, "");
+    if (nameOnly) candidates.push(nameOnly);
+  }
+
+  // check candidates against imagesMap keys
+  for (const key of candidates) {
+    if (imagesMap[key]) return { key, entry: imagesMap[key] };
+  }
+
+  // fallback to menu/<slug>
+  if (item.name) {
+    const mk = `menu/${slugify(item.name)}`;
+    if (imagesMap[mk]) return { key: mk, entry: imagesMap[mk] };
+  }
+
+  // token-based approximate match (only if nothing else)
+  // compute token overlap and return best match (score > 0)
+  let bestKey: string | null = null;
+  let bestScore = 0;
+  const tokens = new Set((slugify(item.name) || "").split("-").filter(Boolean));
+  Object.keys(imagesMap).forEach((k) => {
+    const kt = new Set(k.split(/[^a-z0-9]+/).filter(Boolean));
+    const inter = [...tokens].filter((t) => kt.has(t)).length;
+    if (inter > bestScore) {
+      bestScore = inter;
+      bestKey = k;
+    }
+  });
+  if (bestScore > 0 && bestKey) {
+    return { key: bestKey, entry: imagesMap[bestKey], approxScore: bestScore };
+  }
+
+  return null;
+};
+
+export function Home(): JSX.Element {
+  const [menu, setMenu] = useState<MenuItem[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(0);
+
+  // Immediately use canonical menu as the source of truth
+  useEffect(() => {
+    if (Array.isArray(canonicalMenu) && canonicalMenu.length) {
+      setMenu(canonicalMenu as MenuItem[]);
+    } else {
+      setMenu([]);
+      console.warn("client/src/data/menu.canonical.json is empty or missing");
+    }
+  }, []);
+
+  // derive categories (canonicalize via category-mapper)
+  useEffect(() => {
+    if (!menu || menu.length === 0) {
+      setCategories([]);
+      setSelectedCategory("");
+      return;
+    }
+    const all = Array.from(
+      new Set(menu.map((it) => ((it.category || "Uncategorized") as string).trim()))
+    ).filter(Boolean);
+    const sorted = sortCategories(all);
+    setCategories(sorted);
+    if (!selectedCategory || !all.includes(selectedCategory)) {
+      setSelectedCategory(sorted[0] || "");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [menu]);
+
+  // resolve images (imagesMap.public_id -> URL, item.imageUrl, local raw paths)
+  const itemsWithResolvedImages = useMemo(() => {
+    const unmatched: string[] = [];
+    const mapped = (menu || []).map((it) => {
+      const found = findImageEntryFor(it);
+      let resolved: string | null = null;
+
+      if (found && found.entry) {
+        resolved = found.entry.url || found.entry.imageUrl || null;
+        if (!resolved && found.entry.public_id) {
+          const built = buildCloudinaryUrlFromPublicId(found.entry.public_id);
+          if (built) resolved = built;
+        }
+      }
+
+      // prefer explicit imageUrl on the item
+      if (!resolved) {
+        resolved = it.imageUrl || it.image || it.image_url || null;
+      }
+
+      // local raw assets (common case when imageUrl is like /src/assets/raw/...)
+      if (!resolved && it.localImagePath) {
+        resolved = it.localImagePath;
+      }
+
+      if (!resolved) unmatched.push(it.name || it.id || "unknown");
+      return { ...it, resolvedImage: resolved };
+    });
+
+    if (unmatched.length) {
+      // show only first 30 to avoid console spam
+      console.info("[image-resolver] Unmatched items (no image):", unmatched.slice(0, 30));
+      if (!CLOUD_NAME) {
+        console.warn(
+          "[image-resolver] CLOUD_NAME not set. images-map entries may have public_id but no url — set VITE_CLOUDINARY_CLOUD_NAME"
+        );
+      }
+    }
+
+    return mapped;
+  }, [menu]);
+
+  // HOME: show only image-backed items (per your requirement)
+  const itemsWithImages = itemsWithResolvedImages;// category-filtered items (image-backed)
+  const categoryFilteredItems = useMemo(() => {
+    return selectedCategory
+      ? itemsWithImages.filter((it) => ((it.category || "").trim() === selectedCategory))
+      : itemsWithImages;
+  }, [itemsWithImages, selectedCategory]);
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    setCurrentPage(0); // Reset to first page when changing category
+    setCurrentPage(0);
   };
 
   const handleAddToCart = (item: MenuItem) => {
-    // TODO: Implement cart functionality
-    console.log('Added to cart:', item);
-  };
-
-  const handlePreviousPage = () => {
-    setCurrentPage(prev => Math.max(0, prev - 1));
-  };
-
-  const handleNextPage = () => {
-    setCurrentPage(prev => Math.min(totalPages - 1, prev + 1));
+    console.log("Add to cart:", item);
+    // placeholder: wire to cart store
   };
 
   return (
     <div className="w-[393px] min-h-screen bg-app-background mx-auto">
-      <MetaTags
-        title="Miya Bhai Food Court - Authentic Middle Eastern & Indian Cuisine"
-        description="Experience the finest Arabian Mandi, Chicken Biryani, Kebabs, and Shawarma at Miya Bhai Food Court. Fresh ingredients, traditional recipes, and exceptional flavors since 1995."
-      />
+      <MetaTags title="Miya Bhai Food Court - Home" description="Miya Bhai food app" />
       <JsonLD type="restaurant" />
-      
-      {/* 1. Toolbar (exact 56px height) */}
+
       <Toolbar />
-
-      {/* 2. Hero Section (HeroSection provides heroImages -> HeroCarousel) */}
       <HeroSection />
-
-      {/* 3. BestSellersStrip (exact 137px height, dark bg) */}
       <BestSellersStrip />
-
-      {/* 4. DeliveryAd (exact 104px height, full-bleed; DeliveryAd manages its own padding) */}
       <DeliveryAd />
 
-      {/* 5. MenuHeader + MenuGrid (8 cards in 4x2 layout) */}
       <MenuHeader
+        categories={categories}
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
-        onPreviousPage={handlePreviousPage}
-        onNextPage={handleNextPage}
-        showPrevious={currentPage > 0}
-        showNext={currentPage < totalPages - 1}
       />
 
       <MenuGrid
-        items={filteredItems}
+        items={categoryFilteredItems}
         onAddToCart={handleAddToCart}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
       />
 
-      {/* 6. Spacer for BottomNav (exact 49px) */}
       <div className="h-[49px]" />
-
-      {/* BottomNav */}
       <BottomNav />
     </div>
   );
 }
+
+export default Home;
+
+

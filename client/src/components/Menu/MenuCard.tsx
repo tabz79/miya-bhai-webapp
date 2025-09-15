@@ -1,54 +1,82 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MenuItem } from '@/data/mockData';
-import { AddToCartButton } from '../AddToCartButton';
+import placeholderImage from '@/assets/placeholder-menu-item.png';
 
 interface MenuCardProps {
-  item: MenuItem;
+  item: MenuItem & { resolvedImage?: string; title?: string; name?: string; price?: number | string };
   onAddToCart: (item: MenuItem) => void;
 }
 
 export function MenuCard({ item, onAddToCart }: MenuCardProps) {
-  const handleAddToCart = () => {
-    onAddToCart(item);
+  const dishName =
+    (item.title && String(item.title)) ||
+    (item.name && String(item.name)) ||
+    'Untitled';
+
+  const [imageSrc, setImageSrc] = useState<string>(
+    item.resolvedImage || item.image || placeholderImage
+  );
+
+  useEffect(() => {
+    const candidate = item.resolvedImage || item.image || placeholderImage;
+    if (candidate !== imageSrc) {
+      setImageSrc(candidate);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item.resolvedImage, item.image]);
+
+  const handleAddToCart = () => onAddToCart(item);
+
+  const handleImageError = () => {
+    if (imageSrc !== placeholderImage) setImageSrc(placeholderImage);
   };
 
-  return (
-    <div className="w-20 h-[110px] bg-colorsurfacemenucard rounded-[18px] overflow-hidden shadow-effect-shadow-menucard border-0">
-      <div className="p-0 relative w-full h-full">
-        {/* Image section - exact Figma positioning */}
-        <div className="flex flex-col w-20 h-[82px] items-center justify-center gap-2.5 p-2.5 absolute top-0 left-0 bg-white">
-          <img
-            className="relative w-20 h-[82px] mt-[-10.00px] mb-[-10.00px] ml-[-10.00px] mr-[-10.00px] object-cover"
-            alt={item.name}
-            src={item.image}
-          />
-        </div>
+  const priceDisplay =
+    item.price !== undefined && item.price !== null ? `₹${item.price}` : '';
 
-        {/* Content section - exact Figma positioning */}
-        <div className="w-20 h-[26px] top-[84px] absolute left-0">
-          <div className="absolute w-20 h-[26px] top-0 left-0">
-            <div className="flex w-20 items-center justify-center gap-2.5 p-px absolute top-0 left-0">
-              <div className="relative flex-1 mt-[-1.00px] font-typography-menu-dishname font-[number:var(--typography-menu-dishname-font-weight)] text-colortextmenudishname text-[length:var(--typography-menu-dishname-font-size)] text-center tracking-[var(--typography-menu-dishname-letter-spacing)] leading-[var(--typography-menu-dishname-line-height)] [font-style:var(--typography-menu-dishname-font-style)]">
-                {item.name}
-              </div>
+  return (
+    <div className="w-20 h-[110px] rounded-[18px] bg-colorsurfacemenucard shadow-effect-shadow-menucard border-0 relative overflow-hidden">
+      {/* Dish image — full width, fixed height, rounded corners */}
+      <div className="w-20 h-[82px] flex items-center justify-center">
+        <img
+          src={imageSrc}
+          alt={dishName}
+          onError={handleImageError}
+          className="w-full h-full object-cover object-center rounded-[18px]"
+        />
+      </div>
+
+      {/* Bottom band (still inside card, stays rectangular but inside rounded card) */}
+      <div className="absolute left-0 top-[84px] w-20 h-[26px] bg-white rounded-b-[18px]">
+        <div className="w-full h-full flex flex-col justify-between px-1 py-[2px]">
+          {/* Row 1: dish name */}
+          <div className="flex-1 flex items-center justify-center">
+            <div
+              className="text-[length:var(--typography-menu-dishname-font-size)] font-typography-menu-dishname text-colortextmenudishname truncate text-center"
+              title={dishName}
+              style={{ lineHeight: '1' }}
+            >
+              {dishName}
+            </div>
+          </div>
+
+          {/* Row 2: price + add button */}
+          <div className="flex items-center justify-between w-full mt-0">
+            <div className="text-[length:var(--typography-menu-price-font-size)] font-typography-menu-price text-colortextmenuprice whitespace-nowrap pl-1">
+              {priceDisplay}
             </div>
 
             <button
               onClick={handleAddToCart}
-              className="absolute w-[18px] h-[18px] top-2 left-[47px] p-0 h-auto bg-transparent border-0"
+              aria-label={`Add ${dishName} to cart`}
+              className="w-[18px] h-[18px] p-0 bg-transparent border-0 flex items-center justify-center pr-1"
             >
               <img
                 className="w-[18px] h-[18px]"
-                alt="Add to cart button"
+                alt="Add to cart"
                 src="/figmaAssets/add-to-cart-button.svg"
               />
             </button>
-          </div>
-
-          <div className="inline-flex items-center justify-center gap-2.5 absolute top-3 left-[22px]">
-            <div className="relative w-fit mt-[-1.00px] font-typography-menu-price font-[number:var(--typography-menu-price-font-weight)] text-colortextmenuprice text-[length:var(--typography-menu-price-font-size)] text-center tracking-[var(--typography-menu-price-letter-spacing)] leading-[var(--typography-menu-price-line-height)] whitespace-nowrap [font-style:var(--typography-menu-price-font-style)]">
-              ₹{item.price}
-            </div>
           </div>
         </div>
       </div>

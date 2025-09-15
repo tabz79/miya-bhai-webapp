@@ -448,7 +448,7 @@ PO directly modified the HeroCarousel.tsx to fix broken behavior after prior Dev
 
 - Anchored the animated image container to the Figma-specified position using:
 
-  - `absolute top-[66px] left-[163px] w-[230px] h-[114px] p-[10px]`.
+  - `absolute top-[66px] left-[163px] w-[230px] h-[114px] p-[10px]`
 
 - Applied image styling with `object-cover` and `rounded-md` inside the animated container.
 
@@ -621,6 +621,7 @@ PO and Orchestrator (manual edits outside DevAgent) reviewed and fixed the Best 
 
 ---
 
+
 ### Epic: Home Screen Fixes & Enhancements  
 **Story:** PO Verification — Hero, Best Sellers & Delivery Ad (2025-09-09)
 
@@ -641,7 +642,7 @@ PO and Orchestrator (manual edits outside DevAgent) reviewed and fixed the Best 
 - PO verified: "Nizam's" and "Royal Flavours" no longer show the rectangular box.
 
 **Search Bar Icon Fix**
-- Confirmed magnifying-glass icon is now positioned inside the search input, right-aligned and fully visible.
+- Confirmed magnifying-glass icon is now positioned inside the search input, right-aligned, and fully visible.
   - File: `client/src/components/SearchBarPill.tsx`
 
 **Best Sellers**
@@ -682,3 +683,154 @@ PO and Orchestrator (manual edits outside DevAgent) reviewed and fixed the Best 
 
 **Status:** ✅ All sections verified and complete.
 ---
+---
+
+
+### Epic: Menu Image CDN Integration (Cloudinary) — PO + Orchestrator Actions & Test Log
+
+**Context:** Migrate menu images to Cloudinary and wire the app to use CDN-backed rounded & circular variants at high densities (4x/5x/6x). Keep originals intact in `client/src/assets/raw`. Provide deterministic `public_id` mapping so the frontend can switch to CDN without further code changes.
+
+**Actors:** PO (Tabrez) + Orchestrator (assistant)
+
+**Files / Scripts created during this session**
+- `scripts/generate-images-map-placeholders.mjs` — generates `client/src/data/images-map.json` placeholders from filenames. (Used to wire app before upload.)
+- `scripts/test-upload.mjs` — single-file Cloudinary test uploader (used to validate credentials).
+- `scripts/upload-images-to-cloudinary.mjs` — batch uploader: uploads all raw images as `menu/<slug>` and updates `client/src/data/images-map.json`.
+- `client/src/components/MenuImageCloudinaryHighRes.tsx` — React component that builds Cloudinary `srcset` for densities **4x / 5x / 6x** and renders card/avatar variants with appropriate radius parameters.
+- `client/src/data/images-map.json` — produced/updated by the uploader; maps `basename` -> `{ public_id, url }`.
+- `client/src/components/Menu/MenuCard.tsx` — patched to:
+  - import `../../data/images-map.json`
+  - compute slug from `item.name`
+  - render `MenuImageCloudinaryHighRes` when a `public_id` exists, otherwise fallback to `item.image`.
+
+**Actions performed (chronological)**
+1. PO created Cloudinary account; cloud name recorded: `dnefyrllm`. (PO evidence: cloud name supplied in chat.)
+2. Orchestrator provided `scripts/test-upload.mjs`. PO ran it with `CLOUDINARY_URL` set and verified a **single test upload** succeeded. Evidence printed by script: Cloudinary secure URL returned.
+3. Orchestrator created `scripts/upload-images-to-cloudinary.mjs`. PO set environment and ran it:
+   - All **61** images from `client/src/assets/raw` were uploaded as `menu/<slugified-basename>`.
+   - Console log lines (sample):  
+     `UPLOADED: Tangdi Kebab.png -> menu/tangdi-kebab`  
+     `UPLOADED: vada.png -> menu/vada`  
+     `UPLOADED: Veg Fried Rice.png -> menu/veg-fried-rice`  
+   - Script wrote/updated `client/src/data/images-map.json` and saved backup at `client/src/data/images-map.json.bak`.
+4. Orchestrator added `client/src/components/MenuImageCloudinaryHighRes.tsx` (Cloudinary URL builder + `srcset` for 4x/5x/6x). PO confirmed the file exists locally.
+5. Orchestrator patched `MenuCard.tsx` to import `images-map.json` and use `MenuImageCloudinaryHighRes`. PO applied the change (file saved).
+6. PO started dev server and performed runtime checks. Observations:
+   - Uploads: **Done** (61 files uploaded, `images-map.json` updated).
+   - Frontend: Menu cards were wired to use CDN `public_id`s but **some images did not appear** in the app immediately. Dev console showed path/import resolution issues which were iteratively fixed (import path for `images-map.json`, then import path for `MenuImageCloudinaryHighRes`).
+   - Final status: uploader succeeded and map was written; frontend wiring applied but UI verification remains **partial** (some images still render old sources; dev audit requested).
+
+**Artifacts & evidence**
+- Uploader console excerpt (captured in terminal during run):  
+  `UPLOADED: Tangdi Kebab.png -> menu/tangdi-kebab`  
+  `UPLOADED: vada.png -> menu/vada`  
+  `UPLOADED: Veg Fried Rice.png -> menu/veg-fried-rice`  
+  `WROTE D:\Projects\miya-bhai-webapp\client\src\data\images-map.json (backup saved to D:\Projects\miya-bhai-webapp\client\src\data\images-map.json.bak)`  
+  `Done uploading 61 files.`
+- Files added locally: scripts listed above and `MenuImageCloudinaryHighRes.tsx`.
+- Current `images-map.json` exists at `client/src/data/images-map.json` (contains `public_id` and `url` for each uploaded file).
+
+**Test steps executed (by PO/Orchestrator)**
+1. Verified Cloudinary credentials via `scripts/test-upload.mjs`. Result: ✅ (test upload URL printed).
+2. Executed `node ./scripts/upload-images-to-cloudinary.mjs`. Result: ✅ (61 uploads + map file).
+3. Restarted dev server and validated app:
+   - Checked menu card code paths; confirmed `MenuCard.tsx` now imports `images-map.json`. 
+   - Noted Vite import resolution errors and corrected file import paths:
+     - `images-map.json` import updated to `../../data/images-map.json`.
+     - `MenuImageCloudinaryHighRes` import updated to `../MenuImageCloudinaryHighRes`.
+   - After fixes, some cards still fell back to local `item.image`: **investigation required** (may be due to slug mismatch between `item.name` and `images-map.json` keys or HMR cache).
+
+**Current verification status**
+- **Upload & mapping:** ✅ Done and verified (server console shows uploads + map file saved).
+- **Frontend wiring:** ⚠️ Partial — code changes applied; runtime behavior inconsistent (some menu cards use CDN images, some still use local mock images).  
+- **Blocking / Open items for Dev (S2) audit:**
+  1. Verify that `item.name` → slug generation in `MenuCard.tsx` exactly matches the slugification used by the uploader (case, punctuation, accents). If mismatch exists, update loader or map keys to use `item.id`/`item.slug` canonical field instead of `item.name`.
+  2. Confirm dev server Vite cache: ask Dev to clear HMR cache / restart dev server fully after updating files and `images-map.json`.
+  3. Confirm network image URLs in browser DevTools for a failing card and paste one `img.src` for debug (Dev to verify 404 or transform failure).
+  4. Optional: make `CLOUD_NAME` configurable via env and not hard-coded (refactor `MenuImageCloudinaryHighRes.tsx` to read from runtime config).
+  5. Add unit/integration test that checks `images-map.json` keys vs menu data keys to assert coverage.
+
+**Suggested immediate acceptance action for Dev**
+- Run a quick audit:
+  1. Open `client/src/data/images-map.json` and copy a sample key (e.g., `veg-fried-rice`) and confirm `MenuCard` slug logic resolves to the same key for that menu item.
+  2. Restart dev server: `npm run dev:client` and clear browser cache.
+  3. Inspect the failing card in DevTools → Network to see if Cloudinary URL is requested and whether it returns 200 or 404.
+- After fixes, Tester (PO) will re-run visual verification and confirm all menu cards show CDN-backed images (rounded rect & avatars) at 4x/5x/6x densities.
+
+**Conclusion / Status:** **In Progress (Uploads done, Frontend wiring partial)** — awaiting Dev audit to resolve slug-matching and HMR/cache issues. Once resolved, PO will verify final visual consistency and close this item.
+
+**Logged by:** PO (Tabrez) + Orchestrator (assistant) — timestamped evidence present in terminal logs and `client/src/data/images-map.json`.
+
+---
+
+
+### Story Reference
+- **Epic:** Menu  
+- **Story:** Wire frontend to Cloudinary and migrate 61 menu images  
+- **Current Status:** In Progress (Uploads done, frontend wiring partial, awaiting Dev audit)
+
+**Next Test Actions (once Dev completes audit):**
+1. Restart app after Dev fixes slug logic & env config.
+2. Verify that *all* menu cards render Cloudinary images (card + avatar).
+3. Spot-check image sharpness at 4x/5x/6x densities.
+4. Confirm fallback logic works if an image key is missing.
+
+---
+
+
+### Epic: Menu
+**Story:** Home Grid — Image-filtered 4×2 with Arrow Pagination
+
+**Tests Added:**
+*   `client/src/components/Menu/__tests__/MenuGrid.home.test.tsx`
+
+**How to Run Tests:**
+```bash
+npm test
+```
+
+**Expected Results:**
+*   All tests in `MenuGrid.home.test.tsx` should pass.
+*   The tests cover:
+    *   Rendering the correct number of items for the current page.
+    *   Pagination functionality using arrow buttons.
+    *   Keyboard navigation using left and right arrow keys.
+    *   Correct rendering of placeholder items to fill the grid.
+
+```
+
+### Epic: Menu
+**Story:** Home Grid — Image-filtered 4×2 with Arrow Pagination
+
+**Tests Added:**
+*   `client/src/lib/__tests__/image-resolver.test.ts`
+
+**How to Run Tests:**
+```bash
+npm test
+```
+
+**Expected Results:**
+*   All tests in `image-resolver.test.ts` should pass.
+*   The tests cover the complete fallback logic of the `resolveImageForItem` function, ensuring that images are resolved correctly based on item ID, SKU, name slug, and other properties.
+
+```
+
+### Epic: Menu
+**Story:** Home Grid — Image-filtered 4×2 with Arrow Pagination (Audit Fixes)
+
+**Tests:**
+*   No new tests were added.
+*   Existing tests for `MenuGrid` and `image-resolver` should continue to pass.
+
+**How to Run Tests:**
+```bash
+npm test
+```
+
+**Manual Verification:**
+*   Run the application (`npm run dev:client`).
+*   The home page menu should now render all items from the canonical data source, with fallback images displayed for items that do not have a matching image in the image map.
+*   Pagination controls should be visible and functional if a category contains more than 8 items.
+
+```

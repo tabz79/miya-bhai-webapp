@@ -1,4 +1,3 @@
-
 [
   {
     "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
@@ -6,19 +5,34 @@
     "sku": "CCB-001",
     "category": "Biryani",
     "price": 15.99,
-    "tags": ["classic", "spicy", "bestseller"],
-    "branches": ["Downtown", "Uptown"],
-    "updatedAt": "2025-09-01T10:00:00Z"
+    "tags": [
+      "classic",
+      "spicy",
+      "bestseller"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown"
+    ],
+    "updatedAt": "2025-09-01T10:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/chicken-dum-biryani"
   },
   {
     "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
     "name": "Mutton Mandi",
     "sku": "MM-001",
     "category": "Mandi",
-    "price": 22.50,
-    "tags": ["authentic", "arabic", "bestseller"],
-    "branches": ["Downtown"],
-    "updatedAt": "2025-09-01T10:05:00Z"
+    "price": 22.5,
+    "tags": [
+      "authentic",
+      "arabic",
+      "bestseller"
+    ],
+    "branches": [
+      "Downtown"
+    ],
+    "updatedAt": "2025-09-01T10:05:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/mutton-mandi"
   },
   {
     "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
@@ -26,19 +40,36 @@
     "sku": "SCS-001",
     "category": "Shawarma",
     "price": 8.99,
-    "tags": ["spicy", "wrap", "quick-bite"],
-    "branches": ["Downtown", "Uptown", "Westside"],
-    "updatedAt": "2025-09-02T11:30:00Z"
+    "tags": [
+      "spicy",
+      "wrap",
+      "quick-bite"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown",
+      "Westside"
+    ],
+    "updatedAt": "2025-09-02T11:30:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/chicken-shawarma"
   },
   {
     "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
     "name": "Paneer Tikka Kebab",
     "sku": "PTK-001",
     "category": "Kebab",
-    "price": 12.00,
-    "tags": ["vegetarian", "grilled", "starter"],
-    "branches": ["Uptown", "Westside"],
-    "updatedAt": "2025-09-03T18:00:00Z"
+    "price": 12,
+    "tags": [
+      "vegetarian",
+      "grilled",
+      "starter"
+    ],
+    "branches": [
+      "Uptown",
+      "Westside"
+    ],
+    "updatedAt": "2025-09-03T18:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/bbq-paneer-pizza"
   },
   {
     "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
@@ -46,9 +77,16 @@
     "sku": "FB-002",
     "category": "Biryani",
     "price": 18.99,
-    "tags": ["seafood", "mild"],
-    "branches": ["Downtown", "Westside"],
-    "updatedAt": "2025-09-04T14:00:00Z"
+    "tags": [
+      "seafood",
+      "mild"
+    ],
+    "branches": [
+      "Downtown",
+      "Westside"
+    ],
+    "updatedAt": "2025-09-04T14:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/fish-biryani"
   },
   {
     "id": "f6a7b8c9-d0e1-2345-6789-0abcdef01234",
@@ -56,9 +94,17 @@
     "sku": "BKP-001",
     "category": "Kebab",
     "price": 19.99,
-    "tags": ["platter", "sharing", "grilled"],
-    "branches": ["Downtown", "Uptown"],
-    "updatedAt": "2025-09-04T19:00:00Z"
+    "tags": [
+      "platter",
+      "sharing",
+      "grilled"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown"
+    ],
+    "updatedAt": "2025-09-04T19:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/malai-kebab"
   },
   {
     "id": "a7b8c9d0-e1f2-3456-7890-1bcdef012345",
@@ -66,19 +112,34 @@
     "sku": "VB-001",
     "category": "Biryani",
     "price": 13.99,
-    "tags": ["vegetarian", "healthy"],
-    "branches": ["Downtown", "Uptown", "Westside"],
-    "updatedAt": "2025-09-05T12:00:00Z"
+    "tags": [
+      "vegetarian",
+      "healthy"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown",
+      "Westside"
+    ],
+    "updatedAt": "2025-09-05T12:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/chicken-dum-biryani"
   },
   {
     "id": "b8c9d0e1-f2a3-4567-8901-cdef01234567",
     "name": "Chicken Mandi",
     "sku": "CM-002",
     "category": "Mandi",
-    "price": 20.50,
-    "tags": ["arabic", "bestseller"],
-    "branches": ["Downtown", "Uptown"],
-    "updatedAt": "2025-09-05T12:05:00Z"
+    "price": 20.5,
+    "tags": [
+      "arabic",
+      "bestseller"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown"
+    ],
+    "updatedAt": "2025-09-05T12:05:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/chicken-juicy-mandi"
   },
   {
     "id": "c9d0e1f2-a3b4-5678-9012-def012345678",
@@ -86,8 +147,15 @@
     "sku": "FW-001",
     "category": "Shawarma",
     "price": 7.99,
-    "tags": ["vegetarian", "wrap", "healthy"],
-    "branches": ["Uptown", "Westside"],
+    "tags": [
+      "vegetarian",
+      "wrap",
+      "healthy"
+    ],
+    "branches": [
+      "Uptown",
+      "Westside"
+    ],
     "updatedAt": "2025-09-05T13:00:00Z"
   },
   {
@@ -95,10 +163,17 @@
     "name": "Lamb Seekh Kebab",
     "sku": "LSK-001",
     "category": "Kebab",
-    "price": 14.50,
-    "tags": ["spicy", "grilled", "starter"],
-    "branches": ["Downtown"],
-    "updatedAt": "2025-09-05T18:30:00Z"
+    "price": 14.5,
+    "tags": [
+      "spicy",
+      "grilled",
+      "starter"
+    ],
+    "branches": [
+      "Downtown"
+    ],
+    "updatedAt": "2025-09-05T18:30:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/malai-kebab"
   },
   {
     "id": "e1f2a3b4-c5d6-7890-1234-f01234567890",
@@ -106,18 +181,35 @@
     "sku": "HDB-001",
     "category": "Biryani",
     "price": 17.99,
-    "tags": ["authentic", "spicy", "dum"],
-    "branches": ["Downtown", "Uptown"],
-    "updatedAt": "2025-09-05T19:00:00Z"
+    "tags": [
+      "authentic",
+      "spicy",
+      "dum"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown"
+    ],
+    "updatedAt": "2025-09-05T19:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/chicken-dum-biryani"
   },
   {
     "id": "f2a3b4c5-d6e7-8901-2345-012345678901",
     "name": "Mixed Grill Platter",
     "sku": "MGP-001",
     "category": "Kebab",
-    "price": 25.00,
-    "tags": ["sharing", "platter", "bestseller"],
-    "branches": ["Downtown", "Uptown", "Westside"],
-    "updatedAt": "2025-09-05T20:00:00Z"
+    "price": 25,
+    "tags": [
+      "sharing",
+      "platter",
+      "bestseller"
+    ],
+    "branches": [
+      "Downtown",
+      "Uptown",
+      "Westside"
+    ],
+    "updatedAt": "2025-09-05T20:00:00Z",
+    "imageUrl": "https://res.cloudinary.com/dnefyrllm/image/upload/menu/grill-chicken"
   }
 ]

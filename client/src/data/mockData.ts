@@ -33,56 +33,56 @@ export interface HeroSlide {
 export const bestsellers: Bestseller[] = [
   { 
     id: "b1", 
-    name: "Chicken Biryani", 
+    name: "Chicken Dum Biryani", 
     price: 250, 
     image: bestChicken,
     description: "Slow cooked rice, Chicken, enriched with Nizami spices"
   },
   { 
     id: "b2", 
-    name: "Arabian Mandi", 
+    name: "Chicken Juicy Mandi", 
     price: 599, 
     image: bestArabian,
     description: "Aromatic rice, tender Meat with Middle Eastern spices."
   },
   { 
     id: "b3", 
-    name: "Shawarma", 
+    name: "Chicken Shawarma", 
     price: 149, 
     image: bestShawarma,
     description: "Juicy nizami meat rolled in a bread"
   },
   { 
     id: "b4", 
-    name: "Kebeb", 
+    name: "Reshmi Kebab", 
     price: 199, 
     image: bestKebeb,
     description: "Charcoal grilled meat, marinated in Nizami blends."
   },
   { 
     id: "b5", 
-    name: "Mutton Biryani", 
+    name: "Mutton Dum Biryani", 
     price: 300, 
     image: bestChicken,
     description: "Rich mutton biryani with aromatic spices"
   },
   { 
     id: "b6", 
-    name: "Fish Fry", 
+    name: "Apollo fish", 
     price: 220, 
     image: bestArabian,
     description: "Crispy fried fish with special seasoning"
   },
   { 
     id: "b7", 
-    name: "Paneer Tikka", 
+    name: "Paneer Butter Masala", 
     price: 180, 
     image: bestKebeb,
     description: "Grilled paneer cubes marinated in spices"
   },
   { 
     id: "b8", 
-    name: "Veg Pulao", 
+    name: "Paneer Biryani", 
     price: 150, 
     image: bestShawarma,
     description: "Flavorful vegetable rice dish"
@@ -103,7 +103,7 @@ export const heroSlides: HeroSlide[] = [
 export const menu: MenuItem[] = [
   { 
     id: "m1", 
-    name: "Chicken Biryani", 
+    name: "Chicken Dum Biryani", 
     price: 249, 
     image: menuChicken, 
     category: "Main Course",
@@ -111,7 +111,7 @@ export const menu: MenuItem[] = [
   },
   { 
     id: "m2", 
-    name: "Arabian Mandi", 
+    name: "Chicken Juicy Mandi", 
     price: 599, 
     image: bestArabian, 
     category: "Main Course",
@@ -119,7 +119,7 @@ export const menu: MenuItem[] = [
   },
   { 
     id: "m3", 
-    name: "Chicken Kebeb", 
+    name: "Reshmi Kebab", 
     price: 199, 
     image: bestKebeb, 
     category: "Starters",
@@ -135,7 +135,7 @@ export const menu: MenuItem[] = [
   },
   { 
     id: "m5", 
-    name: "Mutton Biryani", 
+    name: "Mutton Dum Biryani", 
     price: 349, 
     image: bestChicken, 
     category: "Main Course",
@@ -143,7 +143,7 @@ export const menu: MenuItem[] = [
   },
   { 
     id: "m6", 
-    name: "Fish Curry", 
+    name: "Apollo fish", 
     price: 199, 
     image: bestArabian, 
     category: "Main Course",
@@ -159,7 +159,7 @@ export const menu: MenuItem[] = [
   },
   { 
     id: "m8", 
-    name: "Gulab Jamun", 
+    name: "Tandoori Chicken", 
     price: 89, 
     image: bestShawarma, 
     category: "Desserts",
