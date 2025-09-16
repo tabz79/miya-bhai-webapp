@@ -834,3 +834,26 @@ npm test
 *   Pagination controls should be visible and functional if a category contains more than 8 items.
 
 ```
+---
+## PO + Orchestrator Acceptance — Menu Handoff (2025-09-16)
+
+**Actors:** PO (Tabrez) + Orchestrator (assistant)  
+**Summary:** PO and Orchestrator verified and accepted the following UI frames and marked them complete for the Home screen cycle:
+- Hero Section — verified, Figma alignment and carousel behavior ✅
+- Best Sellers Frame — verified, cards & scroll behavior ✅
+- Delivery Ad Frame — verified, layout & assets ✅
+
+**Remaining (Menu tab) refinements to be addressed later (final polish stage):**
+- Hero frame:
+  1. Hero section overflows and occupies the bottom navigation area — ensure it caps above bottom nav.
+- Best Sellers frame:
+  1. Signature best-sellers pill cards — dish name truncation fix (truncate/ellipsis or smaller font).
+  2. Carousel buttons overflowing — ensure buttons are inside the frame and visible.
+- Menu frame:
+  1. Categories modal currently overflows over the bottom nav — cap to viewport minus bottom-nav height and enable internal scroll.
+  2. Align carousel left/right navigation buttons adjacent to the categories modal.
+  3. Make menu cards show dishes in a configurable priority order.
+  4. Replace/change dish images (wire to CDN images or updated placeholder pipeline).
+  5. Replace change/add-to-cart button (visual and accessibility polish).
+
+**Acceptance / Handoff:** PO (Tabrez) + Orchestrator marked the above Home frames complete and moved focus to the **Menu** epic for the remaining refinements. Remaining items will be addressed during final polishing phase.

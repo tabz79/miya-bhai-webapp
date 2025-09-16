@@ -963,3 +963,46 @@ export const categories = ["Main Course", "Starters", "Desserts"];
 1.  The changes are already applied to the files.
 2.  Run the application (`npm run dev:client`). The home page menu should now be populated with cards, with some showing fallback images where a match still fails.
 3.  Pagination controls should now be visible if a category has more than 8 items.
+
+
+# [2025-09-16] — Menu Epic Priority & Next Steps (PO + Orchestrator)
+
+**Summary:**  
+PO and Orchestrator verified Home screen frames. **Home tab is considered done for now.** Remaining issues in the Home tab’s embedded menu section (modal clipping, priority ordering, CDN wiring, carousel/nav alignment, etc.) are **UI/UX polish tasks** and deferred until the final packaging sprint. **Priority is now the Menu tab** — which is currently empty and must be designed and built first. Functional flows take precedence, visual polish will come later.  
+
+**Files / changes verified recently:**  
+HeroCarousel, BestSellersStrip, BestSellerCard, DeliveryAd and small fixes to SearchBarPill; cloud image upload scripts exist (`images-map.json` created) — frontend wiring partially applied.  
+
+---
+
+## Top-priority next steps for Dev (actionable, in order):
+
+1. **Menu tab design & layout (HIGH):** create overall structure with categories navigation, item grid, and cart footer integration.  
+2. **Data wiring (HIGH):** render categories and items from canonical menu JSON; enforce slug schema for consistency.  
+3. **Add to Cart integration (HIGH):** connect Menu tab items with cart flow.  
+4. **Category navigation (MEDIUM):** implement category-based filtering and smooth scrolling.  
+5. **Fallback assets (MEDIUM):** apply placeholder images until CDN wiring is finalized.  
+6. **Deferred polish (LOW):** Home-tab menu modal clipping, card priority ordering, CDN wiring, carousel/nav alignment, Best Sellers overflow fixes, and Hero overflow adjustments.  
+
+---
+
+## Tests to add / run:
+
+- Unit: Mapping of canonical menu JSON into Menu tab grid.  
+- Integration: Add to Cart flow from Menu tab.  
+- E2E: End-to-end Menu tab behavior (open → browse → add → verify cart).  
+- Visual spot-check: ensure Menu tab elements don’t overlap bottom nav across devices.  
+
+---
+
+## QA / DevOps notes:
+
+- PO has Git backups. Create feature branch `feature/menu-tab`.  
+- Track deferred Home-tab polish separately under `feature/home-polish`.  
+- After image/key changes, perform a dev server restart and clear HMR cache before QA.  
+
+---
+
+## Acceptance:
+
+PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** as the immediate focus for development. Home polish tasks are explicitly deferred until after Menu, Add to Cart, and Profile features are delivered.  

@@ -3,9 +3,47 @@ import { MenuItem } from '@/data/mockData';
 import placeholderImage from '@/assets/placeholder-menu-item.png';
 
 interface MenuCardProps {
-  item: MenuItem & { resolvedImage?: string; title?: string; name?: string; price?: number | string };
+  item: MenuItem & { resolvedImage?: string; title?: string; name?: string; price?: number | string; prices?: Record<string, any> };
   onAddToCart: (item: MenuItem) => void;
 }
+
+const formatPrice = (p?: number | string) => {
+  if (p == null || p === '') return '';
+  const n = typeof p === 'string' ? Number(p) : p;
+  if (!isFinite(n)) return '';
+  // Show no decimals for whole numbers, otherwise show up to 2 decimals (trim trailing zeros)
+  if (Number.isInteger(n)) return `₹${n}`;
+  // for fractional numbers, show up to 2 decimals but avoid unnecessary zeros
+  const fixed = n.toFixed(2);
+  return `₹${fixed.replace(/\.00$|(\.\d)0$/, '$1')}`;
+};
+
+const resolvePriceFromPrices = (prices?: Record<string, any>) => {
+  if (!prices || typeof prices !== 'object') return null;
+  const pref = ['mini', 'half', 'three_piece', 'threepiece', 'full', 'pack_for_4', 'pack_for_2', 'pack_for_1'];
+  const keys = Object.keys(prices || {});
+
+  // preference order
+  for (const p of pref) {
+    const found = keys.find(k => k.toLowerCase().replace(/[-\s]/g, '') === p);
+    if (found && prices[found] != null && !isNaN(Number(prices[found]))) {
+      return { value: Number(prices[found]), label: found };
+    }
+  }
+
+  // fallback — first numeric value
+  for (const k of keys) {
+    const v = prices[k];
+    if (v != null && !isNaN(Number(v))) return { value: Number(v), label: k };
+  }
+
+  return null;
+};
+
+const humanizeLabel = (label?: string) => {
+  if (!label) return '';
+  return label.replace(/[_-]/g, ' ').toLowerCase();
+};
 
 export function MenuCard({ item, onAddToCart }: MenuCardProps) {
   const dishName =
@@ -31,8 +69,22 @@ export function MenuCard({ item, onAddToCart }: MenuCardProps) {
     if (imageSrc !== placeholderImage) setImageSrc(placeholderImage);
   };
 
-  const priceDisplay =
-    item.price !== undefined && item.price !== null ? `₹${item.price}` : '';
+  // --- Price resolution (updated formatting) ---
+  let priceDisplay = '';
+  if (item.price !== undefined && item.price !== null && item.price !== '') {
+    priceDisplay = formatPrice(item.price);
+  } else if (item.prices) {
+    const picked = resolvePriceFromPrices(item.prices);
+    if (picked) {
+      const label = humanizeLabel(picked.label);
+      priceDisplay = `${formatPrice(picked.value)}${label ? ` (${label})` : ''}`;
+    } else {
+      priceDisplay = '';
+    }
+  } else {
+    priceDisplay = '';
+  }
+  // --- end price resolution ---
 
   return (
     <div className="w-20 h-[110px] rounded-[18px] bg-colorsurfacemenucard shadow-effect-shadow-menucard border-0 relative overflow-hidden">
