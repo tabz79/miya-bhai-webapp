@@ -7,15 +7,17 @@ interface AddToCartButtonProps {
   className?: string;
 }
 
-const AddToCartButton: React.FC<AddToCartButtonProps> = ({ item, onAddToCart, className }) => {
-  const handleClick = () => {
+const AddToCartButton: React.FC<AddToCartButtonProps> = ({ item, onAddToCart, className = '' }) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     onAddToCart(item);
   };
 
   return (
     <button
       onClick={handleClick}
-      className={`bg-green-500 text-white rounded-md px-3 py-1 text-sm font-semibold ${className}`}
+      className={`bg-green-500 text-white rounded-full px-3 py-1 text-sm font-semibold ${className}`}
+      aria-label={`Add ${item.name || item.title || 'item'} to cart`}
     >
       ADD
     </button>

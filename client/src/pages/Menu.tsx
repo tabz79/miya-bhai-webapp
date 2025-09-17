@@ -3,7 +3,7 @@ import { Toolbar } from "../components/Toolbar";
 import { MetaTags } from "../components/MetaTags";
 import { JsonLD } from "../components/JsonLD";
 import { MenuHeader } from "../components/Menu/MenuHeader";
-import { MenuGrid } from "../components/Menu/MenuGrid";
+import { MenuGrid, MenuCardFlat } from "@/components/Menu";
 import { BottomNav } from "../components/BottomNav";
 import canonicalMenu from "@/data/menu.canonical.json";
 import imagesMapRaw from "../data/images-map.json";
@@ -137,9 +137,9 @@ export function Menu(): JSX.Element {
       return itemsWithResolvedImages;
     }
     return itemsWithResolvedImages.filter(item =>
-      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.sku?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.tags?.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      (item.name || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (item.sku || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (item.tags || []).some((tag: string) => (tag || "").toLowerCase().includes(searchQuery.toLowerCase()))
     );
   }, [itemsWithResolvedImages, searchQuery]);
 
@@ -164,8 +164,6 @@ export function Menu(): JSX.Element {
       <Toolbar />
       <OfferCarousel />
 
-      
-
       {groupedMenu.map(({ category, items }) => (
         <div key={category}>
           <h2 className="text-app-foreground font-semibold text-lg px-4 py-2">{category}</h2>
@@ -173,6 +171,7 @@ export function Menu(): JSX.Element {
             items={items}
             onAddToCart={handleAddToCart}
             paginate={false}
+            CardComponent={MenuCardFlat}
           />
         </div>
       ))}
@@ -182,3 +181,5 @@ export function Menu(): JSX.Element {
     </div>
   );
 }
+
+export default Menu;

@@ -6,7 +6,8 @@ import { HeroSection } from "./sections/HeroSection";
 import { BestSellersStrip } from "../components/BestSellers/BestSellersStrip";
 import { DeliveryAd } from "../components/DeliveryAd";
 import { MenuHeader } from "../components/Menu/MenuHeader";
-import { MenuGrid } from "../components/Menu/MenuGrid";
+// import MenuGrid and the grid-card variant from the Menu barrel
+import { MenuGrid, MenuCardGrid } from "@/components/Menu";
 import { BottomNav } from "../components/BottomNav";
 // canonical client-side menu (preferred client fallback)
 import canonicalMenu from "@/data/menu.canonical.json";
@@ -73,7 +74,6 @@ const findImageEntryFor = (item: MenuItem) => {
   }
 
   // token-based approximate match (only if nothing else)
-  // compute token overlap and return best match (score > 0)
   let bestKey: string | null = null;
   let bestScore = 0;
   const tokens = new Set((slugify(item.name) || "").split("-").filter(Boolean));
@@ -169,7 +169,7 @@ export function Home(): JSX.Element {
   }, [menu]);
 
   // HOME: show only image-backed items (per your requirement)
-  const itemsWithImages = itemsWithResolvedImages;// category-filtered items (image-backed)
+  const itemsWithImages = itemsWithResolvedImages;
   const categoryFilteredItems = useMemo(() => {
     return selectedCategory
       ? itemsWithImages.filter((it) => ((it.category || "").trim() === selectedCategory))
@@ -183,7 +183,6 @@ export function Home(): JSX.Element {
 
   const handleAddToCart = (item: MenuItem) => {
     console.log("Add to cart:", item);
-    // placeholder: wire to cart store
   };
 
   return (
@@ -207,6 +206,7 @@ export function Home(): JSX.Element {
         onAddToCart={handleAddToCart}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
+        CardComponent={MenuCardGrid}
       />
 
       <div className="h-[49px]" />
@@ -216,5 +216,3 @@ export function Home(): JSX.Element {
 }
 
 export default Home;
-
-
