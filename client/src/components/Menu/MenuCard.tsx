@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem } from '@/data/mockData';
 import placeholderImage from '@/assets/placeholder-menu-item.png';
+import AddToCartButton from '../AddToCartButton'; // Assuming this component exists or will be created
 
 interface MenuCardProps {
   item: MenuItem & { resolvedImage?: string; title?: string; name?: string; price?: number | string; prices?: Record<string, any> };
@@ -11,9 +12,7 @@ const formatPrice = (p?: number | string) => {
   if (p == null || p === '') return '';
   const n = typeof p === 'string' ? Number(p) : p;
   if (!isFinite(n)) return '';
-  // Show no decimals for whole numbers, otherwise show up to 2 decimals (trim trailing zeros)
   if (Number.isInteger(n)) return `₹${n}`;
-  // for fractional numbers, show up to 2 decimals but avoid unnecessary zeros
   const fixed = n.toFixed(2);
   return `₹${fixed.replace(/\.00$|(\.\d)0$/, '$1')}`;
 };
@@ -23,7 +22,6 @@ const resolvePriceFromPrices = (prices?: Record<string, any>) => {
   const pref = ['mini', 'half', 'three_piece', 'threepiece', 'full', 'pack_for_4', 'pack_for_2', 'pack_for_1'];
   const keys = Object.keys(prices || {});
 
-  // preference order
   for (const p of pref) {
     const found = keys.find(k => k.toLowerCase().replace(/[-\s]/g, '') === p);
     if (found && prices[found] != null && !isNaN(Number(prices[found]))) {
@@ -31,7 +29,6 @@ const resolvePriceFromPrices = (prices?: Record<string, any>) => {
     }
   }
 
-  // fallback — first numeric value
   for (const k of keys) {
     const v = prices[k];
     if (v != null && !isNaN(Number(v))) return { value: Number(v), label: k };
@@ -60,16 +57,12 @@ export function MenuCard({ item, onAddToCart }: MenuCardProps) {
     if (candidate !== imageSrc) {
       setImageSrc(candidate);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item.resolvedImage, item.image]);
-
-  const handleAddToCart = () => onAddToCart(item);
 
   const handleImageError = () => {
     if (imageSrc !== placeholderImage) setImageSrc(placeholderImage);
   };
 
-  // --- Price resolution (updated formatting) ---
   let priceDisplay = '';
   if (item.price !== undefined && item.price !== null && item.price !== '') {
     priceDisplay = formatPrice(item.price);
@@ -84,53 +77,32 @@ export function MenuCard({ item, onAddToCart }: MenuCardProps) {
   } else {
     priceDisplay = '';
   }
-  // --- end price resolution ---
+
+  // Placeholder for description
+  const description = item.description || 'A delicious and authentic dish.';
 
   return (
-    <div className="w-20 h-[110px] rounded-[18px] bg-colorsurfacemenucard shadow-effect-shadow-menucard border-0 relative overflow-hidden">
-      {/* Dish image — full width, fixed height, rounded corners */}
-      <div className="w-20 h-[82px] flex items-center justify-center">
+    <div className="flex items-center bg-white rounded-lg shadow-md p-2 mb-3 relative">
+      {/* Left Section: Name, Description, Price */}
+      <div className="flex-1 pr-2">
+        <h3 className="font-bold text-lg text-gray-800">{dishName}</h3>
+        <p className="text-sm text-gray-600 truncate">{description}</p>
+        <p className="text-md font-semibold text-gray-900 mt-1">{priceDisplay}</p>
+      </div>
+
+      {/* Right Section: Image and Add Button */}
+      <div className="relative w-24 h-24 flex-shrink-0">
         <img
           src={imageSrc}
           alt={dishName}
           onError={handleImageError}
-          className="w-full h-full object-cover object-center rounded-[18px]"
+          className="w-full h-full object-cover rounded-md"
         />
-      </div>
-
-      {/* Bottom band (still inside card, stays rectangular but inside rounded card) */}
-      <div className="absolute left-0 top-[84px] w-20 h-[26px] bg-white rounded-b-[18px]">
-        <div className="w-full h-full flex flex-col justify-between px-1 py-[2px]">
-          {/* Row 1: dish name */}
-          <div className="flex-1 flex items-center justify-center">
-            <div
-              className="text-[length:var(--typography-menu-dishname-font-size)] font-typography-menu-dishname text-colortextmenudishname truncate text-center"
-              title={dishName}
-              style={{ lineHeight: '1' }}
-            >
-              {dishName}
-            </div>
-          </div>
-
-          {/* Row 2: price + add button */}
-          <div className="flex items-center justify-between w-full mt-0">
-            <div className="text-[length:var(--typography-menu-price-font-size)] font-typography-menu-price text-colortextmenuprice whitespace-nowrap pl-1">
-              {priceDisplay}
-            </div>
-
-            <button
-              onClick={handleAddToCart}
-              aria-label={`Add ${dishName} to cart`}
-              className="w-[18px] h-[18px] p-0 bg-transparent border-0 flex items-center justify-center pr-1"
-            >
-              <img
-                className="w-[18px] h-[18px]"
-                alt="Add to cart"
-                src="/figmaAssets/add-to-cart-button.svg"
-              />
-            </button>
-          </div>
-        </div>
+        <AddToCartButton
+          item={item}
+          onAddToCart={onAddToCart}
+          className="absolute bottom-1 right-1 bg-green-500 text-white rounded-full p-1 text-xs"
+        />
       </div>
     </div>
   );

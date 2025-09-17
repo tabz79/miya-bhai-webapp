@@ -354,13 +354,13 @@ This action plan will connect the data (`heroImages` array) to the display compo
 - `client/src/components/HeroCarousel/HeroCarousel.tsx`
 
 **Result:**
-- The hero image now renders at the correct size and position, matching the design specifications.
-- The image no longer stretches or scales improperly.
+*   The hero image now renders at the correct size and position, matching the design specifications.
+*   The image no longer stretches or scales improperly.
 - Text overlay and controls remain static and functional.
 
 **Hand-off:**
-- PO to verify the image layout is correct.
-- Tester to re-run regression tests for carousel functionality.
+*   PO to verify the image layout is correct.
+*   Tester to re-run regression tests for carousel functionality.
 
 ---
 
@@ -441,7 +441,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 **Result:**
 *   The unwanted rectangular shadow/box effect has been removed.
 *   The text shadow now renders correctly without any unintended background box.
-*   No visual regression for "Nizam’s", "Royal Flavours," and tagline text.
+*   No visual regression for "Nizam’s", "Royal Flavours,", and tagline text.
 
 **Hand-off:**
 *   PO and Tester to validate visuals and confirm the fix.
@@ -607,15 +607,15 @@ This action plan will connect the data (`heroImages` array) to the display compo
 1.  **Slug key consistency:** **Fail**. The uploader script (`upload-images-to-cloudinary.mjs`) creates a map keyed by the image's base filename (e.g., "Tangdi Kebab"). The frontend component (`MenuCard.tsx`) attempts to look up entries using a slugified version of the menu item's name (e.g., "tangdi-kebab").
 2.  **`images-map.json` format & coverage:** **Partial**. The format (`public_id`, `url`) is correct. However, the keys are incorrect for the lookup logic. Additionally, the menu items in `client/src/data/mockData.ts` are a small subset and do not match the names of the 61 uploaded images, meaning most images can't be mapped anyway.
 3.  **Import paths & component wiring:** **Pass**. `MenuCard.tsx` correctly imports `images-map.json` and `MenuImageCloudinaryHighRes.tsx`. Props passed to the component are correct.
-4.  **Cloud name / configuration handling:** **Fail**. `CLOUD_NAME` is hard-coded in `MenuImageCloudinaryHighRes.tsx`. This is a Medium risk.
+4.  **Cloud name / configuration handling:** **Fail**. `CLOUD_NAME` is hard-coded in `client/src/components/MenuImageCloudinaryHighRes.tsx`. This is a Medium risk.
 5.  **Runtime fallback & error paths:** **Pass**. `MenuCard.tsx` has a fallback branch that correctly renders the local `item.image` if `publicId` is not found. This is why the UI doesn't appear broken, it just shows the old images.
 6.  **HMR / cache / dev-server issues:** **Medium Risk**. The `images-map.json` file is imported at the module level in `MenuCard.tsx`. Changes to this file may not be picked up by the Vite dev server without a full restart, leading to stale data during development.
 7.  **Network-level checks for PO to run:** **Provided Below**.
 8.  **Acceptance criteria cross-check:**
-    - `images-map.json` exists and maps `basename` → `public_id`, `url`: **Pass**.
-    - raw images uploaded under `menu/<slug>`: **Pass**.
-    - `MenuImageCloudinaryHighRes.tsx` produces `srcset`: **Pass**.
-    - `MenuCard.tsx` patched to lookup `images-map` and fallback: **Fail**. The lookup logic is fundamentally flawed.
+    *   `images-map.json` exists and maps `basename` → `public_id`, `url`: **Pass**.
+    *   raw images uploaded under `menu/<slug>`: **Pass**.
+    *   `MenuImageCloudinaryHighRes.tsx` produces `srcset`: **Pass**.
+    *   `MenuCard.tsx` patched to lookup `images-map` and fallback: **Fail**. The lookup logic is fundamentally flawed.
 9.  **Security & accidental overwrite checks:** **Pass**. The uploader script correctly uses `overwrite: false`.
 
 **Findings**
@@ -797,28 +797,28 @@ export const categories = ["Main Course", "Starters", "Desserts"];
     - import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
     + import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
     + import { useState, useEffect } from 'react';
-    
-    export function Home() {
-      const [menu, setMenu] = useState<MenuItem[]>([]);
-      const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-      const [currentPage, setCurrentPage] = useState(0);
-    
-      useEffect(() => {
+    +
+    + export function Home() {
+    +   const [menu, setMenu] = useState<MenuItem[]>([]);
+    +   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+    +   const [currentPage, setCurrentPage] = useState(0);
+    +
+    +   useEffect(() => {
     - // TODO: Replace with actual API call, e.g., fetch('/api/menu')
     - setMenu(mockMenu);
-    + const fetchMenu = async () => {
-    +   try {
-    +     const response = await fetch('/api/menu'); // Assuming API is on the same origin
-    +     const data = await response.json();
-    +     setMenu(data.payload.items); // Adjust based on actual API response structure
-    +   } catch (error) {
-    +     console.error("Failed to fetch menu:", error);
-    +     setMenu(mockMenu); // Fallback to mock data on error
-    +   }
-    + };
-    + fetchMenu();
+    +     const fetchMenu = async () => {
+    +       try {
+    +         const response = await fetch('/api/menu'); // Assuming API is on the same origin
+    +         const data = await response.json();
+    +         setMenu(data.payload.items); // Adjust based on actual API response structure
+    +       } catch (error) {
+    +         console.error("Failed to fetch menu:", error);
+    +         setMenu(mockMenu); // Fallback to mock data on error
+    +       }
+    +     };
+    +     fetchMenu();
       }, []);
-    
+    +
     + // For the Home page, we want to show a mix of all items, not filter by category.
     + const itemsToDisplay = menu;
     +
@@ -1006,3 +1006,125 @@ HeroCarousel, BestSellersStrip, BestSellerCard, DeliveryAd and small fixes to Se
 ## Acceptance:
 
 PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** as the immediate focus for development. Home polish tasks are explicitly deferred until after Menu, Add to Cart, and Profile features are delivered.  
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Bugfix)
+
+**Story Correlation:** Fix for `TEST_REPORT.md` issue: `useEffect is not defined`
+*   **Epic:** Menu
+*   **Reference:** [plugin:runtime-error-plugin] useEffect is not defined in `D:/Projects/miya-bhai-webapp/client/src/pages/Menu.tsx:15:3`
+
+**Fixes Implemented:**
+1.  **`client/src/pages/Menu.tsx`**: Added `useEffect` to the `react` import statement.
+
+**Files Touched:**
+*   `client/src/pages/Menu.tsx` (Modified)
+
+**Verification Steps Run:**
+1.  Verified with `npm run dev:client` that the menu page renders without crashing.
+
+**Next Steps:**
+*   Continue with the Menu tab implementation as per the priority set by the PO.
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Menu Page Implementation)
+
+**Story Implementation:** Menu Page — Full Catalog, Grouped & Ordered
+*   **Epic:** Menu
+
+**Changes Implemented:**
+1.  **`client/src/pages/Menu.tsx`**:
+    *   Implemented API fetching for the menu from `/api/menu` with a fallback to `client/src/data/menu.canonical.json`.
+    *   Reused image resolution logic from `Home.tsx` to provide images for menu items.
+    *   Added a search bar that filters items by name, SKU, or tags.
+    *   Grouped menu items by category and rendered them in the canonical order.
+2.  **`client/src/components/Menu/MenuGrid.tsx`**:
+    *   Added a `paginate` prop to allow disabling pagination, enabling the display of all items in a category.
+
+**Files Touched:**
+*   `client/src/pages/Menu.tsx` (Modified)
+*   `client/src/components/Menu/MenuGrid.tsx` (Modified)
+
+**QA Notes:**
+*   The `/menu` page now displays the full menu, grouped by category.
+*   The search bar filters the menu items as expected.
+*   The page is ready for the next story: "Add to Cart integration".
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Remove duplicate search)
+
+**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+* **Epic:** Menu  
+* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+
+**Subtask Implemented:** Remove duplicate search
+**Change Implemented:**
+1. Removed the search input field from `client/src/pages/Menu.tsx`.
+
+**Files Touched:**
+- `client/src/pages/Menu.tsx` — (modified)
+
+**Status:** ✅ Done
+**Notes / Next Steps:** Proceeding to the next subtask: MenuCard redesign.
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — MenuCard redesign)
+
+**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+* **Epic:** Menu  
+* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+
+**Subtask Implemented:** MenuCard redesign
+**Change Implemented:**
+1. Redesigned `client/src/components/Menu/MenuCard.tsx` to a single-row layout.
+2. Moved the dish image to the right side within an aspect-ratio container.
+3. Placed the dish name (prominent) and a one-line summary placeholder on the left side.
+4. Integrated an `AddToCartButton` component (to be created) near the image area.
+
+**Files Touched:**
+- `client/src/components/Menu/MenuCard.tsx` — (modified)
+
+**Status:** ✅ Done
+**Notes / Next Steps:** Need to create the `AddToCartButton.tsx` component.
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Create AddToCartButton)
+
+**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+* **Epic:** Menu  
+* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+
+**Subtask Implemented:** Create AddToCartButton
+**Change Implemented:**
+1. Created `client/src/components/AddToCartButton.tsx` with a basic button structure and `onAddToCart` prop handling.
+
+**Files Touched:**
+- `client/src/components/AddToCartButton.tsx` — (created)
+
+**Status:** ✅ Done
+**Notes / Next Steps:** All subtasks for "PO: Menu Redesign (Swiggy-like)" are complete. Ready for PO verification.
+
+---
+
+### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Fix duplicate search and card layout)
+
+**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+* **Epic:** Menu  
+* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — Verification by PO"
+
+**Subtask Implemented:** Fix duplicate search and card layout
+**Change Implemented:**
+1. Removed the `MenuHeader` component from `client/src/pages/Menu.tsx` and replaced it with a simple `h2` for category titles to eliminate potential misinterpretation as a search bar.
+2. Modified `client/src/components/Menu/MenuGrid.tsx` to remove the `grid grid-cols-4` class and replace it with `flex flex-col` to ensure single-row, full-width card layout.
+
+**Files Touched:**
+- `client/src/pages/Menu.tsx` — (modified)
+- `client/src/components/Menu/MenuGrid.tsx` — (modified)
+
+**Status:** ✅ Done
+**Notes / Next Steps:** Ready for PO re-verification.

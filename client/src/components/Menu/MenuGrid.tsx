@@ -7,17 +7,19 @@ interface MenuGridProps {
   onAddToCart: (item: MenuItem) => void;
   currentPage?: number;
   onPageChange?: (page: number) => void;
+  paginate?: boolean;
 }
 
-export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: MenuGridProps) {
+export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange, paginate = true }: MenuGridProps) {
   const itemsPerPage = 8; // 4x2 grid
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const totalPages = paginate ? Math.ceil(items.length / itemsPerPage) : 1;
   const gridRef = useRef<HTMLDivElement>(null);
 
   const handlePrev = () => onPageChange?.(Math.max(0, currentPage - 1));
   const handleNext = () => onPageChange?.(Math.min(totalPages - 1, currentPage + 1));
 
   useEffect(() => {
+    if (!paginate) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (document.activeElement === gridRef.current) {
         if (e.key === 'ArrowLeft') {
@@ -30,10 +32,9 @@ export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: 
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentPage, totalPages]);
+  }, [currentPage, totalPages, paginate]);
 
-  const startIndex = currentPage * itemsPerPage;
-  const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = paginate ? items.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage) : items;
 
   return (
     <section
@@ -42,17 +43,17 @@ export function MenuGrid({ items, onAddToCart, currentPage = 0, onPageChange }: 
       className="w-full px-3.5 py-0 relative focus:outline-none"
       aria-label="Menu Grid"
     >
-      <div className="grid grid-cols-4 gap-[15px] w-full max-w-[393px]">
+      <div className="flex flex-col gap-[15px] w-full max-w-[393px]">
         {currentItems.map((item) => (
           <MenuCard key={item.id} item={item} onAddToCart={onAddToCart} />
         ))}
-        {currentItems.length < itemsPerPage &&
+        {paginate && currentItems.length < itemsPerPage &&
           Array.from({ length: itemsPerPage - currentItems.length }).map((_, index) => (
             <div key={`empty-${index}`} className="w-20 h-[110px]" />
           ))}
       </div>
 
-      {totalPages > 1 && (
+      {paginate && totalPages > 1 && (
         <div className="flex justify-center items-center mt-4 gap-4">
           <button onClick={handlePrev} disabled={currentPage === 0} className="disabled:opacity-50">
             &lt;
