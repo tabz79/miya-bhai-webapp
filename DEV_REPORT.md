@@ -1165,3 +1165,17 @@ PO (Tabrez) + Orchestrator marked Home frames to Done and set **Menu tab epic** 
 - Files Touched:
   - client/src/components/AddToCartButton.tsx
 - Status: Done
+
+## [2025-09-18]
+- Story: Visual Feature — Floating Category Pill + Category Picker Modal (Menu — Category Quick-Jump)
+- Implementation Notes:
+  - Created `client/src/components/Menu/CategoryPicker.tsx` for the category selection modal.
+  - Created `client/src/components/Menu/CategoryJumpPill.tsx` for the floating pill button, including its styling and logic to open/close the picker.
+  - Integrated `CategoryJumpPill` into `client/src/pages/Menu.tsx`.
+  - Implemented `handleSelectCategory` in `Menu.tsx` to smoothly scroll to the selected category heading, accounting for the sticky toolbar height using `--toolbar-height` CSS variable.
+  - Updated category `h2` elements in `Menu.tsx` to include `className="menu-category-heading"` and `data-category={category}` for scroll targeting.
+- Files Touched:
+  - client/src/components/Menu/CategoryPicker.tsx (Created)
+  - client/src/components/Menu/CategoryJumpPill.tsx (Created)
+  - client/src/pages/Menu.tsx (Modified)
+- Status: Done
