@@ -10,7 +10,7 @@ export function MobileFrame({ children }: MobileFrameProps) {
       {/* Desktop scale wrapper */}
       <div className="w-full max-w-[393px] mx-auto bg-white shadow-xl">
         {/* Mobile frame with locked 393px width */}
-        <div className="w-[393px] min-h-screen bg-app-background relative overflow-hidden">
+        <div className="w-[393px] min-h-screen bg-app-background relative">
           {children}
         </div>
       </div>

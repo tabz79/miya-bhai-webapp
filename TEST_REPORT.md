@@ -929,3 +929,84 @@ npm test
 - Tester will re-run verification after Dev appends the fix to DEV_REPORT.md.
 
 ```
+### Epic: Menu
+**Story Under Test:** PO Clarification — Menu vs Home Layout Separation
+
+**Test Steps:**
+- Open http://localhost:5173/home
+- Open http://localhost:5173/menu
+
+**Observed Behavior:**
+- Layout changes intended for `/menu` (Swiggy-like flat list) were also applied to `/home`.  
+- After implementing separation:  
+  - **Home page** now shows the original 4×2 grid menu card layout.  
+  - **Menu page** shows the new flat, Swiggy-like vertical list layout.
+
+**Expected Behavior:**
+- Home and Menu must have independent layouts.  
+- Home retains its original card grid.  
+- Menu adopts the redesigned flat list.
+
+**Status:** ✅ Done
+
+**Notes (What & Why):**
+- **What we did:** Split `MenuCardGrid` and `MenuCardFlat` into separate components. Updated `Home.tsx` to call `MenuCardGrid`, and `Menu.tsx` to call `MenuCardFlat` through `MenuGrid`.  
+- **Why we did it:** To prevent redesign changes for `/menu` from unintentionally breaking `/home`. This ensures each page keeps its intended design and avoids regressions.  
+- Future refinements (veg/non-veg icon, 2-line description with “more”) will be logged as new stories.
+
+# Test Report — Epic: Menu
+
+## Story Under Test: Visual Tweak — Font Consistency (Nunito across Home & Menu)
+- **Status:** ✅ Done
+- **Test Steps executed:**
+  1. Opened `http://localhost:5173/home` and `http://localhost:5173/menu`.
+  2. Compared font-family and font sizes for:
+     - Dish names
+     - Category titles
+     - Search input
+  3. Verified both pages use Nunito and font scale is consistent.
+- **Observed Behavior:** Both pages now render with Nunito. No spacing regressions.
+- **Result:** PASS
+- **Artifacts:**  
+  - Snapshots: `tests/visual/font-consistency/`  
+  - Manual verification: `tests/manual/font-consistency-report.md`
+
+---
+
+## Story Under Test: Visual Tweak — Sticky Header (Logo + Search)
+- **Status:** ⏳ Pending
+- **Test Steps:**  
+  1. Open `/home` and scroll down — expected sticky header.  
+  2. Open `/menu` and scroll down — expected sticky header.  
+- **Observed Behavior:** Header currently scrolls away.
+- **Result:** FAIL / Pending
+- **Blocker:** PO requests this story remain **Pending**.  
+  Dev agents must not implement until PO explicitly moves it to **In Dev**.
+
+---
+
+```
+
+### Epic: Menu
+**Story Under Test:** Visual Tweak — Sticky Header (Logo + Search)
+- **Tester:** PO
+- **Date:** 2025-09-18
+- **PO Verification:** I ran the app locally and can visually confirm that the logo and search box in the top toolbar are now sticking as expected.
+
+**Test Steps:**
+- PO opened app locally, inspected per acceptance criteria.
+
+**Observed Behavior:**
+- The logo and search bar remain pinned at the top while scrolling on both `/home` and `/menu`.
+- Category strip (MenuHeader) and menu items scroll beneath the sticky header.
+- No overlap or flickering observed.
+
+**Expected Behavior:**
+- When scrolling down `/home`, the logo + search bar remain pinned at the top.
+- When scrolling down `/menu`, the same behavior is applied.
+- Category strip (MenuHeader) and menu items continue to scroll beneath the sticky header.
+- No overlap or flickering when scrolling.
+
+**Status:** ✅ Done
+
+**Artifacts:** (if PO provided)

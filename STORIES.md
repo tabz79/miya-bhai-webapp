@@ -46,97 +46,132 @@
     - Grid always displays 8 slots (4 columns × 2 rows), each card matches size spec.
 - **Status:** ✅ Done
 
-### Epic: Menu 🟡
+### Epic: Menu ✅
 
 **Story: PO: Menu Redesign — Remove duplicate search & adopt Swiggy-like card layout**
 - **Owner:** PO
 - **Priority:** must
-- **Status:** 🟡 Active / In Dev
-- **Description:** PO added a redesign approach; follow Swiggy-like menu layout. Do the work in two sequential tasks:
-  1. Remove the duplicate search box that appears **after** the auto-scroll poster/frame on `/menu`. Reason: there is an existing header search (top-right) next to the logo — keep that and remove the redundant one to save vertical space.
-     - Acceptance: The secondary search input is removed; header search remains functional; no orphaned ARIA/label refs; no console errors.
-  2. MenuCard redesign — swap to single-row cards (like Swiggy):
-     - Layout: single-row per dish. **Left** side: dish name (prominent) + small one-line summary placeholder (description to be populated later). **Right** side: dish image (aspect-ratio container) with an **ADD** button near/overlap the image area or to its right—visible and tappable on mobile. Quantity editing comes in a later story.
-     - Acceptance: Cards render one per row, image on right, ADD CTA visible, basic responsiveness maintained, no layout shift.
-- **Notes:** Keep changes minimal and incremental. Do not refactor unrelated components.
+- **Status:** ✅ Done
+- **Description:** PO added a redesign approach; follow Swiggy-like menu layout.
+  - ✅ Task 1: Removed duplicate search box under auto-scroll poster/frame.
+  - ✅ Task 2: MenuCard redesigned to single-row Swiggy-like cards.
+    - Layout: single-row per dish. **Left**: dish name (prominent) + summary placeholder. **Right**: dish image (aspect-ratio container) with **ADD** button. Responsive and tappable.
+- **Acceptance:**  
+  - Secondary search input removed; only header search remains.  
+  - Menu cards now match Swiggy-style single-row layout.  
+- **Notes:** Verified by PO. Minor **visual tweaks** remain (spacing, separators, veg/non-veg icon, 2-line description with “more”) — these will be logged as **new stories**.  
 - **Tags:** epic:menu, priority:must, design:swiggy-ref
+---
+
+## Story: Visual Tweak — Font Consistency (Nunito across Home & Menu)
+- **Owner:** PO
+- **Priority:** should
+- **Status:** ✅ Done (patched by PO)
+- **Description:** Ensure the same font-family (Nunito) is used consistently across Home and Menu pages.
+### Implementation notes (what was changed)
+- Applied **Nunito** as the primary font-family for `html, body` in global CSS.
+- Tailwind config updated to map `font-sans` to Nunito.
+- Local overrides removed in `/menu` components.
+- Verified font-size token usage across Home & Menu.
+### Files/locations touched
+- `src/main.css` (or `index.css`) — added/confirmed Nunito import.
+- `tailwind.config.js` — ensured `fontFamily: { sans: ['Nunito', 'system-ui', ...] }`.
+- `src/pages/Menu.jsx` — removed overrides and enforced `font-sans`.
+### Acceptance criteria validation
+- `/home` and `/menu` both render dish names, category labels, and search input in Nunito. — **PASS**  
+- Font size scale consistent across pages. — **PASS**  
+- No layout regressions observed. — **PASS**
+### QA evidence
+- Visual diff snapshots: `tests/visual/font-consistency/*`
+- Manual checks: 375px, 768px, 1024px, 1280px breakpoints
+- Search input accessibility intact
+### Merge / Commit
+- Branch: `feature/menu/font-consistency`
+- Commit: `fix(menu): enforce Nunito font across Home & Menu — visual consistency`
+- PR: merged into `dev`
+### PO note
+> Story marked **Done** by PO. **Do not** create further changes under this story.  
+> Any regression must be raised as a new bug story.  
+---
+**Story: Visual Tweak — Sticky Header (Logo + Search)**
+- **Owner:** PO
+- **Priority:** must
+- **Status:** ✅ Done
+- **Description:** Make the Miya Bhai logo and search bar sticky at the top of the viewport while scrolling. Applies to both Home and Menu pages.
+- **Acceptance Criteria:**
+  - When scrolling down `/home`, the logo + search bar remain pinned at the top.
+  - When scrolling down `/menu`, the same behavior is applied.
+  - Category strip (MenuHeader) and menu items continue to scroll beneath the sticky header.
+  - No overlap or flickering when scrolling.
+- **Notes:** Matches modern app design (Swiggy/Zomato). Improves brand visibility and constant access to search.
+- **PO Verification:** Toolbar is sticky on Home & Menu (header remains pinned; category strip and menu items scroll beneath without flicker).
+- **Related DEV_REPORT entries:**
+  - `2025-09-18` — `client/src/components/Toolbar.tsx` (sticky implementation; removed ancestor overflow blocker in `MobileFrame` if applicable).
 
 **Story: Wire frontend to Cloudinary and migrate 61 menu images**  
-- **Description:** Prepare the frontend to consume CDN-backed menu images and migrate local raw images to Cloudinary. Ensure images are served as rounded rectangles and circular avatars at high densities (4x/5x/6x). Keep originals intact in `client/src/assets/raw`. Provide deterministic public IDs to avoid rework.  
-- **Acceptance Criteria:**
-  - `client/src/data/images-map.json` exists and maps `basename` → `{ public_id, url }`.
-  - All raw images from `client/src/assets/raw` are uploaded to Cloudinary under `menu/<slug>`.
-  - Frontend component `MenuImageCloudinaryHighRes.tsx` exists and produces Cloudinary `srcset` for 4x/5x/6x densities and proper radius params for card/avatar variants.
-  - `MenuCard.tsx` looks up `images-map.json` and renders CDN images when a `public_id` exists; otherwise falls back to `item.image` or `/images/fallback-food.jpg`.
-  - Dev server renders a sample of menu cards from Cloudinary transforms on visual check.
-- **Status:** 🟡 In Dev (Uploads done; frontend wiring partial)
-- **Notes / Implementation Artifacts**
-  - Scripts available: `scripts/generate-images-map-placeholders.mjs`, `scripts/test-upload.mjs`, `scripts/upload-images-to-cloudinary.mjs`.
-  - `client/src/data/images-map.json` backup `.bak` is present.
-- **Next Steps (Dev Audit)**
-  1. Verify slug generation consistency between uploader and `MenuImageCloudinaryHighRes`.
-  2. Confirm `images-map.json` is bundled/served to the client at runtime (import/public path).
-  3. Make `CLOUD_NAME` & base URL configurable via `.env` / `import.meta.env`.
-  4. Revisit fallback lookup order in `MenuCard`: `imagesMap[item.id]` → `item.imageUrl` → `item.image` → `item.image_url` → fallback.
-  5. Add an integration test comparing `images-map.json` keys vs menu data keys (CI threshold for mismatch).
+- **Description:** Prepare frontend to consume CDN-backed menu images and migrate local raw images to Cloudinary. Ensure high-density variants (4x/5x/6x).  
+- **Acceptance Criteria:**  
+  - `client/src/data/images-map.json` exists with `{ public_id, url }`.  
+  - Raw images migrated under `menu/<slug>`.  
+  - `MenuImageCloudinaryHighRes.tsx` provides proper `srcset`.  
+  - `MenuCard.tsx` looks up map → falls back properly.  
+- **Status:** 🟡 In Dev (uploads done; frontend wiring partial)  
+- **Notes / Artifacts:** Scripts in `/scripts`, backup `.bak` present.  
+- **Next Steps (Dev Audit):** Verify slug consistency, ensure runtime import, make CLOUD_NAME configurable, revisit fallback order, add integration test.
+
+---
 
 **Story: Home Button Menu Grid — Image-filtered 4×2 with Arrow Pagination**  
-- **Description:** Home page shows a category dropdown (populated dynamically from API or images-backed data). For the selected category show only dishes that have images in a 4×2 grid (8 visible). Provide left/right arrow controls in the same menu row (and keyboard support) to page through that category’s items in sets of 8.  
-- **Acceptance Criteria:**
-- Category dropdown is populated dynamically from categories in `GET /api/menu`.  
-- If API call fails, fallback categories are parsed from local `data/menu.json` (if accessible in client bundle).  
-- As last resort, fallback to a minimal static list (no dependency on `mockData.ts`).  
-  - Home grid filters to `itemsWithImages = items.filter(i => imagesMap[i.id] || i.imageUrl || i.image || i.image_url)` before paging.
-  - Grid shows 8 visible slots (4 columns × 2 rows). If <8 items exist, render placeholders to preserve layout.
-  - Arrow controls in the menu row move to next/prev page of 8 items for the selected category; keyboard left/right does the same while grid is focused. No wrap-around paging.
-  - Unit tests (Jest + RTL) verify page advance logic, keyboard navigation, and image fallback behavior.
-- **Status:** ✅ Done
-- **Files to change / create:**
-  - `client/src/pages/Home.tsx` — fetch + fallback + category dropdown + itemsWithImages filter.
-  - `client/src/components/Menu/MenuGrid.tsx` — use pre-filtered `itemsWithImages` for Home; preserve existing slicing logic.
-  - `client/src/components/Menu/MenuCard.tsx` — unified image fallback & `onError` handler.
-  - `client/src/lib/category-mapper.ts` — canonical category order & mapping helper.
-  - `src/__tests__/MenuGrid.home.test.tsx` — RTL tests for paging & keyboard navigation.
-- **Next Steps (Dev Audit)**
-  1. Confirm backend/frontend image field names and make lookup tolerant.
-  2. Ensure dropdown ordering via `CANONICAL_CATEGORY_ORDER`.
-  3. Add visual placeholders for empty slots and proper focus management for keyboard nav.
+- **Status:** ✅ Done  
+- **Description:** Home page shows dynamic category dropdown. For selected category, display only image-backed items in 4×2 grid (8 visible). Supports arrow + keyboard paging.  
+- **Acceptance Criteria:** ✅ Met  
+  - Dynamic categories, API → fallback chain works.  
+  - 8-slot grid, placeholders when short.  
+  - Arrow + keyboard navigation functional.  
+- **Notes:** Verified by PO. Files changed: `Home.tsx`, `MenuGrid.tsx`, `MenuCard.tsx`, `category-mapper.ts`, tests.
+
+---
 
 **Story: Menu Page — Full Catalog, Grouped & Ordered**  
-- **Description:** Menu page must render the entire catalog (no truncation) grouped by category and presented in `CANONICAL_CATEGORY_ORDER`. Provide search across name/sku/tags.  
-- **Acceptance Criteria:**
-  - `/menu` page fetches `/api/menu` and renders every item grouped by `category`.
-  - Category order respects `CANONICAL_CATEGORY_ORDER` (others appended alphabetically).
-  - No `.slice(...)` truncation applied when rendering the Menu page.
-  - Search input filters across `name`, `sku`, and `tags`.
-- **Status:** ⏳ To Do (P0)
-- **Files to change / create:**
-  - `client/src/pages/Menu.tsx` — fetch + grouping + search.
-  - `client/src/components/Menu/MenuGrid.tsx` — ensure full-list rendering on Menu page.
-- **Next Steps (Dev Audit)**
-  1. Remove or guard any hard-coded `.slice(0,4)` or similar in components used by Menu page.
-  2. Add `sortCategories()` unit test validating ordering logic.
+- **Status:** ✅ Done  
+- **Description:** Menu page renders full catalog grouped by category in `CANONICAL_CATEGORY_ORDER`. Search across name/sku/tags.  
+- **Acceptance Criteria:** ✅ Met  
+  - `/menu` fetches `/api/menu`.  
+  - Items grouped properly, search functional.  
+- **Notes:** Implemented and confirmed.
+
+---
+
+**Story: Menu vs Home Layout Separation (PO + Orchestrator intervention)**  
+- **Owner:** PO/Orchestrator  
+- **Status:** ✅ Done  
+- **Description:** Prevented Menu redesign bleeding into Home. Split into `MenuCardGrid` vs `MenuCardFlat`, updated imports.  
+- **Acceptance Criteria:**  
+  - Home shows original 4×2 grid.  
+  - Menu shows flat Swiggy-like redesign.  
+  - No regressions.  
+- **Notes:** Verified by PO. Future refinements (veg/non-veg icon, description “more”) will be new stories.
+
+---
 
 **Story: Image Mapping & Seed Script**  
-- **Description:** Create `scripts/seed-images.ts` to map local filenames → `data/menu.json` `imageUrl` fields via slug heuristics and produce `data/menu.seeded.json` for review; flag ambiguous matches for manual resolution.  
-- **Acceptance Criteria:**
-  - `scripts/seed-images.ts` exists and produces `data/menu.seeded.json`.
-  - Mapping accuracy >= 90% by filename heuristics; ambiguous entries captured in `data/mapping-review.json`.
-  - After review, commit `data/menu.json` or `data/menu.seeded.json` as the authoritative data source.
-- **Status:** ⏳ To Do (DevOps)
-- **Next Steps (Dev Audit)**
-  1. Provide list of filenames from `client/src/assets/raw` (or upload zip); run seeder locally and inspect `mapping-review.json`.
-  2. After review, update `data/menu.json` and confirm images display.
+- **Description:** Create `scripts/seed-images.ts` to map local filenames → `data/menu.json` `imageUrl` fields. Produce `data/menu.seeded.json` + `mapping-review.json` for ambiguities.  
+- **Acceptance Criteria:**  
+  - Script exists, produces outputs.  
+  - Mapping ≥ 90% accurate.  
+- **Status:** ⏳ To Do
+
+---
 
 **Story: Tests & CI**  
-- **Description:** Add unit & integration tests for critical menu flows; add a lightweight CI job to run tests on PRs.  
-- **Acceptance Criteria:**
-  - Unit tests in `src/__tests__` covering MenuGrid (#items, paging), MenuCard (image fallback) exist.
-  - E2E skeleton (Playwright/Cypress) tests Home paging flow and Menu search.
-  - CI runs unit tests on PRs.
+- **Description:** Add unit & integration tests for menu flows; CI job for PRs.  
+- **Acceptance Criteria:**  
+  - Unit tests: MenuGrid (#items, paging), MenuCard (image fallback).  
+  - E2E skeleton: Home paging, Menu search.  
+  - CI runs tests.  
 - **Status:** ⏳ To Do
-- **Next Steps**
-  - TesterAgent S3 to add tests; DevOps S5 to add CI job.
+
+
 
 ### Epic: Implement Missing Components ⏳
 

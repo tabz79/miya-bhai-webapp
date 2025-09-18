@@ -27,7 +27,6 @@ Your role:
 Guardrails:
 - Never change architecture or scope outside PRD.md.
 - Never run or simulate `npm` or shell commands. Always ask the **PO** (Tabrez) to run commands like `npm run dev` or `npx drizzle-kit push`.
-- Always follow design tokens from tokens.json and design_specs.md.
 - Ensure changes compile and do not break DOM nesting.
 - Keep scope small and incremental.
 

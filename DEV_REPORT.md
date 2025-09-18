@@ -78,10 +78,10 @@
         ```bash
         curl http://localhost:3000/api/health
         ```
-        *Expected JSON:* `{"status":"ok", ...}`
+        *Expected JSON:* `{\"status\":\"ok\", ...}`
     *   **Invalid Pagination:**
         ```bash
-        curl -i "http://localhost:3000/api/menu?page=0&limit=abc"
+        curl -i \"http://localhost:3000/api/menu?page=0&limit=abc\"
         ```
         *Expected Result:* `HTTP/1.1 400 Bad Request` with a JSON error body.
     *   **Valid Pagination:**
@@ -99,7 +99,7 @@
 *   **Story:** Implement Liveness & Readiness Route and Menu Routes
 
 **Fixes Implemented:**
-1.  **`jest.config.cjs`**: Created this file at the repository root. This configuration is required for Jest to correctly handle native ES Modules (`"type": "module"`) and allows `npm test` to execute successfully.
+1.  **`jest.config.cjs`**: Created this file at the repository root. This configuration is required for Jest to correctly handle native ES Modules (`\"type\": \"module\"`) and allows `npm test` to execute successfully.
 2.  **`package.json`**: Verified that the `dev`, `dev:server`, `dev:client`, `start`, and `test` scripts are correct and final.
 
 **PO Verification Steps:**
@@ -171,7 +171,7 @@
     *   **Expected Result:** All tests, including the new `HeroCarousel` tests, should pass.
 
 **Next Steps:**
-*   Proceed to the next story in the "Home Screen Fixes & Enhancements" epic.
+*   Proceed to the next story in the \"Home Screen Fixes & Enhancements\" epic.
 
 ---
 
@@ -197,7 +197,7 @@
 2.  **Test Execution:** Verified with `npm test` that all Jest tests pass, including the new test case for the undefined prop.
 
 **Next Steps:**
-*   Continue with the next story in the "Home Screen Fixes & Enhancements" epic. The carousel is now stable.
+*   Continue with the next story in the \"Home Screen Fixes & Enhancements\" epic. The carousel is now stable.
 
 ---
 
@@ -252,7 +252,7 @@
 
 **Findings & Root Cause Analysis:**
 
-I have identified the critical issue causing the carousel to be stuck on a single image with no indicators or auto-play. The problem is not in the `HeroCarousel` component's internal logic, but in how it's being used.
+I have identified the critical issue causing the carousel to be stuck on a single image with no indicators or auto-play. The problem is not in the `HeroCarousel` component\'s internal logic, but in how it\'s being used.
 
 1.  **Root Cause:** The main `Home.tsx` page directly renders the `<HeroCarousel />` component **without passing it the required `images` prop.**
 
@@ -269,11 +269,11 @@ I have identified the critical issue causing the carousel to be stuck on a singl
     *   Import the `HeroSection` component instead.
     *   Replace `<HeroCarousel />` with `<HeroSection />` in the JSX.
 
-    *Example Code Change:*
+    *Example Code Change:*\
     ```diff
     // client/src/pages/Home.tsx
-    - import { HeroCarousel } from '../components/HeroCarousel/HeroCarousel';
-    + import { HeroSection } from './sections/HeroSection';
+    - import { HeroCarousel } from \'../components/HeroCarousel/HeroCarousel\';
+    + import { HeroSection } from \'./sections/HeroSection\';
     
     // ... inside the Home component return()
     
@@ -344,10 +344,10 @@ This action plan will connect the data (`heroImages` array) to the display compo
 - PO requested the image be constrained to a `230x114` container, centered, with `object-fit: cover`.
 
 **Changes Implemented:**
-1.  **`client/src/components/HeroCarousel/HeroCarousel.tsx`**:
-    *   Refactored the JSX to create a dedicated, non-animated container for the image with fixed dimensions (`w-[230px] h-[114px]`).
-    *   This container is positioned absolutely to match the Figma layout.
-    *   The `<img>` tag now uses `object-cover` to fill this container without distortion.
+1.  **`client/src/components/HeroCarousel/HeroCarousel.tsx`**:\
+    *   Refactored the JSX to create a dedicated, non-animated container for the image with fixed dimensions (`w-[230px] h-[114px]`).\
+    *   This container is positioned absolutely to match the Figma layout.\
+    *   The `<img>` tag now uses `object-cover` to fill this container without distortion.\
     *   The static text overlay remains in its own `z-10` layer, preserving the required visual hierarchy.
 
 **Files Updated:**
@@ -376,7 +376,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 **Findings & Root Cause Analysis:**
 
 1.  **Figma Spec Compliance Check:**
-    *   **Width (`230px`):** Non-compliant. The code uses `w-full` inside a container that is being centered, not a fixed width for the image's immediate parent.
+    *   **Width (`230px`):** Non-compliant. The code uses `w-full` inside a container that is being centered, not a fixed width for the image\'s immediate parent.
     *   **Height (`114px`):** Non-compliant. The code uses `h-full`.
     *   **Alignment (`center`):** Non-compliant. The spec requires absolute positioning at (163, 66), but the code is using flexbox centering (`top-1/2`, `left-1/2`, `translate...`).
     *   **Position (`x=163`, `y=66`):** Non-compliant. The code does not use `top-[66px]` or `left-[163px]`.
@@ -427,12 +427,12 @@ This action plan will connect the data (`heroImages` array) to the display compo
 *   **Story:** Implement HeroCarousel Functionality
 
 **Sync with Tester:**
-*   Confirmed via `TEST_REPORT.md` that unwanted rectangular shadow/box was appearing behind hero titles "Nizam’s" and "Royal Flavours".
+*   Confirmed via `TEST_REPORT.md` that unwanted rectangular shadow/box was appearing behind hero titles \"Nizam’s\" and \"Royal Flavours\".
 *   Issue was traced to incorrect `box-shadow` application via `shadow-effect-text-shadow-heroh1` and `shadow-effect-text-shadow-heroh2` classes.
 
 **Changes Implemented:**
-1.  Removed `shadow-effect-text-shadow-heroh1` class from the `div` containing "Nizam’s" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
-2.  Removed `shadow-effect-text-shadow-heroh2` class from the `div` containing "Royal Flavours," in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+1.  Removed `shadow-effect-text-shadow-heroh1` class from the `div` containing \"Nizam’s\" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+2.  Removed `shadow-effect-text-shadow-heroh2` class from the `div` containing \"Royal Flavours,\" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
 3.  The existing `[text-shadow:...]` arbitrary utility classes were kept intact to ensure the soft glow text-shadow remains.
 
 **Files Touched:**
@@ -441,30 +441,30 @@ This action plan will connect the data (`heroImages` array) to the display compo
 **Result:**
 *   The unwanted rectangular shadow/box effect has been removed.
 *   The text shadow now renders correctly without any unintended background box.
-*   No visual regression for "Nizam’s", "Royal Flavours,", and tagline text.
+*   No visual regression for \"Nizam’s\", \"Royal Flavours,\", and tagline text.
 
 **Hand-off:**
 *   PO and Tester to validate visuals and confirm the fix.
 ---
 
-### Dev Agent (S2) Report - 2025-09-08 (Hero Section Shadow Fix - Nizam's Title)
+### Dev Agent (S2) Report - 2025-09-08 (Hero Section Shadow Fix - Nizam\'s Title)
 
-**Story Correlation:** Fix for remaining rectangular shadow/box on "Nizam's" title.
+**Story Correlation:** Fix for remaining rectangular shadow/box on \"Nizam\'s\" title.
 *   **Epic:** Home Screen Fixes & Enhancements
 *   **Story:** Implement HeroCarousel Functionality
 
 **Sync with Tester:**
-*   Confirmed via `TEST_REPORT.md` that "Nizam's" title still showed a rectangular shadow/box after the previous fix.
+*   Confirmed via `TEST_REPORT.md` that \"Nizam\'s\" title still showed a rectangular shadow/box after the previous fix.
 
 **Changes Implemented:**
-1.  Removed the `shadow-effect-text-shadow-heroh1` class from the `div` element containing "Nizam's" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
+1.  Removed the `shadow-effect-text-shadow-heroh1` class from the `div` element containing \"Nizam\'s\" in `client/src/components/HeroCarousel/HeroCarousel.tsx`.
 2.  The `[text-shadow:...]` arbitrary utility class was kept intact to ensure the soft glow text-shadow remains.
 
 **Files Touched:**
 *   `client/src/components/HeroCarousel/HeroCarousel.tsx` (Modified)
 
 **Result:**
-*   The unwanted rectangular shadow/box effect on "Nizam's" title has been removed.
+*   The unwanted rectangular shadow/box effect on \"Nizam\'s\" title has been removed.
 *   The text shadow now renders correctly without any unintended background box.
 
 **Hand-off:**
@@ -485,7 +485,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 1.  Modified `client/src/components/SearchBarPill.tsx`.
 2.  Added `relative` class to the main `div` wrapper of the search bar to establish a positioning context.
 3.  Added `pr-[26px]` (padding-right) to the `input` element to create space for the icon.
-4.  Changed the `Search` icon's positioning from flexbox-based to `absolute`.
+4.  Changed the `Search` icon\'s positioning from flexbox-based to `absolute`.
 5.  Applied `right-[10px]` and `top-1/2 -translate-y-1/2` to the `Search` icon for precise right-alignment and vertical centering within the input field.
 
 **Files Touched:**
@@ -500,16 +500,16 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 ### Dev Agent (S2) Report - 2025-09-08 (Add: Best Sellers Heading)
 
-**Story Correlation:** Add "Signature Best Sellers" heading to Best Sellers strip.
+**Story Correlation:** Add \"Signature Best Sellers\" heading to Best Sellers strip.
 *   **Epic:** Home Screen Fixes & Enhancements
 *   **Story:** Implement Best Sellers Section
 
 **Sync with PO/Figma:**
-*   Implemented heading text "Signature" and "Best Sellers" as two separate lines.
+*   Implemented heading text \"Signature\" and \"Best Sellers\" as two separate lines.
 *   Positioned heading at x=14px, y=46px relative to the Best Sellers container.
 *   Set layout box to 62x40px for the combined heading area.
 *   Applied top-left alignment.
-*   Ensured a 6px gap between "Signature" and "Best Sellers" lines.
+*   Ensured a 6px gap between \"Signature\" and \"Best Sellers\" lines.
 *   Used `font-typography-section-title` (Carattere, Helvetica fallback), `text-[16px]`, `leading-[17px]`, `font-normal`, and `text-colortextsectiontitle` (white) for typography and color.
 *   Used `<h2>` for semantic markup.
 
@@ -517,7 +517,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 *   `client/src/components/BestSellers/BestSellersStrip.tsx` (Modified)
 
 **Result:**
-*   The "Signature Best Sellers" heading is now displayed in the Best Sellers strip at the specified position and with the correct typography and layout.
+*   The \"Signature Best Sellers\" heading is now displayed in the Best Sellers strip at the specified position and with the correct typography and layout.
 
 **Hand-off:**
 *   PO and Tester to validate visuals and confirm the fix.
@@ -530,7 +530,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 *   **Story:** Implement Best Sellers Section
 
 **Sync with PO/Figma:**
-*   Confirmed via `TEST_REPORT.md` that product cards were overlapping the "Signature Best Sellers" heading.
+*   Confirmed via `TEST_REPORT.md` that product cards were overlapping the \"Signature Best Sellers\" heading.
 *   Figma coordinates for the cards container: x=78, y=271, width=315px, height=137px.
 
 **Changes Implemented:**
@@ -560,7 +560,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Findings:**
 1.  **Missing `overflow-x-auto`:** The `div` element intended to be the scrollable container for the `BestSellerCard` components (where `scrollRef` is attached) in `BestSellersStrip.tsx` does not have the `overflow-x-auto` or `overflow-x-scroll` CSS property applied.
-2.  **`scrollRef` Correctly Attached:** The `scrollRef` is correctly attached to the `div` containing the `bestsellers.map`.
+2.  **`scrollRef` Correctly Attached:** The `scrollRef` is correctly attached to the `div` containing the `bestsellers.map`.\
 3.  **No Scrollable Area:** Due to the missing `overflow-x-auto`, the browser does not create a scrollable area for the content. Consequently, `scrollWidth` and `clientWidth` within the `checkScrollButtons` function are effectively equal (or very close), preventing the conditions for `showLeftButton` and `showRightButton` from ever becoming true.
 4.  **Layout Sizing:** The current layout of cards within the `w-[315px]` container, even if the total width of cards + gaps exceeds 315px, will not trigger a scrollbar without the `overflow-x-auto` property.
 
@@ -582,7 +582,7 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Changes Implemented:**
 1.  **`client/src/data/mockData.ts`**: Added 4 new mock best-seller items (total of 8 items) to ensure content overflow.
-2.  **`client/src/components/BestSellers/BestSellersStrip.tsx`**:
+2.  **`client/src/components/BestSellers/BestSellersStrip.tsx`**:\
     *   Confirmed `overflow-x-auto` is present on the scrollable container `div`.
     *   Updated `scrollLeft` and `scrollRight` functions to scroll by a calculated `scrollAmount` (413px), representing the width of 4 cards plus their gaps, enabling chunked scrolling.
 
@@ -604,11 +604,11 @@ This action plan will connect the data (`heroImages` array) to the display compo
 **Summary:** The audit identified a critical flaw in the image lookup logic. The frontend `MenuCard.tsx` component generates a `slug` from the item name to find an image, but the `images-map.json` file is keyed by the original filename base, not the slug. This mismatch causes all lookups to fail, forcing the component to use local fallback images.
 
 **Checklist Results**
-1.  **Slug key consistency:** **Fail**. The uploader script (`upload-images-to-cloudinary.mjs`) creates a map keyed by the image's base filename (e.g., "Tangdi Kebab"). The frontend component (`MenuCard.tsx`) attempts to look up entries using a slugified version of the menu item's name (e.g., "tangdi-kebab").
-2.  **`images-map.json` format & coverage:** **Partial**. The format (`public_id`, `url`) is correct. However, the keys are incorrect for the lookup logic. Additionally, the menu items in `client/src/data/mockData.ts` are a small subset and do not match the names of the 61 uploaded images, meaning most images can't be mapped anyway.
+1.  **Slug key consistency:** **Fail**. The uploader script (`upload-images-to-cloudinary.mjs`) creates a map keyed by the image\'s base filename (e.g., \"Tangdi Kebab\"). The frontend component (`MenuCard.tsx`) attempts to look up entries using a slugified version of the menu item\'s name (e.g., \"tangdi-kebab\").
+2.  **`images-map.json` format & coverage:** **Partial**. The format (`public_id`, `url`) is correct. However, the keys are incorrect for the lookup logic. Additionally, the menu items in `client/src/data/mockData.ts` are a small subset and do not match the names of the 61 uploaded images, meaning most images can\'t be mapped anyway.
 3.  **Import paths & component wiring:** **Pass**. `MenuCard.tsx` correctly imports `images-map.json` and `MenuImageCloudinaryHighRes.tsx`. Props passed to the component are correct.
 4.  **Cloud name / configuration handling:** **Fail**. `CLOUD_NAME` is hard-coded in `client/src/components/MenuImageCloudinaryHighRes.tsx`. This is a Medium risk.
-5.  **Runtime fallback & error paths:** **Pass**. `MenuCard.tsx` has a fallback branch that correctly renders the local `item.image` if `publicId` is not found. This is why the UI doesn't appear broken, it just shows the old images.
+5.  **Runtime fallback & error paths:** **Pass**. `MenuCard.tsx` has a fallback branch that correctly renders the local `item.image` if `publicId` is not found. This is why the UI doesn\'t appear broken, it just shows the old images.
 6.  **HMR / cache / dev-server issues:** **Medium Risk**. The `images-map.json` file is imported at the module level in `MenuCard.tsx`. Changes to this file may not be picked up by the Vite dev server without a full restart, leading to stale data during development.
 7.  **Network-level checks for PO to run:** **Provided Below**.
 8.  **Acceptance criteria cross-check:**
@@ -620,21 +620,21 @@ This action plan will connect the data (`heroImages` array) to the display compo
 
 **Findings**
 
-*   **(Critical) Key Mismatch:** The lookup key in `MenuCard.tsx` is a slug (e.g., `chicken-juicy-mandi`), but the key in `images-map.json` is the original file's base name (e.g., `Chicken Juicy Mandi`).
+*   **(Critical) Key Mismatch:** The lookup key in `MenuCard.tsx` is a slug (e.g., `chicken-juicy-mandi`), but the key in `images-map.json` is the original file\'s base name (e.g., `Chicken Juicy Mandi`).
     *   File: `scripts/upload-images-to-cloudinary.mjs` (creates map with `base` as key)
     *   File: `client/src/components/Menu/MenuCard.tsx` (looks up map with `slug` as key)
-*   **(High) Data Mismatch:** The `menu` array in `client/src/data/mockData.ts` contains only 8 items with names like "Chicken Biryani", while `images-map.json` contains 61 entries with more specific names like "Chicken Dum Biryani". The frontend has no data for most of the uploaded images.
+*   **(High) Data Mismatch:** The `menu` array in `client/src/data/mockData.ts` contains only 8 items with names like \"Chicken Biryani\", while `images-map.json` contains 61 entries with more specific names like \"Chicken Dum Biryani\". The frontend has no data for most of the uploaded images.
 *   **(Medium) Hard-coded Config:** `CLOUD_NAME` is hard-coded in `client/src/components/MenuImageCloudinaryHighRes.tsx`.
 
 **Manual verification requests for PO**
 
-Since the lookup logic is guaranteed to fail, there are no "failing cards" to inspect yet. The following checks should be performed *after* the recommended fixes are applied:
+Since the lookup logic is guaranteed to fail, there are no \"failing cards\" to inspect yet. The following checks should be performed *after* the recommended fixes are applied:
 1.  **Clear Cache:** Before testing, please perform these manual steps:
     *   Stop the Vite dev server (`Ctrl+C`).
     *   Restart it: `npm run dev:client`.
     *   In your browser, open the app and do a hard reload (`Ctrl+Shift+R` or `Cmd+Shift+R`).
 2.  **Inspect a working card:**
-    *   Right-click a menu image and "Inspect". Find the `<img>` tag.
+    *   Right-click a menu image and \"Inspect\". Find the `<img>` tag.
     *   Copy the full `src` URL and paste it here. It should start with `https://res.cloudinary.com/...`.
     *   Check the `srcset` attribute on the same `<img>` tag. It should contain multiple Cloudinary URLs with `4x`, `5x`, and `6x` descriptors.
 
@@ -655,28 +655,28 @@ Since the lookup logic is guaranteed to fail, there are no "failing cards" to in
 **Signed:** DevAgent S2 — 2025-09-12T18:00:00Z
 ### Dev Audit: Full Menu Wiring — 2025-09-12 (DevAgent S2)
 
-**Summary:** The audit reveals that the Home page menu grid shows a limited number of cards (e.g., 4 for "Main Course") because it filters the master menu list by a single category *before* rendering. The underlying `MenuGrid` component is correctly configured for a 4x2 layout, but it only receives a subset of data to display.
+**Summary:** The audit reveals that the Home page menu grid shows a limited number of cards (e.g., 4 for \"Main Course\") because it filters the master menu list by a single category *before* rendering. The underlying `MenuGrid` component is correctly configured for a 4x2 layout, but it only receives a subset of data to display.
 
 **Checklist Results**
 1.  **Menu data existence & shape:** **Pass**. `client/src/data/mockData.ts` exports a `menu` array with 8 items, each having the correct shape (`id`, `name`, `price`, `image`, `category`).
 2.  **Category filtering & rendering logic:** **Fail**. `client/src/pages/Home.tsx` pre-filters the menu by the selected category. This is the root cause of the limited card display, as no single category contains 8 items.
 3.  **Data mapping for display:** **Pass**. `MenuCard.tsx` correctly uses `item.name`, `item.price`, etc.
 4.  **Asynchronous / lazy loading:** **Pass**. Data is statically imported from `mockData.ts`; no async loading issues are present.
-5.  **Category data correctness:** **Pass**. Category names in `mockData.ts` ("Main Course", "Starters", "Desserts") are consistent.
+5.  **Category data correctness:** **Pass**. Category names in `mockData.ts` (\"Main Course\", \"Starters\", \"Desserts\") are consistent.
 6.  **Duplication / null / malformed items:** **Pass**. All 8 items in the `menu` array have unique IDs and required fields.
-7.  **UI limits & explicit caps:** **Fail**. While `MenuGrid.tsx` has a `slice` for pagination, the primary limiting factor is the pre-filtering in `Home.tsx`, not an explicit cap like `.slice(0, 4)`.
+7.  **UI limits & explicit caps:** **Fail**. While `MenuGrid.tsx` has a `slice` for pagination, the primary limiting factor is the pre-filtering in `Home.tsx`, not an explicit cap like `.slice(0, 4)`.\
 8.  **Image mapping side-effects:** **Pass**. `MenuCard.tsx` has a fallback for images, so a missing CDN image does not hide the card.
 9.  **HMR / caching & runtime timing:** **Pass**. No HMR or caching issues were identified for this specific problem.
 10. **Routing / category params:** **Pass**. Category selection is handled by local state in `Home.tsx`, not URL params.
 
 **Findings**
 
-*   **(Critical) Premature Filtering:** The core issue is that the `Home.tsx` page filters the entire menu down to a single category before passing it to the `MenuGrid` component. Since the "Main Course" category only has 4 items, only 4 cards are ever rendered in the grid.
+*   **(Critical) Premature Filtering:** The core issue is that the `Home.tsx` page filters the entire menu down to a single category before passing it to the `MenuGrid` component. Since the \"Main Course\" category only has 4 items, only 4 cards are ever rendered in the grid.
     *   **File:** `client/src/pages/Home.tsx`
     *   **Code:** `const filteredItems = menu.filter(item => item.category === selectedCategory);`
 *   **(High) Insufficient Data Per Category:** The mock data in `client/src/data/mockData.ts` does not contain enough items in any single category to fill the 8-slot (4x2) grid.
     *   **File:** `client/src/data/mockData.ts`
-    *   **Data:** "Main Course" has 4 items, "Starters" has 3, and "Desserts" has 1.
+    *   **Data:** \"Main Course\" has 4 items, \"Starters\" has 3, and \"Desserts\" has 1.
 
 **Manual verification requests for PO**
 
@@ -685,15 +685,15 @@ Since the lookup logic is guaranteed to fail, there are no "failing cards" to in
 2.  **Category filter result (Main Course):**
     *   Main Course items in data: **4**
 3.  **Visible cards snapshot (Main Course):**
-    *   Visible cards (Main Course):
+    *   Visible cards (Main Course):\
         - Chicken Dum Biryani
         - Chicken Juicy Mandi
         - Mutton Dum Biryani
         - Apollo fish
 4.  **One failing item example:**
-    *   Item: `Reshmi Kebab`, Category: `Starters` (Not visible when "Main Course" is selected).
+    *   Item: `Reshmi Kebab`, Category: `Starters` (Not visible when \"Main Course\" is selected).
 5.  **Any .slice/limit evidence:**
-    *   No `.slice(0,4)` was found. The limitation is from `.filter()`.
+    *   No `.slice(0,4)` was found. The limitation is from `.filter()`.\
 
 **Recommended fixes**
 
@@ -714,8 +714,8 @@ The frontend is disconnected from the backend API, using hard-coded mock data fr
 - file: `client/src/pages/Home.tsx`
 - lines: `11-15`
 ```typescript
-import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
-import { useEffect } from 'react';
+import { menu as mockMenu, categories, MenuItem } from \'../data/mockData\';
+import { useEffect } from \'react\';
 
 export function Home() {
   const [menu, setMenu] = useState<MenuItem[]>([]);
@@ -723,7 +723,7 @@ export function Home() {
   const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
-    // TODO: Replace with actual API call, e.g., fetch('/api/menu')
+    // TODO: Replace with actual API call, e.g., fetch(\'/api/menu\')
     setMenu(mockMenu);
   }, []);
 ```
@@ -738,7 +738,7 @@ export function Home() {
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <section className="w-full px-3.5 py-0 relative">
+    <section className=\"w-full px-3.5 py-0 relative\">\
 ```
 - Explanation: The `MenuGrid` component slices the items array for pagination, limiting visibility to 8 items per page.
 
@@ -747,7 +747,7 @@ export function Home() {
 - lines: `14-15`
 ```typescript
   useEffect(() => {
-    // TODO: Replace with actual API call, e.g., fetch('/api/menu')
+    // TODO: Replace with actual API call, e.g., fetch(\'/api/menu\')
     setMenu(mockMenu);
   }, []);
 ```
@@ -759,14 +759,14 @@ export function Home() {
 ```json
 [
   {
-    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-    "name": "Classic Chicken Biryani",
-    "sku": "CCB-001",
-    "category": "Biryani",
-    "price": 15.99,
-    "tags": ["classic", "spicy", "bestseller"],
-    "branches": ["Downtown", "Uptown"],
-    "updatedAt": "2025-09-01T10:00:00Z"
+    \"id\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",
+    \"name\": \"Classic Chicken Biryani\",
+    \"sku\": \"CCB-001\",
+    \"category\": \"Biryani\",
+    \"price\": 15.99,
+    \"tags\": [\"classic\", \"spicy\", \"bestseller\"],
+    \"branches\": [\"Downtown\", \"Uptown\"],
+    \"updatedAt\": \"2025-09-01T10:00:00Z\"
   },
 ```
 - Explanation: The backend `menu.json` file, which the API uses, has no `image` or `imageUrl` field. A total of 148 image files were found in the repository.
@@ -776,15 +776,9 @@ export function Home() {
 - lines: `170-170`
 ```typescript
 // Categories (expandable as specified)
-export const categories = ["Main Course", "Starters", "Desserts"];
+export const categories = [\"Main Course\", \"Starters\", \"Desserts\"];
 ```
 - Explanation: Categories are hard-coded in the mock data file, and this static list is used for filtering, preventing dynamic category generation from the actual data source.
-
-### Findings (concise list)
-- `Primary`: The frontend is completely disconnected from the backend. It uses a hard-coded `mockMenu` from `client/src/data/mockData.ts` instead of fetching from the `/api/menu` endpoint. This is the main reason for incorrect menu items.
-- `Primary`: The backend data source (`data/menu.json`) is missing image URLs for all 12 of its items, making it impossible for the frontend to render correct images even if it were connected to the API.
-- `Secondary`: Menu item display is truncated due to pagination logic in `MenuGrid.tsx`, which slices the array of items.
-- `Secondary`: Category ordering is incorrect and static because it relies on a hard-coded array in `mockData.ts`, which does not match the categories in the backend data.
 
 ### Minimal Fix Plan (prioritized)
 - 1. **Connect Frontend to API**
@@ -794,9 +788,9 @@ export const categories = ["Main Course", "Starters", "Desserts"];
   - **Diff Snippet (for `client/src/pages/Home.tsx`):**
     ```diff
     ---
-    - import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
-    + import { menu as mockMenu, categories, MenuItem } from '../data/mockData';
-    + import { useState, useEffect } from 'react';
+    - import { menu as mockMenu, categories, MenuItem } from \'../data/mockData\';
+    + import { menu as mockMenu, categories, MenuItem } from \'../data/mockData\';
+    + import { useState, useEffect } from \'react\';
     +
     + export function Home() {
     +   const [menu, setMenu] = useState<MenuItem[]>([]);
@@ -804,19 +798,18 @@ export const categories = ["Main Course", "Starters", "Desserts"];
     +   const [currentPage, setCurrentPage] = useState(0);
     +
     +   useEffect(() => {
-    - // TODO: Replace with actual API call, e.g., fetch('/api/menu')
+    - // TODO: Replace with actual API call, e.g., fetch(\'/api/menu\')
     - setMenu(mockMenu);
     +     const fetchMenu = async () => {
     +       try {
-    +         const response = await fetch('/api/menu'); // Assuming API is on the same origin
+    +         const response = await fetch(\'/api/menu\'); // Assuming API is on the same origin
     +         const data = await response.json();
     +         setMenu(data.payload.items); // Adjust based on actual API response structure
     +       } catch (error) {
-    +         console.error("Failed to fetch menu:", error);
+    +         console.error(\"Failed to fetch menu:\", error);
     +         setMenu(mockMenu); // Fallback to mock data on error
     +       }
-    +     };
-    +     fetchMenu();
+    +     };\n    +     fetchMenu();
       }, []);
     +
     + // For the Home page, we want to show a mix of all items, not filter by category.
@@ -828,12 +821,11 @@ export const categories = ["Main Course", "Starters", "Desserts"];
     + const currentItems = itemsToDisplay.slice(startIndex, startIndex + itemsPerPage);
     +
     + return (
-    +   <section className="w-full px-3.5 py-0 relative">
-    +     <div className="flex flex-col gap-y-8 px-3.5 py-0">
-    +       <div className="flex justify-between items-center">
-    +         <h2 className="font-bold font-typography-section-title text-xl">Main Course</h2>
-    +       </div>
-    +       <MenuGrid items={currentItems} />
+    +   <section className=\"w-full px-3.5 py-0 relative\">\
+    +     <div className=\"flex flex-col gap-y-8 px-3.5 py-0\">\
+    +       <div className=\"flex justify-between items-center\">\
+    +         <h2 className=\"font-bold font-typography-section-title text-xl\">Main Course</h2>\
+    +       </div>\n    +       <MenuGrid items={currentItems} />
     +     </div>
     +   </section>
     + );
@@ -847,9 +839,9 @@ export const categories = ["Main Course", "Starters", "Desserts"];
   - **Diff Snippet:**
     ```diff
     ---
-    - "updatedAt": "2025-09-01T10:00:00Z"
-    + "updatedAt": "2025-09-01T10:00:00Z",
-    + "imageUrl": "/client/src/assets/raw/Chicken Dum Biryani.png"
+    - \"updatedAt\": \"2025-09-01T10:00:00Z\"
+    + \"updatedAt\": \"2025-09-01T10:00:00Z\",
+    + \"imageUrl\": \"/client/src/assets/raw/Chicken Dum Biryani.png\"
     },
     ```
 
@@ -857,11 +849,11 @@ export const categories = ["Main Course", "Starters", "Desserts"];
 - `client/src/components/Menu/MenuCard.tsx`
 
 ### QA Steps (for human)
-1.  Run `npm install` if you haven't already.
+1.  Run `npm install` if you haven\'t already.
 2.  Run `npm run dev` to start both client and server.
 3.  In a separate terminal, verify the API is working: `curl http://localhost:3000/api/menu`
-4.  Open the web application in a browser. The home page menu should now show items like "Classic Chicken Biryani" from the backend.
-5.  After applying the image URL fix, the image for "Classic Chicken Biryani" should appear.
+4.  Open the web application in a browser. The home page menu should now show items like \"Classic Chicken Biryani\" from the backend.
+5.  After applying the image URL fix, the image for \"Classic Chicken Biryani\" should appear.
 
 ### Append completion note
 - `APPENDED_BY: Gemini CLI`
@@ -875,23 +867,23 @@ export const categories = ["Main Course", "Starters", "Desserts"];
 *   **Epic:** Menu
 
 **Changes Implemented:**
-1.  **`client/src/pages/Home.tsx`**:
+1.  **`client/src/pages/Home.tsx`**:\
     *   Implemented API fetching for the menu from `/api/menu` with a fallback mechanism to `data/menu.json` and then to `mockData.ts`.
     *   Added logic to filter menu items that have images (`item.image`, `item.imageUrl`, or an entry in `images-map.json`).
     *   Dynamically generates and sorts categories using the new `sortCategories` helper.
 
-2.  **`client/src/components/Menu/MenuGrid.tsx`**:
+2.  **`client/src/components/Menu/MenuGrid.tsx`**:\
     *   Added left/right arrow buttons for pagination.
     *   Implemented keyboard navigation (ArrowLeft/ArrowRight) when the grid is focused.
 
-3.  **`client/src/components/Menu/MenuCard.tsx`**:
+3.  **`client/src/components/Menu/MenuCard.tsx`**:\
     *   Updated image lookup to be more tolerant, following the order: `imagesMap[item.id]`, `imagesMap[slug]`, `item.imageUrl`, `item.image`, `item.image_url`.
     *   Added an `onError` handler to image tags to display a fallback logo if an image fails to load.
 
-4.  **`client/src/lib/category-mapper.ts` (New File)**:
+4.  **`client/src/lib/category-mapper.ts` (New File)**:\
     *   Created to export `CANONICAL_CATEGORY_ORDER` and a `sortCategories()` helper function for consistent category sorting.
 
-5.  **`client/src/components/Menu/__tests__/MenuGrid.home.test.tsx` (New File)**:
+5.  **`client/src/components/Menu/__tests__/MenuGrid.home.test.tsx` (New File)**:\
     *   Added Jest and React Testing Library tests to verify pagination, keyboard navigation, and placeholder rendering.
 
 **Files Touched:**
@@ -1005,7 +997,7 @@ HeroCarousel, BestSellersStrip, BestSellerCard, DeliveryAd and small fixes to Se
 
 ## Acceptance:
 
-PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** as the immediate focus for development. Home polish tasks are explicitly deferred until after Menu, Add to Cart, and Profile features are delivered.  
+PO (Tabrez) + Orchestrator marked Home frames to Done and set **Menu tab epic** as the immediate focus for development. Home polish tasks are explicitly deferred until after Menu, Add to Cart, and Profile features are delivered.  
 
 ---
 
@@ -1035,12 +1027,12 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 *   **Epic:** Menu
 
 **Changes Implemented:**
-1.  **`client/src/pages/Menu.tsx`**:
+1.  **`client/src/pages/Menu.tsx`**:\
     *   Implemented API fetching for the menu from `/api/menu` with a fallback to `client/src/data/menu.canonical.json`.
     *   Reused image resolution logic from `Home.tsx` to provide images for menu items.
     *   Added a search bar that filters items by name, SKU, or tags.
     *   Grouped menu items by category and rendered them in the canonical order.
-2.  **`client/src/components/Menu/MenuGrid.tsx`**:
+2.  **`client/src/components/Menu/MenuGrid.tsx`**:\
     *   Added a `paginate` prop to allow disabling pagination, enabling the display of all items in a category.
 
 **Files Touched:**
@@ -1050,15 +1042,15 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 **QA Notes:**
 *   The `/menu` page now displays the full menu, grouped by category.
 *   The search bar filters the menu items as expected.
-*   The page is ready for the next story: "Add to Cart integration".
+*   The page is ready for the next story: \"Add to Cart integration\".
 
 ---
 
 ### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Remove duplicate search)
 
-**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+**Story Correlation:** STORIES.md entry: \"PO: Menu Redesign (Swiggy-like)\".  
 * **Epic:** Menu  
-* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+* **Reference (TEST_REPORT):** \"PO Requirement — Menu Redesign (Swiggy-like) — New Requirement\"\
 
 **Subtask Implemented:** Remove duplicate search
 **Change Implemented:**
@@ -1074,9 +1066,9 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 
 ### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — MenuCard redesign)
 
-**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+**Story Correlation:** STORIES.md entry: \"PO: Menu Redesign (Swiggy-like)\".  
 * **Epic:** Menu  
-* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+* **Reference (TEST_REPORT):** \"PO Requirement — Menu Redesign (Swiggy-like) — New Requirement\"\
 
 **Subtask Implemented:** MenuCard redesign
 **Change Implemented:**
@@ -1095,9 +1087,9 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 
 ### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Create AddToCartButton)
 
-**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+**Story Correlation:** STORIES.md entry: \"PO: Menu Redesign (Swiggy-like)\".  
 * **Epic:** Menu  
-* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — New Requirement"
+* **Reference (TEST_REPORT):** \"PO Requirement — Menu Redesign (Swiggy-like) — New Requirement\"\
 
 **Subtask Implemented:** Create AddToCartButton
 **Change Implemented:**
@@ -1107,15 +1099,15 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 - `client/src/components/AddToCartButton.tsx` — (created)
 
 **Status:** ✅ Done
-**Notes / Next Steps:** All subtasks for "PO: Menu Redesign (Swiggy-like)" are complete. Ready for PO verification.
+**Notes / Next Steps:** All subtasks for \"PO: Menu Redesign (Swiggy-like)\" are complete. Ready for PO verification.
 
 ---
 
 ### Dev Agent (S2) Report - 2025-09-16 (Menu Redesign — Fix duplicate search and card layout)
 
-**Story Correlation:** STORIES.md entry: "PO: Menu Redesign (Swiggy-like)".  
+**Story Correlation:** STORIES.md entry: \"PO: Menu Redesign (Swiggy-like)\".  
 * **Epic:** Menu  
-* **Reference (TEST_REPORT):** "PO Requirement — Menu Redesign (Swiggy-like) — Verification by PO"
+* **Reference (TEST_REPORT):** \"PO Requirement — Menu Redesign (Swiggy-like) — Verification by PO\"\
 
 **Subtask Implemented:** Fix duplicate search and card layout
 **Change Implemented:**
@@ -1128,3 +1120,30 @@ PO (Tabrez) + Orchestrator moved Home frames to Done and set **Menu tab epic** a
 
 **Status:** ✅ Done
 **Notes / Next Steps:** Ready for PO re-verification.
+
+---
+**Date:** 2025-09-17
+**Story:** Visual Tweak — Font Consistency (Nunito across Home & Menu)
+**Implementation Notes:**
+- Checked font-family and font-size on Home page for dish names, category headers, and search input. All use \"Nunito\".
+- Compared with Menu page components. `MenuCardFlat.tsx` was using different font styles (generic tailwind utilities) for dish names and prices.
+- Updated `client/src/components/Menu/MenuCardFlat.tsx` to use the same font classes and sizes as the Home page\'s `MenuCardGrid.tsx` for consistency.
+- Specifically, applied `font-typography-menu-dishname` and `font-typography-menu-price` and their corresponding font size and line-height variables to the dish name and price elements.
+- Added `font-sans` to the description to ensure it also uses Nunito.
+**Files Touched:**
+- `client/src/components/Menu/MenuCardFlat.tsx`
+**Status:** ✅ Done
+
+**Date:** 2025-09-18  
+**Story:** Visual Tweak — Sticky Header (Logo + Search)  
+**Implementation Notes:**  
+- Updated `Toolbar.tsx` with `sticky top-0 z-50` so the header pins correctly.  
+- Removed `overflow-hidden` from `MobileFrame.tsx` wrapper to allow sticky positioning to function.  
+- Verified header stays fixed while scrolling in both `/home` and `/menu`.  
+- Category strip and menu items scroll underneath without overlap.  
+
+**Files Touched:**  
+- `client/src/components/Toolbar.tsx`  
+- `client/src/components/ui/MobileFrame.tsx`  
+
+**Status:** ✅ Done
