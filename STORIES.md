@@ -95,7 +95,7 @@
 ---
 **Story: Visual Tweak — Sticky Header (Logo + Search)**
 - **Owner:** PO
-- **Priority:** must
+- **Priority:** should 
 - **Status:** ✅ Done
 - **Description:** Make the Miya Bhai logo and search bar sticky at the top of the viewport while scrolling. Applies to both Home and Menu pages.
 - **Acceptance Criteria:**
@@ -107,6 +107,25 @@
 - **PO Verification:** Toolbar is sticky on Home & Menu (header remains pinned; category strip and menu items scroll beneath without flicker).
 - **Related DEV_REPORT entries:**
   - `2025-09-18` — `client/src/components/Toolbar.tsx` (sticky implementation; removed ancestor overflow blocker in `MobileFrame` if applicable).
+
+**Story: Visual Tweak — Remove Excess Left Padding in Menu Page Cards (MenuCardFlat)**
+- **Owner:** PO
+- **Priority:** should
+- **Status:** ✅ Done
+- **Description:** Adjust the layout of **Menu page cards (`MenuCardFlat.tsx`)** so that the dish name, description, and price align flush with the left edge of the card. Currently, these elements appear shifted inward with wasted horizontal space.
+- **Acceptance Criteria:**
+  - In `/menu`, dish name text in `MenuCardFlat` starts visually flush with the card’s left edge (after veg/non-veg marker).
+  - Description and price in `MenuCardFlat` align with the dish name (no extra left margin/padding).
+  - The change applies **only to `MenuCardFlat` (Menu page)**; `MenuCardGrid.tsx` (Home page cards) must remain unaffected.
+  - No regressions in responsiveness or truncation behavior for long names/descriptions.
+- **Notes:** This alignment issue is unique to `MenuCardFlat` on the Menu page. Home page cards already appear aligned correctly and must not be touched.
+- **Done Notes / Partial Work Remaining:**
+  - Alignment fix has been applied by removing whitespace and replacing it with a controlled `gap-2` spacing between marker and text.
+  - **Follow-up partials (deferred):**
+    1. Conditional marker rendering for items with no `isVeg` value.
+    2. Replace placeholder spans with final veg/non-veg SVG icons.
+    3. Add accessibility roles/labels for the marker.
+    4. Add visual regression/snapshot tests for `/menu` alignment.
 
 **Story: Wire frontend to Cloudinary and migrate 61 menu images**  
 - **Description:** Prepare frontend to consume CDN-backed menu images and migrate local raw images to Cloudinary. Ensure high-density variants (4x/5x/6x).  

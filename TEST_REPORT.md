@@ -733,7 +733,7 @@ PO and Orchestrator (manual edits outside DevAgent) reviewed and fixed the Best 
 1. Verified Cloudinary credentials via `scripts/test-upload.mjs`. Result: ✅ (test upload URL printed).
 2. Executed `node ./scripts/upload-images-to-cloudinary.mjs`. Result: ✅ (61 uploads + map file).
 3. Restarted dev server and validated app:
-   - Checked menu card code paths; confirmed `MenuCard.tsx` now imports `images-map.json`. 
+   - Checked menu card code paths; confirmed `MenuCard.tsx` now imports `images-map.json`.
    - Noted Vite import resolution errors and corrected file import paths:
      - `images-map.json` import updated to `../../data/images-map.json`.
      - `MenuImageCloudinaryHighRes` import updated to `../MenuImageCloudinaryHighRes`.
@@ -1010,3 +1010,30 @@ npm test
 **Status:** ✅ Done
 
 **Artifacts:** (if PO provided)
+
+### Epic: Menu
+**Story Under Test:** Story: Visual Tweak — Remove Excess Left Padding in Menu Page Cards (MenuCardFlat)
+- **Tester:** PO
+- **Date:** 2025-09-18
+- **PO Verification:** i ran the app locally and i see no difference. the menu page still looks the same.
+
+**Test Steps:**
+- PO opened app locally, inspected per acceptance criteria, reported failure above.
+
+**Observed Behavior:**
+- i ran the app locally and i see no difference. the menu page still looks the same.
+
+**Expected Behavior:**
+- In `/menu`, dish name text in `MenuCardFlat` starts visually flush with the card’s left edge (after veg/non-veg marker).
+- Description and price in `MenuCardFlat` align with the dish name (no extra left margin/padding).
+- The change applies **only to `MenuCardFlat` (Menu page)**; `MenuCardGrid.tsx` (Home page cards) must remain unaffected.
+- No regressions in responsiveness or truncation behavior for long names/descriptions.
+
+**Status:** 🚨 Fail
+
+**Notes / Action Requested:**
+- Dev must re-open and fix issues according to acceptance criteria and files touched in `DEV_REPORT.md`.
+
+**Artifacts:** 
+
+```
