@@ -1158,3 +1158,10 @@ PO (Tabrez) + Orchestrator marked Home frames to Done and set **Menu tab epic** 
 - Files Touched:
   - client/src/components/Menu/MenuCardFlat.tsx
 - Status: Done
+
+## [2025-09-18]
+- Story: Visual Tweak — Add subtle shadow & focus ring to AddToCartButton
+- Implementation Notes: Added a subtle default shadow (`shadow-sm`) and a visible focus ring to the `AddToCartButton` component. Also added a `shadow` prop to allow callers to opt-out of the shadow.
+- Files Touched:
+  - client/src/components/AddToCartButton.tsx
+- Status: Done

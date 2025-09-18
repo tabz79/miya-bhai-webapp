@@ -127,6 +127,64 @@
     3. Add accessibility roles/labels for the marker.
     4. Add visual regression/snapshot tests for `/menu` alignment.
 
+**Story: Visual Tweak — Add subtle shadow & focus ring to AddToCartButton**
+- **Epic:** Menu  
+- **Owner:** PO  
+- **Priority:** should  
+- **Status:** ✅ Done  
+- **Description:** Make the `AddToCartButton` component have a subtle default shadow for visual depth, and a visible focus ring for keyboard accessibility. Callers must be able to opt-out or override the shadow via props or `className`.
+
+- **Acceptance Criteria:**
+  - `AddToCartButton` renders with a subtle elevation (`shadow-sm`) by default.  
+  - Callers can disable the shadow by passing `shadow={false}` or by supplying their own `shadow-*` utility in `className`.  
+  - Button has a visible focus ring (keyboard focus) matching accessible contrast guidelines.  
+  - `aria-label` remains present and descriptive.  
+  - No visual regressions on pages that use the button (Menu, Home).  
+
+- **Notes:** This is a small, global visual tweak. Do not change button text/size or place it in other components; only update the component implementation.  
+
+- **Done Notes / Partial Work Remaining:**  
+  - ✅ Patched `AddToCartButton` with `bg-[#3c3c3b]` (Tuatara, Best Sellers background color).  
+  - ✅ Default subtle shadow applied (`shadow-sm`).  
+  - ✅ Golden focus ring (`focus:ring-[#ae905c]`) added for brand-aligned accessibility.  
+  - ✅ Hover state darkens background slightly (`#2e2e2d`).  
+  - ✅ Retained `aria-label` and keyboard accessibility.  
+  - 🔲 Optional future: migrate hex colors into Tailwind tokens (`bg-colorbackgroundbestseller`, `ring-colorteak`) to remove inline hex values.  
+
+**Story: Visual Tweak — Sticky Category Pill under Top Toolbar (Menu — Sticky Category)**
+- **Owner:** PO  
+- **Priority:** must  
+- **Status:** ⏳ To Do  
+- **Description:** When the user scrolls the Menu page, the **current category heading** (e.g., *Starters*, *Main Course*, *Biryani*) should pin directly **under** the sticky top toolbar and update as the user scrolls into the next category. This provides clear context for which category the user is viewing while keeping the toolbar behaviour unchanged. Implementation should be robust, performant, and accessible.
+
+- **Acceptance Criteria:**
+  1. On `/menu`, each category heading has class `menu-category-heading` and `data-category` (or the hook will fall back to the heading text).  
+  2. As the page scrolls, the last category whose top has passed the bottom of the toolbar becomes the active category and shows in a fixed pill directly beneath the toolbar.  
+  3. When the next category reaches the toolbar threshold, the pill updates instantly to the new category (no visible delay or flicker).  
+  4. The pill is `position: fixed` and uses `top: calc(var(--toolbar-height))` so it always sits below the toolbar; it does NOT shift the page layout (overlay only).  
+  5. The pill is visually subtle (backdrop/blur or translucent bg), non-blocking (`pointer-events: none`), but its inner content may be interactive if needed (`pointer-events: auto` on inner).  
+  6. Works when the page scrolls (window scroll) — if menu is placed within a scrollable container, the hook must be adapted to observe that container (document this limitation).  
+  7. Accessible: the pill is `role="status"` with `aria-live="polite"` so assistive tech announces category changes.  
+  8. No regression to existing sticky toolbar behavior, top banner auto-scrolling, or menu item interactions.  
+  9. Performance: scroll handler uses `requestAnimationFrame` or passive listeners to avoid jank on mid/low-end devices.
+
+- **Notes:**
+  - Default CSS variables: `--toolbar-height` (set to your toolbar height, e.g., `56px`) and `--sticky-category-height` (e.g., `48px`). Make responsive values clear in layout CSS.  
+  - Implementation suggestion: small hook `useStickyCategory(selector = '.menu-category-heading')` that returns the active category string. Keep the hook window-scroll-first; document how to pass a custom container for in-container scrolling.  
+  - Pill should use brand tokens (e.g., `bg-[#3c3c3b]/90` + subtle shadow) to match Miya Bhai theme. Use `aria-live` to avoid spamming screen readers — only announce changes.  
+  - If the top toolbar height varies by breakpoint, ensure `--toolbar-height` is updated via CSS at breakpoints or via layout JS on resize.
+
+- **Done Notes / Partial Work Remaining:**
+  - ✅ Design decision: overlay fixed pill under toolbar (no reflow).  
+  - ✅ Chosen selector: `.menu-category-heading` + `data-category`.  
+  - 🟨 Partial tasks (to implement & verify):  
+    1. Implement `useStickyCategory` hook with `rAF` throttling and window scroll passive listener.  
+    2. Add `StickyCategory` component at Menu page root that consumes hook and renders pill with brand styling and `role="status"` / `aria-live="polite"`.  
+    3. Add CSS variables and default values in global styles and Tailwind tokens.  
+    4. Update Menu headings to include `menu-category-heading` and `data-category` where missing.  
+    5. Manual QA across breakpoints and on low-end devices; test interaction with auto-scrolling banner.  
+    6. Add a small integration test or visual regression test to ensure the pill appears and updates when categories scroll.  
+
 **Story: Wire frontend to Cloudinary and migrate 61 menu images**  
 - **Description:** Prepare frontend to consume CDN-backed menu images and migrate local raw images to Cloudinary. Ensure high-density variants (4x/5x/6x).  
 - **Acceptance Criteria:**  

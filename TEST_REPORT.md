@@ -104,7 +104,7 @@ HeroCarousel.tsx:31 Uncaught TypeError: Cannot read properties of undefined (rea
 
 The Product Owner has prepared 6 hero images named HeroImage1.png … HeroImage6.png.
 
-Location: D:\Projects\miya-bhai-webapp\client\src\assets \
+Location: D:\Projects\miya-bhai-webapp\client\src\assets \ 
 
 These should replace the obsolete HeroImage.png placeholder.
 
@@ -1036,4 +1036,44 @@ npm test
 
 **Artifacts:** 
 
-```
+# Test Report — Epic: Menu
+
+## Story Under Test: Story: Visual Tweak — Remove Excess Left Padding in Menu Page Cards (MenuCardFlat)
+- **Tester:** PO
+- **Date:** 2025-09-18
+- **Status:** ✅ Done
+- **PO Verification:** I ran the app locally and found that the offset is due to a placeholder for veg/non-veg icon. and i can say that the story is complete and we can mark it as done.
+
+- **Test Steps executed:**
+  1. Opened app locally on `/home` and `/menu`.
+  2. Compared UI with acceptance criteria.
+  3. Verified visually (per PO input).
+
+- **Observed Behavior:** I ran the app locally and found that the offset is due to a placeholder for veg/non-veg icon. and i can say that the story is complete and we can mark it as done.
+- **Result:** PASS
+- **Artifacts:** 
+
+# Test Report — Epic: Menu
+
+## Story Under Test: Story: Visual Tweak — Add subtle shadow & focus ring to AddToCartButton
+- **Tester:** PO  
+- **Date:** 2025-09-18  
+- **Status:** ✅ Done  
+- **PO Verification:** I ran the app locally and confirmed that `AddToCartButton` now renders with a subtle default shadow, a golden focus ring, and updated background color consistent with the Best Sellers strip. Shadow disabling via prop/className works as expected. No regressions observed on Menu or Home pages.
+
+- **Test Steps executed:**
+  1. Opened the app locally on `/menu` and `/home`.  
+  2. Triggered button click and keyboard focus states.  
+  3. Verified visual output against acceptance criteria (shadow, focus ring, background).  
+  4. Tested `shadow={false}` prop and overriding with `className="shadow-none"`.  
+
+- **Observed Behavior:**  
+  - Button appears with `shadow-sm` by default.  
+  - Golden focus ring (`focus:ring-[#ae905c]`) shows correctly on keyboard focus.  
+  - Background color matches Tuatara (`#3c3c3b`), hover darkens slightly (`#2e2e2d`).  
+  - `aria-label` present and descriptive.  
+  - Disabling/overriding shadow works.  
+  - No visual regressions on other pages.  
+
+- **Result:** PASS  
+- **Artifacts:** Screenshots of Menu page buttons in normal, hover, and focus states.  
