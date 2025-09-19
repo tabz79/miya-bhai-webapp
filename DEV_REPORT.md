@@ -1179,3 +1179,17 @@ PO (Tabrez) + Orchestrator marked Home frames to Done and set **Menu tab epic** 
   - client/src/components/Menu/CategoryJumpPill.tsx (Created)
   - client/src/pages/Menu.tsx (Modified)
 - Status: Done
+## [2025-09-18]
+- Story: Visual Feature — Floating Category Pill + Category Picker Modal (Menu — Category Quick-Jump)
+- Implementation Notes:
+  - Identified and fixed the incorrect positioning of the `CategoryJumpPill` by adjusting its `bottom` and `right` CSS properties to ensure visibility within the mobile frame.
+  - Refactored `CategoryPicker.tsx` from a full-screen modal to a compact popover, removing its full-screen overlay styling and allowing its parent to handle positioning.
+  - Re-introduced the subtle scale and fade animation for the `CategoryPicker` in `CategoryJumpPill.tsx` as per story requirements.
+  - Implemented click-outside-to-close functionality for the `CategoryPicker` using a `useEffect` and `handleClickOutside` event listener.
+  - Ensured proper `z-index` values for both the pill and the popover to prevent overlap issues.
+  - Verified `handleSelectCategory` in `Menu.tsx` correctly scrolls to category headings, accounting for the sticky toolbar height.
+- Files Touched:
+  - client/src/components/Menu/CategoryJumpPill.tsx
+  - client/src/components/Menu/CategoryPicker.tsx
+  - client/src/pages/Menu.tsx
+- Status: Done

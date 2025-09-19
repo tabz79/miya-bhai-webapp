@@ -268,7 +268,7 @@ PO expected only the hero image to scroll/rotate, while the static overlay text 
 
 **Observed Issue:**
 
-All content inside the hero section (image + overlay text) is wrapped in the animated motion.div.
+All content inside the hero section (image + overlay text) is wrapped in in the animated motion.div.
 
 This causes the brand headline, tagline, and description to animate along with the background image.
 
@@ -1077,3 +1077,34 @@ npm test
 
 - **Result:** PASS  
 - **Artifacts:** Screenshots of Menu page buttons in normal, hover, and focus states.  
+
+
+### Epic: Menu
+**Story Under Test:** Story: Visual Feature — Floating Category Pill + Category Picker Modal (Menu — Category Quick-Jump)
+- **Tester:** PO
+- **Date:** 2025-09-18
+- **PO Verification:** I ran the app locally and navigated to the menu tab. So now I see this floating menu button that is at the extreme bottom right corner of the desktop screen. This should have been, you know, within the frame, I mean that's the mobile UI frame, but it is off the frame, so it is useless. also I have noticed that clicking this floating button, nothing happens, I mean it doesn't reveal anything. It should have opened a small pop-up model of the categories, but it doesn't work.
+
+**Test Steps:**
+- PO opened app locally, inspected per acceptance criteria, reported failure above.
+
+**Observed Behavior:**
+- I ran the app locally and navigated to the menu tab. So now I see this floating menu button that is at the extreme bottom right corner of the desktop screen. This should have been, you know, within the frame, I mean that's the mobile UI frame, but it is off the frame, so it is useless. also I have noticed that clicking this floating button, nothing happens, I mean it doesn't reveal anything. It should have opened a small pop-up model of the categories, but it doesn't work.
+
+**Expected Behavior:**
+- A floating pill (40–48px high, rounded) appears on `/menu` in the lower-right area above `BottomNav`, visually unobtrusive and not overlapping essential controls.
+- Pill uses brand accent: `bg-[#3c3c3b]` (or `bg-colorbackgroundbestseller`) with `focus:ring-[#ae905c]` and `shadow-sm`.
+- Tapping the pill opens a compact modal/popover anchored above the pill with a list of all categories in `groupedMenu` order. The modal width is constrained (max-w-xs), scrollable if categories overflow.
+- Each category item in the modal is a single-line button with truncation, role="menuitem", and keyboard navigation (Up/Down, Enter to select, Esc to close).
+- Selecting a category closes the modal and **smoothly scrolls** the page to that category’s heading (`.menu-category-heading` with `data-category`). Use native `Element.scrollIntoView({ behavior: 'smooth', block: 'start' })` and ensure the heading ends up visible below the sticky toolbar (respect `--toolbar-height`).
+- Works on mobile and desktop; pill is reachable above `BottomNav` (i.e., stays visible). On very small screens ensure it does not block important CTA buttons.
+- Accessible: modal has `role="dialog"`, `aria-modal="true"`, focus trap while open, and returns focus to the pill when closed. Category changes should be announced via `aria-live` on the existing `StickyCategory` (no duplicate announcements).
+- No visual regressions to existing layout, `StickyCategory`, or `BottomNav`. Z-index and pointer-events handled so underlying interactions are not blocked.
+- Performance: opening/closing and scroll must be instant and not cause layout jank.
+
+**Status:** 🚨 Fail
+
+**Notes / Action Requested:**
+- Dev must re-open and fix issues according to acceptance criteria and files touched in `DEV_REPORT.md`.
+
+**Artifacts:**

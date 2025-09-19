@@ -1,29 +1,19 @@
-
+// src/routes/health.js
 import { Router } from 'express';
-import { promises as fs } from 'fs';
-import path from 'path';
+import * as menuService from '../services/menuService.js';
 
 const healthRouter = Router();
 
-const getVersion = async () => {
-    try {
-        const packageJsonPath = path.join(process.cwd(), 'package.json');
-        const packageJson = await fs.readFile(packageJsonPath, 'utf8');
-        return JSON.parse(packageJson).version || 'unknown';
-    } catch (error) {
-        console.error('Failed to read package.json for version', error);
-        return 'unknown';
-    }
-};
-
 healthRouter.get('/health', async (req, res) => {
-  const version = await getVersion();
+  const menuStats = await menuService.getStats();
+  const uptime = process.uptime();
+  
   res.status(200).json({
     status: 'ok',
-    version,
-    timestamp: new Date().toISOString(),
-    db: 'mocked',
-    cache: 'mocked'
+    uptime,
+    menu: menuStats,
+    node_env: process.env.NODE_ENV || 'development',
+    use_mock: process.env.USE_MOCK === 'true',
   });
 });
 

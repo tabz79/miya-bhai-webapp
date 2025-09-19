@@ -9,6 +9,7 @@ import canonicalMenu from "@/data/menu.canonical.json";
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
 import { OfferCarousel } from "../components/OfferCarousel";
+import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
 
 type MenuItem = any;
 
@@ -84,11 +85,27 @@ export function Menu(): JSX.Element {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch("/api/menu");
+        const response = await fetch("/api/menu?limit=1000"); // Fetch all items
+
+        if (!response.ok) {
+          console.warn(`Menu fetch returned HTTP ${response.status} ${response.statusText}`);
+          setMenu(canonicalMenu as MenuItem[]);
+          return;
+        }
+
         const data = await response.json();
-        setMenu(data.payload.items);
-      } catch (error) {
-        console.error("Failed to fetch menu, falling back to canonical data", error);
+        const items = data?.payload?.items ?? [];
+
+        // Sanity check: fallback if data is empty or only has one category
+        const categories = new Set(items.map(i => i.category));
+        if (items.length === 0 || categories.size <= 1) {
+          console.warn("API returned suspicious data (empty or single category). Falling back to canonical menu.");
+          setMenu(canonicalMenu as MenuItem[]);
+        } else {
+          setMenu(items);
+        }
+      } catch (err) {
+        console.error("Failed to fetch or parse menu, falling back to canonical data", err);
         setMenu(canonicalMenu as MenuItem[]);
       }
     };
@@ -154,6 +171,15 @@ export function Menu(): JSX.Element {
     console.log("Add to cart:", item);
   };
 
+  const handleSelectCategory = (category: string) => {
+    const element = document.querySelector(`[data-category="${category}"]`);
+    if (element) {
+      const toolbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--toolbar-height')) || 0;
+      const offset = element.getBoundingClientRect().top + window.scrollY - toolbarHeight;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-app-background">
       <MetaTags
@@ -166,7 +192,7 @@ export function Menu(): JSX.Element {
 
       {groupedMenu.map(({ category, items }) => (
         <div key={category}>
-          <h2 className="text-app-foreground font-semibold text-lg px-4 py-2">{category}</h2>
+          <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
           <MenuGrid
             items={items}
             onAddToCart={handleAddToCart}
@@ -177,6 +203,7 @@ export function Menu(): JSX.Element {
       ))}
 
       <div className="h-[49px]" />
+      <CategoryJumpPill categories={categories} onSelectCategory={handleSelectCategory} />
       <BottomNav />
     </div>
   );

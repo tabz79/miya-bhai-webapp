@@ -3,6 +3,7 @@ import express from 'express';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
+import { initMenuService } from './services/menuService.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,10 +27,19 @@ app.use((err, req, res, next) => {
   res.status(500).json({ status: 'error', message: 'Internal Server Error' });
 });
 
-if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => {
-        console.log(`Server is running on http://localhost:${PORT}`);
-    });
+async function startServer() {
+  await initMenuService();
+  
+  if (process.env.NODE_ENV !== 'test') {
+      app.listen(PORT, () => {
+          console.log(`Server is running on http://localhost:${PORT}`);
+          console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
+          console.log(`USE_MOCK: ${process.env.USE_MOCK === 'true'}`);
+      });
+  }
 }
 
+startServer();
+
 export default app;
+

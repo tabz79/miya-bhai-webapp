@@ -21,6 +21,7 @@ export function MenuCard({ item, onAddToCart }: MenuCardProps) {
   const dishName =
     (item.title && String(item.title)) ||
     (item.name && String(item.name)) ||
+    (item.raw?.name && String(item.raw.name)) ||
     'Untitled';
 
   const [imageSrc, setImageSrc] = useState<string>(

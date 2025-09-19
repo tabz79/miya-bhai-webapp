@@ -151,9 +151,71 @@
   - ✅ Retained `aria-label` and keyboard accessibility.  
   - 🔲 Optional future: migrate hex colors into Tailwind tokens (`bg-colorbackgroundbestseller`, `ring-colorteak`) to remove inline hex values.  
 
+**Story: Visual Feature — Floating Category Pill + Category Picker Modal (Menu — Category Quick-Jump)**
+- **Owner:** PO  
+- **Priority:** should  
+- **Status:** ⏳ To Do  
+- **Description:** Add a small pill-shaped floating **Category** button on the `/menu` page (like Swiggy’s quick menu). Tapping the pill opens a compact modal/popover listing all menu categories (Starters, Biryani, Main Course, …). Selecting a category closes the picker and smoothly scrolls the page to that category heading. The floating pill must use the same accent/background as the `AddToCartButton` (Tuatara `#3c3c3b` / Tailwind token `bg-colorbackgroundbestseller`) and follow brand focus/hover styles.
+
+- **Acceptance Criteria:**
+  1. A floating pill (40–48px high, rounded) appears on `/menu` in the lower-right area above `BottomNav`, visually unobtrusive and not overlapping essential controls.  
+  2. Pill uses brand accent: `bg-[#3c3c3b]` (or `bg-colorbackgroundbestseller`) with `focus:ring-[#ae905c]` and `shadow-sm`.  
+  3. Tapping the pill opens a compact modal/popover anchored above the pill with a list of all categories in `groupedMenu` order. The modal width is constrained (max-w-xs), scrollable if categories overflow.  
+  4. Each category item in the modal is a single-line button with truncation, role="menuitem", and keyboard navigation (Up/Down, Enter to select, Esc to close).  
+  5. Selecting a category closes the modal and **smoothly scrolls** the page to that category’s heading (`.menu-category-heading` with `data-category`). Use native `Element.scrollIntoView({ behavior: 'smooth', block: 'start' })` and ensure the heading ends up visible below the sticky toolbar (respect `--toolbar-height`).  
+  6. Works on mobile and desktop; pill is reachable above `BottomNav` (i.e., stays visible). On very small screens ensure it does not block important CTA buttons.  
+  7. Accessible: modal has `role="dialog"`, `aria-modal="true"`, focus trap while open, and returns focus to the pill when closed. Category changes should be announced via `aria-live` on the existing `StickyCategory` (no duplicate announcements).  
+  8. No visual regressions to existing layout, `StickyCategory`, or `BottomNav`. Z-index and pointer-events handled so underlying interactions are not blocked.  
+  9. Performance: opening/closing and scroll must be instant and not cause layout jank.
+
+- **Notes / Implementation Suggestions:**
+  - Component names & files:
+    - `client/src/components/Menu/CategoryJumpPill.tsx` — floating pill + popover control.  
+    - `client/src/components/Menu/CategoryPicker.tsx` — internal list UI (menu role + keyboard handling).  
+    - Reuse `groupedMenu` or derive categories from DOM via `.menu-category-heading[data-category]` as fallback.  
+  - Visual tokens:
+    - Background: `bg-colorbackgroundbestseller` / `#3c3c3b`  
+    - Focus ring: `ring-colorteak` / `#ae905c`  
+    - Shadow: `shadow-sm`  
+  - Scrolling:
+    - Use `document.querySelector('[data-category="Biryani"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' })`.  
+    - After scroll, ensure offset for toolbar: if native scrollIntoView places heading under toolbar, apply `window.scrollBy(0, -toolbarHeight)` as adjustment. Read toolbar via CSS var `--toolbar-height`.  
+  - Accessibility:
+    - Use `focus-trap` (or small internal focus management) inside the modal.  
+    - Provide `aria-label="Open categories"` on the pill and `aria-controls` linking to the modal.  
+  - Animations:
+    - Subtle scale on open (`transform: scale(1.02)`) and fade for modal; keep short (120–160ms).  
+  - Analytics / telemetry (optional):
+    - Fire `analytics.track('menu.category_jump', { category })` on selection for later UX analysis.
+  - Edge cases:
+    - If no headings found, disable pill (aria-disabled) and provide tooltip “Categories unavailable”.  
+    - When category list is long, show quick alphabetical search or sticky header in modal (deferred).
+
+- **Test Steps executed (for QA):**
+  1. Open `/menu` on mobile and desktop. Confirm pill visible above `BottomNav`.  
+  2. Tap pill → modal opens, focus trapped. Use keyboard arrows to navigate, Enter to select, and Esc to close.  
+  3. Select “Biryani” → modal closes, page scrolls to Biryani heading; sticky heading shows “Biryani” under toolbar.  
+  4. Repeat for first and last categories, ensure scroll offset respects toolbar.  
+  5. Verify `aria-live` does not double-announce; focus returns to pill after close.  
+  6. Verify no regression on Menu items, OfferCarousel, and BottomNav.  
+
+- **Done Notes / Partial Work Remaining (expected):**
+  - ✅ Design: pill location and size approved.  
+  - 🟨 Dev tasks:
+    1. Implement `CategoryJumpPill` + `CategoryPicker` components.  
+    2. Wire to `groupedMenu` in `Menu.tsx` (or derive from DOM as fallback).  
+    3. Add smooth scroll + toolbar offset fix.  
+    4. Add keyboard accessibility and focus management.  
+    5. QA on small screens; adjust placement if it collides with CTAs.  
+    6. Add unit/integration tests: keyboard nav, scroll target, and focus return.  
+  - 🔲 Follow-ups (deferred): add optional quick-search inside modal, analytics integration, and visual regression snapshots.
+
+- **Estimate / Priority notes (PO):**
+  - Small, self-contained UI feature — team should implement as a single small story. Prioritize keyboard accessibility and correct scroll offset. Use brand tokens for colors to avoid inline hexes.
+
 **Story: Visual Tweak — Sticky Category Pill under Top Toolbar (Menu — Sticky Category)**
 - **Owner:** PO  
-- **Priority:** must  
+- **Priority:** low  
 - **Status:** ⏳ To Do  
 - **Description:** When the user scrolls the Menu page, the **current category heading** (e.g., *Starters*, *Main Course*, *Biryani*) should pin directly **under** the sticky top toolbar and update as the user scrolls into the next category. This provides clear context for which category the user is viewing while keeping the toolbar behaviour unchanged. Implementation should be robust, performant, and accessible.
 
