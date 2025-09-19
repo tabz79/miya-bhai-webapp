@@ -1,0 +1,218 @@
+[
+  {
+    "id": "jumbo",
+    "name": "jumbo",
+    "category": "Uncategorized",
+    "price": 800,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "family",
+    "name": "family",
+    "category": "Uncategorized",
+    "price": 750,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "extra-biryani-rice",
+    "name": "Extra Biryani Rice",
+    "category": "Main Course",
+    "price": 80,
+    "imageUrl": "/src/assets/raw/Chicken Dum Biryani.png",
+    "_match": {
+      "file": "Chicken Dum Biryani.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "extra-one-chicken-peas",
+    "name": "Extra One Chicken/Peas",
+    "category": "Main Course",
+    "price": 60,
+    "imageUrl": "/src/assets/raw/Tandoori Chicken.png",
+    "_match": {
+      "file": "Tandoori Chicken.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "family",
+    "name": "family",
+    "category": "Uncategorized",
+    "price": 750,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "paneer-biryani",
+    "name": "Paneer Biryani",
+    "category": "Main Course",
+    "price": 200,
+    "imageUrl": "/src/assets/raw/Paneer Biryani.png",
+    "_match": {
+      "file": "Paneer Biryani.png",
+      "method": "slug_exact",
+      "score": 2
+    }
+  },
+  {
+    "id": "paneer-mandi-mini",
+    "name": "Paneer Mandi (Mini)",
+    "category": "Main Course",
+    "price": 230,
+    "imageUrl": "/src/assets/raw/Paneer Biryani.png",
+    "_match": {
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "paneer-mandi-half",
+    "name": "Paneer Mandi (Half)",
+    "category": "Main Course",
+    "price": 450,
+    "imageUrl": "/src/assets/raw/Paneer Biryani.png",
+    "_match": {
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "paneer-mandi-full",
+    "name": "Paneer Mandi (Full)",
+    "category": "Main Course",
+    "price": 850,
+    "imageUrl": "/src/assets/raw/Paneer Biryani.png",
+    "_match": {
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "curd-rice",
+    "name": "Curd Rice",
+    "category": "Main Course",
+    "price": 100,
+    "imageUrl": "/src/assets/raw/Chicken Fried Rice.png",
+    "_match": {
+      "file": "Chicken Fried Rice.png",
+      "method": "token_best",
+      "score": 1
+    }
+  },
+  {
+    "id": "fish-biryani",
+    "name": "Fish Biryani",
+    "category": "Main Course",
+    "price": 250,
+    "imageUrl": "/src/assets/raw/Fish Biryani.png",
+    "_match": {
+      "file": "Fish Biryani.png",
+      "method": "slug_exact",
+      "score": 2
+    }
+  },
+  {
+    "id": "prawns-biryani",
+    "name": "Prawns Biryani",
+    "category": "Main Course",
+    "price": 300,
+    "imageUrl": "/src/assets/raw/Prawns Biryani.png",
+    "_match": {
+      "file": "Prawns Biryani.png",
+      "method": "slug_exact",
+      "score": 2
+    }
+  },
+  {
+    "id": "full",
+    "name": "full",
+    "category": "Uncategorized",
+    "price": 430,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "4pc",
+    "name": "4pc",
+    "category": "Uncategorized",
+    "price": 360,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "chicken-tikka-boneless-6pc",
+    "name": "Chicken Tikka (Boneless) - 6pc",
+    "category": "Kebabs & Grills",
+    "price": 230,
+    "imageUrl": "/src/assets/raw/Chicken Tikka.png",
+    "_match": {
+      "file": "Chicken Tikka.png",
+      "method": "slug_exact",
+      "score": 2
+    }
+  },
+  {
+    "id": "full",
+    "name": "full",
+    "category": "Uncategorized",
+    "price": 550,
+    "imageUrl": null,
+    "_match": null
+  },
+  {
+    "id": "mandi-chicken-mini",
+    "name": "Nizami Chicken Mandi (Mini)",
+    "category": "Arabian",
+    "price": null,
+    "imageUrl": "/src/assets/raw/Chicken Juicy Mandi.png",
+    "_match": {
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-half",
+    "name": "Nizami Chicken Mandi (Half)",
+    "category": "Arabian",
+    "price": null,
+    "imageUrl": "/src/assets/raw/Chicken Juicy Mandi.png",
+    "_match": {
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-3piece",
+    "name": "Nizami Chicken Mandi (3-piece)",
+    "category": "Arabian",
+    "price": null,
+    "imageUrl": "/src/assets/raw/Chicken Juicy Mandi.png",
+    "_match": {
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-full",
+    "name": "Nizami Chicken Mandi (Full)",
+    "category": "Arabian",
+    "price": null,
+    "imageUrl": "/src/assets/raw/Chicken Juicy Mandi.png",
+    "_match": {
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    }
+  }
+]

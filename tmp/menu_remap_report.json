@@ -1,0 +1,309 @@
+{
+  "source": "D:\\Projects\\miya-bhai-webapp\\menu-updated.txt",
+  "timestamp": "2025-09-14T11:03:58.281Z",
+  "total_items": 253,
+  "moved_to_biryani": 9,
+  "suspect_count": 62,
+  "suspect_samples": [
+    {
+      "id": "rotis-paneer-kulcha",
+      "title": "Paneer Kulcha",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "rotis-masala-kulcha",
+      "title": "Masala Kulcha",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-half",
+      "title": "Miyabhai Special Curry (Half)",
+      "current": "Main Course",
+      "heuristic": "Kebabs & Grills"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-full",
+      "title": "Miyabhai Special Curry (Full)",
+      "current": "Main Course",
+      "heuristic": "Kebabs & Grills"
+    },
+    {
+      "id": "veg-paneer-65",
+      "title": "Paneer 65",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-baby-corn-manchuria",
+      "title": "Baby Corn Manchuria",
+      "current": "Chinese",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "veg-chili-paneer",
+      "title": "Chili Paneer",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-chili-baby-corn-dry",
+      "title": "Chili Baby Corn Dry",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-gobi-65",
+      "title": "Gobi 65",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-gobi-manchuria-dry",
+      "title": "Gobi Manchuria Dry",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-baby-corn-pepper-salt",
+      "title": "Baby Corn Pepper Salt",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-chili-gobi",
+      "title": "Chili Gobi",
+      "current": "Chinese",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "nonveg-chicken-65",
+      "title": "Chicken 65",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chili-manchuria",
+      "title": "Chili Manchuria",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chili-chicken",
+      "title": "Chili Chicken",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-garlic-chicken",
+      "title": "Garlic Chicken",
+      "current": "Starters",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "nonveg-dragon-chicken",
+      "title": "Dragon Chicken",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chicken-hongkong",
+      "title": "Chicken Hong Kong",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-kungfu-chicken",
+      "title": "Kung Fu Chicken",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-lemon-chicken",
+      "title": "Lemon Chicken",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chicken-lollipop",
+      "title": "Chicken Lollipop",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chicken-wings",
+      "title": "Chicken Wings",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-plum-chicken",
+      "title": "Plum Chicken",
+      "current": "Starters",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "nonveg-blackbean-chicken",
+      "title": "Black Bean Chicken",
+      "current": "Starters",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "nonveg-chicken-majestic",
+      "title": "Chicken Majestic",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-chicken-pepper-salt",
+      "title": "Chicken Pepper Salt",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-schezwan-chicken",
+      "title": "Schezwan Chicken",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "nonveg-vastar-chili-chicken",
+      "title": "Vastar Chili Chicken",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "seafood-apollo-fish",
+      "title": "Apollo Fish",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "seafood-chili-fish",
+      "title": "Chili Fish",
+      "current": "Starters",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "seafood-fish-65",
+      "title": "Fish 65",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "seafood-fish-roast",
+      "title": "Fish Roast",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "seafood-fish-dry",
+      "title": "Fish Dry",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "seafood-chili-prawns",
+      "title": "Chili Prawns",
+      "current": "Starters",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "seafood-chicken-spring-roll",
+      "title": "Chicken Spring Roll",
+      "current": "Starters",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "current": "Main Course",
+      "heuristic": "Kebabs & Grills"
+    },
+    {
+      "id": "veg-noodles",
+      "title": "Veg Noodles",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "chicken-noodles",
+      "title": "Chicken Noodles",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "paneer-noodles",
+      "title": "Paneer Noodles",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-fried-rice",
+      "title": "Veg Fried Rice",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "chicken-fried-rice",
+      "title": "Chicken Fried Rice",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-manchuria-fried-rice",
+      "title": "Veg Manchuria Fried Rice",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "paneer-fried-rice",
+      "title": "Paneer Fried Rice",
+      "current": "Chinese",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "veg-curries-meal",
+      "title": "Veg Curries (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "roti-chutney",
+      "title": "Roti Chutney (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "dal",
+      "title": "Dal (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Main Course"
+    },
+    {
+      "id": "sambar",
+      "title": "Sambar (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Tiffin"
+    },
+    {
+      "id": "rasam",
+      "title": "Rasam (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Tiffin"
+    },
+    {
+      "id": "nellore-chutney",
+      "title": "Nellore Chutney (Meal Item)",
+      "current": "Meals",
+      "heuristic": "Chutneys"
+    },
+    {
+      "id": "rice-with-egg-curry-sambar",
+      "title": "Rice with Egg Curry + Sambar",
+      "current": "Meals",
+      "heuristic": "Tiffin"
+    }
+  ]
+}

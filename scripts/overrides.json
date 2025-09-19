@@ -1,0 +1,202 @@
+[
+  {
+    "id": "rotis-paneer-kulcha",
+    "category": "Starters"
+  },
+  {
+    "id": "rotis-masala-kulcha",
+    "category": "Starters"
+  },
+  {
+    "id": "tandoori-tandoori-chicken-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-tandoori-chicken-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-reshmi-kebab-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-reshmi-kebab-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-chicken-tikka-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-chicken-tikka-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-tangdi-kebab-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-tangdi-kebab-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-malai-kebab-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-malai-kebab-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-hariyali-kebab-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-hariyali-kebab-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-ch-ch-kebab-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-ch-ch-kebab-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-achari-chicken-tikka-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-achari-chicken-tikka-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-grilled-chicken-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-grilled-chicken-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-murukh-musallam-half",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-murukh-musallam-full",
+    "category": "Kebabs & Grills"
+  },
+  {
+    "id": "tandoori-miyabhai-special-curry-half",
+    "category": "Main Course"
+  },
+  {
+    "id": "tandoori-miyabhai-special-curry-full",
+    "category": "Main Course"
+  },
+  {
+    "id": "veg-paneer-65",
+    "category": "Starters"
+  },
+  {
+    "id": "veg-baby-corn-manchuria",
+    "category": "Chinese"
+  },
+  {
+    "id": "veg-paneer-masala-dry",
+    "category": "Main Course"
+  },
+  {
+    "id": "veg-mushroom-masala-dry",
+    "category": "Main Course"
+  },
+  {
+    "id": "veg-chili-mushroom-dry",
+    "category": "Main Course"
+  },
+  {
+    "id": "veg-chili-paneer",
+    "category": "Starters"
+  },
+  {
+    "id": "veg-chili-baby-corn-dry",
+    "category": "Starters"
+  },
+  {
+    "id": "veg-gobi-65",
+    "category": "Chinese"
+  },
+  {
+    "id": "veg-gobi-manchuria-dry",
+    "category": "Chinese"
+  },
+  {
+    "id": "veg-baby-corn-pepper-salt",
+    "category": "Chinese"
+  },
+  {
+    "id": "veg-chili-gobi",
+    "category": "Chinese"
+  },
+  {
+    "id": "nonveg-chicken-65",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chili-manchuria",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chili-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-garlic-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-dragon-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chicken-hongkong",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-kungfu-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-lemon-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chicken-lollipop",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chicken-wings",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-plum-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-blackbean-chicken",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chicken-majestic",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-chicken-pepper-salt",
+    "category": "Starters"
+  },
+  {
+    "id": "nonveg-schezwan-chicken",
+    "category": "Chinese"
+  }
+]

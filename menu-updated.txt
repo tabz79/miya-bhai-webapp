@@ -1,0 +1,789 @@
+{
+  "categories": [
+    "All",
+    "Starters",
+    "Biryani",
+    "Mandi",
+    "Shawarma",
+    "Kebabs",
+    "Sides",
+    "Desserts",
+    "Beverages"
+  ],
+  "menu": [
+    {
+      "id": "rotis-tandoori-roti",
+      "category": "Starters",
+      "title": "Tandoori Roti (Naan)",
+      "description": "Traditional tandoor-baked roti / naan",
+      "price": 40,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-butter-naan",
+      "category": "Starters",
+      "title": "Butter Naan",
+      "description": "Soft naan brushed with butter",
+      "price": 30,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-plain-naan",
+      "category": "Starters",
+      "title": "Plain Naan",
+      "description": "Classic plain naan",
+      "price": 40,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-garlic-naan",
+      "category": "Starters",
+      "title": "Garlic Naan",
+      "description": "Naan topped with garlic and butter",
+      "price": 40,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-paneer-kulcha",
+      "category": "Starters",
+      "title": "Paneer Kulcha",
+      "description": "Stuffed kulcha with spiced paneer",
+      "price": 50,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-masala-kulcha",
+      "category": "Starters",
+      "title": "Masala Kulcha",
+      "description": "Kulcha stuffed with spiced potato & masala",
+      "price": 50,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-butter-roti",
+      "category": "Starters",
+      "title": "Butter Roti",
+      "description": "Roti served with butter",
+      "price": 40,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-palan-roti",
+      "category": "Starters",
+      "title": "Palan Roti",
+      "description": "Soft palan-style roti",
+      "price": 30,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-aloo-parota",
+      "category": "Starters",
+      "title": "Aloo Parota",
+      "description": "Flaky parota stuffed with spiced potato",
+      "price": 40,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "rotis-podina-parota",
+      "category": "Starters",
+      "title": "Podina Parota",
+      "description": "Parota infused with fresh mint",
+      "price": 50,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+
+    { "id": "tandoori-tandoori-chicken-half", "category": "Starters", "title": "Tandoori Chicken (Half)", "description": "Marinated chicken cooked in tandoor (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-tandoori-chicken-full", "category": "Starters", "title": "Tandoori Chicken (Full)", "description": "Marinated chicken cooked in tandoor (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-reshmi-kebab-half", "category": "Starters", "title": "Reshmi Kebab (Half)", "description": "Silky melt-in-mouth reshmi kebab (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-reshmi-kebab-full", "category": "Starters", "title": "Reshmi Kebab (Full)", "description": "Silky melt-in-mouth reshmi kebab (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-chicken-tikka-half", "category": "Starters", "title": "Chicken Tikka (Half)", "description": "Charcoal-grilled chicken chunks (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-chicken-tikka-full", "category": "Starters", "title": "Chicken Tikka (Full)", "description": "Charcoal-grilled chicken chunks (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-tangdi-kebab-half", "category": "Starters", "title": "Tangdi Kebab (Half)", "description": "Spiced chicken drumsticks (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-tangdi-kebab-full", "category": "Starters", "title": "Tangdi Kebab (Full)", "description": "Spiced chicken drumsticks (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-malai-kebab-half", "category": "Starters", "title": "Malai Kebab (Half)", "description": "Creamy malai kebab (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-malai-kebab-full", "category": "Starters", "title": "Malai Kebab (Full)", "description": "Creamy malai kebab (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-hariyali-kebab-half", "category": "Starters", "title": "Hariyali Kebab (Half)", "description": "Green-marinated kebabs (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-hariyali-kebab-full", "category": "Starters", "title": "Hariyali Kebab (Full)", "description": "Green-marinated kebabs (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-rangila-kebab-half", "category": "Starters", "title": "Rangila Kebab (Half)", "description": "Chef's special rangila kebab (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-rangila-kebab-full", "category": "Starters", "title": "Rangila Kebab (Full)", "description": "Chef's special rangila kebab (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-ch-ch-kebab-half", "category": "Starters", "title": "Chicken CH Kebab (Half)", "description": "Classic chicken kebab (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-ch-ch-kebab-full", "category": "Starters", "title": "Chicken CH Kebab (Full)", "description": "Classic chicken kebab (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-achari-chicken-tikka-half", "category": "Starters", "title": "Achari Chicken Tikka (Half)", "description": "Pickle-spiced chicken tikka (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-achari-chicken-tikka-full", "category": "Starters", "title": "Achari Chicken Tikka (Full)", "description": "Pickle-spiced chicken tikka (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-grilled-chicken-half", "category": "Starters", "title": "Grilled Chicken (Half)", "description": "Char-grilled chicken (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-grilled-chicken-full", "category": "Starters", "title": "Grilled Chicken (Full)", "description": "Char-grilled chicken (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-murukh-musallam-half", "category": "Starters", "title": "Murukh Musallam (Half)", "description": "Royal-style marinated chicken (half)", "price": 130, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "tandoori-murukh-musallam-full", "category": "Starters", "title": "Murukh Musallam (Full)", "description": "Royal-style marinated chicken (full)", "price": 230, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "tandoori-miyabhai-special-curry-half", "category": "Starters", "title": "Miyabhai Special Curry (Half)", "description": "House special curry (half)", "price": 130, "image": null, "isSignature": true, "isBestSeller": false, "available": true },
+    { "id": "tandoori-miyabhai-special-curry-full", "category": "Starters", "title": "Miyabhai Special Curry (Full)", "description": "House special curry (full)", "price": 230, "image": null, "isSignature": true, "isBestSeller": false, "available": true }
+  ]
+}
+    {
+      "id": "veg-paneer-65",
+      "category": "Starters",
+      "title": "Paneer 65",
+      "description": "Crispy spiced paneer starter",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-baby-corn-manchuria",
+      "category": "Starters",
+      "title": "Baby Corn Manchuria",
+      "description": "Baby corn tossed in manchurian sauce",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-paneer-masala-dry",
+      "category": "Starters",
+      "title": "Paneer Masala Dry",
+      "description": "Dry paneer starter in masala seasoning",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-mushroom-masala-dry",
+      "category": "Starters",
+      "title": "Mushroom Masala Dry",
+      "description": "Spicy mushroom masala dry",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-chili-mushroom-dry",
+      "category": "Starters",
+      "title": "Chili Mushroom Dry",
+      "description": "Chili tossed mushrooms",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-chili-paneer",
+      "category": "Starters",
+      "title": "Chili Paneer",
+      "description": "Classic Indo-Chinese chili paneer",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-chili-baby-corn-dry",
+      "category": "Starters",
+      "title": "Chili Baby Corn Dry",
+      "description": "Spicy dry chili baby corn",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-gobi-65",
+      "category": "Starters",
+      "title": "Gobi 65",
+      "description": "Crispy cauliflower 65",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-gobi-manchuria-dry",
+      "category": "Starters",
+      "title": "Gobi Manchuria Dry",
+      "description": "Dry manchurian gobi",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-baby-corn-pepper-salt",
+      "category": "Starters",
+      "title": "Baby Corn Pepper Salt",
+      "description": "Baby corn with pepper salt",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+    {
+      "id": "veg-chili-gobi",
+      "category": "Starters",
+      "title": "Chili Gobi",
+      "description": "Cauliflower tossed in chili sauce",
+      "price": 220,
+      "image": null,
+      "isSignature": false,
+      "isBestSeller": false,
+      "available": true
+    },
+
+    { "id": "nonveg-chicken-65", "category": "Starters", "title": "Chicken 65", "description": "Crispy fried chicken starter", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chili-manchuria", "category": "Starters", "title": "Chili Manchuria", "description": "Chicken in manchurian style", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chili-chicken", "category": "Starters", "title": "Chili Chicken", "description": "Spicy Indo-Chinese chili chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-garlic-chicken", "category": "Starters", "title": "Garlic Chicken", "description": "Chicken in garlic sauce", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-dragon-chicken", "category": "Starters", "title": "Dragon Chicken", "description": "Spicy dragon-style chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chicken-hongkong", "category": "Starters", "title": "Chicken Hong Kong", "description": "Hong Kong style chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-kungfu-chicken", "category": "Starters", "title": "Kung Fu Chicken", "description": "Kung Fu style chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-lemon-chicken", "category": "Starters", "title": "Lemon Chicken", "description": "Tangy lemon flavored chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chicken-lollipop", "category": "Starters", "title": "Chicken Lollipop", "description": "Classic Indo-Chinese lollipops", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chicken-wings", "category": "Starters", "title": "Chicken Wings", "description": "Crispy spiced chicken wings", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-plum-chicken", "category": "Starters", "title": "Plum Chicken", "description": "Chicken in plum sauce", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-blackbean-chicken", "category": "Starters", "title": "Black Bean Chicken", "description": "Chicken in black bean sauce", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chicken-majestic", "category": "Starters", "title": "Chicken Majestic", "description": "Spicy shredded chicken special", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-chicken-pepper-salt", "category": "Starters", "title": "Chicken Pepper Salt", "description": "Chicken tossed in pepper salt", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-schezwan-chicken", "category": "Starters", "title": "Schezwan Chicken", "description": "Spicy Schezwan style chicken", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "nonveg-vastar-chili-chicken", "category": "Starters", "title": "Vastar Chili Chicken", "description": "Chef’s fiery chili chicken", "price": 555, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+
+    { "id": "seafood-apollo-fish", "category": "Starters", "title": "Apollo Fish", "description": "Crispy Apollo style fish", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-chili-fish", "category": "Starters", "title": "Chili Fish", "description": "Fish in chili sauce", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-fish-65", "category": "Starters", "title": "Fish 65", "description": "Crispy fried fish starter", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-fish-roast", "category": "Starters", "title": "Fish Roast", "description": "Roasted fish masala", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-fish-dry", "category": "Starters", "title": "Fish Dry", "description": "Dry fried fish masala", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-loose-prawns", "category": "Starters", "title": "Loose Prawns", "description": "Crispy loose prawns", "price": 555, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-prawns-manchuria", "category": "Starters", "title": "Prawns Manchuria", "description": "Manchurian-style prawns", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-chili-prawns", "category": "Starters", "title": "Chili Prawns", "description": "Prawns in chili sauce", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true },
+    { "id": "seafood-chicken-spring-roll", "category": "Starters", "title": "Chicken Spring Roll", "description": "Crispy chicken spring rolls", "price": 220, "image": null, "isSignature": false, "isBestSeller": false, "available": true }
+// Add/append these to your menu array (or import this file into mockData.ts)
+export const mainCourseMenu = [
+  // Nizami Chicken Dum Biryani (variants)
+  {
+    id: "nizami-chicken-dum-biryani",
+    category: "Main Course",
+    subcategory: "Nizami Chicken Dum Biryani",
+    title: "Nizami Chicken Dum Biryani",
+    description: "Slow-cooked Nizami style chicken dum biryani",
+    image: null,
+    variants: [
+      { id: "single", label: "Single", price: 150 },
+      { id: "full", label: "Full", price: 200 },
+      { id: "family", label: "Family Pack", price: 500 },
+      { id: "jumbo", label: "Jumbo Pack", price: 800 }
+    ],
+    available: true
+  },
+  {
+    id: "chicken-fry-peas-biryani",
+    category: "Main Course",
+    subcategory: "Nizami Chicken Dum Biryani",
+    title: "Chicken Fry Peas Biryani",
+    description: "Fried chicken with peas layered biryani",
+    image: null,
+    variants: [
+      { id: "single", label: "Single", price: 250 },
+      { id: "family", label: "Family Pack", price: 750 }
+    ],
+    available: true
+  },
+  {
+    id: "extra-biryani-rice",
+    category: "Main Course",
+    subcategory: "Nizami Chicken Dum Biryani",
+    title: "Extra Biryani Rice",
+    description: "Extra portion of biryani rice",
+    image: null,
+    price: 80,
+    available: true
+  },
+  {
+    id: "extra-one-chicken-peas",
+    category: "Main Course",
+    subcategory: "Nizami Chicken Dum Biryani",
+    title: "Extra One Chicken/Peas",
+    description: "Extra chicken or peas portion",
+    image: null,
+    price: 60,
+    available: true
+  },
+
+  // Nizami Mutton Dum Biryani
+  {
+    id: "nizami-mutton-dum-biryani",
+    category: "Main Course",
+    subcategory: "Nizami Mutton Dum Biryani",
+    title: "Nizami Mutton Dum Biryani",
+    description: "Slow-cooked Nizami style mutton biryani",
+    image: null,
+    variants: [
+      { id: "single", label: "Single", price: 220 },
+      { id: "full", label: "Full", price: 300 },
+      { id: "family", label: "Family Pack", price: 750 }
+    ],
+    available: true
+  },
+
+  // Veg Biryani & Paneer Mandi items
+  {
+    id: "paneer-biryani",
+    category: "Main Course",
+    subcategory: "Veg Biryani",
+    title: "Paneer Biryani",
+    description: "Flavorful paneer biryani",
+    image: null,
+    price: 200,
+    available: true
+  },
+  {
+    id: "paneer-mandi-mini",
+    category: "Main Course",
+    subcategory: "Veg Biryani",
+    title: "Paneer Mandi (Mini)",
+    description: "Mini paneer mandi",
+    image: null,
+    price: 230,
+    available: true
+  },
+  {
+    id: "paneer-mandi-half",
+    category: "Main Course",
+    subcategory: "Veg Biryani",
+    title: "Paneer Mandi (Half)",
+    description: "Half paneer mandi",
+    image: null,
+    price: 450,
+    available: true
+  },
+  {
+    id: "paneer-mandi-full",
+    category: "Main Course",
+    subcategory: "Veg Biryani",
+    title: "Paneer Mandi (Full)",
+    description: "Full paneer mandi",
+    image: null,
+    price: 850,
+    available: true
+  },
+  {
+    id: "curd-rice",
+    category: "Main Course",
+    subcategory: "Veg Biryani",
+    title: "Curd Rice",
+    description: "Comforting curd rice",
+    image: null,
+    price: 100,
+    available: true
+  },
+
+  // Seafood Biryani
+  {
+    id: "fish-biryani",
+    category: "Main Course",
+    subcategory: "Seafood Biryani",
+    title: "Fish Biryani",
+    description: "Spiced fish biryani",
+    image: null,
+    price: 250,
+    available: true
+  },
+  {
+    id: "prawns-biryani",
+    category: "Main Course",
+    subcategory: "Seafood Biryani",
+    title: "Prawns Biryani",
+    description: "Flavorful prawns biryani",
+    image: null,
+    price: 300,
+    available: true
+  },
+
+  // Veg Curries (single-price items)
+  { id: "paneer-butter-masala", category: "Main Course", subcategory: "Veg Curries", title: "Paneer Butter Masala", description: "Rich paneer gravy", image: null, price: 220, available: true },
+  { id: "mushroom-masala", category: "Main Course", subcategory: "Veg Curries", title: "Mushroom Masala", description: "Mushroom curry", image: null, price: 220, available: true },
+  { id: "dal-fried", category: "Main Course", subcategory: "Veg Curries", title: "Dal Fry", description: "Classic dal fry", image: null, price: 220, available: true },
+  { id: "dal-tadka", category: "Main Course", subcategory: "Veg Curries", title: "Dal Tadka", description: "Tadka dal", image: null, price: 220, available: true },
+  { id: "kaju-tomato", category: "Main Course", subcategory: "Veg Curries", title: "Kaju Tomato", description: "Cashew-tomato curry", image: null, price: 220, available: true },
+  { id: "kaju-paneer-masala", category: "Main Course", subcategory: "Veg Curries", title: "Kaju Paneer Masala", description: "Kaju paneer special", image: null, price: 220, available: true },
+  { id: "green-peas-masala", category: "Main Course", subcategory: "Veg Curries", title: "Green Peas Masala", description: "Peas cooked in masala", image: null, price: 220, available: true },
+  { id: "chana-masala", category: "Main Course", subcategory: "Veg Curries", title: "Chana Masala", description: "Spiced chickpea curry", image: null, price: 220, available: true },
+  { id: "mixed-veg-curry", category: "Main Course", subcategory: "Veg Curries", title: "Mixed Veg Curry", description: "Seasonal mixed vegetables", image: null, price: 220, available: true },
+  { id: "malai-kofta", category: "Main Course", subcategory: "Veg Curries", title: "Malai Kofta", description: "Creamy kofta curry", image: null, price: 220, available: true },
+  { id: "kadai-paneer", category: "Main Course", subcategory: "Veg Curries", title: "Kadai Paneer", description: "Kadai style paneer", image: null, price: 220, available: true },
+  { id: "kaju-paneer", category: "Main Course", subcategory: "Veg Curries", title: "Kaju Paneer", description: "Cashew paneer", image: null, price: 220, available: true },
+
+  // Non-Veg Curries
+  { id: "chicken-masala", category: "Main Course", subcategory: "Non-Veg Curries", title: "Chicken Masala", description: "Spicy chicken masala", image: null, price: 230, available: true },
+  { id: "kadai-chicken", category: "Main Course", subcategory: "Non-Veg Curries", title: "Kadai Chicken", description: "Kadai style chicken", image: null, price: 230, available: true },
+  { id: "chicken-chettinad", category: "Main Course", subcategory: "Non-Veg Curries", title: "Chicken Chettinad", description: "Chettinad style chicken", image: null, price: 230, available: true },
+  { id: "chicken-kolhapuri", category: "Main Course", subcategory: "Non-Veg Curries", title: "Chicken Kolhapuri", description: "Kolhapuri chicken", image: null, price: 230, available: true },
+  { id: "butter-chicken", category: "Main Course", subcategory: "Non-Veg Curries", title: "Butter Chicken", description: "Creamy butter chicken", image: null, price: 230, available: true },
+  { id: "chicken-tikka-masala", category: "Main Course", subcategory: "Non-Veg Curries", title: "Chicken Tikka Masala", description: "Tikka masala chicken", image: null, price: 230, available: true },
+  { id: "malabar-chicken-curry", category: "Main Course", subcategory: "Non-Veg Curries", title: "Malabar Chicken Curry", description: "Malabar style curry", image: null, price: 230, available: true },
+  { id: "punjabi-chicken", category: "Main Course", subcategory: "Non-Veg Curries", title: "Punjabi Chicken", description: "Punjabi style chicken", image: null, price: 230, available: true },
+  { id: "chicken-pepper-fry", category: "Main Course", subcategory: "Non-Veg Curries", title: "Chicken Pepper Fry", description: "Pepper fried chicken", image: null, price: 230, available: true },
+  { id: "dum-chicken", category: "Main Course", subcategory: "Non-Veg Curries", title: "Dum Chicken", description: "Slow-cooked dum chicken", image: null, price: 230, available: true },
+  { id: "murgh-musallam", category: "Main Course", subcategory: "Non-Veg Curries", title: "Murgh Musallam", description: "Whole stuffed chicken", image: null, price: 230, available: true },
+  { id: "miyabhai-special-curry", category: "Main Course", subcategory: "Non-Veg Curries", title: "Miyabhai Special Curry", description: "House special curry", image: null, price: 230, available: true }
+];
+export const kebabsGrills = [
+  {
+    id: "tandoori-chicken",
+    category: "Kebabs & Grills",
+    title: "Tandoori Chicken",
+    description: "Smoky tandoori chicken",
+    image: null,
+    variants: [
+      { id: "half", label: "Half", price: 230 },
+      { id: "full", label: "Full", price: 430 }
+    ],
+    available: true
+  },
+  {
+    id: "tangdi-kebab",
+    category: "Kebabs & Grills",
+    title: "Tangdi Kebab",
+    description: "Spiced chicken leg kebab",
+    image: null,
+    variants: [
+      { id: "2pc", label: "2 pcs", price: 200 },
+      { id: "4pc", label: "4 pcs", price: 360 }
+    ],
+    available: true
+  },
+  {
+    id: "chicken-tikka-boneless-6pc",
+    category: "Kebabs & Grills",
+    title: "Chicken Tikka (Boneless) - 6pc",
+    description: "Boneless chicken tikka",
+    image: null,
+    price: 230,
+    available: true
+  },
+  { id: "reshmi-kebab", category: "Kebabs & Grills", title: "Reshmi Kebab", image: null, price: 230, available: true },
+  { id: "banjara-kebab-boneless", category: "Kebabs & Grills", title: "Banjara Kebab (Boneless)", image: null, price: 230, available: true },
+  { id: "hariyali-boneless", category: "Kebabs & Grills", title: "Hariyali (Boneless)", image: null, price: 230, available: true },
+  {
+    id: "grilled-chicken",
+    category: "Kebabs & Grills",
+    title: "Grilled Chicken",
+    image: null,
+    variants: [
+      { id: "half", label: "Half", price: 300 },
+      { id: "full", label: "Full", price: 550 }
+    ],
+    available: true
+  }
+];
+
+export const shawarmas = [
+  { id: "regular-chicken-shawarma", category: "Shawarma", title: "Regular Chicken Shawarma", image: null, price: 100, available: true },
+  { id: "special-chicken-shawarma", category: "Shawarma", title: "Special Chicken Shawarma", image: null, price: 140, available: true },
+  { id: "miyabhai-special-shawarma", category: "Shawarma", title: "Miyabhai Special Shawarma", image: null, price: 150, available: true },
+
+  // Veg Shawarma
+  { id: "veg-shawarma", category: "Shawarma", title: "Veg Shawarma", image: null, price: 100, available: true },
+  { id: "paneer-shawarma", category: "Shawarma", title: "Paneer Shawarma", image: null, price: 140, available: true }
+];
+
+export const chinese = [
+  // Noodles
+  { id: "veg-noodles", category: "Chinese", subcategory: "Noodles", title: "Veg Noodles", image: null, price: 100, available: true },
+  { id: "egg-noodles", category: "Chinese", subcategory: "Noodles", title: "Egg Noodles", image: null, price: 120, available: true },
+  { id: "chicken-noodles", category: "Chinese", subcategory: "Noodles", title: "Chicken Noodles", image: null, price: 150, available: true },
+  { id: "paneer-noodles", category: "Chinese", subcategory: "Noodles", title: "Paneer Noodles", image: null, price: 150, available: true },
+  { id: "kaju-noodles", category: "Chinese", subcategory: "Noodles", title: "Kaju Noodles", image: null, price: 150, available: true },
+  { id: "manchuria-noodles", category: "Chinese", subcategory: "Noodles", title: "Manchuria Noodles", image: null, price: 150, available: true },
+
+  // Fried rice
+  { id: "veg-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Veg Fried Rice", image: null, price: 100, available: true },
+  { id: "egg-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Egg Fried Rice", image: null, price: 120, available: true },
+  { id: "chicken-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Chicken Fried Rice", image: null, price: 150, available: true },
+  { id: "veg-manchuria-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Veg Manchuria Fried Rice", image: null, price: 150, available: true },
+  { id: "paneer-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Paneer Fried Rice", image: null, price: 150, available: true },
+  { id: "kaju-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Kaju Fried Rice", image: null, price: 150, available: true },
+  { id: "manchuria-fried-rice", category: "Chinese", subcategory: "Fried Rice", title: "Manchuria Fried Rice", image: null, price: 150, available: true }
+];
+
+export const meals = [
+  // bulk items priced 120 (list)
+  { id: "meal-1-rice-to-sweet", category: "Meals", title: "Rice to Sweet (Meal Item)", image: null, price: 120, available: true },
+  { id: "veg-curries-meal", category: "Meals", title: "Veg Curries (Meal Item)", image: null, price: 120, available: true },
+  { id: "dum-fry", category: "Meals", title: "Dum Fry (Meal Item)", image: null, price: 120, available: true },
+  { id: "oil-fry", category: "Meals", title: "Oil Fry (Meal Item)", image: null, price: 120, available: true },
+  { id: "roti-chutney", category: "Meals", title: "Roti Chutney (Meal Item)", image: null, price: 120, available: true },
+  { id: "dal", category: "Meals", title: "Dal (Meal Item)", image: null, price: 120, available: true },
+  { id: "sambar", category: "Meals", title: "Sambar (Meal Item)", image: null, price: 120, available: true },
+  { id: "rasam", category: "Meals", title: "Rasam (Meal Item)", image: null, price: 120, available: true },
+  { id: "papad", category: "Meals", title: "Papad (Meal Item)", image: null, price: 120, available: true },
+  { id: "nellore-chutney", category: "Meals", title: "Nellore Chutney (Meal Item)", image: null, price: 120, available: true },
+  { id: "curd", category: "Meals", title: "Curd (Meal Item)", image: null, price: 120, available: true },
+  { id: "achi-pulusu", category: "Meals", title: "Achi Pulusu (Meal Item)", image: null, price: 120, available: true },
+
+  // other meals
+  { id: "rice-with-egg-curry-sambar", category: "Meals", title: "Rice with Egg Curry + Sambar", image: null, price: 130, available: true },
+  { id: "rice-with-naatu-kodi-pulusu", category: "Meals", title: "Rice with Naatu Kodi Pulusu", image: null, price: 180, available: true },
+  { id: "bagara-rice-with-talakayi-curry", category: "Meals", title: "Bagara Rice with Talakai Curry", image: null, price: 200, available: true },
+  { id: "bagara-rice-with-naatu-kodi", category: "Meals", title: "Bagara Rice with Naatu Kodi", image: null, price: 180, available: true },
+  { id: "nellore-vari-chepala-pulusu", category: "Meals", title: "Nellore Vari Chepala Pulusu", image: null, price: 180, available: true },
+  { id: "gutti-vankaya-curry-bagara-rice", category: "Meals", title: "Gutti Vankaya Curry with Bagara Rice", image: null, price: 130, available: true },
+  { id: "egg-burji-with-puri", category: "Meals", title: "Egg Burji with Puri", image: null, price: 100, available: true },
+  { id: "rice-tomato-with-egg-curry", category: "Meals", title: "Rice Tomato with Egg Curry", image: null, price: 130, available: true },
+
+  // mutton / special meals
+  { id: "military-mutton", category: "Meals", title: "Military Mutton", image: null, price: 150, available: true },
+  { id: "ankapur-naatu-kodi-pulusu", category: "Meals", title: "Ankapur Naatu Kodi Pulusu", image: null, price: 200, available: true },
+  { id: "nallamala-naatu-kodi-pulusu", category: "Meals", title: "Nallamala Naatu Kodi Pulusu", image: null, price: 200, available: true },
+  { id: "mutton-dalja-with-bagara-rice", category: "Meals", title: "Mutton Dalja with Bagara Rice", image: null, price: 200, available: true }
+];
+// client/src/data/menuContinentalTiffin.ts
+export const continental = [
+  // Burgers
+  { id: "crazy-cheese-burger", category: "Continental", subcategory: "Burgers", title: "Crazy Cheese Burger", image: null, price: 79, available: true },
+  { id: "aloo-tikki-burger", category: "Continental", subcategory: "Burgers", title: "Aloo Tikki Burger", image: null, price: 79, available: true },
+  { id: "spot-wedge-burger", category: "Continental", subcategory: "Burgers", title: "Spot Wedge Burger", image: null, price: 89, available: true },
+  { id: "paneer-cheese-burger", category: "Continental", subcategory: "Burgers", title: "Paneer Cheese Burger", image: null, price: 89, available: true },
+  { id: "chicken-cheese-burger", category: "Continental", subcategory: "Burgers", title: "Chicken Cheese Burger", image: null, price: 99, available: true },
+
+  // Pizzas
+  { id: "wedge-delight-pizza", category: "Continental", subcategory: "Pizzas", title: "Wedge Delight Pizza", image: null, price: 110, available: true },
+  { id: "margherita-pizza", category: "Continental", subcategory: "Pizzas", title: "Margherita Pizza", image: null, price: 120, available: true },
+  { id: "sweet-corn-pizza", category: "Continental", subcategory: "Pizzas", title: "Sweet Corn Pizza", image: null, price: 150, available: true },
+  { id: "paneer-pizza", category: "Continental", subcategory: "Pizzas", title: "Paneer Pizza", image: null, price: 180, available: true },
+  { id: "bbq-paneer-pizza", category: "Continental", subcategory: "Pizzas", title: "BBQ Paneer Pizza", image: null, price: 199, available: true },
+  { id: "chicken-pizza", category: "Continental", subcategory: "Pizzas", title: "Chicken Pizza", image: null, price: 199, available: true },
+
+  // Sandwiches
+  { id: "grilled-wedge-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Grilled Wedge Sandwich", image: null, price: 69, available: true },
+  { id: "corn-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Corn Sandwich", image: null, price: 79, available: true },
+  { id: "mix-wedge-grilled-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Mix Wedge Grilled Sandwich", image: null, price: 89, available: true },
+  { id: "grilled-paneer-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Grilled Paneer Sandwich", image: null, price: 89, available: true },
+  { id: "cheese-masala-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Cheese Masala Sandwich", image: null, price: 89, available: true },
+  { id: "bbq-paneer-sandwich", category: "Continental", subcategory: "Sandwiches", title: "BBQ Paneer Sandwich", image: null, price: 99, available: true },
+  { id: "chicken-club-sandwich", category: "Continental", subcategory: "Sandwiches", title: "Chicken Club Sandwich", image: null, price: 99, available: true }
+];
+
+export const tiffinBreakfast = [
+  // Tiffin / Breakfast (single prices, many)
+  { id: "idli", category: "Tiffin", subcategory: "Breakfast", title: "Idli", image: null, price: 30, available: true },
+  { id: "idli-with-ghee", category: "Tiffin", subcategory: "Breakfast", title: "Idli with Ghee", image: null, price: 40, available: true },
+  { id: "tawa-idli", category: "Tiffin", subcategory: "Breakfast", title: "Tawa Idli", image: null, price: 50, available: true },
+  { id: "mysore-bajji", category: "Tiffin", subcategory: "Breakfast", title: "Mysore Bajji", image: null, price: 40, available: true },
+  { id: "tawa-mysore-bajji", category: "Tiffin", subcategory: "Breakfast", title: "Tawa Mysore Bajji", image: null, price: 50, available: true },
+  { id: "vada", category: "Tiffin", subcategory: "Breakfast", title: "Vada", image: null, price: 50, available: true },
+  { id: "tawa-vada", category: "Tiffin", subcategory: "Breakfast", title: "Tawa Vada", image: null, price: 60, available: true },
+  { id: "puri", category: "Tiffin", subcategory: "Breakfast", title: "Puri", image: null, price: 50, available: true },
+  { id: "puri-curry", category: "Tiffin", subcategory: "Breakfast", title: "Puri Curry", image: null, price: 50, available: true },
+  { id: "plain-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Plain Dosa", image: null, price: 40, available: true },
+  { id: "masala-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Masala Dosa", image: null, price: 50, available: true },
+  { id: "onion-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Onion Dosa", image: null, price: 50, available: true },
+  { id: "ragi-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Ragi Dosa", image: null, price: 50, available: true },
+  { id: "ragi-masala-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Ragi Masala Dosa", image: null, price: 50, available: true },
+  { id: "paneer-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Paneer Dosa", image: null, price: 70, available: true },
+  { id: "butter-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Butter Dosa", image: null, price: 60, available: true },
+  { id: "paneer-butter-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Paneer Butter Dosa", image: null, price: 80, available: true },
+
+  // Kanchipuram / variants
+  { id: "kanchipuram-idli", category: "Tiffin", subcategory: "Breakfast", title: "Kanchipuram Idli", image: null, price: 40, available: true },
+  { id: "pudina-idli", category: "Tiffin", subcategory: "Breakfast", title: "Pudina Idli", image: null, price: 40, available: true },
+  { id: "carrot-idli", category: "Tiffin", subcategory: "Breakfast", title: "Carrot Idli", image: null, price: 40, available: true },
+  { id: "palak-idli", category: "Tiffin", subcategory: "Breakfast", title: "Palak Idli", image: null, price: 40, available: true },
+  { id: "sawadeen-idli", category: "Tiffin", subcategory: "Breakfast", title: "Sawadeen Idli", image: null, price: 40, available: true },
+  { id: "ragi-idli", category: "Tiffin", subcategory: "Breakfast", title: "Ragi Idli", image: null, price: 40, available: true },
+  { id: "ghee-kerala-idli", category: "Tiffin", subcategory: "Breakfast", title: "Ghee Kerala Idli", image: null, price: 50, available: true },
+
+  // Puri, dosas and variations
+  { id: "palak-puri", category: "Tiffin", subcategory: "Breakfast", title: "Palak Puri", image: null, price: 50, available: true },
+  { id: "masala-puri-curry", category: "Tiffin", subcategory: "Breakfast", title: "Masala Puri Curry", image: null, price: 50, available: true },
+  { id: "puri-with-chicken-curry", category: "Tiffin", subcategory: "Breakfast", title: "Puri with Chicken Curry", image: null, price: 100, available: true },
+  { id: "puri-with-mutton-kheema", category: "Tiffin", subcategory: "Breakfast", title: "Puri with Mutton Kheema", image: null, price: 150, available: true },
+  { id: "mutton-kheema-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Mutton Kheema Dosa", image: null, price: 150, available: true },
+  { id: "puri-with-egg-burji", category: "Tiffin", subcategory: "Breakfast", title: "Puri with Egg Burji", image: null, price: 80, available: true },
+  { id: "egg-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Egg Dosa", image: null, price: 60, available: true },
+  { id: "pizza-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Pizza Dosa", image: null, price: 120, available: true },
+  { id: "ghee-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Ghee Dosa", image: null, price: 50, available: true },
+  { id: "ghee-masala-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Ghee Masala Dosa", image: null, price: 60, available: true },
+  { id: "ghee-karani-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Ghee Karani Dosa", image: null, price: 60, available: true },
+
+  // More dosa variants
+  { id: "pesara-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Pesara Dosa", image: null, price: 40, available: true },
+  { id: "onion-pesara-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Onion Pesara Dosa", image: null, price: 50, available: true },
+  { id: "masala-pesara-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Masala Pesara Dosa", image: null, price: 50, available: true },
+  { id: "mla-prasad-dosa", category: "Tiffin", subcategory: "Breakfast", title: "MLA Prasad Dosa", image: null, price: 70, available: true },
+  { id: "set-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Set Dosa", image: null, price: 70, available: true },
+  { id: "uttappa", category: "Tiffin", subcategory: "Breakfast", title: "Uttappa", image: null, price: 70, available: true },
+  { id: "masala-uttappam", category: "Tiffin", subcategory: "Breakfast", title: "Masala Uttappam", image: null, price: 80, available: true },
+  { id: "rava-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Rava Dosa", image: null, price: 70, available: true },
+  { id: "masala-rava-dosa", category: "Tiffin", subcategory: "Breakfast", title: "Masala Rava Dosa", image: null, price: 80, available: true }
+];
+
+export const chutneys = [
+  { id: "coconut-chutney", category: "Chutneys", title: "Coconut Chutney", image: null, price: 0, available: true },
+  { id: "ginger-chutney", category: "Chutneys", title: "Ginger Chutney", image: null, price: 0, available: true },
+  { id: "sambar-chutney", category: "Chutneys", title: "Sambar Chutney", image: null, price: 0, available: true },
+  { id: "rasam-chutney", category: "Chutneys", title: "Rasam / Sambar (if used)", image: null, price: 0, available: true }
+];
+// Arabian cuisine - Nizami Mandi / Mandi variants
+{
+  id: "mandi-chicken-mini",
+  name: "Nizami Chicken Mandi (Mini)",
+  category: "Arabian",
+  subCategory: "Chicken Mandi",
+  prices: { mini: 250 }
+  , image: null, tier: 2
+},
+{
+  id: "mandi-chicken-half",
+  name: "Nizami Chicken Mandi (Half)",
+  category: "Arabian",
+  subCategory: "Chicken Mandi",
+  prices: { half: 420 }
+  , image: null, tier: 2
+},
+{
+  id: "mandi-chicken-3piece",
+  name: "Nizami Chicken Mandi (3-piece)",
+  category: "Arabian",
+  subCategory: "Chicken Mandi",
+  prices: { three_piece: 600 }
+  , image: null, tier: 2
+},
+{
+  id: "mandi-chicken-full",
+  name: "Nizami Chicken Mandi (Full)",
+  category: "Arabian",
+  subCategory: "Chicken Mandi",
+  prices: { full: 750 }
+  , image: null, tier: 2
+},
+
+// Chicken Juicy Mandi
+{ id: "mandi-chicken-juicy-mini", name: "Chicken Juicy Mandi (Mini)", category: "Arabian", subCategory: "Chicken Juicy Mandi", prices: { mini: 320 }, image: null, tier: 2 },
+{ id: "mandi-chicken-juicy-half", name: "Chicken Juicy Mandi (Half)", category: "Arabian", subCategory: "Chicken Juicy Mandi", prices: { half: 500 }, image: null, tier: 2 },
+{ id: "mandi-chicken-juicy-3piece", name: "Chicken Juicy Mandi (3-piece)", category: "Arabian", subCategory: "Chicken Juicy Mandi", prices: { three_piece: 750 }, image: null, tier: 2 },
+{ id: "mandi-chicken-juicy-full", name: "Chicken Juicy Mandi (Full)", category: "Arabian", subCategory: "Chicken Juicy Mandi", prices: { full: 1000 }, image: null, tier: 2 },
+
+// Broasted Mandi
+{ id: "mandi-broasted-mini", name: "Broasted Mandi (Mini)", category: "Arabian", subCategory: "Broasted Mandi", prices: { mini: 320 }, image: null, tier: 2 },
+{ id: "mandi-broasted-half", name: "Broasted Mandi (Half)", category: "Arabian", subCategory: "Broasted Mandi", prices: { half: 500 }, image: null, tier: 2 },
+{ id: "mandi-broasted-3piece", name: "Broasted Mandi (3-piece)", category: "Arabian", subCategory: "Broasted Mandi", prices: { three_piece: 750 }, image: null, tier: 2 },
+{ id: "mandi-broasted-full", name: "Broasted Mandi (Full)", category: "Arabian", subCategory: "Broasted Mandi", prices: { full: 1000 }, image: null, tier: 2 },
+
+// Tandoori Chicken Mandi
+{ id: "mandi-tandoori-half", name: "Tandoori Chicken Mandi (Half)", category: "Arabian", subCategory: "Tandoori Chicken Mandi", prices: { half: 440 }, image: null, tier: 2 },
+{ id: "mandi-tandoori-full", name: "Tandoori Chicken Mandi (Full)", category: "Arabian", subCategory: "Tandoori Chicken Mandi", prices: { full: 800 }, image: null, tier: 2 },
+
+// Nizami Mutton Mandi
+{ id: "mandi-mutton-mini", name: "Nizami Mutton Mandi (Mini)", category: "Arabian", subCategory: "Mutton Mandi", prices: { mini: 320 }, image: null, tier: 2 },
+{ id: "mandi-mutton-half", name: "Nizami Mutton Mandi (Half)", category: "Arabian", subCategory: "Mutton Mandi", prices: { half: 500 }, image: null, tier: 2 },
+{ id: "mandi-mutton-3piece", name: "Nizami Mutton Mandi (3-piece)", category: "Arabian", subCategory: "Mutton Mandi", prices: { three_piece: 750 }, image: null, tier: 2 },
+{ id: "mandi-mutton-full", name: "Nizami Mutton Mandi (Full)", category: "Arabian", subCategory: "Mutton Mandi", prices: { full: 900 }, image: null, tier: 2 },
+
+// Nizami Juicy Mutton Mandi
+{ id: "mandi-mutton-juice-mini", name: "Juicy Mutton Mandi (Mini)", category: "Arabian", subCategory: "Juicy Mutton Mandi", prices: { mini: 350 }, image: null, tier: 2 },
+{ id: "mandi-mutton-juice-half", name: "Juicy Mutton Mandi (Half)", category: "Arabian", subCategory: "Juicy Mutton Mandi", prices: { half: 600 }, image: null, tier: 2 },
+{ id: "mandi-mutton-juice-3piece", name: "Juicy Mutton Mandi (3-piece)", category: "Arabian", subCategory: "Juicy Mutton Mandi", prices: { three_piece: 850 }, image: null, tier: 2 },
+{ id: "mandi-mutton-juice-full", name: "Juicy Mutton Mandi (Full)", category: "Arabian", subCategory: "Juicy Mutton Mandi", prices: { full: 1100 }, image: null, tier: 2 },
+
+// Special mutton masala mandi
+{ id: "mandi-special-mutton-half", name: "Special Mutton Masala Mandi (Half)", category: "Arabian", subCategory: "Special Mutton Masala", prices: { half: 700 }, image: null, tier: 2 },
+{ id: "mandi-special-mutton-full", name: "Special Mutton Masala Mandi (Full)", category: "Arabian", subCategory: "Special Mutton Masala", prices: { full: 1300 }, image: null, tier: 2 },
+
+// Fish mandi + mix mandi
+{ id: "mandi-fish-half", name: "Fish Mandi (Half)", category: "Arabian", subCategory: "Fish Mandi", prices: { half: 460 }, image: null, tier: 2 },
+{ id: "mandi-fish-full", name: "Fish Mandi (Full)", category: "Arabian", subCategory: "Fish Mandi", prices: { full: 850 }, image: null, tier: 2 },
+{ id: "mandi-mix-4p", name: "Mix Mandi (4 members)", category: "Arabian", subCategory: "Mix Mandi", prices: { pack_for_4: 1100 }, image: null, tier: 2 },
+
+// Beverages - Juices
+{ id: "juice-fresh-lemon", name: "Fresh Lemon Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-lime-soda", name: "Lime Soda (sweet/salt)", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-mosambi", name: "Fresh Mosambi Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-banana", name: "Banana Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-watermelon", name: "Watermelon Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-muskmelon", name: "Muskmelon Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-pineapple", name: "Pineapple Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-grape", name: "Grape Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-orange", name: "Orange Juice", category: "Beverages", subCategory: "Juices", price: 50, image: null, tier: 3 },
+{ id: "juice-pomegranate", name: "Pomegranate Juice", category: "Beverages", subCategory: "Juices", price: 60, image: null, tier: 3 },
+{ id: "juice-apple", name: "Apple Juice", category: "Beverages", subCategory: "Juices", price: 60, image: null, tier: 3 },
+{ id: "juice-dragon-fruit", name: "Dragon Fruit Juice", category: "Beverages", subCategory: "Juices", price: 80, image: null, tier: 3 },
+{ id: "juice-mixed-fruit", name: "Mixed Fruit Juice", category: "Beverages", subCategory: "Juices", price: 80, image: null, tier: 3 },
+{ id: "juice-avocado", name: "Avocado Juice", category: "Beverages", subCategory: "Juices", price: 119, image: null, tier: 3 },
+
+// Milkshakes
+{ id: "milkshake-cold-coffee", name: "Cold Coffee", category: "Beverages", subCategory: "Milkshakes", price: 50, image: null, tier: 3 },
+{ id: "milkshake-banana", name: "Banana Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 70, image: null, tier: 3 },
+{ id: "milkshake-vanilla", name: "Vanilla Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 70, image: null, tier: 3 },
+{ id: "milkshake-blackcurrant", name: "Blackcurrant Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 80, image: null, tier: 3 },
+{ id: "milkshake-chocolate", name: "Chocolate Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 80, image: null, tier: 3 },
+{ id: "milkshake-kitkat", name: "Kit Kat Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 80, image: null, tier: 3 },
+{ id: "milkshake-strawberry", name: "Strawberry Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 80, image: null, tier: 3 },
+{ id: "milkshake-butterscotch", name: "Butterscotch Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 90, image: null, tier: 3 },
+{ id: "milkshake-mango", name: "Mango Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 90, image: null, tier: 3 },
+{ id: "milkshake-oreo", name: "Oreo Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 90, image: null, tier: 3 },
+{ id: "milkshake-dryfruit", name: "Dry Fruit Milkshake", category: "Beverages", subCategory: "Milkshakes", price: 99, image: null, tier: 3 },
+
+// Mocktails
+{ id: "mocktail-mint-lemon", name: "Mint Lemon", category: "Beverages", subCategory: "Mocktails", price: 69, image: null, tier: 3 },
+{ id: "mocktail-virgin-mojito", name: "Virgin Mojito", category: "Beverages", subCategory: "Mocktails", price: 69, image: null, tier: 3 },
+{ id: "mocktail-virgin-pina-colada", name: "Virgin Pina Colada", category: "Beverages", subCategory: "Mocktails", price: 79, image: null, tier: 3 },
+{ id: "mocktail-berry-mary", name: "Berry Mary", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-blue-lagoon", name: "Blue Lagoon", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-fizzy-tulip", name: "Fizzy Tulip", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-blackcurrant-love", name: "Blackcurrant in Love", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-sunrise", name: "Sunrise", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-cinderella", name: "Cinderella", category: "Beverages", subCategory: "Mocktails", price: 89, image: null, tier: 3 },
+{ id: "mocktail-tender-coconut", name: "Tender Coconut", category: "Beverages", subCategory: "Mocktails", price: 99, image: null, tier: 3 },
+{ id: "mocktail-virgin-margarita", name: "Virgin Margarita", category: "Beverages", subCategory: "Mocktails", price: 99, image: null, tier: 3 },
+{ id: "mocktail-chatka-orange", name: "Chatka Orange", category: "Beverages", subCategory: "Mocktails", price: 99, image: null, tier: 3 },

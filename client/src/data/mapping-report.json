@@ -1,0 +1,108 @@
+{
+  "totalItems": 20,
+  "matched": 14,
+  "exactMatches": [
+    {
+      "name": "Paneer Biryani",
+      "file": "Paneer Biryani.png",
+      "method": "slug_exact"
+    },
+    {
+      "name": "Fish Biryani",
+      "file": "Fish Biryani.png",
+      "method": "slug_exact"
+    },
+    {
+      "name": "Prawns Biryani",
+      "file": "Prawns Biryani.png",
+      "method": "slug_exact"
+    },
+    {
+      "name": "Chicken Tikka (Boneless) - 6pc",
+      "file": "Chicken Tikka.png",
+      "method": "slug_exact"
+    }
+  ],
+  "approxMatches": [
+    {
+      "name": "Extra Biryani Rice",
+      "file": "Chicken Dum Biryani.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Extra One Chicken/Peas",
+      "file": "Tandoori Chicken.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Paneer Mandi (Mini)",
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Paneer Mandi (Half)",
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Paneer Mandi (Full)",
+      "file": "Paneer Biryani.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Curd Rice",
+      "file": "Chicken Fried Rice.png",
+      "method": "token_best",
+      "score": 1
+    },
+    {
+      "name": "Nizami Chicken Mandi (Mini)",
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    },
+    {
+      "name": "Nizami Chicken Mandi (Half)",
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    },
+    {
+      "name": "Nizami Chicken Mandi (3-piece)",
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    },
+    {
+      "name": "Nizami Chicken Mandi (Full)",
+      "file": "Chicken Juicy Mandi.png",
+      "method": "token_best",
+      "score": 2
+    }
+  ],
+  "unmatched": [
+    {
+      "name": "jumbo"
+    },
+    {
+      "name": "family"
+    },
+    {
+      "name": "family"
+    },
+    {
+      "name": "full"
+    },
+    {
+      "name": "4pc"
+    },
+    {
+      "name": "full"
+    }
+  ]
+}

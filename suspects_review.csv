@@ -1,0 +1,51 @@
+﻿id,title,current_category,suggested_category,final_category
+rotis-paneer-kulcha,Paneer Kulcha,Starters,Main Course,Starters
+rotis-masala-kulcha,Masala Kulcha,Starters,Main Course,Starters
+tandoori-tandoori-chicken-half,Tandoori Chicken (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-tandoori-chicken-full,Tandoori Chicken (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-reshmi-kebab-half,Reshmi Kebab (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-reshmi-kebab-full,Reshmi Kebab (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-chicken-tikka-half,Chicken Tikka (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-chicken-tikka-full,Chicken Tikka (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-tangdi-kebab-half,Tangdi Kebab (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-tangdi-kebab-full,Tangdi Kebab (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-malai-kebab-half,Malai Kebab (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-malai-kebab-full,Malai Kebab (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-hariyali-kebab-half,Hariyali Kebab (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-hariyali-kebab-full,Hariyali Kebab (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-ch-ch-kebab-half,Chicken CH Kebab (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-ch-ch-kebab-full,Chicken CH Kebab (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-achari-chicken-tikka-half,Achari Chicken Tikka (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-achari-chicken-tikka-full,Achari Chicken Tikka (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-grilled-chicken-half,Grilled Chicken (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-grilled-chicken-full,Grilled Chicken (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-murukh-musallam-half,Murukh Musallam (Half),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-murukh-musallam-full,Murukh Musallam (Full),Starters,Kebabs & Grills,Kebabs & Grills
+tandoori-miyabhai-special-curry-half,Miyabhai Special Curry (Half),Starters,Kebabs & Grills,Main Course
+tandoori-miyabhai-special-curry-full,Miyabhai Special Curry (Full),Starters,Kebabs & Grills,Main Course
+veg-paneer-65,Paneer 65,Starters,Main Course,Starters
+veg-baby-corn-manchuria,Baby Corn Manchuria,Starters,Chutneys,Chinese
+veg-paneer-masala-dry,Paneer Masala Dry,Starters,Main Course,Main Course
+veg-mushroom-masala-dry,Mushroom Masala Dry,Starters,Main Course,Main Course
+veg-chili-mushroom-dry,Chili Mushroom Dry,Starters,Main Course,Main Course
+veg-chili-paneer,Chili Paneer,Starters,Main Course,Starters
+veg-chili-baby-corn-dry,Chili Baby Corn Dry,Starters,Main Course,Starters
+veg-gobi-65,Gobi 65,Starters,Main Course,Chinese
+veg-gobi-manchuria-dry,Gobi Manchuria Dry,Starters,Main Course,Chinese
+veg-baby-corn-pepper-salt,Baby Corn Pepper Salt,Starters,Main Course,Chinese
+veg-chili-gobi,Chili Gobi,Starters,Chutneys,Chinese
+nonveg-chicken-65,Chicken 65,Starters,Main Course,Starters
+nonveg-chili-manchuria,Chili Manchuria,Starters,Main Course,Starters
+nonveg-chili-chicken,Chili Chicken,Starters,Main Course,Starters
+nonveg-garlic-chicken,Garlic Chicken,Starters,Chutneys,Starters
+nonveg-dragon-chicken,Dragon Chicken,Starters,Main Course,Starters
+nonveg-chicken-hongkong,Chicken Hong Kong,Starters,Main Course,Starters
+nonveg-kungfu-chicken,Kung Fu Chicken,Starters,Main Course,Starters
+nonveg-lemon-chicken,Lemon Chicken,Starters,Main Course,Starters
+nonveg-chicken-lollipop,Chicken Lollipop,Starters,Main Course,Starters
+nonveg-chicken-wings,Chicken Wings,Starters,Main Course,Starters
+nonveg-plum-chicken,Plum Chicken,Starters,Chutneys,Starters
+nonveg-blackbean-chicken,Black Bean Chicken,Starters,Chutneys,Starters
+nonveg-chicken-majestic,Chicken Majestic,Starters,Main Course,Starters
+nonveg-chicken-pepper-salt,Chicken Pepper Salt,Starters,Main Course,Starters
+nonveg-schezwan-chicken,Schezwan Chicken,Starters,Main Course,Chinese
