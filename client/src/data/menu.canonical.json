@@ -11,7 +11,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-apple",
+      "id": "juice-apple-raw",
       "name": "Apple Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -33,7 +33,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-avocado",
+      "id": "juice-avocado-raw",
       "name": "Avocado Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -54,7 +54,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-banana",
+      "id": "juice-banana-raw",
       "name": "Banana Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -75,7 +75,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-banana",
+      "id": "milkshake-banana-raw",
       "name": "Banana Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -96,7 +96,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-berry-mary",
+      "id": "mocktail-berry-mary-raw",
       "name": "Berry Mary",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -117,7 +117,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-blackcurrant-love",
+      "id": "mocktail-blackcurrant-love-raw",
       "name": "Blackcurrant in Love",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -138,7 +138,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-blackcurrant",
+      "id": "milkshake-blackcurrant-raw",
       "name": "Blackcurrant Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -159,7 +159,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-blue-lagoon",
+      "id": "mocktail-blue-lagoon-raw",
       "name": "Blue Lagoon",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -180,7 +180,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-butterscotch",
+      "id": "milkshake-butterscotch-raw",
       "name": "Butterscotch Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -201,7 +201,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-chatka-orange",
+      "id": "mocktail-chatka-orange-raw",
       "name": "Chatka Orange",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -222,7 +222,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-chocolate",
+      "id": "milkshake-chocolate-raw",
       "name": "Chocolate Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -243,7 +243,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-cinderella",
+      "id": "mocktail-cinderella-raw",
       "name": "Cinderella",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -264,7 +264,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-cold-coffee",
+      "id": "milkshake-cold-coffee-raw",
       "name": "Cold Coffee",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -285,7 +285,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-dragon-fruit",
+      "id": "juice-dragon-fruit-raw",
       "name": "Dragon Fruit Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -306,7 +306,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-dryfruit",
+      "id": "milkshake-dryfruit-raw",
       "name": "Dry Fruit Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -327,7 +327,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-fizzy-tulip",
+      "id": "mocktail-fizzy-tulip-raw",
       "name": "Fizzy Tulip",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -348,7 +348,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-fresh-lemon",
+      "id": "juice-fresh-lemon-raw",
       "name": "Fresh Lemon Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -369,7 +369,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-mosambi",
+      "id": "juice-mosambi-raw",
       "name": "Fresh Mosambi Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -390,7 +390,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-grape",
+      "id": "juice-grape-raw",
       "name": "Grape Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -411,7 +411,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-kitkat",
+      "id": "milkshake-kitkat-raw",
       "name": "Kit Kat Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -432,7 +432,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-lime-soda",
+      "id": "juice-lime-soda-raw",
       "name": "Lime Soda (sweet/salt)",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -453,7 +453,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-mango",
+      "id": "milkshake-mango-raw",
       "name": "Mango Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -474,7 +474,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-mint-lemon",
+      "id": "mocktail-mint-lemon-raw",
       "name": "Mint Lemon",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -495,7 +495,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-mixed-fruit",
+      "id": "juice-mixed-fruit-raw",
       "name": "Mixed Fruit Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -516,7 +516,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-muskmelon",
+      "id": "juice-muskmelon-raw",
       "name": "Muskmelon Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -537,7 +537,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-orange",
+      "id": "juice-orange-raw",
       "name": "Orange Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -558,7 +558,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-oreo",
+      "id": "milkshake-oreo-raw",
       "name": "Oreo Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -579,7 +579,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-pineapple",
+      "id": "juice-pineapple-raw",
       "name": "Pineapple Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -601,7 +601,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-pomegranate",
+      "id": "juice-pomegranate-raw",
       "name": "Pomegranate Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -623,7 +623,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-strawberry",
+      "id": "milkshake-strawberry-raw",
       "name": "Strawberry Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -645,7 +645,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-sunrise",
+      "id": "mocktail-sunrise-raw",
       "name": "Sunrise",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -666,7 +666,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-tender-coconut",
+      "id": "mocktail-tender-coconut-raw",
       "name": "Tender Coconut",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -687,7 +687,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "milkshake-vanilla",
+      "id": "milkshake-vanilla-raw",
       "name": "Vanilla Milkshake",
       "category": "Beverages",
       "subCategory": "Milkshakes",
@@ -708,7 +708,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-virgin-margarita",
+      "id": "mocktail-virgin-margarita-raw",
       "name": "Virgin Margarita",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -729,7 +729,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-virgin-mojito",
+      "id": "mocktail-virgin-mojito-raw",
       "name": "Virgin Mojito",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -750,7 +750,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mocktail-virgin-pina-colada",
+      "id": "mocktail-virgin-pina-colada-raw",
       "name": "Virgin Pina Colada",
       "category": "Beverages",
       "subCategory": "Mocktails",
@@ -771,7 +771,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "juice-watermelon",
+      "id": "juice-watermelon-raw",
       "name": "Watermelon Juice",
       "category": "Beverages",
       "subCategory": "Juices",
@@ -793,7 +793,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "extra-biryani-rice",
+      "id": "extra-biryani-rice-raw",
       "category": "Main Course",
       "subcategory": "Nizami Chicken Dum Biryani",
       "title": "Extra Biryani Rice",
@@ -815,6 +815,16 @@
     "prices": null,
     "variants": null,
     "available": true,
+    "raw": {
+      "id": "extra-one-chicken-piece-raw",
+      "category": "Biryani",
+      "subcategory": "Nizami Chicken Dum Biryani",
+      "title": "Extra One Chicken Piece",
+      "description": "Extra chicken Piece",
+      "image": "client/src/assets/raw/Tandoori Chicken.png",
+      "price": 60,
+      "available": true
+    },
     "_oldCategory": "Main Course"
   },
   {
@@ -829,7 +839,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "fish-biryani",
+      "id": "fish-biryani-raw",
       "category": "Main Course",
       "subcategory": "Seafood Biryani",
       "title": "Fish Biryani",
@@ -853,7 +863,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-biryani",
+      "id": "paneer-biryani-raw",
       "category": "Main Course",
       "subcategory": "Veg Biryani",
       "title": "Paneer Biryani",
@@ -877,7 +887,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-mandi-full",
+      "id": "paneer-mandi-full-raw",
       "category": "Main Course",
       "subcategory": "Veg Biryani",
       "title": "Paneer Mandi (Full)",
@@ -900,7 +910,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-mandi-half",
+      "id": "paneer-mandi-half-raw",
       "category": "Main Course",
       "subcategory": "Veg Biryani",
       "title": "Paneer Mandi (Half)",
@@ -923,7 +933,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-mandi-mini",
+      "id": "paneer-mandi-mini-raw",
       "category": "Main Course",
       "subcategory": "Veg Biryani",
       "title": "Paneer Mandi (Mini)",
@@ -946,7 +956,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "prawns-biryani",
+      "id": "prawns-biryani-raw",
       "category": "Main Course",
       "subcategory": "Seafood Biryani",
       "title": "Prawns Biryani",
@@ -970,7 +980,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-baby-corn-manchuria",
+      "id": "veg-baby-corn-manchuria-raw",
       "category": "Starters",
       "title": "Baby Corn Manchuria",
       "description": "Baby corn tossed in manchurian sauce",
@@ -994,7 +1004,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-baby-corn-pepper-salt",
+      "id": "veg-baby-corn-pepper-salt-raw",
       "category": "Starters",
       "title": "Baby Corn Pepper Salt",
       "description": "Baby corn with pepper salt",
@@ -1018,7 +1028,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-fried-rice",
+      "id": "chicken-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Chicken Fried Rice",
@@ -1040,7 +1050,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-noodles",
+      "id": "chicken-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Chicken Noodles",
@@ -1062,7 +1072,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-chili-gobi",
+      "id": "veg-chili-gobi-raw",
       "category": "Starters",
       "title": "Chilli Gobi",
       "description": "Cauliflower tossed in chili sauce",
@@ -1086,7 +1096,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "egg-fried-rice",
+      "id": "egg-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Egg Fried Rice",
@@ -1108,7 +1118,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "egg-noodles",
+      "id": "egg-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Egg Noodles",
@@ -1130,7 +1140,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-gobi-65",
+      "id": "veg-gobi-65-raw",
       "category": "Starters",
       "title": "Gobi 65",
       "description": "Crispy cauliflower 65",
@@ -1154,7 +1164,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-gobi-manchuria-dry",
+      "id": "veg-gobi-manchuria-dry-raw",
       "category": "Starters",
       "title": "Gobi Manchuria Dry",
       "description": "Dry manchurian gobi",
@@ -1178,7 +1188,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kaju-fried-rice",
+      "id": "kaju-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Kaju Fried Rice",
@@ -1199,7 +1209,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kaju-noodles",
+      "id": "kaju-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Kaju Noodles",
@@ -1220,7 +1230,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "manchuria-fried-rice",
+      "id": "manchuria-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Manchuria Fried Rice",
@@ -1241,7 +1251,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "manchuria-noodles",
+      "id": "manchuria-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Manchuria Noodles",
@@ -1262,7 +1272,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-fried-rice",
+      "id": "paneer-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Paneer Fried Rice",
@@ -1284,7 +1294,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-noodles",
+      "id": "paneer-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Paneer Noodles",
@@ -1305,7 +1315,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-schezwan-chicken",
+      "id": "nonveg-schezwan-chicken-raw",
       "category": "Starters",
       "title": "Schezwan Chicken",
       "description": "Spicy Schezwan style chicken",
@@ -1329,7 +1339,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-fried-rice",
+      "id": "veg-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Veg Fried Rice",
@@ -1351,7 +1361,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-manchuria-fried-rice",
+      "id": "veg-manchuria-fried-rice-raw",
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Veg Manchuria Fried Rice",
@@ -1372,7 +1382,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-noodles",
+      "id": "veg-noodles-raw",
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Veg Noodles",
@@ -1393,7 +1403,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "coconut-chutney",
+      "id": "coconut-chutney-raw",
       "category": "Chutneys",
       "title": "Coconut Chutney",
       "image": null,
@@ -1413,7 +1423,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ginger-chutney",
+      "id": "ginger-chutney-raw",
       "category": "Chutneys",
       "title": "Ginger Chutney",
       "image": null,
@@ -1433,7 +1443,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rasam-chutney",
+      "id": "rasam-chutney-raw",
       "category": "Chutneys",
       "title": "Rasam / Sambar (if used)",
       "image": null,
@@ -1453,7 +1463,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "sambar-chutney",
+      "id": "sambar-chutney-raw",
       "category": "Chutneys",
       "title": "Sambar Chutney",
       "image": null,
@@ -1473,7 +1483,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "aloo-tikki-burger",
+      "id": "aloo-tikki-burger-raw",
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Aloo Tikki Burger",
@@ -1494,7 +1504,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "bbq-paneer-pizza",
+      "id": "bbq-paneer-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "BBQ Paneer Pizza",
@@ -1516,7 +1526,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "bbq-paneer-sandwich",
+      "id": "bbq-paneer-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "BBQ Paneer Sandwich",
@@ -1537,7 +1547,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "cheese-masala-sandwich",
+      "id": "cheese-masala-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Cheese Masala Sandwich",
@@ -1558,7 +1568,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-cheese-burger",
+      "id": "chicken-cheese-burger-raw",
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Chicken Cheese Burger",
@@ -1580,7 +1590,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-club-sandwich",
+      "id": "chicken-club-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Chicken Club Sandwich",
@@ -1601,7 +1611,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-pizza",
+      "id": "chicken-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Chicken Pizza",
@@ -1623,7 +1633,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "corn-sandwich",
+      "id": "corn-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Corn Sandwich",
@@ -1644,7 +1654,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "crazy-cheese-burger",
+      "id": "crazy-cheese-burger-raw",
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Crazy Cheese Burger",
@@ -1665,7 +1675,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "grilled-paneer-sandwich",
+      "id": "grilled-paneer-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Grilled Paneer Sandwich",
@@ -1687,7 +1697,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "grilled-wedge-sandwich",
+      "id": "grilled-wedge-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Grilled Wedge Sandwich",
@@ -1708,7 +1718,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "margherita-pizza",
+      "id": "margherita-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Margherita Pizza",
@@ -1730,7 +1740,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mix-wedge-grilled-sandwich",
+      "id": "mix-wedge-grilled-sandwich-raw",
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Mix Wedge Grilled Sandwich",
@@ -1751,7 +1761,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-cheese-burger",
+      "id": "paneer-cheese-burger-raw",
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Paneer Cheese Burger",
@@ -1773,7 +1783,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-pizza",
+      "id": "paneer-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Paneer Pizza",
@@ -1795,7 +1805,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "spot-wedge-burger",
+      "id": "spot-wedge-burger-raw",
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Spot Wedge Burger",
@@ -1816,7 +1826,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "sweet-corn-pizza",
+      "id": "sweet-corn-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Sweet Corn Pizza",
@@ -1837,7 +1847,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "wedge-delight-pizza",
+      "id": "wedge-delight-pizza-raw",
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Wedge Delight Pizza",
@@ -1858,7 +1868,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-achari-chicken-tikka-full",
+      "id": "tandoori-achari-chicken-tikka-full-raw",
       "category": "Starters",
       "title": "Achari Chicken Tikka (Full)",
       "description": "Pickle-spiced chicken tikka (full)",
@@ -1882,7 +1892,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-achari-chicken-tikka-half",
+      "id": "tandoori-achari-chicken-tikka-half-raw",
       "category": "Starters",
       "title": "Achari Chicken Tikka (Half)",
       "description": "Pickle-spiced chicken tikka (half)",
@@ -1906,7 +1916,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "banjara-kebab-boneless",
+      "id": "banjara-kebab-boneless-raw",
       "category": "Kebabs & Grills",
       "title": "Banjara Kebab (Boneless)",
       "image": null,
@@ -1926,7 +1936,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-ch-ch-kebab-full",
+      "id": "tandoori-ch-ch-kebab-full-raw",
       "category": "Starters",
       "title": "Chicken CH Kebab (Full)",
       "description": "Classic chicken kebab (full)",
@@ -1950,7 +1960,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-ch-ch-kebab-half",
+      "id": "tandoori-ch-ch-kebab-half-raw",
       "category": "Starters",
       "title": "Chicken CH Kebab (Half)",
       "description": "Classic chicken kebab (half)",
@@ -1974,7 +1984,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-tikka-boneless-6pc",
+      "id": "chicken-tikka-boneless-6pc-raw",
       "category": "Kebabs & Grills",
       "title": "Chicken Tikka (Boneless) - 6pc",
       "description": "Boneless chicken tikka",
@@ -1995,7 +2005,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-chicken-tikka-full",
+      "id": "tandoori-chicken-tikka-full-raw",
       "category": "Starters",
       "title": "Chicken Tikka (Full)",
       "description": "Charcoal-grilled chicken chunks (full)",
@@ -2019,7 +2029,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-chicken-tikka-half",
+      "id": "tandoori-chicken-tikka-half-raw",
       "category": "Starters",
       "title": "Chicken Tikka (Half)",
       "description": "Charcoal-grilled chicken chunks (half)",
@@ -2043,7 +2053,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-grilled-chicken-full",
+      "id": "tandoori-grilled-chicken-full-raw",
       "category": "Starters",
       "title": "Grilled Chicken (Full)",
       "description": "Char-grilled chicken (full)",
@@ -2067,7 +2077,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-grilled-chicken-half",
+      "id": "tandoori-grilled-chicken-half-raw",
       "category": "Starters",
       "title": "Grilled Chicken (Half)",
       "description": "Char-grilled chicken (half)",
@@ -2091,7 +2101,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "hariyali-boneless",
+      "id": "hariyali-boneless-raw",
       "category": "Kebabs & Grills",
       "title": "Hariyali (Boneless)",
       "image": null,
@@ -2111,7 +2121,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-hariyali-kebab-full",
+      "id": "tandoori-hariyali-kebab-full-raw",
       "category": "Starters",
       "title": "Hariyali Kebab (Full)",
       "description": "Green-marinated kebabs (full)",
@@ -2135,7 +2145,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-hariyali-kebab-half",
+      "id": "tandoori-hariyali-kebab-half-raw",
       "category": "Starters",
       "title": "Hariyali Kebab (Half)",
       "description": "Green-marinated kebabs (half)",
@@ -2159,7 +2169,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-malai-kebab-full",
+      "id": "tandoori-malai-kebab-full-raw",
       "category": "Starters",
       "title": "Malai Kebab (Full)",
       "description": "Creamy malai kebab (full)",
@@ -2183,7 +2193,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-malai-kebab-half",
+      "id": "tandoori-malai-kebab-half-raw",
       "category": "Starters",
       "title": "Malai Kebab (Half)",
       "description": "Creamy malai kebab (half)",
@@ -2207,7 +2217,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-murukh-musallam-full",
+      "id": "tandoori-murukh-musallam-full-raw",
       "category": "Starters",
       "title": "Murukh Musallam (Full)",
       "description": "Royal-style marinated chicken (full)",
@@ -2231,7 +2241,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-murukh-musallam-half",
+      "id": "tandoori-murukh-musallam-half-raw",
       "category": "Starters",
       "title": "Murukh Musallam (Half)",
       "description": "Royal-style marinated chicken (half)",
@@ -2255,7 +2265,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "reshmi-kebab",
+      "id": "reshmi-kebab-raw",
       "category": "Kebabs & Grills",
       "title": "Reshmi Kebab",
       "image": "client/src/assets/raw/Reshmi Kebab.png",
@@ -2276,7 +2286,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-reshmi-kebab-full",
+      "id": "tandoori-reshmi-kebab-full-raw",
       "category": "Starters",
       "title": "Reshmi Kebab (Full)",
       "description": "Silky melt-in-mouth reshmi kebab (full)",
@@ -2300,7 +2310,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-reshmi-kebab-half",
+      "id": "tandoori-reshmi-kebab-half-raw",
       "category": "Starters",
       "title": "Reshmi Kebab (Half)",
       "description": "Silky melt-in-mouth reshmi kebab (half)",
@@ -2324,7 +2334,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-tandoori-chicken-full",
+      "id": "tandoori-tandoori-chicken-full-raw",
       "category": "Starters",
       "title": "Tandoori Chicken (Full)",
       "description": "Marinated chicken cooked in tandoor (full)",
@@ -2348,7 +2358,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-tandoori-chicken-half",
+      "id": "tandoori-tandoori-chicken-half-raw",
       "category": "Starters",
       "title": "Tandoori Chicken (Half)",
       "description": "Marinated chicken cooked in tandoor (half)",
@@ -2372,7 +2382,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-tangdi-kebab-full",
+      "id": "tandoori-tangdi-kebab-full-raw",
       "category": "Starters",
       "title": "Tangdi Kebab (Full)",
       "description": "Spiced chicken drumsticks (full)",
@@ -2396,7 +2406,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-tangdi-kebab-half",
+      "id": "tandoori-tangdi-kebab-half-raw",
       "category": "Starters",
       "title": "Tangdi Kebab (Half)",
       "description": "Spiced chicken drumsticks (half)",
@@ -2420,7 +2430,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "butter-chicken",
+      "id": "butter-chicken-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Butter Chicken",
@@ -2443,7 +2453,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chana-masala",
+      "id": "chana-masala-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Chana Masala",
@@ -2465,7 +2475,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-chettinad",
+      "id": "chicken-chettinad-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Chettinad",
@@ -2487,7 +2497,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-kolhapuri",
+      "id": "chicken-kolhapuri-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Kolhapuri",
@@ -2509,7 +2519,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-masala",
+      "id": "chicken-masala-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Masala",
@@ -2531,7 +2541,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-pepper-fry",
+      "id": "chicken-pepper-fry-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Pepper Fry",
@@ -2553,7 +2563,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "chicken-tikka-masala",
+      "id": "chicken-tikka-masala-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Tikka Masala",
@@ -2576,7 +2586,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-chili-mushroom-dry",
+      "id": "veg-chili-mushroom-dry-raw",
       "category": "Starters",
       "title": "Chilli Mushroom Dry",
       "description": "Chili tossed mushrooms",
@@ -2600,7 +2610,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "dal-fried",
+      "id": "dal-fried-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Dal Fry",
@@ -2622,7 +2632,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "dal-tadka",
+      "id": "dal-tadka-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Dal Tadka",
@@ -2644,7 +2654,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "dum-chicken",
+      "id": "dum-chicken-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Dum Chicken",
@@ -2666,7 +2676,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "green-peas-masala",
+      "id": "green-peas-masala-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Green Peas Masala",
@@ -2688,7 +2698,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kadai-chicken",
+      "id": "kadai-chicken-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Kadai Chicken",
@@ -2710,7 +2720,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kadai-paneer",
+      "id": "kadai-paneer-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Kadai Paneer",
@@ -2733,7 +2743,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kaju-paneer",
+      "id": "kaju-paneer-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Kaju Paneer",
@@ -2755,7 +2765,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kaju-paneer-masala",
+      "id": "kaju-paneer-masala-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Kaju Paneer Masala",
@@ -2777,7 +2787,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kaju-tomato",
+      "id": "kaju-tomato-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Kaju Tomato",
@@ -2799,7 +2809,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "malabar-chicken-curry",
+      "id": "malabar-chicken-curry-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Malabar Chicken Curry",
@@ -2821,7 +2831,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "malai-kofta",
+      "id": "malai-kofta-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Malai Kofta",
@@ -2843,7 +2853,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mixed-veg-curry",
+      "id": "mixed-veg-curry-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Mixed Veg Curry",
@@ -2865,7 +2875,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "miyabhai-special-curry",
+      "id": "miyabhai-special-curry-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Miyabhai Special Curry",
@@ -2887,7 +2897,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-miyabhai-special-curry-full",
+      "id": "tandoori-miyabhai-special-curry-full-raw",
       "category": "Starters",
       "title": "Miyabhai Special Curry (Full)",
       "description": "House special curry (full)",
@@ -2911,7 +2921,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tandoori-miyabhai-special-curry-half",
+      "id": "tandoori-miyabhai-special-curry-half-raw",
       "category": "Starters",
       "title": "Miyabhai Special Curry (Half)",
       "description": "House special curry (half)",
@@ -2935,7 +2945,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "murgh-musallam",
+      "id": "murgh-musallam-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Murgh Musallam",
@@ -2957,7 +2967,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mushroom-masala",
+      "id": "mushroom-masala-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Mushroom Masala",
@@ -2979,7 +2989,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-mushroom-masala-dry",
+      "id": "veg-mushroom-masala-dry-raw",
       "category": "Starters",
       "title": "Mushroom Masala Dry",
       "description": "Spicy mushroom masala dry",
@@ -3003,7 +3013,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-butter-masala",
+      "id": "paneer-butter-masala-raw",
       "category": "Main Course",
       "subcategory": "Veg Curries",
       "title": "Paneer Butter Masala",
@@ -3026,7 +3036,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-paneer-masala-dry",
+      "id": "veg-paneer-masala-dry-raw",
       "category": "Starters",
       "title": "Paneer Masala Dry",
       "description": "Dry paneer starter in masala seasoning",
@@ -3050,7 +3060,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "punjabi-chicken",
+      "id": "punjabi-chicken-raw",
       "category": "Main Course",
       "subcategory": "Non-Veg Curries",
       "title": "Punjabi Chicken",
@@ -3072,7 +3082,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "achi-pulusu",
+      "id": "achi-pulusu-raw",
       "category": "Meals",
       "title": "Achi Pulusu (Meal Item)",
       "image": null,
@@ -3092,7 +3102,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ankapur-naatu-kodi-pulusu",
+      "id": "ankapur-naatu-kodi-pulusu-raw",
       "category": "Meals",
       "title": "Ankapur Naatu Kodi Pulusu",
       "image": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png",
@@ -3113,7 +3123,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "bagara-rice-with-naatu-kodi",
+      "id": "bagara-rice-with-naatu-kodi-raw",
       "category": "Meals",
       "title": "Bagara Rice with Naatu Kodi",
       "image": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png",
@@ -3134,7 +3144,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "bagara-rice-with-talakayi-curry",
+      "id": "bagara-rice-with-talakayi-curry-raw",
       "category": "Meals",
       "title": "Bagara Rice with Talakai Curry",
       "image": "client/src/assets/raw/Bagara Rice with Talakai Curry.png",
@@ -3155,7 +3165,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "curd",
+      "id": "curd-raw",
       "category": "Meals",
       "title": "Curd (Meal Item)",
       "image": null,
@@ -3175,7 +3185,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "dal",
+      "id": "dal-raw",
       "category": "Meals",
       "title": "Dal (Meal Item)",
       "image": null,
@@ -3195,7 +3205,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "dum-fry",
+      "id": "dum-fry-raw",
       "category": "Meals",
       "title": "Dum Fry (Meal Item)",
       "image": null,
@@ -3215,7 +3225,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "egg-burji-with-puri",
+      "id": "egg-burji-with-puri-raw",
       "category": "Meals",
       "title": "Egg Burji with Puri",
       "image": null,
@@ -3235,7 +3245,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "gutti-vankaya-curry-bagara-rice",
+      "id": "gutti-vankaya-curry-bagara-rice-raw",
       "category": "Meals",
       "title": "Gutti Vankaya Curry with Bagara Rice",
       "image": null,
@@ -3255,7 +3265,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "military-mutton",
+      "id": "military-mutton-raw",
       "category": "Meals",
       "title": "Military Mutton",
       "image": null,
@@ -3275,7 +3285,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mutton-dalja-with-bagara-rice",
+      "id": "mutton-dalja-with-bagara-rice-raw",
       "category": "Meals",
       "title": "Mutton Dalja with Bagara Rice",
       "image": null,
@@ -3295,7 +3305,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nallamala-naatu-kodi-pulusu",
+      "id": "nallamala-naatu-kodi-pulusu-raw",
       "category": "Meals",
       "title": "Nallamala Naatu Kodi Pulusu",
       "image": null,
@@ -3315,7 +3325,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nellore-chutney",
+      "id": "nellore-chutney-raw",
       "category": "Meals",
       "title": "Nellore Chutney (Meal Item)",
       "image": null,
@@ -3335,7 +3345,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nellore-vari-chepala-pulusu",
+      "id": "nellore-vari-chepala-pulusu-raw",
       "category": "Meals",
       "title": "Nellore Vari Chepala Pulusu",
       "image": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png",
@@ -3356,7 +3366,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "oil-fry",
+      "id": "oil-fry-raw",
       "category": "Meals",
       "title": "Oil Fry (Meal Item)",
       "image": null,
@@ -3376,7 +3386,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "papad",
+      "id": "papad-raw",
       "category": "Meals",
       "title": "Papad (Meal Item)",
       "image": null,
@@ -3396,7 +3406,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rasam",
+      "id": "rasam-raw",
       "category": "Meals",
       "title": "Rasam (Meal Item)",
       "image": null,
@@ -3416,7 +3426,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "meal-1-rice-to-sweet",
+      "id": "meal-1-rice-to-sweet-raw",
       "category": "Meals",
       "title": "Rice to Sweet (Meal Item)",
       "image": null,
@@ -3436,7 +3446,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rice-tomato-with-egg-curry",
+      "id": "rice-tomato-with-egg-curry-raw",
       "category": "Meals",
       "title": "Rice Tomato with Egg Curry",
       "image": null,
@@ -3456,7 +3466,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rice-with-egg-curry-sambar",
+      "id": "rice-with-egg-curry-sambar-raw",
       "category": "Meals",
       "title": "Rice with Egg Curry + Sambar",
       "image": "client/src/assets/raw/Rice with Egg Curry + Sambar.png",
@@ -3477,7 +3487,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rice-with-naatu-kodi-pulusu",
+      "id": "rice-with-naatu-kodi-pulusu-raw",
       "category": "Meals",
       "title": "Rice with Naatu Kodi Pulusu",
       "image": null,
@@ -3497,7 +3507,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "roti-chutney",
+      "id": "roti-chutney-raw",
       "category": "Meals",
       "title": "Roti Chutney (Meal Item)",
       "image": null,
@@ -3517,7 +3527,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "sambar",
+      "id": "sambar-raw",
       "category": "Meals",
       "title": "Sambar (Meal Item)",
       "image": null,
@@ -3538,7 +3548,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-curries-meal",
+      "id": "veg-curries-meal-raw",
       "category": "Meals",
       "title": "Veg Curries (Meal Item)",
       "image": null,
@@ -3558,7 +3568,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "miyabhai-special-shawarma",
+      "id": "miyabhai-special-shawarma-raw",
       "category": "Shawarma",
       "title": "Miyabhai Special Shawarma",
       "image": null,
@@ -3578,7 +3588,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-shawarma",
+      "id": "paneer-shawarma-raw",
       "category": "Shawarma",
       "title": "Paneer Shawarma",
       "image": "client/src/assets/raw/Paneer Shawarma.png",
@@ -3599,7 +3609,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "regular-chicken-shawarma",
+      "id": "regular-chicken-shawarma-raw",
       "category": "Shawarma",
       "title": "Regular Chicken Shawarma",
       "image": "client/src/assets/raw/Chicken Shawarma.png",
@@ -3619,7 +3629,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "special-chicken-shawarma",
+      "id": "special-chicken-shawarma-raw",
       "category": "Shawarma",
       "title": "Special Chicken Shawarma",
       "image": "client/src/assets/raw/Chicken Shawarma.png",
@@ -3639,7 +3649,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-shawarma",
+      "id": "veg-shawarma-raw",
       "category": "Shawarma",
       "title": "Veg Shawarma",
       "image": null,
@@ -3659,7 +3669,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-aloo-parota",
+      "id": "rotis-aloo-parota-raw",
       "category": "Starters",
       "title": "Aloo Parota",
       "description": "Flaky parota stuffed with spiced potato",
@@ -3682,7 +3692,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-apollo-fish",
+      "id": "seafood-apollo-fish-raw",
       "category": "Starters",
       "title": "Apollo Fish",
       "description": "Crispy Apollo style fish",
@@ -3706,7 +3716,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-blackbean-chicken",
+      "id": "nonveg-blackbean-chicken-raw",
       "category": "Starters",
       "title": "Black Bean Chicken",
       "description": "Chicken in black bean sauce",
@@ -3730,7 +3740,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-butter-naan",
+      "id": "rotis-butter-naan-raw",
       "category": "Starters",
       "title": "Butter Naan",
       "description": "Soft naan brushed with butter",
@@ -3753,7 +3763,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-butter-roti",
+      "id": "rotis-butter-roti-raw",
       "category": "Starters",
       "title": "Butter Roti",
       "description": "Roti served with butter",
@@ -3776,7 +3786,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-65",
+      "id": "nonveg-chicken-65-raw",
       "category": "Starters",
       "title": "Chicken 65",
       "description": "Crispy fried chicken starter",
@@ -3801,7 +3811,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-hongkong",
+      "id": "nonveg-chicken-hongkong-raw",
       "category": "Starters",
       "title": "Chicken Hong Kong",
       "description": "Hong Kong style chicken",
@@ -3825,7 +3835,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-lollipop",
+      "id": "nonveg-chicken-lollipop-raw",
       "category": "Starters",
       "title": "Chicken Lollipop",
       "description": "Classic Indo-Chinese lollipops",
@@ -3850,7 +3860,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-majestic",
+      "id": "nonveg-chicken-majestic-raw",
       "category": "Starters",
       "title": "Chicken Majestic",
       "description": "Spicy shredded chicken special",
@@ -3874,7 +3884,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-pepper-salt",
+      "id": "nonveg-chicken-pepper-salt-raw",
       "category": "Starters",
       "title": "Chicken Pepper Salt",
       "description": "Chicken tossed in pepper salt",
@@ -3898,7 +3908,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-chicken-spring-roll",
+      "id": "seafood-chicken-spring-roll-raw",
       "category": "Starters",
       "title": "Chicken Spring Roll",
       "description": "Crispy chicken spring rolls",
@@ -3921,7 +3931,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chicken-wings",
+      "id": "nonveg-chicken-wings-raw",
       "category": "Starters",
       "title": "Chicken Wings",
       "description": "Crispy spiced chicken wings",
@@ -3946,7 +3956,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-chili-baby-corn-dry",
+      "id": "veg-chili-baby-corn-dry-raw",
       "category": "Starters",
       "title": "Chilli Baby Corn Dry",
       "description": "Spicy dry chili baby corn",
@@ -3970,7 +3980,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chili-chicken",
+      "id": "nonveg-chili-chicken-raw",
       "category": "Starters",
       "title": "Chilli Chicken",
       "description": "Spicy Indo-Chinese chili chicken",
@@ -3994,7 +4004,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-chili-fish",
+      "id": "seafood-chili-fish-raw",
       "category": "Starters",
       "title": "Chilli Fish",
       "description": "Fish in chili sauce",
@@ -4017,7 +4027,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-chili-manchuria",
+      "id": "nonveg-chili-manchuria-raw",
       "category": "Starters",
       "title": "Chilli Manchuria",
       "description": "Chicken in manchurian style",
@@ -4041,7 +4051,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-chili-paneer",
+      "id": "veg-chili-paneer-raw",
       "category": "Starters",
       "title": "Chilli Paneer",
       "description": "Classic Indo-Chinese chili paneer",
@@ -4065,7 +4075,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-chili-prawns",
+      "id": "seafood-chili-prawns-raw",
       "category": "Starters",
       "title": "Chilli Prawns",
       "description": "Prawns in chili sauce",
@@ -4088,7 +4098,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-dragon-chicken",
+      "id": "nonveg-dragon-chicken-raw",
       "category": "Starters",
       "title": "Dragon Chicken",
       "description": "Spicy dragon-style chicken",
@@ -4112,7 +4122,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-fish-65",
+      "id": "seafood-fish-65-raw",
       "category": "Starters",
       "title": "Fish 65",
       "description": "Crispy fried fish starter",
@@ -4135,7 +4145,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-fish-dry",
+      "id": "seafood-fish-dry-raw",
       "category": "Starters",
       "title": "Fish Dry",
       "description": "Dry fried fish masala",
@@ -4158,7 +4168,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-fish-roast",
+      "id": "seafood-fish-roast-raw",
       "category": "Starters",
       "title": "Fish Roast",
       "description": "Roasted fish masala",
@@ -4181,7 +4191,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-garlic-chicken",
+      "id": "nonveg-garlic-chicken-raw",
       "category": "Starters",
       "title": "Garlic Chicken",
       "description": "Chicken in garlic sauce",
@@ -4205,7 +4215,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-garlic-naan",
+      "id": "rotis-garlic-naan-raw",
       "category": "Starters",
       "title": "Garlic Naan",
       "description": "Naan topped with garlic and butter",
@@ -4228,7 +4238,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-kungfu-chicken",
+      "id": "nonveg-kungfu-chicken-raw",
       "category": "Starters",
       "title": "Kung Fu Chicken",
       "description": "Kung Fu style chicken",
@@ -4252,7 +4262,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-lemon-chicken",
+      "id": "nonveg-lemon-chicken-raw",
       "category": "Starters",
       "title": "Lemon Chicken",
       "description": "Tangy lemon flavored chicken",
@@ -4276,7 +4286,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-loose-prawns",
+      "id": "seafood-loose-prawns-raw",
       "category": "Starters",
       "title": "Loose Prawns",
       "description": "Crispy loose prawns",
@@ -4299,7 +4309,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-masala-kulcha",
+      "id": "rotis-masala-kulcha-raw",
       "category": "Starters",
       "title": "Masala Kulcha",
       "description": "Kulcha stuffed with spiced potato & masala",
@@ -4323,7 +4333,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-palan-roti",
+      "id": "rotis-palan-roti-raw",
       "category": "Starters",
       "title": "Palan Roti",
       "description": "Soft palan-style roti",
@@ -4346,7 +4356,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "veg-paneer-65",
+      "id": "veg-paneer-65-raw",
       "category": "Starters",
       "title": "Paneer 65",
       "description": "Crispy spiced paneer starter",
@@ -4371,7 +4381,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-paneer-kulcha",
+      "id": "rotis-paneer-kulcha-raw",
       "category": "Starters",
       "title": "Paneer Kulcha",
       "description": "Stuffed kulcha with spiced paneer",
@@ -4395,7 +4405,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-plain-naan",
+      "id": "rotis-plain-naan-raw",
       "category": "Starters",
       "title": "Plain Naan",
       "description": "Classic plain naan",
@@ -4418,7 +4428,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "nonveg-plum-chicken",
+      "id": "nonveg-plum-chicken-raw",
       "category": "Starters",
       "title": "Plum Chicken",
       "description": "Chicken in plum sauce",
@@ -4442,7 +4452,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rotis-podina-parota",
+      "id": "rotis-podina-parota-raw",
       "category": "Starters",
       "title": "Podina Parota",
       "description": "Parota infused with fresh mint",
@@ -4465,7 +4475,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "seafood-prawns-manchuria",
+      "id": "seafood-prawns-manchuria-raw",
       "category": "Starters",
       "title": "Prawns Manchuria",
       "description": "Manchurian-style prawns",
@@ -4476,29 +4486,6 @@
       "available": true
     },
     "resolvedImage": "client/src/assets/raw/Prawns Manchuria.png"
-  },
-  {
-    "id": "nonveg-vastar-chili-chicken",
-    "title": "Chilli Chicken",
-    "category": "Starters",
-    "subcategory": null,
-    "description": "Chef’s fiery chili chicken",
-    "image": "client/src/assets/raw/Chilli Chicken.png",
-    "price": 555,
-    "prices": null,
-    "variants": null,
-    "available": true,
-    "raw": {
-      "id": "nonveg-vastar-chili-chicken",
-      "category": "Starters",
-      "title": "Chilli Chicken",
-      "description": "Chef’s fiery chili chicken",
-      "price": 555,
-      "image": "client/src/assets/raw/Chilli Chicken.png",
-      "isSignature": false,
-      "isBestSeller": false,
-      "available": true
-    }
   },
   {
     "id": "butter-dosa",
@@ -4512,7 +4499,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "butter-dosa",
+      "id": "butter-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Butter Dosa",
@@ -4533,7 +4520,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "carrot-idli",
+      "id": "carrot-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Carrot Idli",
@@ -4554,7 +4541,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "egg-dosa",
+      "id": "egg-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Egg Dosa",
@@ -4575,7 +4562,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ghee-dosa",
+      "id": "ghee-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ghee Dosa",
@@ -4596,7 +4583,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ghee-karani-dosa",
+      "id": "ghee-karani-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ghee Karani Dosa",
@@ -4617,7 +4604,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ghee-kerala-idli",
+      "id": "ghee-kerala-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ghee Kerala Idli",
@@ -4638,7 +4625,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ghee-masala-dosa",
+      "id": "ghee-masala-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ghee Masala Dosa",
@@ -4659,7 +4646,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "idli",
+      "id": "idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Idli",
@@ -4681,7 +4668,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "idli-with-ghee",
+      "id": "idli-with-ghee-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Idli with Ghee",
@@ -4702,7 +4689,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "kanchipuram-idli",
+      "id": "kanchipuram-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Kanchipuram Idli",
@@ -4723,7 +4710,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "masala-dosa",
+      "id": "masala-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Dosa",
@@ -4745,7 +4732,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "masala-pesara-dosa",
+      "id": "masala-pesara-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Pesara Dosa",
@@ -4766,7 +4753,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "masala-puri-curry",
+      "id": "masala-puri-curry-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Puri Curry",
@@ -4787,7 +4774,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "masala-rava-dosa",
+      "id": "masala-rava-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Rava Dosa",
@@ -4808,7 +4795,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "masala-uttappam",
+      "id": "masala-uttappam-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Uttappam",
@@ -4829,7 +4816,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mla-prasad-dosa",
+      "id": "mla-prasad-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "MLA Prasad Dosa",
@@ -4850,7 +4837,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mutton-kheema-dosa",
+      "id": "mutton-kheema-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Mutton Kheema Dosa",
@@ -4871,7 +4858,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mysore-bajji",
+      "id": "mysore-bajji-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Mysore Bajji",
@@ -4892,7 +4879,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "onion-dosa",
+      "id": "onion-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Onion Dosa",
@@ -4914,7 +4901,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "onion-pesara-dosa",
+      "id": "onion-pesara-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Onion Pesara Dosa",
@@ -4935,7 +4922,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "palak-idli",
+      "id": "palak-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Palak Idli",
@@ -4956,7 +4943,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "palak-puri",
+      "id": "palak-puri-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Palak Puri",
@@ -4977,7 +4964,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-butter-dosa",
+      "id": "paneer-butter-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Paneer Butter Dosa",
@@ -4998,7 +4985,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "paneer-dosa",
+      "id": "paneer-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Paneer Dosa",
@@ -5019,7 +5006,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "pesara-dosa",
+      "id": "pesara-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Pesara Dosa",
@@ -5040,7 +5027,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "pizza-dosa",
+      "id": "pizza-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Pizza Dosa",
@@ -5061,7 +5048,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "plain-dosa",
+      "id": "plain-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Plain Dosa",
@@ -5082,7 +5069,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "pudina-idli",
+      "id": "pudina-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Pudina Idli",
@@ -5103,7 +5090,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "puri",
+      "id": "puri-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Puri",
@@ -5124,7 +5111,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "puri-curry",
+      "id": "puri-curry-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Puri Curry",
@@ -5145,7 +5132,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "puri-with-chicken-curry",
+      "id": "puri-with-chicken-curry-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Puri with Chicken Curry",
@@ -5166,7 +5153,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "puri-with-egg-burji",
+      "id": "puri-with-egg-burji-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Puri with Egg Burji",
@@ -5187,7 +5174,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "puri-with-mutton-kheema",
+      "id": "puri-with-mutton-kheema-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Puri with Mutton Kheema",
@@ -5208,7 +5195,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ragi-dosa",
+      "id": "ragi-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ragi Dosa",
@@ -5229,7 +5216,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ragi-idli",
+      "id": "ragi-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ragi Idli",
@@ -5250,7 +5237,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "ragi-masala-dosa",
+      "id": "ragi-masala-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Ragi Masala Dosa",
@@ -5271,7 +5258,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "rava-dosa",
+      "id": "rava-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Rava Dosa",
@@ -5293,7 +5280,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "sawadeen-idli",
+      "id": "sawadeen-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Sawadeen Idli",
@@ -5314,7 +5301,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "set-dosa",
+      "id": "set-dosa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Set Dosa",
@@ -5335,7 +5322,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tawa-idli",
+      "id": "tawa-idli-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Tawa Idli",
@@ -5356,7 +5343,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tawa-mysore-bajji",
+      "id": "tawa-mysore-bajji-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Tawa Mysore Bajji",
@@ -5377,7 +5364,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "tawa-vada",
+      "id": "tawa-vada-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Tawa Vada",
@@ -5398,7 +5385,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "uttappa",
+      "id": "uttappa-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Uttappa",
@@ -5419,7 +5406,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "vada",
+      "id": "vada-raw",
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Vada",
@@ -5441,7 +5428,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "4pc",
+      "id": "4pc-raw",
       "label": "4 pcs",
       "price": 360
     }
@@ -5458,7 +5445,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "family",
+      "id": "family-raw",
       "label": "Family Pack",
       "price": 500
     },
@@ -5487,7 +5474,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "full",
+      "id": "full-raw",
       "label": "Full",
       "price": 200
     },
@@ -5521,7 +5508,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "jumbo",
+      "id": "jumbo-raw",
       "label": "Jumbo Pack",
       "price": 800
     }
@@ -5549,7 +5536,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-mini",
+      "id": "mandi-chicken-mini-raw",
       "title": "Chicken Mandi (Mini)",
       "category": "Arabian",
       "subcategory": "Chicken Mandi",
@@ -5574,7 +5561,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-half",
+      "id": "mandi-chicken-half-raw",
       "title": "Chicken Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Chicken Mandi",
@@ -5599,7 +5586,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-3piece",
+      "id": "mandi-chicken-3piece-raw",
       "title": "Chicken Mandi (3-piece)",
       "category": "Arabian",
       "subcategory": "Chicken Mandi",
@@ -5624,7 +5611,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-full",
+      "id": "mandi-chicken-full-raw",
       "title": "Chicken Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Chicken Mandi",
@@ -5649,7 +5636,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-juicy-mini",
+      "id": "mandi-chicken-juicy-mini-raw",
       "title": "Chicken Juicy Mandi (Mini)",
       "category": "Arabian",
       "subcategory": "Chicken Juicy Mandi",
@@ -5674,7 +5661,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-juicy-half",
+      "id": "mandi-chicken-juicy-half-raw",
       "title": "Chicken Juicy Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Chicken Juicy Mandi",
@@ -5699,7 +5686,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-juicy-3piece",
+      "id": "mandi-chicken-juicy-3piece-raw",
       "title": "Chicken Juicy Mandi (3-piece)",
       "category": "Arabian",
       "subcategory": "Chicken Juicy Mandi",
@@ -5724,7 +5711,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-chicken-juicy-full",
+      "id": "mandi-chicken-juicy-full-raw",
       "title": "Chicken Juicy Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Chicken Juicy Mandi",
@@ -5749,7 +5736,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-broasted-mini",
+      "id": "mandi-broasted-mini-raw",
       "title": "Broasted Mandi (Mini)",
       "category": "Arabian",
       "subcategory": "Broasted Mandi",
@@ -5774,7 +5761,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-broasted-half",
+      "id": "mandi-broasted-half-raw",
       "title": "Broasted Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Broasted Mandi",
@@ -5799,7 +5786,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-broasted-3piece",
+      "id": "mandi-broasted-3piece-raw",
       "title": "Broasted Mandi (3-piece)",
       "category": "Arabian",
       "subcategory": "Broasted Mandi",
@@ -5824,7 +5811,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-broasted-full",
+      "id": "mandi-broasted-full-raw",
       "title": "Broasted Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Broasted Mandi",
@@ -5849,7 +5836,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-tandoori-half",
+      "id": "mandi-tandoori-half-raw",
       "title": "Tandoori Chicken Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Tandoori Chicken Mandi",
@@ -5874,7 +5861,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-tandoori-full",
+      "id": "mandi-tandoori-full-raw",
       "title": "Tandoori Chicken Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Tandoori Chicken Mandi",
@@ -5899,7 +5886,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-mini",
+      "id": "mandi-mutton-mini-raw",
       "title": "Nizami Mutton Mandi (Mini)",
       "category": "Arabian",
       "subcategory": "Mutton Mandi",
@@ -5924,7 +5911,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-half",
+      "id": "mandi-mutton-half-raw",
       "title": "Nizami Mutton Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Mutton Mandi",
@@ -5949,7 +5936,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-3piece",
+      "id": "mandi-mutton-3piece-raw",
       "title": "Nizami Mutton Mandi (3-piece)",
       "category": "Arabian",
       "subcategory": "Mutton Mandi",
@@ -5974,7 +5961,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-full",
+      "id": "mandi-mutton-full-raw",
       "title": "Nizami Mutton Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Mutton Mandi",
@@ -5999,7 +5986,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-juice-mini",
+      "id": "mandi-mutton-juice-mini-raw",
       "title": "Juicy Mutton Mandi (Mini)",
       "category": "Arabian",
       "subcategory": "Juicy Mutton Mandi",
@@ -6024,7 +6011,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-juice-half",
+      "id": "mandi-mutton-juice-half-raw",
       "title": "Juicy Mutton Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Juicy Mutton Mandi",
@@ -6049,7 +6036,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-juice-3piece",
+      "id": "mandi-mutton-juice-3piece-raw",
       "title": "Juicy Mutton Mandi (3-piece)",
       "category": "Arabian",
       "subcategory": "Juicy Mutton Mandi",
@@ -6074,7 +6061,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mutton-juice-full",
+      "id": "mandi-mutton-juice-full-raw",
       "title": "Juicy Mutton Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Juicy Mutton Mandi",
@@ -6099,7 +6086,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-special-mutton-half",
+      "id": "mandi-special-mutton-half-raw",
       "title": "Special Mutton Masala Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Special Mutton Masala",
@@ -6124,7 +6111,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-special-mutton-full",
+      "id": "mandi-special-mutton-full-raw",
       "title": "Special Mutton Masala Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Special Mutton Masala",
@@ -6149,7 +6136,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-fish-half",
+      "id": "mandi-fish-half-raw",
       "title": "Fish Mandi (Half)",
       "category": "Arabian",
       "subcategory": "Fish Mandi",
@@ -6174,7 +6161,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-fish-full",
+      "id": "mandi-fish-full-raw",
       "title": "Fish Mandi (Full)",
       "category": "Arabian",
       "subcategory": "Fish Mandi",
@@ -6199,7 +6186,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "mandi-mix-4p",
+      "id": "mandi-mix-4p-raw",
       "title": "Mix Mandi (4 members)",
       "category": "Arabian",
       "subcategory": "Mix Mandi",
@@ -6256,7 +6243,7 @@
     "image": "client/src/assets/raw/Chicken Fry Piece Biryani.png"
   },
   {
-    "id": "extra-biryani-rice-2",
+    "id": "extra-biryani-rice-large",
     "title": "Extra Biryani Rice",
     "category": "Biryani",
     "price": 80,
@@ -6303,7 +6290,7 @@
     "variants": null,
     "available": true,
     "raw": {
-      "id": "curd-rice",
+      "id": "curd-rice-raw",
       "category": "Meals",
       "subcategory": "Veg Meals",
       "title": "Curd Rice",
