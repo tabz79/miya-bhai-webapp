@@ -14,6 +14,7 @@ import canonicalMenu from "@/data/menu.canonical.json";
 // images map produced by uploader -> public_id/url mapping produced earlier
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
+import { sortMenuItems } from "../lib/menu-utils";
 
 /**
  * Home page
@@ -165,7 +166,7 @@ export function Home(): JSX.Element {
       }
     }
 
-    return mapped;
+    return sortMenuItems(mapped);
   }, [menu]);
 
   // HOME: show only image-backed items (per your requirement)

@@ -8,6 +8,7 @@ import { BottomNav } from "../components/BottomNav";
 import canonicalMenu from "@/data/menu.canonical.json";
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
+import { sortMenuItems } from "../lib/menu-utils";
 import { OfferCarousel } from "../components/OfferCarousel";
 import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
 
@@ -125,7 +126,7 @@ export function Menu(): JSX.Element {
   }, [menu]);
 
   const itemsWithResolvedImages = useMemo(() => {
-    return (menu || []).map((it) => {
+    const mapped = (menu || []).map((it) => {
       const found = findImageEntryFor(it);
       let resolved: string | null = null;
 
@@ -147,6 +148,8 @@ export function Menu(): JSX.Element {
 
       return { ...it, resolvedImage: resolved };
     });
+
+    return sortMenuItems(mapped);
   }, [menu]);
 
   const filteredItems = useMemo(() => {
