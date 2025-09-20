@@ -18,7 +18,8 @@
       "price": 60,
       "image": null,
       "tier": 3
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Pineapple Juice.png"
   },
   {
     "id": "juice-avocado",
@@ -404,7 +405,7 @@
     "category": "Beverages",
     "subcategory": "Milkshakes",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/KitKat Milkshake.png",
     "price": 80,
     "prices": null,
     "variants": null,
@@ -415,7 +416,7 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": null,
+      "image": "client/src/assets/raw/KitKat Milkshake.png",
       "tier": 3
     }
   },
@@ -572,7 +573,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Pineapple Juice.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -583,9 +584,10 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
+      "image": "client/src/assets/raw/Pineapple Juice.png",
       "tier": 3
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Pineapple Juice.png"
   },
   {
     "id": "juice-pomegranate",
@@ -593,7 +595,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Pomegranate Juice.png",
     "price": 60,
     "prices": null,
     "variants": null,
@@ -604,9 +606,10 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 60,
-      "image": null,
+      "image": "client/src/assets/raw/Pomegranate Juice.png",
       "tier": 3
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Pomegranate Juice.png"
   },
   {
     "id": "milkshake-strawberry",
@@ -614,7 +617,7 @@
     "category": "Beverages",
     "subcategory": "Milkshakes",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Strawberry Milkshake.png",
     "price": 80,
     "prices": null,
     "variants": null,
@@ -625,9 +628,10 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": null,
+      "image": "client/src/assets/raw/Strawberry Milkshake.png",
       "tier": 3
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Strawberry Milkshake.png"
   },
   {
     "id": "mocktail-sunrise",
@@ -761,7 +765,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Watermelon Juice.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -772,32 +776,10 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
+      "image": "client/src/assets/raw/Watermelon Juice.png",
       "tier": 3
-    }
-  },
-  {
-    "id": "curd-rice",
-    "title": "Curd Rice",
-    "category": "Biryani",
-    "subcategory": "Veg Biryani",
-    "description": "Comforting curd rice",
-    "image": null,
-    "price": 100,
-    "prices": null,
-    "variants": null,
-    "available": true,
-    "raw": {
-      "id": "curd-rice",
-      "category": "Main Course",
-      "subcategory": "Veg Biryani",
-      "title": "Curd Rice",
-      "description": "Comforting curd rice",
-      "image": null,
-      "price": 100,
-      "available": true
     },
-    "_oldCategory": "Main Course"
+    "resolvedImage": "client/src/assets/raw/Watermelon Juice.png"
   },
   {
     "id": "extra-biryani-rice",
@@ -823,23 +805,23 @@
     "_oldCategory": "Main Course"
   },
   {
-    "id": "extra-one-chicken-peas",
-    "title": "Extra One Chicken/Peas",
+    "id": "extra-one-chicken-piece",
+    "title": "Extra One Chicken Piece",
     "category": "Biryani",
     "subcategory": "Nizami Chicken Dum Biryani",
-    "description": "Extra chicken or peas portion",
-    "image": null,
+    "description": "Extra chicken Piece",
+    "image": "client/src/assets/raw/Tandoori Chicken.png",
     "price": 60,
     "prices": null,
     "variants": null,
     "available": true,
     "raw": {
-      "id": "extra-one-chicken-peas",
+      "id": "extra-one-chicken-piece",
       "category": "Main Course",
       "subcategory": "Nizami Chicken Dum Biryani",
-      "title": "Extra One Chicken/Peas",
-      "description": "Extra chicken or peas portion",
-      "image": null,
+      "title": "Extra One Chicken Piece",
+      "description": "Extra chicken piece",
+      "image": "client/src/assets/raw/Tandoori Chicken.png",
       "price": 60,
       "available": true
     },
@@ -851,7 +833,7 @@
     "category": "Biryani",
     "subcategory": "Seafood Biryani",
     "description": "Spiced fish biryani",
-    "image": null,
+    "image": "client/src/assets/raw/Fish Biryani.png",
     "price": 250,
     "prices": null,
     "variants": null,
@@ -862,11 +844,12 @@
       "subcategory": "Seafood Biryani",
       "title": "Fish Biryani",
       "description": "Spiced fish biryani",
-      "image": null,
+      "image": "client/src/assets/raw/Fish Biryani.png",
       "price": 250,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Main Course",
+    "resolvedImage": "client/src/assets/raw/Fish Biryani.png"
   },
   {
     "id": "paneer-biryani",
@@ -874,7 +857,7 @@
     "category": "Biryani",
     "subcategory": "Veg Biryani",
     "description": "Flavorful paneer biryani",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer Biryani.png",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -885,16 +868,17 @@
       "subcategory": "Veg Biryani",
       "title": "Paneer Biryani",
       "description": "Flavorful paneer biryani",
-      "image": null,
+      "image": "client/src/assets/raw/Paneer Biryani.png",
       "price": 200,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Main Course",
+    "resolvedImage": "client/src/assets/raw/Paneer Biryani.png"
   },
   {
     "id": "paneer-mandi-full",
     "title": "Paneer Mandi (Full)",
-    "category": "Biryani",
+    "category": "Arabian",
     "subcategory": "Veg Biryani",
     "description": "Full paneer mandi",
     "image": null,
@@ -912,12 +896,12 @@
       "price": 850,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Biryani"
   },
   {
     "id": "paneer-mandi-half",
     "title": "Paneer Mandi (Half)",
-    "category": "Biryani",
+    "category": "Arabian",
     "subcategory": "Veg Biryani",
     "description": "Half paneer mandi",
     "image": null,
@@ -935,12 +919,12 @@
       "price": 450,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Biryani"
   },
   {
     "id": "paneer-mandi-mini",
     "title": "Paneer Mandi (Mini)",
-    "category": "Biryani",
+    "category": "Arabian",
     "subcategory": "Veg Biryani",
     "description": "Mini paneer mandi",
     "image": null,
@@ -958,7 +942,7 @@
       "price": 230,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Biryani"
   },
   {
     "id": "prawns-biryani",
@@ -966,7 +950,7 @@
     "category": "Biryani",
     "subcategory": "Seafood Biryani",
     "description": "Flavorful prawns biryani",
-    "image": null,
+    "image": "client/src/assets/raw/Prawns Biryani.png",
     "price": 300,
     "prices": null,
     "variants": null,
@@ -977,11 +961,12 @@
       "subcategory": "Seafood Biryani",
       "title": "Prawns Biryani",
       "description": "Flavorful prawns biryani",
-      "image": null,
+      "image": "client/src/assets/raw/Prawns Biryani.png",
       "price": 300,
       "available": true
     },
-    "_oldCategory": "Main Course"
+    "_oldCategory": "Main Course",
+    "resolvedImage": "client/src/assets/raw/Prawns Biryani.png"
   },
   {
     "id": "veg-baby-corn-manchuria",
@@ -1037,7 +1022,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Fried Rice.png",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1047,10 +1032,11 @@
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Chicken Fried Rice",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Fried Rice.png",
       "price": 150,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Chicken Fried Rice.png"
   },
   {
     "id": "chicken-noodles",
@@ -1058,7 +1044,7 @@
     "category": "Chinese",
     "subcategory": "Noodles",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Noodles.png",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1068,14 +1054,15 @@
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Chicken Noodles",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Noodles.png",
       "price": 150,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Chicken Noodles.png"
   },
   {
     "id": "veg-chili-gobi",
-    "title": "Chili Gobi",
+    "title": "Chilli Gobi",
     "category": "Chinese",
     "subcategory": null,
     "description": "Cauliflower tossed in chili sauce",
@@ -1087,7 +1074,7 @@
     "raw": {
       "id": "veg-chili-gobi",
       "category": "Starters",
-      "title": "Chili Gobi",
+      "title": "Chilli Gobi",
       "description": "Cauliflower tossed in chili sauce",
       "price": 220,
       "image": null,
@@ -1103,7 +1090,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Egg Fried Rice.png",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1113,10 +1100,11 @@
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Egg Fried Rice",
-      "image": null,
+      "image": "client/src/assets/raw/Egg Fried Rice.png",
       "price": 120,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Egg Fried Rice.png"
   },
   {
     "id": "egg-noodles",
@@ -1124,7 +1112,7 @@
     "category": "Chinese",
     "subcategory": "Noodles",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Egg Noodles.png",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1134,10 +1122,11 @@
       "category": "Chinese",
       "subcategory": "Noodles",
       "title": "Egg Noodles",
-      "image": null,
+      "image": "client/src/assets/raw/Egg Noodles.png",
       "price": 120,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Egg Noodles.png"
   },
   {
     "id": "veg-gobi-65",
@@ -1145,7 +1134,7 @@
     "category": "Chinese",
     "subcategory": null,
     "description": "Crispy cauliflower 65",
-    "image": null,
+    "image": "client/src/assets/raw/Gobi Manchuria.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -1156,7 +1145,7 @@
       "title": "Gobi 65",
       "description": "Crispy cauliflower 65",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Gobi Manchuria.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -1169,7 +1158,7 @@
     "category": "Chinese",
     "subcategory": null,
     "description": "Dry manchurian gobi",
-    "image": null,
+    "image": "client/src/assets/raw/Gobi Manchuria.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -1180,7 +1169,7 @@
       "title": "Gobi Manchuria Dry",
       "description": "Dry manchurian gobi",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Gobi Manchuria.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -1277,7 +1266,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer Fried Rice.png",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1287,10 +1276,11 @@
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Paneer Fried Rice",
-      "image": null,
+      "image": "client/src/assets/raw/Paneer Fried Rice.png",
       "price": 150,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Paneer Fried Rice.png"
   },
   {
     "id": "paneer-noodles",
@@ -1343,7 +1333,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Veg Fried Rice.png",
     "price": 100,
     "prices": null,
     "variants": null,
@@ -1353,10 +1343,11 @@
       "category": "Chinese",
       "subcategory": "Fried Rice",
       "title": "Veg Fried Rice",
-      "image": null,
+      "image": "client/src/assets/raw/Veg Fried Rice.png",
       "price": 100,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Veg Fried Rice.png"
   },
   {
     "id": "veg-manchuria-fried-rice",
@@ -1507,7 +1498,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/BBQ Paneer Pizza.png",
     "price": 199,
     "prices": null,
     "variants": null,
@@ -1517,10 +1508,11 @@
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "BBQ Paneer Pizza",
-      "image": null,
+      "image": "client/src/assets/raw/BBQ Paneer Pizza.png",
       "price": 199,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/BBQ Paneer Pizza.png"
   },
   {
     "id": "bbq-paneer-sandwich",
@@ -1570,7 +1562,7 @@
     "category": "Continental",
     "subcategory": "Burgers",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Cheese Burger.png",
     "price": 99,
     "prices": null,
     "variants": null,
@@ -1580,10 +1572,11 @@
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Chicken Cheese Burger",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Cheese Burger.png",
       "price": 99,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Chicken Cheese Burger.png"
   },
   {
     "id": "chicken-club-sandwich",
@@ -1612,7 +1605,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Pizza.png",
     "price": 199,
     "prices": null,
     "variants": null,
@@ -1622,10 +1615,11 @@
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Chicken Pizza",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Pizza.png",
       "price": 199,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Chicken Pizza.png"
   },
   {
     "id": "corn-sandwich",
@@ -1675,7 +1669,7 @@
     "category": "Continental",
     "subcategory": "Sandwiches",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Grilled Paneer Sandwich.png",
     "price": 89,
     "prices": null,
     "variants": null,
@@ -1685,10 +1679,11 @@
       "category": "Continental",
       "subcategory": "Sandwiches",
       "title": "Grilled Paneer Sandwich",
-      "image": null,
+      "image": "client/src/assets/raw/Grilled Paneer Sandwich.png",
       "price": 89,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Grilled Paneer Sandwich.png"
   },
   {
     "id": "grilled-wedge-sandwich",
@@ -1717,7 +1712,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Margherita Pizza.png",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1727,10 +1722,11 @@
       "category": "Continental",
       "subcategory": "Pizzas",
       "title": "Margherita Pizza",
-      "image": null,
+      "image": "client/src/assets/raw/Margherita Pizza.png",
       "price": 120,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Margherita Pizza.png"
   },
   {
     "id": "mix-wedge-grilled-sandwich",
@@ -1759,7 +1755,7 @@
     "category": "Continental",
     "subcategory": "Burgers",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer Cheese Burger.png",
     "price": 89,
     "prices": null,
     "variants": null,
@@ -1769,10 +1765,11 @@
       "category": "Continental",
       "subcategory": "Burgers",
       "title": "Paneer Cheese Burger",
-      "image": null,
+      "image": "client/src/assets/raw/Paneer Cheese Burger.png",
       "price": 89,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Paneer Cheese Burger.png"
   },
   {
     "id": "paneer-pizza",
@@ -1793,7 +1790,8 @@
       "image": null,
       "price": 180,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/BBQ Paneer Pizza.png"
   },
   {
     "id": "spot-wedge-burger",
@@ -1864,7 +1862,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Pickle-spiced chicken tikka (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -1875,7 +1873,7 @@
       "title": "Achari Chicken Tikka (Full)",
       "description": "Pickle-spiced chicken tikka (full)",
       "price": 230,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -1888,7 +1886,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Pickle-spiced chicken tikka (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -1899,7 +1897,7 @@
       "title": "Achari Chicken Tikka (Half)",
       "description": "Pickle-spiced chicken tikka (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -1980,7 +1978,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Boneless chicken tikka",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -1990,7 +1988,7 @@
       "category": "Kebabs & Grills",
       "title": "Chicken Tikka (Boneless) - 6pc",
       "description": "Boneless chicken tikka",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka.png",
       "price": 230,
       "available": true
     }
@@ -2001,7 +1999,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Charcoal-grilled chicken chunks (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2012,7 +2010,7 @@
       "title": "Chicken Tikka (Full)",
       "description": "Charcoal-grilled chicken chunks (full)",
       "price": 230,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2025,7 +2023,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Charcoal-grilled chicken chunks (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2036,7 +2034,7 @@
       "title": "Chicken Tikka (Half)",
       "description": "Charcoal-grilled chicken chunks (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2165,7 +2163,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Creamy malai kebab (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Malai Kebab.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2176,7 +2174,7 @@
       "title": "Malai Kebab (Full)",
       "description": "Creamy malai kebab (full)",
       "price": 230,
-      "image": null,
+      "image": "client/src/assets/raw/Malai Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2189,7 +2187,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Creamy malai kebab (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Malai Kebab.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2200,7 +2198,7 @@
       "title": "Malai Kebab (Half)",
       "description": "Creamy malai kebab (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Malai Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2261,7 +2259,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Reshmi Kebab.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2270,10 +2268,11 @@
       "id": "reshmi-kebab",
       "category": "Kebabs & Grills",
       "title": "Reshmi Kebab",
-      "image": null,
+      "image": "client/src/assets/raw/Reshmi Kebab.png",
       "price": 230,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Reshmi Kebab.png"
   },
   {
     "id": "tandoori-reshmi-kebab-full",
@@ -2281,7 +2280,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Silky melt-in-mouth reshmi kebab (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Reshmi Kebab.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2292,7 +2291,7 @@
       "title": "Reshmi Kebab (Full)",
       "description": "Silky melt-in-mouth reshmi kebab (full)",
       "price": 230,
-      "image": null,
+      "image": "client/src/assets/raw/Reshmi Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2305,7 +2304,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Silky melt-in-mouth reshmi kebab (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Reshmi Kebab.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2316,7 +2315,7 @@
       "title": "Reshmi Kebab (Half)",
       "description": "Silky melt-in-mouth reshmi kebab (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Reshmi Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2329,7 +2328,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Marinated chicken cooked in tandoor (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Tandoori Chicken.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2353,7 +2352,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Marinated chicken cooked in tandoor (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Tandoori Chicken.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2364,7 +2363,7 @@
       "title": "Tandoori Chicken (Half)",
       "description": "Marinated chicken cooked in tandoor (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Tandoori Chicken.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2377,7 +2376,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Spiced chicken drumsticks (full)",
-    "image": null,
+    "image": "client/src/assets/raw/Tangdi Kebab.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2388,7 +2387,7 @@
       "title": "Tangdi Kebab (Full)",
       "description": "Spiced chicken drumsticks (full)",
       "price": 230,
-      "image": null,
+      "image": "client/src/assets/raw/Tangdi Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2401,7 +2400,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Spiced chicken drumsticks (half)",
-    "image": null,
+    "image": "client/src/assets/raw/Tangdi Kebab.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2412,7 +2411,7 @@
       "title": "Tangdi Kebab (Half)",
       "description": "Spiced chicken drumsticks (half)",
       "price": 130,
-      "image": null,
+      "image": "client/src/assets/raw/Tangdi Kebab.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -2425,7 +2424,7 @@
     "category": "Main Course",
     "subcategory": "Non-Veg Curries",
     "description": "Creamy butter chicken",
-    "image": null,
+    "image": "client/src/assets/raw/Butter Chicken.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2436,10 +2435,11 @@
       "subcategory": "Non-Veg Curries",
       "title": "Butter Chicken",
       "description": "Creamy butter chicken",
-      "image": null,
+      "image": "client/src/assets/raw/Butter Chicken.png",
       "price": 230,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Butter Chicken.png"
   },
   {
     "id": "chana-masala",
@@ -2557,7 +2557,7 @@
     "category": "Main Course",
     "subcategory": "Non-Veg Curries",
     "description": "Tikka masala chicken",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Tikka Masala.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2568,14 +2568,15 @@
       "subcategory": "Non-Veg Curries",
       "title": "Chicken Tikka Masala",
       "description": "Tikka masala chicken",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Tikka Masala.png",
       "price": 230,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Chicken Tikka Masala.png"
   },
   {
     "id": "veg-chili-mushroom-dry",
-    "title": "Chili Mushroom Dry",
+    "title": "Chilli Mushroom Dry",
     "category": "Main Course",
     "subcategory": null,
     "description": "Chili tossed mushrooms",
@@ -2587,7 +2588,7 @@
     "raw": {
       "id": "veg-chili-mushroom-dry",
       "category": "Starters",
-      "title": "Chili Mushroom Dry",
+      "title": "Chilli Mushroom Dry",
       "description": "Chili tossed mushrooms",
       "price": 220,
       "image": null,
@@ -2713,7 +2714,7 @@
     "category": "Main Course",
     "subcategory": "Veg Curries",
     "description": "Kadai style paneer",
-    "image": null,
+    "image": "client/src/assets/raw/Kadai Paneer.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -2724,10 +2725,11 @@
       "subcategory": "Veg Curries",
       "title": "Kadai Paneer",
       "description": "Kadai style paneer",
-      "image": null,
+      "image": "client/src/assets/raw/Kadai Paneer.png",
       "price": 220,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Kadai Paneer.png"
   },
   {
     "id": "kaju-paneer",
@@ -3005,7 +3007,7 @@
     "category": "Main Course",
     "subcategory": "Veg Curries",
     "description": "Rich paneer gravy",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer Butter Masala.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3016,10 +3018,11 @@
       "subcategory": "Veg Curries",
       "title": "Paneer Butter Masala",
       "description": "Rich paneer gravy",
-      "image": null,
+      "image": "client/src/assets/raw/Paneer Butter Masala.png",
       "price": 220,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Paneer Butter Masala.png"
   },
   {
     "id": "veg-paneer-masala-dry",
@@ -3093,7 +3096,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -3102,10 +3105,11 @@
       "id": "ankapur-naatu-kodi-pulusu",
       "category": "Meals",
       "title": "Ankapur Naatu Kodi Pulusu",
-      "image": null,
+      "image": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png",
       "price": 200,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png"
   },
   {
     "id": "bagara-rice-with-naatu-kodi",
@@ -3113,7 +3117,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png",
     "price": 180,
     "prices": null,
     "variants": null,
@@ -3122,10 +3126,11 @@
       "id": "bagara-rice-with-naatu-kodi",
       "category": "Meals",
       "title": "Bagara Rice with Naatu Kodi",
-      "image": null,
+      "image": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png",
       "price": 180,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png"
   },
   {
     "id": "bagara-rice-with-talakayi-curry",
@@ -3133,7 +3138,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Bagara Rice with Talakai Curry.png",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -3142,10 +3147,11 @@
       "id": "bagara-rice-with-talakayi-curry",
       "category": "Meals",
       "title": "Bagara Rice with Talakai Curry",
-      "image": null,
+      "image": "client/src/assets/raw/Bagara Rice with Talakai Curry.png",
       "price": 200,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Bagara Rice with Talakai Curry.png"
   },
   {
     "id": "curd",
@@ -3333,7 +3339,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png",
     "price": 180,
     "prices": null,
     "variants": null,
@@ -3342,10 +3348,11 @@
       "id": "nellore-vari-chepala-pulusu",
       "category": "Meals",
       "title": "Nellore Vari Chepala Pulusu",
-      "image": null,
+      "image": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png",
       "price": 180,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png"
   },
   {
     "id": "oil-fry",
@@ -3453,7 +3460,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Rice with Egg Curry + Sambar.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -3462,10 +3469,11 @@
       "id": "rice-with-egg-curry-sambar",
       "category": "Meals",
       "title": "Rice with Egg Curry + Sambar",
-      "image": null,
+      "image": "client/src/assets/raw/Rice with Egg Curry + Sambar.png",
       "price": 130,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Rice with Egg Curry + Sambar.png"
   },
   {
     "id": "rice-with-naatu-kodi-pulusu",
@@ -3525,7 +3533,8 @@
       "image": null,
       "price": 120,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Rice with Egg Curry + Sambar.png"
   },
   {
     "id": "veg-curries-meal",
@@ -3573,7 +3582,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer Shawarma.png",
     "price": 140,
     "prices": null,
     "variants": null,
@@ -3582,10 +3591,11 @@
       "id": "paneer-shawarma",
       "category": "Shawarma",
       "title": "Paneer Shawarma",
-      "image": null,
+      "image": "client/src/assets/raw/Paneer Shawarma.png",
       "price": 140,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Paneer Shawarma.png"
   },
   {
     "id": "regular-chicken-shawarma",
@@ -3593,7 +3603,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Shawarma.png",
     "price": 100,
     "prices": null,
     "variants": null,
@@ -3602,7 +3612,7 @@
       "id": "regular-chicken-shawarma",
       "category": "Shawarma",
       "title": "Regular Chicken Shawarma",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Shawarma.png",
       "price": 100,
       "available": true
     }
@@ -3613,7 +3623,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Shawarma.png",
     "price": 140,
     "prices": null,
     "variants": null,
@@ -3622,7 +3632,7 @@
       "id": "special-chicken-shawarma",
       "category": "Shawarma",
       "title": "Special Chicken Shawarma",
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Shawarma.png",
       "price": 140,
       "available": true
     }
@@ -3676,7 +3686,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy Apollo style fish",
-    "image": null,
+    "image": "client/src/assets/raw/Apollo fish.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3687,11 +3697,12 @@
       "title": "Apollo Fish",
       "description": "Crispy Apollo style fish",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Apollo fish.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Apollo fish.png"
   },
   {
     "id": "nonveg-blackbean-chicken",
@@ -3769,7 +3780,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy fried chicken starter",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken 65.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3780,12 +3791,13 @@
       "title": "Chicken 65",
       "description": "Crispy fried chicken starter",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken 65.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
     },
-    "_oldCategory": "Starters"
+    "_oldCategory": "Starters",
+    "resolvedImage": "client/src/assets/raw/Chicken 65.png"
   },
   {
     "id": "nonveg-chicken-hongkong",
@@ -3817,7 +3829,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Classic Indo-Chinese lollipops",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Lollipop.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3828,12 +3840,13 @@
       "title": "Chicken Lollipop",
       "description": "Classic Indo-Chinese lollipops",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Lollipop.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
     },
-    "_oldCategory": "Starters"
+    "_oldCategory": "Starters",
+    "resolvedImage": "client/src/assets/raw/Chicken Lollipop.png"
   },
   {
     "id": "nonveg-chicken-majestic",
@@ -3912,7 +3925,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy spiced chicken wings",
-    "image": null,
+    "image": "client/src/assets/raw/Chicken Wings.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3923,16 +3936,17 @@
       "title": "Chicken Wings",
       "description": "Crispy spiced chicken wings",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Chicken Wings.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
     },
-    "_oldCategory": "Starters"
+    "_oldCategory": "Starters",
+    "resolvedImage": "client/src/assets/raw/Chicken Wings.png"
   },
   {
     "id": "veg-chili-baby-corn-dry",
-    "title": "Chili Baby Corn Dry",
+    "title": "Chilli Baby Corn Dry",
     "category": "Starters",
     "subcategory": null,
     "description": "Spicy dry chili baby corn",
@@ -3944,7 +3958,7 @@
     "raw": {
       "id": "veg-chili-baby-corn-dry",
       "category": "Starters",
-      "title": "Chili Baby Corn Dry",
+      "title": "Chilli Baby Corn Dry",
       "description": "Spicy dry chili baby corn",
       "price": 220,
       "image": null,
@@ -3956,11 +3970,11 @@
   },
   {
     "id": "nonveg-chili-chicken",
-    "title": "Chili Chicken",
+    "title": "Chilli Chicken",
     "category": "Starters",
     "subcategory": null,
     "description": "Spicy Indo-Chinese chili chicken",
-    "image": null,
+    "image": "client/src/assets/raw/Chilli Chicken.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3968,10 +3982,10 @@
     "raw": {
       "id": "nonveg-chili-chicken",
       "category": "Starters",
-      "title": "Chili Chicken",
+      "title": "Chilli Chicken",
       "description": "Spicy Indo-Chinese chili chicken",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Chilli Chicken.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -3980,7 +3994,7 @@
   },
   {
     "id": "seafood-chili-fish",
-    "title": "Chili Fish",
+    "title": "Chilli Fish",
     "category": "Starters",
     "subcategory": null,
     "description": "Fish in chili sauce",
@@ -3992,7 +4006,7 @@
     "raw": {
       "id": "seafood-chili-fish",
       "category": "Starters",
-      "title": "Chili Fish",
+      "title": "Chilli Fish",
       "description": "Fish in chili sauce",
       "price": 220,
       "image": null,
@@ -4003,7 +4017,7 @@
   },
   {
     "id": "nonveg-chili-manchuria",
-    "title": "Chili Manchuria",
+    "title": "Chilli Manchuria",
     "category": "Starters",
     "subcategory": null,
     "description": "Chicken in manchurian style",
@@ -4015,7 +4029,7 @@
     "raw": {
       "id": "nonveg-chili-manchuria",
       "category": "Starters",
-      "title": "Chili Manchuria",
+      "title": "Chilli Manchuria",
       "description": "Chicken in manchurian style",
       "price": 220,
       "image": null,
@@ -4027,7 +4041,7 @@
   },
   {
     "id": "veg-chili-paneer",
-    "title": "Chili Paneer",
+    "title": "Chilli Paneer",
     "category": "Starters",
     "subcategory": null,
     "description": "Classic Indo-Chinese chili paneer",
@@ -4039,7 +4053,7 @@
     "raw": {
       "id": "veg-chili-paneer",
       "category": "Starters",
-      "title": "Chili Paneer",
+      "title": "Chilli Paneer",
       "description": "Classic Indo-Chinese chili paneer",
       "price": 220,
       "image": null,
@@ -4051,11 +4065,11 @@
   },
   {
     "id": "seafood-chili-prawns",
-    "title": "Chili Prawns",
+    "title": "Chilli Prawns",
     "category": "Starters",
     "subcategory": null,
     "description": "Prawns in chili sauce",
-    "image": null,
+    "image": "client/src/assets/raw/Chilli Prawns.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4063,10 +4077,10 @@
     "raw": {
       "id": "seafood-chili-prawns",
       "category": "Starters",
-      "title": "Chili Prawns",
+      "title": "Chilli Prawns",
       "description": "Prawns in chili sauce",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Chilli Prawns.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -4336,7 +4350,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy spiced paneer starter",
-    "image": null,
+    "image": "client/src/assets/raw/Paneer 65.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4347,12 +4361,13 @@
       "title": "Paneer 65",
       "description": "Crispy spiced paneer starter",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Paneer 65.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
     },
-    "_oldCategory": "Starters"
+    "_oldCategory": "Starters",
+    "resolvedImage": "client/src/assets/raw/Paneer 65.png"
   },
   {
     "id": "rotis-paneer-kulcha",
@@ -4454,7 +4469,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Manchurian-style prawns",
-    "image": null,
+    "image": "client/src/assets/raw/Prawns Manchuria.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4465,19 +4480,20 @@
       "title": "Prawns Manchuria",
       "description": "Manchurian-style prawns",
       "price": 220,
-      "image": null,
+      "image": "client/src/assets/raw/Prawns Manchuria.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Prawns Manchuria.png"
   },
   {
     "id": "nonveg-vastar-chili-chicken",
-    "title": "Vastar Chili Chicken",
+    "title": "Chilli Chicken",
     "category": "Starters",
     "subcategory": null,
     "description": "Chef’s fiery chili chicken",
-    "image": null,
+    "image": "client/src/assets/raw/Chilli Chicken.png",
     "price": 555,
     "prices": null,
     "variants": null,
@@ -4485,10 +4501,10 @@
     "raw": {
       "id": "nonveg-vastar-chili-chicken",
       "category": "Starters",
-      "title": "Vastar Chili Chicken",
+      "title": "Chilli Chicken",
       "description": "Chef’s fiery chili chicken",
       "price": 555,
-      "image": null,
+      "image": "client/src/assets/raw/Chilli Chicken.png",
       "isSignature": false,
       "isBestSeller": false,
       "available": true
@@ -4647,7 +4663,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/idli.png",
     "price": 30,
     "prices": null,
     "variants": null,
@@ -4657,10 +4673,11 @@
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Idli",
-      "image": null,
+      "image": "client/src/assets/raw/idli.png",
       "price": 30,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/idli.png"
   },
   {
     "id": "idli-with-ghee",
@@ -4710,7 +4727,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Masala Dosa.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -4720,10 +4737,11 @@
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Masala Dosa",
-      "image": null,
+      "image": "client/src/assets/raw/Masala Dosa.png",
       "price": 50,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Masala Dosa.png"
   },
   {
     "id": "masala-pesara-dosa",
@@ -4878,7 +4896,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Onion Dosa.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -4888,10 +4906,11 @@
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Onion Dosa",
-      "image": null,
+      "image": "client/src/assets/raw/Onion Dosa.png",
       "price": 50,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Onion Dosa.png"
   },
   {
     "id": "onion-pesara-dosa",
@@ -5256,7 +5275,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/Rava Dosa.png",
     "price": 70,
     "prices": null,
     "variants": null,
@@ -5266,10 +5285,11 @@
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Rava Dosa",
-      "image": null,
+      "image": "client/src/assets/raw/Rava Dosa.png",
       "price": 70,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/Rava Dosa.png"
   },
   {
     "id": "sawadeen-idli",
@@ -5403,7 +5423,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": null,
+    "image": "client/src/assets/raw/vada.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -5413,10 +5433,11 @@
       "category": "Tiffin",
       "subcategory": "Breakfast",
       "title": "Vada",
-      "image": null,
+      "image": "client/src/assets/raw/vada.png",
       "price": 50,
       "available": true
-    }
+    },
+    "resolvedImage": "client/src/assets/raw/vada.png"
   },
   {
     "id": "4pc",
@@ -5514,5 +5535,802 @@
       "label": "Jumbo Pack",
       "price": 800
     }
+  },
+  {
+    "id": "chicken-fry-piece-biryani",
+    "title": "Chicken Fry Piece Biryani",
+    "category": "Biryani",
+    "price": 250,
+    "resolvedImage": "client/src/assets/raw/Chicken Fry Piece Biryani.png",
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Fry Piece Biryani.png"
+  },
+  {
+    "id": "mandi-chicken-mini",
+    "title": "Chicken Mandi (Mini)",
+    "category": "Arabian",
+    "subcategory": "Chicken Mandi",
+    "description": "",
+    "image": null,
+    "price": 250,
+    "prices": {
+      "mini": 250
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-mini",
+      "title": "Chicken Mandi (Mini)",
+      "category": "Arabian",
+      "subcategory": "Chicken Mandi",
+      "prices": {
+        "mini": 250
+      },
+      "image": null,
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-half",
+    "title": "Chicken Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Chicken Mandi",
+    "description": "",
+    "image": null,
+    "price": 420,
+    "prices": {
+      "half": 420
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-half",
+      "title": "Chicken Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Chicken Mandi",
+      "prices": {
+        "half": 420
+      },
+      "image": null,
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-3piece",
+    "title": "Chicken Mandi (3-piece)",
+    "category": "Arabian",
+    "subcategory": "Chicken Mandi",
+    "description": "",
+    "image": null,
+    "price": 600,
+    "prices": {
+      "three_piece": 600
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-3piece",
+      "title": "Chicken Mandi (3-piece)",
+      "category": "Arabian",
+      "subcategory": "Chicken Mandi",
+      "prices": {
+        "three_piece": 600
+      },
+      "image": null,
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-full",
+    "title": "Chicken Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Chicken Mandi",
+    "description": "",
+    "image": null,
+    "price": 750,
+    "prices": {
+      "full": 750
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-full",
+      "title": "Chicken Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Chicken Mandi",
+      "prices": {
+        "full": 750
+      },
+      "image": null,
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-juicy-mini",
+    "title": "Chicken Juicy Mandi (Mini)",
+    "category": "Arabian",
+    "subcategory": "Chicken Juicy Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+    "price": 320,
+    "prices": {
+      "mini": 320
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-juicy-mini",
+      "title": "Chicken Juicy Mandi (Mini)",
+      "category": "Arabian",
+      "subcategory": "Chicken Juicy Mandi",
+      "prices": {
+        "mini": 320
+      },
+      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-juicy-half",
+    "title": "Chicken Juicy Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Chicken Juicy Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+    "price": 500,
+    "prices": {
+      "half": 500
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-juicy-half",
+      "title": "Chicken Juicy Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Chicken Juicy Mandi",
+      "prices": {
+        "half": 500
+      },
+      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-juicy-3piece",
+    "title": "Chicken Juicy Mandi (3-piece)",
+    "category": "Arabian",
+    "subcategory": "Chicken Juicy Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+    "price": 750,
+    "prices": {
+      "three_piece": 750
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-juicy-3piece",
+      "title": "Chicken Juicy Mandi (3-piece)",
+      "category": "Arabian",
+      "subcategory": "Chicken Juicy Mandi",
+      "prices": {
+        "three_piece": 750
+      },
+      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-chicken-juicy-full",
+    "title": "Chicken Juicy Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Chicken Juicy Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+    "price": 1000,
+    "prices": {
+      "full": 1000
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-chicken-juicy-full",
+      "title": "Chicken Juicy Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Chicken Juicy Mandi",
+      "prices": {
+        "full": 1000
+      },
+      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-broasted-mini",
+    "title": "Broasted Mandi (Mini)",
+    "category": "Arabian",
+    "subcategory": "Broasted Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Broasted Mandi.png",
+    "price": 320,
+    "prices": {
+      "mini": 320
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-broasted-mini",
+      "title": "Broasted Mandi (Mini)",
+      "category": "Arabian",
+      "subcategory": "Broasted Mandi",
+      "prices": {
+        "mini": 320
+      },
+      "image": "client/src/assets/raw/Broasted Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-broasted-half",
+    "title": "Broasted Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Broasted Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Broasted Mandi.png",
+    "price": 500,
+    "prices": {
+      "half": 500
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-broasted-half",
+      "title": "Broasted Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Broasted Mandi",
+      "prices": {
+        "half": 500
+      },
+      "image": "client/src/assets/raw/Broasted Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-broasted-3piece",
+    "title": "Broasted Mandi (3-piece)",
+    "category": "Arabian",
+    "subcategory": "Broasted Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Broasted Mandi.png",
+    "price": 750,
+    "prices": {
+      "three_piece": 750
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-broasted-3piece",
+      "title": "Broasted Mandi (3-piece)",
+      "category": "Arabian",
+      "subcategory": "Broasted Mandi",
+      "prices": {
+        "three_piece": 750
+      },
+      "image": "client/src/assets/raw/Broasted Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-broasted-full",
+    "title": "Broasted Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Broasted Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Broasted Mandi.png",
+    "price": 1000,
+    "prices": {
+      "full": 1000
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-broasted-full",
+      "title": "Broasted Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Broasted Mandi",
+      "prices": {
+        "full": 1000
+      },
+      "image": "client/src/assets/raw/Broasted Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-tandoori-half",
+    "title": "Tandoori Chicken Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Tandoori Chicken Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
+    "price": 440,
+    "prices": {
+      "half": 440
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-tandoori-half",
+      "title": "Tandoori Chicken Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Tandoori Chicken Mandi",
+      "prices": {
+        "half": 440
+      },
+      "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-tandoori-full",
+    "title": "Tandoori Chicken Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Tandoori Chicken Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
+    "price": 800,
+    "prices": {
+      "full": 800
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-tandoori-full",
+      "title": "Tandoori Chicken Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Tandoori Chicken Mandi",
+      "prices": {
+        "full": 800
+      },
+      "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-mini",
+    "title": "Nizami Mutton Mandi (Mini)",
+    "category": "Arabian",
+    "subcategory": "Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 320,
+    "prices": {
+      "mini": 320
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-mini",
+      "title": "Nizami Mutton Mandi (Mini)",
+      "category": "Arabian",
+      "subcategory": "Mutton Mandi",
+      "prices": {
+        "mini": 320
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-half",
+    "title": "Nizami Mutton Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 500,
+    "prices": {
+      "half": 500
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-half",
+      "title": "Nizami Mutton Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Mutton Mandi",
+      "prices": {
+        "half": 500
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-3piece",
+    "title": "Nizami Mutton Mandi (3-piece)",
+    "category": "Arabian",
+    "subcategory": "Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 750,
+    "prices": {
+      "three_piece": 750
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-3piece",
+      "title": "Nizami Mutton Mandi (3-piece)",
+      "category": "Arabian",
+      "subcategory": "Mutton Mandi",
+      "prices": {
+        "three_piece": 750
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-full",
+    "title": "Nizami Mutton Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 900,
+    "prices": {
+      "full": 900
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-full",
+      "title": "Nizami Mutton Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Mutton Mandi",
+      "prices": {
+        "full": 900
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-juice-mini",
+    "title": "Juicy Mutton Mandi (Mini)",
+    "category": "Arabian",
+    "subcategory": "Juicy Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 350,
+    "prices": {
+      "mini": 350
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-juice-mini",
+      "title": "Juicy Mutton Mandi (Mini)",
+      "category": "Arabian",
+      "subcategory": "Juicy Mutton Mandi",
+      "prices": {
+        "mini": 350
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-juice-half",
+    "title": "Juicy Mutton Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Juicy Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 600,
+    "prices": {
+      "half": 600
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-juice-half",
+      "title": "Juicy Mutton Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Juicy Mutton Mandi",
+      "prices": {
+        "half": 600
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-juice-3piece",
+    "title": "Juicy Mutton Mandi (3-piece)",
+    "category": "Arabian",
+    "subcategory": "Juicy Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 850,
+    "prices": {
+      "three_piece": 850
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-juice-3piece",
+      "title": "Juicy Mutton Mandi (3-piece)",
+      "category": "Arabian",
+      "subcategory": "Juicy Mutton Mandi",
+      "prices": {
+        "three_piece": 850
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mutton-juice-full",
+    "title": "Juicy Mutton Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Juicy Mutton Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 1100,
+    "prices": {
+      "full": 1100
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mutton-juice-full",
+      "title": "Juicy Mutton Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Juicy Mutton Mandi",
+      "prices": {
+        "full": 1100
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-special-mutton-half",
+    "title": "Special Mutton Masala Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Special Mutton Masala",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 700,
+    "prices": {
+      "half": 700
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-special-mutton-half",
+      "title": "Special Mutton Masala Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Special Mutton Masala",
+      "prices": {
+        "half": 700
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-special-mutton-full",
+    "title": "Special Mutton Masala Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Special Mutton Masala",
+    "description": "",
+    "image": "client/src/assets/raw/Mutton Mandi.png",
+    "price": 1300,
+    "prices": {
+      "full": 1300
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-special-mutton-full",
+      "title": "Special Mutton Masala Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Special Mutton Masala",
+      "prices": {
+        "full": 1300
+      },
+      "image": "client/src/assets/raw/Mutton Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-fish-half",
+    "title": "Fish Mandi (Half)",
+    "category": "Arabian",
+    "subcategory": "Fish Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Fish Mandi.png",
+    "price": 460,
+    "prices": {
+      "half": 460
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-fish-half",
+      "title": "Fish Mandi (Half)",
+      "category": "Arabian",
+      "subcategory": "Fish Mandi",
+      "prices": {
+        "half": 460
+      },
+      "image": "client/src/assets/raw/Fish Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-fish-full",
+    "title": "Fish Mandi (Full)",
+    "category": "Arabian",
+    "subcategory": "Fish Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Fish Mandi.png",
+    "price": 850,
+    "prices": {
+      "full": 850
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-fish-full",
+      "title": "Fish Mandi (Full)",
+      "category": "Arabian",
+      "subcategory": "Fish Mandi",
+      "prices": {
+        "full": 850
+      },
+      "image": "client/src/assets/raw/Fish Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "mandi-mix-4p",
+    "title": "Mix Mandi (4 members)",
+    "category": "Arabian",
+    "subcategory": "Mix Mandi",
+    "description": "",
+    "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+    "price": 1100,
+    "prices": {
+      "pack_for_4": 1100
+    },
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "mandi-mix-4p",
+      "title": "Mix Mandi (4 members)",
+      "category": "Arabian",
+      "subcategory": "Mix Mandi",
+      "prices": {
+        "pack_for_4": 1100
+      },
+      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
+      "tier": 2
+    }
+  },
+  {
+    "id": "single-chicken-biryani",
+    "title": "Single Chicken Biryani",
+    "category": "Biryani",
+    "price": 150,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Dum Biryani.png"
+  },
+  {
+    "id": "full-chicken-biryani",
+    "title": "Full Chicken Biryani",
+    "category": "Biryani",
+    "price": 200,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Dum Biryani.png"
+  },
+  {
+    "id": "chicken-biryani-fp",
+    "title": "Chicken Biryani FP",
+    "category": "Biryani",
+    "price": 500,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Dum Biryani.png"
+  },
+  {
+    "id": "chicken-jumbo-pack",
+    "title": "Chicken Jumbo Pack",
+    "category": "Biryani",
+    "price": 800,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Dum Biryani.png"
+  },
+  {
+    "id": "chicken-fry-piece-biryani-fp",
+    "title": "Chicken Fry Piece Biryani FP",
+    "category": "Biryani",
+    "price": 750,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Fry Piece Biryani.png"
+  },
+  {
+    "id": "extra-biryani-rice-2",
+    "title": "Extra Biryani Rice",
+    "category": "Biryani",
+    "price": 80,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Chicken Dum Biryani.png"
+  },
+  {
+    "id": "extra-one-chicken-piece",
+    "title": "Extra One Chicken Piece",
+    "category": "Biryani",
+    "price": 60,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Tandoori Chicken.png"
+  },
+  {
+    "id": "mutton-biryani-single",
+    "title": "Mutton Biryani Single",
+    "category": "Biryani",
+    "price": 220,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Mutton Dum Biryani.png"
+  },
+  {
+    "id": "mutton-biryani-full",
+    "title": "Mutton Biryani Full",
+    "category": "Biryani",
+    "price": 300,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Mutton Dum Biryani.png"
+  },
+  {
+    "id": "mutton-biryani-fp",
+    "title": "Mutton Biryani FP",
+    "category": "Biryani",
+    "price": 750,
+    "resolvedImage": null,
+    "available": true,
+    "image": "client/src/assets/raw/Mutton Dum Biryani.png"
+  },
+  {
+    "id": "curd-rice",
+    "title": "Curd Rice",
+    "category": "Meals",
+    "subcategory": "Veg Meals",
+    "description": "Comforting curd rice",
+    "image": null,
+    "price": 100,
+    "prices": null,
+    "variants": null,
+    "available": true,
+    "raw": {
+      "id": "curd-rice",
+      "category": "Meals",
+      "subcategory": "Veg Meals",
+      "title": "Curd Rice",
+      "description": "Comforting curd rice",
+      "image": null,
+      "price": 100,
+      "available": true
+    },
+    "_oldCategory": "Biryani"
   }
 ]

@@ -1,63 +1,63 @@
-Tandoori Chicken.png
-Chicken Dum Biryani.png
-Mutton Dum Biryani.png
-Reshmi Kebab.png
-Chicken Tikka.png
-Tangdi Kebab.png
-Paneer Biryani.png
-Prawns Biryani.png
-Fish Biryani.png
-Chicken Fry Piece Biryani.png
-Butter Chicken.png
-Chicken Tikka Masala.png
-Paneer Butter Masala.png
-Kadai Paneer.png
-Malai Kebab.png
-Paneer 65.png
-Chicken 65.png
-Apollo fish.png
-Chilli Chicken.png
-Chicken Lollipop.png
-Chicken Wings.png
-Prawns Manchuria.png
-Chilli Prawns.png
-Grill Chicken.png
-Chicken Shawarma.png
-Paneer Shawarma.png
-Chicken Noodles.png
-Chicken Fried Rice.png
-Paneer Fried Rice.png
-Veg Fried Rice.png
-Egg Noodles.png
-Egg Fried Rice.png
-Gobi Manchuria.png
-Chicken Manchuria.png
-Chicken Cheese Burger.png
-Paneer Cheese Burger.png
-Margherita Pizza.png
-BBQ Paneer Pizza.png
-Chicken Pizza.png
-Grilled Paneer Sandwich.png
-idli.png
-Masala Dosa.png
-Onion Dosa.png
-Rava Dosa.png
-vada.png
-Bonda.png
-Rice with Egg Curry + Sambar.png
-Bagara Rice with Naatu Kodi.png
-Bagara Rice with Talakai Curry.png
-Nellore Vari Chepala Pulusu.png
-Ankapur Naatu Kodi Pulusu.png
-Chicken Juicy Mandi.png
-Broasted Mandi.png
-Tandoori Chicken Mandi.png
-Mutton Mandi.png
-Fish Mandi.png
-Watermelon Juice.png
-Pomegranate Juice.png
-Pineapple Juice.png
-Strawberry Milkshake.png
-KitKat Milkshake.png
+"client\src\assets\raw\Tandoori Chicken.png"
+"client\src\assets\raw\Chicken Dum Biryani.png"
+"client\src\assets\raw\Mutton Dum Biryani.png"
+"client\src\assets\raw\Reshmi Kebab.png"
+"client\src\assets\raw\Chicken Tikka.png"
+"client\src\assets\raw\Tangdi Kebab.png"
+"client\src\assets\raw\Paneer Biryani.png"
+"client\src\assets\raw\Prawns Biryani.png"
+"client\src\assets\raw\Fish Biryani.png"
+"client\src\assets\raw\Chicken Fry Piece Biryani.png"
+"client\src\assets\raw\Butter Chicken.png"
+"client\src\assets\raw\Chicken Tikka Masala.png"
+"client\src\assets\raw\Paneer Butter Masala.png"
+"client\src\assets\raw\Kadai Paneer.png"
+"client\src\assets\raw\Malai Kebab.png"
+"client\src\assets\raw\Paneer 65.png"
+"client\src\assets\raw\Chicken 65.png"
+"client\src\assets\raw\Apollo fish.png"
+"client\src\assets\raw\Chilli Chicken.png"
+"client\src\assets\raw\Chicken Lollipop.png"
+"client\src\assets\raw\Chicken Wings.png"
+"client\src\assets\raw\Prawns Manchuria.png"
+"client\src\assets\raw\Chilli Prawns.png"
+"client\src\assets\raw\Grill Chicken.png"
+"client\src\assets\raw\Chicken Shawarma.png"
+"client\src\assets\raw\Paneer Shawarma.png"
+"client\src\assets\raw\Chicken Noodles.png"
+"client\src\assets\raw\Chicken Fried Rice.png"
+"client\src\assets\raw\Paneer Fried Rice.png"
+"client\src\assets\raw\Veg Fried Rice.png"
+"client\src\assets\raw\Egg Noodles.png"
+"client\src\assets\raw\Egg Fried Rice.png"
+"client\src\assets\raw\Gobi Manchuria.png"
+"client\src\assets\raw\Chicken Manchuria.png"
+"client\src\assets\raw\Chicken Cheese Burger.png"
+"client\src\assets\raw\Paneer Cheese Burger.png"
+"client\src\assets\raw\Margherita Pizza.png"
+"client\src\assets\raw\BBQ Paneer Pizza.png"
+"client\src\assets\raw\Chicken Pizza.png"
+"client\src\assets\raw\Grilled Paneer Sandwich.png"
+"client\src\assets\raw\idli.png"
+"client\src\assets\raw\Masala Dosa.png"
+"client\src\assets\raw\Onion Dosa.png"
+"client\src\assets\raw\Rava Dosa.png"
+"client\src\assets\raw\vada.png"
+"client\src\assets\raw\Bonda.png"
+"client\src\assets\raw\Rice with Egg Curry + Sambar.png"
+"client\src\assets\raw\Bagara Rice with Naatu Kodi.png"
+"client\src\assets\raw\Bagara Rice with Talakai Curry.png"
+"client\src\assets\raw\Nellore Vari Chepala Pulusu.png"
+"client\src\assets\raw\Ankapur Naatu Kodi Pulusu.png"
+"client\src\assets\raw\Chicken Juicy Mandi.png"
+"client\src\assets\raw\Broasted Mandi.png"
+"client\src\assets\raw\Tandoori Chicken Mandi.png"
+"client\src\assets\raw\Mutton Mandi.png"
+"client\src\assets\raw\Fish Mandi.png"
+"client\src\assets\raw\Watermelon Juice.png"
+"client\src\assets\raw\Pomegranate Juice.png"
+"client\src\assets\raw\Pineapple Juice.png"
+"client\src\assets\raw\Strawberry Milkshake.png"
+"client\src\assets\raw\KitKat Milkshake.png"
 
 
