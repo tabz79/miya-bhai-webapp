@@ -1,0 +1,430 @@
+{
+  "matched": [
+    {
+      "title": "Kit Kat Milkshake",
+      "image": "client/src/assets/raw/KitKat Milkshake.png"
+    },
+    {
+      "title": "Pineapple Juice",
+      "image": "client/src/assets/raw/Pineapple Juice.png"
+    },
+    {
+      "title": "Pomegranate Juice",
+      "image": "client/src/assets/raw/Pomegranate Juice.png"
+    },
+    {
+      "title": "Strawberry Milkshake",
+      "image": "client/src/assets/raw/Strawberry Milkshake.png"
+    },
+    {
+      "title": "Watermelon Juice",
+      "image": "client/src/assets/raw/Watermelon Juice.png"
+    },
+    {
+      "title": "Fish Biryani",
+      "image": "client/src/assets/raw/Fish Biryani.png"
+    },
+    {
+      "title": "Paneer Biryani",
+      "image": "client/src/assets/raw/Paneer Biryani.png"
+    },
+    {
+      "title": "Prawns Biryani",
+      "image": "client/src/assets/raw/Prawns Biryani.png"
+    },
+    {
+      "title": "Chicken Fried Rice",
+      "image": "client/src/assets/raw/Chicken Fried Rice.png"
+    },
+    {
+      "title": "Chicken Noodles",
+      "image": "client/src/assets/raw/Chicken Noodles.png"
+    },
+    {
+      "title": "Egg Fried Rice",
+      "image": "client/src/assets/raw/Egg Fried Rice.png"
+    },
+    {
+      "title": "Egg Noodles",
+      "image": "client/src/assets/raw/Egg Noodles.png"
+    },
+    {
+      "title": "Gobi 65",
+      "image": "client/src/assets/raw/Gobi Manchuria.png"
+    },
+    {
+      "title": "Paneer Fried Rice",
+      "image": "client/src/assets/raw/Paneer Fried Rice.png"
+    },
+    {
+      "title": "Veg Fried Rice",
+      "image": "client/src/assets/raw/Veg Fried Rice.png"
+    },
+    {
+      "title": "BBQ Paneer Pizza",
+      "image": "client/src/assets/raw/BBQ Paneer Pizza.png"
+    },
+    {
+      "title": "Chicken Cheese Burger",
+      "image": "client/src/assets/raw/Chicken Cheese Burger.png"
+    },
+    {
+      "title": "Chicken Pizza",
+      "image": "client/src/assets/raw/Chicken Pizza.png"
+    },
+    {
+      "title": "Grilled Paneer Sandwich",
+      "image": "client/src/assets/raw/Grilled Paneer Sandwich.png"
+    },
+    {
+      "title": "Margherita Pizza",
+      "image": "client/src/assets/raw/Margherita Pizza.png"
+    },
+    {
+      "title": "Paneer Cheese Burger",
+      "image": "client/src/assets/raw/Paneer Cheese Burger.png"
+    },
+    {
+      "title": "Reshmi Kebab",
+      "image": "client/src/assets/raw/Reshmi Kebab.png"
+    },
+    {
+      "title": "Butter Chicken",
+      "image": "client/src/assets/raw/Butter Chicken.png"
+    },
+    {
+      "title": "Chicken Tikka Masala",
+      "image": "client/src/assets/raw/Chicken Tikka Masala.png"
+    },
+    {
+      "title": "Kadai Paneer",
+      "image": "client/src/assets/raw/Kadai Paneer.png"
+    },
+    {
+      "title": "Paneer Butter Masala",
+      "image": "client/src/assets/raw/Paneer Butter Masala.png"
+    },
+    {
+      "title": "Ankapur Naatu Kodi Pulusu",
+      "image": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png"
+    },
+    {
+      "title": "Bagara Rice with Naatu Kodi",
+      "image": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png"
+    },
+    {
+      "title": "Bagara Rice with Talakai Curry",
+      "image": "client/src/assets/raw/Bagara Rice with Talakai Curry.png"
+    },
+    {
+      "title": "Nellore Vari Chepala Pulusu",
+      "image": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png"
+    },
+    {
+      "title": "Rice with Egg Curry + Sambar",
+      "image": "client/src/assets/raw/Rice with Egg Curry + Sambar.png"
+    },
+    {
+      "title": "Paneer Shawarma",
+      "image": "client/src/assets/raw/Paneer Shawarma.png"
+    },
+    {
+      "title": "Apollo Fish",
+      "image": "client/src/assets/raw/Apollo fish.png"
+    },
+    {
+      "title": "Chicken 65",
+      "image": "client/src/assets/raw/Chicken 65.png"
+    },
+    {
+      "title": "Chicken Lollipop",
+      "image": "client/src/assets/raw/Chicken Lollipop.png"
+    },
+    {
+      "title": "Chicken Wings",
+      "image": "client/src/assets/raw/Chicken Wings.png"
+    },
+    {
+      "title": "Paneer 65",
+      "image": "client/src/assets/raw/Paneer 65.png"
+    },
+    {
+      "title": "Prawns Manchuria",
+      "image": "client/src/assets/raw/Prawns Manchuria.png"
+    },
+    {
+      "title": "Idli",
+      "image": "client/src/assets/raw/idli.png"
+    },
+    {
+      "title": "Masala Dosa",
+      "image": "client/src/assets/raw/Masala Dosa.png"
+    },
+    {
+      "title": "Onion Dosa",
+      "image": "client/src/assets/raw/Onion Dosa.png"
+    },
+    {
+      "title": "Rava Dosa",
+      "image": "client/src/assets/raw/Rava Dosa.png"
+    },
+    {
+      "title": "Vada",
+      "image": "client/src/assets/raw/vada.png"
+    },
+    {
+      "title": "Chicken Fry Piece Biryani",
+      "image": "client/src/assets/raw/Chicken Fry Piece Biryani.png"
+    }
+  ],
+  "unmatched": [
+    "Apple Juice",
+    "Avocado Juice",
+    "Banana Juice",
+    "Banana Milkshake",
+    "Berry Mary",
+    "Blackcurrant in Love",
+    "Blackcurrant Milkshake",
+    "Blue Lagoon",
+    "Butterscotch Milkshake",
+    "Chatka Orange",
+    "Chocolate Milkshake",
+    "Cinderella",
+    "Cold Coffee",
+    "Dragon Fruit Juice",
+    "Dry Fruit Milkshake",
+    "Fizzy Tulip",
+    "Fresh Lemon Juice",
+    "Fresh Mosambi Juice",
+    "Grape Juice",
+    "Lime Soda (sweet/salt)",
+    "Mango Milkshake",
+    "Mint Lemon",
+    "Mixed Fruit Juice",
+    "Muskmelon Juice",
+    "Orange Juice",
+    "Oreo Milkshake",
+    "Sunrise",
+    "Tender Coconut",
+    "Vanilla Milkshake",
+    "Virgin Margarita",
+    "Virgin Mojito",
+    "Virgin Pina Colada",
+    "Extra Biryani Rice",
+    "Extra One Chicken/Peas",
+    "Paneer Mandi (Full)",
+    "Paneer Mandi (Half)",
+    "Paneer Mandi (Mini)",
+    "Baby Corn Manchuria",
+    "Baby Corn Pepper Salt",
+    "Chili Gobi",
+    "Gobi Manchuria Dry",
+    "Kaju Fried Rice",
+    "Kaju Noodles",
+    "Manchuria Fried Rice",
+    "Manchuria Noodles",
+    "Paneer Noodles",
+    "Schezwan Chicken",
+    "Veg Manchuria Fried Rice",
+    "Veg Noodles",
+    "Coconut Chutney",
+    "Ginger Chutney",
+    "Rasam / Sambar (if used)",
+    "Sambar Chutney",
+    "Aloo Tikki Burger",
+    "BBQ Paneer Sandwich",
+    "Cheese Masala Sandwich",
+    "Chicken Club Sandwich",
+    "Corn Sandwich",
+    "Crazy Cheese Burger",
+    "Grilled Wedge Sandwich",
+    "Mix Wedge Grilled Sandwich",
+    "Paneer Pizza",
+    "Spot Wedge Burger",
+    "Sweet Corn Pizza",
+    "Wedge Delight Pizza",
+    "Achari Chicken Tikka (Full)",
+    "Achari Chicken Tikka (Half)",
+    "Banjara Kebab (Boneless)",
+    "Chicken CH Kebab (Full)",
+    "Chicken CH Kebab (Half)",
+    "Chicken Tikka (Boneless) - 6pc",
+    "Chicken Tikka (Full)",
+    "Chicken Tikka (Half)",
+    "Grilled Chicken (Full)",
+    "Grilled Chicken (Half)",
+    "Hariyali (Boneless)",
+    "Hariyali Kebab (Full)",
+    "Hariyali Kebab (Half)",
+    "Malai Kebab (Full)",
+    "Malai Kebab (Half)",
+    "Murukh Musallam (Full)",
+    "Murukh Musallam (Half)",
+    "Reshmi Kebab (Full)",
+    "Reshmi Kebab (Half)",
+    "Tandoori Chicken (Full)",
+    "Tandoori Chicken (Half)",
+    "Tangdi Kebab (Full)",
+    "Tangdi Kebab (Half)",
+    "Chana Masala",
+    "Chicken Chettinad",
+    "Chicken Kolhapuri",
+    "Chicken Masala",
+    "Chicken Pepper Fry",
+    "Chili Mushroom Dry",
+    "Dal Fry",
+    "Dal Tadka",
+    "Dum Chicken",
+    "Green Peas Masala",
+    "Kadai Chicken",
+    "Kaju Paneer",
+    "Kaju Paneer Masala",
+    "Kaju Tomato",
+    "Malabar Chicken Curry",
+    "Malai Kofta",
+    "Mixed Veg Curry",
+    "Miyabhai Special Curry",
+    "Miyabhai Special Curry (Full)",
+    "Miyabhai Special Curry (Half)",
+    "Murgh Musallam",
+    "Mushroom Masala",
+    "Mushroom Masala Dry",
+    "Paneer Masala Dry",
+    "Punjabi Chicken",
+    "Achi Pulusu (Meal Item)",
+    "Curd (Meal Item)",
+    "Dal (Meal Item)",
+    "Dum Fry (Meal Item)",
+    "Egg Burji with Puri",
+    "Gutti Vankaya Curry with Bagara Rice",
+    "Military Mutton",
+    "Mutton Dalja with Bagara Rice",
+    "Nallamala Naatu Kodi Pulusu",
+    "Nellore Chutney (Meal Item)",
+    "Oil Fry (Meal Item)",
+    "Papad (Meal Item)",
+    "Rasam (Meal Item)",
+    "Rice to Sweet (Meal Item)",
+    "Rice Tomato with Egg Curry",
+    "Rice with Naatu Kodi Pulusu",
+    "Roti Chutney (Meal Item)",
+    "Sambar (Meal Item)",
+    "Veg Curries (Meal Item)",
+    "Miyabhai Special Shawarma",
+    "Regular Chicken Shawarma",
+    "Special Chicken Shawarma",
+    "Veg Shawarma",
+    "Aloo Parota",
+    "Black Bean Chicken",
+    "Butter Naan",
+    "Butter Roti",
+    "Chicken Hong Kong",
+    "Chicken Majestic",
+    "Chicken Pepper Salt",
+    "Chicken Spring Roll",
+    "Chili Baby Corn Dry",
+    "Chili Chicken",
+    "Chili Fish",
+    "Chili Manchuria",
+    "Chili Paneer",
+    "Chili Prawns",
+    "Dragon Chicken",
+    "Fish 65",
+    "Fish Dry",
+    "Fish Roast",
+    "Garlic Chicken",
+    "Garlic Naan",
+    "Kung Fu Chicken",
+    "Lemon Chicken",
+    "Loose Prawns",
+    "Masala Kulcha",
+    "Palan Roti",
+    "Paneer Kulcha",
+    "Plain Naan",
+    "Plum Chicken",
+    "Podina Parota",
+    "Vastar Chili Chicken",
+    "Butter Dosa",
+    "Carrot Idli",
+    "Egg Dosa",
+    "Ghee Dosa",
+    "Ghee Karani Dosa",
+    "Ghee Kerala Idli",
+    "Ghee Masala Dosa",
+    "Idli with Ghee",
+    "Kanchipuram Idli",
+    "Masala Pesara Dosa",
+    "Masala Puri Curry",
+    "Masala Rava Dosa",
+    "Masala Uttappam",
+    "MLA Prasad Dosa",
+    "Mutton Kheema Dosa",
+    "Mysore Bajji",
+    "Onion Pesara Dosa",
+    "Palak Idli",
+    "Palak Puri",
+    "Paneer Butter Dosa",
+    "Paneer Dosa",
+    "Pesara Dosa",
+    "Pizza Dosa",
+    "Plain Dosa",
+    "Pudina Idli",
+    "Puri",
+    "Puri Curry",
+    "Puri with Chicken Curry",
+    "Puri with Egg Burji",
+    "Puri with Mutton Kheema",
+    "Ragi Dosa",
+    "Ragi Idli",
+    "Ragi Masala Dosa",
+    "Sawadeen Idli",
+    "Set Dosa",
+    "Tawa Idli",
+    "Tawa Mysore Bajji",
+    "Tawa Vada",
+    "Uttappa",
+    "4pc",
+    "family",
+    "full",
+    "jumbo",
+    "Chicken Mandi (Mini)",
+    "Chicken Mandi (Half)",
+    "Chicken Mandi (3-piece)",
+    "Chicken Mandi (Full)",
+    "Chicken Juicy Mandi (Mini)",
+    "Chicken Juicy Mandi (Half)",
+    "Chicken Juicy Mandi (3-piece)",
+    "Chicken Juicy Mandi (Full)",
+    "Broasted Mandi (Mini)",
+    "Broasted Mandi (Half)",
+    "Broasted Mandi (3-piece)",
+    "Broasted Mandi (Full)",
+    "Tandoori Chicken Mandi (Half)",
+    "Tandoori Chicken Mandi (Full)",
+    "Nizami Mutton Mandi (Mini)",
+    "Nizami Mutton Mandi (Half)",
+    "Nizami Mutton Mandi (3-piece)",
+    "Nizami Mutton Mandi (Full)",
+    "Juicy Mutton Mandi (Mini)",
+    "Juicy Mutton Mandi (Half)",
+    "Juicy Mutton Mandi (3-piece)",
+    "Juicy Mutton Mandi (Full)",
+    "Special Mutton Masala Mandi (Half)",
+    "Special Mutton Masala Mandi (Full)",
+    "Fish Mandi (Half)",
+    "Fish Mandi (Full)",
+    "Mix Mandi (4 members)",
+    "Single Chicken Biryani",
+    "Full Chicken Biryani",
+    "Chicken Biryani FP",
+    "Chicken Jumbo Pack",
+    "Chicken Fry Piece Biryani FP",
+    "Extra Biryani Rice",
+    "Extra One Chicken Piece",
+    "Mutton Biryani Single",
+    "Mutton Biryani Full",
+    "Mutton Biryani FP",
+    "Curd Rice"
+  ],
+  "ambiguous": []
+}

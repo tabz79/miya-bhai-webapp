@@ -1,0 +1,1129 @@
+{
+  "parsed": true,
+  "parseError": null,
+  "itemsBefore": 289,
+  "itemsAfter": 289,
+  "duplicatesFound": [],
+  "duplicatesResolved": [],
+  "imagesNormalized": 0,
+  "imagesWithBackslashes": [],
+  "missingImages": [],
+  "nestedRawIdFixed": [
+    {
+      "id": "juice-apple",
+      "newRawId": "juice-apple-raw"
+    },
+    {
+      "id": "juice-avocado",
+      "newRawId": "juice-avocado-raw"
+    },
+    {
+      "id": "juice-banana",
+      "newRawId": "juice-banana-raw"
+    },
+    {
+      "id": "milkshake-banana",
+      "newRawId": "milkshake-banana-raw"
+    },
+    {
+      "id": "mocktail-berry-mary",
+      "newRawId": "mocktail-berry-mary-raw"
+    },
+    {
+      "id": "mocktail-blackcurrant-love",
+      "newRawId": "mocktail-blackcurrant-love-raw"
+    },
+    {
+      "id": "milkshake-blackcurrant",
+      "newRawId": "milkshake-blackcurrant-raw"
+    },
+    {
+      "id": "mocktail-blue-lagoon",
+      "newRawId": "mocktail-blue-lagoon-raw"
+    },
+    {
+      "id": "milkshake-butterscotch",
+      "newRawId": "milkshake-butterscotch-raw"
+    },
+    {
+      "id": "mocktail-chatka-orange",
+      "newRawId": "mocktail-chatka-orange-raw"
+    },
+    {
+      "id": "milkshake-chocolate",
+      "newRawId": "milkshake-chocolate-raw"
+    },
+    {
+      "id": "mocktail-cinderella",
+      "newRawId": "mocktail-cinderella-raw"
+    },
+    {
+      "id": "milkshake-cold-coffee",
+      "newRawId": "milkshake-cold-coffee-raw"
+    },
+    {
+      "id": "juice-dragon-fruit",
+      "newRawId": "juice-dragon-fruit-raw"
+    },
+    {
+      "id": "milkshake-dryfruit",
+      "newRawId": "milkshake-dryfruit-raw"
+    },
+    {
+      "id": "mocktail-fizzy-tulip",
+      "newRawId": "mocktail-fizzy-tulip-raw"
+    },
+    {
+      "id": "juice-fresh-lemon",
+      "newRawId": "juice-fresh-lemon-raw"
+    },
+    {
+      "id": "juice-mosambi",
+      "newRawId": "juice-mosambi-raw"
+    },
+    {
+      "id": "juice-grape",
+      "newRawId": "juice-grape-raw"
+    },
+    {
+      "id": "milkshake-kitkat",
+      "newRawId": "milkshake-kitkat-raw"
+    },
+    {
+      "id": "juice-lime-soda",
+      "newRawId": "juice-lime-soda-raw"
+    },
+    {
+      "id": "milkshake-mango",
+      "newRawId": "milkshake-mango-raw"
+    },
+    {
+      "id": "mocktail-mint-lemon",
+      "newRawId": "mocktail-mint-lemon-raw"
+    },
+    {
+      "id": "juice-mixed-fruit",
+      "newRawId": "juice-mixed-fruit-raw"
+    },
+    {
+      "id": "juice-muskmelon",
+      "newRawId": "juice-muskmelon-raw"
+    },
+    {
+      "id": "juice-orange",
+      "newRawId": "juice-orange-raw"
+    },
+    {
+      "id": "milkshake-oreo",
+      "newRawId": "milkshake-oreo-raw"
+    },
+    {
+      "id": "juice-pineapple",
+      "newRawId": "juice-pineapple-raw"
+    },
+    {
+      "id": "juice-pomegranate",
+      "newRawId": "juice-pomegranate-raw"
+    },
+    {
+      "id": "milkshake-strawberry",
+      "newRawId": "milkshake-strawberry-raw"
+    },
+    {
+      "id": "mocktail-sunrise",
+      "newRawId": "mocktail-sunrise-raw"
+    },
+    {
+      "id": "mocktail-tender-coconut",
+      "newRawId": "mocktail-tender-coconut-raw"
+    },
+    {
+      "id": "milkshake-vanilla",
+      "newRawId": "milkshake-vanilla-raw"
+    },
+    {
+      "id": "mocktail-virgin-margarita",
+      "newRawId": "mocktail-virgin-margarita-raw"
+    },
+    {
+      "id": "mocktail-virgin-mojito",
+      "newRawId": "mocktail-virgin-mojito-raw"
+    },
+    {
+      "id": "mocktail-virgin-pina-colada",
+      "newRawId": "mocktail-virgin-pina-colada-raw"
+    },
+    {
+      "id": "juice-watermelon",
+      "newRawId": "juice-watermelon-raw"
+    },
+    {
+      "id": "extra-biryani-rice",
+      "newRawId": "extra-biryani-rice-raw"
+    },
+    {
+      "id": "extra-one-chicken-piece",
+      "newRawId": "extra-one-chicken-piece-raw"
+    },
+    {
+      "id": "fish-biryani",
+      "newRawId": "fish-biryani-raw"
+    },
+    {
+      "id": "paneer-biryani",
+      "newRawId": "paneer-biryani-raw"
+    },
+    {
+      "id": "paneer-mandi-full",
+      "newRawId": "paneer-mandi-full-raw"
+    },
+    {
+      "id": "paneer-mandi-half",
+      "newRawId": "paneer-mandi-half-raw"
+    },
+    {
+      "id": "paneer-mandi-mini",
+      "newRawId": "paneer-mandi-mini-raw"
+    },
+    {
+      "id": "prawns-biryani",
+      "newRawId": "prawns-biryani-raw"
+    },
+    {
+      "id": "veg-baby-corn-manchuria",
+      "newRawId": "veg-baby-corn-manchuria-raw"
+    },
+    {
+      "id": "veg-baby-corn-pepper-salt",
+      "newRawId": "veg-baby-corn-pepper-salt-raw"
+    },
+    {
+      "id": "chicken-fried-rice",
+      "newRawId": "chicken-fried-rice-raw"
+    },
+    {
+      "id": "chicken-noodles",
+      "newRawId": "chicken-noodles-raw"
+    },
+    {
+      "id": "veg-chili-gobi",
+      "newRawId": "veg-chili-gobi-raw"
+    },
+    {
+      "id": "egg-fried-rice",
+      "newRawId": "egg-fried-rice-raw"
+    },
+    {
+      "id": "egg-noodles",
+      "newRawId": "egg-noodles-raw"
+    },
+    {
+      "id": "veg-gobi-65",
+      "newRawId": "veg-gobi-65-raw"
+    },
+    {
+      "id": "veg-gobi-manchuria-dry",
+      "newRawId": "veg-gobi-manchuria-dry-raw"
+    },
+    {
+      "id": "kaju-fried-rice",
+      "newRawId": "kaju-fried-rice-raw"
+    },
+    {
+      "id": "kaju-noodles",
+      "newRawId": "kaju-noodles-raw"
+    },
+    {
+      "id": "manchuria-fried-rice",
+      "newRawId": "manchuria-fried-rice-raw"
+    },
+    {
+      "id": "manchuria-noodles",
+      "newRawId": "manchuria-noodles-raw"
+    },
+    {
+      "id": "paneer-fried-rice",
+      "newRawId": "paneer-fried-rice-raw"
+    },
+    {
+      "id": "paneer-noodles",
+      "newRawId": "paneer-noodles-raw"
+    },
+    {
+      "id": "nonveg-schezwan-chicken",
+      "newRawId": "nonveg-schezwan-chicken-raw"
+    },
+    {
+      "id": "veg-fried-rice",
+      "newRawId": "veg-fried-rice-raw"
+    },
+    {
+      "id": "veg-manchuria-fried-rice",
+      "newRawId": "veg-manchuria-fried-rice-raw"
+    },
+    {
+      "id": "veg-noodles",
+      "newRawId": "veg-noodles-raw"
+    },
+    {
+      "id": "coconut-chutney",
+      "newRawId": "coconut-chutney-raw"
+    },
+    {
+      "id": "ginger-chutney",
+      "newRawId": "ginger-chutney-raw"
+    },
+    {
+      "id": "rasam-chutney",
+      "newRawId": "rasam-chutney-raw"
+    },
+    {
+      "id": "sambar-chutney",
+      "newRawId": "sambar-chutney-raw"
+    },
+    {
+      "id": "aloo-tikki-burger",
+      "newRawId": "aloo-tikki-burger-raw"
+    },
+    {
+      "id": "bbq-paneer-pizza",
+      "newRawId": "bbq-paneer-pizza-raw"
+    },
+    {
+      "id": "bbq-paneer-sandwich",
+      "newRawId": "bbq-paneer-sandwich-raw"
+    },
+    {
+      "id": "cheese-masala-sandwich",
+      "newRawId": "cheese-masala-sandwich-raw"
+    },
+    {
+      "id": "chicken-cheese-burger",
+      "newRawId": "chicken-cheese-burger-raw"
+    },
+    {
+      "id": "chicken-club-sandwich",
+      "newRawId": "chicken-club-sandwich-raw"
+    },
+    {
+      "id": "chicken-pizza",
+      "newRawId": "chicken-pizza-raw"
+    },
+    {
+      "id": "corn-sandwich",
+      "newRawId": "corn-sandwich-raw"
+    },
+    {
+      "id": "crazy-cheese-burger",
+      "newRawId": "crazy-cheese-burger-raw"
+    },
+    {
+      "id": "grilled-paneer-sandwich",
+      "newRawId": "grilled-paneer-sandwich-raw"
+    },
+    {
+      "id": "grilled-wedge-sandwich",
+      "newRawId": "grilled-wedge-sandwich-raw"
+    },
+    {
+      "id": "margherita-pizza",
+      "newRawId": "margherita-pizza-raw"
+    },
+    {
+      "id": "mix-wedge-grilled-sandwich",
+      "newRawId": "mix-wedge-grilled-sandwich-raw"
+    },
+    {
+      "id": "paneer-cheese-burger",
+      "newRawId": "paneer-cheese-burger-raw"
+    },
+    {
+      "id": "paneer-pizza",
+      "newRawId": "paneer-pizza-raw"
+    },
+    {
+      "id": "spot-wedge-burger",
+      "newRawId": "spot-wedge-burger-raw"
+    },
+    {
+      "id": "sweet-corn-pizza",
+      "newRawId": "sweet-corn-pizza-raw"
+    },
+    {
+      "id": "wedge-delight-pizza",
+      "newRawId": "wedge-delight-pizza-raw"
+    },
+    {
+      "id": "tandoori-achari-chicken-tikka-full",
+      "newRawId": "tandoori-achari-chicken-tikka-full-raw"
+    },
+    {
+      "id": "tandoori-achari-chicken-tikka-half",
+      "newRawId": "tandoori-achari-chicken-tikka-half-raw"
+    },
+    {
+      "id": "banjara-kebab-boneless",
+      "newRawId": "banjara-kebab-boneless-raw"
+    },
+    {
+      "id": "tandoori-ch-ch-kebab-full",
+      "newRawId": "tandoori-ch-ch-kebab-full-raw"
+    },
+    {
+      "id": "tandoori-ch-ch-kebab-half",
+      "newRawId": "tandoori-ch-ch-kebab-half-raw"
+    },
+    {
+      "id": "chicken-tikka-boneless-6pc",
+      "newRawId": "chicken-tikka-boneless-6pc-raw"
+    },
+    {
+      "id": "tandoori-chicken-tikka-full",
+      "newRawId": "tandoori-chicken-tikka-full-raw"
+    },
+    {
+      "id": "tandoori-chicken-tikka-half",
+      "newRawId": "tandoori-chicken-tikka-half-raw"
+    },
+    {
+      "id": "tandoori-grilled-chicken-full",
+      "newRawId": "tandoori-grilled-chicken-full-raw"
+    },
+    {
+      "id": "tandoori-grilled-chicken-half",
+      "newRawId": "tandoori-grilled-chicken-half-raw"
+    },
+    {
+      "id": "hariyali-boneless",
+      "newRawId": "hariyali-boneless-raw"
+    },
+    {
+      "id": "tandoori-hariyali-kebab-full",
+      "newRawId": "tandoori-hariyali-kebab-full-raw"
+    },
+    {
+      "id": "tandoori-hariyali-kebab-half",
+      "newRawId": "tandoori-hariyali-kebab-half-raw"
+    },
+    {
+      "id": "tandoori-malai-kebab-full",
+      "newRawId": "tandoori-malai-kebab-full-raw"
+    },
+    {
+      "id": "tandoori-malai-kebab-half",
+      "newRawId": "tandoori-malai-kebab-half-raw"
+    },
+    {
+      "id": "tandoori-murukh-musallam-full",
+      "newRawId": "tandoori-murukh-musallam-full-raw"
+    },
+    {
+      "id": "tandoori-murukh-musallam-half",
+      "newRawId": "tandoori-murukh-musallam-half-raw"
+    },
+    {
+      "id": "reshmi-kebab",
+      "newRawId": "reshmi-kebab-raw"
+    },
+    {
+      "id": "tandoori-reshmi-kebab-full",
+      "newRawId": "tandoori-reshmi-kebab-full-raw"
+    },
+    {
+      "id": "tandoori-reshmi-kebab-half",
+      "newRawId": "tandoori-reshmi-kebab-half-raw"
+    },
+    {
+      "id": "tandoori-tandoori-chicken-full",
+      "newRawId": "tandoori-tandoori-chicken-full-raw"
+    },
+    {
+      "id": "tandoori-tandoori-chicken-half",
+      "newRawId": "tandoori-tandoori-chicken-half-raw"
+    },
+    {
+      "id": "tandoori-tangdi-kebab-full",
+      "newRawId": "tandoori-tangdi-kebab-full-raw"
+    },
+    {
+      "id": "tandoori-tangdi-kebab-half",
+      "newRawId": "tandoori-tangdi-kebab-half-raw"
+    },
+    {
+      "id": "butter-chicken",
+      "newRawId": "butter-chicken-raw"
+    },
+    {
+      "id": "chana-masala",
+      "newRawId": "chana-masala-raw"
+    },
+    {
+      "id": "chicken-chettinad",
+      "newRawId": "chicken-chettinad-raw"
+    },
+    {
+      "id": "chicken-kolhapuri",
+      "newRawId": "chicken-kolhapuri-raw"
+    },
+    {
+      "id": "chicken-masala",
+      "newRawId": "chicken-masala-raw"
+    },
+    {
+      "id": "chicken-pepper-fry",
+      "newRawId": "chicken-pepper-fry-raw"
+    },
+    {
+      "id": "chicken-tikka-masala",
+      "newRawId": "chicken-tikka-masala-raw"
+    },
+    {
+      "id": "veg-chili-mushroom-dry",
+      "newRawId": "veg-chili-mushroom-dry-raw"
+    },
+    {
+      "id": "dal-fried",
+      "newRawId": "dal-fried-raw"
+    },
+    {
+      "id": "dal-tadka",
+      "newRawId": "dal-tadka-raw"
+    },
+    {
+      "id": "dum-chicken",
+      "newRawId": "dum-chicken-raw"
+    },
+    {
+      "id": "green-peas-masala",
+      "newRawId": "green-peas-masala-raw"
+    },
+    {
+      "id": "kadai-chicken",
+      "newRawId": "kadai-chicken-raw"
+    },
+    {
+      "id": "kadai-paneer",
+      "newRawId": "kadai-paneer-raw"
+    },
+    {
+      "id": "kaju-paneer",
+      "newRawId": "kaju-paneer-raw"
+    },
+    {
+      "id": "kaju-paneer-masala",
+      "newRawId": "kaju-paneer-masala-raw"
+    },
+    {
+      "id": "kaju-tomato",
+      "newRawId": "kaju-tomato-raw"
+    },
+    {
+      "id": "malabar-chicken-curry",
+      "newRawId": "malabar-chicken-curry-raw"
+    },
+    {
+      "id": "malai-kofta",
+      "newRawId": "malai-kofta-raw"
+    },
+    {
+      "id": "mixed-veg-curry",
+      "newRawId": "mixed-veg-curry-raw"
+    },
+    {
+      "id": "miyabhai-special-curry",
+      "newRawId": "miyabhai-special-curry-raw"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-full",
+      "newRawId": "tandoori-miyabhai-special-curry-full-raw"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-half",
+      "newRawId": "tandoori-miyabhai-special-curry-half-raw"
+    },
+    {
+      "id": "murgh-musallam",
+      "newRawId": "murgh-musallam-raw"
+    },
+    {
+      "id": "mushroom-masala",
+      "newRawId": "mushroom-masala-raw"
+    },
+    {
+      "id": "veg-mushroom-masala-dry",
+      "newRawId": "veg-mushroom-masala-dry-raw"
+    },
+    {
+      "id": "paneer-butter-masala",
+      "newRawId": "paneer-butter-masala-raw"
+    },
+    {
+      "id": "veg-paneer-masala-dry",
+      "newRawId": "veg-paneer-masala-dry-raw"
+    },
+    {
+      "id": "punjabi-chicken",
+      "newRawId": "punjabi-chicken-raw"
+    },
+    {
+      "id": "achi-pulusu",
+      "newRawId": "achi-pulusu-raw"
+    },
+    {
+      "id": "ankapur-naatu-kodi-pulusu",
+      "newRawId": "ankapur-naatu-kodi-pulusu-raw"
+    },
+    {
+      "id": "bagara-rice-with-naatu-kodi",
+      "newRawId": "bagara-rice-with-naatu-kodi-raw"
+    },
+    {
+      "id": "bagara-rice-with-talakayi-curry",
+      "newRawId": "bagara-rice-with-talakayi-curry-raw"
+    },
+    {
+      "id": "curd",
+      "newRawId": "curd-raw"
+    },
+    {
+      "id": "dal",
+      "newRawId": "dal-raw"
+    },
+    {
+      "id": "dum-fry",
+      "newRawId": "dum-fry-raw"
+    },
+    {
+      "id": "egg-burji-with-puri",
+      "newRawId": "egg-burji-with-puri-raw"
+    },
+    {
+      "id": "gutti-vankaya-curry-bagara-rice",
+      "newRawId": "gutti-vankaya-curry-bagara-rice-raw"
+    },
+    {
+      "id": "military-mutton",
+      "newRawId": "military-mutton-raw"
+    },
+    {
+      "id": "mutton-dalja-with-bagara-rice",
+      "newRawId": "mutton-dalja-with-bagara-rice-raw"
+    },
+    {
+      "id": "nallamala-naatu-kodi-pulusu",
+      "newRawId": "nallamala-naatu-kodi-pulusu-raw"
+    },
+    {
+      "id": "nellore-chutney",
+      "newRawId": "nellore-chutney-raw"
+    },
+    {
+      "id": "nellore-vari-chepala-pulusu",
+      "newRawId": "nellore-vari-chepala-pulusu-raw"
+    },
+    {
+      "id": "oil-fry",
+      "newRawId": "oil-fry-raw"
+    },
+    {
+      "id": "papad",
+      "newRawId": "papad-raw"
+    },
+    {
+      "id": "rasam",
+      "newRawId": "rasam-raw"
+    },
+    {
+      "id": "meal-1-rice-to-sweet",
+      "newRawId": "meal-1-rice-to-sweet-raw"
+    },
+    {
+      "id": "rice-tomato-with-egg-curry",
+      "newRawId": "rice-tomato-with-egg-curry-raw"
+    },
+    {
+      "id": "rice-with-egg-curry-sambar",
+      "newRawId": "rice-with-egg-curry-sambar-raw"
+    },
+    {
+      "id": "rice-with-naatu-kodi-pulusu",
+      "newRawId": "rice-with-naatu-kodi-pulusu-raw"
+    },
+    {
+      "id": "roti-chutney",
+      "newRawId": "roti-chutney-raw"
+    },
+    {
+      "id": "sambar",
+      "newRawId": "sambar-raw"
+    },
+    {
+      "id": "veg-curries-meal",
+      "newRawId": "veg-curries-meal-raw"
+    },
+    {
+      "id": "miyabhai-special-shawarma",
+      "newRawId": "miyabhai-special-shawarma-raw"
+    },
+    {
+      "id": "paneer-shawarma",
+      "newRawId": "paneer-shawarma-raw"
+    },
+    {
+      "id": "regular-chicken-shawarma",
+      "newRawId": "regular-chicken-shawarma-raw"
+    },
+    {
+      "id": "special-chicken-shawarma",
+      "newRawId": "special-chicken-shawarma-raw"
+    },
+    {
+      "id": "veg-shawarma",
+      "newRawId": "veg-shawarma-raw"
+    },
+    {
+      "id": "rotis-aloo-parota",
+      "newRawId": "rotis-aloo-parota-raw"
+    },
+    {
+      "id": "seafood-apollo-fish",
+      "newRawId": "seafood-apollo-fish-raw"
+    },
+    {
+      "id": "nonveg-blackbean-chicken",
+      "newRawId": "nonveg-blackbean-chicken-raw"
+    },
+    {
+      "id": "rotis-butter-naan",
+      "newRawId": "rotis-butter-naan-raw"
+    },
+    {
+      "id": "rotis-butter-roti",
+      "newRawId": "rotis-butter-roti-raw"
+    },
+    {
+      "id": "nonveg-chicken-65",
+      "newRawId": "nonveg-chicken-65-raw"
+    },
+    {
+      "id": "nonveg-chicken-hongkong",
+      "newRawId": "nonveg-chicken-hongkong-raw"
+    },
+    {
+      "id": "nonveg-chicken-lollipop",
+      "newRawId": "nonveg-chicken-lollipop-raw"
+    },
+    {
+      "id": "nonveg-chicken-majestic",
+      "newRawId": "nonveg-chicken-majestic-raw"
+    },
+    {
+      "id": "nonveg-chicken-pepper-salt",
+      "newRawId": "nonveg-chicken-pepper-salt-raw"
+    },
+    {
+      "id": "seafood-chicken-spring-roll",
+      "newRawId": "seafood-chicken-spring-roll-raw"
+    },
+    {
+      "id": "nonveg-chicken-wings",
+      "newRawId": "nonveg-chicken-wings-raw"
+    },
+    {
+      "id": "veg-chili-baby-corn-dry",
+      "newRawId": "veg-chili-baby-corn-dry-raw"
+    },
+    {
+      "id": "nonveg-chili-chicken",
+      "newRawId": "nonveg-chili-chicken-raw"
+    },
+    {
+      "id": "seafood-chili-fish",
+      "newRawId": "seafood-chili-fish-raw"
+    },
+    {
+      "id": "nonveg-chili-manchuria",
+      "newRawId": "nonveg-chili-manchuria-raw"
+    },
+    {
+      "id": "veg-chili-paneer",
+      "newRawId": "veg-chili-paneer-raw"
+    },
+    {
+      "id": "seafood-chili-prawns",
+      "newRawId": "seafood-chili-prawns-raw"
+    },
+    {
+      "id": "nonveg-dragon-chicken",
+      "newRawId": "nonveg-dragon-chicken-raw"
+    },
+    {
+      "id": "seafood-fish-65",
+      "newRawId": "seafood-fish-65-raw"
+    },
+    {
+      "id": "seafood-fish-dry",
+      "newRawId": "seafood-fish-dry-raw"
+    },
+    {
+      "id": "seafood-fish-roast",
+      "newRawId": "seafood-fish-roast-raw"
+    },
+    {
+      "id": "nonveg-garlic-chicken",
+      "newRawId": "nonveg-garlic-chicken-raw"
+    },
+    {
+      "id": "rotis-garlic-naan",
+      "newRawId": "rotis-garlic-naan-raw"
+    },
+    {
+      "id": "nonveg-kungfu-chicken",
+      "newRawId": "nonveg-kungfu-chicken-raw"
+    },
+    {
+      "id": "nonveg-lemon-chicken",
+      "newRawId": "nonveg-lemon-chicken-raw"
+    },
+    {
+      "id": "seafood-loose-prawns",
+      "newRawId": "seafood-loose-prawns-raw"
+    },
+    {
+      "id": "rotis-masala-kulcha",
+      "newRawId": "rotis-masala-kulcha-raw"
+    },
+    {
+      "id": "rotis-palan-roti",
+      "newRawId": "rotis-palan-roti-raw"
+    },
+    {
+      "id": "veg-paneer-65",
+      "newRawId": "veg-paneer-65-raw"
+    },
+    {
+      "id": "rotis-paneer-kulcha",
+      "newRawId": "rotis-paneer-kulcha-raw"
+    },
+    {
+      "id": "rotis-plain-naan",
+      "newRawId": "rotis-plain-naan-raw"
+    },
+    {
+      "id": "nonveg-plum-chicken",
+      "newRawId": "nonveg-plum-chicken-raw"
+    },
+    {
+      "id": "rotis-podina-parota",
+      "newRawId": "rotis-podina-parota-raw"
+    },
+    {
+      "id": "seafood-prawns-manchuria",
+      "newRawId": "seafood-prawns-manchuria-raw"
+    },
+    {
+      "id": "butter-dosa",
+      "newRawId": "butter-dosa-raw"
+    },
+    {
+      "id": "carrot-idli",
+      "newRawId": "carrot-idli-raw"
+    },
+    {
+      "id": "egg-dosa",
+      "newRawId": "egg-dosa-raw"
+    },
+    {
+      "id": "ghee-dosa",
+      "newRawId": "ghee-dosa-raw"
+    },
+    {
+      "id": "ghee-karani-dosa",
+      "newRawId": "ghee-karani-dosa-raw"
+    },
+    {
+      "id": "ghee-kerala-idli",
+      "newRawId": "ghee-kerala-idli-raw"
+    },
+    {
+      "id": "ghee-masala-dosa",
+      "newRawId": "ghee-masala-dosa-raw"
+    },
+    {
+      "id": "idli",
+      "newRawId": "idli-raw"
+    },
+    {
+      "id": "idli-with-ghee",
+      "newRawId": "idli-with-ghee-raw"
+    },
+    {
+      "id": "kanchipuram-idli",
+      "newRawId": "kanchipuram-idli-raw"
+    },
+    {
+      "id": "masala-dosa",
+      "newRawId": "masala-dosa-raw"
+    },
+    {
+      "id": "masala-pesara-dosa",
+      "newRawId": "masala-pesara-dosa-raw"
+    },
+    {
+      "id": "masala-puri-curry",
+      "newRawId": "masala-puri-curry-raw"
+    },
+    {
+      "id": "masala-rava-dosa",
+      "newRawId": "masala-rava-dosa-raw"
+    },
+    {
+      "id": "masala-uttappam",
+      "newRawId": "masala-uttappam-raw"
+    },
+    {
+      "id": "mla-prasad-dosa",
+      "newRawId": "mla-prasad-dosa-raw"
+    },
+    {
+      "id": "mutton-kheema-dosa",
+      "newRawId": "mutton-kheema-dosa-raw"
+    },
+    {
+      "id": "mysore-bajji",
+      "newRawId": "mysore-bajji-raw"
+    },
+    {
+      "id": "onion-dosa",
+      "newRawId": "onion-dosa-raw"
+    },
+    {
+      "id": "onion-pesara-dosa",
+      "newRawId": "onion-pesara-dosa-raw"
+    },
+    {
+      "id": "palak-idli",
+      "newRawId": "palak-idli-raw"
+    },
+    {
+      "id": "palak-puri",
+      "newRawId": "palak-puri-raw"
+    },
+    {
+      "id": "paneer-butter-dosa",
+      "newRawId": "paneer-butter-dosa-raw"
+    },
+    {
+      "id": "paneer-dosa",
+      "newRawId": "paneer-dosa-raw"
+    },
+    {
+      "id": "pesara-dosa",
+      "newRawId": "pesara-dosa-raw"
+    },
+    {
+      "id": "pizza-dosa",
+      "newRawId": "pizza-dosa-raw"
+    },
+    {
+      "id": "plain-dosa",
+      "newRawId": "plain-dosa-raw"
+    },
+    {
+      "id": "pudina-idli",
+      "newRawId": "pudina-idli-raw"
+    },
+    {
+      "id": "puri",
+      "newRawId": "puri-raw"
+    },
+    {
+      "id": "puri-curry",
+      "newRawId": "puri-curry-raw"
+    },
+    {
+      "id": "puri-with-chicken-curry",
+      "newRawId": "puri-with-chicken-curry-raw"
+    },
+    {
+      "id": "puri-with-egg-burji",
+      "newRawId": "puri-with-egg-burji-raw"
+    },
+    {
+      "id": "puri-with-mutton-kheema",
+      "newRawId": "puri-with-mutton-kheema-raw"
+    },
+    {
+      "id": "ragi-dosa",
+      "newRawId": "ragi-dosa-raw"
+    },
+    {
+      "id": "ragi-idli",
+      "newRawId": "ragi-idli-raw"
+    },
+    {
+      "id": "ragi-masala-dosa",
+      "newRawId": "ragi-masala-dosa-raw"
+    },
+    {
+      "id": "rava-dosa",
+      "newRawId": "rava-dosa-raw"
+    },
+    {
+      "id": "sawadeen-idli",
+      "newRawId": "sawadeen-idli-raw"
+    },
+    {
+      "id": "set-dosa",
+      "newRawId": "set-dosa-raw"
+    },
+    {
+      "id": "tawa-idli",
+      "newRawId": "tawa-idli-raw"
+    },
+    {
+      "id": "tawa-mysore-bajji",
+      "newRawId": "tawa-mysore-bajji-raw"
+    },
+    {
+      "id": "tawa-vada",
+      "newRawId": "tawa-vada-raw"
+    },
+    {
+      "id": "uttappa",
+      "newRawId": "uttappa-raw"
+    },
+    {
+      "id": "vada",
+      "newRawId": "vada-raw"
+    },
+    {
+      "id": "4pc",
+      "newRawId": "4pc-raw"
+    },
+    {
+      "id": "family",
+      "newRawId": "family-raw"
+    },
+    {
+      "id": "full",
+      "newRawId": "full-raw"
+    },
+    {
+      "id": "jumbo",
+      "newRawId": "jumbo-raw"
+    },
+    {
+      "id": "mandi-chicken-mini",
+      "newRawId": "mandi-chicken-mini-raw"
+    },
+    {
+      "id": "mandi-chicken-half",
+      "newRawId": "mandi-chicken-half-raw"
+    },
+    {
+      "id": "mandi-chicken-3piece",
+      "newRawId": "mandi-chicken-3piece-raw"
+    },
+    {
+      "id": "mandi-chicken-full",
+      "newRawId": "mandi-chicken-full-raw"
+    },
+    {
+      "id": "mandi-chicken-juicy-mini",
+      "newRawId": "mandi-chicken-juicy-mini-raw"
+    },
+    {
+      "id": "mandi-chicken-juicy-half",
+      "newRawId": "mandi-chicken-juicy-half-raw"
+    },
+    {
+      "id": "mandi-chicken-juicy-3piece",
+      "newRawId": "mandi-chicken-juicy-3piece-raw"
+    },
+    {
+      "id": "mandi-chicken-juicy-full",
+      "newRawId": "mandi-chicken-juicy-full-raw"
+    },
+    {
+      "id": "mandi-broasted-mini",
+      "newRawId": "mandi-broasted-mini-raw"
+    },
+    {
+      "id": "mandi-broasted-half",
+      "newRawId": "mandi-broasted-half-raw"
+    },
+    {
+      "id": "mandi-broasted-3piece",
+      "newRawId": "mandi-broasted-3piece-raw"
+    },
+    {
+      "id": "mandi-broasted-full",
+      "newRawId": "mandi-broasted-full-raw"
+    },
+    {
+      "id": "mandi-tandoori-half",
+      "newRawId": "mandi-tandoori-half-raw"
+    },
+    {
+      "id": "mandi-tandoori-full",
+      "newRawId": "mandi-tandoori-full-raw"
+    },
+    {
+      "id": "mandi-mutton-mini",
+      "newRawId": "mandi-mutton-mini-raw"
+    },
+    {
+      "id": "mandi-mutton-half",
+      "newRawId": "mandi-mutton-half-raw"
+    },
+    {
+      "id": "mandi-mutton-3piece",
+      "newRawId": "mandi-mutton-3piece-raw"
+    },
+    {
+      "id": "mandi-mutton-full",
+      "newRawId": "mandi-mutton-full-raw"
+    },
+    {
+      "id": "mandi-mutton-juice-mini",
+      "newRawId": "mandi-mutton-juice-mini-raw"
+    },
+    {
+      "id": "mandi-mutton-juice-half",
+      "newRawId": "mandi-mutton-juice-half-raw"
+    },
+    {
+      "id": "mandi-mutton-juice-3piece",
+      "newRawId": "mandi-mutton-juice-3piece-raw"
+    },
+    {
+      "id": "mandi-mutton-juice-full",
+      "newRawId": "mandi-mutton-juice-full-raw"
+    },
+    {
+      "id": "mandi-special-mutton-half",
+      "newRawId": "mandi-special-mutton-half-raw"
+    },
+    {
+      "id": "mandi-special-mutton-full",
+      "newRawId": "mandi-special-mutton-full-raw"
+    },
+    {
+      "id": "mandi-fish-half",
+      "newRawId": "mandi-fish-half-raw"
+    },
+    {
+      "id": "mandi-fish-full",
+      "newRawId": "mandi-fish-full-raw"
+    },
+    {
+      "id": "mandi-mix-4p",
+      "newRawId": "mandi-mix-4p-raw"
+    },
+    {
+      "id": "curd-rice",
+      "newRawId": "curd-rice-raw"
+    }
+  ]
+}
