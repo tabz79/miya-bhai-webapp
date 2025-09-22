@@ -16,8 +16,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 60,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -37,8 +38,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 119,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -58,8 +60,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -79,8 +82,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 70,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -100,8 +104,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -121,8 +126,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -142,8 +148,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -163,8 +170,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -184,8 +192,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 90,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -205,8 +214,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 99,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -226,8 +236,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -247,8 +258,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -268,8 +280,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -289,8 +302,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 80,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -310,8 +324,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 99,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -331,8 +346,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -352,8 +368,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -373,8 +390,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -394,8 +412,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -415,8 +434,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": "client/src/assets/raw/KitKat Milkshake.png",
-      "tier": 3
+      "image": "/images/menu/KitKat Milkshake.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -436,8 +456,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -457,8 +478,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 90,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -478,8 +500,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 69,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -499,8 +522,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 80,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -520,8 +544,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -541,8 +566,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -562,8 +588,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 90,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -583,8 +610,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": "client/src/assets/raw/Pineapple Juice.png",
-      "tier": 3
+      "image": "/images/menu/Pineapple Juice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -604,8 +632,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 60,
-      "image": "client/src/assets/raw/Pomegranate Juice.png",
-      "tier": 3
+      "image": "/images/menu/Pomegranate Juice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -625,8 +654,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": "client/src/assets/raw/Strawberry Milkshake.png",
-      "tier": 3
+      "image": "/images/menu/Strawberry Milkshake.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -646,8 +676,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 89,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -667,8 +698,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 99,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -688,8 +720,9 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 70,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -709,8 +742,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 99,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -730,8 +764,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 69,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -751,8 +786,9 @@
       "category": "Beverages",
       "subCategory": "Mocktails",
       "price": 79,
-      "image": null,
-      "tier": 3
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -772,8 +808,9 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": "client/src/assets/raw/Watermelon Juice.png",
-      "tier": 3
+      "image": "/images/menu/Watermelon Juice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -789,15 +826,14 @@
     "available": true,
     "raw": {
       "id": "extra-biryani-rice-raw",
-      "category": "Main Course",
-      "subcategory": "Nizami Chicken Dum Biryani",
-      "title": "Extra Biryani Rice",
-      "description": "Extra portion of biryani rice",
-      "image": null,
+      "name": "Extra Biryani Rice",
+      "category": "Biryani",
+      "subCategory": "Nizami Chicken Dum Biryani",
       "price": 80,
-      "available": true
-    },
-    "_oldCategory": "Main Course"
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "extra-one-chicken-piece",
@@ -812,15 +848,14 @@
     "available": true,
     "raw": {
       "id": "extra-one-chicken-piece-raw",
+      "name": "Extra One Chicken Piece",
       "category": "Biryani",
-      "subcategory": "Nizami Chicken Dum Biryani",
-      "title": "Extra One Chicken Piece",
-      "description": "Extra chicken Piece",
-      "image": "client/src/assets/raw/Tandoori Chicken.png",
+      "subCategory": "Nizami Chicken Dum Biryani",
       "price": 60,
-      "available": true
-    },
-    "_oldCategory": "Main Course"
+      "image": "/images/menu/Tandoori Chicken.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "fish-biryani",
@@ -835,15 +870,14 @@
     "available": true,
     "raw": {
       "id": "fish-biryani-raw",
-      "category": "Main Course",
-      "subcategory": "Seafood Biryani",
-      "title": "Fish Biryani",
-      "description": "Spiced fish biryani",
-      "image": "client/src/assets/raw/Fish Biryani.png",
+      "name": "Fish Biryani",
+      "category": "Biryani",
+      "subCategory": "Seafood Biryani",
       "price": 250,
-      "available": true
-    },
-    "_oldCategory": "Main Course"
+      "image": "/images/menu/Fish Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "paneer-biryani",
@@ -858,15 +892,14 @@
     "available": true,
     "raw": {
       "id": "paneer-biryani-raw",
-      "category": "Main Course",
-      "subcategory": "Veg Biryani",
-      "title": "Paneer Biryani",
-      "description": "Flavorful paneer biryani",
-      "image": "client/src/assets/raw/Paneer Biryani.png",
+      "name": "Paneer Biryani",
+      "category": "Biryani",
+      "subCategory": "Veg Biryani",
       "price": 200,
-      "available": true
-    },
-    "_oldCategory": "Main Course"
+      "image": "/images/menu/Paneer Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "paneer-mandi-full",
@@ -881,15 +914,14 @@
     "available": true,
     "raw": {
       "id": "paneer-mandi-full-raw",
-      "category": "Main Course",
-      "subcategory": "Veg Biryani",
-      "title": "Paneer Mandi (Full)",
-      "description": "Full paneer mandi",
-      "image": null,
+      "name": "Paneer Mandi (Full)",
+      "category": "Arabian",
+      "subCategory": "Veg Biryani",
       "price": 850,
-      "available": true
-    },
-    "_oldCategory": "Biryani"
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "paneer-mandi-half",
@@ -904,15 +936,14 @@
     "available": true,
     "raw": {
       "id": "paneer-mandi-half-raw",
-      "category": "Main Course",
-      "subcategory": "Veg Biryani",
-      "title": "Paneer Mandi (Half)",
-      "description": "Half paneer mandi",
-      "image": null,
+      "name": "Paneer Mandi (Half)",
+      "category": "Arabian",
+      "subCategory": "Veg Biryani",
       "price": 450,
-      "available": true
-    },
-    "_oldCategory": "Biryani"
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "paneer-mandi-mini",
@@ -927,15 +958,14 @@
     "available": true,
     "raw": {
       "id": "paneer-mandi-mini-raw",
-      "category": "Main Course",
-      "subcategory": "Veg Biryani",
-      "title": "Paneer Mandi (Mini)",
-      "description": "Mini paneer mandi",
-      "image": null,
+      "name": "Paneer Mandi (Mini)",
+      "category": "Arabian",
+      "subCategory": "Veg Biryani",
       "price": 230,
-      "available": true
-    },
-    "_oldCategory": "Biryani"
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "prawns-biryani",
@@ -950,15 +980,14 @@
     "available": true,
     "raw": {
       "id": "prawns-biryani-raw",
-      "category": "Main Course",
-      "subcategory": "Seafood Biryani",
-      "title": "Prawns Biryani",
-      "description": "Flavorful prawns biryani",
-      "image": "client/src/assets/raw/Prawns Biryani.png",
+      "name": "Prawns Biryani",
+      "category": "Biryani",
+      "subCategory": "Seafood Biryani",
       "price": 300,
-      "available": true
-    },
-    "_oldCategory": "Main Course"
+      "image": "/images/menu/Prawns Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "veg-baby-corn-manchuria",
@@ -973,16 +1002,14 @@
     "available": true,
     "raw": {
       "id": "veg-baby-corn-manchuria-raw",
-      "category": "Starters",
-      "title": "Baby Corn Manchuria",
-      "description": "Baby corn tossed in manchurian sauce",
+      "name": "Baby Corn Manchuria",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "veg-baby-corn-pepper-salt",
@@ -997,16 +1024,14 @@
     "available": true,
     "raw": {
       "id": "veg-baby-corn-pepper-salt-raw",
-      "category": "Starters",
-      "title": "Baby Corn Pepper Salt",
-      "description": "Baby corn with pepper salt",
+      "name": "Baby Corn Pepper Salt",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "chicken-fried-rice",
@@ -1021,12 +1046,13 @@
     "available": true,
     "raw": {
       "id": "chicken-fried-rice-raw",
+      "name": "Chicken Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Chicken Fried Rice",
-      "image": "client/src/assets/raw/Chicken Fried Rice.png",
+      "subCategory": "Fried Rice",
       "price": 150,
-      "available": true
+      "image": "/images/menu/Chicken Fried Rice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1042,12 +1068,13 @@
     "available": true,
     "raw": {
       "id": "chicken-noodles-raw",
+      "name": "Chicken Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Chicken Noodles",
-      "image": "client/src/assets/raw/Chicken Noodles.png",
+      "subCategory": "Noodles",
       "price": 150,
-      "available": true
+      "image": "/images/menu/Chicken Noodles.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1063,16 +1090,14 @@
     "available": true,
     "raw": {
       "id": "veg-chili-gobi-raw",
-      "category": "Starters",
-      "title": "Chilli Gobi",
-      "description": "Cauliflower tossed in chili sauce",
+      "name": "Chilli Gobi",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "egg-fried-rice",
@@ -1087,12 +1112,13 @@
     "available": true,
     "raw": {
       "id": "egg-fried-rice-raw",
+      "name": "Egg Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Egg Fried Rice",
-      "image": "client/src/assets/raw/Egg Fried Rice.png",
+      "subCategory": "Fried Rice",
       "price": 120,
-      "available": true
+      "image": "/images/menu/Egg Fried Rice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1108,12 +1134,13 @@
     "available": true,
     "raw": {
       "id": "egg-noodles-raw",
+      "name": "Egg Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Egg Noodles",
-      "image": "client/src/assets/raw/Egg Noodles.png",
+      "subCategory": "Noodles",
       "price": 120,
-      "available": true
+      "image": "/images/menu/Egg Noodles.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1129,16 +1156,14 @@
     "available": true,
     "raw": {
       "id": "veg-gobi-65-raw",
-      "category": "Starters",
-      "title": "Gobi 65",
-      "description": "Crispy cauliflower 65",
+      "name": "Gobi 65",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Gobi Manchuria.png",
-      "isSignature": false,
+      "image": "/images/menu/Gobi Manchuria.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "veg-gobi-manchuria-dry",
@@ -1153,16 +1178,14 @@
     "available": true,
     "raw": {
       "id": "veg-gobi-manchuria-dry-raw",
-      "category": "Starters",
-      "title": "Gobi Manchuria Dry",
-      "description": "Dry manchurian gobi",
+      "name": "Gobi Manchuria Dry",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Gobi Manchuria.png",
-      "isSignature": false,
+      "image": "/images/menu/Gobi Manchuria.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "kaju-fried-rice",
@@ -1177,12 +1200,13 @@
     "available": true,
     "raw": {
       "id": "kaju-fried-rice-raw",
+      "name": "Kaju Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Kaju Fried Rice",
-      "image": null,
+      "subCategory": "Fried Rice",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1198,12 +1222,13 @@
     "available": true,
     "raw": {
       "id": "kaju-noodles-raw",
+      "name": "Kaju Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Kaju Noodles",
-      "image": null,
+      "subCategory": "Noodles",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1219,12 +1244,13 @@
     "available": true,
     "raw": {
       "id": "manchuria-fried-rice-raw",
+      "name": "Manchuria Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Manchuria Fried Rice",
-      "image": null,
+      "subCategory": "Fried Rice",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1240,12 +1266,13 @@
     "available": true,
     "raw": {
       "id": "manchuria-noodles-raw",
+      "name": "Manchuria Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Manchuria Noodles",
-      "image": null,
+      "subCategory": "Noodles",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1261,12 +1288,13 @@
     "available": true,
     "raw": {
       "id": "paneer-fried-rice-raw",
+      "name": "Paneer Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Paneer Fried Rice",
-      "image": "client/src/assets/raw/Paneer Fried Rice.png",
+      "subCategory": "Fried Rice",
       "price": 150,
-      "available": true
+      "image": "/images/menu/Paneer Fried Rice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1282,12 +1310,13 @@
     "available": true,
     "raw": {
       "id": "paneer-noodles-raw",
+      "name": "Paneer Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Paneer Noodles",
-      "image": null,
+      "subCategory": "Noodles",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1303,16 +1332,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-schezwan-chicken-raw",
-      "category": "Starters",
-      "title": "Schezwan Chicken",
-      "description": "Spicy Schezwan style chicken",
+      "name": "Schezwan Chicken",
+      "category": "Chinese",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "veg-fried-rice",
@@ -1327,12 +1354,13 @@
     "available": true,
     "raw": {
       "id": "veg-fried-rice-raw",
+      "name": "Veg Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Veg Fried Rice",
-      "image": "client/src/assets/raw/Veg Fried Rice.png",
+      "subCategory": "Fried Rice",
       "price": 100,
-      "available": true
+      "image": "/images/menu/Veg Fried Rice.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1348,12 +1376,13 @@
     "available": true,
     "raw": {
       "id": "veg-manchuria-fried-rice-raw",
+      "name": "Veg Manchuria Fried Rice",
       "category": "Chinese",
-      "subcategory": "Fried Rice",
-      "title": "Veg Manchuria Fried Rice",
-      "image": null,
+      "subCategory": "Fried Rice",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1369,12 +1398,13 @@
     "available": true,
     "raw": {
       "id": "veg-noodles-raw",
+      "name": "Veg Noodles",
       "category": "Chinese",
-      "subcategory": "Noodles",
-      "title": "Veg Noodles",
-      "image": null,
+      "subCategory": "Noodles",
       "price": 100,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1390,11 +1420,13 @@
     "available": true,
     "raw": {
       "id": "coconut-chutney-raw",
+      "name": "Coconut Chutney",
       "category": "Chutneys",
-      "title": "Coconut Chutney",
-      "image": null,
+      "subCategory": null,
       "price": 0,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1410,11 +1442,13 @@
     "available": true,
     "raw": {
       "id": "ginger-chutney-raw",
+      "name": "Ginger Chutney",
       "category": "Chutneys",
-      "title": "Ginger Chutney",
-      "image": null,
+      "subCategory": null,
       "price": 0,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1430,11 +1464,13 @@
     "available": true,
     "raw": {
       "id": "rasam-chutney-raw",
+      "name": "Rasam / Sambar (if used)",
       "category": "Chutneys",
-      "title": "Rasam / Sambar (if used)",
-      "image": null,
+      "subCategory": null,
       "price": 0,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1450,11 +1486,13 @@
     "available": true,
     "raw": {
       "id": "sambar-chutney-raw",
+      "name": "Sambar Chutney",
       "category": "Chutneys",
-      "title": "Sambar Chutney",
-      "image": null,
+      "subCategory": null,
       "price": 0,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1470,12 +1508,13 @@
     "available": true,
     "raw": {
       "id": "aloo-tikki-burger-raw",
+      "name": "Aloo Tikki Burger",
       "category": "Continental",
-      "subcategory": "Burgers",
-      "title": "Aloo Tikki Burger",
-      "image": null,
+      "subCategory": "Burgers",
       "price": 79,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1491,12 +1530,13 @@
     "available": true,
     "raw": {
       "id": "bbq-paneer-pizza-raw",
+      "name": "BBQ Paneer Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "BBQ Paneer Pizza",
-      "image": "client/src/assets/raw/BBQ Paneer Pizza.png",
+      "subCategory": "Pizzas",
       "price": 199,
-      "available": true
+      "image": "/images/menu/BBQ Paneer Pizza.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1512,12 +1552,13 @@
     "available": true,
     "raw": {
       "id": "bbq-paneer-sandwich-raw",
+      "name": "BBQ Paneer Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "BBQ Paneer Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 99,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1533,12 +1574,13 @@
     "available": true,
     "raw": {
       "id": "cheese-masala-sandwich-raw",
+      "name": "Cheese Masala Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Cheese Masala Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 89,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1554,12 +1596,13 @@
     "available": true,
     "raw": {
       "id": "chicken-cheese-burger-raw",
+      "name": "Chicken Cheese Burger",
       "category": "Continental",
-      "subcategory": "Burgers",
-      "title": "Chicken Cheese Burger",
-      "image": "client/src/assets/raw/Chicken Cheese Burger.png",
+      "subCategory": "Burgers",
       "price": 99,
-      "available": true
+      "image": "/images/menu/Chicken Cheese Burger.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1575,12 +1618,13 @@
     "available": true,
     "raw": {
       "id": "chicken-club-sandwich-raw",
+      "name": "Chicken Club Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Chicken Club Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 99,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1596,12 +1640,13 @@
     "available": true,
     "raw": {
       "id": "chicken-pizza-raw",
+      "name": "Chicken Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "Chicken Pizza",
-      "image": "client/src/assets/raw/Chicken Pizza.png",
+      "subCategory": "Pizzas",
       "price": 199,
-      "available": true
+      "image": "/images/menu/Chicken Pizza.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1617,12 +1662,13 @@
     "available": true,
     "raw": {
       "id": "corn-sandwich-raw",
+      "name": "Corn Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Corn Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 79,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1638,12 +1684,13 @@
     "available": true,
     "raw": {
       "id": "crazy-cheese-burger-raw",
+      "name": "Crazy Cheese Burger",
       "category": "Continental",
-      "subcategory": "Burgers",
-      "title": "Crazy Cheese Burger",
-      "image": null,
+      "subCategory": "Burgers",
       "price": 79,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1659,12 +1706,13 @@
     "available": true,
     "raw": {
       "id": "grilled-paneer-sandwich-raw",
+      "name": "Grilled Paneer Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Grilled Paneer Sandwich",
-      "image": "client/src/assets/raw/Grilled Paneer Sandwich.png",
+      "subCategory": "Sandwiches",
       "price": 89,
-      "available": true
+      "image": "/images/menu/Grilled Paneer Sandwich.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1680,12 +1728,13 @@
     "available": true,
     "raw": {
       "id": "grilled-wedge-sandwich-raw",
+      "name": "Grilled Wedge Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Grilled Wedge Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 69,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1701,12 +1750,13 @@
     "available": true,
     "raw": {
       "id": "margherita-pizza-raw",
+      "name": "Margherita Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "Margherita Pizza",
-      "image": "client/src/assets/raw/Margherita Pizza.png",
+      "subCategory": "Pizzas",
       "price": 120,
-      "available": true
+      "image": "/images/menu/Margherita Pizza.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1722,12 +1772,13 @@
     "available": true,
     "raw": {
       "id": "mix-wedge-grilled-sandwich-raw",
+      "name": "Mix Wedge Grilled Sandwich",
       "category": "Continental",
-      "subcategory": "Sandwiches",
-      "title": "Mix Wedge Grilled Sandwich",
-      "image": null,
+      "subCategory": "Sandwiches",
       "price": 89,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1743,12 +1794,13 @@
     "available": true,
     "raw": {
       "id": "paneer-cheese-burger-raw",
+      "name": "Paneer Cheese Burger",
       "category": "Continental",
-      "subcategory": "Burgers",
-      "title": "Paneer Cheese Burger",
-      "image": "client/src/assets/raw/Paneer Cheese Burger.png",
+      "subCategory": "Burgers",
       "price": 89,
-      "available": true
+      "image": "/images/menu/Paneer Cheese Burger.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1764,12 +1816,13 @@
     "available": true,
     "raw": {
       "id": "paneer-pizza-raw",
+      "name": "Paneer Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "Paneer Pizza",
-      "image": null,
+      "subCategory": "Pizzas",
       "price": 180,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1785,12 +1838,13 @@
     "available": true,
     "raw": {
       "id": "spot-wedge-burger-raw",
+      "name": "Spot Wedge Burger",
       "category": "Continental",
-      "subcategory": "Burgers",
-      "title": "Spot Wedge Burger",
-      "image": null,
+      "subCategory": "Burgers",
       "price": 89,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1806,12 +1860,13 @@
     "available": true,
     "raw": {
       "id": "sweet-corn-pizza-raw",
+      "name": "Sweet Corn Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "Sweet Corn Pizza",
-      "image": null,
+      "subCategory": "Pizzas",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1827,12 +1882,13 @@
     "available": true,
     "raw": {
       "id": "wedge-delight-pizza-raw",
+      "name": "Wedge Delight Pizza",
       "category": "Continental",
-      "subcategory": "Pizzas",
-      "title": "Wedge Delight Pizza",
-      "image": null,
+      "subCategory": "Pizzas",
       "price": 110,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1848,16 +1904,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-achari-chicken-tikka-full-raw",
-      "category": "Starters",
-      "title": "Achari Chicken Tikka (Full)",
-      "description": "Pickle-spiced chicken tikka (full)",
+      "name": "Achari Chicken Tikka (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": "client/src/assets/raw/Chicken Tikka.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Tikka.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-achari-chicken-tikka-half",
@@ -1872,16 +1926,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-achari-chicken-tikka-half-raw",
-      "category": "Starters",
-      "title": "Achari Chicken Tikka (Half)",
-      "description": "Pickle-spiced chicken tikka (half)",
+      "name": "Achari Chicken Tikka (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Chicken Tikka.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Tikka.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "banjara-kebab-boneless",
@@ -1896,11 +1948,13 @@
     "available": true,
     "raw": {
       "id": "banjara-kebab-boneless-raw",
+      "name": "Banjara Kebab (Boneless)",
       "category": "Kebabs & Grills",
-      "title": "Banjara Kebab (Boneless)",
-      "image": null,
+      "subCategory": null,
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1916,16 +1970,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-ch-ch-kebab-full-raw",
-      "category": "Starters",
-      "title": "Chicken CH Kebab (Full)",
-      "description": "Classic chicken kebab (full)",
+      "name": "Chicken CH Kebab (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-ch-ch-kebab-half",
@@ -1940,16 +1992,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-ch-ch-kebab-half-raw",
-      "category": "Starters",
-      "title": "Chicken CH Kebab (Half)",
-      "description": "Classic chicken kebab (half)",
+      "name": "Chicken CH Kebab (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "chicken-tikka-boneless-6pc",
@@ -1964,12 +2014,13 @@
     "available": true,
     "raw": {
       "id": "chicken-tikka-boneless-6pc-raw",
+      "name": "Chicken Tikka (Boneless) - 6pc",
       "category": "Kebabs & Grills",
-      "title": "Chicken Tikka (Boneless) - 6pc",
-      "description": "Boneless chicken tikka",
-      "image": "client/src/assets/raw/Chicken Tikka.png",
+      "subCategory": null,
       "price": 230,
-      "available": true
+      "image": "/images/menu/Chicken Tikka.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -1985,16 +2036,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-chicken-tikka-full-raw",
-      "category": "Starters",
-      "title": "Chicken Tikka (Full)",
-      "description": "Charcoal-grilled chicken chunks (full)",
+      "name": "Chicken Tikka (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": "client/src/assets/raw/Chicken Tikka.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Tikka.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-chicken-tikka-half",
@@ -2009,16 +2058,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-chicken-tikka-half-raw",
-      "category": "Starters",
-      "title": "Chicken Tikka (Half)",
-      "description": "Charcoal-grilled chicken chunks (half)",
+      "name": "Chicken Tikka (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Chicken Tikka.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Tikka.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-grilled-chicken-full",
@@ -2033,16 +2080,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-grilled-chicken-full-raw",
-      "category": "Starters",
-      "title": "Grilled Chicken (Full)",
-      "description": "Char-grilled chicken (full)",
+      "name": "Grilled Chicken (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-grilled-chicken-half",
@@ -2057,16 +2102,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-grilled-chicken-half-raw",
-      "category": "Starters",
-      "title": "Grilled Chicken (Half)",
-      "description": "Char-grilled chicken (half)",
+      "name": "Grilled Chicken (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "hariyali-boneless",
@@ -2081,11 +2124,13 @@
     "available": true,
     "raw": {
       "id": "hariyali-boneless-raw",
+      "name": "Hariyali (Boneless)",
       "category": "Kebabs & Grills",
-      "title": "Hariyali (Boneless)",
-      "image": null,
+      "subCategory": null,
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2101,16 +2146,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-hariyali-kebab-full-raw",
-      "category": "Starters",
-      "title": "Hariyali Kebab (Full)",
-      "description": "Green-marinated kebabs (full)",
+      "name": "Hariyali Kebab (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-hariyali-kebab-half",
@@ -2125,16 +2168,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-hariyali-kebab-half-raw",
-      "category": "Starters",
-      "title": "Hariyali Kebab (Half)",
-      "description": "Green-marinated kebabs (half)",
+      "name": "Hariyali Kebab (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-malai-kebab-full",
@@ -2149,16 +2190,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-malai-kebab-full-raw",
-      "category": "Starters",
-      "title": "Malai Kebab (Full)",
-      "description": "Creamy malai kebab (full)",
+      "name": "Malai Kebab (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": "client/src/assets/raw/Malai Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Malai Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-malai-kebab-half",
@@ -2173,16 +2212,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-malai-kebab-half-raw",
-      "category": "Starters",
-      "title": "Malai Kebab (Half)",
-      "description": "Creamy malai kebab (half)",
+      "name": "Malai Kebab (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Malai Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Malai Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-murukh-musallam-full",
@@ -2197,16 +2234,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-murukh-musallam-full-raw",
-      "category": "Starters",
-      "title": "Murukh Musallam (Full)",
-      "description": "Royal-style marinated chicken (full)",
+      "name": "Murukh Musallam (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-murukh-musallam-half",
@@ -2221,16 +2256,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-murukh-musallam-half-raw",
-      "category": "Starters",
-      "title": "Murukh Musallam (Half)",
-      "description": "Royal-style marinated chicken (half)",
+      "name": "Murukh Musallam (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "reshmi-kebab",
@@ -2245,11 +2278,13 @@
     "available": true,
     "raw": {
       "id": "reshmi-kebab-raw",
+      "name": "Reshmi Kebab",
       "category": "Kebabs & Grills",
-      "title": "Reshmi Kebab",
-      "image": "client/src/assets/raw/Reshmi Kebab.png",
+      "subCategory": null,
       "price": 230,
-      "available": true
+      "image": "/images/menu/Reshmi Kebab.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2265,16 +2300,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-reshmi-kebab-full-raw",
-      "category": "Starters",
-      "title": "Reshmi Kebab (Full)",
-      "description": "Silky melt-in-mouth reshmi kebab (full)",
+      "name": "Reshmi Kebab (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": "client/src/assets/raw/Reshmi Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Reshmi Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-reshmi-kebab-half",
@@ -2289,16 +2322,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-reshmi-kebab-half-raw",
-      "category": "Starters",
-      "title": "Reshmi Kebab (Half)",
-      "description": "Silky melt-in-mouth reshmi kebab (half)",
+      "name": "Reshmi Kebab (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Reshmi Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Reshmi Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-tandoori-chicken-full",
@@ -2313,16 +2344,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-tandoori-chicken-full-raw",
-      "category": "Starters",
-      "title": "Tandoori Chicken (Full)",
-      "description": "Marinated chicken cooked in tandoor (full)",
+      "name": "Tandoori Chicken (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": false,
+      "image": "/images/menu/Tandoori Chicken.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-tandoori-chicken-half",
@@ -2337,16 +2366,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-tandoori-chicken-half-raw",
-      "category": "Starters",
-      "title": "Tandoori Chicken (Half)",
-      "description": "Marinated chicken cooked in tandoor (half)",
+      "name": "Tandoori Chicken (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Tandoori Chicken.png",
-      "isSignature": false,
+      "image": "/images/menu/Tandoori Chicken.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-tangdi-kebab-full",
@@ -2361,16 +2388,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-tangdi-kebab-full-raw",
-      "category": "Starters",
-      "title": "Tangdi Kebab (Full)",
-      "description": "Spiced chicken drumsticks (full)",
+      "name": "Tangdi Kebab (Full)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 230,
-      "image": "client/src/assets/raw/Tangdi Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Tangdi Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "tandoori-tangdi-kebab-half",
@@ -2385,16 +2410,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-tangdi-kebab-half-raw",
-      "category": "Starters",
-      "title": "Tangdi Kebab (Half)",
-      "description": "Spiced chicken drumsticks (half)",
+      "name": "Tangdi Kebab (Half)",
+      "category": "Kebabs & Grills",
+      "subCategory": null,
       "price": 130,
-      "image": "client/src/assets/raw/Tangdi Kebab.png",
-      "isSignature": false,
+      "image": "/images/menu/Tangdi Kebab.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "butter-chicken",
@@ -2409,13 +2432,13 @@
     "available": true,
     "raw": {
       "id": "butter-chicken-raw",
+      "name": "Butter Chicken",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Butter Chicken",
-      "description": "Creamy butter chicken",
-      "image": "client/src/assets/raw/Butter Chicken.png",
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/images/menu/Butter Chicken.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2431,13 +2454,13 @@
     "available": true,
     "raw": {
       "id": "chana-masala-raw",
+      "name": "Chana Masala",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Chana Masala",
-      "description": "Spiced chickpea curry",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2453,13 +2476,13 @@
     "available": true,
     "raw": {
       "id": "chicken-chettinad-raw",
+      "name": "Chicken Chettinad",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Chicken Chettinad",
-      "description": "Chettinad style chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2475,13 +2498,13 @@
     "available": true,
     "raw": {
       "id": "chicken-kolhapuri-raw",
+      "name": "Chicken Kolhapuri",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Chicken Kolhapuri",
-      "description": "Kolhapuri chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2497,13 +2520,13 @@
     "available": true,
     "raw": {
       "id": "chicken-masala-raw",
+      "name": "Chicken Masala",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Chicken Masala",
-      "description": "Spicy chicken masala",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2519,13 +2542,13 @@
     "available": true,
     "raw": {
       "id": "chicken-pepper-fry-raw",
+      "name": "Chicken Pepper Fry",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Chicken Pepper Fry",
-      "description": "Pepper fried chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2541,13 +2564,13 @@
     "available": true,
     "raw": {
       "id": "chicken-tikka-masala-raw",
+      "name": "Chicken Tikka Masala",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Chicken Tikka Masala",
-      "description": "Tikka masala chicken",
-      "image": "client/src/assets/raw/Chicken Tikka Masala.png",
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/images/menu/Chicken Tikka Masala.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2563,16 +2586,14 @@
     "available": true,
     "raw": {
       "id": "veg-chili-mushroom-dry-raw",
-      "category": "Starters",
-      "title": "Chilli Mushroom Dry",
-      "description": "Chili tossed mushrooms",
+      "name": "Chilli Mushroom Dry",
+      "category": "Main Course",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "dal-fried",
@@ -2587,13 +2608,13 @@
     "available": true,
     "raw": {
       "id": "dal-fried-raw",
+      "name": "Dal Fry",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Dal Fry",
-      "description": "Classic dal fry",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2609,13 +2630,13 @@
     "available": true,
     "raw": {
       "id": "dal-tadka-raw",
+      "name": "Dal Tadka",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Dal Tadka",
-      "description": "Tadka dal",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2631,13 +2652,13 @@
     "available": true,
     "raw": {
       "id": "dum-chicken-raw",
+      "name": "Dum Chicken",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Dum Chicken",
-      "description": "Slow-cooked dum chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2653,13 +2674,13 @@
     "available": true,
     "raw": {
       "id": "green-peas-masala-raw",
+      "name": "Green Peas Masala",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Green Peas Masala",
-      "description": "Peas cooked in masala",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2675,13 +2696,13 @@
     "available": true,
     "raw": {
       "id": "kadai-chicken-raw",
+      "name": "Kadai Chicken",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Kadai Chicken",
-      "description": "Kadai style chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2697,13 +2718,13 @@
     "available": true,
     "raw": {
       "id": "kadai-paneer-raw",
+      "name": "Kadai Paneer",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Kadai Paneer",
-      "description": "Kadai style paneer",
-      "image": "client/src/assets/raw/Kadai Paneer.png",
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/images/menu/Kadai Paneer.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2719,13 +2740,13 @@
     "available": true,
     "raw": {
       "id": "kaju-paneer-raw",
+      "name": "Kaju Paneer",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Kaju Paneer",
-      "description": "Cashew paneer",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2741,13 +2762,13 @@
     "available": true,
     "raw": {
       "id": "kaju-paneer-masala-raw",
+      "name": "Kaju Paneer Masala",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Kaju Paneer Masala",
-      "description": "Kaju paneer special",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2763,13 +2784,13 @@
     "available": true,
     "raw": {
       "id": "kaju-tomato-raw",
+      "name": "Kaju Tomato",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Kaju Tomato",
-      "description": "Cashew-tomato curry",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2785,13 +2806,13 @@
     "available": true,
     "raw": {
       "id": "malabar-chicken-curry-raw",
+      "name": "Malabar Chicken Curry",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Malabar Chicken Curry",
-      "description": "Malabar style curry",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2807,13 +2828,13 @@
     "available": true,
     "raw": {
       "id": "malai-kofta-raw",
+      "name": "Malai Kofta",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Malai Kofta",
-      "description": "Creamy kofta curry",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2829,13 +2850,13 @@
     "available": true,
     "raw": {
       "id": "mixed-veg-curry-raw",
+      "name": "Mixed Veg Curry",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Mixed Veg Curry",
-      "description": "Seasonal mixed vegetables",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2851,13 +2872,13 @@
     "available": true,
     "raw": {
       "id": "miyabhai-special-curry-raw",
+      "name": "Miyabhai Special Curry",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Miyabhai Special Curry",
-      "description": "House special curry",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2873,16 +2894,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-miyabhai-special-curry-full-raw",
-      "category": "Starters",
-      "title": "Miyabhai Special Curry (Full)",
-      "description": "House special curry (full)",
+      "name": "Miyabhai Special Curry (Full)",
+      "category": "Main Course",
+      "subCategory": null,
       "price": 230,
-      "image": null,
-      "isSignature": true,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": true
+    }
   },
   {
     "id": "tandoori-miyabhai-special-curry-half",
@@ -2897,16 +2916,14 @@
     "available": true,
     "raw": {
       "id": "tandoori-miyabhai-special-curry-half-raw",
-      "category": "Starters",
-      "title": "Miyabhai Special Curry (Half)",
-      "description": "House special curry (half)",
+      "name": "Miyabhai Special Curry (Half)",
+      "category": "Main Course",
+      "subCategory": null,
       "price": 130,
-      "image": null,
-      "isSignature": true,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": true
+    }
   },
   {
     "id": "murgh-musallam",
@@ -2921,13 +2938,13 @@
     "available": true,
     "raw": {
       "id": "murgh-musallam-raw",
+      "name": "Murgh Musallam",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Murgh Musallam",
-      "description": "Whole stuffed chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2943,13 +2960,13 @@
     "available": true,
     "raw": {
       "id": "mushroom-masala-raw",
+      "name": "Mushroom Masala",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Mushroom Masala",
-      "description": "Mushroom curry",
-      "image": null,
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -2965,16 +2982,14 @@
     "available": true,
     "raw": {
       "id": "veg-mushroom-masala-dry-raw",
-      "category": "Starters",
-      "title": "Mushroom Masala Dry",
-      "description": "Spicy mushroom masala dry",
+      "name": "Mushroom Masala Dry",
+      "category": "Main Course",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "paneer-butter-masala",
@@ -2989,13 +3004,13 @@
     "available": true,
     "raw": {
       "id": "paneer-butter-masala-raw",
+      "name": "Paneer Butter Masala",
       "category": "Main Course",
-      "subcategory": "Veg Curries",
-      "title": "Paneer Butter Masala",
-      "description": "Rich paneer gravy",
-      "image": "client/src/assets/raw/Paneer Butter Masala.png",
+      "subCategory": "Veg Curries",
       "price": 220,
-      "available": true
+      "image": "/images/menu/Paneer Butter Masala.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3011,16 +3026,14 @@
     "available": true,
     "raw": {
       "id": "veg-paneer-masala-dry-raw",
-      "category": "Starters",
-      "title": "Paneer Masala Dry",
-      "description": "Dry paneer starter in masala seasoning",
+      "name": "Paneer Masala Dry",
+      "category": "Main Course",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "punjabi-chicken",
@@ -3035,13 +3048,13 @@
     "available": true,
     "raw": {
       "id": "punjabi-chicken-raw",
+      "name": "Punjabi Chicken",
       "category": "Main Course",
-      "subcategory": "Non-Veg Curries",
-      "title": "Punjabi Chicken",
-      "description": "Punjabi style chicken",
-      "image": null,
+      "subCategory": "Non-Veg Curries",
       "price": 230,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3057,11 +3070,13 @@
     "available": true,
     "raw": {
       "id": "achi-pulusu-raw",
+      "name": "Achi Pulusu (Meal Item)",
       "category": "Meals",
-      "title": "Achi Pulusu (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3077,11 +3092,13 @@
     "available": true,
     "raw": {
       "id": "ankapur-naatu-kodi-pulusu-raw",
+      "name": "Ankapur Naatu Kodi Pulusu",
       "category": "Meals",
-      "title": "Ankapur Naatu Kodi Pulusu",
-      "image": "client/src/assets/raw/Ankapur Naatu Kodi Pulusu.png",
+      "subCategory": null,
       "price": 200,
-      "available": true
+      "image": "/images/menu/Ankapur Naatu Kodi Pulusu.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3097,11 +3114,13 @@
     "available": true,
     "raw": {
       "id": "bagara-rice-with-naatu-kodi-raw",
+      "name": "Bagara Rice with Naatu Kodi",
       "category": "Meals",
-      "title": "Bagara Rice with Naatu Kodi",
-      "image": "client/src/assets/raw/Bagara Rice with Naatu Kodi.png",
+      "subCategory": null,
       "price": 180,
-      "available": true
+      "image": "/images/menu/Bagara Rice with Naatu Kodi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3117,11 +3136,13 @@
     "available": true,
     "raw": {
       "id": "bagara-rice-with-talakayi-curry-raw",
+      "name": "Bagara Rice with Talakai Curry",
       "category": "Meals",
-      "title": "Bagara Rice with Talakai Curry",
-      "image": "client/src/assets/raw/Bagara Rice with Talakai Curry.png",
+      "subCategory": null,
       "price": 200,
-      "available": true
+      "image": "/images/menu/Bagara Rice with Talakai Curry.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3137,11 +3158,13 @@
     "available": true,
     "raw": {
       "id": "curd-raw",
+      "name": "Curd (Meal Item)",
       "category": "Meals",
-      "title": "Curd (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3157,11 +3180,13 @@
     "available": true,
     "raw": {
       "id": "dal-raw",
+      "name": "Dal (Meal Item)",
       "category": "Meals",
-      "title": "Dal (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3177,11 +3202,13 @@
     "available": true,
     "raw": {
       "id": "dum-fry-raw",
+      "name": "Dum Fry (Meal Item)",
       "category": "Meals",
-      "title": "Dum Fry (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3197,11 +3224,13 @@
     "available": true,
     "raw": {
       "id": "egg-burji-with-puri-raw",
+      "name": "Egg Burji with Puri",
       "category": "Meals",
-      "title": "Egg Burji with Puri",
-      "image": null,
+      "subCategory": null,
       "price": 100,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3217,11 +3246,13 @@
     "available": true,
     "raw": {
       "id": "gutti-vankaya-curry-bagara-rice-raw",
+      "name": "Gutti Vankaya Curry with Bagara Rice",
       "category": "Meals",
-      "title": "Gutti Vankaya Curry with Bagara Rice",
-      "image": null,
+      "subCategory": null,
       "price": 130,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3237,11 +3268,13 @@
     "available": true,
     "raw": {
       "id": "military-mutton-raw",
+      "name": "Military Mutton",
       "category": "Meals",
-      "title": "Military Mutton",
-      "image": null,
+      "subCategory": null,
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3257,11 +3290,13 @@
     "available": true,
     "raw": {
       "id": "mutton-dalja-with-bagara-rice-raw",
+      "name": "Mutton Dalja with Bagara Rice",
       "category": "Meals",
-      "title": "Mutton Dalja with Bagara Rice",
-      "image": null,
+      "subCategory": null,
       "price": 200,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3277,11 +3312,13 @@
     "available": true,
     "raw": {
       "id": "nallamala-naatu-kodi-pulusu-raw",
+      "name": "Nallamala Naatu Kodi Pulusu",
       "category": "Meals",
-      "title": "Nallamala Naatu Kodi Pulusu",
-      "image": null,
+      "subCategory": null,
       "price": 200,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3297,11 +3334,13 @@
     "available": true,
     "raw": {
       "id": "nellore-chutney-raw",
+      "name": "Nellore Chutney (Meal Item)",
       "category": "Meals",
-      "title": "Nellore Chutney (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3317,11 +3356,13 @@
     "available": true,
     "raw": {
       "id": "nellore-vari-chepala-pulusu-raw",
+      "name": "Nellore Vari Chepala Pulusu",
       "category": "Meals",
-      "title": "Nellore Vari Chepala Pulusu",
-      "image": "client/src/assets/raw/Nellore Vari Chepala Pulusu.png",
+      "subCategory": null,
       "price": 180,
-      "available": true
+      "image": "/images/menu/Nellore Vari Chepala Pulusu.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3337,11 +3378,13 @@
     "available": true,
     "raw": {
       "id": "oil-fry-raw",
+      "name": "Oil Fry (Meal Item)",
       "category": "Meals",
-      "title": "Oil Fry (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3357,11 +3400,13 @@
     "available": true,
     "raw": {
       "id": "papad-raw",
+      "name": "Papad (Meal Item)",
       "category": "Meals",
-      "title": "Papad (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3377,11 +3422,13 @@
     "available": true,
     "raw": {
       "id": "rasam-raw",
+      "name": "Rasam (Meal Item)",
       "category": "Meals",
-      "title": "Rasam (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3397,11 +3444,13 @@
     "available": true,
     "raw": {
       "id": "meal-1-rice-to-sweet-raw",
+      "name": "Rice to Sweet (Meal Item)",
       "category": "Meals",
-      "title": "Rice to Sweet (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3417,11 +3466,13 @@
     "available": true,
     "raw": {
       "id": "rice-tomato-with-egg-curry-raw",
+      "name": "Rice Tomato with Egg Curry",
       "category": "Meals",
-      "title": "Rice Tomato with Egg Curry",
-      "image": null,
+      "subCategory": null,
       "price": 130,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3437,11 +3488,13 @@
     "available": true,
     "raw": {
       "id": "rice-with-egg-curry-sambar-raw",
+      "name": "Rice with Egg Curry + Sambar",
       "category": "Meals",
-      "title": "Rice with Egg Curry + Sambar",
-      "image": "client/src/assets/raw/Rice with Egg Curry + Sambar.png",
+      "subCategory": null,
       "price": 130,
-      "available": true
+      "image": "/images/menu/Rice with Egg Curry + Sambar.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3457,11 +3510,13 @@
     "available": true,
     "raw": {
       "id": "rice-with-naatu-kodi-pulusu-raw",
+      "name": "Rice with Naatu Kodi Pulusu",
       "category": "Meals",
-      "title": "Rice with Naatu Kodi Pulusu",
-      "image": null,
+      "subCategory": null,
       "price": 180,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3477,11 +3532,13 @@
     "available": true,
     "raw": {
       "id": "roti-chutney-raw",
+      "name": "Roti Chutney (Meal Item)",
       "category": "Meals",
-      "title": "Roti Chutney (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3497,11 +3554,13 @@
     "available": true,
     "raw": {
       "id": "sambar-raw",
+      "name": "Sambar (Meal Item)",
       "category": "Meals",
-      "title": "Sambar (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3517,11 +3576,13 @@
     "available": true,
     "raw": {
       "id": "veg-curries-meal-raw",
+      "name": "Veg Curries (Meal Item)",
       "category": "Meals",
-      "title": "Veg Curries (Meal Item)",
-      "image": null,
+      "subCategory": null,
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3537,11 +3598,13 @@
     "available": true,
     "raw": {
       "id": "miyabhai-special-shawarma-raw",
+      "name": "Miyabhai Special Shawarma",
       "category": "Shawarma",
-      "title": "Miyabhai Special Shawarma",
-      "image": null,
+      "subCategory": null,
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3557,11 +3620,13 @@
     "available": true,
     "raw": {
       "id": "paneer-shawarma-raw",
+      "name": "Paneer Shawarma",
       "category": "Shawarma",
-      "title": "Paneer Shawarma",
-      "image": "client/src/assets/raw/Paneer Shawarma.png",
+      "subCategory": null,
       "price": 140,
-      "available": true
+      "image": "/images/menu/Paneer Shawarma.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3577,11 +3642,13 @@
     "available": true,
     "raw": {
       "id": "regular-chicken-shawarma-raw",
+      "name": "Regular Chicken Shawarma",
       "category": "Shawarma",
-      "title": "Regular Chicken Shawarma",
-      "image": "client/src/assets/raw/Chicken Shawarma.png",
+      "subCategory": null,
       "price": 100,
-      "available": true
+      "image": "/images/menu/Chicken Shawarma.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3597,11 +3664,13 @@
     "available": true,
     "raw": {
       "id": "special-chicken-shawarma-raw",
+      "name": "Special Chicken Shawarma",
       "category": "Shawarma",
-      "title": "Special Chicken Shawarma",
-      "image": "client/src/assets/raw/Chicken Shawarma.png",
+      "subCategory": null,
       "price": 140,
-      "available": true
+      "image": "/images/menu/Chicken Shawarma.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3617,11 +3686,13 @@
     "available": true,
     "raw": {
       "id": "veg-shawarma-raw",
+      "name": "Veg Shawarma",
       "category": "Shawarma",
-      "title": "Veg Shawarma",
-      "image": null,
+      "subCategory": null,
       "price": 100,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -3637,14 +3708,13 @@
     "available": true,
     "raw": {
       "id": "rotis-aloo-parota-raw",
+      "name": "Aloo Parota",
       "category": "Starters",
-      "title": "Aloo Parota",
-      "description": "Flaky parota stuffed with spiced potato",
+      "subCategory": null,
       "price": 40,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3660,14 +3730,13 @@
     "available": true,
     "raw": {
       "id": "seafood-apollo-fish-raw",
+      "name": "Apollo Fish",
       "category": "Starters",
-      "title": "Apollo Fish",
-      "description": "Crispy Apollo style fish",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Apollo fish.png",
-      "isSignature": false,
+      "image": "/images/menu/Apollo fish.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3683,16 +3752,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-blackbean-chicken-raw",
+      "name": "Black Bean Chicken",
       "category": "Starters",
-      "title": "Black Bean Chicken",
-      "description": "Chicken in black bean sauce",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-butter-naan",
@@ -3707,14 +3774,13 @@
     "available": true,
     "raw": {
       "id": "rotis-butter-naan-raw",
+      "name": "Butter Naan",
       "category": "Starters",
-      "title": "Butter Naan",
-      "description": "Soft naan brushed with butter",
+      "subCategory": null,
       "price": 30,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3730,14 +3796,13 @@
     "available": true,
     "raw": {
       "id": "rotis-butter-roti-raw",
+      "name": "Butter Roti",
       "category": "Starters",
-      "title": "Butter Roti",
-      "description": "Roti served with butter",
+      "subCategory": null,
       "price": 40,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3753,16 +3818,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-65-raw",
+      "name": "Chicken 65",
       "category": "Starters",
-      "title": "Chicken 65",
-      "description": "Crispy fried chicken starter",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Chicken 65.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken 65.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-chicken-hongkong",
@@ -3777,16 +3840,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-hongkong-raw",
+      "name": "Chicken Hong Kong",
       "category": "Starters",
-      "title": "Chicken Hong Kong",
-      "description": "Hong Kong style chicken",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-chicken-lollipop",
@@ -3801,16 +3862,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-lollipop-raw",
+      "name": "Chicken Lollipop",
       "category": "Starters",
-      "title": "Chicken Lollipop",
-      "description": "Classic Indo-Chinese lollipops",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Chicken Lollipop.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Lollipop.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-chicken-majestic",
@@ -3825,16 +3884,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-majestic-raw",
+      "name": "Chicken Majestic",
       "category": "Starters",
-      "title": "Chicken Majestic",
-      "description": "Spicy shredded chicken special",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-chicken-pepper-salt",
@@ -3849,16 +3906,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-pepper-salt-raw",
+      "name": "Chicken Pepper Salt",
       "category": "Starters",
-      "title": "Chicken Pepper Salt",
-      "description": "Chicken tossed in pepper salt",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "seafood-chicken-spring-roll",
@@ -3873,14 +3928,13 @@
     "available": true,
     "raw": {
       "id": "seafood-chicken-spring-roll-raw",
+      "name": "Chicken Spring Roll",
       "category": "Starters",
-      "title": "Chicken Spring Roll",
-      "description": "Crispy chicken spring rolls",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3896,16 +3950,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chicken-wings-raw",
+      "name": "Chicken Wings",
       "category": "Starters",
-      "title": "Chicken Wings",
-      "description": "Crispy spiced chicken wings",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Chicken Wings.png",
-      "isSignature": false,
+      "image": "/images/menu/Chicken Wings.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "veg-chili-baby-corn-dry",
@@ -3920,16 +3972,14 @@
     "available": true,
     "raw": {
       "id": "veg-chili-baby-corn-dry-raw",
+      "name": "Chilli Baby Corn Dry",
       "category": "Starters",
-      "title": "Chilli Baby Corn Dry",
-      "description": "Spicy dry chili baby corn",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-chili-chicken",
@@ -3944,16 +3994,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chili-chicken-raw",
+      "name": "Chilli Chicken",
       "category": "Starters",
-      "title": "Chilli Chicken",
-      "description": "Spicy Indo-Chinese chili chicken",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Chilli Chicken.png",
-      "isSignature": false,
+      "image": "/images/menu/Chilli Chicken.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "seafood-chili-fish",
@@ -3968,14 +4016,13 @@
     "available": true,
     "raw": {
       "id": "seafood-chili-fish-raw",
+      "name": "Chilli Fish",
       "category": "Starters",
-      "title": "Chilli Fish",
-      "description": "Fish in chili sauce",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -3991,16 +4038,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-chili-manchuria-raw",
+      "name": "Chilli Manchuria",
       "category": "Starters",
-      "title": "Chilli Manchuria",
-      "description": "Chicken in manchurian style",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "veg-chili-paneer",
@@ -4015,16 +4060,14 @@
     "available": true,
     "raw": {
       "id": "veg-chili-paneer-raw",
+      "name": "Chilli Paneer",
       "category": "Starters",
-      "title": "Chilli Paneer",
-      "description": "Classic Indo-Chinese chili paneer",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "seafood-chili-prawns",
@@ -4039,14 +4082,13 @@
     "available": true,
     "raw": {
       "id": "seafood-chili-prawns-raw",
+      "name": "Chilli Prawns",
       "category": "Starters",
-      "title": "Chilli Prawns",
-      "description": "Prawns in chili sauce",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Chilli Prawns.png",
-      "isSignature": false,
+      "image": "/images/menu/Chilli Prawns.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4062,16 +4104,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-dragon-chicken-raw",
+      "name": "Dragon Chicken",
       "category": "Starters",
-      "title": "Dragon Chicken",
-      "description": "Spicy dragon-style chicken",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "seafood-fish-65",
@@ -4086,14 +4126,13 @@
     "available": true,
     "raw": {
       "id": "seafood-fish-65-raw",
+      "name": "Fish 65",
       "category": "Starters",
-      "title": "Fish 65",
-      "description": "Crispy fried fish starter",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4109,14 +4148,13 @@
     "available": true,
     "raw": {
       "id": "seafood-fish-dry-raw",
+      "name": "Fish Dry",
       "category": "Starters",
-      "title": "Fish Dry",
-      "description": "Dry fried fish masala",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4132,14 +4170,13 @@
     "available": true,
     "raw": {
       "id": "seafood-fish-roast-raw",
+      "name": "Fish Roast",
       "category": "Starters",
-      "title": "Fish Roast",
-      "description": "Roasted fish masala",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4155,16 +4192,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-garlic-chicken-raw",
+      "name": "Garlic Chicken",
       "category": "Starters",
-      "title": "Garlic Chicken",
-      "description": "Chicken in garlic sauce",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-garlic-naan",
@@ -4179,14 +4214,13 @@
     "available": true,
     "raw": {
       "id": "rotis-garlic-naan-raw",
+      "name": "Garlic Naan",
       "category": "Starters",
-      "title": "Garlic Naan",
-      "description": "Naan topped with garlic and butter",
+      "subCategory": null,
       "price": 40,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4202,16 +4236,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-kungfu-chicken-raw",
+      "name": "Kung Fu Chicken",
       "category": "Starters",
-      "title": "Kung Fu Chicken",
-      "description": "Kung Fu style chicken",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "nonveg-lemon-chicken",
@@ -4226,16 +4258,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-lemon-chicken-raw",
+      "name": "Lemon Chicken",
       "category": "Starters",
-      "title": "Lemon Chicken",
-      "description": "Tangy lemon flavored chicken",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "seafood-loose-prawns",
@@ -4250,14 +4280,13 @@
     "available": true,
     "raw": {
       "id": "seafood-loose-prawns-raw",
+      "name": "Loose Prawns",
       "category": "Starters",
-      "title": "Loose Prawns",
-      "description": "Crispy loose prawns",
+      "subCategory": null,
       "price": 555,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4273,16 +4302,14 @@
     "available": true,
     "raw": {
       "id": "rotis-masala-kulcha-raw",
+      "name": "Masala Kulcha",
       "category": "Starters",
-      "title": "Masala Kulcha",
-      "description": "Kulcha stuffed with spiced potato & masala",
+      "subCategory": null,
       "price": 50,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-palan-roti",
@@ -4297,14 +4324,13 @@
     "available": true,
     "raw": {
       "id": "rotis-palan-roti-raw",
+      "name": "Palan Roti",
       "category": "Starters",
-      "title": "Palan Roti",
-      "description": "Soft palan-style roti",
+      "subCategory": null,
       "price": 30,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4320,16 +4346,14 @@
     "available": true,
     "raw": {
       "id": "veg-paneer-65-raw",
+      "name": "Paneer 65",
       "category": "Starters",
-      "title": "Paneer 65",
-      "description": "Crispy spiced paneer starter",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Paneer 65.png",
-      "isSignature": false,
+      "image": "/images/menu/Paneer 65.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-paneer-kulcha",
@@ -4344,16 +4368,14 @@
     "available": true,
     "raw": {
       "id": "rotis-paneer-kulcha-raw",
+      "name": "Paneer Kulcha",
       "category": "Starters",
-      "title": "Paneer Kulcha",
-      "description": "Stuffed kulcha with spiced paneer",
+      "subCategory": null,
       "price": 50,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-plain-naan",
@@ -4368,14 +4390,13 @@
     "available": true,
     "raw": {
       "id": "rotis-plain-naan-raw",
+      "name": "Plain Naan",
       "category": "Starters",
-      "title": "Plain Naan",
-      "description": "Classic plain naan",
+      "subCategory": null,
       "price": 40,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4391,16 +4412,14 @@
     "available": true,
     "raw": {
       "id": "nonveg-plum-chicken-raw",
+      "name": "Plum Chicken",
       "category": "Starters",
-      "title": "Plum Chicken",
-      "description": "Chicken in plum sauce",
+      "subCategory": null,
       "price": 220,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
-    },
-    "_oldCategory": "Starters"
+      "isSignature": false
+    }
   },
   {
     "id": "rotis-podina-parota",
@@ -4415,14 +4434,13 @@
     "available": true,
     "raw": {
       "id": "rotis-podina-parota-raw",
+      "name": "Podina Parota",
       "category": "Starters",
-      "title": "Podina Parota",
-      "description": "Parota infused with fresh mint",
+      "subCategory": null,
       "price": 50,
-      "image": null,
-      "isSignature": false,
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4438,14 +4456,13 @@
     "available": true,
     "raw": {
       "id": "seafood-prawns-manchuria-raw",
+      "name": "Prawns Manchuria",
       "category": "Starters",
-      "title": "Prawns Manchuria",
-      "description": "Manchurian-style prawns",
+      "subCategory": null,
       "price": 220,
-      "image": "client/src/assets/raw/Prawns Manchuria.png",
-      "isSignature": false,
+      "image": "/images/menu/Prawns Manchuria.png",
       "isBestSeller": false,
-      "available": true
+      "isSignature": false
     }
   },
   {
@@ -4461,12 +4478,13 @@
     "available": true,
     "raw": {
       "id": "butter-dosa-raw",
+      "name": "Butter Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Butter Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 60,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4482,12 +4500,13 @@
     "available": true,
     "raw": {
       "id": "carrot-idli-raw",
+      "name": "Carrot Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Carrot Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4503,12 +4522,13 @@
     "available": true,
     "raw": {
       "id": "egg-dosa-raw",
+      "name": "Egg Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Egg Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 60,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4524,12 +4544,13 @@
     "available": true,
     "raw": {
       "id": "ghee-dosa-raw",
+      "name": "Ghee Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ghee Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4545,12 +4566,13 @@
     "available": true,
     "raw": {
       "id": "ghee-karani-dosa-raw",
+      "name": "Ghee Karani Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ghee Karani Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 60,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4566,12 +4588,13 @@
     "available": true,
     "raw": {
       "id": "ghee-kerala-idli-raw",
+      "name": "Ghee Kerala Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ghee Kerala Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4587,12 +4610,13 @@
     "available": true,
     "raw": {
       "id": "ghee-masala-dosa-raw",
+      "name": "Ghee Masala Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ghee Masala Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 60,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4608,12 +4632,13 @@
     "available": true,
     "raw": {
       "id": "idli-raw",
+      "name": "Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Idli",
-      "image": "client/src/assets/raw/idli.png",
+      "subCategory": "Breakfast",
       "price": 30,
-      "available": true
+      "image": "/images/menu/idli.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4629,12 +4654,13 @@
     "available": true,
     "raw": {
       "id": "idli-with-ghee-raw",
+      "name": "Idli with Ghee",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Idli with Ghee",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4650,12 +4676,13 @@
     "available": true,
     "raw": {
       "id": "kanchipuram-idli-raw",
+      "name": "Kanchipuram Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Kanchipuram Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4671,12 +4698,13 @@
     "available": true,
     "raw": {
       "id": "masala-dosa-raw",
+      "name": "Masala Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Masala Dosa",
-      "image": "client/src/assets/raw/Masala Dosa.png",
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/images/menu/Masala Dosa.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4692,12 +4720,13 @@
     "available": true,
     "raw": {
       "id": "masala-pesara-dosa-raw",
+      "name": "Masala Pesara Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Masala Pesara Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4713,12 +4742,13 @@
     "available": true,
     "raw": {
       "id": "masala-puri-curry-raw",
+      "name": "Masala Puri Curry",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Masala Puri Curry",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4734,12 +4764,13 @@
     "available": true,
     "raw": {
       "id": "masala-rava-dosa-raw",
+      "name": "Masala Rava Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Masala Rava Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 80,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4755,12 +4786,13 @@
     "available": true,
     "raw": {
       "id": "masala-uttappam-raw",
+      "name": "Masala Uttappam",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Masala Uttappam",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 80,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4776,12 +4808,13 @@
     "available": true,
     "raw": {
       "id": "mla-prasad-dosa-raw",
+      "name": "MLA Prasad Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "MLA Prasad Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 70,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4797,12 +4830,13 @@
     "available": true,
     "raw": {
       "id": "mutton-kheema-dosa-raw",
+      "name": "Mutton Kheema Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Mutton Kheema Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4818,12 +4852,13 @@
     "available": true,
     "raw": {
       "id": "mysore-bajji-raw",
+      "name": "Mysore Bajji",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Mysore Bajji",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4839,12 +4874,13 @@
     "available": true,
     "raw": {
       "id": "onion-dosa-raw",
+      "name": "Onion Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Onion Dosa",
-      "image": "client/src/assets/raw/Onion Dosa.png",
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/images/menu/Onion Dosa.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4860,12 +4896,13 @@
     "available": true,
     "raw": {
       "id": "onion-pesara-dosa-raw",
+      "name": "Onion Pesara Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Onion Pesara Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4881,12 +4918,13 @@
     "available": true,
     "raw": {
       "id": "palak-idli-raw",
+      "name": "Palak Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Palak Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4902,12 +4940,13 @@
     "available": true,
     "raw": {
       "id": "palak-puri-raw",
+      "name": "Palak Puri",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Palak Puri",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4923,12 +4962,13 @@
     "available": true,
     "raw": {
       "id": "paneer-butter-dosa-raw",
+      "name": "Paneer Butter Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Paneer Butter Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 80,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4944,12 +4984,13 @@
     "available": true,
     "raw": {
       "id": "paneer-dosa-raw",
+      "name": "Paneer Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Paneer Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 70,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4965,12 +5006,13 @@
     "available": true,
     "raw": {
       "id": "pesara-dosa-raw",
+      "name": "Pesara Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Pesara Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -4986,12 +5028,13 @@
     "available": true,
     "raw": {
       "id": "pizza-dosa-raw",
+      "name": "Pizza Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Pizza Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 120,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5007,12 +5050,13 @@
     "available": true,
     "raw": {
       "id": "plain-dosa-raw",
+      "name": "Plain Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Plain Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5028,12 +5072,13 @@
     "available": true,
     "raw": {
       "id": "pudina-idli-raw",
+      "name": "Pudina Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Pudina Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5049,12 +5094,13 @@
     "available": true,
     "raw": {
       "id": "puri-raw",
+      "name": "Puri",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Puri",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5070,12 +5116,13 @@
     "available": true,
     "raw": {
       "id": "puri-curry-raw",
+      "name": "Puri Curry",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Puri Curry",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5091,12 +5138,13 @@
     "available": true,
     "raw": {
       "id": "puri-with-chicken-curry-raw",
+      "name": "Puri with Chicken Curry",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Puri with Chicken Curry",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 100,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5112,12 +5160,13 @@
     "available": true,
     "raw": {
       "id": "puri-with-egg-burji-raw",
+      "name": "Puri with Egg Burji",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Puri with Egg Burji",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 80,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5133,12 +5182,13 @@
     "available": true,
     "raw": {
       "id": "puri-with-mutton-kheema-raw",
+      "name": "Puri with Mutton Kheema",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Puri with Mutton Kheema",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 150,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5154,12 +5204,13 @@
     "available": true,
     "raw": {
       "id": "ragi-dosa-raw",
+      "name": "Ragi Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ragi Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5175,12 +5226,13 @@
     "available": true,
     "raw": {
       "id": "ragi-idli-raw",
+      "name": "Ragi Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ragi Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5196,12 +5248,13 @@
     "available": true,
     "raw": {
       "id": "ragi-masala-dosa-raw",
+      "name": "Ragi Masala Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Ragi Masala Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5217,12 +5270,13 @@
     "available": true,
     "raw": {
       "id": "rava-dosa-raw",
+      "name": "Rava Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Rava Dosa",
-      "image": "client/src/assets/raw/Rava Dosa.png",
+      "subCategory": "Breakfast",
       "price": 70,
-      "available": true
+      "image": "/images/menu/Rava Dosa.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5238,12 +5292,13 @@
     "available": true,
     "raw": {
       "id": "sawadeen-idli-raw",
+      "name": "Sawadeen Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Sawadeen Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 40,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5259,12 +5314,13 @@
     "available": true,
     "raw": {
       "id": "set-dosa-raw",
+      "name": "Set Dosa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Set Dosa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 70,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5280,12 +5336,13 @@
     "available": true,
     "raw": {
       "id": "tawa-idli-raw",
+      "name": "Tawa Idli",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Tawa Idli",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5301,12 +5358,13 @@
     "available": true,
     "raw": {
       "id": "tawa-mysore-bajji-raw",
+      "name": "Tawa Mysore Bajji",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Tawa Mysore Bajji",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5322,12 +5380,13 @@
     "available": true,
     "raw": {
       "id": "tawa-vada-raw",
+      "name": "Tawa Vada",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Tawa Vada",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 60,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5343,12 +5402,13 @@
     "available": true,
     "raw": {
       "id": "uttappa-raw",
+      "name": "Uttappa",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Uttappa",
-      "image": null,
+      "subCategory": "Breakfast",
       "price": 70,
-      "available": true
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5364,12 +5424,13 @@
     "available": true,
     "raw": {
       "id": "vada-raw",
+      "name": "Vada",
       "category": "Tiffin",
-      "subcategory": "Breakfast",
-      "title": "Vada",
-      "image": "client/src/assets/raw/vada.png",
+      "subCategory": "Breakfast",
       "price": 50,
-      "available": true
+      "image": "/images/menu/vada.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5385,8 +5446,13 @@
     "available": true,
     "raw": {
       "id": "4pc-raw",
-      "label": "4 pcs",
-      "price": 360
+      "name": "4pc",
+      "category": "Uncategorized",
+      "subCategory": null,
+      "price": 360,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5402,21 +5468,14 @@
     "available": true,
     "raw": {
       "id": "family-raw",
-      "label": "Family Pack",
-      "price": 500
-    },
-    "raws": [
-      {
-        "id": "family",
-        "label": "Family Pack",
-        "price": 750
-      },
-      {
-        "id": "family",
-        "label": "Family Pack",
-        "price": 750
-      }
-    ]
+      "name": "family",
+      "category": "Uncategorized",
+      "subCategory": null,
+      "price": 500,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "full",
@@ -5431,26 +5490,14 @@
     "available": true,
     "raw": {
       "id": "full-raw",
-      "label": "Full",
-      "price": 200
-    },
-    "raws": [
-      {
-        "id": "full",
-        "label": "Full",
-        "price": 300
-      },
-      {
-        "id": "full",
-        "label": "Full",
-        "price": 430
-      },
-      {
-        "id": "full",
-        "label": "Full",
-        "price": 550
-      }
-    ]
+      "name": "full",
+      "category": "Uncategorized",
+      "subCategory": null,
+      "price": 200,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "jumbo",
@@ -5465,17 +5512,36 @@
     "available": true,
     "raw": {
       "id": "jumbo-raw",
-      "label": "Jumbo Pack",
-      "price": 800
+      "name": "jumbo",
+      "category": "Uncategorized",
+      "subCategory": null,
+      "price": 800,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
     "id": "chicken-fry-piece-biryani",
     "title": "Chicken Fry Piece Biryani",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Fry Piece Biryani.png",
     "price": 250,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Fry Piece Biryani.png"
+    "raw": {
+      "id": "chicken-fry-piece-biryani-raw",
+      "name": "Chicken Fry Piece Biryani",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 250,
+      "image": "/images/menu/Chicken Fry Piece Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "mandi-chicken-mini",
@@ -5485,21 +5551,18 @@
     "description": "",
     "image": "/src/assets/placeholder-menu-item.png",
     "price": 250,
-    "prices": {
-      "mini": 250
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-mini-raw",
-      "title": "Chicken Mandi (Mini)",
+      "name": "Chicken Mandi (Mini)",
       "category": "Arabian",
-      "subcategory": "Chicken Mandi",
-      "prices": {
-        "mini": 250
-      },
-      "image": null,
-      "tier": 2
+      "subCategory": "Chicken Mandi",
+      "price": 250,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5510,21 +5573,18 @@
     "description": "",
     "image": "/src/assets/placeholder-menu-item.png",
     "price": 420,
-    "prices": {
-      "half": 420
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-half-raw",
-      "title": "Chicken Mandi (Half)",
+      "name": "Chicken Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Chicken Mandi",
-      "prices": {
-        "half": 420
-      },
-      "image": null,
-      "tier": 2
+      "subCategory": "Chicken Mandi",
+      "price": 420,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5535,21 +5595,18 @@
     "description": "",
     "image": "/src/assets/placeholder-menu-item.png",
     "price": 600,
-    "prices": {
-      "three_piece": 600
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-3piece-raw",
-      "title": "Chicken Mandi (3-piece)",
+      "name": "Chicken Mandi (3-piece)",
       "category": "Arabian",
-      "subcategory": "Chicken Mandi",
-      "prices": {
-        "three_piece": 600
-      },
-      "image": null,
-      "tier": 2
+      "subCategory": "Chicken Mandi",
+      "price": 600,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5560,21 +5617,18 @@
     "description": "",
     "image": "/src/assets/placeholder-menu-item.png",
     "price": 750,
-    "prices": {
-      "full": 750
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-full-raw",
-      "title": "Chicken Mandi (Full)",
+      "name": "Chicken Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Chicken Mandi",
-      "prices": {
-        "full": 750
-      },
-      "image": null,
-      "tier": 2
+      "subCategory": "Chicken Mandi",
+      "price": 750,
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5585,21 +5639,18 @@
     "description": "",
     "image": "/images/menu/Chicken Juicy Mandi.png",
     "price": 320,
-    "prices": {
-      "mini": 320
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-juicy-mini-raw",
-      "title": "Chicken Juicy Mandi (Mini)",
+      "name": "Chicken Juicy Mandi (Mini)",
       "category": "Arabian",
-      "subcategory": "Chicken Juicy Mandi",
-      "prices": {
-        "mini": 320
-      },
-      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
-      "tier": 2
+      "subCategory": "Chicken Juicy Mandi",
+      "price": 320,
+      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5610,21 +5661,18 @@
     "description": "",
     "image": "/images/menu/Chicken Juicy Mandi.png",
     "price": 500,
-    "prices": {
-      "half": 500
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-juicy-half-raw",
-      "title": "Chicken Juicy Mandi (Half)",
+      "name": "Chicken Juicy Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Chicken Juicy Mandi",
-      "prices": {
-        "half": 500
-      },
-      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
-      "tier": 2
+      "subCategory": "Chicken Juicy Mandi",
+      "price": 500,
+      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5635,21 +5683,18 @@
     "description": "",
     "image": "/images/menu/Chicken Juicy Mandi.png",
     "price": 750,
-    "prices": {
-      "three_piece": 750
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-juicy-3piece-raw",
-      "title": "Chicken Juicy Mandi (3-piece)",
+      "name": "Chicken Juicy Mandi (3-piece)",
       "category": "Arabian",
-      "subcategory": "Chicken Juicy Mandi",
-      "prices": {
-        "three_piece": 750
-      },
-      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
-      "tier": 2
+      "subCategory": "Chicken Juicy Mandi",
+      "price": 750,
+      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5660,21 +5705,18 @@
     "description": "",
     "image": "/images/menu/Chicken Juicy Mandi.png",
     "price": 1000,
-    "prices": {
-      "full": 1000
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-chicken-juicy-full-raw",
-      "title": "Chicken Juicy Mandi (Full)",
+      "name": "Chicken Juicy Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Chicken Juicy Mandi",
-      "prices": {
-        "full": 1000
-      },
-      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
-      "tier": 2
+      "subCategory": "Chicken Juicy Mandi",
+      "price": 1000,
+      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5685,21 +5727,18 @@
     "description": "",
     "image": "/images/menu/Broasted Mandi.png",
     "price": 320,
-    "prices": {
-      "mini": 320
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-broasted-mini-raw",
-      "title": "Broasted Mandi (Mini)",
+      "name": "Broasted Mandi (Mini)",
       "category": "Arabian",
-      "subcategory": "Broasted Mandi",
-      "prices": {
-        "mini": 320
-      },
-      "image": "client/src/assets/raw/Broasted Mandi.png",
-      "tier": 2
+      "subCategory": "Broasted Mandi",
+      "price": 320,
+      "image": "/images/menu/Broasted Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5710,21 +5749,18 @@
     "description": "",
     "image": "/images/menu/Broasted Mandi.png",
     "price": 500,
-    "prices": {
-      "half": 500
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-broasted-half-raw",
-      "title": "Broasted Mandi (Half)",
+      "name": "Broasted Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Broasted Mandi",
-      "prices": {
-        "half": 500
-      },
-      "image": "client/src/assets/raw/Broasted Mandi.png",
-      "tier": 2
+      "subCategory": "Broasted Mandi",
+      "price": 500,
+      "image": "/images/menu/Broasted Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5735,21 +5771,18 @@
     "description": "",
     "image": "/images/menu/Broasted Mandi.png",
     "price": 750,
-    "prices": {
-      "three_piece": 750
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-broasted-3piece-raw",
-      "title": "Broasted Mandi (3-piece)",
+      "name": "Broasted Mandi (3-piece)",
       "category": "Arabian",
-      "subcategory": "Broasted Mandi",
-      "prices": {
-        "three_piece": 750
-      },
-      "image": "client/src/assets/raw/Broasted Mandi.png",
-      "tier": 2
+      "subCategory": "Broasted Mandi",
+      "price": 750,
+      "image": "/images/menu/Broasted Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5760,21 +5793,18 @@
     "description": "",
     "image": "/images/menu/Broasted Mandi.png",
     "price": 1000,
-    "prices": {
-      "full": 1000
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-broasted-full-raw",
-      "title": "Broasted Mandi (Full)",
+      "name": "Broasted Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Broasted Mandi",
-      "prices": {
-        "full": 1000
-      },
-      "image": "client/src/assets/raw/Broasted Mandi.png",
-      "tier": 2
+      "subCategory": "Broasted Mandi",
+      "price": 1000,
+      "image": "/images/menu/Broasted Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5785,21 +5815,18 @@
     "description": "",
     "image": "/images/menu/Tandoori Chicken Mandi.png",
     "price": 440,
-    "prices": {
-      "half": 440
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-tandoori-half-raw",
-      "title": "Tandoori Chicken Mandi (Half)",
+      "name": "Tandoori Chicken Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Tandoori Chicken Mandi",
-      "prices": {
-        "half": 440
-      },
-      "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
-      "tier": 2
+      "subCategory": "Tandoori Chicken Mandi",
+      "price": 440,
+      "image": "/images/menu/Tandoori Chicken Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5810,21 +5837,18 @@
     "description": "",
     "image": "/images/menu/Tandoori Chicken Mandi.png",
     "price": 800,
-    "prices": {
-      "full": 800
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-tandoori-full-raw",
-      "title": "Tandoori Chicken Mandi (Full)",
+      "name": "Tandoori Chicken Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Tandoori Chicken Mandi",
-      "prices": {
-        "full": 800
-      },
-      "image": "client/src/assets/raw/Tandoori Chicken Mandi.png",
-      "tier": 2
+      "subCategory": "Tandoori Chicken Mandi",
+      "price": 800,
+      "image": "/images/menu/Tandoori Chicken Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5835,21 +5859,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 320,
-    "prices": {
-      "mini": 320
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-mini-raw",
-      "title": "Nizami Mutton Mandi (Mini)",
+      "name": "Nizami Mutton Mandi (Mini)",
       "category": "Arabian",
-      "subcategory": "Mutton Mandi",
-      "prices": {
-        "mini": 320
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Mutton Mandi",
+      "price": 320,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5860,21 +5881,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 500,
-    "prices": {
-      "half": 500
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-half-raw",
-      "title": "Nizami Mutton Mandi (Half)",
+      "name": "Nizami Mutton Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Mutton Mandi",
-      "prices": {
-        "half": 500
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Mutton Mandi",
+      "price": 500,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5885,21 +5903,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 750,
-    "prices": {
-      "three_piece": 750
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-3piece-raw",
-      "title": "Nizami Mutton Mandi (3-piece)",
+      "name": "Nizami Mutton Mandi (3-piece)",
       "category": "Arabian",
-      "subcategory": "Mutton Mandi",
-      "prices": {
-        "three_piece": 750
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Mutton Mandi",
+      "price": 750,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5910,21 +5925,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 900,
-    "prices": {
-      "full": 900
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-full-raw",
-      "title": "Nizami Mutton Mandi (Full)",
+      "name": "Nizami Mutton Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Mutton Mandi",
-      "prices": {
-        "full": 900
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Mutton Mandi",
+      "price": 900,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5935,21 +5947,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 350,
-    "prices": {
-      "mini": 350
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-juice-mini-raw",
-      "title": "Juicy Mutton Mandi (Mini)",
+      "name": "Juicy Mutton Mandi (Mini)",
       "category": "Arabian",
-      "subcategory": "Juicy Mutton Mandi",
-      "prices": {
-        "mini": 350
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Juicy Mutton Mandi",
+      "price": 350,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5960,21 +5969,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 600,
-    "prices": {
-      "half": 600
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-juice-half-raw",
-      "title": "Juicy Mutton Mandi (Half)",
+      "name": "Juicy Mutton Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Juicy Mutton Mandi",
-      "prices": {
-        "half": 600
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Juicy Mutton Mandi",
+      "price": 600,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -5985,21 +5991,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 850,
-    "prices": {
-      "three_piece": 850
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-juice-3piece-raw",
-      "title": "Juicy Mutton Mandi (3-piece)",
+      "name": "Juicy Mutton Mandi (3-piece)",
       "category": "Arabian",
-      "subcategory": "Juicy Mutton Mandi",
-      "prices": {
-        "three_piece": 850
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Juicy Mutton Mandi",
+      "price": 850,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6010,21 +6013,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 1100,
-    "prices": {
-      "full": 1100
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mutton-juice-full-raw",
-      "title": "Juicy Mutton Mandi (Full)",
+      "name": "Juicy Mutton Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Juicy Mutton Mandi",
-      "prices": {
-        "full": 1100
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Juicy Mutton Mandi",
+      "price": 1100,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6035,21 +6035,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 700,
-    "prices": {
-      "half": 700
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-special-mutton-half-raw",
-      "title": "Special Mutton Masala Mandi (Half)",
+      "name": "Special Mutton Masala Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Special Mutton Masala",
-      "prices": {
-        "half": 700
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Special Mutton Masala",
+      "price": 700,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6060,21 +6057,18 @@
     "description": "",
     "image": "/images/menu/Mutton Mandi.png",
     "price": 1300,
-    "prices": {
-      "full": 1300
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-special-mutton-full-raw",
-      "title": "Special Mutton Masala Mandi (Full)",
+      "name": "Special Mutton Masala Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Special Mutton Masala",
-      "prices": {
-        "full": 1300
-      },
-      "image": "client/src/assets/raw/Mutton Mandi.png",
-      "tier": 2
+      "subCategory": "Special Mutton Masala",
+      "price": 1300,
+      "image": "/images/menu/Mutton Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6085,21 +6079,18 @@
     "description": "",
     "image": "/images/menu/Fish Mandi.png",
     "price": 460,
-    "prices": {
-      "half": 460
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-fish-half-raw",
-      "title": "Fish Mandi (Half)",
+      "name": "Fish Mandi (Half)",
       "category": "Arabian",
-      "subcategory": "Fish Mandi",
-      "prices": {
-        "half": 460
-      },
-      "image": "client/src/assets/raw/Fish Mandi.png",
-      "tier": 2
+      "subCategory": "Fish Mandi",
+      "price": 460,
+      "image": "/images/menu/Fish Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6110,21 +6101,18 @@
     "description": "",
     "image": "/images/menu/Fish Mandi.png",
     "price": 850,
-    "prices": {
-      "full": 850
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-fish-full-raw",
-      "title": "Fish Mandi (Full)",
+      "name": "Fish Mandi (Full)",
       "category": "Arabian",
-      "subcategory": "Fish Mandi",
-      "prices": {
-        "full": 850
-      },
-      "image": "client/src/assets/raw/Fish Mandi.png",
-      "tier": 2
+      "subCategory": "Fish Mandi",
+      "price": 850,
+      "image": "/images/menu/Fish Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
@@ -6135,94 +6123,217 @@
     "description": "",
     "image": "/images/menu/Chicken Juicy Mandi.png",
     "price": 1100,
-    "prices": {
-      "pack_for_4": 1100
-    },
+    "prices": null,
     "variants": null,
     "available": true,
     "raw": {
       "id": "mandi-mix-4p-raw",
-      "title": "Mix Mandi (4 members)",
+      "name": "Mix Mandi (4 members)",
       "category": "Arabian",
-      "subcategory": "Mix Mandi",
-      "prices": {
-        "pack_for_4": 1100
-      },
-      "image": "client/src/assets/raw/Chicken Juicy Mandi.png",
-      "tier": 2
+      "subCategory": "Mix Mandi",
+      "price": 1100,
+      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "isBestSeller": false,
+      "isSignature": false
     }
   },
   {
     "id": "single-chicken-biryani",
     "title": "Single Chicken Biryani",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Dum Biryani.png",
     "price": 150,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Dum Biryani.png"
+    "raw": {
+      "id": "single-chicken-biryani-raw",
+      "name": "Single Chicken Biryani",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 150,
+      "image": "/images/menu/Chicken Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "full-chicken-biryani",
     "title": "Full Chicken Biryani",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Dum Biryani.png",
     "price": 200,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Dum Biryani.png"
+    "raw": {
+      "id": "full-chicken-biryani-raw",
+      "name": "Full Chicken Biryani",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 200,
+      "image": "/images/menu/Chicken Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "chicken-biryani-fp",
     "title": "Chicken Biryani FP",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Dum Biryani.png",
     "price": 500,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Dum Biryani.png"
+    "raw": {
+      "id": "chicken-biryani-fp-raw",
+      "name": "Chicken Biryani FP",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 500,
+      "image": "/images/menu/Chicken Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "chicken-jumbo-pack",
     "title": "Chicken Jumbo Pack",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Dum Biryani.png",
     "price": 800,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Dum Biryani.png"
+    "raw": {
+      "id": "chicken-jumbo-pack-raw",
+      "name": "Chicken Jumbo Pack",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 800,
+      "image": "/images/menu/Chicken Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "chicken-fry-piece-biryani-fp",
     "title": "Chicken Fry Piece Biryani FP",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Fry Piece Biryani.png",
     "price": 750,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Fry Piece Biryani.png"
+    "raw": {
+      "id": "chicken-fry-piece-biryani-fp-raw",
+      "name": "Chicken Fry Piece Biryani FP",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 750,
+      "image": "/images/menu/Chicken Fry Piece Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "extra-biryani-rice-large",
     "title": "Extra Biryani Rice",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Chicken Dum Biryani.png",
     "price": 80,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Chicken Dum Biryani.png"
+    "raw": {
+      "id": "extra-biryani-rice-large-raw",
+      "name": "Extra Biryani Rice",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 80,
+      "image": "/images/menu/Chicken Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "mutton-biryani-single",
     "title": "Mutton Biryani Single",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Mutton Dum Biryani.png",
     "price": 220,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Mutton Dum Biryani.png"
+    "raw": {
+      "id": "mutton-biryani-single-raw",
+      "name": "Mutton Biryani Single",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 220,
+      "image": "/images/menu/Mutton Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "mutton-biryani-full",
     "title": "Mutton Biryani Full",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Mutton Dum Biryani.png",
     "price": 300,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Mutton Dum Biryani.png"
+    "raw": {
+      "id": "mutton-biryani-full-raw",
+      "name": "Mutton Biryani Full",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 300,
+      "image": "/images/menu/Mutton Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "mutton-biryani-fp",
     "title": "Mutton Biryani FP",
     "category": "Biryani",
+    "subcategory": null,
+    "description": "",
+    "image": "/images/menu/Mutton Dum Biryani.png",
     "price": 750,
+    "prices": null,
+    "variants": null,
     "available": true,
-    "image": "/images/menu/Mutton Dum Biryani.png"
+    "raw": {
+      "id": "mutton-biryani-fp-raw",
+      "name": "Mutton Biryani FP",
+      "category": "Biryani",
+      "subCategory": null,
+      "price": 750,
+      "image": "/images/menu/Mutton Dum Biryani.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   },
   {
     "id": "curd-rice",
@@ -6237,14 +6348,13 @@
     "available": true,
     "raw": {
       "id": "curd-rice-raw",
+      "name": "Curd Rice",
       "category": "Meals",
-      "subcategory": "Veg Meals",
-      "title": "Curd Rice",
-      "description": "Comforting curd rice",
-      "image": null,
+      "subCategory": "Veg Meals",
       "price": 100,
-      "available": true
-    },
-    "_oldCategory": "Biryani"
+      "image": "/src/assets/placeholder-menu-item.png",
+      "isBestSeller": false,
+      "isSignature": false
+    }
   }
 ]

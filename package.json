@@ -11,7 +11,10 @@
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "build:menu": "node client/scripts/build-menu.cjs",
+    "migrate:menu": "node client/scripts/migrate-canonical-to-csv.cjs",
+    "validate:images": "node client/scripts/validate-images.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -80,7 +83,8 @@
     "wouter": "^3.3.5",
     "ws": "^8.18.0",
     "zod": "^3.24.2",
-    "zod-validation-error": "^3.4.0"
+    "zod-validation-error": "^3.4.0",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@replit/vite-plugin-cartographer": "^0.2.7",

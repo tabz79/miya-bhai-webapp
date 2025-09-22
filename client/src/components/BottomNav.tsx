@@ -1,12 +1,15 @@
+// client/src/components/BottomNav.tsx
 import React from 'react';
 import { Home, Menu, ShoppingCart, User } from 'lucide-react';
 import { useRoute, Link } from 'wouter';
+import { useCartStore } from '@/hooks/useCartStore';
 
 export function BottomNav() {
   const [isHome] = useRoute('/');
   const [isMenu] = useRoute('/menu');
   const [isCart] = useRoute('/cart');
   const [isProfile] = useRoute('/profile');
+  const { items } = useCartStore();
 
   const navItems = [
     { icon: Home, label: 'Home', path: '/', active: isHome },
@@ -30,9 +33,9 @@ export function BottomNav() {
               >
                 <Icon className="w-5 h-5" />
                 <span className="text-[10px] mt-0.5">{label}</span>
-                {label === 'Cart' && (
+                {label === 'Cart' && items.length > 0 && (
                   <div className="absolute top-0 right-4 w-4 h-4 bg-red-500 text-white text-[8px] rounded-full flex items-center justify-center">
-                    0
+                    {items.length}
                   </div>
                 )}
               </button>

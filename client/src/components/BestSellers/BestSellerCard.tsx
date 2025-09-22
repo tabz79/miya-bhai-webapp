@@ -1,19 +1,30 @@
 import React from 'react';
+import { useLocation } from 'wouter';
 import { Bestseller } from '@/data/mockData';
 
 interface BestSellerCardProps {
   item: Bestseller;
 }
 
+const slugify = (s?: string) =>
+  (s || "")
+    .toString()
+    .normalize?.("NFKD")
+    .replace(/[\u0300-\u036F]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+
 export function BestSellerCard({ item }: BestSellerCardProps) {
-  // Figma specs:
-  // Image: 45x45 at x=7, top=6
-  // Dish name: Nunito Bold, 6.5px, line-height 7px, box 47x7 at (7,58), align center
-  // Description: Carattere Regular, 6px, line-height 6px, box 34x26 at (13,69), align center
+  const [, setLocation] = useLocation();
+
+  const handleClick = () => {
+    setLocation(`/menu#${slugify(item.name)}`);
+  };
 
   return (
     <div
-      className="relative w-[60px] h-[100px] bg-colorsurfacecard rounded-[95px] shadow-effect-card-shadow box-border"
+      onClick={handleClick}
+      className="relative w-[60px] h-[100px] bg-colorsurfacecard rounded-[95px] shadow-effect-card-shadow box-border cursor-pointer"
       role="group"
       aria-label={item.name}
       style={{ overflow: 'hidden' }}

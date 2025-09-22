@@ -9,7 +9,8 @@ import canonicalMenu from "@/data/menu.canonical.json";
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
 import { sortMenuItems } from "../lib/menu-utils";
-import { OfferCarousel } from "../components/OfferCarousel";
+
+import { useCartStore } from "@/hooks/useCartStore";
 import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
 
 type MenuItem = any;
@@ -78,10 +79,22 @@ const findImageEntryFor = (item: MenuItem) => {
   return null;
 };
 
+import { useLocation } from "wouter";
+import { SearchBarPill } from "@/components/SearchBarPill";
+import { OfferCarousel } from "@/components/OfferCarousel";
+import { FloatingCategoriesButton } from "@/components/Menu/FloatingCategoriesButton";
+
 export function Menu(): JSX.Element {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [location] = useLocation();
+
+  const getSearchQuery = () => {
+    const params = new URLSearchParams(location.search);
+    return params.get("search") || "";
+  };
+
+  const searchQuery = getSearchQuery();
 
   useEffect(() => {
     const fetchMenu = async () => {
@@ -123,6 +136,16 @@ export function Menu(): JSX.Element {
     ).filter(Boolean);
     const sorted = sortCategories(all);
     setCategories(sorted);
+  }, [menu]);
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   }, [menu]);
 
   const itemsWithResolvedImages = useMemo(() => {
@@ -170,18 +193,20 @@ export function Menu(): JSX.Element {
     })).filter(group => group.items.length > 0);
   }, [categories, filteredItems]);
 
+  const { addToCart } = useCartStore();
+
   const handleAddToCart = (item: MenuItem) => {
-    console.log("Add to cart:", item);
+    addToCart(item);
   };
 
-  const handleSelectCategory = (category: string) => {
-    const element = document.querySelector(`[data-category="${category}"]`);
+  const handleCategorySelect = (category: string) => {
+    const element = document.getElementById(slugify(category));
     if (element) {
-      const toolbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--toolbar-height')) || 0;
-      const offset = element.getBoundingClientRect().top + window.scrollY - toolbarHeight;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
 
   return (
     <div className="w-full min-h-screen bg-app-background">
@@ -190,23 +215,26 @@ export function Menu(): JSX.Element {
         description="Explore our complete menu featuring authentic Arabian Mandi, Chicken Biryani, grilled Kebabs, fresh Shawarma, and traditional desserts. Order online for delivery."
       />
       <JsonLD type="menu" />
-      <Toolbar />
+      <Toolbar>
+        <SearchBarPill />
+      </Toolbar>
+
       <OfferCarousel />
 
-      {groupedMenu.map(({ category, items }) => (
-        <div key={category}>
+      {groupedMenu.map(({ category, items }, index) => (
+        <div key={category || `category-${index}`} id={slugify(category)}>
           <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
           <MenuGrid
-            items={items}
+            items={items.map((item, itemIndex) => ({...item, id: item.id || slugify(item.name) || `item-${itemIndex}`}))}
             onAddToCart={handleAddToCart}
             paginate={false}
             CardComponent={MenuCardFlat}
           />
         </div>
       ))}
+      <FloatingCategoriesButton categories={categories} onSelectCategory={handleCategorySelect} />
 
       <div className="h-[49px]" />
-      <CategoryJumpPill categories={categories} onSelectCategory={handleSelectCategory} />
       <BottomNav />
     </div>
   );

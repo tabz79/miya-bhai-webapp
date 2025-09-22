@@ -14,6 +14,7 @@ import canonicalMenu from "@/data/menu.canonical.json";
 // images map produced by uploader -> public_id/url mapping produced earlier
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
+import { useCartStore } from "@/hooks/useCartStore";
 import { sortMenuItems } from "../lib/menu-utils";
 
 /**
@@ -182,8 +183,10 @@ export function Home(): JSX.Element {
     setCurrentPage(0);
   };
 
+  const { addToCart } = useCartStore();
+
   const handleAddToCart = (item: MenuItem) => {
-    console.log("Add to cart:", item);
+    addToCart(item);
   };
 
   return (

@@ -12,11 +12,11 @@ export function CategoryDropdown({ categories, selectedCategory, onSelectCategor
 
   return (
     <div
-      className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-y-auto overscroll-contain py-2 px-3"
+      className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-y-auto overscroll-contain py-2 px-3"
       role="region"
       aria-label="Categories"
-      // ensure the dropdown never overlaps the bottom nav — adjust 64px to match your bottom nav height
-      style={{ maxHeight: 'calc(100vh - 64px)' }}
+      // ensure the dropdown never overlaps the bottom nav — adjust 200px to account for header and bottom nav
+      style={{ maxHeight: 'calc(100vh - 200px)' }}
     >
       <div role="listbox" aria-activedescendant={selectedCategory ? `cat-${selectedCategory}` : undefined}>
         {categories.map((category, idx) => (

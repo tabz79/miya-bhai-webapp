@@ -154,6 +154,7 @@ export default function MenuCardFlat({ item, onAddToCart }: MenuCardProps) {
   return (
     // subtle separator between cards using an inset box-shadow so it shows reliably on non-white backgrounds
     <article
+      id={item.id}
       className="w-full bg-transparent"
       style={{ boxShadow: 'inset 0 -1px 0 rgba(0,0,0,0.08)' }}
     >
