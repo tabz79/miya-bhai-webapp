@@ -26,7 +26,7 @@ const slugify = (s?: string) =>
     .toString()
     .normalize?.("NFKD")
     .replace(/[\u0300-\u036F]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/[^a-z0-9]+/g, "")
     .replace(/(^-|-$)+/g, "");
 
 const buildCloudinaryUrlFromPublicId = (publicId: string | undefined | null) => {
@@ -79,7 +79,6 @@ const findImageEntryFor = (item: MenuItem) => {
   return null;
 };
 
-import { useLocation } from "wouter";
 import { SearchBarPill } from "@/components/SearchBarPill";
 import { OfferCarousel } from "@/components/OfferCarousel";
 import { FloatingCategoriesButton } from "@/components/Menu/FloatingCategoriesButton";
@@ -87,14 +86,7 @@ import { FloatingCategoriesButton } from "@/components/Menu/FloatingCategoriesBu
 export function Menu(): JSX.Element {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
-  const [location] = useLocation();
-
-  const getSearchQuery = () => {
-    const params = new URLSearchParams(location.search);
-    return params.get("search") || "";
-  };
-
-  const searchQuery = getSearchQuery();
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   useEffect(() => {
     const fetchMenu = async () => {
@@ -180,9 +172,7 @@ export function Menu(): JSX.Element {
       return itemsWithResolvedImages;
     }
     return itemsWithResolvedImages.filter(item =>
-      (item.name || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (item.sku || "").toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (item.tags || []).some((tag: string) => (tag || "").toLowerCase().includes(searchQuery.toLowerCase()))
+      (item.title || "").toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [itemsWithResolvedImages, searchQuery]);
 
@@ -215,23 +205,25 @@ export function Menu(): JSX.Element {
         description="Explore our complete menu featuring authentic Arabian Mandi, Chicken Biryani, grilled Kebabs, fresh Shawarma, and traditional desserts. Order online for delivery."
       />
       <JsonLD type="menu" />
-      <Toolbar>
-        <SearchBarPill />
-      </Toolbar>
+      <Toolbar onSearch={setSearchQuery} initialQuery={searchQuery} />
 
       <OfferCarousel />
 
-      {groupedMenu.map(({ category, items }, index) => (
-        <div key={category || `category-${index}`} id={slugify(category)}>
-          <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
-          <MenuGrid
-            items={items.map((item, itemIndex) => ({...item, id: item.id || slugify(item.name) || `item-${itemIndex}`}))}
-            onAddToCart={handleAddToCart}
-            paginate={false}
-            CardComponent={MenuCardFlat}
-          />
-        </div>
-      ))}
+      {searchQuery && groupedMenu.length === 0 ? (
+        <div className="text-center text-gray-500 py-8">No dishes found matching "{searchQuery}"</div>
+      ) : (
+        groupedMenu.map(({ category, items }, index) => (
+          <div key={category || `category-${index}`} id={slugify(category)}>
+            <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
+            <MenuGrid
+              items={items.map((item, itemIndex) => ({...item, id: item.id || slugify(item.name) || `item-${itemIndex}`}))}
+              onAddToCart={handleAddToCart}
+              paginate={false}
+              CardComponent={MenuCardFlat}
+            />
+          </div>
+        ))
+      )}
       <FloatingCategoriesButton categories={categories} onSelectCategory={handleCategorySelect} />
 
       <div className="h-[49px]" />

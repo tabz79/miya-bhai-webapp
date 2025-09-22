@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -61,11 +61,24 @@ const menuItems = [
   },
 ];
 
-export const MenuSection = (): JSX.Element => {
+interface MenuSectionProps {
+  searchQuery: string;
+}
+
+export const MenuSection = ({ searchQuery }: MenuSectionProps): JSX.Element => {
+  const filteredMenuItems = useMemo(() => {
+    if (!searchQuery) {
+      return menuItems;
+    }
+    return menuItems.filter(item =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [menuItems, searchQuery]);
+
   return (
     <section className="w-full px-3.5 py-0 relative">
       <div className="grid grid-cols-4 gap-[15px] w-full max-w-[393px]">
-        {menuItems.map((item) => (
+        {filteredMenuItems.map((item) => (
           <Card
             key={item.id}
             className="w-20 h-[110px] bg-colorsurfacemenucard rounded-[18px] overflow-hidden shadow-effect-shadow-menucard border-0"
@@ -101,7 +114,7 @@ export const MenuSection = (): JSX.Element => {
                 </div>
 
                 <div className="inline-flex items-center justify-center gap-2.5 absolute top-3 left-[22px]">
-                  <div className="relative w-fit mt-[-1.00px] font-typography-menu-price font-[number:var(--typography-menu-price-font-weight)] text-colortextmenuprice text-[length:var(--typography-menu-price-font-size)] text-center tracking-[var(--typography-menu-price-letter-spacing)] leading-[var(--typography-menu-price-line-height)] whitespace-nowrap [font-style:var(--typography-menu-price-font-style)]">
+                  <div className="relative w-fit mt-[-1.00px] font-typography-menu-price font-[number:var(--typography-menu-price-font-weight)] text-colortextmenudishname text-[length:var(--typography-menu-price-font-size)] text-center tracking-[var(--typography-menu-price-letter-spacing)] leading-[var(--typography-menu-price-line-height)] whitespace-nowrap [font-style:var(--typography-menu-price-font-style)]">
                     {item.price}
                   </div>
                 </div>

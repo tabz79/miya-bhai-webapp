@@ -173,9 +173,9 @@ export const categories = ["Main Course", "Starters", "Desserts"];
 // Restaurant information
 export const restaurantInfo = {
   name: "Miya Bhai Food Court",
-  phone: "+91 98765 43210",
-  email: "info@miyabhifoodcourt.com",
-  address: "123 Food Street, Hyderabad, Telangana 500001",
+  phone: "+91 9581481515",
+  email: "miya-bhaifoodcourt@gmail.com",
+  address: "Revathi Center, 11-7, NST Road, Nehru Nagar, Khammam, Telangana 507001",
   story: `Miya Bhai Food Court has been serving authentic flavors since 1995. What started as a small family kitchen has grown into a beloved destination for food lovers seeking traditional Middle Eastern and Indian cuisine. 
 
 Our master chefs bring decades of experience, using time-honored recipes passed down through generations. From our signature Arabian Mandi to the perfect Chicken Biryani, every dish tells a story of passion, tradition, and culinary excellence.

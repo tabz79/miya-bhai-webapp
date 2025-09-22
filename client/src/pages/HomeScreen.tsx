@@ -1,5 +1,5 @@
-import { SearchIcon } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
+import { SearchBarPill } from "@/components/SearchBarPill";
 import { BestSellersSection } from "./sections/BestSellersSection";
 import { DeliveryAdSection } from "./sections/DeliveryAdSection";
 import { FeaturedBestSellersSection } from "./sections/FeaturedBestSellersSection";
@@ -8,6 +8,8 @@ import { MenuSection } from "./sections/MenuSection";
 import { MenuTitleSection } from "./sections/MenuTitleSection";
 
 export const HomeScreen = (): JSX.Element => {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
   return (
     <div className="bg-white flex justify-center w-screen min-h-screen">
       <div className="bg-white w-[393px] flex flex-col relative">
@@ -19,12 +21,8 @@ export const HomeScreen = (): JSX.Element => {
             src="/figmaAssets/logo-2.png"
           />
 
-          <div className="flex w-[180px] h-9 items-center justify-between px-2.5 py-2 ml-auto bg-colorbackgroundsearchfield rounded-[20px] shadow-effect-shadow-searchbox">
-            <div className="font-typography-body-searchplaceholder font-[number:var(--typography-body-searchplaceholder-font-weight)] text-black text-[length:var(--typography-body-searchplaceholder-font-size)] tracking-[var(--typography-body-searchplaceholder-letter-spacing)] leading-[var(--typography-body-searchplaceholder-line-height)] [font-style:var(--typography-body-searchplaceholder-font-style)]">
-              SearchIcon Dishes
-            </div>
-
-            <SearchIcon className="w-5 h-5" />
+          <div className="ml-auto">
+            <SearchBarPill onSearch={setSearchQuery} initialQuery={searchQuery} />
           </div>
         </header>
 
@@ -37,7 +35,7 @@ export const HomeScreen = (): JSX.Element => {
             <FeaturedBestSellersSection />
           </div>
           <div className="w-[80%]">
-            <BestSellersSection />
+            <BestSellersSection searchQuery={searchQuery} />
           </div>
         </div>
 
@@ -48,7 +46,7 @@ export const HomeScreen = (): JSX.Element => {
         <MenuTitleSection />
 
         {/* Menu Section */}
-        <MenuSection />
+        <MenuSection searchQuery={searchQuery} />
       </div>
     </div>
   );

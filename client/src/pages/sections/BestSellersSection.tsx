@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
-export const BestSellersSection = (): JSX.Element => {
+interface BestSellersSectionProps {
+  searchQuery: string;
+}
+
+export const BestSellersSection = ({ searchQuery }: BestSellersSectionProps): JSX.Element => {
   const bestSellers = [
     {
       image: "/figmaAssets/chickenbiryani-bestseller-png.png",
@@ -29,10 +33,20 @@ export const BestSellersSection = (): JSX.Element => {
     },
   ];
 
+  const filteredBestSellers = useMemo(() => {
+    if (!searchQuery) {
+      return bestSellers;
+    }
+    return bestSellers.filter(item =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [bestSellers, searchQuery]);
+
   return (
     <section className="w-full relative">
       <div className="flex items-center gap-[15px] px-3 pt-[19px]">
-        {bestSellers.map((item, index) => (
+        {filteredBestSellers.map((item, index) => (
           <Card
             key={index}
             className="flex flex-col w-[60px] h-[100px] items-center gap-1 px-4 py-2 bg-colorsurfacecard rounded-[95px] shadow-effect-card-shadow cursor-pointer hover:shadow-lg transition-shadow"

@@ -9,7 +9,12 @@ import logo from '@/assets/logo.png';
  * - Stable height (56px) to avoid layout jumps
  * - Adds subtle shadow when scrolled for visual feedback
  */
-export function Toolbar() {
+interface ToolbarProps {
+  onSearch?: (query: string) => void;
+  initialQuery?: string;
+}
+
+export function Toolbar({ onSearch, initialQuery = '' }: ToolbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -45,7 +50,7 @@ export function Toolbar() {
         {/* Search bar - exact Figma specs: 180x36 */}
         <div className="flex-shrink-0">
           <div style={{ width: 180, height: 36 }}>
-            <SearchBarPill />
+            <SearchBarPill onSearch={onSearch} initialQuery={initialQuery} />
           </div>
         </div>
       </div>
