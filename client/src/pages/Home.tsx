@@ -14,6 +14,8 @@ import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
 import { useCartStore } from "@/hooks/useCartStore";
 import { sortMenuItems } from "../lib/menu-utils";
+import { slugify } from "@/lib/utils";
+import { useLocation } from "wouter";
 
 type MenuItem = any;
 
@@ -22,14 +24,6 @@ const CLOUD_NAME =
   import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME ||
   import.meta.env?.VITE_CLOUD_NAME ||
   null;
-
-const slugify = (s?: string) =>
-  (s || "")
-    .toString()
-    .normalize?.("NFKD")
-    .replace(/[[\u0300-\u036F]]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
 
 const buildCloudinaryUrlFromPublicId = (publicId: string | undefined | null) => {
   if (!publicId) return null;
@@ -178,9 +172,11 @@ export function Home(): JSX.Element {
     setShowModal(!!q && q.trim().length > 0);
   };
 
+  const [, setLocation] = useLocation();
   const handleResultClick = (item: MenuItem) => {
     const itemSlug = slugify(item.title || item.name || item.id || item.sku);
-    window.location.assign(`/menu?q=${encodeURIComponent(searchQuery)}#${itemSlug}`);
+    sessionStorage.setItem("scrollToSlug", itemSlug);
+    setLocation(`/menu?q=${encodeURIComponent(searchQuery)}`);
     setShowModal(false);
   };
 

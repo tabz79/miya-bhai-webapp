@@ -9,6 +9,7 @@ import canonicalMenu from "@/data/menu.canonical.json";
 import imagesMapRaw from "../data/images-map.json";
 import { sortCategories } from "../lib/category-mapper";
 import { sortMenuItems } from "../lib/menu-utils";
+import { slugify } from "@/lib/utils";
 
 import { useCartStore } from "@/hooks/useCartStore";
 import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
@@ -20,14 +21,6 @@ const CLOUD_NAME =
   import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME ||
   import.meta.env?.VITE_CLOUD_NAME ||
   null;
-
-const slugify = (s?: string) =>
-  (s || "")
-    .toString()
-    .normalize?.("NFKD")
-    .replace(/[\u0300-\u036F]/g, "")
-    .replace(/[^a-z0-9]+/g, "")
-    .replace(/(^-|-$)+/g, "");
 
 const buildCloudinaryUrlFromPublicId = (publicId: string | undefined | null) => {
   if (!publicId) return null;
@@ -131,13 +124,22 @@ export function Menu(): JSX.Element {
   }, [menu]);
 
   useEffect(() => {
-    if (window.location.hash) {
-      const id = window.location.hash.substring(1);
-      const element = document.getElementById(id);
+    const slug = sessionStorage.getItem("scrollToSlug");
+    if (!slug) return;
+
+    let retries = 10;
+    const findAndScroll = () => {
+      const element = document.getElementById(slug);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+        sessionStorage.removeItem("scrollToSlug");
+      } else if (retries > 0) {
+        retries--;
+        requestAnimationFrame(findAndScroll);
       }
-    }
+    };
+
+    findAndScroll();
   }, [menu]);
 
   const itemsWithResolvedImages = useMemo(() => {
@@ -216,7 +218,7 @@ export function Menu(): JSX.Element {
           <div key={category || `category-${index}`} id={slugify(category)}>
             <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
             <MenuGrid
-              items={items.map((item, itemIndex) => ({...item, id: item.id || slugify(item.name) || `item-${itemIndex}`}))}
+              items={items.map((item) => ({...item, id: slugify(item.title || item.name) }))}
               onAddToCart={handleAddToCart}
               paginate={false}
               CardComponent={MenuCardFlat}

@@ -1,59 +1,59 @@
-"client\src\assets\raw\Tandoori Chicken.png"
-"client\src\assets\raw\Chicken Dum Biryani.png"
-"client\src\assets\raw\Mutton Dum Biryani.png"
-"client\src\assets\raw\Reshmi Kebab.png"
-"client\src\assets\raw\Chicken Tikka.png"
-"client\src\assets\raw\Tangdi Kebab.png"
-"client\src\assets\raw\Paneer Biryani.png"
-"client\src\assets\raw\Prawns Biryani.png"
-"client\src\assets\raw\Fish Biryani.png"
-"client\src\assets\raw\Chicken Fry Piece Biryani.png"
-"client\src\assets\raw\Butter Chicken.png"
-"client\src\assets\raw\Chicken Tikka Masala.png"
-"client\src\assets\raw\Paneer Butter Masala.png"
-"client\src\assets\raw\Kadai Paneer.png"
-"client\src\assets\raw\Malai Kebab.png"
-"client\src\assets\raw\Paneer 65.png"
-"client\src\assets\raw\Chicken 65.png"
-"client\src\assets\raw\Apollo fish.png"
-"client\src\assets\raw\Chilli Chicken.png"
-"client\src\assets\raw\Chicken Lollipop.png"
-"client\src\assets\raw\Chicken Wings.png"
-"client\src\assets\raw\Prawns Manchuria.png"
-"client\src\assets\raw\Chilli Prawns.png"
-"client\src\assets\raw\Grill Chicken.png"
-"client\src\assets\raw\Chicken Shawarma.png"
-"client\src\assets\raw\Paneer Shawarma.png"
-"client\src\assets\raw\Chicken Noodles.png"
-"client\src\assets\raw\Chicken Fried Rice.png"
-"client\src\assets\raw\Paneer Fried Rice.png"
-"client\src\assets\raw\Veg Fried Rice.png"
-"client\src\assets\raw\Egg Noodles.png"
-"client\src\assets\raw\Egg Fried Rice.png"
-"client\src\assets\raw\Gobi Manchuria.png"
-"client\src\assets\raw\Chicken Manchuria.png"
+"client\src\assets\raw\Tandoori Chicken.png" (done)
+"client\src\assets\raw\Chicken Dum Biryani.png" (done)
+"client\src\assets\raw\Mutton Dum Biryani.png" (done)
+"client\src\assets\raw\Reshmi Kebab.png" (done)
+"client\src\assets\raw\Chicken Tikka.png" (done)
+"client\src\assets\raw\Tangdi Kebab.png"(done)
+"client\src\assets\raw\Paneer Biryani.png"(done)
+"client\src\assets\raw\Prawns Biryani.png"(done)
+"client\src\assets\raw\Fish Biryani.png"(done)
+"client\src\assets\raw\Chicken Fry Piece Biryani.png"(done)
+"client\src\assets\raw\Butter Chicken.png"(done)
+"client\src\assets\raw\Chicken Tikka Masala.png"(done)
+"client\src\assets\raw\Paneer Butter Masala.png"(done)
+"client\src\assets\raw\Kadai Paneer.png"(done)
+"client\src\assets\raw\Malai Kebab.png"(done)
+"client\src\assets\raw\Paneer 65.png"(done)
+"client\src\assets\raw\Chicken 65.png"(done)
+"client\src\assets\raw\Apollo fish.png"(done)
+"client\src\assets\raw\Chilli Chicken.png"(done)
+"client\src\assets\raw\Chicken Lollipop.png"(done)
+"client\src\assets\raw\Chicken Wings.png"(done)
+"client\src\assets\raw\Prawns Manchuria.png"(done)
+"client\src\assets\raw\Chilli Prawns.png"(done)
+"client\src\assets\raw\Grill Chicken.png"(add in menu)
+"client\src\assets\raw\Chicken Shawarma.png"(done)
+"client\src\assets\raw\Paneer Shawarma.png"(done)
+"client\src\assets\raw\Chicken Noodles.png"(done)
+"client\src\assets\raw\Chicken Fried Rice.png"(done)
+"client\src\assets\raw\Paneer Fried Rice.png"(done)
+"client\src\assets\raw\Veg Fried Rice.png"(done)
+"client\src\assets\raw\Egg Noodles.png"(done)
+"client\src\assets\raw\Egg Fried Rice.png"(done)
+"client\src\assets\raw\Gobi Manchuria.png"(done)
+"client\src\assets\raw\Chicken Manchuria.png"(add in menu)
 "client\src\assets\raw\Chicken Cheese Burger.png"
 "client\src\assets\raw\Paneer Cheese Burger.png"
 "client\src\assets\raw\Margherita Pizza.png"
 "client\src\assets\raw\BBQ Paneer Pizza.png"
 "client\src\assets\raw\Chicken Pizza.png"
 "client\src\assets\raw\Grilled Paneer Sandwich.png"
-"client\src\assets\raw\idli.png"
-"client\src\assets\raw\Masala Dosa.png"
-"client\src\assets\raw\Onion Dosa.png"
-"client\src\assets\raw\Rava Dosa.png"
-"client\src\assets\raw\vada.png"
-"client\src\assets\raw\Bonda.png"
-"client\src\assets\raw\Rice with Egg Curry + Sambar.png"
-"client\src\assets\raw\Bagara Rice with Naatu Kodi.png"
-"client\src\assets\raw\Bagara Rice with Talakai Curry.png"
-"client\src\assets\raw\Nellore Vari Chepala Pulusu.png"
-"client\src\assets\raw\Ankapur Naatu Kodi Pulusu.png"
-"client\src\assets\raw\Chicken Juicy Mandi.png"
-"client\src\assets\raw\Broasted Mandi.png"
+"client\src\assets\raw\idli.png"(done)
+"client\src\assets\raw\Masala Dosa.png"(done)
+"client\src\assets\raw\Onion Dosa.png"(done)
+"client\src\assets\raw\Rava Dosa.png"(done)
+"client\src\assets\raw\vada.png"(done)
+"client\src\assets\raw\Bonda.png"(add in menu)
+"client\src\assets\raw\Rice with Egg Curry + Sambar.png"(done)
+"client\src\assets\raw\Bagara Rice with Naatu Kodi.png"(done)
+"client\src\assets\raw\Bagara Rice with Talakai Curry.png"(done)
+"client\src\assets\raw\Nellore Vari Chepala Pulusu.png"(done)
+"client\src\assets\raw\Ankapur Naatu Kodi Pulusu.png"(done)
+"client\src\assets\raw\Chicken Juicy Mandi.png"(done)
+"client\src\assets\raw\Broasted Mandi.png"(done)
 "client\src\assets\raw\Tandoori Chicken Mandi.png"
 "client\src\assets\raw\Mutton Mandi.png"
-"client\src\assets\raw\Fish Mandi.png"
+"client\src\assets\raw\Fish Mandi.png"(done)
 "client\src\assets\raw\Watermelon Juice.png"
 "client\src\assets\raw\Pomegranate Juice.png"
 "client\src\assets\raw\Pineapple Juice.png"
