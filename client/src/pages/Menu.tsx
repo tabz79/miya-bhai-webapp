@@ -13,64 +13,9 @@ import { slugify } from "@/lib/utils";
 
 import { useCartStore } from "@/hooks/useCartStore";
 import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
+import { resolveImage } from "@/lib/image-resolver";
 
 type MenuItem = any;
-
-const imagesMap = (imagesMapRaw as Record<string, any>) || {};
-const CLOUD_NAME =
-  import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME ||
-  import.meta.env?.VITE_CLOUD_NAME ||
-  null;
-
-const buildCloudinaryUrlFromPublicId = (publicId: string | undefined | null) => {
-  if (!publicId) return null;
-  if (!CLOUD_NAME) {
-    return null;
-  }
-  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${publicId}`;
-};
-
-const findImageEntryFor = (item: MenuItem) => {
-  if (!item) return null;
-  const candidates: string[] = [];
-
-  if (item.id) candidates.push(String(item.id));
-  if (item.sku) candidates.push(String(item.sku));
-  if (item.name) candidates.push(slugify(item.name));
-
-  const imageField = item.imageUrl || item.image || item.image_url || "";
-  if (typeof imageField === "string" && imageField.length) {
-    const parts = imageField.split("/").pop()?.split("?")[0] || "";
-    const nameOnly = parts.replace(/\.[a-zA-Z0-9]+$/, "");
-    if (nameOnly) candidates.push(nameOnly);
-  }
-
-  for (const key of candidates) {
-    if (imagesMap[key]) return { key, entry: imagesMap[key] };
-  }
-
-  if (item.name) {
-    const mk = `menu/${slugify(item.name)}`;
-    if (imagesMap[mk]) return { key: mk, entry: imagesMap[mk] };
-  }
-
-  let bestKey: string | null = null;
-  let bestScore = 0;
-  const tokens = new Set((slugify(item.name) || "").split("-").filter(Boolean));
-  Object.keys(imagesMap).forEach((k) => {
-    const kt = new Set(k.split(/[^a-z0-9]+/).filter(Boolean));
-    const inter = [...tokens].filter((t) => kt.has(t)).length;
-    if (inter > bestScore) {
-      bestScore = inter;
-      bestKey = k;
-    }
-  });
-  if (bestScore > 0 && bestKey) {
-    return { key: bestKey, entry: imagesMap[bestKey], approxScore: bestScore };
-  }
-
-  return null;
-};
 
 import { SearchBarPill } from "@/components/SearchBarPill";
 import { OfferCarousel } from "@/components/OfferCarousel";
@@ -143,29 +88,10 @@ export function Menu(): JSX.Element {
   }, [menu]);
 
   const itemsWithResolvedImages = useMemo(() => {
-    const mapped = (menu || []).map((it) => {
-      const found = findImageEntryFor(it);
-      let resolved: string | null = null;
-
-      if (found && found.entry) {
-        resolved = found.entry.url || found.entry.imageUrl || null;
-        if (!resolved && found.entry.public_id) {
-          const built = buildCloudinaryUrlFromPublicId(found.entry.public_id);
-          if (built) resolved = built;
-        }
-      }
-
-      if (!resolved) {
-        resolved = it.imageUrl || it.image || it.image_url || null;
-      }
-
-      if (!resolved && it.localImagePath) {
-        resolved = it.localImagePath;
-      }
-
-      return { ...it, resolvedImage: resolved };
-    });
-
+    const mapped = (menu || []).map((it) => ({
+      ...it,
+      resolvedImage: resolveImage(it),
+    }));
     return sortMenuItems(mapped);
   }, [menu]);
 
@@ -218,7 +144,7 @@ export function Menu(): JSX.Element {
           <div key={category || `category-${index}`} id={slugify(category)}>
             <h2 className="menu-category-heading text-app-foreground font-semibold text-lg px-4 py-2" data-category={category}>{category}</h2>
             <MenuGrid
-              items={items.map((item) => ({...item, id: slugify(item.title || item.name) }))}
+              items={items}
               onAddToCart={handleAddToCart}
               paginate={false}
               CardComponent={MenuCardFlat}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { offerPosters } from '@/data/mockData';
+import { resolveImage } from '@/lib/image-resolver';
 
 export function OfferCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,7 +20,7 @@ export function OfferCarousel() {
         {offerPosters.map((poster, index) => (
           <div key={poster.id} className="w-full h-32 flex-shrink-0 relative">
             <img
-              src={poster.image}
+              src={resolveImage(poster)}
               alt={poster.title}
               className="w-full h-full object-cover"
             />
