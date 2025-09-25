@@ -14,7 +14,8 @@
     "db:push": "drizzle-kit push",
     "build:menu": "node client/scripts/build-menu.cjs",
     "migrate:menu": "node client/scripts/migrate-canonical-to-csv.cjs",
-    "validate:images": "node client/scripts/validate-images.cjs"
+    "validate:images": "node client/scripts/validate-images.cjs",
+    "build:banners": "node scripts/build-banners.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
