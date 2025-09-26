@@ -83,7 +83,12 @@ export function Home(): JSX.Element {
   };
 
   const { addToCart } = useCartStore();
-  const handleAddToCart = (item: MenuItem) => addToCart(item);
+  const handleAddToCart = (item: MenuItem) => addToCart({
+    id: item.id,
+    name: item.title || item.name,
+    price: item.price,
+    image: item.resolvedImage
+  });
 
   useEffect(() => {
     const t = setTimeout(() => setDebouncedQuery(searchQuery.trim()), 150);

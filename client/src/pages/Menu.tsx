@@ -114,7 +114,12 @@ export function Menu(): JSX.Element {
   const { addToCart } = useCartStore();
 
   const handleAddToCart = (item: MenuItem) => {
-    addToCart(item);
+    addToCart({
+      id: item.id,
+      name: item.title || item.name,
+      price: item.price,
+      image: item.resolvedImage
+    });
   };
 
   const handleCategorySelect = (category: string) => {
