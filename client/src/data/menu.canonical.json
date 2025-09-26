@@ -423,7 +423,7 @@
     "category": "Beverages",
     "subcategory": "Milkshakes",
     "description": "",
-    "image": "/images/menu/KitKat Milkshake.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 80,
     "prices": null,
     "variants": null,
@@ -434,7 +434,7 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": "/images/menu/KitKat Milkshake.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -599,7 +599,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": "/images/menu/Pineapple Juice.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -610,7 +610,7 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": "/images/menu/Pineapple Juice.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -621,7 +621,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": "/images/menu/Pomegranate Juice.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 60,
     "prices": null,
     "variants": null,
@@ -632,7 +632,7 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 60,
-      "image": "/images/menu/Pomegranate Juice.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -643,7 +643,7 @@
     "category": "Beverages",
     "subcategory": "Milkshakes",
     "description": "",
-    "image": "/images/menu/Strawberry Milkshake.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 80,
     "prices": null,
     "variants": null,
@@ -654,7 +654,7 @@
       "category": "Beverages",
       "subCategory": "Milkshakes",
       "price": 80,
-      "image": "/images/menu/Strawberry Milkshake.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -797,7 +797,7 @@
     "category": "Beverages",
     "subcategory": "Juices",
     "description": "",
-    "image": "/images/menu/Watermelon Juice.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -808,7 +808,7 @@
       "category": "Beverages",
       "subCategory": "Juices",
       "price": 50,
-      "image": "/images/menu/Watermelon Juice.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -841,7 +841,7 @@
     "category": "Biryani",
     "subcategory": "Nizami Chicken Dum Biryani",
     "description": "Extra chicken Piece",
-    "image": "/images/menu/Tandoori Chicken.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg",
     "price": 60,
     "prices": null,
     "variants": null,
@@ -852,7 +852,7 @@
       "category": "Biryani",
       "subCategory": "Nizami Chicken Dum Biryani",
       "price": 60,
-      "image": "/images/menu/Tandoori Chicken.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -863,7 +863,7 @@
     "category": "Biryani",
     "subcategory": "Seafood Biryani",
     "description": "Spiced fish biryani",
-    "image": "/images/menu/Fish Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg",
     "price": 250,
     "prices": null,
     "variants": null,
@@ -874,7 +874,7 @@
       "category": "Biryani",
       "subCategory": "Seafood Biryani",
       "price": 250,
-      "image": "/images/menu/Fish Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -885,7 +885,7 @@
     "category": "Biryani",
     "subcategory": "Veg Biryani",
     "description": "Flavorful paneer biryani",
-    "image": "/images/menu/Paneer Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -896,7 +896,7 @@
       "category": "Biryani",
       "subCategory": "Veg Biryani",
       "price": 200,
-      "image": "/images/menu/Paneer Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -973,7 +973,7 @@
     "category": "Biryani",
     "subcategory": "Seafood Biryani",
     "description": "Flavorful prawns biryani",
-    "image": "/images/menu/Prawns Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/dishes/prawns-biryani.jpg",
     "price": 300,
     "prices": null,
     "variants": null,
@@ -984,7 +984,7 @@
       "category": "Biryani",
       "subCategory": "Seafood Biryani",
       "price": 300,
-      "image": "/images/menu/Prawns Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/dishes/prawns-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1039,7 +1039,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": "/images/menu/Chicken Fried Rice.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/chicken-fried-rice.jpg",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1050,7 +1050,7 @@
       "category": "Chinese",
       "subCategory": "Fried Rice",
       "price": 150,
-      "image": "/images/menu/Chicken Fried Rice.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/chicken-fried-rice.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1061,7 +1061,7 @@
     "category": "Chinese",
     "subcategory": "Noodles",
     "description": "",
-    "image": "/images/menu/Chicken Noodles.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785405/miya_bhai/dishes/chicken-noodles.jpg",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1072,7 +1072,7 @@
       "category": "Chinese",
       "subCategory": "Noodles",
       "price": 150,
-      "image": "/images/menu/Chicken Noodles.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785405/miya_bhai/dishes/chicken-noodles.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1105,7 +1105,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": "/images/menu/Egg Fried Rice.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785407/miya_bhai/dishes/egg-fried-rice.jpg",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1116,7 +1116,7 @@
       "category": "Chinese",
       "subCategory": "Fried Rice",
       "price": 120,
-      "image": "/images/menu/Egg Fried Rice.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785407/miya_bhai/dishes/egg-fried-rice.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1127,7 +1127,7 @@
     "category": "Chinese",
     "subcategory": "Noodles",
     "description": "",
-    "image": "/images/menu/Egg Noodles.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785408/miya_bhai/dishes/egg-noodles.jpg",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1138,7 +1138,7 @@
       "category": "Chinese",
       "subCategory": "Noodles",
       "price": 120,
-      "image": "/images/menu/Egg Noodles.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785408/miya_bhai/dishes/egg-noodles.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1149,7 +1149,7 @@
     "category": "Chinese",
     "subcategory": null,
     "description": "Crispy cauliflower 65",
-    "image": "/images/menu/Gobi Manchuria.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -1160,7 +1160,7 @@
       "category": "Chinese",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Gobi Manchuria.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1171,7 +1171,7 @@
     "category": "Chinese",
     "subcategory": null,
     "description": "Dry manchurian gobi",
-    "image": "/images/menu/Gobi Manchuria.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -1182,7 +1182,7 @@
       "category": "Chinese",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Gobi Manchuria.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1281,7 +1281,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": "/images/menu/Paneer Fried Rice.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785411/miya_bhai/dishes/paneer-fried-rice.jpg",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -1292,7 +1292,7 @@
       "category": "Chinese",
       "subCategory": "Fried Rice",
       "price": 150,
-      "image": "/images/menu/Paneer Fried Rice.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785411/miya_bhai/dishes/paneer-fried-rice.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1347,7 +1347,7 @@
     "category": "Chinese",
     "subcategory": "Fried Rice",
     "description": "",
-    "image": "/images/menu/Veg Fried Rice.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785413/miya_bhai/dishes/veg-fried-rice.jpg",
     "price": 100,
     "prices": null,
     "variants": null,
@@ -1358,7 +1358,7 @@
       "category": "Chinese",
       "subCategory": "Fried Rice",
       "price": 100,
-      "image": "/images/menu/Veg Fried Rice.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785413/miya_bhai/dishes/veg-fried-rice.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1523,7 +1523,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": "/images/menu/BBQ Paneer Pizza.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785419/miya_bhai/dishes/bbq-paneer-pizza.jpg",
     "price": 199,
     "prices": null,
     "variants": null,
@@ -1534,7 +1534,7 @@
       "category": "Continental",
       "subCategory": "Pizzas",
       "price": 199,
-      "image": "/images/menu/BBQ Paneer Pizza.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785419/miya_bhai/dishes/bbq-paneer-pizza.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1589,7 +1589,7 @@
     "category": "Continental",
     "subcategory": "Burgers",
     "description": "",
-    "image": "/images/menu/Chicken Cheese Burger.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785421/miya_bhai/dishes/chicken-cheese-burger.jpg",
     "price": 99,
     "prices": null,
     "variants": null,
@@ -1600,7 +1600,7 @@
       "category": "Continental",
       "subCategory": "Burgers",
       "price": 99,
-      "image": "/images/menu/Chicken Cheese Burger.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785421/miya_bhai/dishes/chicken-cheese-burger.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1633,7 +1633,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": "/images/menu/Chicken Pizza.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785422/miya_bhai/dishes/chicken-pizza.jpg",
     "price": 199,
     "prices": null,
     "variants": null,
@@ -1644,7 +1644,7 @@
       "category": "Continental",
       "subCategory": "Pizzas",
       "price": 199,
-      "image": "/images/menu/Chicken Pizza.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785422/miya_bhai/dishes/chicken-pizza.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1699,7 +1699,7 @@
     "category": "Continental",
     "subcategory": "Sandwiches",
     "description": "",
-    "image": "/images/menu/Grilled Paneer Sandwich.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785424/miya_bhai/dishes/grilled-paneer-sandwich.jpg",
     "price": 89,
     "prices": null,
     "variants": null,
@@ -1710,7 +1710,7 @@
       "category": "Continental",
       "subCategory": "Sandwiches",
       "price": 89,
-      "image": "/images/menu/Grilled Paneer Sandwich.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785424/miya_bhai/dishes/grilled-paneer-sandwich.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1743,7 +1743,7 @@
     "category": "Continental",
     "subcategory": "Pizzas",
     "description": "",
-    "image": "/images/menu/Margherita Pizza.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785423/miya_bhai/dishes/margherita-pizza.jpg",
     "price": 120,
     "prices": null,
     "variants": null,
@@ -1754,7 +1754,7 @@
       "category": "Continental",
       "subCategory": "Pizzas",
       "price": 120,
-      "image": "/images/menu/Margherita Pizza.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785423/miya_bhai/dishes/margherita-pizza.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1787,7 +1787,7 @@
     "category": "Continental",
     "subcategory": "Burgers",
     "description": "",
-    "image": "/images/menu/Paneer Cheese Burger.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785427/miya_bhai/dishes/paneer-cheese-burger.jpg",
     "price": 89,
     "prices": null,
     "variants": null,
@@ -1798,7 +1798,7 @@
       "category": "Continental",
       "subCategory": "Burgers",
       "price": 89,
-      "image": "/images/menu/Paneer Cheese Burger.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785427/miya_bhai/dishes/paneer-cheese-burger.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1897,7 +1897,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Pickle-spiced chicken tikka (full)",
-    "image": "/images/menu/Chicken Tikka.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -1908,7 +1908,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Chicken Tikka.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -1919,7 +1919,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Pickle-spiced chicken tikka (half)",
-    "image": "/images/menu/Chicken Tikka.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -1930,7 +1930,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Chicken Tikka.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2007,7 +2007,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Boneless chicken tikka",
-    "image": "/images/menu/Chicken Tikka.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785433/miya_bhai/dishes/chicken-tikka-boneless-6pc.jpg",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2018,7 +2018,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Chicken Tikka.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785433/miya_bhai/dishes/chicken-tikka-boneless-6pc.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2029,7 +2029,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Charcoal-grilled chicken chunks (full)",
-    "image": "/images/menu/Chicken Tikka.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2040,7 +2040,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Chicken Tikka.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2051,7 +2051,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Charcoal-grilled chicken chunks (half)",
-    "image": "/images/menu/Chicken Tikka.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2062,7 +2062,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Chicken Tikka.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2183,7 +2183,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Creamy malai kebab (full)",
-    "image": "/images/menu/Malai Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2194,7 +2194,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Malai Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2205,7 +2205,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Creamy malai kebab (half)",
-    "image": "/images/menu/Malai Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2216,7 +2216,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Malai Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2271,7 +2271,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Reshmi Kebab.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/reshmi-kebab.jpg",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2282,7 +2282,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Reshmi Kebab.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/reshmi-kebab.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2293,7 +2293,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Silky melt-in-mouth reshmi kebab (full)",
-    "image": "/images/menu/Reshmi Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2304,7 +2304,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Reshmi Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2315,7 +2315,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Silky melt-in-mouth reshmi kebab (half)",
-    "image": "/images/menu/Reshmi Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2326,7 +2326,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Reshmi Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2337,7 +2337,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Marinated chicken cooked in tandoor (full)",
-    "image": "/images/menu/Tandoori Chicken.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2348,7 +2348,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Tandoori Chicken.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2359,7 +2359,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Marinated chicken cooked in tandoor (half)",
-    "image": "/images/menu/Tandoori Chicken.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2370,7 +2370,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Tandoori Chicken.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2381,7 +2381,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Spiced chicken drumsticks (full)",
-    "image": "/images/menu/Tangdi Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2392,7 +2392,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 230,
-      "image": "/images/menu/Tangdi Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2403,7 +2403,7 @@
     "category": "Kebabs & Grills",
     "subcategory": null,
     "description": "Spiced chicken drumsticks (half)",
-    "image": "/images/menu/Tangdi Kebab.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -2414,7 +2414,7 @@
       "category": "Kebabs & Grills",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Tangdi Kebab.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2425,7 +2425,7 @@
     "category": "Main Course",
     "subcategory": "Non-Veg Curries",
     "description": "Creamy butter chicken",
-    "image": "/images/menu/Butter Chicken.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/butter-chicken.jpg",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2436,7 +2436,7 @@
       "category": "Main Course",
       "subCategory": "Non-Veg Curries",
       "price": 230,
-      "image": "/images/menu/Butter Chicken.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/butter-chicken.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2557,7 +2557,7 @@
     "category": "Main Course",
     "subcategory": "Non-Veg Curries",
     "description": "Tikka masala chicken",
-    "image": "/images/menu/Chicken Tikka Masala.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/dishes/chicken-tikka-masala.jpg",
     "price": 230,
     "prices": null,
     "variants": null,
@@ -2568,7 +2568,7 @@
       "category": "Main Course",
       "subCategory": "Non-Veg Curries",
       "price": 230,
-      "image": "/images/menu/Chicken Tikka Masala.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/dishes/chicken-tikka-masala.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2711,7 +2711,7 @@
     "category": "Main Course",
     "subcategory": "Veg Curries",
     "description": "Kadai style paneer",
-    "image": "/images/menu/Kadai Paneer.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/dishes/kadai-paneer.jpg",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -2722,7 +2722,7 @@
       "category": "Main Course",
       "subCategory": "Veg Curries",
       "price": 220,
-      "image": "/images/menu/Kadai Paneer.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/dishes/kadai-paneer.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -2997,7 +2997,7 @@
     "category": "Main Course",
     "subcategory": "Veg Curries",
     "description": "Rich paneer gravy",
-    "image": "/images/menu/Paneer Butter Masala.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/dishes/paneer-butter-masala.jpg",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3008,7 +3008,7 @@
       "category": "Main Course",
       "subCategory": "Veg Curries",
       "price": 220,
-      "image": "/images/menu/Paneer Butter Masala.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/dishes/paneer-butter-masala.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3085,7 +3085,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Ankapur Naatu Kodi Pulusu.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785460/miya_bhai/dishes/ankapur-naatu-kodi-pulusu.jpg",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -3096,7 +3096,7 @@
       "category": "Meals",
       "subCategory": null,
       "price": 200,
-      "image": "/images/menu/Ankapur Naatu Kodi Pulusu.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785460/miya_bhai/dishes/ankapur-naatu-kodi-pulusu.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3107,7 +3107,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Bagara Rice with Naatu Kodi.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785461/miya_bhai/dishes/bagara-rice-with-naatu-kodi.jpg",
     "price": 180,
     "prices": null,
     "variants": null,
@@ -3118,7 +3118,7 @@
       "category": "Meals",
       "subCategory": null,
       "price": 180,
-      "image": "/images/menu/Bagara Rice with Naatu Kodi.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785461/miya_bhai/dishes/bagara-rice-with-naatu-kodi.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3129,7 +3129,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Bagara Rice with Talakai Curry.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -3140,7 +3140,7 @@
       "category": "Meals",
       "subCategory": null,
       "price": 200,
-      "image": "/images/menu/Bagara Rice with Talakai Curry.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3349,7 +3349,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Nellore Vari Chepala Pulusu.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785466/miya_bhai/dishes/nellore-vari-chepala-pulusu.jpg",
     "price": 180,
     "prices": null,
     "variants": null,
@@ -3360,7 +3360,7 @@
       "category": "Meals",
       "subCategory": null,
       "price": 180,
-      "image": "/images/menu/Nellore Vari Chepala Pulusu.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785466/miya_bhai/dishes/nellore-vari-chepala-pulusu.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3481,7 +3481,7 @@
     "category": "Meals",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Rice with Egg Curry + Sambar.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785470/miya_bhai/dishes/rice-with-egg-curry-sambar.jpg",
     "price": 130,
     "prices": null,
     "variants": null,
@@ -3492,7 +3492,7 @@
       "category": "Meals",
       "subCategory": null,
       "price": 130,
-      "image": "/images/menu/Rice with Egg Curry + Sambar.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785470/miya_bhai/dishes/rice-with-egg-curry-sambar.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3613,7 +3613,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Paneer Shawarma.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/paneer-shawarma.jpg",
     "price": 140,
     "prices": null,
     "variants": null,
@@ -3624,7 +3624,7 @@
       "category": "Shawarma",
       "subCategory": null,
       "price": 140,
-      "image": "/images/menu/Paneer Shawarma.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/paneer-shawarma.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3635,7 +3635,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Shawarma.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/regular-chicken-shawarma.jpg",
     "price": 100,
     "prices": null,
     "variants": null,
@@ -3646,7 +3646,7 @@
       "category": "Shawarma",
       "subCategory": null,
       "price": 100,
-      "image": "/images/menu/Chicken Shawarma.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/regular-chicken-shawarma.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3657,7 +3657,7 @@
     "category": "Shawarma",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Shawarma.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785472/miya_bhai/dishes/special-chicken-shawarma.jpg",
     "price": 140,
     "prices": null,
     "variants": null,
@@ -3668,7 +3668,7 @@
       "category": "Shawarma",
       "subCategory": null,
       "price": 140,
-      "image": "/images/menu/Chicken Shawarma.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785472/miya_bhai/dishes/special-chicken-shawarma.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3723,7 +3723,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy Apollo style fish",
-    "image": "/images/menu/Apollo fish.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3734,7 +3734,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Apollo fish.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3811,7 +3811,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy fried chicken starter",
-    "image": "/images/menu/Chicken 65.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3822,7 +3822,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Chicken 65.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3855,7 +3855,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Classic Indo-Chinese lollipops",
-    "image": "/images/menu/Chicken Lollipop.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3866,7 +3866,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Chicken Lollipop.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3943,7 +3943,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy spiced chicken wings",
-    "image": "/images/menu/Chicken Wings.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3954,7 +3954,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Chicken Wings.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -3987,7 +3987,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Spicy Indo-Chinese chili chicken",
-    "image": "/images/menu/Chilli Chicken.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -3998,7 +3998,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Chilli Chicken.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4075,7 +4075,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Prawns in chili sauce",
-    "image": "/images/menu/Chilli Prawns.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4086,7 +4086,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Chilli Prawns.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4339,7 +4339,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Crispy spiced paneer starter",
-    "image": "/images/menu/Paneer 65.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4350,7 +4350,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Paneer 65.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4449,7 +4449,7 @@
     "category": "Starters",
     "subcategory": null,
     "description": "Manchurian-style prawns",
-    "image": "/images/menu/Prawns Manchuria.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -4460,7 +4460,7 @@
       "category": "Starters",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Prawns Manchuria.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4625,7 +4625,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": "/images/menu/idli.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785498/miya_bhai/dishes/idli.jpg",
     "price": 30,
     "prices": null,
     "variants": null,
@@ -4636,7 +4636,7 @@
       "category": "Tiffin",
       "subCategory": "Breakfast",
       "price": 30,
-      "image": "/images/menu/idli.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785498/miya_bhai/dishes/idli.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4691,7 +4691,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": "/images/menu/Masala Dosa.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785500/miya_bhai/dishes/masala-dosa.jpg",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -4702,7 +4702,7 @@
       "category": "Tiffin",
       "subCategory": "Breakfast",
       "price": 50,
-      "image": "/images/menu/Masala Dosa.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785500/miya_bhai/dishes/masala-dosa.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -4867,7 +4867,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": "/images/menu/Onion Dosa.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785501/miya_bhai/dishes/onion-dosa.jpg",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -4878,7 +4878,7 @@
       "category": "Tiffin",
       "subCategory": "Breakfast",
       "price": 50,
-      "image": "/images/menu/Onion Dosa.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785501/miya_bhai/dishes/onion-dosa.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5263,7 +5263,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": "/images/menu/Rava Dosa.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/dishes/rava-dosa.jpg",
     "price": 70,
     "prices": null,
     "variants": null,
@@ -5274,7 +5274,7 @@
       "category": "Tiffin",
       "subCategory": "Breakfast",
       "price": 70,
-      "image": "/images/menu/Rava Dosa.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/dishes/rava-dosa.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5417,7 +5417,7 @@
     "category": "Tiffin",
     "subcategory": "Breakfast",
     "description": "",
-    "image": "/images/menu/vada.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785517/miya_bhai/dishes/vada.jpg",
     "price": 50,
     "prices": null,
     "variants": null,
@@ -5428,7 +5428,7 @@
       "category": "Tiffin",
       "subCategory": "Breakfast",
       "price": 50,
-      "image": "/images/menu/vada.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785517/miya_bhai/dishes/vada.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5527,7 +5527,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Fry Piece Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/dishes/chicken-fry-piece-biryani.jpg",
     "price": 250,
     "prices": null,
     "variants": null,
@@ -5538,7 +5538,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 250,
-      "image": "/images/menu/Chicken Fry Piece Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/dishes/chicken-fry-piece-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5637,7 +5637,7 @@
     "category": "Arabian",
     "subcategory": "Chicken Juicy Mandi",
     "description": "",
-    "image": "/images/menu/Chicken Juicy Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 320,
     "prices": null,
     "variants": null,
@@ -5648,7 +5648,7 @@
       "category": "Arabian",
       "subCategory": "Chicken Juicy Mandi",
       "price": 320,
-      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5659,7 +5659,7 @@
     "category": "Arabian",
     "subcategory": "Chicken Juicy Mandi",
     "description": "",
-    "image": "/images/menu/Chicken Juicy Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 500,
     "prices": null,
     "variants": null,
@@ -5670,7 +5670,7 @@
       "category": "Arabian",
       "subCategory": "Chicken Juicy Mandi",
       "price": 500,
-      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5681,7 +5681,7 @@
     "category": "Arabian",
     "subcategory": "Chicken Juicy Mandi",
     "description": "",
-    "image": "/images/menu/Chicken Juicy Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 750,
     "prices": null,
     "variants": null,
@@ -5692,7 +5692,7 @@
       "category": "Arabian",
       "subCategory": "Chicken Juicy Mandi",
       "price": 750,
-      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5703,7 +5703,7 @@
     "category": "Arabian",
     "subcategory": "Chicken Juicy Mandi",
     "description": "",
-    "image": "/images/menu/Chicken Juicy Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 1000,
     "prices": null,
     "variants": null,
@@ -5714,7 +5714,7 @@
       "category": "Arabian",
       "subCategory": "Chicken Juicy Mandi",
       "price": 1000,
-      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5725,7 +5725,7 @@
     "category": "Arabian",
     "subcategory": "Broasted Mandi",
     "description": "",
-    "image": "/images/menu/Broasted Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 320,
     "prices": null,
     "variants": null,
@@ -5736,7 +5736,7 @@
       "category": "Arabian",
       "subCategory": "Broasted Mandi",
       "price": 320,
-      "image": "/images/menu/Broasted Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5747,7 +5747,7 @@
     "category": "Arabian",
     "subcategory": "Broasted Mandi",
     "description": "",
-    "image": "/images/menu/Broasted Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 500,
     "prices": null,
     "variants": null,
@@ -5758,7 +5758,7 @@
       "category": "Arabian",
       "subCategory": "Broasted Mandi",
       "price": 500,
-      "image": "/images/menu/Broasted Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5769,7 +5769,7 @@
     "category": "Arabian",
     "subcategory": "Broasted Mandi",
     "description": "",
-    "image": "/images/menu/Broasted Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 750,
     "prices": null,
     "variants": null,
@@ -5780,7 +5780,7 @@
       "category": "Arabian",
       "subCategory": "Broasted Mandi",
       "price": 750,
-      "image": "/images/menu/Broasted Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5791,7 +5791,7 @@
     "category": "Arabian",
     "subcategory": "Broasted Mandi",
     "description": "",
-    "image": "/images/menu/Broasted Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 1000,
     "prices": null,
     "variants": null,
@@ -5802,7 +5802,7 @@
       "category": "Arabian",
       "subCategory": "Broasted Mandi",
       "price": 1000,
-      "image": "/images/menu/Broasted Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5813,7 +5813,7 @@
     "category": "Arabian",
     "subcategory": "Tandoori Chicken Mandi",
     "description": "",
-    "image": "/images/menu/Tandoori Chicken Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 440,
     "prices": null,
     "variants": null,
@@ -5824,7 +5824,7 @@
       "category": "Arabian",
       "subCategory": "Tandoori Chicken Mandi",
       "price": 440,
-      "image": "/images/menu/Tandoori Chicken Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5835,7 +5835,7 @@
     "category": "Arabian",
     "subcategory": "Tandoori Chicken Mandi",
     "description": "",
-    "image": "/images/menu/Tandoori Chicken Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 800,
     "prices": null,
     "variants": null,
@@ -5846,7 +5846,7 @@
       "category": "Arabian",
       "subCategory": "Tandoori Chicken Mandi",
       "price": 800,
-      "image": "/images/menu/Tandoori Chicken Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5857,7 +5857,7 @@
     "category": "Arabian",
     "subcategory": "Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 320,
     "prices": null,
     "variants": null,
@@ -5868,7 +5868,7 @@
       "category": "Arabian",
       "subCategory": "Mutton Mandi",
       "price": 320,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5879,7 +5879,7 @@
     "category": "Arabian",
     "subcategory": "Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 500,
     "prices": null,
     "variants": null,
@@ -5890,7 +5890,7 @@
       "category": "Arabian",
       "subCategory": "Mutton Mandi",
       "price": 500,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5901,7 +5901,7 @@
     "category": "Arabian",
     "subcategory": "Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 750,
     "prices": null,
     "variants": null,
@@ -5912,7 +5912,7 @@
       "category": "Arabian",
       "subCategory": "Mutton Mandi",
       "price": 750,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5923,7 +5923,7 @@
     "category": "Arabian",
     "subcategory": "Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 900,
     "prices": null,
     "variants": null,
@@ -5934,7 +5934,7 @@
       "category": "Arabian",
       "subCategory": "Mutton Mandi",
       "price": 900,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5945,7 +5945,7 @@
     "category": "Arabian",
     "subcategory": "Juicy Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 350,
     "prices": null,
     "variants": null,
@@ -5956,7 +5956,7 @@
       "category": "Arabian",
       "subCategory": "Juicy Mutton Mandi",
       "price": 350,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5967,7 +5967,7 @@
     "category": "Arabian",
     "subcategory": "Juicy Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 600,
     "prices": null,
     "variants": null,
@@ -5978,7 +5978,7 @@
       "category": "Arabian",
       "subCategory": "Juicy Mutton Mandi",
       "price": 600,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -5989,7 +5989,7 @@
     "category": "Arabian",
     "subcategory": "Juicy Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 850,
     "prices": null,
     "variants": null,
@@ -6000,7 +6000,7 @@
       "category": "Arabian",
       "subCategory": "Juicy Mutton Mandi",
       "price": 850,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6011,7 +6011,7 @@
     "category": "Arabian",
     "subcategory": "Juicy Mutton Mandi",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 1100,
     "prices": null,
     "variants": null,
@@ -6022,7 +6022,7 @@
       "category": "Arabian",
       "subCategory": "Juicy Mutton Mandi",
       "price": 1100,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6033,7 +6033,7 @@
     "category": "Arabian",
     "subcategory": "Special Mutton Masala",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 700,
     "prices": null,
     "variants": null,
@@ -6044,7 +6044,7 @@
       "category": "Arabian",
       "subCategory": "Special Mutton Masala",
       "price": 700,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6055,7 +6055,7 @@
     "category": "Arabian",
     "subcategory": "Special Mutton Masala",
     "description": "",
-    "image": "/images/menu/Mutton Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 1300,
     "prices": null,
     "variants": null,
@@ -6066,7 +6066,7 @@
       "category": "Arabian",
       "subCategory": "Special Mutton Masala",
       "price": 1300,
-      "image": "/images/menu/Mutton Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6077,7 +6077,7 @@
     "category": "Arabian",
     "subcategory": "Fish Mandi",
     "description": "",
-    "image": "/images/menu/Fish Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 460,
     "prices": null,
     "variants": null,
@@ -6088,7 +6088,7 @@
       "category": "Arabian",
       "subCategory": "Fish Mandi",
       "price": 460,
-      "image": "/images/menu/Fish Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6099,7 +6099,7 @@
     "category": "Arabian",
     "subcategory": "Fish Mandi",
     "description": "",
-    "image": "/images/menu/Fish Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 850,
     "prices": null,
     "variants": null,
@@ -6110,7 +6110,7 @@
       "category": "Arabian",
       "subCategory": "Fish Mandi",
       "price": 850,
-      "image": "/images/menu/Fish Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6121,7 +6121,7 @@
     "category": "Arabian",
     "subcategory": "Mix Mandi",
     "description": "",
-    "image": "/images/menu/Chicken Juicy Mandi.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 1100,
     "prices": null,
     "variants": null,
@@ -6132,7 +6132,7 @@
       "category": "Arabian",
       "subCategory": "Mix Mandi",
       "price": 1100,
-      "image": "/images/menu/Chicken Juicy Mandi.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6143,7 +6143,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/single-chicken-biryani.jpg",
     "price": 150,
     "prices": null,
     "variants": null,
@@ -6154,7 +6154,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 150,
-      "image": "/images/menu/Chicken Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/single-chicken-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6165,7 +6165,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/full-chicken-biryani.jpg",
     "price": 200,
     "prices": null,
     "variants": null,
@@ -6176,7 +6176,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 200,
-      "image": "/images/menu/Chicken Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/full-chicken-biryani.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6187,7 +6187,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-biryani-fp.jpg",
     "price": 500,
     "prices": null,
     "variants": null,
@@ -6198,7 +6198,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 500,
-      "image": "/images/menu/Chicken Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-biryani-fp.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6209,7 +6209,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-jumbo-pack.jpg",
     "price": 800,
     "prices": null,
     "variants": null,
@@ -6220,7 +6220,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 800,
-      "image": "/images/menu/Chicken Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-jumbo-pack.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6231,7 +6231,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Fry Piece Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/chicken-fry-piece-biryani-fp.jpg",
     "price": 750,
     "prices": null,
     "variants": null,
@@ -6242,7 +6242,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 750,
-      "image": "/images/menu/Chicken Fry Piece Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/chicken-fry-piece-biryani-fp.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6253,7 +6253,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Chicken Dum Biryani.png",
+    "image": "/src/assets/placeholder-menu-item.png",
     "price": 80,
     "prices": null,
     "variants": null,
@@ -6264,7 +6264,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 80,
-      "image": "/images/menu/Chicken Dum Biryani.png",
+      "image": "/src/assets/placeholder-menu-item.png",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6275,7 +6275,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Mutton Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-single.jpg",
     "price": 220,
     "prices": null,
     "variants": null,
@@ -6286,7 +6286,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 220,
-      "image": "/images/menu/Mutton Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-single.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6297,7 +6297,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Mutton Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-full.jpg",
     "price": 300,
     "prices": null,
     "variants": null,
@@ -6308,7 +6308,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 300,
-      "image": "/images/menu/Mutton Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-full.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
@@ -6319,7 +6319,7 @@
     "category": "Biryani",
     "subcategory": null,
     "description": "",
-    "image": "/images/menu/Mutton Dum Biryani.png",
+    "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-fp.jpg",
     "price": 750,
     "prices": null,
     "variants": null,
@@ -6330,7 +6330,7 @@
       "category": "Biryani",
       "subCategory": null,
       "price": 750,
-      "image": "/images/menu/Mutton Dum Biryani.png",
+      "image": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-fp.jpg",
       "isBestSeller": false,
       "isSignature": false
     }
