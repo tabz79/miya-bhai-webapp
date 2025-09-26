@@ -1,6 +1,6 @@
 ## 2025-09-16 Backlog Reconciliation
 
-### Epic: Backend API Foundation ✅
+### Epic: Backend API Foundation ✅ Done
 
 **Story: Implement Liveness & Readiness Route and Menu Routes**
 - **Description:** Set up initial backend API skeleton to support frontend integration. Includes implementing a basic liveness/readiness check endpoint and mock menu routes. These routes will return mock data for now, but must follow the agreed JSON schema for future extension.
@@ -14,7 +14,7 @@
     - Routes are mounted under `/api` prefix in Express server.
 - **Status:** ✅ Done
 
-### Epic: Home Screen Fixes & Enhancements ✅
+### Epic: Home Screen Fixes & Enhancements ✅ Done
 
 **Story: Implement HeroCarousel Functionality**
 - **Description:** Add multiple images support, indicators, and auto-scroll. Current Hero has only one image and no slots.
@@ -46,7 +46,7 @@
     - Grid always displays 8 slots (4 columns × 2 rows), each card matches size spec.
 - **Status:** ✅ Done
 
-### Epic: Menu ✅
+### Epic: Menu ✅ Done
 
 **Story: PO: Menu Redesign — Remove duplicate search & adopt Swiggy-like card layout**
 - **Owner:** PO
@@ -154,7 +154,7 @@
 **Story: Visual Feature — Floating Category Pill + Category Picker Modal (Menu — Category Quick-Jump)**
 - **Owner:** PO  
 - **Priority:** should  
-- **Status:** ⏳ To Do  
+- **Status:** ✅ Done  
 - **Description:** Add a small pill-shaped floating **Category** button on the `/menu` page (like Swiggy’s quick menu). Tapping the pill opens a compact modal/popover listing all menu categories (Starters, Biryani, Main Course, …). Selecting a category closes the picker and smoothly scrolls the page to that category heading. The floating pill must use the same accent/background as the `AddToCartButton` (Tuatara `#3c3c3b` / Tailwind token `bg-colorbackgroundbestseller`) and follow brand focus/hover styles.
 
 - **Acceptance Criteria:**
@@ -216,7 +216,7 @@
 **Story: Visual Tweak — Sticky Category Pill under Top Toolbar (Menu — Sticky Category)**
 - **Owner:** PO  
 - **Priority:** low  
-- **Status:** ⏳ To Do  
+- **Status:** ✅ Done  
 - **Description:** When the user scrolls the Menu page, the **current category heading** (e.g., *Starters*, *Main Course*, *Biryani*) should pin directly **under** the sticky top toolbar and update as the user scrolls into the next category. This provides clear context for which category the user is viewing while keeping the toolbar behaviour unchanged. Implementation should be robust, performant, and accessible.
 
 - **Acceptance Criteria:**
@@ -254,7 +254,7 @@
   - Raw images migrated under `menu/<slug>`.  
   - `MenuImageCloudinaryHighRes.tsx` provides proper `srcset`.  
   - `MenuCard.tsx` looks up map → falls back properly.  
-- **Status:** 🟡 In Dev (uploads done; frontend wiring partial)  
+- **Status:** ✅ Done 
 - **Notes / Artifacts:** Scripts in `/scripts`, backup `.bak` present.  
 - **Next Steps (Dev Audit):** Verify slug consistency, ensure runtime import, make CLOUD_NAME configurable, revisit fallback order, add integration test.
 
@@ -298,7 +298,7 @@
 - **Acceptance Criteria:**  
   - Script exists, produces outputs.  
   - Mapping ≥ 90% accurate.  
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 ---
 
@@ -308,11 +308,11 @@
   - Unit tests: MenuGrid (#items, paging), MenuCard (image fallback).  
   - E2E skeleton: Home paging, Menu search.  
   - CI runs tests.  
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 
 
-### Epic: Implement Missing Components ⏳
+### Epic: Implement Missing Components ✅ Done
 
 **Story: Implement OfferCarousel on Menu Page**
 - **Description:** An auto-scrolling offer carousel is required on the menu page, above the menu categories, to display promotional posters.
@@ -320,7 +320,181 @@
     - A `OfferCarousel.tsx` component is created and placed on the `Menu.tsx` page.
     - The carousel auto-scrolls through a series of offer images.
     - The component is visually consistent with the design specifications.
+- **Status:** ✅ Done
+
+### Epic: Fix Incorrect Implementations ✅ Done
+
+**Story: Implement SearchBarPill Interaction**
+- **Description:** The `SearchBarPill` component needs to be implemented with an inline expand/collapse behavior.
+- **Acceptance Criteria:**
+    - The `SearchBarPill` has a fixed size of 180x36px with a 20px border-radius.
+    - The component expands inline on click to reveal a search input.
+    - A search icon is displayed on the right, which triggers the search.
+- **Status:** ✅ Done
+
+**Story: Fix BottomNav Styling and Behavior**
+- **Description:** The `BottomNav` component has incorrect height and color, and may have accessibility issues with nested links.
+- **Acceptance Criteria:**
+    - The `BottomNav` has a fixed height of 49px.
+    - The component uses the correct brand colors from the theme.
+    - A cart badge is visible on the cart icon when items are in the cart.
+    - There are no nested `<a>` tags inside `<Link>` components.
+- **Status:** ✅ Done
+
+### Epic: Cart & Checkout ⏳ in dev
+
+**Story: Fix Cart Display (Show real item rows)**
+- **Owner:** PO
+- **Priority:** must
+- **Description:** Replace the current minimal cart (header + total only) with a full, usable cart UI. Each item added must display name, thumbnail, quantity controls, per-line price, and remove/edit controls. The cart shows live subtotal and totals.
+- **Acceptance Criteria:**
+  - Cart header reads **Your Cart** and lists each added item as a row.
+  - Each row includes: thumbnail image (small), dish name, quantity controls (+ / −), line item price, and a remove button.
+  - Quantity changes update the line price and overall subtotal instantly.
+  - A visible summary area shows: **Subtotal**, **Discount** (if applied), **GST (5%)**, **Delivery** (displayed as ₹0), and **Final Total**.
+  - Cart is responsive and usable on mobile (stacked rows, touch-friendly controls).
+  - All interactive controls are keyboard-accessible and have descriptive `aria-label`s.
+- **Status:** ✅ Done
+
+**Story: Implement Checkout Button Navigation**
+- **Owner:** PO
+- **Priority:** must
+- **Description:** Make the checkout CTA navigate the user to a dedicated checkout/payment flow instead of being a placeholder.
+- **Acceptance Criteria:**
+  - Clicking the **Checkout** button routes the app to `/checkout` (client-side navigation).
+  - The checkout page receives the current cart contents and displays the same summary information (items, subtotal, discounts, GST, delivery, total).
+  - Back/Cancel from `/checkout` returns user to the menu/cart with state preserved.
+  - Checkout CTA shows a loading/disabled state while navigation or simple pre-check runs.
+- **Status:** ⏳ To Do
+
+**Story: Checkout Page — Basic Payment Options**
+- **Owner:** PO
+- **Priority:** must
+- **Description:** Implement a simple, first-pass checkout page with payment option selection and order placement placeholder. No payment gateway wiring yet — start with offline options.
+- **Acceptance Criteria:**
+  - `/checkout` shows: cart summary, delivery/table info form (name, phone, delivery notes or table number if dine-in), and a payment options block.
+  - Payment options include at minimum: **Cash on Delivery (COD)** and **Pay at Counter**. Selecting an option marks it visually and stores the selection.
+  - A primary **Place Order** button completes the flow and lands on an order confirmation placeholder page (`/order/confirmation`) that shows order id (fake), summary, and expected next steps.
+  - The checkout page validates required fields (name, phone) and prevents placing an order if invalid.
+  - Status indicators and accessible labels present for all options.
+- **Status:** ⏳ To Do
+
+**Story: Coupons Integration**
+- **Owner:** PO
+- **Priority:** should
+- **Description:** Allow users to enter coupon codes on the cart/checkout page which apply discounts to the subtotal.
+- **Acceptance Criteria:**
+  - Cart has an **Apply Coupon** input with an **Apply** button.
+  - When a coupon is entered, the app validates it against a local coupon list (CSV/JSON) or a simple in-memory list for v1.
+  - Supported coupon types: `percent` (e.g., 10% off) and `flat` (e.g., ₹50 off).
+  - If valid, the coupon amount appears as a **Discount** line in the summary and reduces the taxable base accordingly.
+  - If invalid or expired, show a clear inline error message and do not alter totals.
+  - Coupon application is idempotent (re-applying the same code does not stack).
+  - Admin/marketing workflow for adding coupons is documented (CSV format example: `code,discountType,value`).
 - **Status:** ⏳ Backlog
+
+**Story: Tax & Delivery Calculation (GST 5% and Delivery ₹0)**
+- **Owner:** PO
+- **Priority:** must
+- **Description:** Add tax and delivery lines to pricing logic. For v1, GST is fixed at 5% and delivery charge is ₹0; calculations must be transparent and shown line-by-line.
+- **Acceptance Criteria:**
+  - Pricing display shows: **Subtotal**, **Discount** (if any), **Taxable Amount** (subtotal − discount), **GST (5%)** (calculated on taxable amount), **Delivery** (₹0), and **Final Total**.
+  - Formula used is explicit: `finalTotal = taxableAmount + GST + deliveryCharge`.
+  - Example shown in UI for verification: e.g., Subtotal ₹400, Discount ₹40, Taxable ₹360, GST (5%) ₹18, Delivery ₹0, Total ₹378.
+  - Values are rounded to the nearest rupee/paisa consistently and displayed with currency symbol `₹`.
+  - Edge cases: negative totals prevented; discount cannot exceed subtotal.
+- **Status:** ✅ Done
+
+---
+
+**Story: Orders API & Persistence (Plumbing)**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Implement server-side endpoints to create and manage orders and persist them to a simple JSON store with backups.
+- **Acceptance Criteria:**
+  - `POST /api/orders/create` creates an order record (id, items, totals, customer info, status=pending) and returns `{ orderId, paymentToken }`.
+  - `GET /api/orders/:id` returns order details for polling.
+  - `GET /api/orders` returns a paginated list for admin.
+  - `POST /api/orders/:id/mark-paid` marks an order paid (admin/testing endpoint).
+  - Orders persisted to `data/orders.json`; any write creates/updates `data/orders.json.bak`.
+  - If the JSON file is missing, server falls back to in-memory storage and creates the file on first write.
+  - No sensitive keys are stored in repo; all config via env.
+- **Status:** ⏳ To Do
+
+**Story: Razorpay Plumbing (Stubbed & Switchable)**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Add a ready-but-disabled Razorpay integration path. When enabled via env, server will create provider orders and verify signatures; when disabled, use stubbed payment flows.
+- **Acceptance Criteria:**
+  - `.env.sample` documents `RAZORPAY_ENABLED=false`, `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`.
+  - `POST /api/webhook/razorpay` exists and verifies signatures when keys are present; when keys absent the endpoint is a no-op or returns 501.
+  - Server uses `RAZORPAY_ENABLED` flag to decide real vs stubbed payment flows.
+  - No hard-coded credentials in code.
+- **Status:** ⏳ To Do
+
+**Story: Checkout Frontend Wiring (Stubbed Payment Flow)**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Wire checkout UI to call `POST /api/orders/create`, show stubbed payment modal when Razorpay disabled, and poll `GET /api/orders/:id` for status updates.
+- **Acceptance Criteria:**
+  - Checkout calls `POST /api/orders/create` and receives `orderId`.
+  - UI shows a stubbed payment modal (simulate success/failure) when `RAZORPAY_ENABLED=false`.
+  - UI polls `GET /api/orders/:id` to update order status and proceeds to confirmation when marked `paid`.
+  - When `RAZORPAY_ENABLED=true`, code path is ready to call Razorpay Checkout with returned payment token.
+- **Status:** ⏳ To Do
+
+**Story: Admin Dashboard — Orders (PWA)**
+- **Owner:** Dev / PO
+- **Priority:** must
+- **Description:** Create an admin PWA route `/admin/orders` to list and manage incoming orders with minimal access control via `ADMIN_SECRET`.
+- **Acceptance Criteria:**
+  - `/admin/orders` lists orders newest first with status badges (pending, paid, preparing, completed).
+  - Clicking an order opens details and allows status transitions (Accept → Preparing → Ready → Completed).
+  - Dashboard supports simple polling every 3–5s to surface new orders; code prepared for WebSocket later.
+  - Simple access gate: prompt for `ADMIN_SECRET` (env) before showing list; session persists during browser session.
+  - Actions update `data/orders.json` and create `.bak` on write.
+- **Status:** ⏳ To Do
+
+**Story: Admin Notifications (Basic)**
+- **Owner:** Dev
+- **Priority:** should
+- **Description:** Add a visual bell/indicator for new orders in admin dashboard and optional email notification capability (configurable).
+- **Acceptance Criteria:**
+  - Dashboard shows unread/new order indicator (count).
+  - Server can be configured (env) to send an email on new order (template provided); email sending is optional and disabled by default.
+  - Email config keys are documented in `.env.sample` and not committed.
+- **Status:** ⏳ Backlog
+
+**Story: Config & .env.sample**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Add `.env.sample` documenting `RAZORPAY_*`, `RAZORPAY_ENABLED`, `ADMIN_SECRET`, and other flags used by the new plumbing.
+- **Acceptance Criteria:**
+  - `.env.sample` present at repo root with placeholder values and brief comments.
+  - Server reads env for behavior and does not fail if keys are missing (falls back to stubs).
+- **Status:** ⏳ To Do
+
+**Story: Data Backup & Safety**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Ensure writes to order data create a timestamped `.bak` and that no credentials are written to disk.
+- **Acceptance Criteria:**
+  - Any write to `data/orders.json` also writes `data/orders.json.bak` (timestamped or single latest `.bak`).
+  - On server start, if `data/orders.json` is corrupted, server will try to recover from `.bak`.
+  - No secrets or env values are persisted to data files.
+- **Status:** ⏳ To Do
+
+**Story: QA & Smoke Tests (Manual Checklist)**
+- **Owner:** PO / QA
+- **Priority:** must
+- **Description:** Provide a short manual smoke-test checklist for PO to run locally to verify plumbing and admin flows (without Razorpay keys).
+- **Acceptance Criteria:**
+  - Checklist covers: create order via checkout (stubbed), admin sees order, admin marks paid, frontend polls and shows confirmation, backups created.
+  - Checklist included in PR/notes for PO verification.
+- **Status:** ⏳ To Do
+
+---
+
 
 ### Epic: Profile Page ⏳
 
@@ -335,25 +509,6 @@
     - Matches brand colors and typography tokens.
 - **Status:** ⏳ Backlog
 
-### Epic: Fix Incorrect Implementations ⏳
-
-**Story: Implement SearchBarPill Interaction**
-- **Description:** The `SearchBarPill` component needs to be implemented with an inline expand/collapse behavior.
-- **Acceptance Criteria:**
-    - The `SearchBarPill` has a fixed size of 180x36px with a 20px border-radius.
-    - The component expands inline on click to reveal a search input.
-    - A search icon is displayed on the right, which triggers the search.
-- **Status:** ⏳ Backlog
-
-**Story: Fix BottomNav Styling and Behavior**
-- **Description:** The `BottomNav` component has incorrect height and color, and may have accessibility issues with nested links.
-- **Acceptance Criteria:**
-    - The `BottomNav` has a fixed height of 49px.
-    - The component uses the correct brand colors from the theme.
-    - A cart badge is visible on the cart icon when items are in the cart.
-    - There are no nested `<a>` tags inside `<Link>` components.
-- **Status:** ⏳ Backlog
-
 ### Epic: Asset Hygiene ⏳
 
 **Story: Optimize and Standardize Image Assets**
@@ -362,7 +517,7 @@
     - All images in the `assets` directory are compressed and optimized for the web.
     - Images are converted to modern formats like WebP where appropriate.
     - A consistent naming convention is applied to all image files.
-- **Status:** ⏳ Backlog
+- **Status:** ✅ Done
 
 **Story: Remove Unused Figma Assets**
 - **Description:** The `client/public/figmaAssets` directory contains raw, unused assets from Figma. These should be removed to keep the project clean.
