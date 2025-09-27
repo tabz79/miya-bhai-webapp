@@ -495,6 +495,141 @@
 
 ---
 
+### Epic: MVP Shipping Plan ⏳ In Dev
+
+**Story: Domain & Routing (miyabhai.in)**
+- **Owner:** PO
+- **Priority:** must
+- **Description:** Single domain rollout with routes: `/` (storefront), `/admin` (admin dashboard), `/staff` (staff panel). Ensure routing works on static host + serverless API.
+- **Acceptance Criteria:**
+  - Root `/` serves customer storefront (menu, cart, checkout) with mobile-first modern PWA UI.
+  - `/admin` serves admin dashboard UI with desktop-friendly layout.
+  - `/staff` serves staff/delivery panel UI with mobile-friendly layout.
+  - Routes resolve on deployed domain and in local dev.
+- **Status:** ⏳ To Do
+
+**Story: Roles & Auth (MVP)**
+- **Owner:** Dev / PO
+- **Priority:** must
+- **Description:** Implement lightweight auth and role model for Customer (guest + optional login), Admin (email/password), Staff (phone+OTP). Enforce RBAC server-side on APIs.
+- **Acceptance Criteria:**
+  - Orders API accepts either guest info (email+phone) or an authenticated user token.
+  - Admin login endpoint (`/api/admin/login`) accepts email+password and issues a secure session cookie (or token) for admin routes.
+  - Staff login endpoint supports phone+OTP (stubbed for MVP) returning a session/token.
+  - Server-side checks role before allowing admin/staff actions.
+  - Sessions persist for reasonable period and protected via secure cookie flags.
+  - UI for login/signup flows matches app’s modern aesthetic.
+- **Status:** ⏳ To Do
+
+**Story: Customer Flow — Checkout & Orders**
+- **Owner:** PO / Dev
+- **Priority:** must
+- **Description:** End-to-end customer flow: browse → add to cart → checkout → order created in DB with correct statuses and totals.
+- **Acceptance Criteria:**
+  - Checkout accepts name (optional), email (required), phone (required), and address/table (conditional).
+  - On submit, server creates order in DB with `status=NEW` and `payment_status=pending` (or `paid` for COD toggle).
+  - Confirmation page shows order number, amount, and brief next steps.
+  - Totals include GST(5%) and delivery ₹0; coupon discount applied if any.
+  - UI is consistent with Home/Menu design — modern, mobile-first.
+- **Status:** ⏳ To Do
+
+**Story: Payment Options (Razorpay + COD)**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Support Razorpay (prepaid) and Cash on Delivery. Razorpay flow is stubbed until keys provided.
+- **Acceptance Criteria:**
+  - Checkout shows both payment options and stores `payment_method` on order.
+  - If Razorpay chosen and enabled, server creates provider order token and frontend triggers provider checkout.
+  - If COD chosen, order remains `payment_status=pending` until admin marks cash collected.
+  - Stubbed flow works when `RAZORPAY_ENABLED=false`.
+  - Payment UI is simple, modern, and mobile-friendly.
+- **Status:** ⏳ To Do
+
+**Story: Admin Panel — Orders & Workflow**
+- **Owner:** PO / Dev
+- **Priority:** must
+- **Description:** Admin dashboard with newest-first orders, order details, and status transitions: NEW → ACCEPTED → PREPARING → READY → COMPLETED.
+- **Acceptance Criteria:**
+  - Orders list shows status badges, payment method, customer contact, and quick action buttons.
+  - Order detail view shows items, totals, payment info, and customer details.
+  - Admin can cancel order with reason and mark COD as collected.
+  - Dashboard supports polling or realtime updates for new orders.
+  - Admin UI must be **desktop-first design**: clean tables, wide-screen layout, modern dashboard style.
+- **Status:** ⏳ To Do
+
+**Story: Admin Panel — Menu & Banner Management (MVP)**
+- **Owner:** PO / Dev
+- **Priority:** should
+- **Description:** Minimal UI to add/edit menu items, change prices, toggle availability, and manage offer banners.
+- **Acceptance Criteria:**
+  - Admin can create/edit menu items (name, price, category, availability, image/public_id).
+  - Admin can upload or reference banners/offers and mark them active/inactive.
+  - Changes reflect in storefront after the next data refresh/build step.
+  - UI consistent with admin panel — desktop-friendly.
+- **Status:** ⏳ Backlog
+
+**Story: Staff / Delivery Panel**
+- **Owner:** PO / Dev
+- **Priority:** must
+- **Description:** Staff view that lists only assigned orders with actionable status updates for delivery staff.
+- **Acceptance Criteria:**
+  - Staff sees assigned orders only; each order view shows items, address, phone (tap-to-call).
+  - Staff can update status: OUT_FOR_DELIVERY → COMPLETED and mark COD collected.
+  - Minimal auth for staff (phone+OTP stubbed for MVP).
+  - Staff UI must be **mobile-friendly**, optimized for fast usage by delivery staff on phones.
+- **Status:** ⏳ To Do
+
+**Story: Real-time & Notifications**
+- **Owner:** Dev
+- **Priority:** should
+- **Description:** Surface new orders to admin instantly using Supabase Realtime or WebSocket; fallback to polling.
+- **Acceptance Criteria:**
+  - Admin dashboard receives new orders in near-real time (or via polling every 3–5s).
+  - Visual bell/badge and optional sound indicate new orders.
+  - Server can be configured to send optional email/SMS; disabled by default.
+- **Status:** ⏳ Backlog
+
+**Story: Database Essentials**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Finalize DB schema for core tables: orders, users, menu, banners/offers.
+- **Acceptance Criteria:**
+  - `orders` table includes: id, items(json), totals, status, payment_status, assigned_to, customer info, created_at.
+  - `users` table includes: id, name, role, email, phone, passwordHash/otp fields.
+  - `menu` table includes: id, name, price, category, availability, image/public_id.
+  - `banners` table: id, image_url/public_id, title, active, startDate, endDate.
+- **Status:** ⏳ To Do
+
+**Story: Deploy & Host (Vercel + Supabase)**
+- **Owner:** Dev / PO
+- **Priority:** must
+- **Description:** Deploy frontend and serverless API to Vercel; persist orders in Supabase. Ensure env variables are configured.
+- **Acceptance Criteria:**
+  - Project builds and deploys on Vercel.
+  - Supabase `orders` table is used for order persistence.
+  - `.env` keys are configured in Vercel and not committed to repo.
+  - Deployed site accessible at test URL and mobile verified.
+- **Status:** ⏳ To Do
+
+**Story: Security & RBAC**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Enforce role-based access control server-side for admin/staff endpoints and protect admin UI.
+- **Acceptance Criteria:**
+  - Admin endpoints require admin session/token.
+  - Staff endpoints require staff session/token and only return assigned orders.
+  - Public endpoints for placing orders accept guest info safely and validate inputs.
+- **Status:** ⏳ To Do
+
+**Story: QA & Rollout Checklist**
+- **Owner:** PO / QA
+- **Priority:** must
+- **Description:** Create a short rollout QA checklist covering customer checkout, admin flows, staff flows, payment toggles, and backups.
+- **Acceptance Criteria:**
+  - Checklist exists and is included in PR notes (or release notes).
+  - PO can verify core flows on test URL before going live.
+- **Status:** ⏳ To Do
+
 
 ### Epic: Profile Page ⏳
 
