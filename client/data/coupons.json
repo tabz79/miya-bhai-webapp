@@ -1,0 +1,12 @@
+[
+  {
+    "code": "MIYA10",
+    "discountType": "percent",
+    "value": 10
+  },
+  {
+    "code": "MIYA50",
+    "discountType": "flat",
+    "value": 50
+  }
+]

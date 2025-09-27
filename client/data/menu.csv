@@ -1,0 +1,290 @@
+id,title,description,price,category,subcategory,image_filename,tags,available
+juice-apple,Apple Juice,,60,Beverages,Juices,,,TRUE
+juice-avocado,Avocado Juice,,119,Beverages,Juices,,,TRUE
+juice-banana,Banana Juice,,50,Beverages,Juices,,,TRUE
+milkshake-banana,Banana Milkshake,,70,Beverages,Milkshakes,,,TRUE
+mocktail-berry-mary,Berry Mary,,89,Beverages,Mocktails,,,TRUE
+mocktail-blackcurrant-love,Blackcurrant in Love,,89,Beverages,Mocktails,,,TRUE
+milkshake-blackcurrant,Blackcurrant Milkshake,,80,Beverages,Milkshakes,,,TRUE
+mocktail-blue-lagoon,Blue Lagoon,,89,Beverages,Mocktails,,,TRUE
+milkshake-butterscotch,Butterscotch Milkshake,,90,Beverages,Milkshakes,,,TRUE
+mocktail-chatka-orange,Chatka Orange,,99,Beverages,Mocktails,,,TRUE
+milkshake-chocolate,Chocolate Milkshake,,80,Beverages,Milkshakes,,,TRUE
+mocktail-cinderella,Cinderella,,89,Beverages,Mocktails,,,TRUE
+milkshake-cold-coffee,Cold Coffee,,50,Beverages,Milkshakes,,,TRUE
+juice-dragon-fruit,Dragon Fruit Juice,,80,Beverages,Juices,,,TRUE
+milkshake-dryfruit,Dry Fruit Milkshake,,99,Beverages,Milkshakes,,,TRUE
+mocktail-fizzy-tulip,Fizzy Tulip,,89,Beverages,Mocktails,,,TRUE
+juice-fresh-lemon,Fresh Lemon Juice,,50,Beverages,Juices,,,TRUE
+juice-mosambi,Fresh Mosambi Juice,,50,Beverages,Juices,,,TRUE
+juice-grape,Grape Juice,,50,Beverages,Juices,,,TRUE
+milkshake-kitkat,Kit Kat Milkshake,,80,Beverages,Milkshakes,KitKat-Milkshake.png,,TRUE
+juice-lime-soda,Lime Soda (sweet/salt),,50,Beverages,Juices,,,TRUE
+milkshake-mango,Mango Milkshake,,90,Beverages,Milkshakes,,,TRUE
+mocktail-mint-lemon,Mint Lemon,,69,Beverages,Mocktails,,,TRUE
+juice-mixed-fruit,Mixed Fruit Juice,,80,Beverages,Juices,,,TRUE
+juice-muskmelon,Muskmelon Juice,,50,Beverages,Juices,,,TRUE
+juice-orange,Orange Juice,,50,Beverages,Juices,,,TRUE
+milkshake-oreo,Oreo Milkshake,,90,Beverages,Milkshakes,,,TRUE
+juice-pineapple,Pineapple Juice,,50,Beverages,Juices,Pineapple-Juice.png,,TRUE
+juice-pomegranate,Pomegranate Juice,,60,Beverages,Juices,Pomegranate-Juice.png,,TRUE
+milkshake-strawberry,Strawberry Milkshake,,80,Beverages,Milkshakes,Strawberry-Milkshake.png,,TRUE
+mocktail-sunrise,Sunrise,,89,Beverages,Mocktails,,,TRUE
+mocktail-tender-coconut,Tender Coconut,,99,Beverages,Mocktails,,,TRUE
+milkshake-vanilla,Vanilla Milkshake,,70,Beverages,Milkshakes,,,TRUE
+mocktail-virgin-margarita,Virgin Margarita,,99,Beverages,Mocktails,,,TRUE
+mocktail-virgin-mojito,Virgin Mojito,,69,Beverages,Mocktails,,,TRUE
+mocktail-virgin-pina-colada,Virgin Pina Colada,,79,Beverages,Mocktails,,,TRUE
+juice-watermelon,Watermelon Juice,,50,Beverages,Juices,Watermelon-Juice.png,,TRUE
+extra-biryani-rice,Extra Biryani Rice,Extra portion of biryani rice,80,Biryani,Nizami Chicken Dum Biryani,,,TRUE
+extra-one-chicken-piece,Extra One Chicken Piece,Extra chicken Piece,60,Biryani,Nizami Chicken Dum Biryani,Tandoori-Chicken.png,,TRUE
+fish-biryani,Fish Biryani,Spiced fish biryani,250,Biryani,Seafood Biryani,Fish-Biryani.png,,TRUE
+paneer-biryani,Paneer Biryani,Flavorful paneer biryani,200,Biryani,Veg Biryani,Paneer-Biryani.png,,TRUE
+paneer-mandi-full,Paneer Mandi (Full),Full paneer mandi,850,Arabian,Veg Biryani,,,TRUE
+paneer-mandi-half,Paneer Mandi (Half),Half paneer mandi,450,Arabian,Veg Biryani,,,TRUE
+paneer-mandi-mini,Paneer Mandi (Mini),Mini paneer mandi,230,Arabian,Veg Biryani,,,TRUE
+prawns-biryani,Prawns Biryani,Flavorful prawns biryani,300,Biryani,Seafood Biryani,Prawns-Biryani.png,,TRUE
+veg-baby-corn-manchuria,Baby Corn Manchuria,Baby corn tossed in manchurian sauce,220,Chinese,,,,TRUE
+veg-baby-corn-pepper-salt,Baby Corn Pepper Salt,Baby corn with pepper salt,220,Chinese,,,,TRUE
+chicken-fried-rice,Chicken Fried Rice,,150,Chinese,Fried Rice,Chicken-Fried-Rice.png,,TRUE
+chicken-noodles,Chicken Noodles,,150,Chinese,Noodles,Chicken-Noodles.png,,TRUE
+veg-chili-gobi,Chilli Gobi,Cauliflower tossed in chili sauce,220,Chinese,,,,TRUE
+egg-fried-rice,Egg Fried Rice,,120,Chinese,Fried Rice,Egg-Fried-Rice.png,,TRUE
+egg-noodles,Egg Noodles,,120,Chinese,Noodles,Egg-Noodles.png,,TRUE
+veg-gobi-65,Gobi 65,Crispy cauliflower 65,220,Chinese,,Gobi-Manchuria.png,,TRUE
+veg-gobi-manchuria-dry,Gobi Manchuria Dry,Dry manchurian gobi,220,Chinese,,Gobi-Manchuria.png,,TRUE
+kaju-fried-rice,Kaju Fried Rice,,150,Chinese,Fried Rice,,,TRUE
+kaju-noodles,Kaju Noodles,,150,Chinese,Noodles,,,TRUE
+manchuria-fried-rice,Manchuria Fried Rice,,150,Chinese,Fried Rice,,,TRUE
+manchuria-noodles,Manchuria Noodles,,150,Chinese,Noodles,,,TRUE
+paneer-fried-rice,Paneer Fried Rice,,150,Chinese,Fried Rice,Paneer-Fried-Rice.png,,TRUE
+paneer-noodles,Paneer Noodles,,150,Chinese,Noodles,,,TRUE
+nonveg-schezwan-chicken,Schezwan Chicken,Spicy Schezwan style chicken,220,Chinese,,,,TRUE
+veg-fried-rice,Veg Fried Rice,,100,Chinese,Fried Rice,Veg-Fried-Rice.png,,TRUE
+veg-manchuria-fried-rice,Veg Manchuria Fried Rice,,150,Chinese,Fried Rice,,,TRUE
+veg-noodles,Veg Noodles,,100,Chinese,Noodles,,,TRUE
+coconut-chutney,Coconut Chutney,,0,Chutneys,,,,TRUE
+ginger-chutney,Ginger Chutney,,0,Chutneys,,,,TRUE
+rasam-chutney,Rasam / Sambar (if used),,0,Chutneys,,,,TRUE
+sambar-chutney,Sambar Chutney,,0,Chutneys,,,,TRUE
+aloo-tikki-burger,Aloo Tikki Burger,,79,Continental,Burgers,,,TRUE
+bbq-paneer-pizza,BBQ Paneer Pizza,,199,Continental,Pizzas,BBQ-Paneer-Pizza.png,,TRUE
+bbq-paneer-sandwich,BBQ Paneer Sandwich,,99,Continental,Sandwiches,,,TRUE
+cheese-masala-sandwich,Cheese Masala Sandwich,,89,Continental,Sandwiches,,,TRUE
+chicken-cheese-burger,Chicken Cheese Burger,,99,Continental,Burgers,Chicken-Cheese-Burger.png,,TRUE
+chicken-club-sandwich,Chicken Club Sandwich,,99,Continental,Sandwiches,,,TRUE
+chicken-pizza,Chicken Pizza,,199,Continental,Pizzas,Chicken-Pizza.png,,TRUE
+corn-sandwich,Corn Sandwich,,79,Continental,Sandwiches,,,TRUE
+crazy-cheese-burger,Crazy Cheese Burger,,79,Continental,Burgers,,,TRUE
+grilled-paneer-sandwich,Grilled Paneer Sandwich,,89,Continental,Sandwiches,Grilled-Paneer-Sandwich.png,,TRUE
+grilled-wedge-sandwich,Grilled Wedge Sandwich,,69,Continental,Sandwiches,,,TRUE
+margherita-pizza,Margherita Pizza,,120,Continental,Pizzas,Margherita-Pizza.png,,TRUE
+mix-wedge-grilled-sandwich,Mix Wedge Grilled Sandwich,,89,Continental,Sandwiches,,,TRUE
+paneer-cheese-burger,Paneer Cheese Burger,,89,Continental,Burgers,Paneer-Cheese-Burger.png,,TRUE
+paneer-pizza,Paneer Pizza,,180,Continental,Pizzas,,,TRUE
+spot-wedge-burger,Spot Wedge Burger,,89,Continental,Burgers,,,TRUE
+sweet-corn-pizza,Sweet Corn Pizza,,150,Continental,Pizzas,,,TRUE
+wedge-delight-pizza,Wedge Delight Pizza,,110,Continental,Pizzas,,,TRUE
+tandoori-achari-chicken-tikka-full,Achari Chicken Tikka (Full),Pickle-spiced chicken tikka (full),230,Kebabs & Grills,,Chicken-Tikka.png,,TRUE
+tandoori-achari-chicken-tikka-half,Achari Chicken Tikka (Half),Pickle-spiced chicken tikka (half),130,Kebabs & Grills,,Chicken-Tikka.png,,TRUE
+banjara-kebab-boneless,Banjara Kebab (Boneless),,230,Kebabs & Grills,,,,TRUE
+tandoori-ch-ch-kebab-full,Chicken CH Kebab (Full),Classic chicken kebab (full),230,Kebabs & Grills,,,,TRUE
+tandoori-ch-ch-kebab-half,Chicken CH Kebab (Half),Classic chicken kebab (half),130,Kebabs & Grills,,,,TRUE
+chicken-tikka-boneless-6pc,Chicken Tikka (Boneless) - 6pc,Boneless chicken tikka,230,Kebabs & Grills,,Chicken-Tikka.png,,TRUE
+tandoori-chicken-tikka-full,Chicken Tikka (Full),Charcoal-grilled chicken chunks (full),230,Kebabs & Grills,,Chicken-Tikka.png,,TRUE
+tandoori-chicken-tikka-half,Chicken Tikka (Half),Charcoal-grilled chicken chunks (half),130,Kebabs & Grills,,Chicken-Tikka.png,,TRUE
+tandoori-grilled-chicken-full,Grilled Chicken (Full),Char-grilled chicken (full),230,Kebabs & Grills,,,,TRUE
+tandoori-grilled-chicken-half,Grilled Chicken (Half),Char-grilled chicken (half),130,Kebabs & Grills,,,,TRUE
+hariyali-boneless,Hariyali (Boneless),,230,Kebabs & Grills,,,,TRUE
+tandoori-hariyali-kebab-full,Hariyali Kebab (Full),Green-marinated kebabs (full),230,Kebabs & Grills,,,,TRUE
+tandoori-hariyali-kebab-half,Hariyali Kebab (Half),Green-marinated kebabs (half),130,Kebabs & Grills,,,,TRUE
+tandoori-malai-kebab-full,Malai Kebab (Full),Creamy malai kebab (full),230,Kebabs & Grills,,Malai-Kebab.png,,TRUE
+tandoori-malai-kebab-half,Malai Kebab (Half),Creamy malai kebab (half),130,Kebabs & Grills,,Malai-Kebab.png,,TRUE
+tandoori-murukh-musallam-full,Murukh Musallam (Full),Royal-style marinated chicken (full),230,Kebabs & Grills,,,,TRUE
+tandoori-murukh-musallam-half,Murukh Musallam (Half),Royal-style marinated chicken (half),130,Kebabs & Grills,,,,TRUE
+reshmi-kebab,Reshmi Kebab,,230,Kebabs & Grills,,Reshmi-Kebab.png,,TRUE
+tandoori-reshmi-kebab-full,Reshmi Kebab (Full),Silky melt-in-mouth reshmi kebab (full),230,Kebabs & Grills,,Reshmi-Kebab.png,,TRUE
+tandoori-reshmi-kebab-half,Reshmi Kebab (Half),Silky melt-in-mouth reshmi kebab (half),130,Kebabs & Grills,,Reshmi-Kebab.png,,TRUE
+tandoori-tandoori-chicken-full,Tandoori Chicken (Full),Marinated chicken cooked in tandoor (full),230,Kebabs & Grills,,Tandoori-Chicken.png,,TRUE
+tandoori-tandoori-chicken-half,Tandoori Chicken (Half),Marinated chicken cooked in tandoor (half),130,Kebabs & Grills,,Tandoori-Chicken.png,,TRUE
+tandoori-tangdi-kebab-full,Tangdi Kebab (Full),Spiced chicken drumsticks (full),230,Kebabs & Grills,,Tangdi-Kebab.png,,TRUE
+tandoori-tangdi-kebab-half,Tangdi Kebab (Half),Spiced chicken drumsticks (half),130,Kebabs & Grills,,Tangdi-Kebab.png,,TRUE
+butter-chicken,Butter Chicken,Creamy butter chicken,230,Main Course,Non-Veg Curries,Butter-Chicken.png,,TRUE
+chana-masala,Chana Masala,Spiced chickpea curry,220,Main Course,Veg Curries,,,TRUE
+chicken-chettinad,Chicken Chettinad,Chettinad style chicken,230,Main Course,Non-Veg Curries,,,TRUE
+chicken-kolhapuri,Chicken Kolhapuri,Kolhapuri chicken,230,Main Course,Non-Veg Curries,,,TRUE
+chicken-masala,Chicken Masala,Spicy chicken masala,230,Main Course,Non-Veg Curries,,,TRUE
+chicken-pepper-fry,Chicken Pepper Fry,Pepper fried chicken,230,Main Course,Non-Veg Curries,,,TRUE
+chicken-tikka-masala,Chicken Tikka Masala,Tikka masala chicken,230,Main Course,Non-Veg Curries,Chicken-Tikka-Masala.png,,TRUE
+veg-chili-mushroom-dry,Chilli Mushroom Dry,Chili tossed mushrooms,220,Main Course,,,,TRUE
+dal-fried,Dal Fry,Classic dal fry,220,Main Course,Veg Curries,,,TRUE
+dal-tadka,Dal Tadka,Tadka dal,220,Main Course,Veg Curries,,,TRUE
+dum-chicken,Dum Chicken,Slow-cooked dum chicken,230,Main Course,Non-Veg Curries,,,TRUE
+green-peas-masala,Green Peas Masala,Peas cooked in masala,220,Main Course,Veg Curries,,,TRUE
+kadai-chicken,Kadai Chicken,Kadai style chicken,230,Main Course,Non-Veg Curries,,,TRUE
+kadai-paneer,Kadai Paneer,Kadai style paneer,220,Main Course,Veg Curries,Kadai-Paneer.png,,TRUE
+kaju-paneer,Kaju Paneer,Cashew paneer,220,Main Course,Veg Curries,,,TRUE
+kaju-paneer-masala,Kaju Paneer Masala,Kaju paneer special,220,Main Course,Veg Curries,,,TRUE
+kaju-tomato,Kaju Tomato,Cashew-tomato curry,220,Main Course,Veg Curries,,,TRUE
+malabar-chicken-curry,Malabar Chicken Curry,Malabar style curry,230,Main Course,Non-Veg Curries,,,TRUE
+malai-kofta,Malai Kofta,Creamy kofta curry,220,Main Course,Veg Curries,,,TRUE
+mixed-veg-curry,Mixed Veg Curry,Seasonal mixed vegetables,220,Main Course,Veg Curries,,,TRUE
+miyabhai-special-curry,Miyabhai Special Curry,House special curry,230,Main Course,Non-Veg Curries,,,TRUE
+tandoori-miyabhai-special-curry-full,Miyabhai Special Curry (Full),House special curry (full),230,Main Course,,,signature,TRUE
+tandoori-miyabhai-special-curry-half,Miyabhai Special Curry (Half),House special curry (half),130,Main Course,,,signature,TRUE
+murgh-musallam,Murgh Musallam,Whole stuffed chicken,230,Main Course,Non-Veg Curries,,,TRUE
+mushroom-masala,Mushroom Masala,Mushroom curry,220,Main Course,Veg Curries,,,TRUE
+veg-mushroom-masala-dry,Mushroom Masala Dry,Spicy mushroom masala dry,220,Main Course,,,,TRUE
+paneer-butter-masala,Paneer Butter Masala,Rich paneer gravy,220,Main Course,Veg Curries,Paneer-Butter-Masala.png,,TRUE
+veg-paneer-masala-dry,Paneer Masala Dry,Dry paneer starter in masala seasoning,220,Main Course,,,,TRUE
+punjabi-chicken,Punjabi Chicken,Punjabi style chicken,230,Main Course,Non-Veg Curries,,,TRUE
+achi-pulusu,Achi Pulusu (Meal Item),,120,Meals,,,,TRUE
+ankapur-naatu-kodi-pulusu,Ankapur Naatu Kodi Pulusu,,200,Meals,,Ankapur-Naatu-Kodi-Pulusu.png,,TRUE
+bagara-rice-with-naatu-kodi,Bagara Rice with Naatu Kodi,,180,Meals,,Bagara-Rice-with-Naatu-Kodi.png,,TRUE
+bagara-rice-with-talakayi-curry,Bagara Rice with Talakai Curry,,200,Meals,,Bagara-Rice-with-Talakai-Curry.png,,TRUE
+curd,Curd (Meal Item),,120,Meals,,,,TRUE
+dal,Dal (Meal Item),,120,Meals,,,,TRUE
+dum-fry,Dum Fry (Meal Item),,120,Meals,,,,TRUE
+egg-burji-with-puri,Egg Burji with Puri,,100,Meals,,,,TRUE
+gutti-vankaya-curry-bagara-rice,Gutti Vankaya Curry with Bagara Rice,,130,Meals,,,,TRUE
+military-mutton,Military Mutton,,150,Meals,,,,TRUE
+mutton-dalja-with-bagara-rice,Mutton Dalja with Bagara Rice,,200,Meals,,,,TRUE
+nallamala-naatu-kodi-pulusu,Nallamala Naatu Kodi Pulusu,,200,Meals,,,,TRUE
+nellore-chutney,Nellore Chutney (Meal Item),,120,Meals,,,,TRUE
+nellore-vari-chepala-pulusu,Nellore Vari Chepala Pulusu,,180,Meals,,Nellore-Vari-Chepala-Pulusu.png,,TRUE
+oil-fry,Oil Fry (Meal Item),,120,Meals,,,,TRUE
+papad,Papad (Meal Item),,120,Meals,,,,TRUE
+rasam,Rasam (Meal Item),,120,Meals,,,,TRUE
+meal-1-rice-to-sweet,Rice to Sweet (Meal Item),,120,Meals,,,,TRUE
+rice-tomato-with-egg-curry,Rice Tomato with Egg Curry,,130,Meals,,,,TRUE
+rice-with-egg-curry-sambar,Rice with Egg Curry + Sambar,,130,Meals,,Rice-with-Egg-Curry+Sambar.png,,TRUE
+rice-with-naatu-kodi-pulusu,Rice with Naatu Kodi Pulusu,,180,Meals,,,,TRUE
+roti-chutney,Roti Chutney (Meal Item),,120,Meals,,,,TRUE
+sambar,Sambar (Meal Item),,120,Meals,,,,TRUE
+veg-curries-meal,Veg Curries (Meal Item),,120,Meals,,,,TRUE
+miyabhai-special-shawarma,Miyabhai Special Shawarma,,150,Shawarma,,,,TRUE
+paneer-shawarma,Paneer Shawarma,,140,Shawarma,,Paneer-Shawarma.png,,TRUE
+regular-chicken-shawarma,Regular Chicken Shawarma,,100,Shawarma,,Chicken-Shawarma.png,,TRUE
+special-chicken-shawarma,Special Chicken Shawarma,,140,Shawarma,,Chicken-Shawarma.png,,TRUE
+veg-shawarma,Veg Shawarma,,100,Shawarma,,,,TRUE
+rotis-aloo-parota,Aloo Parota,Flaky parota stuffed with spiced potato,40,Starters,,,,TRUE
+seafood-apollo-fish,Apollo Fish,Crispy Apollo style fish,220,Starters,,Apollo-fish.png,,TRUE
+nonveg-blackbean-chicken,Black Bean Chicken,Chicken in black bean sauce,220,Starters,,,,TRUE
+rotis-butter-naan,Butter Naan,Soft naan brushed with butter,30,Starters,,,,TRUE
+rotis-butter-roti,Butter Roti,Roti served with butter,40,Starters,,,,TRUE
+nonveg-chicken-65,Chicken 65,Crispy fried chicken starter,220,Starters,,Chicken-65.png,,TRUE
+nonveg-chicken-hongkong,Chicken Hong Kong,Hong Kong style chicken,220,Starters,,,,TRUE
+nonveg-chicken-lollipop,Chicken Lollipop,Classic Indo-Chinese lollipops,220,Starters,,Chicken-Lollipop.png,,TRUE
+nonveg-chicken-majestic,Chicken Majestic,Spicy shredded chicken special,220,Starters,,,,TRUE
+nonveg-chicken-pepper-salt,Chicken Pepper Salt,Chicken tossed in pepper salt,220,Starters,,,,TRUE
+seafood-chicken-spring-roll,Chicken Spring Roll,Crispy chicken spring rolls,220,Starters,,,,TRUE
+nonveg-chicken-wings,Chicken Wings,Crispy spiced chicken wings,220,Starters,,Chicken-Wings.png,,TRUE
+veg-chili-baby-corn-dry,Chilli Baby Corn Dry,Spicy dry chili baby corn,220,Starters,,,,TRUE
+nonveg-chili-chicken,Chilli Chicken,Spicy Indo-Chinese chili chicken,220,Starters,,Chilli-Chicken.png,,TRUE
+seafood-chili-fish,Chilli Fish,Fish in chili sauce,220,Starters,,,,TRUE
+nonveg-chili-manchuria,Chilli Manchuria,Chicken in manchurian style,220,Starters,,,,TRUE
+veg-chili-paneer,Chilli Paneer,Classic Indo-Chinese chili paneer,220,Starters,,,,TRUE
+seafood-chili-prawns,Chilli Prawns,Prawns in chili sauce,220,Starters,,Chilli-Prawns.png,,TRUE
+nonveg-dragon-chicken,Dragon Chicken,Spicy dragon-style chicken,220,Starters,,,,TRUE
+seafood-fish-65,Fish 65,Crispy fried fish starter,220,Starters,,,,TRUE
+seafood-fish-dry,Fish Dry,Dry fried fish masala,220,Starters,,,,TRUE
+seafood-fish-roast,Fish Roast,Roasted fish masala,220,Starters,,,,TRUE
+nonveg-garlic-chicken,Garlic Chicken,Chicken in garlic sauce,220,Starters,,,,TRUE
+rotis-garlic-naan,Garlic Naan,Naan topped with garlic and butter,40,Starters,,,,TRUE
+nonveg-kungfu-chicken,Kung Fu Chicken,Kung Fu style chicken,220,Starters,,,,TRUE
+nonveg-lemon-chicken,Lemon Chicken,Tangy lemon flavored chicken,220,Starters,,,,TRUE
+seafood-loose-prawns,Loose Prawns,Crispy loose prawns,555,Starters,,,,TRUE
+rotis-masala-kulcha,Masala Kulcha,Kulcha stuffed with spiced potato & masala,50,Starters,,,,TRUE
+rotis-palan-roti,Palan Roti,Soft palan-style roti,30,Starters,,,,TRUE
+veg-paneer-65,Paneer 65,Crispy spiced paneer starter,220,Starters,,Paneer-65.png,,TRUE
+rotis-paneer-kulcha,Paneer Kulcha,Stuffed kulcha with spiced paneer,50,Starters,,,,TRUE
+rotis-plain-naan,Plain Naan,Classic plain naan,40,Starters,,,,TRUE
+nonveg-plum-chicken,Plum Chicken,Chicken in plum sauce,220,Starters,,,,TRUE
+rotis-podina-parota,Podina Parota,Parota infused with fresh mint,50,Starters,,,,TRUE
+seafood-prawns-manchuria,Prawns Manchuria,Manchurian-style prawns,220,Starters,,Prawns-Manchuria.png,,TRUE
+butter-dosa,Butter Dosa,,60,Tiffin,Breakfast,,,TRUE
+carrot-idli,Carrot Idli,,40,Tiffin,Breakfast,,,TRUE
+egg-dosa,Egg Dosa,,60,Tiffin,Breakfast,,,TRUE
+ghee-dosa,Ghee Dosa,,50,Tiffin,Breakfast,,,TRUE
+ghee-karani-dosa,Ghee Karani Dosa,,60,Tiffin,Breakfast,,,TRUE
+ghee-kerala-idli,Ghee Kerala Idli,,50,Tiffin,Breakfast,,,TRUE
+ghee-masala-dosa,Ghee Masala Dosa,,60,Tiffin,Breakfast,,,TRUE
+idli,Idli,,30,Tiffin,Breakfast,idli.png,,TRUE
+idli-with-ghee,Idli with Ghee,,40,Tiffin,Breakfast,,,TRUE
+kanchipuram-idli,Kanchipuram Idli,,40,Tiffin,Breakfast,,,TRUE
+masala-dosa,Masala Dosa,,50,Tiffin,Breakfast,Masala-Dosa.png,,TRUE
+masala-pesara-dosa,Masala Pesara Dosa,,50,Tiffin,Breakfast,,,TRUE
+masala-puri-curry,Masala Puri Curry,,50,Tiffin,Breakfast,,,TRUE
+masala-rava-dosa,Masala Rava Dosa,,80,Tiffin,Breakfast,,,TRUE
+masala-uttappam,Masala Uttappam,,80,Tiffin,Breakfast,,,TRUE
+mla-prasad-dosa,MLA Prasad Dosa,,70,Tiffin,Breakfast,,,TRUE
+mutton-kheema-dosa,Mutton Kheema Dosa,,150,Tiffin,Breakfast,,,TRUE
+mysore-bajji,Mysore Bajji,,40,Tiffin,Breakfast,,,TRUE
+onion-dosa,Onion Dosa,,50,Tiffin,Breakfast,Onion-Dosa.png,,TRUE
+onion-pesara-dosa,Onion Pesara Dosa,,50,Tiffin,Breakfast,,,TRUE
+palak-idli,Palak Idli,,40,Tiffin,Breakfast,,,TRUE
+palak-puri,Palak Puri,,50,Tiffin,Breakfast,,,TRUE
+paneer-butter-dosa,Paneer Butter Dosa,,80,Tiffin,Breakfast,,,TRUE
+paneer-dosa,Paneer Dosa,,70,Tiffin,Breakfast,,,TRUE
+pesara-dosa,Pesara Dosa,,40,Tiffin,Breakfast,,,TRUE
+pizza-dosa,Pizza Dosa,,120,Tiffin,Breakfast,,,TRUE
+plain-dosa,Plain Dosa,,40,Tiffin,Breakfast,,,TRUE
+pudina-idli,Pudina Idli,,40,Tiffin,Breakfast,,,TRUE
+puri,Puri,,50,Tiffin,Breakfast,,,TRUE
+puri-curry,Puri Curry,,50,Tiffin,Breakfast,,,TRUE
+puri-with-chicken-curry,Puri with Chicken Curry,,100,Tiffin,Breakfast,,,TRUE
+puri-with-egg-burji,Puri with Egg Burji,,80,Tiffin,Breakfast,,,TRUE
+puri-with-mutton-kheema,Puri with Mutton Kheema,,150,Tiffin,Breakfast,,,TRUE
+ragi-dosa,Ragi Dosa,,50,Tiffin,Breakfast,,,TRUE
+ragi-idli,Ragi Idli,,40,Tiffin,Breakfast,,,TRUE
+ragi-masala-dosa,Ragi Masala Dosa,,50,Tiffin,Breakfast,,,TRUE
+rava-dosa,Rava Dosa,,70,Tiffin,Breakfast,Rava-Dosa.png,,TRUE
+sawadeen-idli,Sawadeen Idli,,40,Tiffin,Breakfast,,,TRUE
+set-dosa,Set Dosa,,70,Tiffin,Breakfast,,,TRUE
+tawa-idli,Tawa Idli,,50,Tiffin,Breakfast,,,TRUE
+tawa-mysore-bajji,Tawa Mysore Bajji,,50,Tiffin,Breakfast,,,TRUE
+tawa-vada,Tawa Vada,,60,Tiffin,Breakfast,,,TRUE
+uttappa,Uttappa,,70,Tiffin,Breakfast,,,TRUE
+vada,Vada,,50,Tiffin,Breakfast,vada.png,,TRUE
+4pc,4pc,,360,Uncategorized,,,,TRUE
+family,family,,500,Uncategorized,,,,TRUE
+full,full,,200,Uncategorized,,,,TRUE
+jumbo,jumbo,,800,Uncategorized,,,,TRUE
+chicken-fry-piece-biryani,Chicken Fry Piece Biryani,,250,Biryani,,Chicken-Fry-Piece-Biryani.png,,TRUE
+mandi-chicken-mini,Chicken Mandi (Mini),,250,Arabian,Chicken Mandi,,,TRUE
+mandi-chicken-half,Chicken Mandi (Half),,420,Arabian,Chicken Mandi,,,TRUE
+mandi-chicken-3piece,Chicken Mandi (3-piece),,600,Arabian,Chicken Mandi,,,TRUE
+mandi-chicken-full,Chicken Mandi (Full),,750,Arabian,Chicken Mandi,,,TRUE
+mandi-chicken-juicy-mini,Chicken Juicy Mandi (Mini),,320,Arabian,Chicken Juicy Mandi,Chicken-Juicy-Mandi.png,,TRUE
+mandi-chicken-juicy-half,Chicken Juicy Mandi (Half),,500,Arabian,Chicken Juicy Mandi,Chicken-Juicy-Mandi.png,,TRUE
+mandi-chicken-juicy-3piece,Chicken Juicy Mandi (3-piece),,750,Arabian,Chicken Juicy Mandi,Chicken-Juicy-Mandi.png,,TRUE
+mandi-chicken-juicy-full,Chicken Juicy Mandi (Full),,1000,Arabian,Chicken Juicy Mandi,Chicken-Juicy-Mandi.png,,TRUE
+mandi-broasted-mini,Broasted Mandi (Mini),,320,Arabian,Broasted Mandi,Broasted-Mandi.png,,TRUE
+mandi-broasted-half,Broasted Mandi (Half),,500,Arabian,Broasted Mandi,Broasted-Mandi.png,,TRUE
+mandi-broasted-3piece,Broasted Mandi (3-piece),,750,Arabian,Broasted Mandi,Broasted-Mandi.png,,TRUE
+mandi-broasted-full,Broasted Mandi (Full),,1000,Arabian,Broasted Mandi,Broasted-Mandi.png,,TRUE
+mandi-tandoori-half,Tandoori Chicken Mandi (Half),,440,Arabian,Tandoori Chicken Mandi,Tandoori-Chicken-Mandi.png,,TRUE
+mandi-tandoori-full,Tandoori Chicken Mandi (Full),,800,Arabian,Tandoori Chicken Mandi,Tandoori-Chicken-Mandi.png,,TRUE
+mandi-mutton-mini,Nizami Mutton Mandi (Mini),,320,Arabian,Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-half,Nizami Mutton Mandi (Half),,500,Arabian,Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-3piece,Nizami Mutton Mandi (3-piece),,750,Arabian,Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-full,Nizami Mutton Mandi (Full),,900,Arabian,Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-juice-mini,Juicy Mutton Mandi (Mini),,350,Arabian,Juicy Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-juice-half,Juicy Mutton Mandi (Half),,600,Arabian,Juicy Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-juice-3piece,Juicy Mutton Mandi (3-piece),,850,Arabian,Juicy Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-mutton-juice-full,Juicy Mutton Mandi (Full),,1100,Arabian,Juicy Mutton Mandi,Mutton-Mandi.png,,TRUE
+mandi-special-mutton-half,Special Mutton Masala Mandi (Half),,700,Arabian,Special Mutton Masala,Mutton-Mandi.png,,TRUE
+mandi-special-mutton-full,Special Mutton Masala Mandi (Full),,1300,Arabian,Special Mutton Masala,Mutton-Mandi.png,,TRUE
+mandi-fish-half,Fish Mandi (Half),,460,Arabian,Fish Mandi,Fish-Mandi.png,,TRUE
+mandi-fish-full,Fish Mandi (Full),,850,Arabian,Fish Mandi,Fish-Mandi.png,,TRUE
+mandi-mix-4p,Mix Mandi (4 members),,1100,Arabian,Mix Mandi,Chicken-Juicy-Mandi.png,,TRUE
+single-chicken-biryani,Single Chicken Biryani,,150,Biryani,,Chicken-Dum-Biryani.png,,TRUE
+full-chicken-biryani,Full Chicken Biryani,,200,Biryani,,Chicken-Dum-Biryani.png,,TRUE
+chicken-biryani-fp,Chicken Biryani FP,,500,Biryani,,Chicken-Dum-Biryani.png,,TRUE
+chicken-jumbo-pack,Chicken Jumbo Pack,,800,Biryani,,Chicken-Dum-Biryani.png,,TRUE
+chicken-fry-piece-biryani-fp,Chicken Fry Piece Biryani FP,,750,Biryani,,Chicken-Fry-Piece-Biryani.png,,TRUE
+extra-biryani-rice-large,Extra Biryani Rice,,80,Biryani,,Chicken-Dum-Biryani.png,,TRUE
+mutton-biryani-single,Mutton Biryani Single,,220,Biryani,,Mutton-Dum-Biryani.png,,TRUE
+mutton-biryani-full,Mutton Biryani Full,,300,Biryani,,Mutton-Dum-Biryani.png,,TRUE
+mutton-biryani-fp,Mutton Biryani FP,,750,Biryani,,Mutton-Dum-Biryani.png,,TRUE
+curd-rice,Curd Rice,Comforting curd rice,100,Meals,Veg Meals,,,TRUE

@@ -1,0 +1,1016 @@
+{
+  "migration": {
+    "status": "success",
+    "rowsConverted": 289,
+    "conflicts": [],
+    "source": "D:\\Projects\\miya-bhai-webapp\\client\\src\\data\\menu.canonical.json",
+    "destination": "D:\\Projects\\miya-bhai-webapp\\client\\data\\menu.csv"
+  },
+  "build": {
+    "status": "success",
+    "idsGenerated": 0,
+    "destination": "D:\\Projects\\miya-bhai-webapp\\client\\src\\data\\menu.canonical.json"
+  },
+  "imagesCopied": [],
+  "imagesMissing": [
+    {
+      "id": "juice-apple",
+      "expectedSlug": "apple-juice"
+    },
+    {
+      "id": "juice-avocado",
+      "expectedSlug": "avocado-juice"
+    },
+    {
+      "id": "juice-banana",
+      "expectedSlug": "banana-juice"
+    },
+    {
+      "id": "milkshake-banana",
+      "expectedSlug": "banana-milkshake"
+    },
+    {
+      "id": "mocktail-berry-mary",
+      "expectedSlug": "berry-mary"
+    },
+    {
+      "id": "mocktail-blackcurrant-love",
+      "expectedSlug": "blackcurrant-in-love"
+    },
+    {
+      "id": "milkshake-blackcurrant",
+      "expectedSlug": "blackcurrant-milkshake"
+    },
+    {
+      "id": "mocktail-blue-lagoon",
+      "expectedSlug": "blue-lagoon"
+    },
+    {
+      "id": "milkshake-butterscotch",
+      "expectedSlug": "butterscotch-milkshake"
+    },
+    {
+      "id": "mocktail-chatka-orange",
+      "expectedSlug": "chatka-orange"
+    },
+    {
+      "id": "milkshake-chocolate",
+      "expectedSlug": "chocolate-milkshake"
+    },
+    {
+      "id": "mocktail-cinderella",
+      "expectedSlug": "cinderella"
+    },
+    {
+      "id": "milkshake-cold-coffee",
+      "expectedSlug": "cold-coffee"
+    },
+    {
+      "id": "juice-dragon-fruit",
+      "expectedSlug": "dragon-fruit-juice"
+    },
+    {
+      "id": "milkshake-dryfruit",
+      "expectedSlug": "dry-fruit-milkshake"
+    },
+    {
+      "id": "mocktail-fizzy-tulip",
+      "expectedSlug": "fizzy-tulip"
+    },
+    {
+      "id": "juice-fresh-lemon",
+      "expectedSlug": "fresh-lemon-juice"
+    },
+    {
+      "id": "juice-mosambi",
+      "expectedSlug": "fresh-mosambi-juice"
+    },
+    {
+      "id": "juice-grape",
+      "expectedSlug": "grape-juice"
+    },
+    {
+      "id": "milkshake-kitkat",
+      "expectedSlug": "kit-kat-milkshake"
+    },
+    {
+      "id": "juice-lime-soda",
+      "expectedSlug": "lime-soda-sweetsalt"
+    },
+    {
+      "id": "milkshake-mango",
+      "expectedSlug": "mango-milkshake"
+    },
+    {
+      "id": "mocktail-mint-lemon",
+      "expectedSlug": "mint-lemon"
+    },
+    {
+      "id": "juice-mixed-fruit",
+      "expectedSlug": "mixed-fruit-juice"
+    },
+    {
+      "id": "juice-muskmelon",
+      "expectedSlug": "muskmelon-juice"
+    },
+    {
+      "id": "juice-orange",
+      "expectedSlug": "orange-juice"
+    },
+    {
+      "id": "milkshake-oreo",
+      "expectedSlug": "oreo-milkshake"
+    },
+    {
+      "id": "juice-pineapple",
+      "expectedSlug": "pineapple-juice"
+    },
+    {
+      "id": "juice-pomegranate",
+      "expectedSlug": "pomegranate-juice"
+    },
+    {
+      "id": "milkshake-strawberry",
+      "expectedSlug": "strawberry-milkshake"
+    },
+    {
+      "id": "mocktail-sunrise",
+      "expectedSlug": "sunrise"
+    },
+    {
+      "id": "mocktail-tender-coconut",
+      "expectedSlug": "tender-coconut"
+    },
+    {
+      "id": "milkshake-vanilla",
+      "expectedSlug": "vanilla-milkshake"
+    },
+    {
+      "id": "mocktail-virgin-margarita",
+      "expectedSlug": "virgin-margarita"
+    },
+    {
+      "id": "mocktail-virgin-mojito",
+      "expectedSlug": "virgin-mojito"
+    },
+    {
+      "id": "mocktail-virgin-pina-colada",
+      "expectedSlug": "virgin-pina-colada"
+    },
+    {
+      "id": "juice-watermelon",
+      "expectedSlug": "watermelon-juice"
+    },
+    {
+      "id": "extra-biryani-rice",
+      "expectedSlug": "extra-biryani-rice"
+    },
+    {
+      "id": "paneer-mandi-full",
+      "expectedSlug": "paneer-mandi-full"
+    },
+    {
+      "id": "paneer-mandi-half",
+      "expectedSlug": "paneer-mandi-half"
+    },
+    {
+      "id": "paneer-mandi-mini",
+      "expectedSlug": "paneer-mandi-mini"
+    },
+    {
+      "id": "veg-baby-corn-manchuria",
+      "expectedSlug": "baby-corn-manchuria"
+    },
+    {
+      "id": "veg-baby-corn-pepper-salt",
+      "expectedSlug": "baby-corn-pepper-salt"
+    },
+    {
+      "id": "veg-chili-gobi",
+      "expectedSlug": "chilli-gobi"
+    },
+    {
+      "id": "veg-gobi-65",
+      "expectedSlug": "gobi-65"
+    },
+    {
+      "id": "veg-gobi-manchuria-dry",
+      "expectedSlug": "gobi-manchuria-dry"
+    },
+    {
+      "id": "kaju-fried-rice",
+      "expectedSlug": "kaju-fried-rice"
+    },
+    {
+      "id": "kaju-noodles",
+      "expectedSlug": "kaju-noodles"
+    },
+    {
+      "id": "manchuria-fried-rice",
+      "expectedSlug": "manchuria-fried-rice"
+    },
+    {
+      "id": "manchuria-noodles",
+      "expectedSlug": "manchuria-noodles"
+    },
+    {
+      "id": "paneer-noodles",
+      "expectedSlug": "paneer-noodles"
+    },
+    {
+      "id": "nonveg-schezwan-chicken",
+      "expectedSlug": "schezwan-chicken"
+    },
+    {
+      "id": "veg-manchuria-fried-rice",
+      "expectedSlug": "veg-manchuria-fried-rice"
+    },
+    {
+      "id": "veg-noodles",
+      "expectedSlug": "veg-noodles"
+    },
+    {
+      "id": "coconut-chutney",
+      "expectedSlug": "coconut-chutney"
+    },
+    {
+      "id": "ginger-chutney",
+      "expectedSlug": "ginger-chutney"
+    },
+    {
+      "id": "rasam-chutney",
+      "expectedSlug": "rasam-sambar-if-used"
+    },
+    {
+      "id": "sambar-chutney",
+      "expectedSlug": "sambar-chutney"
+    },
+    {
+      "id": "aloo-tikki-burger",
+      "expectedSlug": "aloo-tikki-burger"
+    },
+    {
+      "id": "bbq-paneer-sandwich",
+      "expectedSlug": "bbq-paneer-sandwich"
+    },
+    {
+      "id": "cheese-masala-sandwich",
+      "expectedSlug": "cheese-masala-sandwich"
+    },
+    {
+      "id": "chicken-club-sandwich",
+      "expectedSlug": "chicken-club-sandwich"
+    },
+    {
+      "id": "corn-sandwich",
+      "expectedSlug": "corn-sandwich"
+    },
+    {
+      "id": "crazy-cheese-burger",
+      "expectedSlug": "crazy-cheese-burger"
+    },
+    {
+      "id": "grilled-wedge-sandwich",
+      "expectedSlug": "grilled-wedge-sandwich"
+    },
+    {
+      "id": "mix-wedge-grilled-sandwich",
+      "expectedSlug": "mix-wedge-grilled-sandwich"
+    },
+    {
+      "id": "paneer-pizza",
+      "expectedSlug": "paneer-pizza"
+    },
+    {
+      "id": "spot-wedge-burger",
+      "expectedSlug": "spot-wedge-burger"
+    },
+    {
+      "id": "sweet-corn-pizza",
+      "expectedSlug": "sweet-corn-pizza"
+    },
+    {
+      "id": "wedge-delight-pizza",
+      "expectedSlug": "wedge-delight-pizza"
+    },
+    {
+      "id": "tandoori-achari-chicken-tikka-full",
+      "expectedSlug": "achari-chicken-tikka-full"
+    },
+    {
+      "id": "tandoori-achari-chicken-tikka-half",
+      "expectedSlug": "achari-chicken-tikka-half"
+    },
+    {
+      "id": "banjara-kebab-boneless",
+      "expectedSlug": "banjara-kebab-boneless"
+    },
+    {
+      "id": "tandoori-ch-ch-kebab-full",
+      "expectedSlug": "chicken-ch-kebab-full"
+    },
+    {
+      "id": "tandoori-ch-ch-kebab-half",
+      "expectedSlug": "chicken-ch-kebab-half"
+    },
+    {
+      "id": "tandoori-chicken-tikka-full",
+      "expectedSlug": "chicken-tikka-full"
+    },
+    {
+      "id": "tandoori-chicken-tikka-half",
+      "expectedSlug": "chicken-tikka-half"
+    },
+    {
+      "id": "tandoori-grilled-chicken-full",
+      "expectedSlug": "grilled-chicken-full"
+    },
+    {
+      "id": "tandoori-grilled-chicken-half",
+      "expectedSlug": "grilled-chicken-half"
+    },
+    {
+      "id": "hariyali-boneless",
+      "expectedSlug": "hariyali-boneless"
+    },
+    {
+      "id": "tandoori-hariyali-kebab-full",
+      "expectedSlug": "hariyali-kebab-full"
+    },
+    {
+      "id": "tandoori-hariyali-kebab-half",
+      "expectedSlug": "hariyali-kebab-half"
+    },
+    {
+      "id": "tandoori-malai-kebab-full",
+      "expectedSlug": "malai-kebab-full"
+    },
+    {
+      "id": "tandoori-malai-kebab-half",
+      "expectedSlug": "malai-kebab-half"
+    },
+    {
+      "id": "tandoori-murukh-musallam-full",
+      "expectedSlug": "murukh-musallam-full"
+    },
+    {
+      "id": "tandoori-murukh-musallam-half",
+      "expectedSlug": "murukh-musallam-half"
+    },
+    {
+      "id": "tandoori-reshmi-kebab-full",
+      "expectedSlug": "reshmi-kebab-full"
+    },
+    {
+      "id": "tandoori-reshmi-kebab-half",
+      "expectedSlug": "reshmi-kebab-half"
+    },
+    {
+      "id": "tandoori-tandoori-chicken-full",
+      "expectedSlug": "tandoori-chicken-full"
+    },
+    {
+      "id": "tandoori-tandoori-chicken-half",
+      "expectedSlug": "tandoori-chicken-half"
+    },
+    {
+      "id": "tandoori-tangdi-kebab-full",
+      "expectedSlug": "tangdi-kebab-full"
+    },
+    {
+      "id": "tandoori-tangdi-kebab-half",
+      "expectedSlug": "tangdi-kebab-half"
+    },
+    {
+      "id": "chana-masala",
+      "expectedSlug": "chana-masala"
+    },
+    {
+      "id": "chicken-chettinad",
+      "expectedSlug": "chicken-chettinad"
+    },
+    {
+      "id": "chicken-kolhapuri",
+      "expectedSlug": "chicken-kolhapuri"
+    },
+    {
+      "id": "chicken-masala",
+      "expectedSlug": "chicken-masala"
+    },
+    {
+      "id": "chicken-pepper-fry",
+      "expectedSlug": "chicken-pepper-fry"
+    },
+    {
+      "id": "veg-chili-mushroom-dry",
+      "expectedSlug": "chilli-mushroom-dry"
+    },
+    {
+      "id": "dal-fried",
+      "expectedSlug": "dal-fry"
+    },
+    {
+      "id": "dal-tadka",
+      "expectedSlug": "dal-tadka"
+    },
+    {
+      "id": "dum-chicken",
+      "expectedSlug": "dum-chicken"
+    },
+    {
+      "id": "green-peas-masala",
+      "expectedSlug": "green-peas-masala"
+    },
+    {
+      "id": "kadai-chicken",
+      "expectedSlug": "kadai-chicken"
+    },
+    {
+      "id": "kaju-paneer",
+      "expectedSlug": "kaju-paneer"
+    },
+    {
+      "id": "kaju-paneer-masala",
+      "expectedSlug": "kaju-paneer-masala"
+    },
+    {
+      "id": "kaju-tomato",
+      "expectedSlug": "kaju-tomato"
+    },
+    {
+      "id": "malabar-chicken-curry",
+      "expectedSlug": "malabar-chicken-curry"
+    },
+    {
+      "id": "malai-kofta",
+      "expectedSlug": "malai-kofta"
+    },
+    {
+      "id": "mixed-veg-curry",
+      "expectedSlug": "mixed-veg-curry"
+    },
+    {
+      "id": "miyabhai-special-curry",
+      "expectedSlug": "miyabhai-special-curry"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-full",
+      "expectedSlug": "miyabhai-special-curry-full"
+    },
+    {
+      "id": "tandoori-miyabhai-special-curry-half",
+      "expectedSlug": "miyabhai-special-curry-half"
+    },
+    {
+      "id": "murgh-musallam",
+      "expectedSlug": "murgh-musallam"
+    },
+    {
+      "id": "mushroom-masala",
+      "expectedSlug": "mushroom-masala"
+    },
+    {
+      "id": "veg-mushroom-masala-dry",
+      "expectedSlug": "mushroom-masala-dry"
+    },
+    {
+      "id": "veg-paneer-masala-dry",
+      "expectedSlug": "paneer-masala-dry"
+    },
+    {
+      "id": "punjabi-chicken",
+      "expectedSlug": "punjabi-chicken"
+    },
+    {
+      "id": "achi-pulusu",
+      "expectedSlug": "achi-pulusu-meal-item"
+    },
+    {
+      "id": "bagara-rice-with-talakayi-curry",
+      "expectedSlug": "bagara-rice-with-talakai-curry"
+    },
+    {
+      "id": "curd",
+      "expectedSlug": "curd-meal-item"
+    },
+    {
+      "id": "dal",
+      "expectedSlug": "dal-meal-item"
+    },
+    {
+      "id": "dum-fry",
+      "expectedSlug": "dum-fry-meal-item"
+    },
+    {
+      "id": "egg-burji-with-puri",
+      "expectedSlug": "egg-burji-with-puri"
+    },
+    {
+      "id": "gutti-vankaya-curry-bagara-rice",
+      "expectedSlug": "gutti-vankaya-curry-with-bagara-rice"
+    },
+    {
+      "id": "military-mutton",
+      "expectedSlug": "military-mutton"
+    },
+    {
+      "id": "mutton-dalja-with-bagara-rice",
+      "expectedSlug": "mutton-dalja-with-bagara-rice"
+    },
+    {
+      "id": "nallamala-naatu-kodi-pulusu",
+      "expectedSlug": "nallamala-naatu-kodi-pulusu"
+    },
+    {
+      "id": "nellore-chutney",
+      "expectedSlug": "nellore-chutney-meal-item"
+    },
+    {
+      "id": "oil-fry",
+      "expectedSlug": "oil-fry-meal-item"
+    },
+    {
+      "id": "papad",
+      "expectedSlug": "papad-meal-item"
+    },
+    {
+      "id": "rasam",
+      "expectedSlug": "rasam-meal-item"
+    },
+    {
+      "id": "meal-1-rice-to-sweet",
+      "expectedSlug": "rice-to-sweet-meal-item"
+    },
+    {
+      "id": "rice-tomato-with-egg-curry",
+      "expectedSlug": "rice-tomato-with-egg-curry"
+    },
+    {
+      "id": "rice-with-naatu-kodi-pulusu",
+      "expectedSlug": "rice-with-naatu-kodi-pulusu"
+    },
+    {
+      "id": "roti-chutney",
+      "expectedSlug": "roti-chutney-meal-item"
+    },
+    {
+      "id": "sambar",
+      "expectedSlug": "sambar-meal-item"
+    },
+    {
+      "id": "veg-curries-meal",
+      "expectedSlug": "veg-curries-meal-item"
+    },
+    {
+      "id": "miyabhai-special-shawarma",
+      "expectedSlug": "miyabhai-special-shawarma"
+    },
+    {
+      "id": "veg-shawarma",
+      "expectedSlug": "veg-shawarma"
+    },
+    {
+      "id": "rotis-aloo-parota",
+      "expectedSlug": "aloo-parota"
+    },
+    {
+      "id": "seafood-apollo-fish",
+      "expectedSlug": "apollo-fish"
+    },
+    {
+      "id": "nonveg-blackbean-chicken",
+      "expectedSlug": "black-bean-chicken"
+    },
+    {
+      "id": "rotis-butter-naan",
+      "expectedSlug": "butter-naan"
+    },
+    {
+      "id": "rotis-butter-roti",
+      "expectedSlug": "butter-roti"
+    },
+    {
+      "id": "nonveg-chicken-65",
+      "expectedSlug": "chicken-65"
+    },
+    {
+      "id": "nonveg-chicken-hongkong",
+      "expectedSlug": "chicken-hong-kong"
+    },
+    {
+      "id": "nonveg-chicken-lollipop",
+      "expectedSlug": "chicken-lollipop"
+    },
+    {
+      "id": "nonveg-chicken-majestic",
+      "expectedSlug": "chicken-majestic"
+    },
+    {
+      "id": "nonveg-chicken-pepper-salt",
+      "expectedSlug": "chicken-pepper-salt"
+    },
+    {
+      "id": "seafood-chicken-spring-roll",
+      "expectedSlug": "chicken-spring-roll"
+    },
+    {
+      "id": "nonveg-chicken-wings",
+      "expectedSlug": "chicken-wings"
+    },
+    {
+      "id": "veg-chili-baby-corn-dry",
+      "expectedSlug": "chilli-baby-corn-dry"
+    },
+    {
+      "id": "nonveg-chili-chicken",
+      "expectedSlug": "chilli-chicken"
+    },
+    {
+      "id": "seafood-chili-fish",
+      "expectedSlug": "chilli-fish"
+    },
+    {
+      "id": "nonveg-chili-manchuria",
+      "expectedSlug": "chilli-manchuria"
+    },
+    {
+      "id": "veg-chili-paneer",
+      "expectedSlug": "chilli-paneer"
+    },
+    {
+      "id": "seafood-chili-prawns",
+      "expectedSlug": "chilli-prawns"
+    },
+    {
+      "id": "nonveg-dragon-chicken",
+      "expectedSlug": "dragon-chicken"
+    },
+    {
+      "id": "seafood-fish-65",
+      "expectedSlug": "fish-65"
+    },
+    {
+      "id": "seafood-fish-dry",
+      "expectedSlug": "fish-dry"
+    },
+    {
+      "id": "seafood-fish-roast",
+      "expectedSlug": "fish-roast"
+    },
+    {
+      "id": "nonveg-garlic-chicken",
+      "expectedSlug": "garlic-chicken"
+    },
+    {
+      "id": "rotis-garlic-naan",
+      "expectedSlug": "garlic-naan"
+    },
+    {
+      "id": "nonveg-kungfu-chicken",
+      "expectedSlug": "kung-fu-chicken"
+    },
+    {
+      "id": "nonveg-lemon-chicken",
+      "expectedSlug": "lemon-chicken"
+    },
+    {
+      "id": "seafood-loose-prawns",
+      "expectedSlug": "loose-prawns"
+    },
+    {
+      "id": "rotis-masala-kulcha",
+      "expectedSlug": "masala-kulcha"
+    },
+    {
+      "id": "rotis-palan-roti",
+      "expectedSlug": "palan-roti"
+    },
+    {
+      "id": "veg-paneer-65",
+      "expectedSlug": "paneer-65"
+    },
+    {
+      "id": "rotis-paneer-kulcha",
+      "expectedSlug": "paneer-kulcha"
+    },
+    {
+      "id": "rotis-plain-naan",
+      "expectedSlug": "plain-naan"
+    },
+    {
+      "id": "nonveg-plum-chicken",
+      "expectedSlug": "plum-chicken"
+    },
+    {
+      "id": "rotis-podina-parota",
+      "expectedSlug": "podina-parota"
+    },
+    {
+      "id": "seafood-prawns-manchuria",
+      "expectedSlug": "prawns-manchuria"
+    },
+    {
+      "id": "butter-dosa",
+      "expectedSlug": "butter-dosa"
+    },
+    {
+      "id": "carrot-idli",
+      "expectedSlug": "carrot-idli"
+    },
+    {
+      "id": "egg-dosa",
+      "expectedSlug": "egg-dosa"
+    },
+    {
+      "id": "ghee-dosa",
+      "expectedSlug": "ghee-dosa"
+    },
+    {
+      "id": "ghee-karani-dosa",
+      "expectedSlug": "ghee-karani-dosa"
+    },
+    {
+      "id": "ghee-kerala-idli",
+      "expectedSlug": "ghee-kerala-idli"
+    },
+    {
+      "id": "ghee-masala-dosa",
+      "expectedSlug": "ghee-masala-dosa"
+    },
+    {
+      "id": "idli-with-ghee",
+      "expectedSlug": "idli-with-ghee"
+    },
+    {
+      "id": "kanchipuram-idli",
+      "expectedSlug": "kanchipuram-idli"
+    },
+    {
+      "id": "masala-pesara-dosa",
+      "expectedSlug": "masala-pesara-dosa"
+    },
+    {
+      "id": "masala-puri-curry",
+      "expectedSlug": "masala-puri-curry"
+    },
+    {
+      "id": "masala-rava-dosa",
+      "expectedSlug": "masala-rava-dosa"
+    },
+    {
+      "id": "masala-uttappam",
+      "expectedSlug": "masala-uttappam"
+    },
+    {
+      "id": "mla-prasad-dosa",
+      "expectedSlug": "mla-prasad-dosa"
+    },
+    {
+      "id": "mutton-kheema-dosa",
+      "expectedSlug": "mutton-kheema-dosa"
+    },
+    {
+      "id": "mysore-bajji",
+      "expectedSlug": "mysore-bajji"
+    },
+    {
+      "id": "onion-pesara-dosa",
+      "expectedSlug": "onion-pesara-dosa"
+    },
+    {
+      "id": "palak-idli",
+      "expectedSlug": "palak-idli"
+    },
+    {
+      "id": "palak-puri",
+      "expectedSlug": "palak-puri"
+    },
+    {
+      "id": "paneer-butter-dosa",
+      "expectedSlug": "paneer-butter-dosa"
+    },
+    {
+      "id": "paneer-dosa",
+      "expectedSlug": "paneer-dosa"
+    },
+    {
+      "id": "pesara-dosa",
+      "expectedSlug": "pesara-dosa"
+    },
+    {
+      "id": "pizza-dosa",
+      "expectedSlug": "pizza-dosa"
+    },
+    {
+      "id": "plain-dosa",
+      "expectedSlug": "plain-dosa"
+    },
+    {
+      "id": "pudina-idli",
+      "expectedSlug": "pudina-idli"
+    },
+    {
+      "id": "puri",
+      "expectedSlug": "puri"
+    },
+    {
+      "id": "puri-curry",
+      "expectedSlug": "puri-curry"
+    },
+    {
+      "id": "puri-with-chicken-curry",
+      "expectedSlug": "puri-with-chicken-curry"
+    },
+    {
+      "id": "puri-with-egg-burji",
+      "expectedSlug": "puri-with-egg-burji"
+    },
+    {
+      "id": "puri-with-mutton-kheema",
+      "expectedSlug": "puri-with-mutton-kheema"
+    },
+    {
+      "id": "ragi-dosa",
+      "expectedSlug": "ragi-dosa"
+    },
+    {
+      "id": "ragi-idli",
+      "expectedSlug": "ragi-idli"
+    },
+    {
+      "id": "ragi-masala-dosa",
+      "expectedSlug": "ragi-masala-dosa"
+    },
+    {
+      "id": "sawadeen-idli",
+      "expectedSlug": "sawadeen-idli"
+    },
+    {
+      "id": "set-dosa",
+      "expectedSlug": "set-dosa"
+    },
+    {
+      "id": "tawa-idli",
+      "expectedSlug": "tawa-idli"
+    },
+    {
+      "id": "tawa-mysore-bajji",
+      "expectedSlug": "tawa-mysore-bajji"
+    },
+    {
+      "id": "tawa-vada",
+      "expectedSlug": "tawa-vada"
+    },
+    {
+      "id": "uttappa",
+      "expectedSlug": "uttappa"
+    },
+    {
+      "id": "4pc",
+      "expectedSlug": "4pc"
+    },
+    {
+      "id": "family",
+      "expectedSlug": "family"
+    },
+    {
+      "id": "full",
+      "expectedSlug": "full"
+    },
+    {
+      "id": "jumbo",
+      "expectedSlug": "jumbo"
+    },
+    {
+      "id": "mandi-chicken-mini",
+      "expectedSlug": "chicken-mandi-mini"
+    },
+    {
+      "id": "mandi-chicken-half",
+      "expectedSlug": "chicken-mandi-half"
+    },
+    {
+      "id": "mandi-chicken-3piece",
+      "expectedSlug": "chicken-mandi-3-piece"
+    },
+    {
+      "id": "mandi-chicken-full",
+      "expectedSlug": "chicken-mandi-full"
+    },
+    {
+      "id": "mandi-chicken-juicy-mini",
+      "expectedSlug": "chicken-juicy-mandi-mini"
+    },
+    {
+      "id": "mandi-chicken-juicy-half",
+      "expectedSlug": "chicken-juicy-mandi-half"
+    },
+    {
+      "id": "mandi-chicken-juicy-3piece",
+      "expectedSlug": "chicken-juicy-mandi-3-piece"
+    },
+    {
+      "id": "mandi-chicken-juicy-full",
+      "expectedSlug": "chicken-juicy-mandi-full"
+    },
+    {
+      "id": "mandi-broasted-mini",
+      "expectedSlug": "broasted-mandi-mini"
+    },
+    {
+      "id": "mandi-broasted-half",
+      "expectedSlug": "broasted-mandi-half"
+    },
+    {
+      "id": "mandi-broasted-3piece",
+      "expectedSlug": "broasted-mandi-3-piece"
+    },
+    {
+      "id": "mandi-broasted-full",
+      "expectedSlug": "broasted-mandi-full"
+    },
+    {
+      "id": "mandi-tandoori-half",
+      "expectedSlug": "tandoori-chicken-mandi-half"
+    },
+    {
+      "id": "mandi-tandoori-full",
+      "expectedSlug": "tandoori-chicken-mandi-full"
+    },
+    {
+      "id": "mandi-mutton-mini",
+      "expectedSlug": "nizami-mutton-mandi-mini"
+    },
+    {
+      "id": "mandi-mutton-half",
+      "expectedSlug": "nizami-mutton-mandi-half"
+    },
+    {
+      "id": "mandi-mutton-3piece",
+      "expectedSlug": "nizami-mutton-mandi-3-piece"
+    },
+    {
+      "id": "mandi-mutton-full",
+      "expectedSlug": "nizami-mutton-mandi-full"
+    },
+    {
+      "id": "mandi-mutton-juice-mini",
+      "expectedSlug": "juicy-mutton-mandi-mini"
+    },
+    {
+      "id": "mandi-mutton-juice-half",
+      "expectedSlug": "juicy-mutton-mandi-half"
+    },
+    {
+      "id": "mandi-mutton-juice-3piece",
+      "expectedSlug": "juicy-mutton-mandi-3-piece"
+    },
+    {
+      "id": "mandi-mutton-juice-full",
+      "expectedSlug": "juicy-mutton-mandi-full"
+    },
+    {
+      "id": "mandi-special-mutton-half",
+      "expectedSlug": "special-mutton-masala-mandi-half"
+    },
+    {
+      "id": "mandi-special-mutton-full",
+      "expectedSlug": "special-mutton-masala-mandi-full"
+    },
+    {
+      "id": "mandi-fish-half",
+      "expectedSlug": "fish-mandi-half"
+    },
+    {
+      "id": "mandi-fish-full",
+      "expectedSlug": "fish-mandi-full"
+    },
+    {
+      "id": "mandi-mix-4p",
+      "expectedSlug": "mix-mandi-4-members"
+    },
+    {
+      "id": "extra-biryani-rice-large",
+      "expectedSlug": "extra-biryani-rice"
+    },
+    {
+      "id": "curd-rice",
+      "expectedSlug": "curd-rice"
+    }
+  ],
+  "validation": {
+    "status": "success",
+    "missingImages": [],
+    "timestamp": "2025-09-20T18:00:00.000Z"
+  },
+  "csvPath": "client/data/menu.csv",
+  "buildScript": "client/scripts/build-menu.cjs",
+  "migrationScript": "client/scripts/migrate-canonical-to-csv.cjs",
+  "validateScript": "client/scripts/validate-images.cjs",
+  "packageScriptsAdded": [
+    "build:menu",
+    "migrate:menu",
+    "validate:images"
+  ],
+  "notes": "Implementation complete. The menu is now driven by client/data/menu.csv. Run 'npm run build:menu' to apply changes from the CSV to the application."
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "biryani-offer",
+    "title": "biryani offer",
+    "image": "/images/banners/biryani-gen-offer.png"
+  },
+  {
+    "id": "mandi-offer",
+    "title": "mandi offer",
+    "image": "/images/banners/mandi-single-offer.png"
+  },
+  {
+    "id": "tiffin-offer",
+    "title": "tiffin offer",
+    "image": "/images/banners/tiffin-offer.png"
+  },
+  {
+    "id": "shawarma-offer",
+    "title": "shawarma offer",
+    "image": "/images/banners/shawarma-offer.png"
+  }
+]

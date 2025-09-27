@@ -3,6 +3,7 @@ import express from 'express';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
+import orderRouter from './routes/orders.js';
 import { initMenuService } from './services/menuService.js';
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(requestId);
 // Routes
 app.use('/api', healthRouter);
 app.use('/api', menuRouter);
+app.use('/api', orderRouter);
 
 // Generic 404 for unmatched routes
 app.use((req, res) => {

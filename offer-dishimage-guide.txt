@@ -1,0 +1,132 @@
+ Here is a comprehensive guide for managing the content        
+  for both Offer Banners and Dish Images. You can save this as your        
+  reference document.
+
+  ---
+
+  ## Miya Bhai Webapp: Content Management Guide
+
+  This guide explains the workflow for updating promotional banners        
+  and the menu's dish images.
+
+
+  Part 1: Managing Offer Banners
+  Step 1: Add Your Image
+  -   Place your new banner image (e.g., diwali-special.png) into
+  the following folder:
+      client/public/images/banners/
+
+
+  Step 2: Edit the CSV File
+  -   Open the spreadsheet file located at:
+      client/data/offer-banner.csv
+  -   Add a new row to this file for your new offer.
+
+      Example:
+
+  `csv
+      id,title,public_id,startDate,endDate,status
+      1,"Biryani
+  Offer","biryani-gen-offer",2025-09-01,2025-10-31,active
+      2,"Mandi
+  Offer","mandi-single-offer",2025-09-01,2025-10-31,active
+      3,"Shawarma
+  Offer","shawarma-offer",2025-09-01,2025-10-31,active
+      4,"Diwali
+  Special","diwali-special",2025-11-01,2025-11-10,active
+      `
+
+
+      Column Guide:
+      -   id: A new unique number.
+      -   title: A name for your own reference (it is not displayed        
+  on the site).
+      -   public_id: Crucial. This must be the exact filename of
+  your image from Step 1, but without the .png extension.
+      -   startDate / endDate: The dates when the banner will
+  automatically appear and disappear. Use YYYY-MM-DD format.
+      -   status: Use active to make it visible or inactive to keep        
+  it hidden.
+
+
+  Step 3: Run the Build Command
+  -   After saving the CSV file, open your project terminal and run        
+  this command:
+      npm run build:banners
+  -   This command reads your CSV and updates the website's data.
+  Your new banner will now appear on the site according to the
+  schedule you set.
+
+  #### 1.2 How to Remove or Deactivate a Banner
+
+
+   - To temporarily hide a banner: Open client/data/offer-banner.csv,      
+     find the banner's row, and change its status from active to
+     inactive. Then, run npm run build:banners.
+   - If you want to update the image for an existing offer (e.g.,
+     change the diwali-special.png graphic), simply save the new
+     image with the exact same filename in the
+     client/public/images/banners/ folder, overwriting the old one.        
+  2.1 How to Add a NEW Dish with its Image
+  Step 1: Add the Dish to the Menu
+  -   The main menu is controlled by a CSV file at:
+      client/data/menu.csv
+  -   Open this file and add a new row with all the details for
+  your new dish (e.g., title, description, price, category).
+
+
+  Step 2: Prepare the Dish Image
+  -   Place the high-quality image for your new dish (e.g.,
+  mutton-rogan-josh.png) into the following folder:
+      client/data/
+  -   The filename should be a clean, URL-friendly "slug" (all
+  lowercase, words separated by hyphens).
+
+
+  Step 3: Upload Image and Update Map
+  -   This step uses a script to upload the new image to the
+  Cloudinary CDN and update the project's master image list.
+  -   In your terminal, run the following command:
+      node scripts/upload-and-generate-map-from-csv.cjs
+  -   This script will find new images in client/data/, upload
+  them, and update the client/data/images-map.json file.
+
+
+  Step 4: Re-build the Main Menu
+  -   Finally, run the main menu build script to incorporate all
+  your changes:
+      npm run build:menu
+  -   This bundles the new menu item and its new image mapping into        
+  the data the website uses. Your new dish and its image will now
+  appear on the menu page.
+
+  #### 2.2 How to Update an EXISTING Dish's Image
+
+  If you just want to change the image for a dish that's already on        
+  the menu:
+
+
+  Step 1: Find the Dish's Cloudinary ID
+  -   Open the file:
+      client/data/images-map.json
+  -   Search for the dish you want to update (e.g.,
+  "chicken-fry-piece-biryani").
+  -   Find its public_id. It will look something like
+  miya_bhai/dishes/chicken-fry-piece-biryani.
+
+
+  Step 2: Upload the New Image to Cloudinary
+  -   Log in to the project's Cloudinary account.
+  -   Navigate to the Media Library.
+  -   Find the folder where the dish images are stored (e.g.,
+  miya_bhai/dishes).
+  -   Upload your new image, making sure to give it the exact same         
+  `public_id` you found in Step 1. Cloudinary will ask if you want
+  to overwrite the existing image; say yes.
+
+
+  Step 3: Done!
+  -   Because you are overwriting the image on the CDN directly,
+  you do not need to run any build scripts. The website will start
+  showing the new image after a few minutes (once the CDN cache
+  updates).

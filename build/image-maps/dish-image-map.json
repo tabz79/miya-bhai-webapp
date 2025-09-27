@@ -1,0 +1,2587 @@
+{
+  "milkshake-banana": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-avocado": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-banana": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-apple": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-berry-mary": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-blackcurrant": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-blackcurrant-love": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-blue-lagoon": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-butterscotch": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-chocolate": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-chatka-orange": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-cinderella": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-dragon-fruit": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-cold-coffee": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-dryfruit": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-fizzy-tulip": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-kitkat": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\KitKat-Milkshake.png",
+    "public_id": "miya_bhai/dishes/milkshake-kitkat",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 53598,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:29:52Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-kitkat",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-kitkat",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-kitkat",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/milkshake-kitkat"
+    }
+  },
+  "juice-grape": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-fresh-lemon": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-mosambi": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-lime-soda": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-mint-lemon": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-mango": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-muskmelon": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-pineapple": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Pineapple-Juice.png",
+    "public_id": "miya_bhai/dishes/juice-pineapple",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 53701,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:29:57Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pineapple",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pineapple",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pineapple",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/juice-pineapple"
+    }
+  },
+  "juice-pomegranate": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Pomegranate-Juice.png",
+    "public_id": "miya_bhai/dishes/juice-pomegranate",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 69551,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:29:57Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pomegranate",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pomegranate",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-pomegranate",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/juice-pomegranate"
+    }
+  },
+  "milkshake-strawberry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Strawberry-Milkshake.png",
+    "public_id": "miya_bhai/dishes/milkshake-strawberry",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 54793,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:29:57Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-strawberry",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-strawberry",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/milkshake-strawberry",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/milkshake-strawberry"
+    }
+  },
+  "juice-mixed-fruit": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-orange": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-sunrise": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-tender-coconut": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "milkshake-oreo": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-virgin-margarita": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "juice-watermelon": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Watermelon-Juice.png",
+    "public_id": "miya_bhai/dishes/juice-watermelon",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 64927,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:29:59Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-watermelon",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-watermelon",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/juice-watermelon",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/juice-watermelon"
+    }
+  },
+  "milkshake-vanilla": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "extra-one-chicken-piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tandoori-Chicken.png",
+    "public_id": "miya_bhai/dishes/extra-one-chicken-piece",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 124361,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:03Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-one-chicken-piece",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-one-chicken-piece",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-one-chicken-piece",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/extra-one-chicken-piece"
+    }
+  },
+  "fish-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Fish-Biryani.png",
+    "public_id": "miya_bhai/dishes/fish-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 161825,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:04Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/fish-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/fish-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/fish-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/fish-biryani"
+    }
+  },
+  "paneer-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-Biryani.png",
+    "public_id": "miya_bhai/dishes/paneer-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 158623,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:01Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/paneer-biryani"
+    }
+  },
+  "mocktail-virgin-mojito": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mocktail-virgin-pina-colada": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "extra-biryani-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "prawns-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Prawns-Biryani.png",
+    "public_id": "miya_bhai/dishes/prawns-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/dishes/prawns-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 159558,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:06Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/prawns-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/prawns-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/prawns-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/prawns-biryani"
+    }
+  },
+  "paneer-mandi-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-mandi-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Fried-Rice.png",
+    "public_id": "miya_bhai/dishes/chicken-fried-rice",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/chicken-fried-rice.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 146616,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:09Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fried-rice",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fried-rice",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fried-rice",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-fried-rice"
+    }
+  },
+  "chicken-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Noodles.png",
+    "public_id": "miya_bhai/dishes/chicken-noodles",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785405/miya_bhai/dishes/chicken-noodles.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 135540,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:05Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-noodles",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-noodles",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-noodles",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-noodles"
+    }
+  },
+  "paneer-mandi-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "egg-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Egg-Fried-Rice.png",
+    "public_id": "miya_bhai/dishes/egg-fried-rice",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785407/miya_bhai/dishes/egg-fried-rice.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 162390,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:07Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-fried-rice",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-fried-rice",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-fried-rice",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/egg-fried-rice"
+    }
+  },
+  "egg-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Egg-Noodles.png",
+    "public_id": "miya_bhai/dishes/egg-noodles",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785408/miya_bhai/dishes/egg-noodles.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129764,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:08Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-noodles",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-noodles",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/egg-noodles",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/egg-noodles"
+    }
+  },
+  "veg-gobi-65": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Gobi-Manchuria.png",
+    "public_id": "miya_bhai/dishes/veg-gobi-65",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/veg-gobi-65.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 107022,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:09Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-65",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-65",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-65",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-65"
+    }
+  },
+  "veg-gobi-manchuria-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Gobi-Manchuria.png",
+    "public_id": "miya_bhai/dishes/veg-gobi-manchuria-dry",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785412/miya_bhai/dishes/veg-gobi-manchuria-dry.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 107022,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:12Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-manchuria-dry",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-manchuria-dry",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-manchuria-dry",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/veg-gobi-manchuria-dry"
+    }
+  },
+  "veg-baby-corn-manchuria": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-baby-corn-pepper-salt": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-chili-gobi": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kaju-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-Fried-Rice.png",
+    "public_id": "miya_bhai/dishes/paneer-fried-rice",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785411/miya_bhai/dishes/paneer-fried-rice.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 134449,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:11Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-fried-rice",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-fried-rice",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-fried-rice",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/paneer-fried-rice"
+    }
+  },
+  "kaju-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "manchuria-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Veg-Fried-Rice.png",
+    "public_id": "miya_bhai/dishes/veg-fried-rice",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785413/miya_bhai/dishes/veg-fried-rice.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 158641,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:13Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-fried-rice",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-fried-rice",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-fried-rice",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/veg-fried-rice"
+    }
+  },
+  "manchuria-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-schezwan-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-manchuria-fried-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-noodles": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "coconut-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ginger-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "bbq-paneer-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\BBQ-Paneer-Pizza.png",
+    "public_id": "miya_bhai/dishes/bbq-paneer-pizza",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785419/miya_bhai/dishes/bbq-paneer-pizza.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 173560,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:19Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bbq-paneer-pizza",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bbq-paneer-pizza",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bbq-paneer-pizza",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/bbq-paneer-pizza"
+    }
+  },
+  "rasam-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "sambar-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-cheese-burger": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Cheese-Burger.png",
+    "public_id": "miya_bhai/dishes/chicken-cheese-burger",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785421/miya_bhai/dishes/chicken-cheese-burger.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 97642,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:21Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-cheese-burger",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-cheese-burger",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-cheese-burger",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-cheese-burger"
+    }
+  },
+  "aloo-tikki-burger": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Pizza.png",
+    "public_id": "miya_bhai/dishes/chicken-pizza",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785422/miya_bhai/dishes/chicken-pizza.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 164021,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:22Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-pizza",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-pizza",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-pizza",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-pizza"
+    }
+  },
+  "bbq-paneer-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-club-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "grilled-paneer-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Grilled-Paneer-Sandwich.png",
+    "public_id": "miya_bhai/dishes/grilled-paneer-sandwich",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785424/miya_bhai/dishes/grilled-paneer-sandwich.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 77505,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:24Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/grilled-paneer-sandwich",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/grilled-paneer-sandwich",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/grilled-paneer-sandwich",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/grilled-paneer-sandwich"
+    }
+  },
+  "corn-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "margherita-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Margherita-Pizza.png",
+    "public_id": "miya_bhai/dishes/margherita-pizza",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785423/miya_bhai/dishes/margherita-pizza.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 168295,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:23Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/margherita-pizza",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/margherita-pizza",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/margherita-pizza",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/margherita-pizza"
+    }
+  },
+  "cheese-masala-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-cheese-burger": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-Cheese-Burger.png",
+    "public_id": "miya_bhai/dishes/paneer-cheese-burger",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785427/miya_bhai/dishes/paneer-cheese-burger.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 89815,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:27Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-cheese-burger",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-cheese-burger",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-cheese-burger",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/paneer-cheese-burger"
+    }
+  },
+  "crazy-cheese-burger": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mix-wedge-grilled-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "grilled-wedge-sandwich": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-achari-chicken-tikka-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka.png",
+    "public_id": "miya_bhai/dishes/tandoori-achari-chicken-tikka-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/dishes/tandoori-achari-chicken-tikka-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129838,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:30Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-full"
+    }
+  },
+  "tandoori-achari-chicken-tikka-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka.png",
+    "public_id": "miya_bhai/dishes/tandoori-achari-chicken-tikka-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/dishes/tandoori-achari-chicken-tikka-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129838,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:30Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-achari-chicken-tikka-half"
+    }
+  },
+  "spot-wedge-burger": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "sweet-corn-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "wedge-delight-pizza": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-tikka-boneless-6pc": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka.png",
+    "public_id": "miya_bhai/dishes/chicken-tikka-boneless-6pc",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785433/miya_bhai/dishes/chicken-tikka-boneless-6pc.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129838,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:33Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-boneless-6pc",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-boneless-6pc",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-boneless-6pc",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-boneless-6pc"
+    }
+  },
+  "tandoori-chicken-tikka-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka.png",
+    "public_id": "miya_bhai/dishes/tandoori-chicken-tikka-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785434/miya_bhai/dishes/tandoori-chicken-tikka-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129838,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:34Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-full"
+    }
+  },
+  "tandoori-chicken-tikka-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka.png",
+    "public_id": "miya_bhai/dishes/tandoori-chicken-tikka-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785432/miya_bhai/dishes/tandoori-chicken-tikka-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 129838,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:32Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-chicken-tikka-half"
+    }
+  },
+  "banjara-kebab-boneless": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-ch-ch-kebab-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-ch-ch-kebab-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-grilled-chicken-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-grilled-chicken-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-malai-kebab-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Malai-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-malai-kebab-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785435/miya_bhai/dishes/tandoori-malai-kebab-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 101367,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:35Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-full"
+    }
+  },
+  "tandoori-malai-kebab-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Malai-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-malai-kebab-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785439/miya_bhai/dishes/tandoori-malai-kebab-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 101367,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:39Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-malai-kebab-half"
+    }
+  },
+  "tandoori-hariyali-kebab-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "hariyali-boneless": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "reshmi-kebab": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Reshmi-Kebab.png",
+    "public_id": "miya_bhai/dishes/reshmi-kebab",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/reshmi-kebab.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 103978,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:40Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/reshmi-kebab",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/reshmi-kebab",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/reshmi-kebab",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/reshmi-kebab"
+    }
+  },
+  "tandoori-reshmi-kebab-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Reshmi-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-reshmi-kebab-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785437/miya_bhai/dishes/tandoori-reshmi-kebab-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 103978,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:37Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-full"
+    }
+  },
+  "tandoori-reshmi-kebab-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Reshmi-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-reshmi-kebab-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785438/miya_bhai/dishes/tandoori-reshmi-kebab-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 103978,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:38Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-reshmi-kebab-half"
+    }
+  },
+  "tandoori-tandoori-chicken-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tandoori-Chicken.png",
+    "public_id": "miya_bhai/dishes/tandoori-tandoori-chicken-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tandoori-chicken-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 124361,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:41Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-full"
+    }
+  },
+  "tandoori-tandoori-chicken-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tandoori-Chicken.png",
+    "public_id": "miya_bhai/dishes/tandoori-tandoori-chicken-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/tandoori-tandoori-chicken-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 124361,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:40Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-tandoori-chicken-half"
+    }
+  },
+  "tandoori-tangdi-kebab-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tangdi-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-tangdi-kebab-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tangdi-kebab-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 141861,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:41Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-full"
+    }
+  },
+  "tandoori-tangdi-kebab-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tangdi-Kebab.png",
+    "public_id": "miya_bhai/dishes/tandoori-tangdi-kebab-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tangdi-kebab-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 141861,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:41Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/tandoori-tangdi-kebab-half"
+    }
+  },
+  "butter-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Butter-Chicken.png",
+    "public_id": "miya_bhai/dishes/butter-chicken",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/butter-chicken.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 115534,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:41Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/butter-chicken",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/butter-chicken",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/butter-chicken",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/butter-chicken"
+    }
+  },
+  "tandoori-hariyali-kebab-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-murukh-musallam-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-murukh-musallam-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-chettinad": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chana-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-tikka-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Tikka-Masala.png",
+    "public_id": "miya_bhai/dishes/chicken-tikka-masala",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/dishes/chicken-tikka-masala.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 138441,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:46Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-masala",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-masala",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-masala",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-tikka-masala"
+    }
+  },
+  "chicken-kolhapuri": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-pepper-fry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-chili-mushroom-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "dal-fried": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "dum-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kadai-paneer": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Kadai-Paneer.png",
+    "public_id": "miya_bhai/dishes/kadai-paneer",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/dishes/kadai-paneer.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 128837,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:50Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/kadai-paneer",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/kadai-paneer",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/kadai-paneer",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/kadai-paneer"
+    }
+  },
+  "green-peas-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kadai-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "dal-tadka": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kaju-paneer": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kaju-paneer-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kaju-tomato": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "malabar-chicken-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mixed-veg-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "malai-kofta": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "miyabhai-special-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-miyabhai-special-curry-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tandoori-miyabhai-special-curry-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-butter-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-Butter-Masala.png",
+    "public_id": "miya_bhai/dishes/paneer-butter-masala",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/dishes/paneer-butter-masala.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 90695,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:57Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-butter-masala",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-butter-masala",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-butter-masala",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/paneer-butter-masala"
+    }
+  },
+  "murgh-musallam": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mushroom-masala": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-mushroom-masala-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ankapur-naatu-kodi-pulusu": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Ankapur-Naatu-Kodi-Pulusu.png",
+    "public_id": "miya_bhai/dishes/ankapur-naatu-kodi-pulusu",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785460/miya_bhai/dishes/ankapur-naatu-kodi-pulusu.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 63590,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:00Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/ankapur-naatu-kodi-pulusu",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/ankapur-naatu-kodi-pulusu",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/ankapur-naatu-kodi-pulusu",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/ankapur-naatu-kodi-pulusu"
+    }
+  },
+  "bagara-rice-with-naatu-kodi": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Bagara-Rice-with-Naatu-Kodi.png",
+    "public_id": "miya_bhai/dishes/bagara-rice-with-naatu-kodi",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785461/miya_bhai/dishes/bagara-rice-with-naatu-kodi.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 108751,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:01Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-naatu-kodi",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-naatu-kodi",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-naatu-kodi",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-naatu-kodi"
+    }
+  },
+  "bagara-rice-with-talakayi-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Bagara-Rice-with-Talakai-Curry.png",
+    "public_id": "miya_bhai/dishes/bagara-rice-with-talakayi-curry",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785459/miya_bhai/dishes/bagara-rice-with-talakayi-curry.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 166967,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:30:59Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-talakayi-curry",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-talakayi-curry",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-talakayi-curry",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/bagara-rice-with-talakayi-curry"
+    }
+  },
+  "veg-paneer-masala-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "punjabi-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "achi-pulusu": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "curd": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "dal": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "dum-fry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "gutti-vankaya-curry-bagara-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "egg-burji-with-puri": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "military-mutton": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nellore-vari-chepala-pulusu": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Nellore-Vari-Chepala-Pulusu.png",
+    "public_id": "miya_bhai/dishes/nellore-vari-chepala-pulusu",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785466/miya_bhai/dishes/nellore-vari-chepala-pulusu.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 124174,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:06Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nellore-vari-chepala-pulusu",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nellore-vari-chepala-pulusu",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nellore-vari-chepala-pulusu",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/nellore-vari-chepala-pulusu"
+    }
+  },
+  "mutton-dalja-with-bagara-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nallamala-naatu-kodi-pulusu": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nellore-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "oil-fry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rasam": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rice-with-egg-curry-sambar": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Rice-with-Egg-Curry+Sambar.png",
+    "public_id": "miya_bhai/dishes/rice-with-egg-curry-sambar",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785470/miya_bhai/dishes/rice-with-egg-curry-sambar.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 84639,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:10Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rice-with-egg-curry-sambar",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rice-with-egg-curry-sambar",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rice-with-egg-curry-sambar",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/rice-with-egg-curry-sambar"
+    }
+  },
+  "meal-1-rice-to-sweet": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "papad": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rice-tomato-with-egg-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rice-with-naatu-kodi-pulusu": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "roti-chutney": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-shawarma": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-Shawarma.png",
+    "public_id": "miya_bhai/dishes/paneer-shawarma",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/paneer-shawarma.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 67815,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:14Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-shawarma",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-shawarma",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/paneer-shawarma",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/paneer-shawarma"
+    }
+  },
+  "regular-chicken-shawarma": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Shawarma.png",
+    "public_id": "miya_bhai/dishes/regular-chicken-shawarma",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/regular-chicken-shawarma.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 115366,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:14Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/regular-chicken-shawarma",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/regular-chicken-shawarma",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/regular-chicken-shawarma",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/regular-chicken-shawarma"
+    }
+  },
+  "special-chicken-shawarma": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Shawarma.png",
+    "public_id": "miya_bhai/dishes/special-chicken-shawarma",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785472/miya_bhai/dishes/special-chicken-shawarma.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 115366,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:12Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/special-chicken-shawarma",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/special-chicken-shawarma",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/special-chicken-shawarma",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/special-chicken-shawarma"
+    }
+  },
+  "sambar": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-curries-meal": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-apollo-fish": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Apollo-fish.png",
+    "public_id": "miya_bhai/dishes/seafood-apollo-fish",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 146860,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:14:52Z",
+    "note": "reused_existing",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-apollo-fish",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-apollo-fish",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-apollo-fish",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/seafood-apollo-fish"
+    }
+  },
+  "miyabhai-special-shawarma": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-shawarma": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-aloo-parota": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chicken-65": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-65.png",
+    "public_id": "miya_bhai/dishes/nonveg-chicken-65",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 128191,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:16Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-65",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-65",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-65",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-65"
+    }
+  },
+  "nonveg-blackbean-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chicken-lollipop": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Lollipop.png",
+    "public_id": "miya_bhai/dishes/nonveg-chicken-lollipop",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785479/miya_bhai/dishes/nonveg-chicken-lollipop.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 150305,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:19Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-lollipop",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-lollipop",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-lollipop",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-lollipop"
+    }
+  },
+  "rotis-butter-naan": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-butter-roti": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chicken-hongkong": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chicken-wings": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Wings.png",
+    "public_id": "miya_bhai/dishes/nonveg-chicken-wings",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785481/miya_bhai/dishes/nonveg-chicken-wings.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 174565,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:21Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-wings",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-wings",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-wings",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/nonveg-chicken-wings"
+    }
+  },
+  "nonveg-chicken-majestic": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chili-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chilli-Chicken.png",
+    "public_id": "miya_bhai/dishes/nonveg-chili-chicken",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/nonveg-chili-chicken.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 189988,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:23Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chili-chicken",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chili-chicken",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/nonveg-chili-chicken",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/nonveg-chili-chicken"
+    }
+  },
+  "nonveg-chicken-pepper-salt": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-chicken-spring-roll": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-chili-baby-corn-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-chili-prawns": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chilli-Prawns.png",
+    "public_id": "miya_bhai/dishes/seafood-chili-prawns",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/seafood-chili-prawns.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 110672,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:23Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-chili-prawns",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-chili-prawns",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-chili-prawns",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/seafood-chili-prawns"
+    }
+  },
+  "seafood-chili-fish": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-chili-manchuria": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-chili-paneer": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-dragon-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-fish-roast": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-fish-65": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-fish-dry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-garlic-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-kungfu-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-lemon-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-garlic-naan": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "veg-paneer-65": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Paneer-65.png",
+    "public_id": "miya_bhai/dishes/veg-paneer-65",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785491/miya_bhai/dishes/veg-paneer-65.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 94194,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:31Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-paneer-65",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-paneer-65",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/veg-paneer-65",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/veg-paneer-65"
+    }
+  },
+  "seafood-loose-prawns": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-masala-kulcha": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-palan-roti": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-paneer-kulcha": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "seafood-prawns-manchuria": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Prawns-Manchuria.png",
+    "public_id": "miya_bhai/dishes/seafood-prawns-manchuria",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785494/miya_bhai/dishes/seafood-prawns-manchuria.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 113138,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:34Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-prawns-manchuria",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-prawns-manchuria",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/seafood-prawns-manchuria",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/seafood-prawns-manchuria"
+    }
+  },
+  "rotis-plain-naan": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "nonveg-plum-chicken": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rotis-podina-parota": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "butter-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "carrot-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "egg-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ghee-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\idli.png",
+    "public_id": "miya_bhai/dishes/idli",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785498/miya_bhai/dishes/idli.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 88659,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:38Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/idli",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/idli",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/idli",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/idli"
+    }
+  },
+  "ghee-karani-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ghee-kerala-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "masala-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Masala-Dosa.png",
+    "public_id": "miya_bhai/dishes/masala-dosa",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785500/miya_bhai/dishes/masala-dosa.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 105334,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:40Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/masala-dosa",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/masala-dosa",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/masala-dosa",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/masala-dosa"
+    }
+  },
+  "ghee-masala-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "idli-with-ghee": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "kanchipuram-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "masala-pesara-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "masala-rava-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "masala-puri-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "masala-uttappam": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "onion-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Onion-Dosa.png",
+    "public_id": "miya_bhai/dishes/onion-dosa",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785501/miya_bhai/dishes/onion-dosa.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 118397,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:41Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/onion-dosa",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/onion-dosa",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/onion-dosa",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/onion-dosa"
+    }
+  },
+  "mla-prasad-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mutton-kheema-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mysore-bajji": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "onion-pesara-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "palak-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "palak-puri": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-butter-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "paneer-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "pesara-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "pizza-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "plain-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "pudina-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "puri": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "puri-with-chicken-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "puri-curry": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "puri-with-egg-burji": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "puri-with-mutton-kheema": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "rava-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Rava-Dosa.png",
+    "public_id": "miya_bhai/dishes/rava-dosa",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/dishes/rava-dosa.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 161500,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:53Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rava-dosa",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rava-dosa",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/rava-dosa",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/rava-dosa"
+    }
+  },
+  "ragi-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ragi-masala-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "ragi-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "sawadeen-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "set-dosa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tawa-idli": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "vada": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\vada.png",
+    "public_id": "miya_bhai/dishes/vada",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785517/miya_bhai/dishes/vada.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 150008,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:31:57Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/vada",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/vada",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/vada",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/vada"
+    }
+  },
+  "tawa-mysore-bajji": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "tawa-vada": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "uttappa": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "family": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "chicken-fry-piece-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Fry-Piece-Biryani.png",
+    "public_id": "miya_bhai/dishes/chicken-fry-piece-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/dishes/chicken-fry-piece-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 187986,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:00Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani"
+    }
+  },
+  "4pc": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "jumbo": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mandi-chicken-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mandi-chicken-juicy-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Juicy-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-chicken-juicy-mini",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-mini.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 222343,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:03Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-mini",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-mini",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-mini",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-mini"
+    }
+  },
+  "mandi-chicken-juicy-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Juicy-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-chicken-juicy-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 222343,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:03Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-half"
+    }
+  },
+  "mandi-chicken-juicy-3piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Juicy-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-chicken-juicy-3piece",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-chicken-juicy-3piece.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 222343,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:05Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-3piece",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-3piece",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-3piece",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-3piece"
+    }
+  },
+  "mandi-chicken-juicy-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Juicy-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-chicken-juicy-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785522/miya_bhai/dishes/mandi-chicken-juicy-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 222343,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:02Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-chicken-juicy-full"
+    }
+  },
+  "mandi-broasted-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Broasted-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-broasted-mini",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-broasted-mini.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 201326,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:03Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-mini",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-mini",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-mini",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-mini"
+    }
+  },
+  "mandi-broasted-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Broasted-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-broasted-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 201326,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:05Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-half"
+    }
+  },
+  "mandi-broasted-3piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Broasted-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-broasted-3piece",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-3piece.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 201326,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:05Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-3piece",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-3piece",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-3piece",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-3piece"
+    }
+  },
+  "mandi-broasted-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Broasted-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-broasted-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 201326,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:05Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-broasted-full"
+    }
+  },
+  "mandi-tandoori-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tandoori-Chicken-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-tandoori-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785526/miya_bhai/dishes/mandi-tandoori-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 192520,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:06Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-half"
+    }
+  },
+  "mandi-tandoori-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Tandoori-Chicken-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-tandoori-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-tandoori-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 192520,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:07Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-tandoori-full"
+    }
+  },
+  "mandi-mutton-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-mini",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-mutton-mini.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:07Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-mini",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-mini",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-mini",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-mini"
+    }
+  },
+  "mandi-mutton-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-mutton-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:07Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-half"
+    }
+  },
+  "mandi-mutton-3piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-3piece",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785528/miya_bhai/dishes/mandi-mutton-3piece.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:08Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-3piece",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-3piece",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-3piece",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-3piece"
+    }
+  },
+  "mandi-mutton-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:09Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-full"
+    }
+  },
+  "mandi-mutton-juice-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-juice-mini",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-juice-mini.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:09Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-mini",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-mini",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-mini",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-mini"
+    }
+  },
+  "mandi-mutton-juice-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-juice-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-juice-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:09Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-half"
+    }
+  },
+  "mandi-mutton-juice-3piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-juice-3piece",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785530/miya_bhai/dishes/mandi-mutton-juice-3piece.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:10Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-3piece",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-3piece",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-3piece",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-3piece"
+    }
+  },
+  "mandi-mutton-juice-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mutton-juice-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-mutton-juice-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:11Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mutton-juice-full"
+    }
+  },
+  "mandi-special-mutton-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-special-mutton-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-special-mutton-half.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:11Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-half"
+    }
+  },
+  "mandi-special-mutton-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-special-mutton-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-special-mutton-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 227858,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:11Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-special-mutton-full"
+    }
+  },
+  "mandi-fish-half": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Fish-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-fish-half",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-fish-half.jpg",
+    "width": 896,
+    "height": 1152,
+    "bytes": 191368,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:11Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-half",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-half",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-half",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-half"
+    }
+  },
+  "mandi-fish-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Fish-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-fish-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/dishes/mandi-fish-full.jpg",
+    "width": 896,
+    "height": 1152,
+    "bytes": 191368,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:12Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-fish-full"
+    }
+  },
+  "mandi-mix-4p": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Juicy-Mandi.png",
+    "public_id": "miya_bhai/dishes/mandi-mix-4p",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/dishes/mandi-mix-4p.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 222343,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:12Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mix-4p",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mix-4p",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mandi-mix-4p",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mandi-mix-4p"
+    }
+  },
+  "single-chicken-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/single-chicken-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/single-chicken-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 152227,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:13Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/single-chicken-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/single-chicken-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/single-chicken-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/single-chicken-biryani"
+    }
+  },
+  "full-chicken-biryani": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/full-chicken-biryani",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/full-chicken-biryani.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 152227,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:13Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/full-chicken-biryani",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/full-chicken-biryani",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/full-chicken-biryani",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/full-chicken-biryani"
+    }
+  },
+  "chicken-biryani-fp": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/chicken-biryani-fp",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-biryani-fp.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 152227,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:14Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-biryani-fp",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-biryani-fp",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-biryani-fp",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-biryani-fp"
+    }
+  },
+  "chicken-jumbo-pack": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/chicken-jumbo-pack",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-jumbo-pack.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 152227,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:14Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-jumbo-pack",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-jumbo-pack",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-jumbo-pack",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-jumbo-pack"
+    }
+  },
+  "chicken-fry-piece-biryani-fp": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Fry-Piece-Biryani.png",
+    "public_id": "miya_bhai/dishes/chicken-fry-piece-biryani-fp",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/chicken-fry-piece-biryani-fp.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 187986,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:15Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani-fp",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani-fp",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani-fp",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/chicken-fry-piece-biryani-fp"
+    }
+  },
+  "extra-biryani-rice-large": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Chicken-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/extra-biryani-rice-large",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/extra-biryani-rice-large.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 152227,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:15Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-biryani-rice-large",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-biryani-rice-large",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/extra-biryani-rice-large",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/extra-biryani-rice-large"
+    }
+  },
+  "mutton-biryani-single": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/mutton-biryani-single",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-single.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 170894,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:16Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-single",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-single",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-single",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-single"
+    }
+  },
+  "mutton-biryani-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/mutton-biryani-full",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-full.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 170894,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:16Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-full",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-full",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-full",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-full"
+    }
+  },
+  "mutton-biryani-fp": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data\\Mutton-Dum-Biryani.png",
+    "public_id": "miya_bhai/dishes/mutton-biryani-fp",
+    "url": "https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-fp.jpg",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 170894,
+    "format": "jpg",
+    "uploaded_at": "2025-09-25T07:32:16Z",
+    "note": "uploaded",
+    "variants": {
+      "small": "https://res.cloudinary.com/dnefyrllm/image/upload/w_320,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-fp",
+      "medium": "https://res.cloudinary.com/dnefyrllm/image/upload/w_640,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-fp",
+      "large": "https://res.cloudinary.com/dnefyrllm/image/upload/w_1024,c_fill,f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-fp",
+      "original": "https://res.cloudinary.com/dnefyrllm/image/upload/f_auto,q_auto:good/miya_bhai/dishes/mutton-biryani-fp"
+    }
+  },
+  "mandi-chicken-mini": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mandi-chicken-3piece": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "mandi-chicken-full": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  },
+  "curd-rice": {
+    "localPath": "D:\\Projects\\miya-bhai-webapp\\client\\data",
+    "note": "upload_failed",
+    "error": "[object Object]"
+  }
+}
