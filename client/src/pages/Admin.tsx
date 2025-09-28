@@ -13,9 +13,24 @@ export function Admin() {
   useEffect(() => {
     if (isAuthenticated) {
       const fetchOrders = async () => {
-        const response = await fetch('/api/orders', { headers: { Authorization: password } });
-        const data = await response.json();
-        setOrders(data);
+        try {
+          const response = await fetch('/api/orders', { headers: { Authorization: password } });
+          if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data)) {
+              setOrders(data);
+            } else {
+              console.error('Error: API did not return an array for orders.', data);
+              setOrders([]);
+            }
+          } else {
+            console.error('Error fetching orders:', response.status, response.statusText);
+            setOrders([]);
+          }
+        } catch (error) {
+          console.error('Failed to fetch or parse orders:', error);
+          setOrders([]);
+        }
       };
 
       fetchOrders();
@@ -74,7 +89,7 @@ export function Admin() {
               <span className={`px-2 py-1 text-sm font-semibold rounded-full`}>{order.status}</span>
             </div>
             <div className="mt-4">
-              <p><strong>Customer:</strong> {order.customer.name}</p>
+              <p><strong>Customer:</strong> {order.customer_details?.name}</p>
               <p><strong>Total:</strong> ₹{order.totals.total.toFixed(2)}</p>
               <p><strong>Assigned to:</strong> {staff.find(s => s.id === order.assigned_to)?.name || 'Unassigned'}</p>
             </div>

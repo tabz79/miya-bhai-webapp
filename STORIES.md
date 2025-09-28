@@ -630,6 +630,81 @@
   - PO can verify core flows on test URL before going live.
 - **Status:** ⏳ To Do
 
+context: 
+### Epic: Admin Panel MVP Modules ⏳ To Do
+
+**Story: Order Management System**
+- **Owner:** PO / Dev
+- **Priority:** must
+- **Description:** Core system for processing and tracking orders, including listing, detail views, status changes, and basic actions.
+- **Acceptance Criteria:**
+  - Orders list displays newest-first with status badges and totals.
+  - Dedicated order detail view with items, payment info, and customer details.
+  - Status transitions supported: NEW → ACCEPTED → PREPARING → OUT_FOR_DELIVERY → COMPLETED → CANCELED.
+  - Pagination and filters (by status, date, search) functional on server-side.
+  - Admin can update order status and assign to staff.
+- **Status:** ⏳ To Do
+
+**Story: Delivery Management**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** System to manage delivery workflow, including assigning orders, tracking delivery status, and ensuring smooth handoff.
+- **Acceptance Criteria:**
+  - Orders can be assigned to staff/drivers dynamically (not hardcoded).
+  - Delivery view shows which driver has which orders.
+  - Delivery status flows update in real time or via polling.
+  - Dispatch logic: available drivers shown in dropdown populated from DB.
+  - No order can remain “Unassigned” without admin override.
+- **Status:** ⏳ To Do
+
+**Story: Driver Management**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** CRUD for drivers/staff, with availability and profile management.
+- **Acceptance Criteria:**
+  - Drivers table in DB with fields: name, phone, status (active/inactive).
+  - Admin panel page to view, add, edit, or deactivate drivers.
+  - Orders can only be assigned to drivers marked as active.
+  - Driver availability status visible in assignment dropdown.
+  - Basic driver profile view with contact and recent assignments.
+- **Status:** ⏳ To Do
+
+**Story: Basic Analytics Dashboard**
+- **Owner:** PO / Dev
+- **Priority:** must
+- **Description:** Provide KPIs for operational oversight, based on real server-side data.
+- **Acceptance Criteria:**
+  - KPI cards: Total Revenue, Total Orders, Pending Orders, Completed Orders, New Customers.
+  - Metrics calculated on the server (not client reduce()).
+  - Support date-range filter (today, 7 days, 30 days).
+  - Data visualizations: line chart (orders over time), pie chart (payment methods).
+  - Responsive design: desktop-first with clear visual hierarchy.
+- **Status:** ⏳ To Do
+
+**Story: Customer Management**
+- **Owner:** Dev
+- **Priority:** should
+- **Description:** Manage customer profiles, order history, and contact data.
+- **Acceptance Criteria:**
+  - Customers table in DB with unique ID, contact info, and join date.
+  - Admin panel page to view list of all customers.
+  - Individual customer profile shows contact details and past orders.
+  - Orders table links to customer profile for quick navigation.
+  - Basic search/filter by customer name, email, or phone.
+- **Status:** ⏳ To Do
+
+**Story: Financial Reporting**
+- **Owner:** PO / Dev
+- **Priority:** should
+- **Description:** Generate basic reports for revenue and payments to support operations.
+- **Acceptance Criteria:**
+  - Financial reports: daily/weekly/monthly revenue summaries.
+  - Reports exportable as CSV or PDF (stub MVP with CSV).
+  - Breakdowns: prepaid vs COD revenue.
+  - Include GST and discount calculations in reports.
+  - Accessed via dedicated “Reports” section in admin panel.
+- **Status:** ⏳ To Do
+
 
 ### Epic: Profile Page ⏳
 
