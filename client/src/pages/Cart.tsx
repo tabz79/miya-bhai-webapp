@@ -62,10 +62,8 @@ export function Cart() {
           <p className="text-gray-500 text-sm mb-6">
             Add some delicious items from our menu to get started!
           </p>
-          <Link href="/menu">
-            <a className="bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors">
-              Browse Menu
-            </a>
+          <Link href="/menu" className="bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors">
+            Browse Menu
           </Link>
         </div>
       ) : (
@@ -137,10 +135,8 @@ export function Cart() {
 
           {/* Checkout Button */}
           <div className="p-4">
-            <Link href="/checkout">
-              <a className="block text-center bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors w-full">
-                Proceed to Checkout
-              </a>
+            <Link href="/checkout" className="block text-center bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors w-full">
+              Proceed to Checkout
             </Link>
           </div>
         </>

@@ -61,9 +61,7 @@ export function Checkout() {
   return (
     <div className="w-full min-h-screen bg-app-background text-app-foreground">
       <div className="p-4 border-b border-gray-200">
-        <Link href="/cart">
-          <a className="flex items-center text-brand-teak hover:underline">&larr; Back to Cart</a>
-        </Link>
+        <Link href="/cart" className="flex items-center text-brand-teak hover:underline">&larr; Back to Cart</Link>
         <h1 className="font-bold text-xl text-center -mt-6">Checkout</h1>
       </div>
 

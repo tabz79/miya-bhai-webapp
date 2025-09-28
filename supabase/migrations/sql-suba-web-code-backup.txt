@@ -1,0 +1,270 @@
+-- supabase/migrations/0003_fix_orders_table.sql
+-- FULL MIGRATION: safe, idempotent fixes for public.orders
+--  - preserve legacy cart -> legacy_cart
+--  - drop legacy cart column if present
+--  - add missing columns (items, totals, customer_details, total, etc.)
+--  - backfill total from totals JSON when available
+--  - ensure non-empty items constraint
+--  - add cart_id index and updated_at trigger
+--  - OPTIONAL: mass GST patch (preview first) to set item.gstPercent when missing/zero
+
+/* ========================
+   1) Preserve legacy cart (safe)
+   ======================== */
+ALTER TABLE public.orders
+  ADD COLUMN IF NOT EXISTS legacy_cart jsonb;
+
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_name = 'orders' AND column_name = 'cart'
+  ) THEN
+    -- copy only non-null carts to legacy_cart
+    UPDATE public.orders
+    SET legacy_cart = cart
+    WHERE cart IS NOT NULL;
+  END IF;
+END
+$$;
+
+/* ========================
+   2) Drop legacy 'cart' column (safe after backup)
+   ======================== */
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_name = 'orders' AND column_name = 'cart'
+  ) THEN
+    ALTER TABLE public.orders DROP COLUMN cart;
+  END IF;
+END
+$$;
+
+/* ========================
+   3) Ensure core columns exist (idempotent)
+   ======================== */
+ALTER TABLE public.orders
+  ADD COLUMN IF NOT EXISTS items jsonb NOT NULL DEFAULT '[]'::jsonb,
+  ADD COLUMN IF NOT EXISTS totals jsonb NOT NULL DEFAULT '{}'::jsonb,
+  ADD COLUMN IF NOT EXISTS customer_details jsonb NOT NULL DEFAULT '{}'::jsonb,
+  ADD COLUMN IF NOT EXISTS payment_method text NOT NULL DEFAULT 'COD',
+  ADD COLUMN IF NOT EXISTS payment_status text NOT NULL DEFAULT 'pending',
+  ADD COLUMN IF NOT EXISTS cart_id text,
+  ADD COLUMN IF NOT EXISTS created_at timestamptz NOT NULL DEFAULT now(),
+  ADD COLUMN IF NOT EXISTS updated_at timestamptz,
+  ADD COLUMN IF NOT EXISTS total numeric;
+
+/* ========================
+   4) Backfill numeric `total` from totals JSON where possible (only for NULL)
+   ======================== */
+UPDATE public.orders
+SET total = CASE
+  WHEN total IS NULL AND jsonb_typeof(totals) = 'object' AND (totals->>'total') IS NOT NULL
+    THEN (totals->>'total')::numeric
+  WHEN total IS NULL
+    THEN 0
+  ELSE total
+END
+WHERE total IS NULL
+;
+
+/* ========================
+   5) Ensure default for total (prevents future insert failures)
+   ======================== */
+ALTER TABLE public.orders
+  ALTER COLUMN total SET DEFAULT 0;
+
+/* (Optional) If you want strict NOT NULL later:
+   -- UPDATE public.orders SET total = 0 WHERE total IS NULL;
+   -- ALTER TABLE public.orders ALTER COLUMN total SET NOT NULL;
+*/
+
+/* ========================
+   6) Ensure non-empty items check constraint exists
+   ======================== */
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.table_constraints
+    WHERE table_name = 'orders' AND constraint_name = 'orders_items_not_empty'
+  ) THEN
+    ALTER TABLE public.orders
+      ADD CONSTRAINT orders_items_not_empty
+      CHECK (jsonb_typeof(items) = 'array' AND jsonb_array_length(items) > 0);
+  END IF;
+END
+$$;
+
+/* ========================
+   7) Create index for cart_id lookups (idempotent)
+   ======================== */
+CREATE INDEX IF NOT EXISTS idx_orders_cart_id ON public.orders (cart_id);
+
+/* ========================
+   8) Add trigger to maintain updated_at (idempotent)
+   ======================== */
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_trigger WHERE tgname = 'orders_set_updated_at'
+  ) THEN
+    CREATE OR REPLACE FUNCTION public.set_updated_at()
+    RETURNS TRIGGER AS $func$
+    BEGIN
+      NEW.updated_at = now();
+      RETURN NEW;
+    END;
+    $func$ LANGUAGE plpgsql;
+
+    CREATE TRIGGER orders_set_updated_at
+    BEFORE UPDATE ON public.orders
+    FOR EACH ROW
+    EXECUTE FUNCTION public.set_updated_at();
+  END IF;
+END
+$$;
+
+/* ========================
+   9) OPTIONAL: Preview script to show how items would be updated for a single order
+   - Replace :ORDER_ID: with real id to preview
+   - This does NOT write to DB (preview-only)
+   ========================
+
+WITH order_meta AS (
+  SELECT
+    id,
+    (totals->>'gst')::numeric AS order_gst,
+    (totals->>'taxableAmount')::numeric AS order_taxable,
+    items
+  FROM public.orders
+  WHERE id = ':ORDER_ID:'
+)
+SELECT jsonb_agg(
+  CASE
+    WHEN (item->>'gstPercent') IS NOT NULL AND (item->>'gstPercent') <> '0' THEN item
+    ELSE jsonb_set(
+      item,
+      '{gstPercent}',
+      to_jsonb( ROUND( (order_gst / NULLIF(order_taxable,0) * 100)::numeric, 2 ) )
+    )
+  END
+) AS preview_new_items
+FROM order_meta
+CROSS JOIN LATERAL jsonb_array_elements(order_meta.items) AS arr(item)
+GROUP BY id, order_gst, order_taxable;
+
+*/
+
+/* ========================
+   10) OPTIONAL: Single-order patch (idempotent)
+   - Replace :ORDER_ID: with the single order id you want to patch.
+   - This updates only that order and returns the updated items.
+   - Run PREVIEW first.
+   ========================
+
+WITH order_meta AS (
+  SELECT
+    id,
+    (totals->>'gst')::numeric AS order_gst,
+    (totals->>'taxableAmount')::numeric AS order_taxable,
+    items
+  FROM public.orders
+  WHERE id = ':ORDER_ID:'
+),
+new_items AS (
+  SELECT id,
+    jsonb_agg(
+      CASE
+        WHEN (item->>'gstPercent') IS NOT NULL AND (item->>'gstPercent') <> '0' THEN item
+        ELSE jsonb_set(
+          item,
+          '{gstPercent}',
+          to_jsonb( ROUND( (order_gst / NULLIF(order_taxable,0) * 100)::numeric, 2 ) )
+        )
+      END
+    ) AS items_patched
+  FROM order_meta
+  CROSS JOIN LATERAL jsonb_array_elements(order_meta.items) AS arr(item)
+  GROUP BY id, order_gst, order_taxable
+)
+UPDATE public.orders o
+SET items = ni.items_patched
+FROM new_items ni
+WHERE o.id = ni.id
+RETURNING o.id, o.items;
+
+*/
+
+/* ========================
+   11) OPTIONAL: Mass-GST patch (idempotent)
+   - Updates all orders where totals allow derivation and items missing/zero gstPercent.
+   - PREVIEW and test on a few orders before running globally.
+   ========================
+
+WITH orders_to_patch AS (
+  SELECT id,
+    (totals->>'gst')::numeric AS order_gst,
+    (totals->>'taxableAmount')::numeric AS order_taxable
+  FROM public.orders
+  WHERE (totals->>'gst') IS NOT NULL
+    AND (totals->>'taxableAmount') IS NOT NULL
+    AND (
+      items::text LIKE '%"gstPercent":0%' OR items::text NOT LIKE '%gstPercent%'
+    )
+),
+patched AS (
+  SELECT o.id,
+    jsonb_agg(
+      CASE
+        WHEN (item->>'gstPercent') IS NOT NULL AND (item->>'gstPercent') <> '0' THEN item
+        ELSE jsonb_set(
+          item,
+          '{gstPercent}',
+          to_jsonb( ROUND( (otp.order_gst / NULLIF(otp.order_taxable,0) * 100)::numeric, 2 ) )
+        )
+      END
+    ) AS new_items
+  FROM orders_to_patch otp
+  JOIN public.orders o ON o.id = otp.id
+  CROSS JOIN LATERAL jsonb_array_elements(o.items) AS arr(item)
+  GROUP BY o.id, otp.order_gst, otp.order_taxable
+)
+UPDATE public.orders o2
+SET items = p.new_items
+FROM patched p
+WHERE o2.id = p.id
+RETURNING o2.id;
+
+*/
+
+/* ========================
+   12) ROLLBACK (destructive) — run only if you understand the data-loss implications
+   ========================
+
+-- Drop constraint and trigger
+ALTER TABLE public.orders
+  DROP CONSTRAINT IF EXISTS orders_items_not_empty;
+
+DROP TRIGGER IF EXISTS orders_set_updated_at ON public.orders;
+DROP FUNCTION IF EXISTS public.set_updated_at();
+
+-- Drop added columns (destructive)
+ALTER TABLE public.orders
+  DROP COLUMN IF EXISTS total,
+  DROP COLUMN IF EXISTS items,
+  DROP COLUMN IF EXISTS totals,
+  DROP COLUMN IF EXISTS customer_details,
+  DROP COLUMN IF EXISTS payment_method,
+  DROP COLUMN IF EXISTS payment_status,
+  DROP COLUMN IF EXISTS cart_id,
+  DROP COLUMN IF EXISTS created_at,
+  DROP COLUMN IF EXISTS updated_at,
+  DROP COLUMN IF EXISTS legacy_cart;
+
+DROP INDEX IF EXISTS idx_orders_cart_id;
+
+*/

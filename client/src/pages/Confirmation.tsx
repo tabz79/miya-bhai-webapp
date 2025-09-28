@@ -23,10 +23,8 @@ export function Confirmation() {
       <p className="text-gray-500 text-sm mb-6">
         Thank you for your order. You will be redirected to the home page shortly.
       </p>
-      <Link href="/">
-        <a className="bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors">
-          Go to Home
-        </a>
+      <Link href="/" className="bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors">
+        Go to Home
       </Link>
     </div>
   );

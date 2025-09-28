@@ -39,7 +39,7 @@ export function Profile() {
       </div>
 
       {/* Order History (stub) */}
-      <div className_="p-4 border-b border-gray-200">
+      <div className="p-4 border-b border-gray-200">
         <h3 className="text-app-foreground font-semibold text-base mb-2">Order History</h3>
         <p className="text-gray-500 text-sm">No orders yet. Start by placing your first order!</p>
       </div>
