@@ -22,26 +22,35 @@ const AdminDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    let mounted = true;
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
     (async () => {
+      setLoading(true);
+      setError(null);
       try {
-        const data = await fetchAdminSummary();
-        if (!mounted) return;
+        const data = await fetchAdminSummary(signal);
         setSummary({
           totalRevenue: data.totalRevenue ?? 0,
           totalOrders: data.totalOrders ?? 0,
           pendingOrders: data.pendingOrders ?? 0,
           completedOrders: data.completedOrders ?? 0,
         });
-      } catch (err) {
-        console.warn('Failed to load admin summary', err);
-        if (mounted) setError('Unable to load dashboard data.');
+      } catch (err: any) {
+        if (err.name === 'AbortError') {
+          // Request was intentionally aborted
+          console.log('Fetch aborted');
+        } else {
+          console.warn('Failed to load admin summary', err);
+          setError('Unable to load dashboard data.');
+        }
       } finally {
-        if (mounted) setLoading(false);
+        setLoading(false);
       }
     })();
+
     return () => {
-      mounted = false;
+      abortController.abort();
     };
   }, []);
 
