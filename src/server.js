@@ -1,10 +1,10 @@
-
 import 'dotenv/config';
 import express from 'express';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
 import orderRouter from './routes/orders.js';
+import adminRouter from './routes/admin.js';
 import { initMenuService } from './services/menuService.js';
 
 const app = express();
@@ -18,6 +18,7 @@ app.use(requestId);
 app.use('/api', healthRouter);
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
+app.use('/api', adminRouter); // <-- new admin routes mounted here
 
 // Generic 404 for unmatched routes
 app.use((req, res) => {
@@ -45,4 +46,3 @@ async function startServer() {
 startServer();
 
 export default app;
-
