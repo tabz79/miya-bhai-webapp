@@ -15,6 +15,7 @@ import { FAQ } from "@/pages/FAQ";
 import { Checkout } from "@/pages/Checkout";
 import { Confirmation } from "@/pages/Confirmation";
 import { Admin } from "@/pages/Admin";
+import { Staff } from "@/pages/Staff";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/checkout" component={Checkout} />
       <Route path="/confirmation" component={Confirmation} />
       <Route path="/admin" component={Admin} />
+      <Route path="/staff" component={Staff} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

@@ -1,4 +1,5 @@
 
+import 'dotenv/config';
 import express from 'express';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
