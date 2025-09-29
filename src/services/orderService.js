@@ -1,13 +1,21 @@
-
 // src/services/orderService.js
 import { supabase } from '../lib/supabase.js';
 
-/**
- * Helper: compute totals from items if caller didn't provide totals.
- * Expects each item: { productId, qty, unitPrice, discount?, gstPercent? }
- * Returns { subtotal, tax, discount, total }
- */
-function computeTotals(items = []) {
+/* ---------------------- small local constants & helpers --------------------- */
+const STATUS_ENUM = [
+  'NEW', 'PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY',
+  'COMPLETED', 'CANCELLED', 'RETURNED'
+];
+const STATUS_SET = new Set(STATUS_ENUM);
+
+const isUuid = (val) => {
+  if (!val || typeof val !== 'string') return false;
+  return /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/.test(val);
+};
+
+/* ---------------------- helpers (unchanged, lightly cleaned) --------------------- */
+
+function computeTotals(items = []) { /* same as before */ 
   let subtotal = 0;
   let tax = 0;
   let discount = 0;
@@ -37,15 +45,9 @@ function computeTotals(items = []) {
   };
 }
 
-/**
- * Normalize raw frontend item shapes into canonical backend shape:
- * { productId, name, qty, unitPrice, discount?, gstPercent?, meta? }
- */
-function normalizeItems(rawItems = []) {
+function normalizeItems(rawItems = []) { /* same as before */
   if (!Array.isArray(rawItems)) return [];
-
   return rawItems.map((it) => {
-    // If already in canonical shape, prefer that
     if (it && it.productId && (typeof it.qty !== 'undefined' || typeof it.quantity !== 'undefined')) {
       return {
         productId: it.productId,
@@ -57,8 +59,6 @@ function normalizeItems(rawItems = []) {
         meta: it.meta ?? {},
       };
     }
-
-    // Common frontend shapes: { id, price, quantity }, { id, price, qty }, etc.
     return {
       productId: it?.id ?? it?.product_id ?? it?.sku ?? null,
       name: it?.name ?? it?.title ?? null,
@@ -71,10 +71,7 @@ function normalizeItems(rawItems = []) {
   });
 }
 
-/**
- * Validate normalized items. Returns { valid: boolean, error?: { code, message } }
- */
-function validateItems(items = []) {
+function validateItems(items = []) { /* same as before */
   if (!Array.isArray(items) || items.length === 0) {
     return { valid: false, error: { code: 'CartEmpty', message: 'Cart has no items. Add items before checkout.' } };
   }
@@ -94,34 +91,23 @@ function validateItems(items = []) {
   return { valid: true };
 }
 
-/**
- * Create order from cart object.
- * Returns { orderId } on success or { error: { code, message } } on failure.
- */
-export async function createOrder(cart) {
+/* ---------------------- order operations --------------------- */
+
+export async function createOrder(cart) { /* unchanged implementation - same as earlier file */ 
   try {
-    // Defensive: ensure cart is present
     if (!cart) {
       console.warn('createOrder: missing cart');
       return { error: { code: 'CartMissing', message: 'Cart not found or has expired.' } };
     }
 
-    // Accept various names for the items array that the frontend might send
     const rawItems =
-      Array.isArray(cart.items) ?
-        cart.items :
-      Array.isArray(cart.cartItems) ?
-        cart.cartItems :
-      Array.isArray(cart.products) ?
-        cart.products :
-      [];
+      Array.isArray(cart.items) ? cart.items :
+      Array.isArray(cart.cartItems) ? cart.cartItems :
+      Array.isArray(cart.products) ? cart.products : [];
 
     const items = normalizeItems(rawItems);
-
-    // Validate items present after normalization
     const validation = validateItems(items);
     if (!validation.valid) {
-      // Log normalized + raw for easier debugging
       console.warn('createOrder: item validation failed', {
         cartId: cart.id ?? cart.cartId ?? null,
         validationError: validation.error,
@@ -131,33 +117,27 @@ export async function createOrder(cart) {
       return { error: validation.error };
     }
 
-    // Totals: use provided or compute
     const totals = (cart.totals && typeof cart.totals === 'object' && Object.keys(cart.totals).length)
       ? cart.totals
       : computeTotals(items);
 
-    const customer = cart.customer || cart.customer_details || cart.guest || {};
-
-    // Ensure numeric total is present
     const totalsNumeric = (typeof totals.total !== 'undefined' && totals.total !== null)
       ? Number(totals.total)
       : computeTotals(items).total;
 
-    // Derive a GST percent for items if not provided (uniform slab fallback)
     let derivedGstPercent = 0;
     if (totals && Number(totals.taxableAmount) && Number(totals.gst)) {
-      derivedGstPercent = +( (Number(totals.gst) / Number(totals.taxableAmount)) * 100 ).toFixed(2);
+      derivedGstPercent = +(((Number(totals.gst) / Number(totals.taxableAmount)) * 100).toFixed(2));
     }
 
-    const itemsWithGst = items.map(it => {
+    const itemsWithGst = items.map((it) => {
       const gstPercent = (typeof it.gstPercent !== 'undefined' && it.gstPercent !== null)
         ? Number(it.gstPercent)
         : (Number(it.meta?.gst ?? 0) || derivedGstPercent || 0);
-
       return { ...it, gstPercent };
     });
 
-    // Denormalize common customer fields for easier querying
+    const customer = cart.customer || cart.customer_details || cart.guest || {};
     const denormEmail = customer?.email ?? customer?.emailAddress ?? null;
     const denormName = customer?.name ?? customer?.fullName ?? null;
     const denormPhone = customer?.phone ?? customer?.phoneNumber ?? null;
@@ -205,9 +185,10 @@ export async function createOrder(cart) {
  */
 export async function getOrderById(id) {
   try {
+    if (!isUuid(id)) return null;
     const { data, error } = await supabase
       .from('orders')
-      .select('*')
+      .select('*, customers(name), drivers(name)')
       .eq('id', id)
       .single();
 
@@ -216,7 +197,12 @@ export async function getOrderById(id) {
       return null;
     }
 
-    return data;
+    // normalize shape
+    return {
+      ...data,
+      customer_name: data.customers?.name ?? null,
+      assigned_to_name: data.drivers?.name ?? null,
+    };
   } catch (e) {
     console.error('getOrderById: exception', e);
     return null;
@@ -224,24 +210,55 @@ export async function getOrderById(id) {
 }
 
 /**
- * Fetch recent orders (descending by created_at)
+ * Paginated, filterable fetch for admin
+ * getOrders({ page, limit, status, search }) => { items, total }
  */
-export async function getOrders() {
+export async function getOrders({ page = 1, limit = 25, status, search } = {}) {
   try {
-    const { data, error } = await supabase
+    const p = Math.max(1, Number(page));
+    const l = Math.min(100, Number(limit));
+    const from = (p - 1) * l;
+    const to = from + l - 1;
+
+    // Validate status param server-side too
+    if (status && !STATUS_SET.has(status)) {
+      return { items: [], total: 0 };
+    }
+
+    // Select fields and related names (via FK)
+    let qb = supabase
       .from('orders')
-      .select('*')
-      .order('created_at', { ascending: false });
+      .select('id,created_at,status,total,assigned_to,customer_id,payment_method,customers(name),drivers(name)', { count: 'exact' });
+
+    if (status) qb = qb.eq('status', status);
+    if (search) {
+      const like = `%${search}%`;
+      qb = qb.or(`id.ilike.${like},payment_method.ilike.${like},customer_name.ilike.${like},customer_phone.ilike.${like}`);
+    }
+
+    const { data, error, count } = await qb.order('created_at', { ascending: false }).range(from, to);
 
     if (error) {
       console.error('getOrders: supabase error', error);
-      return [];
+      return { items: [], total: 0 };
     }
 
-    return data;
+    const items = (data || []).map((r) => ({
+      id: r.id,
+      created_at: r.created_at,
+      status: r.status,
+      total: r.total,
+      assigned_to: r.assigned_to,
+      assigned_to_name: r.drivers?.name ?? null,
+      customer_id: r.customer_id,
+      customer_name: r.customers?.name ?? null,
+      payment_method: r.payment_method,
+    }));
+
+    return { items, total: Number(count ?? 0) };
   } catch (e) {
     console.error('getOrders: exception', e);
-    return [];
+    return { items: [], total: 0 };
   }
 }
 
@@ -250,6 +267,7 @@ export async function getOrders() {
  */
 export async function getOrdersByStaffId(staffId) {
   try {
+    if (!isUuid(staffId)) return [];
     const { data, error } = await supabase
       .from('orders')
       .select('*')
@@ -270,9 +288,27 @@ export async function getOrdersByStaffId(staffId) {
 
 /**
  * Assign order to staff and mark as ACCEPTED
+ * returns single updated order object or null
  */
 export async function assignOrder(orderId, staffId) {
   try {
+    if (!isUuid(orderId) || !isUuid(staffId)) {
+      console.warn('assignOrder: invalid ids', { orderId, staffId });
+      return null;
+    }
+
+    // validate driver exists
+    const { data: driver, error: driverErr } = await supabase
+      .from('drivers')
+      .select('id')
+      .eq('id', staffId)
+      .single();
+
+    if (driverErr || !driver) {
+      console.warn('assignOrder: driver not found', { driverErr, staffId });
+      return null;
+    }
+
     const updates = {
       assigned_to: staffId,
       status: 'ACCEPTED',
@@ -283,7 +319,8 @@ export async function assignOrder(orderId, staffId) {
       .from('orders')
       .update(updates)
       .eq('id', orderId)
-      .select();
+      .select()
+      .single();
 
     if (error) {
       console.error('assignOrder: supabase error', { error, orderId, staffId });
@@ -299,9 +336,20 @@ export async function assignOrder(orderId, staffId) {
 
 /**
  * Update order status and optionally collected amount/by fields
+ * updateOrderStatus(orderId, status, opts = {})
  */
-export async function updateOrderStatus(orderId, status, collectedAmount, collectedBy) {
+export async function updateOrderStatus(orderId, status, opts = {}) {
   try {
+    if (!isUuid(orderId)) {
+      console.warn('updateOrderStatus: invalid orderId', { orderId });
+      return null;
+    }
+    if (!status || !STATUS_SET.has(status)) {
+      console.warn('updateOrderStatus: invalid status', { status });
+      return null;
+    }
+
+    const { collectedAmount, collectedBy } = opts;
     const updates = { status, updated_at: new Date().toISOString() };
     if (typeof collectedAmount !== 'undefined' && collectedAmount !== null) {
       updates.collected_amount = collectedAmount;
@@ -314,7 +362,8 @@ export async function updateOrderStatus(orderId, status, collectedAmount, collec
       .from('orders')
       .update(updates)
       .eq('id', orderId)
-      .select();
+      .select()
+      .single();
 
     if (error) {
       console.error('updateOrderStatus: supabase error', { error, orderId, status });

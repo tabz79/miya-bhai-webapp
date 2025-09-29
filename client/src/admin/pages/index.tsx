@@ -1,18 +1,9 @@
-import React, { useEffect, useState } from 'react';
+// client/src/admin/pages/index.tsx
+import React from 'react';
 import AdminShell from '../components/AdminShell';
-import { fetchAdminSummary, fetchOrdersOverTime, fetchPaymentMethods } from '../services/api';
 import LineChartCard from '../components/LineChartCard';
 import PieChartCard from '../components/PieChartCard';
-
-type Summary = {
-  totalRevenue: number;
-  totalOrders: number;
-  pendingOrders: number;
-  completedOrders: number;
-};
-
-type OrdersOverTimeData = { date: string; orders: number }[];
-type PaymentMethodsData = { name: string; value: number }[];
+import { useAdminData } from '../hooks/useAdminData';
 
 const StatCard: React.FC<{ title: string; value: React.ReactNode }> = ({ title, value }) => (
   <div className="bg-white p-6 rounded-lg shadow">
@@ -21,135 +12,66 @@ const StatCard: React.FC<{ title: string; value: React.ReactNode }> = ({ title, 
   </div>
 );
 
-const AdminDashboard: React.FC = () => {
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [loadingSummary, setLoadingSummary] = useState(true);
-  const [errorSummary, setErrorSummary] = useState<string | null>(null);
+export default function AdminDashboard(): JSX.Element {
+  const {
+    summary,
+    ordersOverTime,
+    paymentMethods,
+    loading,
+    error,
+    // refetch, fetchPage can be used elsewhere if needed
+  } = useAdminData();
 
-  const [ordersOverTimeData, setOrdersOverTimeData] = useState<OrdersOverTimeData>([]);
-  const [loadingOrdersOverTime, setLoadingOrdersOverTime] = useState(true);
-  const [errorOrdersOverTime, setErrorOrdersOverTime] = useState<string | null>(null);
+  // Map summary fields from hook (Summary shape from useAdminData may differ from old one)
+  // we defensively coerce values for display.
+  const totalRevenue = summary?.revenue_total ?? summary?.totalRevenue ?? 0;
+  const totalOrders = summary?.orders_count ?? summary?.totalOrders ?? 0;
+  const pendingOrders = summary?.pending_count ?? summary?.pendingOrders ?? 0;
+  const completedOrders = summary?.completed_count ?? summary?.completedOrders ?? 0;
 
-  const [paymentMethodsData, setPaymentMethodsData] = useState<PaymentMethodsData>([]);
-  const [loadingPaymentMethods, setLoadingPaymentMethods] = useState(true);
-  const [errorPaymentMethods, setErrorPaymentMethods] = useState<string | null>(null);
+  // Recharts expects data objects: { period, orders, revenue } for LineChartCard
+  const lineChartData =
+    Array.isArray(ordersOverTime) && ordersOverTime.length
+      ? ordersOverTime.map((p) => ({
+          period: // ensure human-readable label (date or ISO)
+            typeof p.period === 'string' ? p.period : (p.period as any)?.toString?.() ?? String(p.period),
+          orders: Number(p.orders ?? p.value ?? 0),
+          revenue: String(p.revenue ?? p.amount ?? 0),
+        }))
+      : [];
 
-  // Fetch Summary Data
-  useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
-
-    (async () => {
-      setLoadingSummary(true);
-      setErrorSummary(null);
-      try {
-        const data = await fetchAdminSummary(signal);
-        setSummary({
-          totalRevenue: data.totalRevenue ?? 0,
-          totalOrders: data.totalOrders ?? 0,
-          pendingOrders: data.pendingOrders ?? 0,
-          completedOrders: data.completedOrders ?? 0,
-        });
-      } catch (err: any) {
-        if (err.name === 'AbortError') {
-          console.log('Summary fetch aborted');
-        } else {
-          console.warn('Failed to load admin summary', err);
-          setErrorSummary('Unable to load dashboard summary.');
-        }
-      } finally {
-        setLoadingSummary(false);
-      }
-    })();
-
-    return () => {
-      abortController.abort();
-    };
-  }, []);
-
-  // Fetch Orders Over Time Data
-  useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
-
-    (async () => {
-      setLoadingOrdersOverTime(true);
-      setErrorOrdersOverTime(null);
-      try {
-        const data = await fetchOrdersOverTime(undefined, signal);
-        setOrdersOverTimeData(data);
-      } catch (err: any) {
-        if (err.name === 'AbortError') {
-          console.log('Orders over time fetch aborted');
-        } else {
-          console.warn('Failed to load orders over time data', err);
-          setErrorOrdersOverTime('Unable to load orders over time chart.');
-        }
-      } finally {
-        setLoadingOrdersOverTime(false);
-      }
-    })();
-
-    return () => {
-      abortController.abort();
-    };
-  }, []);
-
-  // Fetch Payment Methods Data
-  useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
-
-    (async () => {
-      setLoadingPaymentMethods(true);
-      setErrorPaymentMethods(null);
-      try {
-        const data = await fetchPaymentMethods(undefined, signal);
-        setPaymentMethodsData(data);
-      } catch (err: any) {
-        if (err.name === 'AbortError') {
-          console.log('Payment methods fetch aborted');
-        } else {
-          console.warn('Failed to load payment methods data', err);
-          setErrorPaymentMethods('Unable to load payment methods chart.');
-        }
-      } finally {
-        setLoadingPaymentMethods(false);
-      }
-    })();
-
-    return () => {
-      abortController.abort();
-    };
-  }, []);
+  // Pie chart expects { name, value }[]
+  const pieData =
+    Array.isArray(paymentMethods) && paymentMethods.length
+      ? paymentMethods.map((m) => ({ name: String(m.name ?? m.method ?? 'Unknown'), value: Number(m.value ?? m.count ?? 0) }))
+      : [];
 
   return (
     <AdminShell>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Total Revenue" value={loadingSummary ? 'Loading…' : `₹${summary?.totalRevenue ?? 0}`} />
-        <StatCard title="Total Orders" value={loadingSummary ? 'Loading…' : summary?.totalOrders ?? 0} />
-        <StatCard title="Pending Orders" value={loadingSummary ? 'Loading…' : summary?.pendingOrders ?? 0} />
-        <StatCard title="Completed Orders" value={loadingSummary ? 'Loading…' : summary?.completedOrders ?? 0} />
+        <StatCard title="Total Revenue" value={loading ? 'Loading…' : `₹${Number(totalRevenue ?? 0).toLocaleString()}`} />
+        <StatCard title="Total Orders" value={loading ? 'Loading…' : Number(totalOrders ?? 0)} />
+        <StatCard title="Pending Orders" value={loading ? 'Loading…' : Number(pendingOrders ?? 0)} />
+        <StatCard title="Completed Orders" value={loading ? 'Loading…' : Number(completedOrders ?? 0)} />
       </div>
 
-      {errorSummary && <div className="mt-4 text-sm text-red-600">{errorSummary}</div>}
+      {error && (
+        <div className="mt-4 text-sm text-red-600">
+          <strong>Dashboard error:</strong> {String(error)}
+        </div>
+      )}
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <LineChartCard
-          title="Orders Over Time"
-          data={ordersOverTimeData}
-          loading={loadingOrdersOverTime}
-          error={errorOrdersOverTime}
+          data={lineChartData}
+          label="Orders Over Time"
+          // if your LineChartCard supports height/xKey/yKey you can pass them too
         />
         <PieChartCard
-          title="Payment Methods"
-          data={paymentMethodsData}
-          loading={loadingPaymentMethods}
-          error={errorPaymentMethods}
+          data={pieData}
+          label="Payment Methods"
         />
       </div>
     </AdminShell>
   );
-};
-
-export default AdminDashboard;
+}

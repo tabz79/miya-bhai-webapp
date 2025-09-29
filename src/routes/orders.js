@@ -1,12 +1,15 @@
+// server/routes/orders.js
 import express from 'express';
 import {
   createOrder,
   getOrderById,
-  getOrders,
+  getOrders, // getOrders({ page, limit, status, search })
   getOrdersByStaffId,
-  assignOrder,
-  updateOrderStatus,
+  assignOrder, // assignOrder(orderId, staffId)
+  updateOrderStatus, // updateOrderStatus(orderId, status, opts)
 } from '../services/orderService.js';
+
+import { validatePagination, requireStaffId, requireStatus, isUuid } from '../middleware/validation.js';
 
 const router = express.Router();
 
@@ -18,11 +21,15 @@ const adminAuth = (req, res, next) => {
   next();
 };
 
+/**
+ * Create order
+ * POST /api/orders/create
+ */
 router.post('/orders/create', async (req, res) => {
   try {
     const result = await createOrder(req.body);
-    if (result.error) {
-      return res.status(400).json({ error: result.error.message });
+    if (result?.error) {
+      return res.status(400).json({ error: result.error.message ?? result.error });
     }
     res.status(201).json(result);
   } catch (e) {
@@ -31,47 +38,111 @@ router.post('/orders/create', async (req, res) => {
   }
 });
 
+/**
+ * Get single order
+ * GET /api/orders/:id
+ */
 router.get('/orders/:id', async (req, res) => {
-  const order = await getOrderById(req.params.id);
-  if (order) {
+  try {
+    const { id } = req.params;
+    if (!isUuid(id)) return res.status(400).json({ error: 'Invalid order id' });
+
+    const order = await getOrderById(id);
+    if (!order) return res.status(404).json({ message: 'Order not found' });
     res.json(order);
-  } else {
-    res.status(404).json({ message: 'Order not found' });
+  } catch (e) {
+    console.error('Error in GET /api/orders/:id', e);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-router.get('/orders', adminAuth, async (req, res) => {
-  const orders = await getOrders();
-  res.json(orders);
-});
+/**
+ * Paginated orders list (admin-only)
+ * GET /api/orders?page=&limit=&status=&search=
+ */
+router.get('/orders', adminAuth, validatePagination, async (req, res) => {
+  try {
+    const page = Math.max(1, parseInt(req.query.page || '1', 10));
+    const limit = Math.min(100, parseInt(req.query.limit || '25', 10));
+    const status = req.query.status || undefined;
+    const search = req.query.search || undefined;
 
-router.get('/staff/:staffId/orders', async (req, res) => {
-  const orders = await getOrdersByStaffId(req.params.staffId);
-  res.json(orders);
-});
+    const { items, total } = await getOrders({ page, limit, status, search });
 
-router.post('/orders/:id/assign', adminAuth, async (req, res) => {
-  const { staffId } = req.body;
-  const order = await assignOrder(req.params.id, staffId);
-  if (order) {
-    res.json(order);
-  } else {
-    res.status(404).json({ message: 'Order not found' });
+    return res.json({ items, total: Number(total ?? 0), page, limit });
+  } catch (e) {
+    console.error('Error in GET /api/orders', e);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-router.post('/orders/:id/status', async (req, res) => {
-  const { status, collectedAmount, collectedBy } = req.body;
-  const order = await updateOrderStatus(req.params.id, status, collectedAmount, collectedBy);
-  if (order) {
-    res.json(order);
-  } else {
-    res.status(404).json({ message: 'Order not found' });
+/**
+ * Orders for a staff member (no admin auth - restrict later if required)
+ * GET /api/staff/:staffId/orders
+ */
+router.get('/staff/:staffId/orders', requireStaffId, async (req, res) => {
+  try {
+    const orders = await getOrdersByStaffId(req.params.staffId);
+    res.json(orders);
+  } catch (e) {
+    console.error('Error in GET /api/staff/:staffId/orders', e);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
+/**
+ * Assign order to a driver (admin only)
+ * PUT /api/orders/:id/assign
+ * body: { staffId: 'uuid' }
+ */
+router.put('/orders/:id/assign', adminAuth, requireStaffId, async (req, res) => {
+  try {
+    const { staffId } = req.body;
+    const id = req.params.id;
+    if (!isUuid(id)) return res.status(400).json({ error: 'Invalid order id' });
+
+    const updated = await assignOrder(id, staffId);
+    if (!updated) return res.status(404).json({ message: 'Order not found or assign failed' });
+
+    return res.json(updated);
+  } catch (e) {
+    console.error('Error in PUT /api/orders/:id/assign', e);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+/**
+ * Update order status (admin or workflow endpoint)
+ * PUT /api/orders/:id/status
+ * body: { status: 'NEW|PENDING|COMPLETED|CANCELLED', collectedAmount?, collectedBy? }
+ */
+router.put('/orders/:id/status', requireStatus, async (req, res) => {
+  try {
+    const { status, collectedAmount, collectedBy } = req.body;
+    const id = req.params.id;
+    if (!isUuid(id)) return res.status(400).json({ error: 'Invalid order id' });
+
+    // Optional: enforce adminAuth for certain status transitions
+    // if (['CANCELLED','COMPLETED'].includes(status) && req.headers.authorization !== process.env.ADMIN_SECRET) {
+    //   return res.status(401).json({ message: 'Unauthorized' });
+    // }
+
+    const opts = { collectedAmount, collectedBy };
+    const updated = await updateOrderStatus(id, status, opts);
+    if (!updated) return res.status(404).json({ message: 'Order not found or status update failed' });
+
+    return res.json(updated);
+  } catch (e) {
+    console.error('Error in PUT /api/orders/:id/status', e);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+/**
+ * Razorpay webhook stub
+ */
 router.post('/webhook/razorpay', (req, res) => {
-  // This will be implemented later
+  // TODO: verify signature, validate payload, update order status via updateOrderStatus etc.
   res.status(501).json({ message: 'Not Implemented' });
 });
 

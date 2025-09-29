@@ -1,7 +1,9 @@
+// client/src/admin/pages/orders.tsx
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import AdminShell from '../components/AdminShell';
 import OrderDetailsSlideOver from '../components/OrderDetailsSlideOver';
 import { fetchOrders } from '../services/api'; // <-- service layer
+import { createClient } from '@supabase/supabase-js';
 
 // TODO: Use admin auth token (keep in memory or secure cookie). Pass token to service calls as needed.
 type Order = {
@@ -46,6 +48,12 @@ const statusBadgeClass = (status: string) => {
       return 'bg-gray-100 text-gray-800';
   }
 };
+
+// Supabase client for frontend realtime subscriptions (anon key)
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL as string,
+  import.meta.env.VITE_SUPABASE_ANON_KEY as string
+);
 
 const AdminOrdersPage: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -101,110 +109,70 @@ const AdminOrdersPage: React.FC = () => {
     loadOrders();
   }, [loadOrders]);
 
-  // Robust polling effect
-  const pollRef = useRef<number | null>(null);
-  const controllerRef = useRef<AbortController | null>(null);
+  // ---------------------------
+  // Supabase realtime subscription (replaces polling)
+  // ---------------------------
+  const subscriptionRef = useRef<any | null>(null);
 
   useEffect(() => {
-    let mounted = true;
-
-    const fetchAndSet = async (signal?: AbortSignal) => {
-      if (!mounted) return;
-      setError(null);
+    // subscribe to changes for orders table
+    const subscribe = () => {
+      if (subscriptionRef.current) return;
       try {
-        const statusParam = statusFilter === 'All' ? '' : statusFilter;
-        const resp = await fetchOrders(
-          { page: currentPage, limit: ORDERS_PER_PAGE, status: statusParam, search: searchQuery },
-          adminToken,
-          signal
-        );
-        if (!mounted) return;
-
-        const data = (resp && (resp.data || resp.orders)) || [];
-        // newest-first
-        const rows = (data || []).slice().sort((a: Order, b: Order) => {
-          const ta = a.created_at ? new Date(a.created_at).getTime() : 0;
-          const tb = b.created_at ? new Date(b.created_at).getTime() : 0;
-          return tb - ta;
-        });
-
-        setOrders(rows);
-        const total = resp.meta?.total ?? rows.length;
-        setTotalPages(Math.max(1, Math.ceil(total / ORDERS_PER_PAGE)));
-      } catch (err: any) {
-        // Ignore aborts; set error for others
-        if (err && err.name === 'AbortError') {
-          // aborted
-        } else {
-          console.warn('[polling] fetch error', err);
-          if (mounted) setError(err?.message || 'Failed to poll orders');
-        }
+        const channel = supabase
+          .channel('public:orders')
+          .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload) => {
+            // Simple heuristic: refetch current page when any change arrives.
+            // For more efficient behavior, you can reconcile payload.record into the orders array.
+            // But server-side filters / pagination complicate reconciliation; refetch is safe and simple.
+            loadOrders();
+          })
+          .subscribe();
+        subscriptionRef.current = channel;
+      } catch (e) {
+        console.warn('Supabase subscribe failed', e);
       }
     };
 
-    // ensure no duplicate intervals
-    if (pollRef.current) {
-      clearInterval(pollRef.current);
-      pollRef.current = null;
-    }
-
-    // Start an immediate poll (non-blocking)
-    controllerRef.current?.abort();
-    controllerRef.current = new AbortController();
-    fetchAndSet(controllerRef.current.signal);
-
-    const startPolling = () => {
-      // guard again
-      if (pollRef.current) return;
-      const id = window.setInterval(() => {
-        if (document.visibilityState === 'visible') {
-          // abort previous request to avoid piling up
-          if (controllerRef.current) {
-            try { controllerRef.current.abort(); } catch (e) {}
-          }
-          controllerRef.current = new AbortController();
-          fetchAndSet(controllerRef.current.signal);
+    const unsubscribe = () => {
+      try {
+        if (subscriptionRef.current) {
+          supabase.removeChannel(subscriptionRef.current);
+          subscriptionRef.current = null;
         }
-      }, 5000); // 5s default
-      pollRef.current = id;
+      } catch (e) {
+        console.warn('Supabase unsubscribe failed', e);
+      }
     };
 
-    // Begin polling if page visible
-    if (document.visibilityState === 'visible') startPolling();
+    // start subscription if visible
+    if (document.visibilityState === 'visible') {
+      subscribe();
+    }
 
     const onVisibility = () => {
       if (document.visibilityState === 'hidden') {
-        // stop polling and abort inflight
-        if (pollRef.current) {
-          clearInterval(pollRef.current);
-          pollRef.current = null;
-        }
-        if (controllerRef.current) {
-          try { controllerRef.current.abort(); } catch (e) {}
-          controllerRef.current = null;
-        }
+        unsubscribe();
       } else {
-        // resume polling
-        startPolling();
+        // resume subscription and refresh list
+        subscribe();
+        loadOrders();
       }
     };
-
     document.addEventListener('visibilitychange', onVisibility);
 
     return () => {
-      mounted = false;
-      // cleanup interval and inflight controller
-      if (pollRef.current) {
-        clearInterval(pollRef.current);
-        pollRef.current = null;
-      }
-      if (controllerRef.current) {
-        try { controllerRef.current.abort(); } catch (e) {}
-        controllerRef.current = null;
-      }
       document.removeEventListener('visibilitychange', onVisibility);
+      try {
+        if (subscriptionRef.current) {
+          supabase.removeChannel(subscriptionRef.current);
+          subscriptionRef.current = null;
+        }
+      } catch (e) {
+        // ignore
+      }
     };
-  }, [currentPage, statusFilter, searchQuery, adminToken]);
+  }, [loadOrders]);
 
   const handleRowClick = (order: Order) => {
     setSelectedOrder(order);
