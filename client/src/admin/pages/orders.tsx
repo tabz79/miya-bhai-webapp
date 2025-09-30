@@ -2,8 +2,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import AdminShell from '../components/AdminShell';
 import OrderDetailsSlideOver from '../components/OrderDetailsSlideOver';
-import { fetchOrders } from '../services/api'; // <-- service layer
-import { createClient } from '@supabase/supabase-js';
+import { fetchOrders, adminApi } from '../services/api'; // <-- service layer (adminApi used for numeric signature)
+
+// Use the shared singleton supabase client to avoid multiple GoTrue instances
+import supabase from '../../lib/supabaseClient';
 
 // TODO: Use admin auth token (keep in memory or secure cookie). Pass token to service calls as needed.
 type Order = {
@@ -49,12 +51,6 @@ const statusBadgeClass = (status: string) => {
   }
 };
 
-// Supabase client for frontend realtime subscriptions (anon key)
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL as string,
-  import.meta.env.VITE_SUPABASE_ANON_KEY as string
-);
-
 const AdminOrdersPage: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
@@ -78,11 +74,16 @@ const AdminOrdersPage: React.FC = () => {
     setError(null);
     try {
       const statusParam = statusFilter === 'All' ? '' : statusFilter;
-      const resp = await fetchOrders(
-        { page: currentPage, limit: ORDERS_PER_PAGE, status: statusParam, search: searchQuery },
+
+      // Use numeric signature so query params serialize correctly: ?page=1&limit=10
+      const resp = await adminApi.getOrders(
+        currentPage,
+        ORDERS_PER_PAGE,
+        { status: statusParam, search: searchQuery },
         adminToken
       );
-      const data = (resp && (resp.data || resp.orders)) || [];
+
+      const data = (resp && (resp.items || resp.data || resp.orders)) || [];
       const meta = (resp && resp.meta) || { total: data.length, page: currentPage, limit: ORDERS_PER_PAGE };
 
       // Defensive: ensure newest-first ordering client-side (server should ideally order)
@@ -118,10 +119,14 @@ const AdminOrdersPage: React.FC = () => {
     // subscribe to changes for orders table
     const subscribe = () => {
       if (subscriptionRef.current) return;
+      if (!supabase) {
+        console.warn('Supabase client not initialized. Cannot subscribe.');
+        return;
+      }
       try {
         const channel = supabase
           .channel('public:orders')
-          .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload) => {
+          .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
             // Simple heuristic: refetch current page when any change arrives.
             // For more efficient behavior, you can reconcile payload.record into the orders array.
             // But server-side filters / pagination complicate reconciliation; refetch is safe and simple.
@@ -136,7 +141,7 @@ const AdminOrdersPage: React.FC = () => {
 
     const unsubscribe = () => {
       try {
-        if (subscriptionRef.current) {
+        if (subscriptionRef.current && supabase) {
           supabase.removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
@@ -164,7 +169,7 @@ const AdminOrdersPage: React.FC = () => {
     return () => {
       document.removeEventListener('visibilitychange', onVisibility);
       try {
-        if (subscriptionRef.current) {
+        if (subscriptionRef.current && supabase) {
           supabase.removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }

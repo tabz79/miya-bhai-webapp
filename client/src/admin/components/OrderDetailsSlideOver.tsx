@@ -1,8 +1,10 @@
+// client/src/admin/components/OrderDetailsSlideOver.tsx
 import React, { useEffect, useState } from 'react';
-import { fetchDrivers, assignDriver, updateOrderStatus, Driver } from '../services/api';
+import { adminApi } from '../../admin/services/api'; // adjust path if needed
+import type { Driver } from '../../admin/types'; // driver type from your types file
 
 // ADMIN PANEL — DESKTOP-FIRST ONLY
-// Slide-over for order details. UI-only file; backend calls go through client/src/admin/services/api.ts
+// Slide-over for order details. Backend calls go through adminApi (client/src/admin/services/api.ts)
 // TODO: Wire real admin auth token and pass it into service calls (do not store secrets in client).
 
 type Order = {
@@ -26,14 +28,13 @@ const statusOptionsDisplay = [
 
 const normalizeDisplayStatus = (s?: string) => {
   if (!s) return 'UNKNOWN';
-  // handle both human-friendly and uppercase forms
   const map: Record<string, string> = {
-    'Pending': 'PENDING',
-    'Accepted': 'ACCEPTED',
-    'Preparing': 'PREPARING',
+    Pending: 'PENDING',
+    Accepted: 'ACCEPTED',
+    Preparing: 'PREPARING',
     'Out for Delivery': 'OUT_FOR_DELIVERY',
-    'Completed': 'COMPLETED',
-    'Cancelled': 'CANCELLED',
+    Completed: 'COMPLETED',
+    Cancelled: 'CANCELLED',
   };
   return map[s] ?? s.toUpperCase();
 };
@@ -43,7 +44,45 @@ const humanizeStatus = (s?: string) => {
   return s.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
 };
 
-const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: () => void }> = ({ order, isOpen, onClose }) => {
+/* Helpers to compute/format prices robustly */
+function getItemPrice(item: any): number {
+  // prefer explicit line total fields
+  const direct =
+    (item && (item.line_total ?? item.total ?? item.amount ?? item.price ?? item.rate ?? item.unit_price)) ?? null;
+  if (typeof direct === 'number' && Number.isFinite(direct)) {
+    // If this looks like a per-line total (e.g. already multiplied by qty) accept it.
+    return direct;
+  }
+
+  // Sometimes price fields are strings — coerce to number
+  const maybeNum = (v: any) => {
+    const n = Number(v);
+    return Number.isNaN(n) ? null : n;
+  };
+
+  const qty = maybeNum(item?.qty ?? item?.quantity ?? item?.count ?? 1) ?? 1;
+  const unit = maybeNum(item?.rate ?? item?.price ?? item?.unit_price ?? 0) ?? 0;
+
+  // If item has nested price object
+  if (item?.price && typeof item.price === 'object') {
+    const nested = maybeNum(item.price.value ?? item.price.amount ?? item.price.total);
+    if (nested !== null) return nested;
+  }
+
+  // fallback to qty * unit
+  return qty * unit;
+}
+
+function formatCurrency(value: number) {
+  if (!Number.isFinite(value)) return '₹0.00';
+  return '₹' + value.toFixed(2);
+}
+
+const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: () => void }> = ({
+  order,
+  isOpen,
+  onClose,
+}) => {
   const [drivers, setDrivers] = useState<Driver[]>([]);
   const [loadingDrivers, setLoadingDrivers] = useState(false);
   const [assigning, setAssigning] = useState(false);
@@ -63,9 +102,10 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
       setLoadingDrivers(true);
       setError(null);
       try {
-        const resp = await fetchDrivers(adminToken);
-        // resp expected shape: { data: Driver[] } or Driver[]
-        const list: Driver[] = (resp && resp.data) || resp || [];
+        // prefer adminApi to keep single service surface
+        const resp = await adminApi.getDrivers?.(); // adminApi.getDrivers returns Driver[] or null
+        // normalize: adminApi.getDrivers returns array or {data: []}
+        const list: Driver[] = Array.isArray(resp) ? resp : (resp?.data ?? resp ?? []);
         if (!mounted) return;
         setDrivers(list);
       } catch (err: any) {
@@ -78,7 +118,9 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
       }
     }
     loadDrivers();
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -100,11 +142,14 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
     setError(null);
     setMessage(null);
     try {
-      await assignOrder(order.id, selectedDriver, adminToken);
+      // call adminApi.assignDriverToOrder — normalized in services
+      await adminApi.assignDriverToOrder(order.id, selectedDriver);
       setMessage('Driver assigned.');
-      // Note: consider triggering parent reload to reflect changes.
+      // quick refresh to reflect change
+      setTimeout(() => window.location.reload(), 300);
     } catch (err: any) {
-      setError(err?.message || 'Failed to assign driver');
+      // try to show useful server message
+      setError(err?.message || String(err) || 'Failed to assign driver');
     } finally {
       setAssigning(false);
     }
@@ -119,27 +164,27 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
     setError(null);
     setMessage(null);
     try {
-      await updateOrderStatus(order.id, selectedStatus, adminToken);
+      await adminApi.updateOrderStatus(order.id, selectedStatus);
       setMessage(`Status updated to ${humanizeStatus(selectedStatus)}.`);
-      // Note: consider triggering parent reload to reflect changes.
+      setTimeout(() => window.location.reload(), 300);
     } catch (err: any) {
-      setError(err?.message || 'Failed to update status');
+      setError(err?.message || String(err) || 'Failed to update status');
     } finally {
       setUpdatingStatus(false);
     }
   };
 
   const handleCancelOrder = async () => {
-    // quick confirm (simple)
     if (!confirm('Cancel this order? This action cannot be undone.')) return;
     setUpdatingStatus(true);
     setError(null);
     setMessage(null);
     try {
-      await updateOrderStatus(order.id, 'CANCELLED', adminToken);
+      await adminApi.updateOrderStatus(order.id, 'CANCELLED');
       setMessage('Order cancelled.');
+      setTimeout(() => window.location.reload(), 300);
     } catch (err: any) {
-      setError(err?.message || 'Failed to cancel order');
+      setError(err?.message || String(err) || 'Failed to cancel order');
     } finally {
       setUpdatingStatus(false);
     }
@@ -155,9 +200,14 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
               <div className="flex-1 h-0 overflow-y-auto">
                 <header className="px-4 py-6 sm:px-6 bg-[#3c3c3b] text-white">
                   <div className="flex items-start justify-between">
-                    <h2 className="text-lg font-medium">Order {order.order_id ?? `#${order.id.slice(0, 8)}`}</h2>
+                    <h2 className="text-lg font-medium">
+                      Order {order.order_id ?? `#${order.id?.slice?.(0, 8) ?? ''}`}
+                    </h2>
                     <div className="ml-3 h-7 flex items-center">
-                      <button onClick={onClose} className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <button
+                        onClick={onClose}
+                        className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      >
                         <span className="sr-only">Close panel</span>
                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -174,7 +224,7 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                       <p><strong>Customer:</strong> {order.customer_details?.name ?? order.customer_details?.phone ?? '—'}</p>
                       <p><strong>Date:</strong> {order.created_at ? new Date(order.created_at).toLocaleString() : '—'}</p>
                       <p><strong>Status:</strong> {humanizeStatus(order.status)}</p>
-                      <p><strong>Total:</strong> ₹{(order.total ?? 0).toFixed(2)}</p>
+                      <p><strong>Total:</strong> {formatCurrency(order.total ?? 0)}</p>
                     </div>
 
                     {/* Order items */}
@@ -182,11 +232,16 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                       <h3 className="font-medium text-gray-900">Items</h3>
                       {order.items && order.items.length > 0 ? (
                         <ul className="mt-2 space-y-2">
-                          {order.items.map((it: any, idx: number) => (
-                            <li key={idx} className="text-sm">
-                              {it.qty ?? 1} × {it.name ?? it.sku} — ₹{(it.rate ?? 0).toFixed(2)}
-                            </li>
-                          ))}
+                          {order.items.map((it: any, idx: number) => {
+                            const qty = Number(it.qty ?? it.quantity ?? 1) || 1;
+                            const linePrice = getItemPrice(it);
+                            return (
+                              <li key={idx} className="text-sm flex justify-between">
+                                <span>{qty} × {it.name ?? it.title ?? it.sku ?? 'Item'}</span>
+                                <span>{formatCurrency(linePrice)}</span>
+                              </li>
+                            );
+                          })}
                         </ul>
                       ) : (
                         <p className="text-sm text-gray-500 mt-2">No items available in order details.</p>
@@ -213,7 +268,7 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                       <option value="">Assign Driver</option>
                       {drivers.map((d) => (
                         <option key={d.id} value={d.id}>
-                          {d.name} {d.status === 'inactive' ? '(inactive)' : ''}
+                          {d.name} {d['isActive'] === false || d.status === 'inactive' ? '(inactive)' : ''}
                         </option>
                       ))}
                     </select>

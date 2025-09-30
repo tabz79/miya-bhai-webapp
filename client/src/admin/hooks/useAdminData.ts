@@ -2,13 +2,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { adminApi } from '../services/api';
 import { Order, Summary, ChartData } from '../types';
-import { createClient } from '@supabase/supabase-js';
-
-// Supabase client for frontend realtime (anon key)
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL as string,
-  import.meta.env.VITE_SUPABASE_ANON_KEY as string
-);
+// Use single shared supabase client wrapper (defensive)
+import supabase, { isSupabaseReady } from '../../lib/supabaseClient';
 
 interface AdminData {
   summary: Summary | null;
@@ -111,10 +106,15 @@ export const useAdminData = (): AdminData => {
     setLoading(true);
     setError(null);
     // fetch in parallel
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const fromDate = thirtyDaysAgo.toISOString().split('T')[0]; // YYYY-MM-DD
+    const toDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
     await Promise.all([
       fetchSummary(),
       fetchOrders(pageRef.current, limitRef.current),
-      fetchOrdersOverTime(),
+      fetchOrdersOverTime(fromDate, toDate, 'day'),
       fetchPaymentMethods(),
     ]);
     setLoading(false);
@@ -183,11 +183,17 @@ export const useAdminData = (): AdminData => {
   // subscribe/unsubscribe logic
   const subscribe = useCallback(() => {
     if (supaChannelRef.current) return; // already subscribed
+
+    if (!isSupabaseReady || !supabase) {
+      console.warn('Supabase client not initialized. Cannot subscribe.');
+      return;
+    }
+
     try {
+      // create channel for orders table realtime
       const ch = supabase
         .channel('public:orders')
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload) => {
-          // supabase payload shape varies; pass whole payload to reconciliation
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
           try {
             reconcileOrderChange(payload);
           } catch (e) {
@@ -205,10 +211,31 @@ export const useAdminData = (): AdminData => {
 
   const unsubscribe = useCallback(() => {
     try {
-      if (supaChannelRef.current) {
-        // remove channel via supabase client
-        supabase.removeChannel(supaChannelRef.current);
+      if (!isSupabaseReady || !supabase) {
         supaChannelRef.current = null;
+        return;
+      }
+
+      if (supaChannelRef.current) {
+        // prefer channel.unsubscribe if available, fallback to supabase.removeChannel
+        try {
+          if (typeof supaChannelRef.current.unsubscribe === 'function') {
+            // channel instance supports unsubscribe
+            supaChannelRef.current.unsubscribe();
+          } else if (typeof supabase.removeChannel === 'function') {
+            // remove via client
+            supabase.removeChannel(supaChannelRef.current);
+          } else {
+            // best-effort: try client remove by channel name/id
+            // (no-op if client doesn't support it)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (supabase as any).removeChannel?.(supaChannelRef.current);
+          }
+        } catch (err) {
+          console.warn('error while unsubscribing channel', err);
+        } finally {
+          supaChannelRef.current = null;
+        }
       }
     } catch (e) {
       console.warn('unsubscribe failed', e);
