@@ -151,10 +151,13 @@ export async function createOrder(cart) { /* unchanged implementation - same as 
       customer_name: denormName,
       customer_phone: denormPhone,
       payment_method: (cart.payment_method || cart.paymentMethod || 'COD'),
-      payment_status: 'pending',
+      payment_status: (cart.payment_status || 'pending'), // Use cart's payment_status if provided, else 'pending'
+      payment_amount: (cart.payment_method === 'COD' || cart.paymentMethod === 'COD') ? Number(totalsNumeric) : 0, // For COD, collect total; for online, 0 initially
       status: 'NEW',
       cart_id: cart.id || cart.cartId || null,
       created_at: new Date().toISOString(),
+      // Generate a human-friendly order number
+      order_number: `MB-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
     };
 
     const { data, error } = await supabase

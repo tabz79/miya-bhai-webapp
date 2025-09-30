@@ -126,42 +126,11 @@ export const adminApi = {
     const url = `${API_BASE_URL}/deliveries`;
     try {
       const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
-      const list: any[] = Array.isArray(json) ? json : (json?.data ?? json?.items ?? json ?? []);
-      // Normalize the shape
-      return (list || []).map((r: any) => ({
-        orderId: r.orderId ?? r.order_id ?? r.id ?? String(r?.id ?? ''),
-        id: r.id ?? r.orderId ?? r.order_id ?? null,
-        driverId: r.driverId ?? r.driver_id ?? r.assigned_to ?? null,
-        driverName: r.driverName ?? r.driver_name ?? r.driver ?? null,
-        status: r.status ?? null,
-        raw: r,
-      }));
+      // The server-side view now provides the normalized shape directly
+      return json?.data ?? [];
     } catch (err: any) {
-      const raw = (err && (err.raw ?? err)) || null;
-      const msg = err?.message ?? (err?.toString && err.toString()) ?? 'Unknown error';
-      // If server error mentions order_id missing, fallback to /orders endpoint
-      if (msg && /order_id/i.test(msg) && /does not exist/i.test(msg)) {
-        console.warn('Primary /deliveries endpoint failed due to orders.order_id missing — trying fallback /orders...', msg);
-        try {
-          const fallbackUrl = `${API_BASE_URL}/orders?page=1&limit=100`;
-          const { json: ordersJson } = await safeFetch(fallbackUrl, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
-          const items = Array.isArray(ordersJson) ? ordersJson : (ordersJson?.data ?? ordersJson?.items ?? ordersJson?.orders ?? []);
-          return (items || []).map((o: any) => ({
-            orderId: o.order_id ?? o.orderId ?? String(o.id ?? ''),
-            id: o.id ?? null,
-            driverId: o.assigned_to ?? o.driverId ?? null,
-            driverName: o.driver_name ?? null,
-            status: o.status ?? null,
-            raw: o,
-          }));
-        } catch (fallbackErr: any) {
-          const fm = fallbackErr?.message ?? (fallbackErr?.toString && fallbackErr.toString()) ?? 'Fallback failed';
-          const e = new Error(`Primary deliveries endpoint failed: ${msg}. Fallback also failed: ${fm}`);
-          (e as any).raw = { primary: raw, fallback: fallbackErr?.raw ?? fallbackErr };
-          throw e;
-        }
-      }
-      // otherwise rethrow original error (keeps raw attached)
+      console.error('getDeliveries failed', err);
+      // Rethrow the error, as the server should now provide the correct shape or a clear error
       throw err;
     }
   },

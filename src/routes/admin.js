@@ -277,34 +277,22 @@ router.delete('/admin/drivers/:id', async (req, res) => {
 // GET /api/admin/deliveries
 router.get('/admin/deliveries', async (req, res) => {
   try {
-    // Fetch orders that are 'PREPARING' or 'OUT_FOR_DELIVERY' and have an assigned driver
-    // Assumption: 'drivers' table exists and 'orders.assigned_to' is FK to 'drivers.id'
+    // Query the new deliveries_for_admin view
     const { data, error } = await supabase
-      .from('orders')
-      .select(`
-        id,
-        order_id,
-        status,
-        assigned_to,
-        drivers ( id, name, phone )
-      `)
-      .in('status', ['PREPARING', 'OUT_FOR_DELIVERY'])
-      .not('assigned_to', 'is', null);
+      .from('deliveries_for_admin')
+      .select('order_number, order_id, driver_name, status, payment_method, payment_status, payment_amount, total')
+      .in('status', ['PREPARING', 'OUT_FOR_DELIVERY']); // Filter for relevant delivery statuses
 
     if (error) throw error;
 
-    const deliveries = (data || []).map(order => ({
-      orderId: order.id,
-      order_id_display: order.order_id,
-      status: order.status,
-      driverId: order.assigned_to,
-      driverName: order.drivers ? order.drivers.name : 'Unassigned',
-      driverPhone: order.drivers ? order.drivers.phone : '',
-    }));
-
-    return res.json({ data: deliveries });
+    // The view already provides the normalized shape, so no further mapping is needed here
+    return res.json({ data: data || [] });
   } catch (err) {
     console.error('[admin/deliveries] error', err);
+    // Gracefully handle missing view by providing a fallback message
+    if (err.code === '42P01') { // undefined_table
+      return res.status(500).json({ error: 'Database view deliveries_for_admin not found. Please ensure migrations are run.' });
+    }
     return res.status(500).json({ error: err.message || String(err) });
   }
 });

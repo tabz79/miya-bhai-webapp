@@ -1,3 +1,4 @@
+// tab 1
 -- ONE FILE (fixed): install helpers, trigger, and run a batched backfill
 -- Paste the entire file into Supabase SQL editor and RUN once.
 
@@ -425,3 +426,540 @@ END
 $$;
 
 -- End of file
+
+
+//tavb 2
+-- Add assigned_to (nullable, type uuid for future driver linking)
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_name='orders' AND column_name='assigned_to'
+  ) THEN
+    ALTER TABLE public.orders
+      ADD COLUMN assigned_to uuid;
+  END IF;
+END;
+$$;
+
+-- Add customer_id (nullable, type uuid for future customer linking)
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_name='orders' AND column_name='customer_id'
+  ) THEN
+    ALTER TABLE public.orders
+      ADD COLUMN customer_id uuid;
+  END IF;
+END;
+$$;
+
+
+//tab 3
+BEGIN;
+
+-- =========================
+-- 1) Drivers table (existing patch)
+-- =========================
+CREATE TABLE IF NOT EXISTS public.drivers (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  name text NOT NULL,
+  phone text,
+  vehicle text,
+  status text NOT NULL DEFAULT 'active',
+  created_at timestamptz DEFAULT now()
+);
+
+-- If drivers table already existed without 'status', add it (safe)
+ALTER TABLE public.drivers
+  ADD COLUMN IF NOT EXISTS status text NOT NULL DEFAULT 'active';
+
+-- Ensure existing rows have a non-null status value
+UPDATE public.drivers
+SET status = COALESCE(status, 'active')
+WHERE status IS NULL;
+
+-- Create an index on status to speed up status-filter queries (safe)
+CREATE INDEX IF NOT EXISTS idx_drivers_status ON public.drivers (status);
+
+-- Add a check constraint to restrict values to 'active' or 'inactive'
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint c
+    JOIN pg_class t ON c.conrelid = t.oid
+    WHERE c.conname = 'drivers_status_enum' AND t.relname = 'drivers'
+  ) THEN
+    ALTER TABLE public.drivers
+      ADD CONSTRAINT drivers_status_enum CHECK (status IN ('active','inactive'));
+  END IF;
+END$$;
+
+-- =========================
+-- 2) Customers table (existing)
+-- =========================
+CREATE TABLE IF NOT EXISTS public.customers (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  name text,
+  email text,
+  phone text,
+  created_at timestamptz DEFAULT now()
+);
+
+-- =========================
+-- 3) Orders table (safe, minimal create-if-missing)
+-- =========================
+CREATE TABLE IF NOT EXISTS public.orders (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  order_id text UNIQUE,
+  customer_id uuid REFERENCES public.customers(id) ON DELETE SET NULL,
+  assigned_to text,
+  status text DEFAULT 'NEW',
+  total numeric DEFAULT 0,
+  created_at timestamptz DEFAULT now(),
+  meta jsonb DEFAULT '{}' 
+);
+
+-- =========================
+-- 4) Safe, adaptive view creation for admin UI
+--    Drop the old view if it exists, then create the new one based
+--    on whether orders.order_id and orders.meta exist. This avoids
+--    the "cannot drop columns from view" error.
+-- =========================
+
+DO $$
+DECLARE
+  has_order_id boolean := false;
+  has_meta boolean := false;
+  select_order_id_expr text := '';
+  select_meta_expr text := '';
+  sql_text text := '';
+BEGIN
+  -- detect order_id presence
+  SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_schema = 'public'
+      AND table_name = 'orders'
+      AND column_name = 'order_id'
+  ) INTO has_order_id;
+
+  -- detect meta presence
+  SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_schema = 'public'
+      AND table_name = 'orders'
+      AND column_name = 'meta'
+  ) INTO has_meta;
+
+  IF has_order_id THEN
+    select_order_id_expr := 'COALESCE(o.order_id::text, o.id::text) AS order_id';
+  ELSE
+    select_order_id_expr := 'o.id::text AS order_id';
+  END IF;
+
+  IF has_meta THEN
+    select_meta_expr := 'o.meta';
+  ELSE
+    select_meta_expr := 'NULL::jsonb AS meta';
+  END IF;
+
+  -- Drop the view first if it exists to avoid column-drop issues
+  IF EXISTS (
+    SELECT 1 FROM information_schema.views
+    WHERE table_schema = 'public' AND table_name = 'deliveries_for_admin'
+  ) THEN
+    EXECUTE 'DROP VIEW IF EXISTS public.deliveries_for_admin CASCADE';
+  END IF;
+
+  -- Construct the CREATE VIEW statement
+  sql_text := format($f$
+    CREATE VIEW public.deliveries_for_admin AS
+    SELECT
+      %s,
+      o.id AS id,
+      o.assigned_to::text AS driver_id,
+      d.name::text AS driver_name,
+      o.status::text AS status,
+      o.total::numeric AS total,
+      c.name::text AS customer_name,
+      o.created_at,
+      %s
+    FROM public.orders o
+    LEFT JOIN public.drivers d ON d.id::text = o.assigned_to::text
+    LEFT JOIN public.customers c ON c.id = o.customer_id;
+  $f$, select_order_id_expr, select_meta_expr);
+
+  EXECUTE sql_text;
+END$$;
+
+-- Grant select rights to the roles used by your frontend.
+-- Adjust roles as per your Supabase RLS/security model.
+GRANT SELECT ON public.deliveries_for_admin TO authenticated;
+GRANT SELECT ON public.deliveries_for_admin TO anon;
+
+-- Also grant select on underlying tables to the roles if needed
+GRANT SELECT ON public.drivers TO authenticated;
+GRANT SELECT ON public.customers TO authenticated;
+GRANT SELECT ON public.orders TO authenticated;
+
+COMMIT;
+
+
+//tab 4
+-- FK: orders.assigned_to -> drivers(id)
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM information_schema.table_constraints tc
+    JOIN information_schema.key_column_usage kcu
+      ON tc.constraint_name = kcu.constraint_name
+    WHERE tc.constraint_type = 'FOREIGN KEY'
+      AND tc.table_name = 'orders'
+      AND kcu.column_name = 'assigned_to'
+  ) THEN
+    ALTER TABLE public.orders
+      ADD CONSTRAINT fk_orders_assigned_to_drivers
+      FOREIGN KEY (assigned_to) REFERENCES public.drivers(id)
+      ON DELETE SET NULL;
+  END IF;
+END;
+$$;
+
+-- FK: orders.customer_id -> customers(id)
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM information_schema.table_constraints tc
+    JOIN information_schema.key_column_usage kcu
+      ON tc.constraint_name = kcu.constraint_name
+    WHERE tc.constraint_type = 'FOREIGN KEY'
+      AND tc.table_name = 'orders'
+      AND kcu.column_name = 'customer_id'
+  ) THEN
+    ALTER TABLE public.orders
+      ADD CONSTRAINT fk_orders_customer_id_customers
+      FOREIGN KEY (customer_id) REFERENCES public.customers(id)
+      ON DELETE SET NULL;
+  END IF;
+END;
+$$;
+
+CREATE INDEX IF NOT EXISTS idx_orders_assigned_to ON public.orders (assigned_to);
+CREATE INDEX IF NOT EXISTS idx_orders_customer_id ON public.orders (customer_id);
+CREATE INDEX IF NOT EXISTS idx_orders_payment_method ON public.orders (payment_method);
+
+
+//tab 5
+-- Create function orders_over_time(from_date date, to_date date, interval text)
+-- Returns rows: period, orders, revenue
+CREATE OR REPLACE FUNCTION public.orders_over_time(
+  p_from date,
+  p_to date,
+  p_interval text DEFAULT 'day'
+)
+RETURNS TABLE(period timestamptz, orders bigint, revenue numeric)
+LANGUAGE sql STABLE AS $$
+  WITH bounds AS (
+    SELECT
+      $1::timestamptz AS from_ts,
+      ($2::timestamptz + INTERVAL '1 day' - INTERVAL '1 second') AS to_ts,
+      CASE
+        WHEN lower($3) IN ('day','d') THEN 'day'
+        WHEN lower($3) IN ('week','w') THEN 'week'
+        WHEN lower($3) IN ('month','m') THEN 'month'
+        ELSE 'day'
+      END AS the_interval
+  )
+  SELECT
+    date_trunc(bounds.the_interval, o.created_at) AS period,
+    COUNT(*)::bigint AS orders,
+    COALESCE(SUM(o.total),0)::numeric(12,2) AS revenue
+  FROM public.orders o, bounds
+  WHERE o.created_at BETWEEN bounds.from_ts AND bounds.to_ts
+  GROUP BY 1
+  ORDER BY 1;
+$$;
+
+
+//tab 6
+CREATE OR REPLACE FUNCTION public.admin_summary()
+RETURNS TABLE(
+  orders_count bigint,
+  revenue_total numeric,
+  pending_count bigint,
+  completed_count bigint,
+  other_status jsonb,
+  last_updated timestamptz
+)
+LANGUAGE sql STABLE AS $$
+  WITH status_counts AS (
+    SELECT status, COUNT(*)::bigint AS cnt
+    FROM public.orders
+    GROUP BY status
+  )
+  SELECT
+    (SELECT COUNT(*) FROM public.orders)::bigint AS orders_count,
+    COALESCE((SELECT SUM(total) FROM public.orders), 0)::numeric(12,2) AS revenue_total,
+    COALESCE((SELECT cnt FROM status_counts WHERE status = 'PENDING'), 0)::bigint AS pending_count,
+    COALESCE((SELECT cnt FROM status_counts WHERE status = 'COMPLETED'), 0)::bigint AS completed_count,
+    -- other statuses as jsonb (exclude PENDING and COMPLETED)
+    (
+      SELECT COALESCE(jsonb_object_agg(status, cnt), '{}'::jsonb)
+      FROM status_counts
+      WHERE status NOT IN ('PENDING','COMPLETED')
+    )::jsonb AS other_status,
+    now() AS last_updated;
+$$;
+
+
+//tab 7
+BEGIN;
+
+-- 1) Add normalized columns to orders if missing (non-destructive)
+ALTER TABLE IF EXISTS public.orders
+  ADD COLUMN IF NOT EXISTS order_number TEXT,
+  ADD COLUMN IF NOT EXISTS payment_status TEXT,
+  ADD COLUMN IF NOT EXISTS payment_amount NUMERIC;
+
+-- 2) Backfill order_number where missing
+UPDATE public.orders
+SET order_number = 'MB-' || TO_CHAR(created_at, 'YYYYMMDD') || '-' || SUBSTRING(REPLACE(id::text, '-', ''), 1, 8)
+WHERE order_number IS NULL;
+
+-- 3) Conditionally backfill payment_status and payment_amount from meta if meta column exists
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1
+    FROM information_schema.columns
+    WHERE table_schema = 'public'
+      AND table_name = 'orders'
+      AND column_name = 'meta'
+  ) THEN
+    -- backfill payment_status from meta->>'payment_status' where available
+    UPDATE public.orders
+    SET payment_status = COALESCE(payment_status, meta->>'payment_status')
+    WHERE payment_status IS NULL
+      AND meta->>'payment_status' IS NOT NULL;
+
+    -- backfill payment_amount from meta->>'payment_amount' or meta->>'total' where available
+    UPDATE public.orders
+    SET payment_amount = COALESCE(payment_amount,
+                                  CASE
+                                    WHEN (meta->>'payment_amount') IS NOT NULL THEN (meta->>'payment_amount')::numeric
+                                    WHEN (meta->>'total') IS NOT NULL THEN (meta->>'total')::numeric
+                                    ELSE NULL
+                                  END)
+    WHERE payment_amount IS NULL
+      AND (
+        (meta->>'payment_amount') IS NOT NULL
+        OR (meta->>'total') IS NOT NULL
+      );
+  ELSE
+    RAISE NOTICE 'orders.meta column not present — skipping meta-based backfill.';
+  END IF;
+END$$;
+
+-- 4) Drop existing view if any (avoid rename problems)
+DROP VIEW IF EXISTS public.deliveries_for_admin;
+
+-- 5) Build and create the view dynamically — only reference meta when it exists
+DO $$
+DECLARE
+  has_meta boolean := false;
+  select_order_number_expr text;
+  select_payment_method_expr text;
+  select_payment_status_expr text;
+  select_payment_amount_expr text;
+  sql_text text;
+BEGIN
+  -- detect if orders.meta column exists
+  SELECT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema='public' AND table_name='orders' AND column_name='meta'
+  ) INTO has_meta;
+
+  -- order_number expr (use existing order_number if any, else generate)
+  select_order_number_expr := 'COALESCE(o.order_number, ''MB-'' || TO_CHAR(o.created_at, ''YYYYMMDD'') || ''-'' || SUBSTRING(REPLACE(o.id::text, ''-'', ''''), 1, 8)) AS order_number';
+
+  IF has_meta THEN
+    -- when meta exists, prefer o.payment_method then meta->>'payment_method'
+    select_payment_method_expr := 'COALESCE(NULLIF(o.payment_method::text, ''''), NULLIF(o.meta->>''payment_method'', '''')) AS payment_method';
+    select_payment_status_expr := 'COALESCE(NULLIF(o.payment_status::text, ''''), NULLIF(o.meta->>''payment_status'', '''')) AS payment_status';
+    -- payment_amount: prefer column, else meta.payment_amount or meta.total
+    select_payment_amount_expr := 'COALESCE(o.payment_amount::numeric, (CASE WHEN (o.meta->>''payment_amount'') IS NOT NULL THEN (o.meta->>''payment_amount'')::numeric WHEN (o.meta->>''total'') IS NOT NULL THEN (o.meta->>''total'')::numeric ELSE NULL END)) AS payment_amount';
+  ELSE
+    -- when meta missing, just use top-level columns or NULLs
+    select_payment_method_expr := 'NULL::text AS payment_method';
+    select_payment_status_expr := 'NULL::text AS payment_status';
+    select_payment_amount_expr := 'NULL::numeric AS payment_amount';
+  END IF;
+
+  -- assemble final CREATE VIEW SQL
+  sql_text := format($f$
+    CREATE OR REPLACE VIEW public.deliveries_for_admin AS
+    SELECT
+      o.id::text AS order_id,
+      %s,
+      o.status::text AS status,
+      o.assigned_to::text AS driver_id,
+      d.name::text AS driver_name,
+      %s,
+      %s,
+      %s,
+      o.total::numeric AS total,
+      c.name::text AS customer_name,
+      o.created_at
+    FROM public.orders o
+    LEFT JOIN public.drivers d ON d.id::text = o.assigned_to::text
+    LEFT JOIN public.customers c ON c.id = o.customer_id;
+  $f$, select_order_number_expr, select_payment_method_expr, select_payment_status_expr, select_payment_amount_expr);
+
+  EXECUTE sql_text;
+END$$;
+
+-- 6) Grant select to typical roles (PO may adjust for RLS)
+GRANT SELECT ON public.deliveries_for_admin TO authenticated;
+GRANT SELECT ON public.deliveries_for_admin TO anon;
+
+COMMIT;
+
+
+//tab 8
+BEGIN;
+
+-- 1) Backfill payment_amount for COD orders where it's NULL
+UPDATE public.orders
+SET payment_amount = total
+WHERE payment_method ILIKE 'COD'
+  AND (payment_amount IS NULL OR payment_amount = 0 AND total IS NOT NULL);
+
+-- 2) Normalize payment_status for COD orders to 'PENDING' when missing or empty
+UPDATE public.orders
+SET payment_status = 'PENDING'
+WHERE payment_method ILIKE 'COD'
+  AND (payment_status IS NULL OR trim(payment_status) = '');
+
+COMMIT;
+
+
+//tab 9
+BEGIN;
+
+-- 1) Backfill payment_amount for COD orders where it's NULL or zero
+UPDATE public.orders
+SET payment_amount = total
+WHERE payment_method IS NOT NULL
+  AND LOWER(payment_method) = 'cod'
+  AND (payment_amount IS NULL OR payment_amount = 0)
+  AND total IS NOT NULL;
+
+-- 2) Normalize payment_status casing for COD/pending values
+UPDATE public.orders
+SET payment_status = 'PENDING'
+WHERE payment_method IS NOT NULL
+  AND LOWER(payment_method) = 'cod'
+  AND (payment_status IS NULL OR trim(lower(payment_status)) IN ('pending',''));
+
+-- 3) Optional safe normalization for online payments already marked (do not auto-mark unpaid)
+-- Convert common values to uppercase where present
+UPDATE public.orders
+SET payment_status = UPPER(payment_status)
+WHERE payment_status IS NOT NULL
+  AND payment_status <> UPPER(payment_status);
+
+COMMIT;
+
+
+//tab 10
+BEGIN;
+
+-- 1) Heuristic: fill missing payment_method/payment_status for active orders (assume COD)
+UPDATE public.orders
+SET
+  payment_method  = 'COD',
+  payment_status  = 'PENDING',
+  payment_amount  = COALESCE(payment_amount, total)
+WHERE payment_method IS NULL
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL)
+  AND status IN ('NEW', 'ACCEPTED', 'OUT_FOR_DELIVERY');
+
+-- 2) For completed orders: if you want to mark them as collected (PAID), run the optional block below.
+-- NOTE: run this only if you are confident completed COD orders were collected.
+COMMIT;
+
+BEGIN;
+
+-- OPTIONAL: mark completed COD orders as PAID
+UPDATE public.orders
+SET
+  payment_method = COALESCE(payment_method, 'COD'),
+  payment_status = 'PAID',
+  payment_amount = COALESCE(payment_amount, total)
+WHERE (payment_method IS NULL OR LOWER(payment_method) = '')
+  AND status = 'COMPLETED'
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL);
+
+COMMIT;
+
+
+//tab 11
+BEGIN;
+
+-- Heuristic: assume active non-null-amount orders are COD pending
+UPDATE public.orders
+SET
+  payment_method = COALESCE(payment_method, 'COD'),
+  payment_status = COALESCE(NULLIF(payment_status, ''), 'PENDING'),
+  payment_amount = COALESCE(payment_amount, total)
+WHERE payment_method IS NULL
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL)
+  AND status IN ('NEW','ACCEPTED','OUT_FOR_DELIVERY');
+
+COMMIT;
+
+BEGIN;
+
+UPDATE public.orders
+SET
+  payment_method = COALESCE(payment_method, 'COD'),
+  payment_status = 'PAID',
+  payment_amount = COALESCE(payment_amount, total)
+WHERE (payment_method IS NULL OR LOWER(payment_method) = '')
+  AND status = 'COMPLETED'
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL);
+
+COMMIT;
+
+
+//tab 12
+BEGIN;
+
+UPDATE public.orders
+SET
+  payment_method = COALESCE(payment_method, 'COD'),
+  payment_status = COALESCE(NULLIF(payment_status, ''), 'PENDING'),
+  payment_amount = COALESCE(payment_amount, total)
+WHERE payment_method IS NULL
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL)
+  AND status IN ('NEW','ACCEPTED','OUT_FOR_DELIVERY');
+
+COMMIT;
+BEGIN;
+
+UPDATE public.orders
+SET
+  payment_method = COALESCE(payment_method, 'COD'),
+  payment_status = 'PAID',
+  payment_amount = COALESCE(payment_amount, total)
+WHERE (payment_method IS NULL OR payment_method = '')
+  AND status = 'COMPLETED'
+  AND (payment_amount IS NOT NULL OR total IS NOT NULL);
+
+COMMIT;
+
