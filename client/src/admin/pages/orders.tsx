@@ -7,7 +7,6 @@ import { fetchOrders, adminApi } from '../services/api'; // <-- service layer (a
 // Use the shared singleton supabase client to avoid multiple GoTrue instances
 import supabase from '../../lib/supabaseClient';
 
-// TODO: Use admin auth token (keep in memory or secure cookie). Pass token to service calls as needed.
 type Order = {
   id: string;
   order_id?: string;
@@ -65,17 +64,14 @@ const AdminOrdersPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // NOTE: If you have an admin token, pass it here (do not store long-lived tokens in localStorage).
   const adminToken: string | undefined = undefined; // TODO: wire real token
 
-  // Manual load function (used for initial load / user-triggered loads)
   const loadOrders = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
       const statusParam = statusFilter === 'All' ? '' : statusFilter;
 
-      // Use numeric signature so query params serialize correctly: ?page=1&limit=10
       const resp = await adminApi.getOrders(
         currentPage,
         ORDERS_PER_PAGE,
@@ -86,7 +82,6 @@ const AdminOrdersPage: React.FC = () => {
       const data = (resp && (resp.items || resp.data || resp.orders)) || [];
       const meta = (resp && resp.meta) || { total: data.length, page: currentPage, limit: ORDERS_PER_PAGE };
 
-      // Defensive: ensure newest-first ordering client-side (server should ideally order)
       const rows = (data || []).slice().sort((a: Order, b: Order) => {
         const ta = a.created_at ? new Date(a.created_at).getTime() : 0;
         const tb = b.created_at ? new Date(b.created_at).getTime() : 0;
@@ -105,7 +100,6 @@ const AdminOrdersPage: React.FC = () => {
     }
   }, [currentPage, statusFilter, searchQuery, adminToken]);
 
-  // Initial load + whenever filters/pagination change
   useEffect(() => {
     loadOrders();
   }, [loadOrders]);
@@ -116,7 +110,6 @@ const AdminOrdersPage: React.FC = () => {
   const subscriptionRef = useRef<any | null>(null);
 
   useEffect(() => {
-    // subscribe to changes for orders table
     const subscribe = () => {
       if (subscriptionRef.current) return;
       if (!supabase) {
@@ -127,9 +120,7 @@ const AdminOrdersPage: React.FC = () => {
         const channel = supabase
           .channel('public:orders')
           .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
-            // Simple heuristic: refetch current page when any change arrives.
-            // For more efficient behavior, you can reconcile payload.record into the orders array.
-            // But server-side filters / pagination complicate reconciliation; refetch is safe and simple.
+            // simple safe behavior: refetch current page; keep for cases where payload isn't aligned with client filters
             loadOrders();
           })
           .subscribe();
@@ -150,7 +141,6 @@ const AdminOrdersPage: React.FC = () => {
       }
     };
 
-    // start subscription if visible
     if (document.visibilityState === 'visible') {
       subscribe();
     }
@@ -159,7 +149,6 @@ const AdminOrdersPage: React.FC = () => {
       if (document.visibilityState === 'hidden') {
         unsubscribe();
       } else {
-        // resume subscription and refresh list
         subscribe();
         loadOrders();
       }
@@ -176,6 +165,83 @@ const AdminOrdersPage: React.FC = () => {
       } catch (e) {
         // ignore
       }
+    };
+  }, [loadOrders]);
+
+  // ---------------------------
+  // DOM event listeners for slide-over / other components
+  // ---------------------------
+  useEffect(() => {
+    const onOrderUpdated = (ev: Event) => {
+      // CustomEvent detail may contain: { orderId, status, assigned_to, ... }
+      const e = ev as CustomEvent<Record<string, any>>;
+      const detail = e?.detail ?? {};
+      const orderId = detail?.orderId ?? detail?.id;
+
+      // If no orderId present, do a safe full refresh
+      if (!orderId) {
+        loadOrders();
+        return;
+      }
+
+      // Try to reconcile the change into local state for snappy UI updates
+      const updatedFields: Partial<Order> = {};
+      if (detail.status) updatedFields.status = detail.status;
+      if (detail.assigned_to !== undefined) updatedFields.assigned_to = detail.assigned_to;
+      // If the event carried an updated order object, prefer it
+      const newOrderObj = detail.order;
+
+      setOrders((prev) => {
+        let found = false;
+        const next = prev.map((o) => {
+          if (String(o.id) === String(orderId)) {
+            found = true;
+            // If full order provided, merge it; otherwise merge updatedFields defensively
+            return {
+              ...o,
+              ...(newOrderObj ? newOrderObj : updatedFields),
+            } as Order;
+          }
+          return o;
+        });
+        // if order not found but we got a newOrderObj and it matches current filters, insert it
+        if (!found && newOrderObj) {
+          // naive insert at top — server pagination might later remove it; safe for immediate UI
+          return [newOrderObj as Order, ...next];
+        }
+        // if not found and no details to apply, fallback to refetch
+        if (!found && !newOrderObj && Object.keys(updatedFields).length === 0) {
+          // trigger load async (do not block)
+          loadOrders();
+          return prev;
+        }
+        return next;
+      });
+
+      // Update slide-over if it's open and showing this order
+      setSelectedOrder((cur) => {
+        if (!cur) return cur;
+        if (String(cur.id) === String(orderId)) {
+          // merge
+          return {
+            ...cur,
+            ...(newOrderObj ? newOrderObj : updatedFields),
+          } as Order;
+        }
+        return cur;
+      });
+    };
+
+    const onRefreshOrders = () => {
+      loadOrders();
+    };
+
+    window.addEventListener('miya:order-updated', onOrderUpdated as EventListener);
+    window.addEventListener('miya:refresh-orders', onRefreshOrders as EventListener);
+
+    return () => {
+      window.removeEventListener('miya:order-updated', onOrderUpdated as EventListener);
+      window.removeEventListener('miya:refresh-orders', onRefreshOrders as EventListener);
     };
   }, [loadOrders]);
 
@@ -276,7 +342,6 @@ const AdminOrdersPage: React.FC = () => {
           </table>
         </div>
 
-        {/* Pagination controls */}
         <div className="flex items-center justify-between mt-4">
           <div className="text-sm text-gray-600">
             Page {currentPage} of {totalPages}

@@ -115,10 +115,55 @@ export const adminApi = {
     await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
   },
 
+  /**
+   * getDeliveries
+   * - Prefer calling /api/admin/deliveries (server-side view or endpoint).
+   * - If that fails due to orders.order_id missing (Postgres 42703), automatically fallback
+   *   to calling /api/admin/orders and mapping the response into a delivery-like shape.
+   * - Normalizes a variety of server shapes so the frontend is resilient.
+   */
   getDeliveries: async (token?: string): Promise<any[]> => {
     const url = `${API_BASE_URL}/deliveries`;
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
-    return json?.data ?? json?.items ?? json ?? [];
+    try {
+      const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+      const list: any[] = Array.isArray(json) ? json : (json?.data ?? json?.items ?? json ?? []);
+      // Normalize the shape
+      return (list || []).map((r: any) => ({
+        orderId: r.orderId ?? r.order_id ?? r.id ?? String(r?.id ?? ''),
+        id: r.id ?? r.orderId ?? r.order_id ?? null,
+        driverId: r.driverId ?? r.driver_id ?? r.assigned_to ?? null,
+        driverName: r.driverName ?? r.driver_name ?? r.driver ?? null,
+        status: r.status ?? null,
+        raw: r,
+      }));
+    } catch (err: any) {
+      const raw = (err && (err.raw ?? err)) || null;
+      const msg = err?.message ?? (err?.toString && err.toString()) ?? 'Unknown error';
+      // If server error mentions order_id missing, fallback to /orders endpoint
+      if (msg && /order_id/i.test(msg) && /does not exist/i.test(msg)) {
+        console.warn('Primary /deliveries endpoint failed due to orders.order_id missing — trying fallback /orders...', msg);
+        try {
+          const fallbackUrl = `${API_BASE_URL}/orders?page=1&limit=100`;
+          const { json: ordersJson } = await safeFetch(fallbackUrl, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+          const items = Array.isArray(ordersJson) ? ordersJson : (ordersJson?.data ?? ordersJson?.items ?? ordersJson?.orders ?? []);
+          return (items || []).map((o: any) => ({
+            orderId: o.order_id ?? o.orderId ?? String(o.id ?? ''),
+            id: o.id ?? null,
+            driverId: o.assigned_to ?? o.driverId ?? null,
+            driverName: o.driver_name ?? null,
+            status: o.status ?? null,
+            raw: o,
+          }));
+        } catch (fallbackErr: any) {
+          const fm = fallbackErr?.message ?? (fallbackErr?.toString && fallbackErr.toString()) ?? 'Fallback failed';
+          const e = new Error(`Primary deliveries endpoint failed: ${msg}. Fallback also failed: ${fm}`);
+          (e as any).raw = { primary: raw, fallback: fallbackErr?.raw ?? fallbackErr };
+          throw e;
+        }
+      }
+      // otherwise rethrow original error (keeps raw attached)
+      throw err;
+    }
   },
 
   getCustomers: async (token?: string): Promise<Customer[]> => {

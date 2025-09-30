@@ -133,6 +133,23 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
 
   if (!isOpen) return null;
 
+  /**
+   * Notify other parts of the app to refresh without a full reload.
+   * Accepts an optional detail payload so listeners can do fine-grained updates.
+   */
+  const notifyUpdates = (detail?: Record<string, any>) => {
+    try {
+      // generic signals for listeners that want a full refresh
+      window.dispatchEvent(new CustomEvent('miya:refresh-deliveries'));
+      window.dispatchEvent(new CustomEvent('miya:refresh-orders'));
+
+      // more specific update event that carries payload for incremental updates
+      window.dispatchEvent(new CustomEvent('miya:order-updated', { detail: detail ?? {} }));
+    } catch (e) {
+      console.warn('notifyUpdates failed', e);
+    }
+  };
+
   const handleAssign = async () => {
     if (!selectedDriver) {
       setMessage('Please select a driver to assign.');
@@ -141,14 +158,20 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
     setAssigning(true);
     setError(null);
     setMessage(null);
+
+    // optimistic UI update: reflect assigned_to immediately for in-panel UX
+    const prevAssigned = order.assigned_to;
+    setSelectedDriver(selectedDriver);
+
     try {
-      // call adminApi.assignDriverToOrder — normalized in services
-      await adminApi.assignDriverToOrder(order.id, selectedDriver);
+      const result = await adminApi.assignDriverToOrder(order.id, selectedDriver, adminToken);
+      // If API returns updated order or assigned id, prefer that
+      const assigned_to = result?.assigned_to ?? selectedDriver;
       setMessage('Driver assigned.');
-      // quick refresh to reflect change
-      setTimeout(() => window.location.reload(), 300);
+      notifyUpdates({ orderId: order.id, assigned_to });
     } catch (err: any) {
-      // try to show useful server message
+      // revert optimistic assignment if needed (can't mutate parent prop; just update select)
+      setSelectedDriver(prevAssigned ?? '');
       setError(err?.message || String(err) || 'Failed to assign driver');
     } finally {
       setAssigning(false);
@@ -163,11 +186,21 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
     setUpdatingStatus(true);
     setError(null);
     setMessage(null);
+
+    // optimistic UI: show the new status locally
+    const prevStatus = normalizeDisplayStatus(order?.status);
+    setSelectedStatus(selectedStatus);
+
     try {
-      await adminApi.updateOrderStatus(order.id, selectedStatus);
-      setMessage(`Status updated to ${humanizeStatus(selectedStatus)}.`);
-      setTimeout(() => window.location.reload(), 300);
+      const result = await adminApi.updateOrderStatus(order.id, selectedStatus, adminToken);
+      // If API returns updated order object or status, use it for fidelity
+      const newStatus = result?.status ? normalizeDisplayStatus(result.status) : selectedStatus;
+      setSelectedStatus(newStatus);
+      setMessage(`Status updated to ${humanizeStatus(newStatus)}.`);
+      notifyUpdates({ orderId: order.id, status: newStatus });
     } catch (err: any) {
+      // revert optimistic UI on error
+      setSelectedStatus(prevStatus);
       setError(err?.message || String(err) || 'Failed to update status');
     } finally {
       setUpdatingStatus(false);
@@ -179,11 +212,19 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
     setUpdatingStatus(true);
     setError(null);
     setMessage(null);
+
+    // optimistic UI change
+    const prevStatus = normalizeDisplayStatus(order?.status);
+    setSelectedStatus('CANCELLED');
+
     try {
-      await adminApi.updateOrderStatus(order.id, 'CANCELLED');
+      const result = await adminApi.updateOrderStatus(order.id, 'CANCELLED', adminToken);
+      const newStatus = result?.status ? normalizeDisplayStatus(result.status) : 'CANCELLED';
+      setSelectedStatus(newStatus);
       setMessage('Order cancelled.');
-      setTimeout(() => window.location.reload(), 300);
+      notifyUpdates({ orderId: order.id, status: newStatus });
     } catch (err: any) {
+      setSelectedStatus(prevStatus);
       setError(err?.message || String(err) || 'Failed to cancel order');
     } finally {
       setUpdatingStatus(false);
@@ -291,7 +332,8 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                     disabled={updatingStatus}
                     className="border-gray-300 rounded-md px-3 py-2"
                   >
-                    <option value="">{humanizeStatus(order.status)}</option>
+                    {/* Ensure current status is present as an option so `value` always matches an option */}
+                    <option value={normalizeDisplayStatus(order.status)}>{humanizeStatus(order.status)}</option>
                     {statusOptionsDisplay.map((s) => (
                       <option key={s.value} value={s.value}>{s.label}</option>
                     ))}
