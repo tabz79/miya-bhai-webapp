@@ -15,6 +15,8 @@ type Order = {
   created_at: string;
   assigned_to?: string | null;
   customer_details?: { name?: string; phone?: string };
+  customer_name?: string | null;
+  customers?: { name?: string } | null;
   items?: any[];
 };
 
@@ -328,7 +330,7 @@ const AdminOrdersPage: React.FC = () => {
                   onKeyDown={(e) => { if (e.key === 'Enter') handleRowClick(o); }}
                 >
                   <td className="p-2">{o.order_id ?? `#${String(o.id).slice(0, 8)}`}</td>
-                  <td className="p-2">{o.customer_details?.name ?? '—'}</td>
+                  <td className="p-2">{o.customer_details?.name ?? o.customer_name ?? o.customers?.name ?? '—'}</td>
                   <td className="p-2">{o.created_at ? new Date(o.created_at).toLocaleString() : '—'}</td>
                   <td className="p-2">
                     <span className={`py-1 px-3 rounded-full text-xs ${statusBadgeClass(o.status ?? 'UNKNOWN')}`}>

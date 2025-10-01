@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
@@ -13,6 +14,12 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 app.use(requestId);
+
+// CORS: allow frontend (dev) to call API with cookies
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+}));
 
 // Routes
 app.use('/api', healthRouter);

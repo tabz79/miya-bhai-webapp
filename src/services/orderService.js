@@ -15,7 +15,7 @@ const isUuid = (val) => {
 
 /* ---------------------- helpers (unchanged, lightly cleaned) --------------------- */
 
-function computeTotals(items = []) { /* same as before */ 
+function computeTotals(items = []) {
   let subtotal = 0;
   let tax = 0;
   let discount = 0;
@@ -45,7 +45,7 @@ function computeTotals(items = []) { /* same as before */
   };
 }
 
-function normalizeItems(rawItems = []) { /* same as before */
+function normalizeItems(rawItems = []) {
   if (!Array.isArray(rawItems)) return [];
   return rawItems.map((it) => {
     if (it && it.productId && (typeof it.qty !== 'undefined' || typeof it.quantity !== 'undefined')) {
@@ -71,7 +71,7 @@ function normalizeItems(rawItems = []) { /* same as before */
   });
 }
 
-function validateItems(items = []) { /* same as before */
+function validateItems(items = []) {
   if (!Array.isArray(items) || items.length === 0) {
     return { valid: false, error: { code: 'CartEmpty', message: 'Cart has no items. Add items before checkout.' } };
   }
@@ -91,9 +91,160 @@ function validateItems(items = []) { /* same as before */
   return { valid: true };
 }
 
-/* ---------------------- order operations --------------------- */
+/* ---------------------- NEW: upsert customer + create order helper --------------------- */
 
-export async function createOrder(cart) { /* unchanged implementation - same as earlier file */ 
+/**
+ * normalizePhone: remove all non-digits
+ */
+function normalizePhone(phone) {
+  if (!phone) return null;
+  return String(phone).replace(/\D/g, '');
+}
+
+/**
+ * upsertCustomerAndCreateOrder(payload)
+ *
+ * - Finds existing customer by email (preferred) or phone_normalized
+ * - If not found, inserts a new customer
+ * - Inserts order linked to that customer
+ * - Handles simple race condition where insert may fail due to uniqueness by trying a fallback lookup
+ *
+ * Returns: { order, customerId } or throws an error
+ */
+export async function upsertCustomerAndCreateOrder(payload) {
+  const {
+    customer_name,
+    customer_email,
+    customer_phone,
+    items,
+    totals,
+    total = 0,
+    payment_method = 'COD',
+    payment_status = 'PENDING',
+    order_number,
+    cart_id = null,
+  } = payload;
+
+  const phone_normalized = normalizePhone(customer_phone);
+  const emailNormalized = customer_email ? String(customer_email).trim().toLowerCase() : null;
+
+  try {
+    // 1) Try find by email first, then phone
+    let existing = null;
+    if (emailNormalized) {
+      const { data: byEmail, error: e1 } = await supabase
+        .from('customers')
+        .select('id')
+        .eq('email', emailNormalized)
+        .limit(1);
+      if (e1) throw e1;
+      if (byEmail && byEmail.length) existing = byEmail[0];
+    }
+
+    if (!existing && phone_normalized) {
+      const { data: byPhone, error: e2 } = await supabase
+        .from('customers')
+        .select('id')
+        .eq('phone_normalized', phone_normalized)
+        .limit(1);
+      if (e2) throw e2;
+      if (byPhone && byPhone.length) existing = byPhone[0];
+    }
+
+    let customerId = null;
+
+    if (existing && existing.id) {
+      customerId = existing.id;
+      // optionally update contact fields to improve data over time
+      await supabase.from('customers').update({
+        name: customer_name ?? undefined,
+        email: emailNormalized ?? undefined,
+        phone: customer_phone ?? undefined,
+        phone_normalized: phone_normalized ?? undefined,
+        updated_at: new Date().toISOString(),
+      }).eq('id', customerId);
+    } else {
+      // 2) create new customer
+      const insertPayload = {
+        name: customer_name ?? null,
+        email: emailNormalized ?? null,
+        phone: customer_phone ?? null,
+        phone_normalized: phone_normalized ?? null,
+        created_at: new Date().toISOString(),
+      };
+
+      const { data: created, error: createErr } = await supabase
+        .from('customers')
+        .insert([insertPayload])
+        .select('id');
+
+      if (createErr) {
+        // handle simple race where another process inserted same customer concurrently
+        // try fallback lookup by email/phone
+        if (createErr.code === '23505' || String(createErr.message).toLowerCase().includes('duplicate')) {
+          let fallback = null;
+          if (emailNormalized) {
+            const { data: fb1 } = await supabase.from('customers').select('id').eq('email', emailNormalized).limit(1);
+            if (fb1 && fb1.length) fallback = fb1[0];
+          }
+          if (!fallback && phone_normalized) {
+            const { data: fb2 } = await supabase.from('customers').select('id').eq('phone_normalized', phone_normalized).limit(1);
+            if (fb2 && fb2.length) fallback = fb2[0];
+          }
+          if (fallback && fallback.id) {
+            customerId = fallback.id;
+          } else {
+            throw createErr;
+          }
+        } else {
+          throw createErr;
+        }
+      } else if (created && created.length) {
+        customerId = created[0].id;
+      } else {
+        throw new Error('Failed to create customer (no id returned)');
+      }
+    }
+
+    // 3) Insert order linked to customerId
+    const orderPayload = {
+      customer_id: customerId,
+      customer_name: customer_name ?? null,
+      customer_email: emailNormalized,
+      customer_phone: customer_phone ?? null,
+      items: items || [],
+      totals: totals || {},
+      total,
+      payment_method,
+      payment_status,
+      status: (payment_status && payment_status.toUpperCase() === 'PAID') ? 'PAID' : 'NEW',
+      cart_id,
+      created_at: new Date().toISOString(),
+      order_number: order_number || `MB-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+    };
+
+    const { data: orderData, error: orderErr } = await supabase
+      .from('orders')
+      .insert([orderPayload])
+      .select('*');
+
+    if (orderErr) {
+      throw orderErr;
+    }
+
+    const createdOrder = (orderData && orderData.length) ? orderData[0] : null;
+    if (!createdOrder || !createdOrder.id) throw new Error('Order insert returned no id');
+
+    return { order: createdOrder, customerId };
+  } catch (err) {
+    // bubble up
+    throw err;
+  }
+}
+
+/* ---------------------- order operations (createOrder now uses upsert helper) --------------------- */
+
+export async function createOrder(cart) {
   try {
     if (!cart) {
       console.warn('createOrder: missing cart');
@@ -142,41 +293,28 @@ export async function createOrder(cart) { /* unchanged implementation - same as 
     const denormName = customer?.name ?? customer?.fullName ?? null;
     const denormPhone = customer?.phone ?? customer?.phoneNumber ?? null;
 
-    const orderData = {
+    // Build a payload for upsert + create
+    const payload = {
+      customer_name: denormName,
+      customer_email: denormEmail,
+      customer_phone: denormPhone,
       items: itemsWithGst,
       totals,
       total: Number(totalsNumeric),
-      customer_details: customer,
-      customer_email: denormEmail,
-      customer_name: denormName,
-      customer_phone: denormPhone,
       payment_method: (cart.payment_method || cart.paymentMethod || 'COD'),
-      payment_status: (cart.payment_status || 'pending'), // Use cart's payment_status if provided, else 'pending'
-      payment_amount: (cart.payment_method === 'COD' || cart.paymentMethod === 'COD') ? Number(totalsNumeric) : 0, // For COD, collect total; for online, 0 initially
-      status: 'NEW',
+      payment_status: (cart.payment_status || 'pending'),
       cart_id: cart.id || cart.cartId || null,
-      created_at: new Date().toISOString(),
-      // Generate a human-friendly order number
-      order_number: `MB-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
     };
 
-    const { data, error } = await supabase
-      .from('orders')
-      .insert([orderData])
-      .select('id')
-      .single();
+    // Use the robust helper (ensures customers row exists and returns created order)
+    const result = await upsertCustomerAndCreateOrder(payload);
 
-    if (error) {
-      console.error('createOrder: supabase insert error', { error, cartId: cart.id ?? null });
-      return { error: { code: 'DatabaseError', message: error.message || 'Failed to create order' } };
+    if (!result || !result.order || !result.order.id) {
+      console.error('createOrder: failed upsert/create flow', { result });
+      return { error: { code: 'CreateFailed', message: 'Failed to create order' } };
     }
 
-    if (!data || !data.id) {
-      console.error('createOrder: no data returned from insert', { data, cartId: cart.id ?? null });
-      return { error: { code: 'NoData', message: 'Failed to create order, no id returned.' } };
-    }
-
-    return { orderId: data.id };
+    return { orderId: result.order.id };
   } catch (e) {
     console.error('createOrder: unexpected exception', e);
     return { error: { code: 'ServerError', message: e.message || 'Unexpected server error' } };

@@ -2,8 +2,13 @@
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 import { parse } from 'json2csv';
+import requireAdmin from '../middleware/requireAdmin.js';
 
 const router = express.Router();
+
+console.log('[admin routes] loaded'); // debug: indicate routes file loaded
+
+router.use(requireAdmin); // Apply admin middleware to all routes in this file
 
 const SUPABASE_URL = process.env.SUPABASE_URL || '';
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
@@ -18,15 +23,6 @@ function toNumber(v) {
   const n = Number(v);
   return isNaN(n) ? 0 : n;
 }
-
-// Middleware for basic admin authentication (optional, for later)
-// router.use((req, res, next) => {
-//   const adminSecret = process.env.ADMIN_SECRET; // TODO: Define ADMIN_SECRET env var
-//   if (!adminSecret || req.headers['x-admin-secret'] !== adminSecret) {
-//     return res.status(401).json({ error: 'Unauthorized' });
-//   }
-//   next();
-// });
 
 // GET /api/admin/summary
 router.get('/admin/summary', async (req, res) => {
@@ -44,7 +40,6 @@ router.get('/admin/summary', async (req, res) => {
     if (completedErr) throw completedErr;
 
     // total revenue (all time)
-    // TODO: Ensure 'total' column in 'orders' table is numeric. Consider a database function for sum for better performance.
     const { data: revenueData, error: revenueErr } = await supabase.from('orders').select('total');
     if (revenueErr) throw revenueErr;
     const totalRevenue = (revenueData || []).reduce((s, r) => s + toNumber(r.total), 0);
@@ -80,11 +75,10 @@ router.get('/admin/charts/orders-over-time', async (req, res) => {
       if (interval === 'month') {
         key = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
       } else if (interval === 'week') {
-        // Simple week calculation (might need refinement for ISO weeks)
         const startOfWeek = new Date(date);
-        startOfWeek.setDate(date.getDate() - date.getDay()); // Sunday as start of week
+        startOfWeek.setDate(date.getDate() - date.getDay());
         key = startOfWeek.toISOString().substring(0, 10);
-      } else { // Default to day
+      } else {
         key = date.toISOString().substring(0, 10);
       }
 
@@ -107,7 +101,6 @@ router.get('/admin/charts/orders-over-time', async (req, res) => {
 // GET /api/admin/charts/payment-methods
 router.get('/admin/charts/payment-methods', async (req, res) => {
   try {
-    // Assumption: 'payment_method' column exists in 'orders' table
     const { data, error } = await supabase.from('orders').select('payment_method');
     if (error) throw error;
 
@@ -131,6 +124,7 @@ router.get('/admin/charts/payment-methods', async (req, res) => {
 
 // GET /api/admin/orders
 router.get('/admin/orders', async (req, res) => {
+  console.log('[admin/orders] route hit', { query: req.query }); // debug: show when route is hit
   try {
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
     const limit = Math.max(1, parseInt(req.query.limit, 10) || 10);
@@ -139,25 +133,33 @@ router.get('/admin/orders', async (req, res) => {
     const from = (page - 1) * limit;
     const to = from + limit - 1;
 
-    let query = supabase.from('orders').select('*', { count: 'exact' });
+    // Select orders and include the related customer name when available
+    let query = supabase.from('orders').select('*, customers(name)', { count: 'exact' });
 
     if (status && status !== 'All') {
       query = query.eq('status', status);
     }
 
-    // Apply search filter if provided
     if (search) {
-      // Supabase doesn't directly support complex OR conditions on multiple columns easily
-      // For simplicity, we'll search 'order_id' and 'customer_details->>name'
-      // TODO: Adjust based on actual Supabase search capabilities and performance needs
-      query = query.or(`order_id.ilike.%${search}%,customer_details->>name.ilike.%${search}%`);
+      // Try a couple of helpful search fields; keep it simple for MVP
+      const like = `%${search}%`;
+      // We include order id and customer snapshot name; also attempt customers.name (joined)
+      query = query.or(`id.ilike.${like},customer_name.ilike.${like},customers.name.ilike.${like}`);
     }
 
     const { data, count, error } = await query.order('created_at', { ascending: false }).range(from, to);
 
     if (error) throw error;
 
-    return res.json({ data: data || [], meta: { total: count ?? 0, page, limit } });
+    // Defensive: ensure every order has customer_name (either snapshot or joined)
+    const normalized = (data || []).map((r) => {
+      return {
+        ...r,
+        customer_name: r.customer_name || (r.customers && r.customers.name) || null,
+      };
+    });
+
+    return res.json({ data: normalized, meta: { total: count ?? 0, page, limit } });
   } catch (err) {
     console.error('[admin/orders] error', err);
     return res.status(500).json({ error: err.message || String(err) });
@@ -168,18 +170,46 @@ router.get('/admin/orders', async (req, res) => {
 router.put('/admin/orders/:id/status', async (req, res) => {
   try {
     const { id } = req.params;
-    const { status } = req.body;
+    const { status, markPaid } = req.body;
 
     if (!status) {
       return res.status(400).json({ error: 'Status is required' });
     }
-    // TODO: Validate status against allowed enum values (e.g., NEW, PENDING, ACCEPTED, PREPARING, OUT_FOR_DELIVERY, DELIVERED, COMPLETED, CANCELLED)
 
-    const { data, error } = await supabase.from('orders').update({ status }).eq('id', id).select();
+    // Load current order
+    const { data: existing, error: fetchErr } = await supabase
+      .from('orders')
+      .select('id, payment_method, payment_status')
+      .eq('id', id)
+      .single();
+
+    if (fetchErr) {
+      console.error('[admin/orders/:id/status] fetchErr', fetchErr);
+      return res.status(500).json({ error: 'Failed to load order' });
+    }
+    if (!existing) {
+      return res.status(404).json({ error: 'Order not found' });
+    }
+
+    const updates = { status, updated_at: new Date().toISOString() };
+
+    // MVP rule: when admin marks COMPLETED, treat COD as collected → mark PAID
+    if (status === 'COMPLETED') {
+      const pm = (existing.payment_method || '').toUpperCase();
+      if (markPaid === true || pm === 'COD') {
+        updates.payment_status = 'PAID';
+      }
+    }
+
+    const { data, error } = await supabase
+      .from('orders')
+      .update(updates)
+      .eq('id', id)
+      .select();
 
     if (error) throw error;
     if (!data || data.length === 0) {
-      return res.status(404).json({ error: 'Order not found' });
+      return res.status(404).json({ error: 'Order not found after update' });
     }
 
     return res.json({ message: 'Order status updated', order: data[0] });
@@ -194,8 +224,6 @@ router.put('/admin/orders/:id/assign', async (req, res) => {
   try {
     const { id } = req.params;
     const { driverId } = req.body; // driverId can be null to unassign
-
-    // TODO: Validate driverId exists if not null, perhaps check against a list of active drivers
 
     const { data, error } = await supabase.from('orders').update({ assigned_to: driverId }).eq('id', id).select();
 
@@ -230,7 +258,6 @@ router.post('/admin/drivers', async (req, res) => {
     if (!name || !phone) {
       return res.status(400).json({ error: 'Name and phone are required' });
     }
-    // TODO: Validate phone format (e.g., regex), status enum (e.g., active, inactive, on_leave)
 
     const { data, error } = await supabase.from('drivers').insert([{ name, phone, status: status || 'active' }]).select();
     if (error) throw error;
@@ -247,7 +274,6 @@ router.put('/admin/drivers/:id', async (req, res) => {
     if (!name || !phone) {
       return res.status(400).json({ error: 'Name and phone are required' });
     }
-    // TODO: Validate phone format (e.g., regex), status enum (e.g., active, inactive, on_leave)
 
     const { data, error } = await supabase.from('drivers').update({ name, phone, status }).eq('id', id).select();
     if (error) throw error;
@@ -277,20 +303,17 @@ router.delete('/admin/drivers/:id', async (req, res) => {
 // GET /api/admin/deliveries
 router.get('/admin/deliveries', async (req, res) => {
   try {
-    // Query the new deliveries_for_admin view
     const { data, error } = await supabase
       .from('deliveries_for_admin')
       .select('order_number, order_id, driver_name, status, payment_method, payment_status, payment_amount, total')
-      .in('status', ['PREPARING', 'OUT_FOR_DELIVERY']); // Filter for relevant delivery statuses
+      .in('status', ['PREPARING', 'OUT_FOR_DELIVERY']);
 
     if (error) throw error;
 
-    // The view already provides the normalized shape, so no further mapping is needed here
     return res.json({ data: data || [] });
   } catch (err) {
     console.error('[admin/deliveries] error', err);
-    // Gracefully handle missing view by providing a fallback message
-    if (err.code === '42P01') { // undefined_table
+    if (err.code === '42P01') {
       return res.status(500).json({ error: 'Database view deliveries_for_admin not found. Please ensure migrations are run.' });
     }
     return res.status(500).json({ error: err.message || String(err) });
@@ -300,9 +323,34 @@ router.get('/admin/deliveries', async (req, res) => {
 // GET /api/admin/customers
 router.get('/admin/customers', async (req, res) => {
   try {
-    const { data, error } = await supabase.from('customers').select('*').order('name', { ascending: true });
+    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+    const limit = Math.max(1, parseInt(req.query.limit, 10) || 10);
+    const query = (req.query.query || '').trim();
+    const from = (page - 1) * limit;
+    const to = from + limit - 1;
+
+    let customersQuery = supabase.from('customers').select('id, name, phone, email, total_spent, last_order_at', { count: 'exact' });
+
+    if (query) {
+      if (/^\d+$/.test(query)) {
+        customersQuery = customersQuery.eq('phone_normalized', query);
+      } else {
+        customersQuery = customersQuery.or(`name.ilike.%${query}%,email.ilike.%${query}%`);
+      }
+    }
+
+    const { data, count, error } = await customersQuery
+      .order('name', { ascending: true })
+      .range(from, to);
+
     if (error) throw error;
-    return res.json({ data: data || [] });
+
+    return res.json({
+      data: data || [],
+      count: count ?? 0,
+      page,
+      limit,
+    });
   } catch (err) {
     console.error('[admin/customers] error', err);
     return res.status(500).json({ error: err.message || String(err) });
@@ -313,16 +361,23 @@ router.get('/admin/customers', async (req, res) => {
 router.get('/admin/customers/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { data, error } = await supabase.from('customers').select('*').eq('id', id).single();
-    if (error) throw error;
-    if (!data) {
+    const { data: customer, error: customerError } = await supabase.from('customers').select('id, name, phone, email, total_spent, last_order_at').eq('id', id).single();
+    if (customerError) throw customerError;
+    if (!customer) {
       return res.status(404).json({ error: 'Customer not found' });
     }
-    // Optionally fetch customer's orders
-    const { data: orders, error: ordersError } = await supabase.from('orders').select('*').eq('customer_id', id).order('created_at', { ascending: false }); // Assumption: orders.customer_id exists
+
+    // Fetch last 10 orders for this customer
+    const { data: orders, error: ordersError } = await supabase
+      .from('orders')
+      .select('id, created_at, total, status')
+      .eq('customer_id', id)
+      .order('created_at', { ascending: false })
+      .limit(10);
+
     if (ordersError) throw ordersError;
 
-    return res.json({ customer: data, orders: orders || [] });
+    return res.json({ customer, orders: orders || [] });
   } catch (err) {
     console.error('[admin/customers/:id] error', err);
     return res.status(500).json({ error: err.message || String(err) });
