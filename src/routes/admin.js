@@ -413,4 +413,46 @@ router.get('/admin/reports/export', async (req, res) => {
   }
 });
 
+// GET /api/admin/settings
+router.get('/admin/settings', async (req, res) => {
+  try {
+    const { data, error } = await supabase.from('settings').select('key, value');
+    if (error) throw error;
+
+    const settings = data.reduce((acc, { key, value }) => {
+      acc[key] = value;
+      return acc;
+    }, {});
+
+    return res.json(settings);
+  } catch (err) {
+    console.error('[admin/settings] error', err);
+    return res.status(500).json({ error: err.message || String(err) });
+  }
+});
+
+// PUT /api/admin/settings
+router.put('/admin/settings', async (req, res) => {
+  try {
+    const { settings } = req.body;
+
+    const updates = Object.keys(settings).map(key =>
+      supabase.from('settings').update({ value: settings[key] }).eq('key', key)
+    );
+
+    const results = await Promise.all(updates);
+
+    for (const result of results) {
+      if (result.error) {
+        throw result.error;
+      }
+    }
+
+    return res.json({ message: 'Settings updated successfully' });
+  } catch (err) {
+    console.error('[admin/settings] error', err);
+    return res.status(500).json({ error: err.message || String(err) });
+  }
+});
+
 export default router;

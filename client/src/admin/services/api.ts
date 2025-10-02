@@ -157,6 +157,25 @@ export const adminApi = {
     const { res } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return res.blob();
   },
+
+  getSettings: async (token?: string): Promise<any> => {
+    const url = `${API_BASE_URL}/settings`;
+    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    return json;
+  },
+
+  updateSettings: async (settings: any, token?: string): Promise<any> => {
+    const url = `${API_BASE_URL}/settings`;
+    const { json } = await safeFetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify({ settings }),
+    });
+    return json;
+  },
 };
 
 // convenient exports / aliases used by components elsewhere

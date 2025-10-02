@@ -35,7 +35,8 @@ export default function LineChartCard({
   height = 240,
   xKey = 'period',
   yKey = 'orders',
-}: Props) {
+  palette = { primary: '#3b82f6' }, // Default to blue
+}: Props & { palette?: { primary?: string } }) {
   const sanitized = useMemo(() => {
     if (!Array.isArray(data)) return [];
     return data.map((d) => ({
@@ -70,7 +71,7 @@ export default function LineChartCard({
               <Line
                 type="monotone"
                 dataKey={yKey}
-                stroke="#3b82f6"
+                stroke={palette.primary || '#3b82f6'}
                 strokeWidth={2}
                 dot={false}
                 isAnimationActive={false}
