@@ -1,0 +1,100 @@
+// Paste this in DevTools console on /admin/settings, then click Save
+(function installVerboseFetchCapture() {
+  // restore original if present
+  if (window.__orig_fetch_for_debug2) window.fetch = window.__orig_fetch_for_debug2;
+  window.__orig_fetch_for_debug2 = window.fetch;
+
+  window.__lastFetchDebug = null;
+
+  window.fetch = async function(url, opts = {}) {
+    const start = Date.now();
+    const method = (opts.method || 'GET').toUpperCase();
+
+    // capture headers as plain object
+    const headersObj = {};
+    try {
+      const headers = opts.headers || {};
+      // If Headers instance
+      if (typeof Headers !== 'undefined' && headers instanceof Headers) {
+        for (const [k,v] of headers.entries()) headersObj[k] = v;
+      } else {
+        Object.assign(headersObj, headers);
+      }
+    } catch(e) { /* ignore */ }
+
+    // capture body (try to stringify safely)
+    let bodyRaw = opts.body;
+    let bodyParsed = null;
+    try {
+      if (bodyRaw instanceof FormData) {
+        const fm = {};
+        for (const [k,v] of bodyRaw.entries()) fm[k] = v;
+        bodyParsed = fm;
+      } else if (typeof bodyRaw === 'string') {
+        try { bodyParsed = JSON.parse(bodyRaw); } catch { bodyParsed = bodyRaw; }
+      } else {
+        bodyParsed = bodyRaw;
+      }
+    } catch(e) { bodyParsed = '<unavailable>'; }
+
+    // store pre-request info
+    window.__lastFetchDebug = {
+      url,
+      method,
+      request: { headers: headersObj, bodyRaw, bodyParsed },
+      response: null,
+      error: null,
+      timingMs: null,
+    };
+
+    try {
+      const res = await window.__orig_fetch_for_debug2.apply(this, [url, opts]);
+
+      // clone and read body
+      let respText = null;
+      try {
+        const clone = res.clone();
+        const ct = clone.headers.get?.('content-type') || '';
+        if (ct.includes('application/json')) {
+          respText = await clone.json();
+        } else {
+          respText = await clone.text();
+        }
+      } catch (e) {
+        respText = '<unable to read>';
+      }
+
+      window.__lastFetchDebug.response = {
+        status: res.status,
+        statusText: res.statusText,
+        headers: (() => {
+          const h = {};
+          try {
+            for (const pair of res.headers.entries()) h[pair[0]] = pair[1];
+          } catch(e) { /* ignore */ }
+          return h;
+        })(),
+        body: respText,
+      };
+      window.__lastFetchDebug.timingMs = Date.now() - start;
+
+      // print a short summary for convenience
+      console.log('✅ fetch captured. Inspect window.__lastFetchDebug for details.');
+      console.log(window.__lastFetchDebug);
+
+      return res;
+    } catch (err) {
+      window.__lastFetchDebug.error = String(err);
+      window.__lastFetchDebug.timingMs = Date.now() - start;
+      console.error('❌ fetch error captured:', err);
+      console.log(window.__lastFetchDebug);
+      throw err;
+    }
+  };
+
+  console.info('Verbose fetch capture installed. Now click Save on the page. After the request completes, paste the contents of window.__lastFetchDebug here.');
+})();
+VM39121:95 Verbose fetch capture installed. Now click Save on the page. After the request completes, paste the contents of window.__lastFetchDebug here.
+undefined
+copy(window.__lastFetchDebug)
+undefined

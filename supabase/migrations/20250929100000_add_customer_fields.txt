@@ -1,0 +1,53 @@
+
+-- Add phone_normalized column if it doesn't exist
+DO $$ BEGIN
+    ALTER TABLE customers ADD COLUMN phone_normalized VARCHAR(20);
+EXCEPTION
+    WHEN duplicate_column THEN RAISE NOTICE 'column phone_normalized already exists in customers.';
+END $$;
+
+-- Add total_spent column if it doesn't exist
+DO $$ BEGIN
+    ALTER TABLE customers ADD COLUMN total_spent NUMERIC DEFAULT 0;
+EXCEPTION
+    WHEN duplicate_column THEN RAISE NOTICE 'column total_spent already exists in customers.';
+END $$;
+
+-- Add last_order_at column if it doesn't exist
+DO $$ BEGIN
+    ALTER TABLE customers ADD COLUMN last_order_at TIMESTAMPTZ;
+EXCEPTION
+    WHEN duplicate_column THEN RAISE NOTICE 'column last_order_at already exists in customers.';
+END $$;
+
+-- Create index for phone_normalized if it doesn't exist
+CREATE INDEX IF NOT EXISTS idx_customers_phone_norm ON customers (phone_normalized);
+
+-- Create index for email_lower if it doesn't exist
+CREATE INDEX IF NOT EXISTS idx_customers_email_lower ON customers (lower(email));
+
+-- Backfill phone_normalized (assuming 'phone' column exists)
+-- This will update existing rows. New rows should have this set on insert.
+UPDATE customers
+SET phone_normalized = regexp_replace(phone, '[^0-9]', '', 'g')
+WHERE phone IS NOT NULL AND phone_normalized IS NULL;
+
+-- Backfill total_spent and last_order_at from aggregated orders data
+-- This assumes 'orders' table exists with 'customer_id', 'total', and 'created_at'
+UPDATE customers c
+SET
+    total_spent = COALESCE(sq.sum_total, 0),
+    last_order_at = sq.max_created_at
+FROM (
+    SELECT
+        o.customer_id,
+        SUM(o.total) AS sum_total,
+        MAX(o.created_at) AS max_created_at
+    FROM orders o
+    WHERE o.customer_id IS NOT NULL
+    GROUP BY o.customer_id
+) AS sq
+WHERE c.id = sq.customer_id
+AND (c.total_spent IS DISTINCT FROM sq.sum_total OR c.last_order_at IS DISTINCT FROM sq.max_created_at);
+
+-- TODO: Consider adding triggers to keep total_spent and last_order_at updated on new orders or order status changes.
