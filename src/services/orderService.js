@@ -253,21 +253,46 @@ export async function upsertCustomerAndCreateOrder(payload) {
 export async function createOrder(cart) {
   try {
     if (!cart) {
-      console.warn('createOrder: missing cart');
       return { error: { code: 'CartMissing', message: 'Cart not found or has expired.' } };
     }
 
+    // Validate pincode
     const { data: settingsData, error: settingsError } = await supabase.from('settings').select('value').eq('key', 'delivery').single();
     if (settingsError) throw settingsError;
-
     const allowedPincodes = settingsData?.value?.allowed_pincodes || [];
     if (cart.pincode && !allowedPincodes.includes(cart.pincode)) {
       return { error: { code: 'PincodeNotAllowed', message: 'We don’t deliver to this pincode yet' } };
     }
-
     if (cart.pincode && (!cart.delivery_address || !cart.delivery_lat || !cart.delivery_lng)) {
       return { error: { code: 'LocationRequired', message: 'Delivery address and location are required for this pincode' } };
     }
+
+    // Validate coupon
+    let coupon = null;
+    let discountAmount = 0;
+    if (cart.coupon_code) {
+      const { data: couponData, error: couponError } = await supabase
+        .from('coupons')
+        .select('*')
+        .eq('UPPER(code)', cart.coupon_code.toUpperCase())
+        .single();
+
+      if (couponError || !couponData) {
+        return { error: { code: 'InvalidCoupon', message: 'Coupon not found' } };
+      }
+      coupon = couponData;
+
+      if (!coupon.is_active) {
+        return { error: { code: 'InactiveCoupon', message: 'This coupon is not active' } };
+      }
+      if (coupon.expires_at && new Date(coupon.expires_at) < new Date()) {
+        return { error: { code: 'ExpiredCoupon', message: 'This coupon has expired' } };
+      }
+      if (coupon.max_uses && coupon.uses_count >= coupon.max_uses) {
+        return { error: { code: 'UsageLimitReached', message: 'This coupon has reached its usage limit' } };
+      }
+    }
+
 
     const rawItems =
       Array.isArray(cart.items) ? cart.items :
@@ -289,6 +314,16 @@ export async function createOrder(cart) {
     const totals = (cart.totals && typeof cart.totals === 'object' && Object.keys(cart.totals).length)
       ? cart.totals
       : computeTotals(items);
+
+    if (coupon) {
+      if (coupon.type === 'flat') {
+        discountAmount = coupon.value;
+      } else if (coupon.type === 'percentage') {
+        discountAmount = (totals.subtotal * coupon.value) / 100;
+      }
+      totals.discount = (totals.discount || 0) + discountAmount;
+      totals.total = totals.total - discountAmount;
+    }
 
     const totalsNumeric = (typeof totals.total !== 'undefined' && totals.total !== null)
       ? Number(totals.total)
@@ -325,6 +360,8 @@ export async function createOrder(cart) {
       delivery_lat: cart.delivery_lat,
       delivery_lng: cart.delivery_lng,
       delivery_address: cart.delivery_address,
+      coupon_code: cart.coupon_code,
+      discount_amount: discountAmount,
     };
 
     // Use the robust helper (ensures customers row exists and returns created order)
@@ -333,6 +370,10 @@ export async function createOrder(cart) {
     if (!result || !result.order || !result.order.id) {
       console.error('createOrder: failed upsert/create flow', { result });
       return { error: { code: 'CreateFailed', message: 'Failed to create order' } };
+    }
+
+    if (coupon) {
+      await supabase.rpc('increment_coupon_uses', { coupon_id: coupon.id });
     }
 
     return { orderId: result.order.id };

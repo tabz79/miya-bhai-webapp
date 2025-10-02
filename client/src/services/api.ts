@@ -67,6 +67,10 @@ export const api = {
     return await safeFetch('/api/settings/public', { method: 'GET' });
   },
 
+  async validateCoupon(code: string) {
+    return await safeFetch(`/api/coupons/validate/${code}`, { method: 'GET' });
+  },
+
   // Get a single order (optional, used by order status pages)
   async getOrder(orderId: string) {
     return await safeFetch(`/api/orders/${encodeURIComponent(orderId)}`, { method: 'GET' });

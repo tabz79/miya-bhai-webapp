@@ -182,6 +182,37 @@ export const adminApi = {
     const { json } = await safeFetch(url);
     return json;
   },
+
+  getCoupons: async (token?: string): Promise<any[]> => {
+    const url = `${API_BASE_URL}/coupons`;
+    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    return json;
+  },
+
+  createCoupon: async (coupon: any, token?: string): Promise<any> => {
+    const url = `${API_BASE_URL}/coupons`;
+    const { json } = await safeFetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      body: JSON.stringify(coupon),
+    });
+    return json;
+  },
+
+  updateCoupon: async (id: string, coupon: any, token?: string): Promise<any> => {
+    const url = `${API_BASE_URL}/coupons/${id}`;
+    const { json } = await safeFetch(url, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      body: JSON.stringify(coupon),
+    });
+    return json;
+  },
+
+  deleteCoupon: async (id: string, token?: string): Promise<void> => {
+    const url = `${API_BASE_URL}/coupons/${id}`;
+    await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+  },
 };
 
 // convenient exports / aliases used by components elsewhere

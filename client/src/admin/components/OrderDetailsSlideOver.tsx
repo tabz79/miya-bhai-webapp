@@ -19,6 +19,8 @@ type Order = {
   delivery_lat?: number;
   delivery_lng?: number;
   delivery_address?: string;
+  coupon_code?: string;
+  discount_amount?: number;
 };
 
 const statusOptionsDisplay = [
@@ -269,6 +271,9 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                       <p><strong>Date:</strong> {order.created_at ? new Date(order.created_at).toLocaleString() : '—'}</p>
                       <p><strong>Status:</strong> {humanizeStatus(order.status)}</p>
                       <p><strong>Total:</strong> {formatCurrency(order.total ?? 0)}</p>
+                      {order.coupon_code && (
+                        <p><strong>Coupon:</strong> {order.coupon_code} ({formatCurrency(order.discount_amount ?? 0)} discount)</p>
+                      )}
                       {order.delivery_address && <p><strong>Address:</strong> {order.delivery_address}</p>}
                       {order.delivery_lat && order.delivery_lng && (
                         <a

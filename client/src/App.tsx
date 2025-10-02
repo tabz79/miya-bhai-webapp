@@ -23,6 +23,7 @@ import AdminDeliveryPage from "@/admin/pages/delivery";
 import AdminCustomersPage from "@/admin/pages/customers";
 import AdminReportsPage from "@/admin/pages/reports";
 import AdminSettingsPage from "@/admin/pages/settings";
+import CouponsPage from "@/admin/pages/Coupons";
 
 function App() {
   const [location] = useLocation();
@@ -42,6 +43,7 @@ function App() {
               <Route path="/admin/customers" component={AdminCustomersPage} />
               <Route path="/admin/reports" component={AdminReportsPage} />
               <Route path="/admin/settings" component={AdminSettingsPage} />
+              <Route path="/admin/coupons" component={CouponsPage} />
               <Route component={NotFound} />
             </Switch>
           ) : (

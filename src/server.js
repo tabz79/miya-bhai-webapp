@@ -7,6 +7,7 @@ import menuRouter from './routes/menu.js';
 import orderRouter from './routes/orders.js';
 import adminRouter from './routes/admin.js';
 import settingsRouter from './routes/settings.js';
+import couponsRouter from './routes/coupons.js';
 import { initMenuService } from './services/menuService.js';
 
 const app = express();
@@ -37,6 +38,7 @@ app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter); // <-- new admin routes mounted here
 app.use('/api', settingsRouter);
+app.use('/api', couponsRouter);
 
 // Generic 404 for unmatched routes
 app.use((req, res) => {

@@ -14,6 +14,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'drivers', label: 'Drivers', href: '/admin/drivers' },
   { id: 'customers', label: 'Customers', href: '/admin/customers' },
   { id: 'reports', label: 'Reports', href: '/admin/reports' },
+  { id: 'coupons', label: 'Coupons', href: '/admin/coupons' },
   { id: 'settings', label: 'Settings', href: '/admin/settings' },
 ];
 

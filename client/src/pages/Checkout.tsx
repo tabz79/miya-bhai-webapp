@@ -14,17 +14,32 @@ export function Checkout() {
   const [pincodeValid, setPincodeValid] = useState(false);
   const [location, setDeliveryLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [address, setAddress] = useState('');
+  const [couponCode, setCouponCode] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<any>(null);
+  const [couponError, setCouponError] = useState('');
 
   useEffect(() => {
     api.getPublicSettings().then(setSettings);
   }, []);
 
   const subtotal = items.reduce((acc, item) => acc + (item.price || 0) * (item.quantity || 1), 0);
-  const discount = coupon ? (coupon.type === 'percentage' ? subtotal * (coupon.value / 100) : coupon.value) : 0;
+  const discount = appliedCoupon ? (appliedCoupon.type === 'percentage' ? subtotal * (appliedCoupon.value / 100) : appliedCoupon.value) : 0;
   const taxableAmount = subtotal - discount;
   const gst = taxableAmount * 0.05;
   const deliveryCharge = 0;
   const total = taxableAmount + gst + deliveryCharge;
+
+  const handleApplyCoupon = async () => {
+    if (!couponCode) return;
+    try {
+      const validatedCoupon = await api.validateCoupon(couponCode);
+      setAppliedCoupon(validatedCoupon);
+      setCouponError('');
+    } catch (err: any) {
+      setAppliedCoupon(null);
+      setCouponError(err.message || 'Invalid coupon');
+    }
+  };
 
   const validate = () => {
     if (!customer.phone || !customer.email) {
@@ -73,6 +88,7 @@ export function Checkout() {
       delivery_address: address,
       delivery_lat: location?.lat,
       delivery_lng: location?.lng,
+      coupon_code: appliedCoupon?.code,
     };
 
     const response = await fetch('/api/orders/create', {
@@ -137,6 +153,17 @@ export function Checkout() {
                   </>
                 )}
               </div>
+            </div>
+
+            {/* Coupon Code */}
+            <div className="mb-6">
+              <h2 className="font-semibold text-lg mb-2">Coupon Code</h2>
+              <div className="flex items-center space-x-2">
+                <input type="text" placeholder="Enter coupon code" value={couponCode} onChange={(e) => setCouponCode(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" />
+                <button onClick={handleApplyCoupon} className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg font-semibold">Apply</button>
+              </div>
+              {couponError && <p className="text-red-500 text-sm mt-2">{couponError}</p>}
+              {appliedCoupon && <p className="text-green-500 text-sm mt-2">Coupon "{appliedCoupon.code}" applied!</p>}
             </div>
 
             {/* Payment Options */}
