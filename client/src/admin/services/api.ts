@@ -172,8 +172,14 @@ export const adminApi = {
         'Content-Type': 'application/json',
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
-      body: JSON.stringify({ settings }),
+      body: JSON.stringify(settings),
     });
+    return json;
+  },
+
+  getPublicSettings: async (): Promise<any> => {
+    const url = `/api/settings/public`;
+    const { json } = await safeFetch(url);
     return json;
   },
 };

@@ -434,19 +434,31 @@ router.get('/admin/settings', async (req, res) => {
 // PUT /api/admin/settings
 router.put('/admin/settings', async (req, res) => {
   try {
-    const { settings } = req.body;
+    const settings = req.body;
 
-    const updates = Object.keys(settings).map(key =>
-      supabase.from('settings').update({ value: settings[key] }).eq('key', key)
-    );
-
-    const results = await Promise.all(updates);
-
-    for (const result of results) {
-      if (result.error) {
-        throw result.error;
-      }
+    if (!settings || typeof settings !== 'object' || Object.keys(settings).length === 0) {
+      return res.status(400).json({ error: 'Invalid or empty settings payload.' });
     }
+
+    // Transform the settings object into an array for the upsert operation
+    const upsertPayload = Object.keys(settings).map(key => ({
+      key: key,
+      value: settings[key],
+      updated_at: new Date().toISOString(),
+    }));
+
+    console.log('[admin/settings] Attempting to upsert settings for keys:', Object.keys(settings));
+
+    const { error } = await supabase
+      .from('settings')
+      .upsert(upsertPayload, { onConflict: 'key' });
+
+    if (error) {
+      console.error(`[admin/settings] Supabase upsert error:`, error);
+      throw new Error(`Failed to save settings.`);
+    }
+
+    console.log(`[admin/settings] Successfully upserted settings.`);
 
     return res.json({ message: 'Settings updated successfully' });
   } catch (err) {

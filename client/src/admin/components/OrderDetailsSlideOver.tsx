@@ -16,6 +16,9 @@ type Order = {
   assigned_to?: string | null;
   customer_details?: { name?: string; phone?: string; address?: string };
   items?: any[];
+  delivery_lat?: number;
+  delivery_lng?: number;
+  delivery_address?: string;
 };
 
 const statusOptionsDisplay = [
@@ -266,6 +269,17 @@ const OrderDetailsSlideOver: React.FC<{ order: Order; isOpen: boolean; onClose: 
                       <p><strong>Date:</strong> {order.created_at ? new Date(order.created_at).toLocaleString() : '—'}</p>
                       <p><strong>Status:</strong> {humanizeStatus(order.status)}</p>
                       <p><strong>Total:</strong> {formatCurrency(order.total ?? 0)}</p>
+                      {order.delivery_address && <p><strong>Address:</strong> {order.delivery_address}</p>}
+                      {order.delivery_lat && order.delivery_lng && (
+                        <a
+                          href={`https://www.google.com/maps/search/?api=1&query=${order.delivery_lat},${order.delivery_lng}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          Open in Google Maps
+                        </a>
+                      )}
                     </div>
 
                     {/* Order items */}

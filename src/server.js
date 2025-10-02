@@ -6,14 +6,24 @@ import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
 import orderRouter from './routes/orders.js';
 import adminRouter from './routes/admin.js';
+import settingsRouter from './routes/settings.js';
 import { initMenuService } from './services/menuService.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
+// Body parsing: larger JSON limit and accept urlencoded bodies
+app.use(express.json({ limit: '1mb' })); // increase if you expect larger payloads
+app.use(express.urlencoded({ extended: true }));
+
+// Request ID middleware (keeps existing behavior)
 app.use(requestId);
+
+// Simple request logger to help debug requests (non-verbose)
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] Incoming ${req.method} ${req.originalUrl}`);
+  next();
+});
 
 // CORS: allow frontend (dev) to call API with cookies
 app.use(cors({
@@ -26,6 +36,7 @@ app.use('/api', healthRouter);
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter); // <-- new admin routes mounted here
+app.use('/api', settingsRouter);
 
 // Generic 404 for unmatched routes
 app.use((req, res) => {

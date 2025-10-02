@@ -123,6 +123,9 @@ export async function upsertCustomerAndCreateOrder(payload) {
     payment_status = 'PENDING',
     order_number,
     cart_id = null,
+    delivery_lat,
+    delivery_lng,
+    delivery_address,
   } = payload;
 
   const phone_normalized = normalizePhone(customer_phone);
@@ -221,6 +224,9 @@ export async function upsertCustomerAndCreateOrder(payload) {
       cart_id,
       created_at: new Date().toISOString(),
       order_number: order_number || `MB-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`,
+      delivery_lat,
+      delivery_lng,
+      delivery_address,
     };
 
     const { data: orderData, error: orderErr } = await supabase
@@ -249,6 +255,18 @@ export async function createOrder(cart) {
     if (!cart) {
       console.warn('createOrder: missing cart');
       return { error: { code: 'CartMissing', message: 'Cart not found or has expired.' } };
+    }
+
+    const { data: settingsData, error: settingsError } = await supabase.from('settings').select('value').eq('key', 'delivery').single();
+    if (settingsError) throw settingsError;
+
+    const allowedPincodes = settingsData?.value?.allowed_pincodes || [];
+    if (cart.pincode && !allowedPincodes.includes(cart.pincode)) {
+      return { error: { code: 'PincodeNotAllowed', message: 'We don’t deliver to this pincode yet' } };
+    }
+
+    if (cart.pincode && (!cart.delivery_address || !cart.delivery_lat || !cart.delivery_lng)) {
+      return { error: { code: 'LocationRequired', message: 'Delivery address and location are required for this pincode' } };
     }
 
     const rawItems =
@@ -304,6 +322,9 @@ export async function createOrder(cart) {
       payment_method: (cart.payment_method || cart.paymentMethod || 'COD'),
       payment_status: (cart.payment_status || 'pending'),
       cart_id: cart.id || cart.cartId || null,
+      delivery_lat: cart.delivery_lat,
+      delivery_lng: cart.delivery_lng,
+      delivery_address: cart.delivery_address,
     };
 
     // Use the robust helper (ensures customers row exists and returns created order)

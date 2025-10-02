@@ -61,6 +61,8 @@ function ensureSettingsShape(s: any) {
       delivery_radius: 0,
       delivery_fee: 0,
       free_delivery_threshold: 0,
+      // allowed_pincodes will be stored as array in DB, but UI shows a comma string.
+      allowed_pincodes: s?.delivery?.allowed_pincodes ?? [],
       ...(s?.delivery ?? {}),
     },
     ...s,
@@ -71,6 +73,7 @@ const AdminSettingsPage = () => {
   const [settings, setSettings] = useState<any>(() => ensureSettingsShape({}));
   const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [saving, setSaving] = useState<boolean>(false);
 
   useEffect(() => {
     let mounted = true;
@@ -108,21 +111,53 @@ const AdminSettingsPage = () => {
   };
 
   const handleSave = async () => {
+    setSaving(true);
     try {
-      // Send normalized settings object to the API.
-      // adminApi.updateSettings should accept a map { business_info: {...}, orders: {...}, ... }
-      await adminApi.updateSettings(settings);
+      // Prepare payload clone
+      const payload = { ...settings };
+
+      // Normalize allowed_pincodes before sending: accept array OR comma-separated string
+      const raw = payload.delivery?.allowed_pincodes ?? [];
+      if (Array.isArray(raw)) {
+        // ensure strings and trim
+        payload.delivery.allowed_pincodes = raw.map((p: any) => String(p).trim()).filter(Boolean);
+      } else if (typeof raw === 'string') {
+        payload.delivery.allowed_pincodes = raw.split(',').map((s: string) => s.trim()).filter(Boolean);
+      } else {
+        payload.delivery.allowed_pincodes = [];
+      }
+
+      // send normalized payload
+      await adminApi.updateSettings(payload);
+
+      // Re-fetch canonical settings from server so UI matches DB
+      try {
+        const fresh = await adminApi.getSettings();
+        const normalized = normalizeServerSettings(fresh);
+        setSettings(ensureSettingsShape(normalized));
+      } catch (e) {
+        // if re-fetch fails, keep the optimistic state but notify user
+        console.warn('Re-fetch after save failed', e);
+      }
+
       setNotification({ type: 'success', message: 'Settings saved successfully!' });
     } catch (error) {
       console.error('updateSettings error', error);
       setNotification({ type: 'error', message: 'Failed to save settings.' });
+    } finally {
+      setSaving(false);
+      setTimeout(() => setNotification(null), 3000);
     }
-    setTimeout(() => setNotification(null), 3000);
   };
 
   if (loading) {
     return <AdminShell><div>Loading...</div></AdminShell>;
   }
+
+  // UI helper: show pincodes as comma string in input
+  const allowedPincodesUiValue = Array.isArray(settings.delivery.allowed_pincodes)
+    ? settings.delivery.allowed_pincodes.join(', ')
+    : String(settings.delivery.allowed_pincodes ?? '');
 
   return (
     <AdminShell>
@@ -243,7 +278,7 @@ const AdminSettingsPage = () => {
 
           {/* Payments */}
           <div>
-            <h3 className="text-lg font-medium leading-6 text-gray-900">Payments</h3>
+            <h3 className="text-lg font-medium text-gray-900">Payments</h3>
             <div className="mt-6 space-y-4">
               <div className="flex items-center">
                 <input
@@ -325,14 +360,36 @@ const AdminSettingsPage = () => {
                   className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
+
+              <div className="sm:col-span-6">
+                <label htmlFor="allowed_pincodes" className="block text-sm font-medium text-gray-700">Allowed Pincodes (comma-separated)</label>
+                <input
+                  type="text"
+                  id="allowed_pincodes"
+                  value={allowedPincodesUiValue}
+                  onChange={(e) => {
+                    // keep raw string in the UI; convert to array on save
+                    const raw = e.target.value;
+                    setSettings((prev: any) => ({
+                      ...prev,
+                      delivery: {
+                        ...(prev.delivery || {}),
+                        allowed_pincodes: raw,
+                      },
+                    }));
+                  }}
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
+                <p className="text-xs text-gray-500 mt-1">Enter pincodes separated by commas. Example: 507001, 507002</p>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-8 border-t border-gray-200 pt-5">
           <div className="flex justify-end">
-            <button type="button" onClick={handleSave} className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Save
+            <button type="button" onClick={handleSave} disabled={saving} className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              {saving ? 'Saving...' : 'Save'}
             </button>
           </div>
         </div>

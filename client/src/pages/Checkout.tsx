@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/hooks/useCartStore';
 import { Link, useLocation } from 'wouter';
+import { api } from '@/services/api';
 
 export function Checkout() {
   const { items, coupon, clearCart } = useCartStore();
   const [, setLocation] = useLocation();
-  const [customer, setCustomer] = useState({ name: '', phone: '', email: '', address: '' });
+  const [customer, setCustomer] = useState({ name: '', phone: '', email: '' });
   const [authChoice, setAuthChoice] = useState(''); // 'guest' or 'login'
   const [error, setError] = useState('');
+  const [settings, setSettings] = useState<any>(null);
+  const [pincode, setPincode] = useState('');
+  const [pincodeValid, setPincodeValid] = useState(false);
+  const [location, setDeliveryLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [address, setAddress] = useState('');
+
+  useEffect(() => {
+    api.getPublicSettings().then(setSettings);
+  }, []);
 
   const subtotal = items.reduce((acc, item) => acc + (item.price || 0) * (item.quantity || 1), 0);
   const discount = coupon ? (coupon.type === 'percentage' ? subtotal * (coupon.value / 100) : coupon.value) : 0;
@@ -21,8 +31,34 @@ export function Checkout() {
       setError('Phone and Email are required.');
       return false;
     }
+    if (pincodeValid && (!address || !location)) {
+      setError('Please provide a delivery address and capture your location.');
+      return false;
+    }
     setError('');
     return true;
+  };
+
+  const handlePincodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newPincode = e.target.value;
+    setPincode(newPincode);
+    const isValid = settings?.delivery?.allowed_pincodes?.includes(newPincode);
+    setPincodeValid(isValid);
+  };
+
+  const handleGetLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setDeliveryLocation({ lat: position.coords.latitude, lng: position.coords.longitude });
+        },
+        () => {
+          setError('Could not get your location. Please enter your address manually.');
+        }
+      );
+    } else {
+      setError('Geolocation is not supported by your browser.');
+    }
   };
 
   const handlePlaceOrder = async () => {
@@ -33,6 +69,10 @@ export function Checkout() {
       customer,
       totals: { subtotal, discount, taxableAmount, gst, deliveryCharge, total },
       payment_method: 'COD',
+      pincode,
+      delivery_address: address,
+      delivery_lat: location?.lat,
+      delivery_lng: location?.lng,
     };
 
     const response = await fetch('/api/orders/create', {
@@ -87,7 +127,15 @@ export function Checkout() {
                 <input type="text" placeholder="Your Name (Optional)" value={customer.name} onChange={(e) => setCustomer({...customer, name: e.target.value})} className="w-full p-2 border border-gray-300 rounded-md" />
                 <input type="email" placeholder="Email" value={customer.email} onChange={(e) => setCustomer({...customer, email: e.target.value})} className="w-full p-2 border border-gray-300 rounded-md" required />
                 <input type="tel" placeholder="Phone Number" value={customer.phone} onChange={(e) => setCustomer({...customer, phone: e.target.value})} className="w-full p-2 border border-gray-300 rounded-md" required />
-                <input type="text" placeholder="Delivery Address or Table Number" value={customer.address} onChange={(e) => setCustomer({...customer, address: e.target.value})} className="w-full p-2 border border-gray-300 rounded-md" />
+                <input type="text" placeholder="Pincode" value={pincode} onChange={handlePincodeChange} className="w-full p-2 border border-gray-300 rounded-md" />
+                {pincode && !pincodeValid && <p className="text-red-500 text-sm">{"We don’t deliver to this pincode yet"}</p>}
+                {pincodeValid && (
+                  <>
+                    <input type="text" placeholder="Delivery Address" value={address} onChange={(e) => setAddress(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" />
+                    <button onClick={handleGetLocation} className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold">Get Current Location</button>
+                    {location && <p className="text-green-500 text-sm">Location captured: {location.lat}, {location.lng}</p>}
+                  </>
+                )}
               </div>
             </div>
 
