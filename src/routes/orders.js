@@ -27,8 +27,44 @@ const adminAuth = (req, res, next) => {
  */
 router.post('/orders/create', async (req, res) => {
   try {
-    const result = await createOrder(req.body);
+    // Normalize and validate incoming payload to avoid simple client/server mismatches
+    const incoming = req.body || {};
+    const payload = { ...incoming };
+
+    // Normalize coupon_code to uppercase string (or null)
+    if (payload.coupon_code) {
+      payload.coupon_code = String(payload.coupon_code).trim().toUpperCase();
+    } else {
+      payload.coupon_code = null;
+    }
+
+    // Coerce totals.subtotal to number if present
+    if (payload.totals && payload.totals.subtotal != null) {
+      payload.totals = { ...payload.totals, subtotal: Number(payload.totals.subtotal) };
+    } else if (!payload.totals) {
+      payload.totals = { subtotal: 0 };
+    } else {
+      payload.totals = { ...payload.totals, subtotal: Number(payload.totals.subtotal ?? 0) };
+    }
+
+    // Coerce discount_amount/payable_amount to numbers if provided (fallback to compute payable)
+    payload.discount_amount = payload.discount_amount != null ? Number(payload.discount_amount) : 0;
+    if (payload.payable_amount != null) {
+      payload.payable_amount = Number(payload.payable_amount);
+    } else {
+      const subtotal = Number(payload.totals.subtotal ?? 0);
+      const taxable = Math.max(0, subtotal - Number(payload.discount_amount ?? 0));
+      const gst = payload.totals && payload.totals.gst != null ? Number(payload.totals.gst) : taxable * 0.05;
+      const deliveryCharge = payload.delivery_charge != null ? Number(payload.delivery_charge) : Number(payload.totals?.deliveryCharge ?? 0);
+      payload.payable_amount = Number((taxable + gst + deliveryCharge).toFixed(2));
+    }
+
+    // Helpful log for debugging bad payloads
+    console.log('[orders.create] Normalized incoming payload:', JSON.stringify(payload));
+
+    const result = await createOrder(payload);
     if (result?.error) {
+      // preserve the structured error if service returned it
       return res.status(400).json({ error: result.error.message ?? result.error });
     }
     res.status(201).json(result);

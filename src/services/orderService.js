@@ -1,5 +1,6 @@
 // src/services/orderService.js
 import { supabase } from '../lib/supabase.js';
+import { v4 as uuidv4 } from 'uuid'; // used only if needed by other helpers
 
 /* ---------------------- small local constants & helpers --------------------- */
 const STATUS_ENUM = [
@@ -126,6 +127,10 @@ export async function upsertCustomerAndCreateOrder(payload) {
     delivery_lat,
     delivery_lng,
     delivery_address,
+    // NEW fields: coupon + amounts
+    coupon_code = null,
+    discount_amount = 0,
+    payable_amount = null,
   } = payload;
 
   const phone_normalized = normalizePhone(customer_phone);
@@ -227,6 +232,10 @@ export async function upsertCustomerAndCreateOrder(payload) {
       delivery_lat,
       delivery_lng,
       delivery_address,
+      // Persist coupon/discount/payable on the order row (NEW)
+      coupon_code: coupon_code ?? null,
+      discount_amount: Number(discount_amount ?? 0),
+      payable_amount: payable_amount != null ? Number(payable_amount) : null,
     };
 
     const { data: orderData, error: orderErr } = await supabase
@@ -271,13 +280,16 @@ export async function createOrder(cart) {
     let coupon = null;
     let discountAmount = 0;
     if (cart.coupon_code) {
+      const codeUpper = String(cart.coupon_code).toUpperCase();
+      // FIXED: lookup by code (DB stores codes uppercase). Avoid expression on LHS.
       const { data: couponData, error: couponError } = await supabase
         .from('coupons')
         .select('*')
-        .eq('UPPER(code)', cart.coupon_code.toUpperCase())
+        .eq('code', codeUpper)
         .single();
 
       if (couponError || !couponData) {
+        console.warn('createOrder: coupon lookup failed', couponError);
         return { error: { code: 'InvalidCoupon', message: 'Coupon not found' } };
       }
       coupon = couponData;
@@ -288,7 +300,7 @@ export async function createOrder(cart) {
       if (coupon.expires_at && new Date(coupon.expires_at) < new Date()) {
         return { error: { code: 'ExpiredCoupon', message: 'This coupon has expired' } };
       }
-      if (coupon.max_uses && coupon.uses_count >= coupon.max_uses) {
+      if (coupon.max_uses && (coupon.uses_count ?? 0) >= coupon.max_uses) {
         return { error: { code: 'UsageLimitReached', message: 'This coupon has reached its usage limit' } };
       }
     }
@@ -311,18 +323,30 @@ export async function createOrder(cart) {
       return { error: validation.error };
     }
 
-    const totals = (cart.totals && typeof cart.totals === 'object' && Object.keys(cart.totals).length)
+    const frontendProvidedTotals = (cart.totals && typeof cart.totals === 'object' && typeof cart.totals.total !== 'undefined' && cart.totals.total !== null);
+
+    const totals = frontendProvidedTotals
       ? cart.totals
       : computeTotals(items);
 
+    // NEW: Do not double-apply coupon.
+    // If frontend already provided totals, trust those totals (but capture discountAmount if present).
+    // Otherwise compute & apply coupon on server.
     if (coupon) {
-      if (coupon.type === 'flat') {
-        discountAmount = coupon.value;
-      } else if (coupon.type === 'percentage') {
-        discountAmount = (totals.subtotal * coupon.value) / 100;
+      if (frontendProvidedTotals) {
+        // Frontend pre-applied coupon. Read discount if provided; otherwise try to derive it.
+        discountAmount = Number(cart.totals?.discount ?? cart.totals?.discount_amount ?? 0);
+        // keep totals as provided by frontend (do not subtract again)
+      } else {
+        // Frontend didn't pre-apply — compute and apply on server (old behaviour)
+        if (coupon.type === 'flat') {
+          discountAmount = Number(coupon.value ?? 0);
+        } else if (coupon.type === 'percentage') {
+          discountAmount = (totals.subtotal * coupon.value) / 100;
+        }
+        totals.discount = (totals.discount || 0) + Number(discountAmount || 0);
+        totals.total = Number((totals.total - discountAmount).toFixed(2));
       }
-      totals.discount = (totals.discount || 0) + discountAmount;
-      totals.total = totals.total - discountAmount;
     }
 
     const totalsNumeric = (typeof totals.total !== 'undefined' && totals.total !== null)
@@ -360,8 +384,9 @@ export async function createOrder(cart) {
       delivery_lat: cart.delivery_lat,
       delivery_lng: cart.delivery_lng,
       delivery_address: cart.delivery_address,
-      coupon_code: cart.coupon_code,
-      discount_amount: discountAmount,
+      coupon_code: cart.coupon_code ? String(cart.coupon_code).toUpperCase() : null, // pass normalized coupon
+      discount_amount: Number(discountAmount || totals.discount || 0),
+      payable_amount: Number(totalsNumeric),
     };
 
     // Use the robust helper (ensures customers row exists and returns created order)
@@ -373,7 +398,11 @@ export async function createOrder(cart) {
     }
 
     if (coupon) {
-      await supabase.rpc('increment_coupon_uses', { coupon_id: coupon.id });
+      try {
+        await supabase.rpc('increment_coupon_uses', { coupon_id: coupon.id });
+      } catch (rpcErr) {
+        console.warn('createOrder: increment_coupon_uses RPC failed (non-fatal):', rpcErr);
+      }
     }
 
     return { orderId: result.order.id };

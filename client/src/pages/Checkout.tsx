@@ -4,7 +4,7 @@ import { Link, useLocation } from 'wouter';
 import { api } from '@/services/api';
 
 export function Checkout() {
-  const { items, coupon, clearCart } = useCartStore();
+  const { items, coupon: cartCoupon, clearCart } = useCartStore();
   const [, setLocation] = useLocation();
   const [customer, setCustomer] = useState({ name: '', phone: '', email: '' });
   const [authChoice, setAuthChoice] = useState(''); // 'guest' or 'login'
@@ -17,31 +17,68 @@ export function Checkout() {
   const [couponCode, setCouponCode] = useState('');
   const [appliedCoupon, setAppliedCoupon] = useState<any>(null);
   const [couponError, setCouponError] = useState('');
+  const [applying, setApplying] = useState(false);
 
   useEffect(() => {
-    api.getPublicSettings().then(setSettings);
+    api.getPublicSettings().then(setSettings).catch(() => {});
   }, []);
 
+  // If cart already has a coupon (you pasted it in the cart), prefer that
+  useEffect(() => {
+    if (cartCoupon) {
+      // cartCoupon might be an object or a code string depending on store implementation
+      if (typeof cartCoupon === 'string') {
+        setCouponCode(cartCoupon);
+        // attempt to validate and populate appliedCoupon
+        (async () => {
+          try {
+            const validated = await api.validateCoupon(cartCoupon);
+            setAppliedCoupon(validated);
+            setCouponError('');
+          } catch {
+            setAppliedCoupon(null);
+          }
+        })();
+      } else if (typeof cartCoupon === 'object' && cartCoupon?.code) {
+        setAppliedCoupon(cartCoupon);
+        // <-- fixed: use cartCoupon.code (not an undefined "coupon" variable)
+        setCouponCode(cartCoupon.code);
+      }
+    }
+  }, [cartCoupon]);
+
+  // prefer coupon from cart first (object), otherwise local appliedCoupon
+  const activeCoupon = (typeof cartCoupon === 'object' && cartCoupon?.code)
+    ? cartCoupon
+    : appliedCoupon;
+
   const subtotal = items.reduce((acc, item) => acc + (item.price || 0) * (item.quantity || 1), 0);
-  const discount = appliedCoupon ? (appliedCoupon.type === 'percentage' ? subtotal * (appliedCoupon.value / 100) : appliedCoupon.value) : 0;
-  const taxableAmount = subtotal - discount;
+  const discount = activeCoupon
+    ? (activeCoupon.type === 'percentage' ? subtotal * (Number(activeCoupon.value) / 100) : Number(activeCoupon.value))
+    : 0;
+  const taxableAmount = Math.max(0, subtotal - discount);
   const gst = taxableAmount * 0.05;
   const deliveryCharge = 0;
   const total = taxableAmount + gst + deliveryCharge;
 
   const handleApplyCoupon = async () => {
     if (!couponCode) return;
+    setApplying(true);
     try {
       const validatedCoupon = await api.validateCoupon(couponCode);
       setAppliedCoupon(validatedCoupon);
       setCouponError('');
+      // Optionally persist into cart store if you have a setter:
+      // useCartStore.getState().setCoupon?.(validatedCoupon);
     } catch (err: any) {
       setAppliedCoupon(null);
-      setCouponError(err.message || 'Invalid coupon');
+      setCouponError(err?.message || 'Invalid coupon');
+    } finally {
+      setApplying(false);
     }
   };
 
-  const validate = () => {
+  const validateForm = () => {
     if (!customer.phone || !customer.email) {
       setError('Phone and Email are required.');
       return false;
@@ -77,40 +114,55 @@ export function Checkout() {
   };
 
   const handlePlaceOrder = async () => {
-    if (!validate()) return;
+    if (!validateForm()) return;
 
+    // Prefer the raw cart string coupon if present, otherwise prefer activeCoupon.code
+    const rawCoupon = (typeof cartCoupon === 'string' && cartCoupon)
+      ? cartCoupon
+      : (activeCoupon?.code ?? null);
+
+    const couponCodeToSend = rawCoupon ? String(rawCoupon).toUpperCase() : null;
+
+    // Build order payload — include discount_amount and payable_amount so server persists final amounts
     const orderDetails = {
       items,
       customer,
       totals: { subtotal, discount, taxableAmount, gst, deliveryCharge, total },
+      discount_amount: Number(discount),
+      payable_amount: Number(total),
       payment_method: 'COD',
       pincode,
       delivery_address: address,
       delivery_lat: location?.lat,
       delivery_lng: location?.lng,
-      coupon_code: appliedCoupon?.code,
+      coupon_code: couponCodeToSend, // normalized uppercase string or null
     };
 
-    const response = await fetch('/api/orders/create', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(orderDetails),
-    });
-
-    const responseBody = await response.text();
-    let result;
     try {
-      result = JSON.parse(responseBody);
-    } catch (e) {
-      setError('Invalid or empty response from server');
-      return;
-    }
+      const response = await fetch('/api/orders/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderDetails),
+      });
 
-    if (response.ok) {
-      clearCart();
-      setLocation(`/confirmation?orderId=${result.orderId}`);
-    } else {
-      setError(result.error || 'Failed to place order.');
+      const text = await response.text();
+      let result;
+      try {
+        result = JSON.parse(text);
+      } catch (e) {
+        setError('Invalid or empty response from server');
+        return;
+      }
+
+      if (response.ok) {
+        clearCart();
+        setLocation(`/confirmation?orderId=${result.orderId}`);
+      } else {
+        setError(result.error?.message || result.error || 'Failed to place order.');
+      }
+    } catch (err: any) {
+      console.error(err);
+      setError(err?.message || 'Network error while placing order.');
     }
   };
 
@@ -133,7 +185,25 @@ export function Checkout() {
             {/* Cart Summary */}
             <div className="mb-6">
               <h2 className="font-semibold text-lg mb-2">Order Summary</h2>
-              {/* ... same as before ... */}
+              {/* You probably have your cart summary component/render here — keep it */}
+              <div className="p-4 border rounded-md">
+                <div className="flex justify-between">
+                  <div>Subtotal</div>
+                  <div>{subtotal.toFixed(2)}</div>
+                </div>
+                {discount > 0 && (
+                  <>
+                    <div className="flex justify-between text-sm text-gray-500 mt-2">
+                      <div>Coupon ({activeCoupon?.code})</div>
+                      <div>-{discount.toFixed(2)}</div>
+                    </div>
+                    <div className="flex justify-between font-semibold mt-2">
+                      <div>Payable</div>
+                      <div>{total.toFixed(2)}</div>
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
 
             {/* Guest Details */}
@@ -155,15 +225,25 @@ export function Checkout() {
               </div>
             </div>
 
-            {/* Coupon Code */}
+            {/* Coupon Code: hide if coupon already present in cart or applied */}
             <div className="mb-6">
               <h2 className="font-semibold text-lg mb-2">Coupon Code</h2>
-              <div className="flex items-center space-x-2">
-                <input type="text" placeholder="Enter coupon code" value={couponCode} onChange={(e) => setCouponCode(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" />
-                <button onClick={handleApplyCoupon} className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg font-semibold">Apply</button>
-              </div>
+              {!cartCoupon && !appliedCoupon ? (
+                <div className="flex items-center space-x-2">
+                  <input type="text" placeholder="Enter coupon code" value={couponCode} onChange={(e) => setCouponCode(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" />
+                  <button onClick={handleApplyCoupon} disabled={applying} className="bg-brand-teak text-white px-6 py-2 rounded-lg font-semibold">
+                    {applying ? 'Applying...' : 'Apply'}
+                  </button>
+                </div>
+              ) : (
+                <div className="p-3 border rounded-md bg-green-50">
+                  <div className="font-medium">Coupon applied: { (typeof cartCoupon === 'string') ? (appliedCoupon?.code ?? cartCoupon) : (cartCoupon?.code ?? appliedCoupon?.code) }</div>
+                  <div className="text-sm text-gray-600">Discount: {discount.toFixed(2)}</div>
+                </div>
+              )}
               {couponError && <p className="text-red-500 text-sm mt-2">{couponError}</p>}
-              {appliedCoupon && <p className="text-green-500 text-sm mt-2">Coupon "{appliedCoupon.code}" applied!</p>}
+              {/* show friendly applied message */}
+              {!cartCoupon && appliedCoupon && <p className="text-green-500 text-sm mt-2">Coupon "{appliedCoupon.code}" applied!</p>}
             </div>
 
             {/* Payment Options */}
