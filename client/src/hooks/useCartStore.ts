@@ -21,7 +21,8 @@ interface CartState {
   removeFromCart: (id: string) => void;
   decreaseQuantity: (id: string) => void; // New function
   clearCart: () => void;
-  applyCoupon: (coupon: Coupon) => void;
+  applyCoupon: (coupon: Coupon | null) => void;
+  removeCoupon: () => void;
 }
 
 export const useCartStore = create<CartState>()((set) => ({
@@ -61,4 +62,5 @@ export const useCartStore = create<CartState>()((set) => ({
     }),
   clearCart: () => set({ items: [], coupon: null }),
   applyCoupon: (coupon) => set({ coupon }),
+  removeCoupon: () => set({ coupon: null }),
 }));

@@ -12,21 +12,22 @@ interface Coupon {
 }
 
 export function Cart() {
-  const { items, removeFromCart, addToCart, clearCart, coupon, applyCoupon, decreaseQuantity } = useCartStore();
+  const { items, removeFromCart, addToCart, clearCart, coupon, applyCoupon, decreaseQuantity, removeCoupon } = useCartStore();
   const [couponCode, setCouponCode] = useState('');
-  const [coupons, setCoupons] = useState<Coupon[]>([]);
+  const [coupons, setCoupons] = useState<any[]>([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('/data/coupons.csv')
-      .then(response => response.text())
-      .then(text => {
-        const lines = text.split('\n');
-        const _coupons = lines.slice(1).map(line => {
-          const [code, type, value] = line.split('\r')[0].split(',');
-          return { code, type, value: Number(value) } as Coupon;
-        });
-        setCoupons(_coupons);
-      });
+    const fetchCoupons = async () => {
+      try {
+        const response = await fetch('/api/coupons');
+        const data = await response.json();
+        setCoupons(data);
+      } catch (err) {
+        console.error('Failed to fetch coupons', err);
+      }
+    };
+    fetchCoupons();
   }, []);
 
   const subtotal = items.reduce((acc, item) => acc + (item.price || 0) * (item.quantity || 1), 0);
@@ -37,10 +38,30 @@ export function Cart() {
   const total = taxableAmount + gst + deliveryCharge;
 
   const handleApplyCoupon = () => {
-    const foundCoupon = coupons.find(c => c.code === couponCode);
-    if (foundCoupon) {
-      applyCoupon(foundCoupon);
+    setError('');
+    const foundCoupon = coupons.find(c => c.code.toLowerCase() === couponCode.toLowerCase());
+
+    if (!foundCoupon) {
+      setError('Invalid coupon code');
+      return;
     }
+
+    if (!foundCoupon.is_active) {
+      setError('This coupon is not active');
+      return;
+    }
+
+    if (foundCoupon.expires_at && new Date(foundCoupon.expires_at) < new Date()) {
+      setError('This coupon has expired');
+      return;
+    }
+
+    if (foundCoupon.max_uses && foundCoupon.uses_count >= foundCoupon.max_uses) {
+      setError('This coupon has reached its usage limit');
+      return;
+    }
+
+    applyCoupon(foundCoupon);
   };
 
   return (
@@ -101,6 +122,7 @@ export function Cart() {
               <input type="text" placeholder="Enter coupon code" value={couponCode} onChange={(e) => setCouponCode(e.target.value)} className="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-brand-teak" />
               <button onClick={handleApplyCoupon} className="bg-brand-teak text-white px-4 rounded-r-md font-semibold hover:bg-brand-tobacco">Apply</button>
             </div>
+            {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
           </div>
 
           {/* Totals */}
@@ -110,9 +132,12 @@ export function Cart() {
               <p>₹{subtotal.toFixed(2)}</p>
             </div>
             {discount > 0 && (
-              <div className="flex justify-between text-green-500">
-                <p>Discount</p>
-                <p>- ₹{discount.toFixed(2)}</p>
+              <div className="flex justify-between items-center text-green-500">
+                <p>Discount ({coupon?.code})</p>
+                <div className="flex items-center">
+                  <p className="mr-2">- ₹{discount.toFixed(2)}</p>
+                  <button onClick={removeCoupon} className="text-red-500 hover:underline text-sm">Remove</button>
+                </div>
               </div>
             )}
             <div className="flex justify-between">

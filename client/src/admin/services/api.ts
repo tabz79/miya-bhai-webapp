@@ -213,6 +213,19 @@ export const adminApi = {
     const url = `${API_BASE_URL}/coupons/${id}`;
     await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
   },
+
+  updateCouponStatus: async (id: string, isActive: boolean, token?: string): Promise<any> => {
+    const url = `${API_BASE_URL}/coupons/${id}/status`;
+    const { json } = await safeFetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify({ is_active: isActive }),
+    });
+    return json;
+  },
 };
 
 // convenient exports / aliases used by components elsewhere
