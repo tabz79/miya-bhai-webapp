@@ -341,7 +341,7 @@
     - There are no nested `<a>` tags inside `<Link>` components.
 - **Status:** ✅ Done
 
-### Epic: Cart & Checkout ⏳ in dev
+### Epic: Cart & Checkout ✅ Done. ( mostly done, few stories are left)
 
 **Story: Fix Cart Display (Show real item rows)**
 - **Owner:** PO
@@ -365,7 +365,7 @@
   - The checkout page receives the current cart contents and displays the same summary information (items, subtotal, discounts, GST, delivery, total).
   - Back/Cancel from `/checkout` returns user to the menu/cart with state preserved.
   - Checkout CTA shows a loading/disabled state while navigation or simple pre-check runs.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Checkout Page — Basic Payment Options**
 - **Owner:** PO
@@ -377,7 +377,7 @@
   - A primary **Place Order** button completes the flow and lands on an order confirmation placeholder page (`/order/confirmation`) that shows order id (fake), summary, and expected next steps.
   - The checkout page validates required fields (name, phone) and prevents placing an order if invalid.
   - Status indicators and accessible labels present for all options.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Coupons Integration**
 - **Owner:** PO
@@ -391,7 +391,7 @@
   - If invalid or expired, show a clear inline error message and do not alter totals.
   - Coupon application is idempotent (re-applying the same code does not stack).
   - Admin/marketing workflow for adding coupons is documented (CSV format example: `code,discountType,value`).
-- **Status:** ⏳ Backlog
+- **Status:** ✅ Done
 
 **Story: Tax & Delivery Calculation (GST 5% and Delivery ₹0)**
 - **Owner:** PO
@@ -419,7 +419,7 @@
   - Orders persisted to `data/orders.json`; any write creates/updates `data/orders.json.bak`.
   - If the JSON file is missing, server falls back to in-memory storage and creates the file on first write.
   - No sensitive keys are stored in repo; all config via env.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Razorpay Plumbing (Stubbed & Switchable)**
 - **Owner:** Dev
@@ -430,7 +430,7 @@
   - `POST /api/webhook/razorpay` exists and verifies signatures when keys are present; when keys absent the endpoint is a no-op or returns 501.
   - Server uses `RAZORPAY_ENABLED` flag to decide real vs stubbed payment flows.
   - No hard-coded credentials in code.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Checkout Frontend Wiring (Stubbed Payment Flow)**
 - **Owner:** Dev
@@ -441,7 +441,7 @@
   - UI shows a stubbed payment modal (simulate success/failure) when `RAZORPAY_ENABLED=false`.
   - UI polls `GET /api/orders/:id` to update order status and proceeds to confirmation when marked `paid`.
   - When `RAZORPAY_ENABLED=true`, code path is ready to call Razorpay Checkout with returned payment token.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Admin Dashboard — Orders (PWA)**
 - **Owner:** Dev / PO
@@ -453,7 +453,7 @@
   - Dashboard supports simple polling every 3–5s to surface new orders; code prepared for WebSocket later.
   - Simple access gate: prompt for `ADMIN_SECRET` (env) before showing list; session persists during browser session.
   - Actions update `data/orders.json` and create `.bak` on write.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Admin Notifications (Basic)**
 - **Owner:** Dev
@@ -472,7 +472,7 @@
 - **Acceptance Criteria:**
   - `.env.sample` present at repo root with placeholder values and brief comments.
   - Server reads env for behavior and does not fail if keys are missing (falls back to stubs).
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Data Backup & Safety**
 - **Owner:** Dev
@@ -495,7 +495,7 @@
 
 ---
 
-### Epic: MVP Shipping Plan ⏳ In Dev
+### Epic: MVP Shipping Plan ⏳ In Dev  (mostly done, few stories are left)
 
 **Story: Domain & Routing (miyabhai.in)**
 - **Owner:** PO
@@ -531,7 +531,7 @@
   - Confirmation page shows order number, amount, and brief next steps.
   - Totals include GST(5%) and delivery ₹0; coupon discount applied if any.
   - UI is consistent with Home/Menu design — modern, mobile-first.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Payment Options (Razorpay + COD)**
 - **Owner:** Dev
@@ -543,7 +543,7 @@
   - If COD chosen, order remains `payment_status=pending` until admin marks cash collected.
   - Stubbed flow works when `RAZORPAY_ENABLED=false`.
   - Payment UI is simple, modern, and mobile-friendly.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Admin Panel — Orders & Workflow**
 - **Owner:** PO / Dev
@@ -555,7 +555,7 @@
   - Admin can cancel order with reason and mark COD as collected.
   - Dashboard supports polling or realtime updates for new orders.
   - Admin UI must be **desktop-first design**: clean tables, wide-screen layout, modern dashboard style.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Admin Panel — Menu & Banner Management (MVP)**
 - **Owner:** PO / Dev
@@ -566,7 +566,7 @@
   - Admin can upload or reference banners/offers and mark them active/inactive.
   - Changes reflect in storefront after the next data refresh/build step.
   - UI consistent with admin panel — desktop-friendly.
-- **Status:** ⏳ Backlog
+- **Status:** ✅ Done
 
 **Story: Staff / Delivery Panel**
 - **Owner:** PO / Dev
@@ -577,7 +577,7 @@
   - Staff can update status: OUT_FOR_DELIVERY → COMPLETED and mark COD collected.
   - Minimal auth for staff (phone+OTP stubbed for MVP).
   - Staff UI must be **mobile-friendly**, optimized for fast usage by delivery staff on phones.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Real-time & Notifications**
 - **Owner:** Dev
@@ -598,7 +598,7 @@
   - `users` table includes: id, name, role, email, phone, passwordHash/otp fields.
   - `menu` table includes: id, name, price, category, availability, image/public_id.
   - `banners` table: id, image_url/public_id, title, active, startDate, endDate.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Deploy & Host (Vercel + Supabase)**
 - **Owner:** Dev / PO
@@ -631,7 +631,7 @@
 - **Status:** ⏳ To Do
 
 context: 
-### Epic: Admin Panel MVP Modules ⏳ To Do
+### Epic: Admin Panel MVP Modules ✅ Done
 
 **Story: Order Management System**
 - **Owner:** PO / Dev
@@ -643,7 +643,7 @@ context:
   - Status transitions supported: NEW → ACCEPTED → PREPARING → OUT_FOR_DELIVERY → COMPLETED → CANCELED.
   - Pagination and filters (by status, date, search) functional on server-side.
   - Admin can update order status and assign to staff.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Delivery Management**
 - **Owner:** Dev
@@ -655,7 +655,7 @@ context:
   - Delivery status flows update in real time or via polling.
   - Dispatch logic: available drivers shown in dropdown populated from DB.
   - No order can remain “Unassigned” without admin override.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Driver Management**
 - **Owner:** Dev
@@ -667,7 +667,7 @@ context:
   - Orders can only be assigned to drivers marked as active.
   - Driver availability status visible in assignment dropdown.
   - Basic driver profile view with contact and recent assignments.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Basic Analytics Dashboard**
 - **Owner:** PO / Dev
@@ -679,7 +679,7 @@ context:
   - Support date-range filter (today, 7 days, 30 days).
   - Data visualizations: line chart (orders over time), pie chart (payment methods).
   - Responsive design: desktop-first with clear visual hierarchy.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Customer Management**
 - **Owner:** Dev
@@ -691,7 +691,7 @@ context:
   - Individual customer profile shows contact details and past orders.
   - Orders table links to customer profile for quick navigation.
   - Basic search/filter by customer name, email, or phone.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 **Story: Financial Reporting**
 - **Owner:** PO / Dev
@@ -703,20 +703,99 @@ context:
   - Breakdowns: prepaid vs COD revenue.
   - Include GST and discount calculations in reports.
   - Accessed via dedicated “Reports” section in admin panel.
-- **Status:** ⏳ To Do
+- **Status:** ✅ Done
 
 
-### Epic: Profile Page ⏳
+### Epic: User Accounts & Profile Page ⏳ To Do
 
-**Story: Implement About & Settings Section in Profile**
-- **Description:** Create an About/Settings screen under Profile. Includes: About Miya Bhai Food Court (brand story, legacy, mission), App Version info (e.g., 1.0.0), General Settings toggles (Push Notifications on/off, Dark Mode toggle as future placeholder), Legal links (Terms of Service, Privacy Policy, Refund Policy), and Social media links (Instagram, Facebook, etc.).
+**Story: Core Authentication & Session Management**
+- **Owner:** Dev / PO
+- **Priority:** must
+- **Description:** Introduce user registration, login, logout, and secure session handling using hashed passwords and email-based verification. Enables persistent user identity across sessions.
 - **Acceptance Criteria:**
-    - Accessible via Profile tab.
-    - About text visible, scrollable.
-    - Version number displayed.
-    - Toggles present and interactive.
-    - Legal/social links functional.
-    - Matches brand colors and typography tokens.
+  - `users` table created with fields: id, name, email (unique), password_hash, role, created_at, is_active, email_verified.
+  - Endpoints for register (`POST /auth/register`), login (`POST /auth/login`), logout (`POST /auth/logout`), and get current user (`GET /auth/me`).
+  - Passwords hashed using bcrypt.
+  - Email verification flow functional (token-based with expiry).
+  - Secure httpOnly cookie-based sessions for auth.
+  - Basic rate limiting on login to prevent brute-force.
+- **Status:** ⏳ In Progress
+
+**Story: Address Management**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Add address storage and CRUD functionality for logged-in users, enabling faster checkouts and delivery accuracy.
+- **Acceptance Criteria:**
+  - `addresses` table with fields: id, user_id (FK), label, address_text, pincode, lat, lng, is_default.
+  - Endpoints for address CRUD (`GET/POST/PUT/DELETE /users/:id/addresses`).
+  - Users can manage multiple saved addresses.
+  - Default address used for checkout prefill.
+  - Address selection integrated in checkout flow for logged-in users.
+- **Status:** ⏳ Backlog
+
+**Story: Order History & Guest Order Linking**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Link orders to logged-in users, enable order history display, and allow guests to claim previous orders by verified email.
+- **Acceptance Criteria:**
+  - `orders` table updated with `user_id` FK (nullable).
+  - Logged-in users can view all their past orders in Profile > Order History.
+  - If guest orders exist under same email, user can claim them after verification.
+  - `/api/users/:id/orders` returns orders filtered by `user_id`.
+  - Admin can view which orders belong to which user or guest.
+- **Status:** ⏳ Backlog
+
+**Story: Profile Page – About, Settings & Account Info**
+- **Owner:** Dev / PO
+- **Priority:** should
+- **Description:** Create unified Profile page combining About, Account Info, and Settings sections. Displays brand info, app version, account details, and preferences.
+- **Acceptance Criteria:**
+  - Profile accessible from bottom tab navigation.
+  - Sections: 
+    - **Account Info:** name, email, verified status, edit profile, change password, logout.
+    - **Order History:** linked list view with order IDs, dates, totals.
+    - **Addresses:** list + “Add New Address” CTA.
+    - **Settings:** push notifications (placeholder), dark mode toggle (future).
+    - **About:** brand story, version number, social and legal links.
+  - Scrollable layout respecting brand typography and color tokens.
+- **Status:** ⏳ Backlog
+
+**Story: Password Reset & Recovery**
+- **Owner:** Dev
+- **Priority:** should
+- **Description:** Implement password recovery flow via email token, ensuring secure reset mechanism.
+- **Acceptance Criteria:**
+  - `POST /auth/reset-request` and `POST /auth/reset` endpoints functional.
+  - Tokens stored securely and expire after 1 hour.
+  - Reset success invalidates token immediately.
+  - Rate limiting enforced on reset requests.
+  - Frontend form validates token and password match.
+- **Status:** ⏳ Backlog
+
+**Story: Admin User Management**
+- **Owner:** Dev / PO
+- **Priority:** should
+- **Description:** Introduce new “Users” tab in admin panel for managing registered accounts, toggling active status, and reviewing order activity.
+- **Acceptance Criteria:**
+  - Admin tab “Users” added alongside Dashboard, Orders, Delivery, Coupons.
+  - Table view with columns: Name, Email, Role, Active, Created At, Orders Count.
+  - Admin can toggle `is_active` (activate/deactivate user).
+  - User detail drawer shows profile info, saved addresses, and orders.
+  - Deactivated users cannot log in.
+- **Status:** ⏳ Backlog
+
+**Story: Security & Validation Enhancements**
+- **Owner:** Dev
+- **Priority:** must
+- **Description:** Strengthen authentication, token, and input validation mechanisms to meet production-grade security.
+- **Acceptance Criteria:**
+  - bcrypt password hashing with cost factor ≥ 12.
+  - Tokens single-use with expiry and secure storage.
+  - Input validation for all auth routes using Zod or similar schema.
+  - CSRF-safe cookie configuration.
+  - Logging of auth failures and suspicious activity.
+- **Status:** ⏳ Backlog
+
 - **Status:** ⏳ Backlog
 
 ### Epic: Asset Hygiene ⏳

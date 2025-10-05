@@ -1,3 +1,4 @@
+// client/src/App.tsx
 import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -24,6 +25,11 @@ import AdminCustomersPage from "@/admin/pages/customers";
 import AdminReportsPage from "@/admin/pages/reports";
 import AdminSettingsPage from "@/admin/pages/settings";
 import CouponsPage from "@/admin/pages/Coupons";
+
+// <-- NEW: magic link pages
+import MagicLinkRequest from "@/pages/MagicLinkRequest";
+import { MagicLinkCallback } from "@/pages/MagicLinkCallback";
+import InvalidLink from "@/pages/InvalidLink";
 
 function App() {
   const [location] = useLocation();
@@ -57,6 +63,16 @@ function App() {
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/confirmation" component={Confirmation} />
                 <Route path="/staff" component={Staff} />
+
+                {/* Magic-link entry point */}
+                <Route path="/magic-link" component={MagicLinkRequest} />
+
+                {/* Redirect target for expired/invalid links */}
+                <Route path="/auth/invalid-link" component={InvalidLink} />
+
+                {/* ADDED: Handle the magic link callback */}
+                <Route path="/auth/callback" component={MagicLinkCallback} />
+
                 <Route component={NotFound} />
               </Switch>
             </MobileFrame>
@@ -66,4 +82,4 @@ function App() {
     </QueryClientProvider>
   );
 }
-export default App; 
+export default App;

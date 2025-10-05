@@ -1,83 +1,304 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/lib/supabaseClient';
 import { BottomNav } from '../components/BottomNav';
+import { CollapsibleCard } from '../components/Profile/CollapsibleCard';
+import { OrdersCard } from '../components/Profile/OrdersCard';
+import { AddressesCard } from '../components/Profile/AddressesCard';
+import { SettingsCard } from '../components/Profile/SettingsCard';
 import { restaurantInfo } from '../data/mockData';
-import { useCartStore } from '@/hooks/useCartStore';
+import { Button } from '@/components/ui/button';
+import ProfileForm, { ProfilePayload } from '@/components/Profile/ProfileForm';
+import { useToast } from '@/components/ui/use-toast';
+import LoginModal from '@/components/Auth/LoginModal';
 
-const user = {
-  name: 'Miya Bhai',
-  email: 'hello@example.com',
+type ProfileRecord = {
+  id: string;
+  full_name?: string | null;
+  phone?: string | null;
+  avatar_url?: string | null;
+  branch?: string | null;
 };
 
 export function Profile() {
-  const { clearCart } = useCartStore();
+  const { user, isLoading } = useAuth();
+  const [profile, setProfile] = useState<ProfileRecord | null>(null);
+  const [isFetchingProfile, setIsFetchingProfile] = useState(false);
+  const [isSigningOut, setIsSigningOut] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
-  const handleSignOut = () => {
-    clearCart();
-    // In a real app, you'd also redirect to a login page
-    // or clear an authentication token.
-    alert('You have been signed out and your cart has been cleared.');
+  const { toast } = useToast();
+
+  // Helper: fetch profile by a given userId (used when user.id becomes available)
+  const fetchProfileById = async (userId: string | null) => {
+    if (!userId) return null;
+    try {
+      setIsFetchingProfile(true);
+      const { data, error } = await supabase
+        .from<ProfileRecord>('profiles')
+        .select('*')
+        .eq('id', userId)
+        .single();
+
+      if (error && (error as any).code !== 'PGRST116') {
+        console.error('Error fetching profile:', error);
+        toast?.({
+          title: 'Profile load failed',
+          description: 'Check console for details.',
+          variant: 'destructive',
+        });
+      }
+      return data ?? null;
+    } catch (err) {
+      console.error('Unexpected fetchProfile error', err);
+      toast?.({
+        title: 'Profile load failed',
+        description: 'Unexpected error. See console.',
+        variant: 'destructive',
+      });
+      return null;
+    } finally {
+      setIsFetchingProfile(false);
+    }
   };
+
+  // ⚙️ Defensive fetch: only query Supabase if user.id exists.
+  // If user exists but id is missing, attempt to re-fetch /api/user to get updated data.
+  useEffect(() => {
+    let mounted = true;
+
+    const run = async () => {
+      if (!user) {
+        if (mounted) setProfile(null);
+        return;
+      }
+
+      // If user has no id, try to refresh the server-side session /user endpoint
+      if (!user.id) {
+        console.warn('[Profile] Skipping profile fetch: user.id is missing — attempting server re-check');
+        try {
+          const resp = await fetch('/api/user', { credentials: 'include' });
+          if (resp.ok) {
+            const body = await resp.json();
+            const returnedUser = body?.user;
+            if (returnedUser?.id) {
+              // we now have an id — fetch the profile data
+              const fetched = await fetchProfileById(returnedUser.id);
+              if (mounted) setProfile(fetched);
+              return;
+            }
+          } else {
+            // server says not authenticated or similar — keep fallback UX
+            if (mounted) setProfile(null);
+            return;
+          }
+        } catch (e) {
+          console.warn('[Profile] server re-check failed', e);
+          if (mounted) setProfile(null);
+          return;
+        }
+      }
+
+      // Normal path: user.id exists — fetch profile directly
+      if (user.id) {
+        const fetched = await fetchProfileById(user.id);
+        if (mounted) setProfile(fetched);
+      }
+    };
+
+    run();
+
+    return () => {
+      mounted = false;
+    };
+  }, [user, toast]);
+
+  const handleSignOut = async () => {
+    if (isSigningOut) return;
+    setIsSigningOut(true);
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) {
+        console.error('Sign out error:', error);
+        toast?.({
+          title: 'Sign out failed',
+          description: 'Check console for details.',
+          variant: 'destructive',
+        });
+        return;
+      }
+      setProfile(null);
+      toast?.({
+        title: 'Signed out',
+        description: 'You have been signed out successfully.',
+      });
+    } catch (err) {
+      console.error('Unexpected signOut error', err);
+      toast?.({
+        title: 'Sign out failed',
+        description: 'Unexpected error. See console.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSigningOut(false);
+    }
+  };
+
+  const displayName =
+    profile?.full_name ||
+    (user?.name as string | undefined) ||
+    (user?.email ? user.email.split('@')[0] : 'User');
+
+  const avatarLetter =
+    (profile?.full_name || (user?.name as string) || 'U')
+      .charAt(0)
+      .toUpperCase();
+
+  const handleProfileSave = (p: ProfilePayload) => {
+    setProfile((prev) => ({
+      ...(prev ?? { id: user?.id ?? p.id }),
+      ...p,
+    }));
+    setEditing(false);
+    toast?.({
+      title: 'Profile updated',
+      description: 'Your profile changes were saved.',
+    });
+  };
+
+  // 🧩 If user exists but has no id and server re-check didn't find one, show fallback
+  if (user && !user.id && !profile) {
+    return (
+      <div className="w-full min-h-screen bg-app-background flex flex-col items-center justify-center p-6 text-center">
+        <h2 className="text-xl font-bold mb-2">Welcome, {user.email}</h2>
+        <p className="text-gray-600 max-w-sm mb-4">
+          We created a temporary session for you, but your account isn’t yet
+          linked to a user record in the database.
+        </p>
+        <p className="text-sm text-gray-500">
+          Please contact an admin or complete registration.
+        </p>
+        <div className="mt-6">
+          <Button onClick={() => setLoginOpen(true)} className="bg-brand-teak text-white hover:bg-brand-teak/90">
+            Log in again
+          </Button>
+        </div>
+        <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
+      </div>
+    );
+  }
 
   return (
     <div className="w-full min-h-screen bg-app-background">
-      {/* Header */}
-      <div className="p-4 border-b border-gray-200">
-        <h1 className="text-app-foreground font-bold text-xl">Profile</h1>
-      </div>
+      <div className="p-4 border-b border-gray-200 bg-app-background">
+        {isLoading || isFetchingProfile ? (
+          <div className="h-16" />
+        ) : user ? (
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div
+                className="w-16 h-16 bg-brand-teak rounded-full flex items-center justify-center"
+                title={profile?.full_name ?? user?.email}
+              >
+                <span className="text-white font-bold text-2xl">
+                  {avatarLetter}
+                </span>
+              </div>
+              <div>
+                <h2 className="text-app-foreground font-bold text-xl">
+                  {displayName}
+                </h2>
+                <p className="text-gray-500 text-sm">{user.email}</p>
+                {profile?.phone && (
+                  <p className="text-gray-400 text-xs mt-1">
+                    📞 {profile.phone}
+                  </p>
+                )}
+              </div>
+            </div>
 
-      {/* User Info Section (stub) */}
-      <div className="p-4 border-b border-gray-200">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 bg-brand-teak rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">{user.name.charAt(0)}</span>
+            <div className="flex items-center gap-2">
+              {!editing ? (
+                <Button
+                  onClick={() => setEditing(true)}
+                  className="bg-brand-teak text-white hover:bg-brand-teak/90"
+                >
+                  Edit
+                </Button>
+              ) : (
+                <Button variant="ghost" onClick={() => setEditing(false)}>
+                  Close
+                </Button>
+              )}
+            </div>
           </div>
-          <div>
-            <h2 className="text-app-foreground font-semibold text-lg">{user.name}</h2>
-            <p className="text-gray-500 text-sm">{user.email}</p>
+        ) : (
+          <div className="flex items-center justify-between">
+            <h1 className="text-app-foreground font-bold text-xl">Profile</h1>
+            <Button
+              onClick={() => setLoginOpen(true)}
+              className="bg-brand-teak text-white hover:bg-brand-teak/90"
+            >
+              Login
+            </Button>
+            <LoginModal
+              open={loginOpen}
+              onClose={() => setLoginOpen(false)}
+            />
           </div>
-        </div>
+        )}
       </div>
 
-      {/* Order History (stub) */}
-      <div className="p-4 border-b border-gray-200">
-        <h3 className="text-app-foreground font-semibold text-base mb-2">Order History</h3>
-        <p className="text-gray-500 text-sm">No orders yet. Start by placing your first order!</p>
-      </div>
+      <div className="p-4 space-y-4">
+        {editing && user && (
+          <CollapsibleCard title="Edit Profile" defaultOpen>
+            <ProfileForm
+              userId={user.id}
+              initial={profile ?? undefined}
+              onSave={(p) => handleProfileSave(p)}
+              onCancel={() => setEditing(false)}
+            />
+          </CollapsibleCard>
+        )}
 
-      {/* Sign Out Button */}
-      <div className="p-4">
-        <button 
-          onClick={handleSignOut}
-          className="w-full bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors"
-        >
-          Sign Out
-        </button>
-      </div>
+        <CollapsibleCard title="Orders">
+          <OrdersCard />
+        </CollapsibleCard>
 
-      {/* Restaurant Story - Full narrative as specified */}
-      <div className="p-4">
-        <h3 className="text-app-foreground font-bold text-lg mb-3">About {restaurantInfo.name}</h3>
-        <div className="space-y-4 text-app-foreground text-sm leading-relaxed">
-          {restaurantInfo.story.split('\n\n').map((paragraph, index) => (
-            <p key={index}>{paragraph.trim()}</p>
-          ))}
-        </div>
+        <CollapsibleCard title="Addresses">
+          <AddressesCard />
+        </CollapsibleCard>
 
-        {/* Contact Information */}
-        <div className="mt-6 p-4 bg-white rounded-lg shadow-card">
-          <h4 className="font-semibold text-base mb-2">Contact Us</h4>
-          <div className="space-y-2 text-sm">
-            <p><span className="font-medium">Phone:</span> {restaurantInfo.phone}</p>
-            <p><span className="font-medium">Email:</span> {restaurantInfo.email}</p>
-            <p><span className="font-medium">Address:</span> {restaurantInfo.address}</p>
+        <CollapsibleCard title="Settings">
+          <SettingsCard />
+        </CollapsibleCard>
+
+        <CollapsibleCard title="About" defaultOpen>
+          <div className="space-y-4 text-app-foreground text-sm leading-relaxed">
+            {restaurantInfo.story
+              .split('\n\n')
+              .map((paragraph, index) => (
+                <p key={index}>{paragraph.trim()}</p>
+              ))}
           </div>
-        </div>
+        </CollapsibleCard>
       </div>
 
-      {/* Spacer for BottomNav */}
+      {user && (
+        <div className="p-4 mt-4">
+          <Button
+            onClick={handleSignOut}
+            variant="destructive"
+            className="w-full"
+            disabled={isSigningOut}
+          >
+            {isSigningOut ? 'Signing out...' : 'Sign Out'}
+          </Button>
+        </div>
+      )}
+
       <div className="h-[49px]" />
-
-      {/* BottomNav */}
       <BottomNav />
     </div>
   );

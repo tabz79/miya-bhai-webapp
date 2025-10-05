@@ -30,6 +30,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    port: 5173, // explicit dev port
     fs: {
       strict: true,
       deny: ["**/.*"],
@@ -40,6 +41,7 @@ export default defineConfig({
         target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path, // keep '/api' prefix as-is
       },
     },
   },
