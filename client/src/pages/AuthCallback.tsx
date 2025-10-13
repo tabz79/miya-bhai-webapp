@@ -84,7 +84,7 @@ export default function AuthCallback() {
       // 5) Timeout guard -> invalid link
       timeout = setTimeout(() => {
         L("❌ No session found after checks — going to /auth/invalid-link");
-        navigate("https://google.com");
+        window.location.href = "https://google.com";
       }, 5000);
     };
 
