@@ -9,25 +9,15 @@ module.exports = {
     "./components/**/*.{ts,tsx,js,jsx,html}"
   ],
   safelist: [
-    // grid & responsive column classes (keeps them from being purged)
     "grid",
     "grid-cols-1",
     "grid-cols-2",
-    "grid-cols-3",
     "grid-cols-4",
-    "sm:grid-cols-1",
     "sm:grid-cols-2",
     "sm:grid-cols-4",
-    "md:grid-cols-2",
-    "lg:grid-cols-3",
-    "xl:grid-cols-4",
-    // gap utilities
-    "gap-1",
-    "gap-2",
-    "gap-3",
+    "md:grid-cols-3",
+    "lg:grid-cols-4",
     "gap-4",
-    "gap-6",
-    "gap-8"
   ],
   theme: {
     extend: {
