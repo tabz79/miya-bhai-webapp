@@ -1,21 +1,46 @@
+// tailwind.config.js
 module.exports = {
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}",
+  content: [
+    "./client/index.html",
+    "./client/src/**/*.{js,jsx,ts,tsx,html}",
     "./src/**/*.{html,js,ts,jsx,tsx}",
-    "app/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx,js,jsx,html}",
+    "./components/**/*.{ts,tsx,js,jsx,html}",
+    // catch any stray files in other folders (helps monorepo setups)
+    "./**/*.{js,jsx,ts,tsx,html}"
+  ],
+  safelist: [
+    // grid & responsive column classes (keeps them from being purged)
+    "grid",
+    "grid-cols-1",
+    "grid-cols-2",
+    "grid-cols-3",
+    "grid-cols-4",
+    "sm:grid-cols-1",
+    "md:grid-cols-2",
+    "lg:grid-cols-3",
+    "xl:grid-cols-4",
+    // gap utilities
+    "gap-1",
+    "gap-2",
+    "gap-3",
+    "gap-4",
+    "gap-6",
+    "gap-8",
+    // any other classes you rely on dynamically (add here if needed)
   ],
   theme: {
     extend: {
       colors: {
         // Design tokens from tokens.json
-        'app-background': '#EDE9E4', // Background.Beige
-        'app-foreground': '#000000', // Text.HeroPrimary
-        'bestseller-bg': '#4E4739', // BestSeller.Background
-        'brand-tuatara': '#3c3c3b',
-        'brand-teak': '#ae905c',
-        'brand-tobacco': '#675b46',
-        'brand-goben': '#746d52',
-        
+        "app-background": "#EDE9E4", // Background.Beige
+        "app-foreground": "#000000", // Text.HeroPrimary
+        "bestseller-bg": "#4E4739", // BestSeller.Background
+        "brand-tuatara": "#3c3c3b",
+        "brand-teak": "#ae905c",
+        "brand-tobacco": "#675b46",
+        "brand-goben": "#746d52",
+
         // Existing colors
         colorbackgroundbeige: "var(--colorbackgroundbeige)",
         colorbackgroundbestseller: "var(--colorbackgroundbestseller)",
@@ -115,9 +140,9 @@ module.exports = {
       },
       boxShadow: {
         // Design tokens shadows
-        'searchbox': '0px 1px 4px rgba(0,0,0,0.25)',
-        'card': '0px 2px 8px rgba(0,0,0,0.10)',
-        
+        searchbox: "0px 1px 4px rgba(0,0,0,0.25)",
+        card: "0px 2px 8px rgba(0,0,0,0.10)",
+
         // Existing shadows
         "color-background-bestseller-shadow":
           "var(--color-background-bestseller-shadow)",
