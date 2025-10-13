@@ -1,0 +1,677 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host syjowafvyvqoclipctzj.supabase.co:443 was resolved.
+* IPv6: (none)
+* IPv4: 172.64.149.246, 104.18.38.10
+*   Trying 172.64.149.246:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Connected to syjowafvyvqoclipctzj.supabase.co (172.64.149.246) port 443
+* using HTTP/1.x
+> GET /auth/v1/authorize?provider=github&redirect_to=http://localhost:5173/auth/callback HTTP/1.1
+> Host: syjowafvyvqoclipctzj.supabase.co
+> User-Agent: curl/8.13.0
+> Accept: */*
+> 
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 302 Found
+< Date: Sun, 12 Oct 2025 07:00:18 GMT
+< Content-Type: text/plain
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Location: https://github.com/login/oauth/authorize?client_id=Ov23licE6CxH9bE9Gugd&redirect_to=http%3A%2F%2Flocalhost%3A5173%2Fauth%2Fcallback&redirect_uri=https%3A%2F%2Fsyjowafvyvqoclipctzj.supabase.co%2Fauth%2Fv1%2Fcallback&response_type=code&scope=user%3Aemail&state=eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo
+< CF-Ray: 98d4b82dd81a87fe-HYD
+< CF-Cache-Status: DYNAMIC
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Vary: Origin, Accept-Encoding
+< Content-Security-Policy: default-src 'none'; sandbox
+< sb-gateway-version: 1
+< sb-project-ref: syjowafvyvqoclipctzj
+< sb-request-id: 0199d738-590e-7099-bdeb-7f5fd01a2114
+< X-Content-Type-Options: nosniff
+< x-envoy-attempt-count: 1
+< x-envoy-upstream-service-time: 1
+< Set-Cookie: __cf_bm=MJ_XOMIZf0VbhcwydAozj_umTqbMLuY.k1iGCQTUohE-1760252418-1.0.1.1-_3rZ1llYi3fl8X5UvLV_lSp7HDEeg_fqNmlUD4oQxfTtB44MCjRmJNguvx6r9TEFosV22mF8Fjdka27OtFZ7.nsGElQbpbqn49N40XeHLCY; path=/; expires=Sun, 12-Oct-25 07:30:18 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None
+< Server: cloudflare
+< alt-svc: h3=":443"; ma=86400
+* Ignoring the response-body
+< 
+100   723    0   723    0     0   1173      0 --:--:-- --:--:-- --:--:--  1183
+* Connection #0 to host syjowafvyvqoclipctzj.supabase.co left intact
+* Issue another request to this URL: 'https://github.com/login/oauth/authorize?client_id=Ov23licE6CxH9bE9Gugd&redirect_to=http%3A%2F%2Flocalhost%3A5173%2Fauth%2Fcallback&redirect_uri=https%3A%2F%2Fsyjowafvyvqoclipctzj.supabase.co%2Fauth%2Fv1%2Fcallback&response_type=code&scope=user%3Aemail&state=eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo'
+* Host github.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 20.207.73.82
+*   Trying 20.207.73.82:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Connected to github.com (20.207.73.82) port 443
+* using HTTP/1.x
+> GET /login/oauth/authorize?client_id=Ov23licE6CxH9bE9Gugd&redirect_to=http%3A%2F%2Flocalhost%3A5173%2Fauth%2Fcallback&redirect_uri=https%3A%2F%2Fsyjowafvyvqoclipctzj.supabase.co%2Fauth%2Fv1%2Fcallback&response_type=code&scope=user%3Aemail&state=eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo HTTP/1.1
+> Host: github.com
+> User-Agent: curl/8.13.0
+> Accept: */*
+> 
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 302 Found
+< Date: Sun, 12 Oct 2025 07:00:19 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 0
+< Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+< Location: https://github.com/login?client_id=Ov23licE6CxH9bE9Gugd&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo
+< Cache-Control: no-cache
+< Set-Cookie: _octo=GH1.1.1855407135.1760252419; domain=github.com; path=/; expires=Mon, 12 Oct 2026 07:00:19 GMT; secure; SameSite=Lax
+< Set-Cookie: _gh_sess=4RirPODiF9RGbSFU%2FqTEEBudiYf8QUFtSMQ2rtZHIZ51iznWhuAx3mKsGZtsmF1M93rkLWmfoMSFAEbcUW4wzkVuRnc%2BHgfcnkHLEiKAWT0omWZ4NvS9g381p20Oi5MxRWn8IX0W6Bc9vKMMFiC%2B6c1uO6Vz95DUYXgG1Spb%2Fv2zGLWMpUT4QUEXpZwAkzGLOtm%2BEhKAnbwZhUbQeQV92wTp893zc9MIMQ1fBvzapFJaVF8O--%2BCigHZ0IHavGU7Jy--NovD3mzpysBbgSz7n35NWA%3D%3D; path=/; secure; HttpOnly; SameSite=Lax
+< Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+< X-Frame-Options: deny
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 0
+< Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+< Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+< Server: github.com
+< X-GitHub-Request-Id: 37BD:2EED0:24B36E:33D1EE:68EB5202
+* Ignoring the response-body
+* setting size while ignoring
+< 
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+* Connection #1 to host github.com left intact
+* Issue another request to this URL: 'https://github.com/login?client_id=Ov23licE6CxH9bE9Gugd&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo'
+* Re-using existing https: connection with host github.com
+> GET /login?client_id=Ov23licE6CxH9bE9Gugd&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo HTTP/1.1
+> Host: github.com
+> User-Agent: curl/8.13.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Sun, 12 Oct 2025 07:00:19 GMT
+< Content-Type: text/html; charset=utf-8
+< Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+< Cache-Control: no-store
+< ETag: W/"3edd62ef17cac5c05dd26c6db45e10d2"
+< Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+< X-Frame-Options: deny
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 0
+< Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+< Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com browser.events.data.microsoft.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+< Server: github.com
+< Accept-Ranges: bytes
+< Set-Cookie: _gh_sess=UgdHeyOdwj%2F%2BRkHZBJg%2FGCpOb3teGdXucPXaNrYnUXJkdOxrqnbKBtajjW5zz0UlMEHGTZ9QJpk1%2BPAlWarPGH3RNIz6pfC8aqjbpzLL%2F9%2F4RmSG7YV9TsobYmjwShem%2BCgGmc2uWJNumN%2FjsRdsvy1BbAp6WzaY5M5rSZQiVyomgQDfG8aweMZXBRA3rbmW8wxuDiKTQFh1%2BH4PDp%2BzY3tFoDW6Zs8o3mM5k%2FqjgfpmnvwOMSxbu6YbwrhT472xjdS%2F7Wlr4IYOpn7AMUSg6A%3D%3D--BJv7o3%2FLopehWMUk--tR6AFP4HP2ae1DAtWe7bbw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+< Set-Cookie: _octo=GH1.1.1910620461.1760252419; Path=/; Domain=github.com; Expires=Mon, 12 Oct 2026 07:00:19 GMT; Secure; SameSite=Lax
+< Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Mon, 12 Oct 2026 07:00:19 GMT; HttpOnly; Secure; SameSite=Lax
+< X-GitHub-Request-Id: 37BD:2EED0:24B395:33D21D:68EB5203
+< Transfer-Encoding: chunked
+< 
+{ [8220 bytes data]
+ 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+    class="html-auth"
+  
+  data-color-mode="auto" data-light-theme="light" data-dark-theme="dark"
+  data-a11y-animated-images="system" data-a11y-link-underlines="true"
+  data-css-features="one_click_merge_conflict"
+  >
+
+
+
+
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com">
+  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+  <link rel="preconnect" href="https://github.githubassets.com" crossorigin>
+  <link rel="preconnect" href="https://avatars.githubusercontent.com">
+
+  
+
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light-6215e264aa81.css" /><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light_high_contrast-0d1726fbc5ce.css" /><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark-be3560533a2e.css" /><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark_high_contrast-0f500fc95568.css" /><link data-color-theme="light" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light-6215e264aa81.css" /><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-0d1726fbc5ce.css" /><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-295e85c7acf3.css" /><link data-color-theme="light_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind_high_contrast-6f7fd702e376.css" /><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-5810b6198753.css" /><link data-color-theme="light_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia_high_contrast-9be09d7c543a.css" /><link data-color-theme="dark" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark-be3560533a2e.css" /><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-0f500fc95568.css" /><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-b93c131e97d5.css" /><link data-color-theme="dark_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind_high_contrast-562d56be7ab1.css" /><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-297cb06a83c5.css" /><link data-color-theme="dark_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia_high_contrast-9ba270e719b9.css" /><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-64c3ca7e9c26.css" /><link data-color-theme="dark_dimmed_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed_high_contrast-89581edef127.css" />
+
+  <style type="text/css">
+    :root {
+      --tab-size-preference: 4;
+    }
+
+    pre, code {
+      tab-size: var(--tab-size-preference);
+    }
+  </style>
+
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-primitives-15839d47b75d.css" />
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-4badbb48d792.css" />
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-8a53c367ec8b.css" />
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-73fd10e24e0c.css" />
+  
+
+  
+
+  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["alternate_user_config_repo","api_insights_show_missing_data_banner","attestations_filtering","attestations_sorting","billing_unfiltered_discounts","client_version_header","codespaces_prebuild_region_target_update","contact_sales_locale_utm_medium","contentful_lp_enterprise","contentful_lp_footnotes","copilot_agent_cli_public_preview","copilot_agent_tasks_btn_code_nav","copilot_agent_tasks_btn_code_view","copilot_agent_tasks_btn_code_view_lines","copilot_agent_tasks_btn_file_reference","copilot_api_agentic_issue_marshal_yaml","copilot_api_github_draft_update_issue_skill","copilot_bing_search_use_azure_ai_agent_service","copilot_bing_search_use_grounding_ui","copilot_chat_attach_multiple_images","copilot_chat_file_redirect","copilot_chat_reduce_quota_checks","copilot_chat_search_bar_redirect","copilot_chat_selection_attachments","copilot_chat_vision_in_claude","copilot_chat_vision_skip_thread_create","copilot_coding_agent_diff_stats","copilot_coding_agent_ga","copilot_custom_copilots","copilot_custom_copilots_feature_preview","copilot_duplicate_thread","copilot_extensions_deprecation_notice","copilot_features_raycast_logo","copilot_file_block_ref_matching","copilot_free_to_paid_telem","copilot_ftp_hyperspace_upgrade_prompt","copilot_ftp_settings_upgrade","copilot_ftp_upgrade_to_pro_from_models","copilot_ftp_your_copilot_settings","copilot_generate_commit_message_regenerate","copilot_global_overlay_v2","copilot_immersive_agent_branch_selection","copilot_immersive_planning_agent_aggregate_task","copilot_immersive_planning_agent_questions_form","copilot_immersive_structured_model_picker","copilot_no_floating_button","copilot_read_shared_conversation","copilot_show_copilot_sub_issues_button_on_issues_page","copilot_spaces_as_attachments","copilot_spaces_ga","copilot_spark_loading_webgl","copilot_spark_progressive_error_handling","copilot_spark_read_iteration_history_from_git_v2","copilot_spark_single_user_iteration","copilot_spark_use_billing_headers","copilot_spark_write_iteration_history_to_git","copilot_stable_conversation_view","copilot_workbench_agent_seed_tool","copilot_workbench_cache","copilot_workbench_connection_reload_banner","copilot_workbench_preview_analytics","copilot_workbench_refresh_on_wsod","copilot_workbench_use_single_prompt","direct_to_salesforce","dotcom_chat_client_side_skills","failbot_report_error_react_apps_on_page","ghost_pilot_confidence_truncation_25","ghost_pilot_confidence_truncation_40","global_search_multi_orgs","hpc_improve_dom_insertion_observer","inp_reduced_threshold","insert_before_patch","issue_fields_report_usage","issues_copilot_cross_repo_assign","issues_copilot_repo_search_in_org","issues_react_blur_item_picker_on_close","issues_react_bots_timeline_pagination","issues_react_prohibit_title_fallback","issues_react_remove_placeholders","issues_sticky_sidebar","item_picker_milestone_tsq_migration","kb_convert_to_space","lifecycle_label_name_updates","link_contact_sales_swp_marketo","marketing_pages_search_explore_provider","mcp_registry_install","memex_mwl_filter_field_delimiter","migrate_toasts_to_banners_web_notifications","new_traffic_page_banner","one_click_merge_conflict","override_pulse_legacy_url","pinned_issue_fields","primer_react_segmented_control_tooltip","primer_react_unified_portal_root","record_sso_banner_metrics","releases_update_ref_selector","remove_child_patch","repos_insights_remove_new_url","sample_network_conn_type","scheduled_reminders_updated_limits","site_homepage_collaborate_video","site_homepage_contentful","site_msbuild_webgl_hero","spark_commit_on_default_branch","spark_show_data_access_on_publish","spark_sync_repository_after_iteration","viewscreen_sandbox","webp_support","workbench_store_readonly"],"copilotApiOverrideUrl":"https://api.githubcopilot.com"}</script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/high-contrast-cookie-f3788027bd8d.js"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/wp-runtime-2e6ff0d107f1.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_oddbird_popover-polyfill_dist_popover-fn_js-468bf7cab607.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_stacktrace-parser_dist_stack-trace-parser_esm_js-node_modules_github_bro-2f4e04-280c10ec004d.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_arianotify-polyfill_ariaNotify-polyfill_js-node_modules_github_mi-c8eeba-690858154b11.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/environment-e36acb721009.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_index_mjs-7e8c9c5d642d.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-7e4d99c9171d.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_relative-time-element_dist_index_js-c98257dc79a7.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_catalyst_-0d7d60-55f9488be32e.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_text-expander-element_dist_index_js-754f5b5e9e7e.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-665e70-a5590c456d33.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_markdown-toolbar-element_dist_index_js-d41270eb61be.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-777ce2-8e82a4256929.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/github-elements-36a69695b2e8.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/element-registry-39a7dbbf0b1c.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_braintree_browser-detection_dist_browser-detection_js-node_modules_githu-bb80ec-4e90f1d1076c.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-06c8637a6071.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_morphdom_dist_morphdom-e-c1896e-8b29325c0a25.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-8eb9b2209bcd.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-cd5d89ebdb50.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_hotkey_dist_index_js-node_modules_github_hydro-analytics-client_d-dd3ec8-82973d2f342e.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_session-resume_-31b9f3-99d95b37aa24.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/packages_document-metadata_document-metadata_ts-packages_failbot_failbot_ts-b8e9eefcce78.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/packages_updatable-content_updatable-content_ts-a743e72edcf2.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_details-6493f1-b7112815a1fc.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_throttled-input_ts-047775-f7905105dea8.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-6bc7a8849328.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-61b516b0ac00.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-ef6d0f-90a0269c4bc0.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/notifications-global-f5c28dea1388.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_inde-f69fd1-1b826bcef4eb.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-3eebbd-2a60e340f3f8.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_ref-selector_ts-98da180bcdc4.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_profile_edit-social-account_ts-app_assets_modules_github_settings_p-b03314-1638c07360ab.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/settings-4b7e69bcd75c.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_gsap_index_js-23c9606618ce.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-94fd67-04dd9f3c4754.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/sessions-ac148cb2a2f3.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_memoize_dist_esm_inde-455471-8f02770d9699.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/signup-d5b8367be2a2.js" defer="defer"></script>
+  
+
+  <title>Sign in to GitHub · GitHub</title>
+
+
+
+  <meta name="route-pattern" content="/login(.:format)" data-turbo-transient>
+  <meta name="route-controller" content="sessions" data-turbo-transient>
+  <meta name="route-action" content="new" data-turbo-transient>
+  <meta name="fetch-nonce" content="v2:ab388755-922c-6965-bdd8-5a3a6dbc2174">
+
+    
+  <meta name="current-catalog-service-hash" content="701273d4944fb23919c770da2da3f33b6da9ed8e668f7249090e3e9f429343b5">
+
+
+  <meta name="request-id" content="37BD:2EED0:24B395:33D21D:68EB5203" data-pjax-transient="true"/><meta name="html-safe-nonce" content="eb63d61cccf227c0c17285548ac659cfa0a06c99b884025d852e10f5a7355cae" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiIzN0JEOjJFRUQwOjI0QjM5NTozM0QyMUQ6NjhFQjUyMDMiLCJ2aXNpdG9yX2lkIjoiODIwNjA1MjM5NjgyMzY5NTg3NSIsInJlZ2lvbl9lZGdlIjoiY2VudHJhbGluZGlhIiwicmVnaW9uX3JlbmRlciI6ImNlbnRyYWxpbmRpYSJ9" data-pjax-transient="true"/><meta name="visitor-hmac" content="ae3a6f0275326592853053a755d53074a7a2a74dc325553374ba9290347ddb7e" data-pjax-transient="true"/>
+
+
+
+
+  <meta name="github-keyboard-shortcuts" content="copilot" data-turbo-transient="true" />
+  
+
+  <meta name="selected-link" value="/login" data-turbo-transient>
+  <link rel="assets" href="https://github.githubassets.com/">
+
+    <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
+
+<meta name="octolytics-url" content="https://collector.github.com/github/collect" />
+
+  <meta name="analytics-location-query-strip" content="true" data-turbo-transient="true" />
+
+  
+
+
+
+
+    <meta name="user-login" content="">
+
+  
+
+    <meta name="viewport" content="width=device-width">
+
+    
+
+      <meta name="description" content="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.">
+
+      <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <meta property="fb:app_id" content="1401488693436528">
+    
+
+      <meta property="og:url" content="https://github.com">
+  <meta property="og:site_name" content="GitHub">
+  <meta property="og:title" content="Build software better, together">
+  <meta property="og:description" content="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.">
+  <meta property="og:image" content="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image" content="https://github.githubassets.com/assets/github-mark-57519b92ca4e.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="620">
+  <meta property="og:image" content="https://github.githubassets.com/assets/github-octocat-13c86b8b336d.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="620">
+
+  <meta property="twitter:site" content="github">
+  <meta property="twitter:site:id" content="13334762">
+  <meta property="twitter:creator" content="github">
+  <meta property="twitter:creator:id" content="13334762">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="GitHub">
+  <meta property="twitter:description" content="GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.">
+  <meta property="twitter:image" content="https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png">
+  <meta property="twitter:image:width" content="1200">
+  <meta property="twitter:image:height" content="1200">
+
+
+
+
+      <meta name="hostname" content="github.com">
+
+
+
+        <meta name="expected-hostname" content="github.com">
+
+
+  <meta http-equiv="x-pjax-version" content="05b9a93138cb6093f904299b9dbf245b06ed73ee315787e6c81e040e2b386784" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-csp-version" content="a5d5c47be3243d245488fb0fb174871bf572a1a2eaaf345effc493c6fddb388b" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-css-version" content="aa5b4ff7a15571f39c56245b8cf7f6fc4b76080963177ab42148a067cae2c381" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-js-version" content="e018b4f3ef68b977f2e2d8132462da89dc0bbe58a7a006590f4b8f5fde0491f1" data-turbo-track="reload">
+
+  <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
+
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-73fd10e24e0c.css" />
+
+
+
+      <link rel="canonical" href="https://github.com/login" data-turbo-transient>
+
+
+    <meta name="turbo-body-classes" content="logged-out env-production page-responsive session-authentication">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <meta name="release" content="02bf1734dec79e9ebfeb4c398de6259c640320ff">
+  <meta name="ui-target" content="canary-2">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
+  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg" data-base-href="https://github.githubassets.com/favicons/favicon">
+
+<meta name="theme-color" content="#1e2327">
+<meta name="color-scheme" content="light dark" />
+
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production page-responsive session-authentication" style="word-wrap: break-word;">
+    <div data-turbo-body class="logged-out env-production page-responsive session-authentication" style="word-wrap: break-word;">
+      
+
+
+
+    <div class="position-relative header-wrapper js-header-wrapper ">
+      <a href="#start-of-content" data-skip-target-assigned="false" class="px-2 py-4 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus js-skip-to-content">Skip to content</a>
+
+      <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
+    <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
+</span>      
+      
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.e506d28507f254fc7ad2.module.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/keyboard-shortcuts-dialog.2de9c7d6456a311fce49.module.css" />
+
+<react-partial
+  partial-name="keyboard-shortcuts-dialog"
+  data-ssr="false"
+  data-attempted-ssr="false"
+  data-react-profiling="false"
+>
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{"docsUrl":"https://docs.github.com/get-started/accessibility/keyboard-shortcuts"}}</script>
+  <div data-target="react-partial.reactRoot"></div>
+</react-partial>
+
+
+
+
+
+      
+
+          <div class="authentication-header-page" role="banner">
+
+</div>
+
+
+      <div hidden="hidden" data-view-component="true" class="js-stale-session-flash stale-session-flash flash flash-warn flash-full">
+  
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+        <span class="js-stale-session-flash-signed-in" hidden>You signed in with another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-signed-out" hidden>You signed out in another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-switched" hidden>You switched accounts on another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+
+    <button id="icon-button-74ed14f0-8181-4558-9dc9-91caaa389a32" aria-labelledby="tooltip-99a9beaf-12ec-49da-a9b1-176e0df646d5" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+</button><tool-tip id="tooltip-99a9beaf-12ec-49da-a9b1-176e0df646d5" for="icon-button-74ed14f0-8181-4558-9dc9-91caaa389a32" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Dismiss alert</tool-tip>
+
+
+  
+</div>
+    </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  <div
+    class="application-main "
+    data-commit-hovercards-enabled
+    data-discussion-hovercards-enabled
+    data-issue-and-pr-hovercards-enabled
+    data-project-hovercards-enabled
+  >
+      <main>
+        
+
+<div data-test-selector="login-standard-view" data-hpc="true" class="authentication ">
+    <div class="authentication-header ">
+            <div class="color-border-muted h4 text-normal text-center">
+          <div style="background-color: #ffffff" class="CircleBadge CircleBadge--medium mx-auto mb-3">
+            <img class="CircleBadge-icon" alt="miyabhai-webapp logo" width="50" height="50" src="https://avatars.githubusercontent.com/oa/3201232?s=120&amp;u=fb4841a2a1f5acf9b75ca2497e489b14c836fb8f&amp;v=4" />
+          </div>
+        <p>
+          Sign in to <strong>GitHub</strong>
+          <br>
+          to continue to <strong>miyabhai-webapp</strong>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="authentication-body authentication-body--with-form new-session">
+          <div id="js-flash-container" class="flash-container" data-turbo-replace>
+
+
+
+  <template class="js-flash-template">
+    
+<div class="flash flash-full   {{ className }}">
+  <div >
+    <button autofocus class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </button>
+    <div aria-atomic="true" role="alert" class="js-flash-alert">
+      
+      <div>{{ message }}</div>
+
+    </div>
+  </div>
+</div>
+  </template>
+</div>
+
+
+    <div class="flash js-transform-notice" hidden>
+      <button class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+        <svg aria-label="Dismiss" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+      </button>
+    </div>
+      
+<!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/session" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="n9F0MFkTpAnPHJCghUJnpZ8BpvbpLH38qi+pfRI8X9sa5Of0htZVfJXqRkxr/bW0AaMBxRuHGgVGsAESTllvdA==" />  <div>
+
+  <input type="hidden" name="add_account" id="add_account" autocomplete="off" class="form-control" />
+
+    <label for="login_field">
+      Username or email address
+    </label>
+    <input type="text" name="login" id="login_field" autocapitalize="off" autocorrect="off" autocomplete="username" class="form-control  js-login-field" autofocus="autofocus" required="required" />
+  </div>
+
+
+  <div class="position-relative">
+    <label for="password">
+      Password
+    </label>
+    <input type="password" name="password" id="password" class="form-control form-control js-password-field" autocomplete="current-password" required="required" />
+    <a class="label-link position-absolute top-0 right-0" id="forgot-password" href="/password_reset">Forgot password?</a>
+    
+<input type="hidden" name="webauthn-conditional" value="undefined">
+<input type="hidden" class="js-support" name="javascript-support" value="unknown">
+<input type="hidden" class="js-webauthn-support" name="webauthn-support" value="unknown">
+<input type="hidden" class="js-webauthn-iuvpaa-support" name="webauthn-iuvpaa-support" value="unknown">
+<input type="hidden" name="return_to" id="return_to" value="/login/oauth/authorize?client_id=Ov23licE6CxH9bE9Gugd&amp;redirect_to=http%3A%2F%2Flocalhost%3A5173%2Fauth%2Fcallback&amp;redirect_uri=https%3A%2F%2Fsyjowafvyvqoclipctzj.supabase.co%2Fauth%2Fv1%2Fcallback&amp;response_type=code&amp;scope=user%3Aemail&amp;state=eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo" autocomplete="off" class="form-control" />
+<input type="hidden" name="allow_signup" id="allow_signup" autocomplete="off" class="form-control" />
+<input type="hidden" name="client_id" id="client_id" value="Ov23licE6CxH9bE9Gugd" autocomplete="off" class="form-control" />
+<input type="hidden" name="integration" id="integration" autocomplete="off" class="form-control" />
+<input class="form-control" type="text" name="required_field_0e6d" hidden="hidden" />
+<input class="form-control" type="hidden" name="timestamp" value="1760252419538" />
+<input class="form-control" type="hidden" name="timestamp_secret" value="1fdfb9889de5a593c60eb4e118be96917c037bdb37d08523514685bb1119d2ba" />
+
+
+  </div>
+
+  <div>
+    <input type="submit" name="commit" value="Sign in" class="btn btn-primary btn-block js-sign-in-button" data-disable-with="Signing in…" data-signin-label="Sign in" data-sso-label="Sign in with your identity provider" development="false" disable-emu-sso="false" />
+  </div>
+</form>  <webauthn-status class="js-webauthn-login-emu-control">
+      <include-fragment data-target="webauthn-status.fragment" data-src="/u2f/login_fragment?disable_signup=false&amp;is_emu_login=false&amp;mobile_ios=false&amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo" data-nonce="v2:ab388755-922c-6965-bdd8-5a3a6dbc2174" data-view-component="true">
+  
+  <div data-show-on-forbidden-error hidden>
+    <div class="Box">
+  <div class="blankslate-container">
+    <div data-view-component="true" class="blankslate blankslate-spacious color-bg-default rounded-2">
+      
+
+      <h3 data-view-component="true" class="blankslate-heading">        Uh oh!
+</h3>
+      <p data-view-component="true">        <p class="color-fg-muted my-2 mb-2 ws-normal">There was an error while loading. <a class="Link--inTextBlock" data-turbo="false" href="" aria-label="Please reload this page">Please reload this page</a>.</p>
+</p>
+
+</div>  </div>
+</div>  </div>
+</include-fragment>
+  </webauthn-status>
+
+
+
+    </div>
+
+    <div class="authentication-footer ">
+                <div class="authentication-login-footer-links">
+          <p class="mt-1 mb-0 p-0">
+            New to GitHub?
+              <a data-ga-click="Sign in, switch to sign up" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;sign in switch to sign up&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/login?client_id=Ov23licE6CxH9bE9Gugd&amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9cc34c739ed57ab79bd7fba832b9cccfeefa3d3d60a721afb63d0e44581a2a27" href="/join?return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3DOv23licE6CxH9bE9Gugd%26redirect_to%3Dhttp%253A%252F%252Flocalhost%253A5173%252Fauth%252Fcallback%26redirect_uri%3Dhttps%253A%252F%252Fsyjowafvyvqoclipctzj.supabase.co%252Fauth%252Fv1%252Fcallback%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DeyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NjAyNTI3MTgsInNpdGVfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDo1MTczIiwiaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJmdW5jdGlvbl9ob29rcyI6bnVsbCwicHJvdmlkZXIiOiJnaXRodWIiLCJyZWZlcnJlciI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTE3My9hdXRoL2NhbGxiYWNrIiwiZmxvd19zdGF0ZV9pZCI6IiIsImVtYWlsX29wdGlvbmFsIjp0cnVlfQ.lI_WECqZzj-rfL9DaFx5xFCBCmgaAAD8P6p35s4MjSo&amp;source=oauth">Create an account</a>
+          </p>
+          </div>
+            <webauthn-subtle class="js-webauthn-subtle" hidden>
+    <p class="mb-0 mt-0 js-webauthn-subtle-emu-control">
+      <button data-action="click:webauthn-subtle#prompt" type="button" data-view-component="true" class="Button--link Button--medium Button">  <span class="Button-content">
+    <span class="Button-label">Sign in with a passkey</span>
+  </span>
+</button>
+    </p>
+  </webauthn-subtle>
+
+
+    </div>
+</div>
+      </main>
+  </div>
+
+          <div class="footer-session-authentication" role="contentinfo">
+    <ul class="footer-session-authentication-links">
+        <li>
+          <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" data-view-component="true" class="Link--secondary Link">Terms</a>
+        </li>
+
+        <li>
+          <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" data-view-component="true" class="Link--secondary Link">Privacy</a>
+        </li>
+
+        <li>
+          <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to docs&quot;,&quot;label&quot;:&quot;text:docs&quot;}" href="https://docs.github.com" data-view-component="true" class="Link--secondary Link">Docs</a>
+        </li>
+
+        <li>
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;}" href="https://support.github.com" data-view-component="true" class="Link--secondary Link">Contact GitHub Support</a>
+        </li>
+
+          <li class="mx-2" >
+  <cookie-consent-link>
+    <button
+      type="button"
+      class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent"
+      data-action="click:cookie-consent-link#showConsentManagement"
+      data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;cookies&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;cookies_link_subfooter_footer&quot;}"
+    >
+       Manage cookies
+    </button>
+  </cookie-consent-link>
+</li>
+
+<li class="mx-2">
+  <cookie-consent-link>
+    <button
+      type="button"
+      class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left"
+      data-action="click:cookie-consent-link#showConsentManagement"
+      data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;dont_share_info&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;dont_share_info_link_subfooter_footer&quot;}"
+    >
+      Do not share my personal information
+    </button>
+  </cookie-consent-link>
+</li>
+
+    </ul>
+  </div>
+
+
+    <ghcc-consent id="ghcc" class="position-fixed bottom-0 left-0" style="z-index: 999999"
+      data-locale="en"
+      data-initial-cookie-consent-allowed=""
+      data-cookie-consent-required="false"
+    ></ghcc-consent>
+
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error" hidden>
+    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+    <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm" open>
+    <summary role="button" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+    <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+    <template id="snippet-clipboard-copy-button">
+  <div class="zeroclipboard-container position-absolute right-0 top-0">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0" data-copy-feedback="Copied!" data-tooltip-direction="w">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div>
+</template>
+<template id="snippet-clipboard-copy-button-unpositioned">
+  <div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.2100 45564    0 45564    0     0  30261      0 --:--:--  0:00:01 --:--:-- 30261
+* Connection #1 to host github.com left intact
+5 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div>
+</template>
+
+
+
+
+    </div>
+    <div id="js-global-screen-reader-notice" class="sr-only mt-n1" aria-live="polite" aria-atomic="true" ></div>
+    <div id="js-global-screen-reader-notice-assertive" class="sr-only mt-n1" aria-live="assertive" aria-atomic="true"></div>
+  </body>
+</html>
+
+
+  <microsoft-analytics>
+  </microsoft-analytics>

@@ -1,3 +1,4 @@
+import { useAuth } from '@/hooks/useAuth';
 import React, { useEffect, useState } from 'react';
 import logo from '@/assets/logo.png';
 
@@ -19,6 +20,7 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 const AdminShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { logout } = useAuth();
   // Desktop-first shell. Keep behavior non-invasive to other pages.
   const [activePath, setActivePath] = useState<string>(() =>
     typeof window !== 'undefined' ? window.location.pathname : '/admin'
@@ -106,10 +108,7 @@ const AdminShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         <div className="p-3 border-t border-white/10">
           <button
-            onClick={() => {
-              // Simple sign-out behavior: navigate to /logout — the app's auth layer should handle the rest
-              window.location.href = '/logout';
-            }}
+            onClick={logout}
             className="w-full text-left px-3 py-2 rounded-md hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/30"
           >
             <span className={`${collapsed ? 'sr-only' : ''}`}>Sign out</span>
@@ -166,7 +165,7 @@ const AdminShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     Settings
                   </a>
                   <button
-                    onClick={() => (window.location.href = '/logout')}
+                    onClick={logout}
                     role="menuitem"
                     className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50"
                   >

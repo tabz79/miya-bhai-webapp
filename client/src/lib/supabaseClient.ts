@@ -49,6 +49,22 @@ declare global {
 
 let supabase: SupabaseClient | null = null;
 
+// --- Dev-only helpful logs (won't print keys, only presence and masked info) ---
+if (import.meta.env.DEV) {
+  try {
+    const hostDisplay = SUPABASE_URL ? SUPABASE_URL.replace(/^https?:\/\//, '') : '<<MISSING_URL>>';
+    const keyLen = SUPABASE_ANON_KEY ? SUPABASE_ANON_KEY.length : 0;
+    // Friendly one-line snapshot so devs can paste output into chat/debuggers quickly.
+    // NOTE: we intentionally do NOT log the full anon key.
+    // Example output: [dev][supabase] host=syjowaf...supabase.co keyLen=123
+    console.info('[dev][supabase] host=', hostDisplay, 'keyLen=', keyLen);
+    console.debug('[dev][supabase] env snapshot=', getEnvSnapshot());
+  } catch (e) {
+    // ignore logging failures
+  }
+}
+// -------------------------------------------------------------------------------
+
 if (!isSupabaseReady) {
   console.warn('Supabase client not initialized. Missing envs. Snapshot:', getEnvSnapshot());
 } else {

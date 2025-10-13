@@ -1,3 +1,4 @@
+import { useQueryClient } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/lib/supabaseClient';
@@ -10,7 +11,13 @@ import { restaurantInfo } from '../data/mockData';
 import { Button } from '@/components/ui/button';
 import ProfileForm, { ProfilePayload } from '@/components/Profile/ProfileForm';
 import { useToast } from '@/components/ui/use-toast';
-import LoginModal from '@/components/Auth/LoginModal';
+import { Auth } from '@/components/Auth';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 type ProfileRecord = {
   id: string;
@@ -21,7 +28,7 @@ type ProfileRecord = {
 };
 
 export function Profile() {
-  const { user, isLoading } = useAuth();
+  const { session, loading, user } = useAuth();
   const [profile, setProfile] = useState<ProfileRecord | null>(null);
   const [isFetchingProfile, setIsFetchingProfile] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
@@ -29,6 +36,7 @@ export function Profile() {
   const [loginOpen, setLoginOpen] = useState(false);
 
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   // Helper: fetch profile by a given userId (used when user.id becomes available)
   const fetchProfileById = async (userId: string | null) => {
@@ -118,21 +126,51 @@ export function Profile() {
     if (isSigningOut) return;
     setIsSigningOut(true);
     try {
-      const { error } = await supabase.auth.signOut();
-      if (error) {
-        console.error('Sign out error:', error);
+      // First, sign out from Supabase
+      const { error: supabaseError } = await supabase.auth.signOut();
+      if (supabaseError) {
+        console.error('Supabase sign out error:', supabaseError);
         toast?.({
           title: 'Sign out failed',
-          description: 'Check console for details.',
+          description: 'Could not sign out from Supabase. Check console.',
           variant: 'destructive',
         });
-        return;
+        // Do not stop here; still attempt to clear the server session
       }
+
+      // Then, hit the backend logout endpoint to clear the session cookie
+      // Use relative path to leverage Vite proxy; if proxy unreliable, replace with absolute backend URL
+      const logoutUrl = '/api/auth/logout';
+      const res = await fetch(logoutUrl, {
+        method: 'POST',
+        credentials: 'include', // critical so browser will accept Set-Cookie from backend
+      });
+
+      if (!res.ok) {
+        console.error('API logout error:', await res.text());
+        toast?.({
+          title: 'Server logout failed',
+          description: 'Session may not be fully cleared. Check console.',
+          variant: 'destructive',
+        });
+        // continue: still clear client state and invalidate cache to avoid stale UI
+      }
+
       setProfile(null);
       toast?.({
-        title: 'Signed out',
+        title: '✅ Signed out',
         description: 'You have been signed out successfully.',
       });
+
+      // Reload the page to reset the app state
+      try {
+        await queryClient.invalidateQueries(['user']);
+      } catch (e) {
+        // ignore
+      }
+
+      window.location.reload();
+
     } catch (err) {
       console.error('Unexpected signOut error', err);
       toast?.({
@@ -147,11 +185,11 @@ export function Profile() {
 
   const displayName =
     profile?.full_name ||
-    (user?.name as string | undefined) ||
+    (user?.user_metadata?.name) ||
     (user?.email ? user.email.split('@')[0] : 'User');
 
   const avatarLetter =
-    (profile?.full_name || (user?.name as string) || 'U')
+    (profile?.full_name || (user?.user_metadata?.name) || 'U')
       .charAt(0)
       .toUpperCase();
 
@@ -184,7 +222,14 @@ export function Profile() {
             Log in again
           </Button>
         </div>
-        <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
+        <Dialog open={loginOpen} onOpenChange={setLoginOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Login</DialogTitle>
+            </DialogHeader>
+            <Auth />
+          </DialogContent>
+        </Dialog>
       </div>
     );
   }
@@ -192,7 +237,7 @@ export function Profile() {
   return (
     <div className="w-full min-h-screen bg-app-background">
       <div className="p-4 border-b border-gray-200 bg-app-background">
-        {isLoading || isFetchingProfile ? (
+        {loading || isFetchingProfile ? (
           <div className="h-16" />
         ) : user ? (
           <div className="flex items-center justify-between">
@@ -242,10 +287,14 @@ export function Profile() {
             >
               Login
             </Button>
-            <LoginModal
-              open={loginOpen}
-              onClose={() => setLoginOpen(false)}
-            />
+            <Dialog open={loginOpen} onOpenChange={setLoginOpen}>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Login</DialogTitle>
+                </DialogHeader>
+                <Auth />
+              </DialogContent>
+            </Dialog>
           </div>
         )}
       </div>

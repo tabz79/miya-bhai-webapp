@@ -42,6 +42,8 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path, // keep '/api' prefix as-is
+        logLevel: 'debug',
+        cookieDomainRewrite: "", // Ensures cookies are proxied correctly in dev
       },
     },
   },

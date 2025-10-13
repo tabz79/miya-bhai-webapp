@@ -1,13 +1,20 @@
+// src/routes/settings.js
+import 'dotenv/config'; // ensure env vars are available before Supabase client creation
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 
 const router = express.Router();
 
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+const SUPABASE_URL = process.env.SUPABASE_URL?.trim() || '';
+const SUPABASE_SERVICE_ROLE_KEY =
+  process.env.SUPABASE_SERVICE_KEY?.trim() ||
+  process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
+  '';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.warn('[settings routes] WARNING: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is not set. Endpoints will fail until these env vars are provided.');
+  console.warn(
+    '[settings routes] WARNING: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is not set. Endpoints will fail until these env vars are provided.'
+  );
 }
 
 // Service-role client (server-side)

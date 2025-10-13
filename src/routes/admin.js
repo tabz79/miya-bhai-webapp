@@ -1,4 +1,5 @@
 // src/routes/admin.js
+import 'dotenv/config';
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 import { parse } from 'json2csv';
@@ -10,11 +11,17 @@ console.log('[admin routes] loaded'); // debug: indicate routes file loaded
 
 router.use(requireAdmin); // Apply admin middleware to all routes in this file
 
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+// Robust env handling (accept either SERVICE_KEY name)
+const SUPABASE_URL = process.env.SUPABASE_URL?.trim() || '';
+const SUPABASE_SERVICE_ROLE_KEY =
+  process.env.SUPABASE_SERVICE_KEY?.trim() ||
+  process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
+  '';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.warn('[admin routes] WARNING: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is not set. Endpoints will fail until these env vars are provided.');
+  console.warn(
+    '[admin routes] WARNING: SUPABASE_URL or SUPABASE_SERVICE_KEY is not set. Endpoints will fail until these env vars are provided.'
+  );
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
@@ -28,19 +35,29 @@ function toNumber(v) {
 router.get('/admin/summary', async (req, res) => {
   try {
     // total orders (all time)
-    const { count: totalOrders, error: totalErr } = await supabase.from('orders').select('*', { count: 'exact', head: true });
+    const { count: totalOrders, error: totalErr } = await supabase
+      .from('orders')
+      .select('*', { count: 'exact', head: true });
     if (totalErr) throw totalErr;
 
     // pending orders
-    const { count: pendingOrders, error: pendingErr } = await supabase.from('orders').select('*', { count: 'exact', head: true }).in('status', ['NEW', 'PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY']);
+    const { count: pendingOrders, error: pendingErr } = await supabase
+      .from('orders')
+      .select('*', { count: 'exact', head: true })
+      .in('status', ['NEW', 'PENDING', 'ACCEPTED', 'PREPARING', 'OUT_FOR_DELIVERY']);
     if (pendingErr) throw pendingErr;
 
     // completed orders
-    const { count: completedOrders, error: completedErr } = await supabase.from('orders').select('*', { count: 'exact', head: true }).eq('status', 'COMPLETED');
+    const { count: completedOrders, error: completedErr } = await supabase
+      .from('orders')
+      .select('*', { count: 'exact', head: true })
+      .eq('status', 'COMPLETED');
     if (completedErr) throw completedErr;
 
     // total revenue (all time)
-    const { data: revenueData, error: revenueErr } = await supabase.from('orders').select('total');
+    const { data: revenueData, error: revenueErr } = await supabase
+      .from('orders')
+      .select('total');
     if (revenueErr) throw revenueErr;
     const totalRevenue = (revenueData || []).reduce((s, r) => s + toNumber(r.total), 0);
 
@@ -271,6 +288,9 @@ router.post('/admin/drivers', async (req, res) => {
 // PUT /api/admin/drivers/:id
 router.put('/admin/drivers/:id', async (req, res) => {
   try {
+    const { id } = req.params;
+    const { name, phone, status } = req.body;
+
     if (!name || !phone) {
       return res.status(400).json({ error: 'Name and phone are required' });
     }

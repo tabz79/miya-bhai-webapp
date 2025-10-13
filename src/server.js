@@ -1,7 +1,40 @@
-import 'dotenv/config';
+// src/server.js
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+// --- ✅ Robust .env loading (tries src/.env then project root .env) ---
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Primary: src/.env
+const envPathSrc = path.resolve(__dirname, '.env');
+// Fallback: project root .env (one level up)
+const envPathRoot = path.resolve(__dirname, '../.env');
+
+let loaded = false;
+if (envPathSrc) {
+  const r = dotenv.config({ path: envPathSrc });
+  if (!r.error) {
+    console.log(`[env] Loaded env from ${envPathSrc}`);
+    loaded = true;
+  }
+}
+if (!loaded) {
+  const r = dotenv.config({ path: envPathRoot });
+  if (!r.error) {
+    console.log(`[env] Loaded env from ${envPathRoot}`);
+    loaded = true;
+  }
+}
+if (!loaded) {
+  console.warn('[env] No .env file found at src/.env or project root .env — relying on process.env');
+}
+// -------------------------------------------------
+
 import express from 'express';
 import cors from 'cors';
-import cookieParser from 'cookie-parser';               // <-- ADDED
+import cookieParser from 'cookie-parser';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
 import menuRouter from './routes/menu.js';
@@ -10,17 +43,33 @@ import adminRouter from './routes/admin.js';
 import settingsRouter from './routes/settings.js';
 import couponsRouter from './routes/coupons.js';
 import userRouter from './routes/user.js';
-import authRouter from './routes/auth.js';               // <-- ADDED (magic link + auth)
+import authRouter from './routes/auth.js';
 import { initMenuService } from './services/menuService.js';
+
+// githubAuth router (custom server-side GitHub flow)
+import githubAuthRouter from './routes/githubAuth.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Body parsing: larger JSON limit and accept urlencoded bodies
-app.use(express.json({ limit: '1mb' })); // increase if you expect larger payloads
+// quick sanity checks for important envs
+console.log('[env check]',
+  'SUPABASE_URL=', !!process.env.SUPABASE_URL,
+  'SUPABASE_SERVICE_KEY=', !!process.env.SUPABASE_SERVICE_KEY
+);
+
+if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
+  console.warn('[env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.');
+} else {
+  console.log('[env check] GITHUB_CLIENT_ID present');
+}
+
+app.set('trust proxy', 1); // trust first proxy
+console.log(`[server] trust proxy: ${app.get('trust proxy')}`);
+app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-// JSON parse error handler (prevents body-parser SyntaxError from crashing server)
+// JSON parse guard
 app.use((err, req, res, next) => {
   if (err && err instanceof SyntaxError && err.status === 400 && 'body' in err) {
     console.warn('[server] Invalid JSON received:', err.message);
@@ -29,57 +78,47 @@ app.use((err, req, res, next) => {
   next(err);
 });
 
-// Request ID middleware (keeps existing behavior)
+// middleware
 app.use(requestId);
-
-// Simple request logger to help debug requests (non-verbose)
 app.use((req, res, next) => {
-  console.log(`[${new Date().toISOString()}] Incoming ${req.method} ${req.originalUrl}`);
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
   next();
 });
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cookieParser());
 
-// CORS: allow frontend (dev) to call API with cookies
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true,
-}));
+// routes
+// Mount GitHub custom auth router first so /api/auth/github/* is handled
+app.use('/api', githubAuthRouter);
 
-// Parse cookies (required for session cookie set by /auth/verify)
-app.use(cookieParser()); // <-- ADDED
-
-// Routes
+// existing auth router (other auth endpoints like /api/auth/verify remain)
+app.use('/api', authRouter);
 app.use('/api', healthRouter);
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
-app.use('/api', adminRouter); // <-- new admin routes mounted here
+app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
 app.use('/api', couponsRouter);
-app.use('/api', authRouter);  // <-- ADDED: mounts /api/auth/* (magic link endpoints)
 app.use('/api', userRouter);
 
-// Generic 404 for unmatched routes
-app.use((req, res) => {
-  res.status(404).json({ status: 'error', message: 'Not Found' });
-});
-
-// Basic Error Handler (fallback)
+// 404 + error
+app.use((req, res) => res.status(404).json({ status: 'error', message: 'Not Found' }));
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('[server error]', err.stack || err);
   res.status(500).json({ status: 'error', message: 'Internal Server Error' });
 });
 
 async function startServer() {
   await initMenuService();
-  
   if (process.env.NODE_ENV !== 'test') {
-      app.listen(PORT, () => {
-          console.log(`Server is running on http://localhost:${PORT}`);
-          console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
-          console.log(`USE_MOCK: ${process.env.USE_MOCK === 'true'}`);
-      });
+    app.listen(PORT, () => {
+      console.log(`Server running → http://localhost:${PORT}`);
+      console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
+      // show mount confirmation
+      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)');
+    });
   }
 }
 
 startServer();
-
 export default app;

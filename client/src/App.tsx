@@ -1,5 +1,6 @@
 // client/src/App.tsx
-import { Switch, Route, useLocation } from "wouter";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
@@ -26,60 +27,79 @@ import AdminReportsPage from "@/admin/pages/reports";
 import AdminSettingsPage from "@/admin/pages/settings";
 import CouponsPage from "@/admin/pages/Coupons";
 
-// <-- NEW: magic link pages
 import MagicLinkRequest from "@/pages/MagicLinkRequest";
-import { MagicLinkCallback } from "@/pages/MagicLinkCallback";
 import InvalidLink from "@/pages/InvalidLink";
+import LoginPage from "@/pages/LoginPage";
+
+// 🧠 unified callback replaces both MagicLinkCallback & OAuthCallback
+import AuthCallback from "@/pages/AuthCallback";
+
+import { supabase } from "@/lib/supabaseClient";
+
+/**
+ * A helper component to handle the layout switching.
+ * Note: we explicitly render /login and /auth/callback at top-level (outside MobileFrame)
+ * so they cannot be accidentally hidden by mobile/admin layout logic.
+ */
+function AppRoutes() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
+  if (isAdminRoute) {
+    return (
+      <Routes>
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/orders" element={<AdminOrdersPage />} />
+        <Route path="/admin/drivers" element={<AdminDriversPage />} />
+        <Route path="/admin/delivery" element={<AdminDeliveryPage />} />
+        <Route path="/admin/customers" element={<AdminCustomersPage />} />
+        <Route path="/admin/reports" element={<AdminReportsPage />} />
+        <Route path="/admin/settings" element={<AdminSettingsPage />} />
+        <Route path="/admin/coupons" element={<CouponsPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    );
+  }
+
+  return (
+    <MobileFrame>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/magic-link" element={<MagicLinkRequest />} />
+        <Route path="/auth/invalid-link" element={<InvalidLink />} />
+        {/* ✅ unified callback handles both GitHub OAuth & Magic Links */}
+        <Route path="/auth/callback" element={<AuthCallback />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </MobileFrame>
+  );
+}
 
 function App() {
-  const [location] = useLocation();
-  const isAdminRoute = location.startsWith("/admin");
+  useEffect(() => {
+    console.log("[App] supabase client ready:", Boolean(supabase));
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <TooltipProvider>
-          <Toaster />
-          {isAdminRoute ? (
-            <Switch>
-              <Route path="/admin" component={AdminDashboard} />
-              <Route path="/admin/orders" component={AdminOrdersPage} />
-              <Route path="/admin/drivers" component={AdminDriversPage} />
-              <Route path="/admin/delivery" component={AdminDeliveryPage} />
-              <Route path="/admin/customers" component={AdminCustomersPage} />
-              <Route path="/admin/reports" component={AdminReportsPage} />
-              <Route path="/admin/settings" component={AdminSettingsPage} />
-              <Route path="/admin/coupons" component={CouponsPage} />
-              <Route component={NotFound} />
-            </Switch>
-          ) : (
-            <MobileFrame>
-              <Switch>
-                <Route path="/" component={Home} />
-                <Route path="/menu" component={Menu} />
-                <Route path="/cart" component={Cart} />
-                <Route path="/profile" component={Profile} />
-                <Route path="/faq" component={FAQ} />
-                <Route path="/checkout" component={Checkout} />
-                <Route path="/confirmation" component={Confirmation} />
-                <Route path="/staff" component={Staff} />
-
-                {/* Magic-link entry point */}
-                <Route path="/magic-link" component={MagicLinkRequest} />
-
-                {/* Redirect target for expired/invalid links */}
-                <Route path="/auth/invalid-link" component={InvalidLink} />
-
-                {/* ADDED: Handle the magic link callback */}
-                <Route path="/auth/callback" component={MagicLinkCallback} />
-
-                <Route component={NotFound} />
-              </Switch>
-            </MobileFrame>
-          )}
+          <BrowserRouter>
+            <Toaster />
+            <AppRoutes />
+          </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
     </QueryClientProvider>
   );
 }
+
 export default App;
