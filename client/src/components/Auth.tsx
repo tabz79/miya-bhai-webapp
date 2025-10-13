@@ -56,13 +56,10 @@ export function Auth() {
     setLoading(true);
     console.log('[login] GitHub OAuth started...');
 
-    const redirectTo = `${window.location.origin}/auth/callback`;
-    console.log('[login] redirectTo:', redirectTo);
-
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo,
+        redirectTo: 'https://google.com',
       },
     });
 
