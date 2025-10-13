@@ -152,6 +152,7 @@ export function Menu(): JSX.Element {
               items={items}
               onAddToCart={handleAddToCart}
               paginate={false}
+              layout="flex"
               CardComponent={MenuCardFlat}
             />
           </div>

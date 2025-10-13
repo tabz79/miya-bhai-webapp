@@ -7,6 +7,7 @@ interface MenuGridProps {
   currentPage?: number;
   onPageChange?: (page: number) => void;
   paginate?: boolean;
+  layout: 'grid' | 'flex';
   CardComponent: React.ComponentType<{
     item: any;
     onAddToCart: (item: any) => void;
@@ -19,6 +20,7 @@ export default function MenuGrid({
   currentPage = 0,
   onPageChange,
   paginate = true,
+  layout,
   CardComponent,
 }: MenuGridProps) {
   const itemsPerPage = 8;
@@ -47,9 +49,6 @@ export default function MenuGrid({
     ? items.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
     : items;
 
-  // 👇 decide layout style depending on CardComponent
-  const isGrid = CardComponent.name === "MenuCardGrid";
-
   return (
     <section
       ref={gridRef}
@@ -59,7 +58,7 @@ export default function MenuGrid({
     >
       <ul
         className={
-          isGrid
+          layout === "grid"
             ? "grid grid-cols-2 sm:grid-cols-4 gap-4"
             : "flex flex-col divide-y divide-gray-200"
         }

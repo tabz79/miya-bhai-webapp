@@ -212,6 +212,7 @@ export function Home(): JSX.Element {
         onAddToCart={handleAddToCart}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
+        layout="grid"
         CardComponent={MenuCardGrid}
       />
 
