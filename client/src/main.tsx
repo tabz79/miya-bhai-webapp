@@ -1,6 +1,8 @@
+// client/src/main.tsx
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import "@/styles/overrides.css"; // ← ensure prod fallback grid is loaded
 import { supabase } from "@/lib/supabaseClient";
 
 async function finalizeSupabaseSessionIfPresent() {
@@ -15,14 +17,14 @@ async function finalizeSupabaseSessionIfPresent() {
       if (error) {
         console.error("getSessionFromUrl error", error);
       } else if (data?.session) {
-        // session stored — redirect to profile
-        window.location.replace("/profile");
+        // session stored — redirect to profile (use absolute origin)
+        window.location.replace(`${window.location.origin}/profile`);
         return;
       }
     }
 
     // Fallback: redirect to callback page which will try to finalize session there
-    window.location.replace("/auth/callback");
+    window.location.replace(`${window.location.origin}/auth/callback`);
   } catch (err) {
     console.error("Error finalizing supabase session from URL", err);
     // don't block app render — let app mount so user isn't stuck
