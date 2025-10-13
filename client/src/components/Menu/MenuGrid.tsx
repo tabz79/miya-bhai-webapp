@@ -60,7 +60,7 @@ export default function MenuGrid({
       <ul
         className={
           isGrid
-            ? "grid grid-cols-4 gap-4"
+            ? "grid grid-cols-2 sm:grid-cols-4 gap-4"
             : "flex flex-col divide-y divide-gray-200"
         }
       >

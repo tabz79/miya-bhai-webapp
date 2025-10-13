@@ -77,7 +77,7 @@ export const MenuSection = ({ searchQuery }: MenuSectionProps): JSX.Element => {
 
   return (
     <section className="w-full px-3.5 py-0 relative">
-      <div className="grid grid-cols-4 gap-[15px] w-full max-w-[393px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
         {filteredMenuItems.map((item) => (
           <Card
             key={item.id}
