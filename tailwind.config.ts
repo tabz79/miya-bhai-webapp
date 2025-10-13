@@ -2,12 +2,11 @@
 module.exports = {
   content: [
     "./client/index.html",
+    "./client/**/*.{html,js,ts,jsx,tsx}",
     "./client/src/**/*.{js,jsx,ts,tsx,html}",
     "./src/**/*.{html,js,ts,jsx,tsx}",
     "./app/**/*.{ts,tsx,js,jsx,html}",
-    "./components/**/*.{ts,tsx,js,jsx,html}",
-    // catch any stray files in other folders (helps monorepo setups)
-    "./**/*.{js,jsx,ts,tsx,html}"
+    "./components/**/*.{ts,tsx,js,jsx,html}"
   ],
   safelist: [
     // grid & responsive column classes (keeps them from being purged)
@@ -26,8 +25,7 @@ module.exports = {
     "gap-3",
     "gap-4",
     "gap-6",
-    "gap-8",
-    // any other classes you rely on dynamically (add here if needed)
+    "gap-8"
   ],
   theme: {
     extend: {
