@@ -25,6 +25,7 @@ export default function AuthCallback() {
   };
 
   useEffect(() => {
+    console.log('[AuthCallback] window.location.href:', window.location.href);
     let unsub: any = null;
     let timeout: any = null;
 
