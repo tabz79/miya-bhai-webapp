@@ -32,23 +32,7 @@ export default function AuthCallback() {
       L("location.hash:", window.location.hash || "<empty>");
       L("location.search:", window.location.search || "<empty>");
 
-      // 1) Try Supabase helper (getSessionFromUrl) if available
-      try {
-        if ((supabase.auth as any).getSessionFromUrl) {
-          L("Calling getSessionFromUrl({ storeSession: true })");
-          const res: any = await (supabase.auth as any)
-            .getSessionFromUrl({ storeSession: true })
-            .catch((e: any) => {
-              L("getSessionFromUrl error:", e && (e.message || e));
-              return null;
-            });
-          L("getSessionFromUrl result:", res);
-        } else {
-          L("getSessionFromUrl not available on this supabase client");
-        }
-      } catch (e: any) {
-        L("getSessionFromUrl threw:", e && (e.message || e));
-      }
+
 
       // 2) short wait then check supabase.auth.getSession()
       await new Promise((r) => setTimeout(r, 500));
