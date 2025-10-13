@@ -96,6 +96,36 @@ export default function AuthCallback() {
     };
   }, [navigate]);
 
+  const handleManualParse = async () => {
+    L("Manual parse button clicked.");
+    if (window.location.hash && window.location.hash.includes("access_token")) {
+      L("Hash contains access_token. Manual parse:");
+      try {
+        const h = window.location.hash.replace("#", "");
+        const params = Object.fromEntries(
+          h.split("&").map((p) => p.split("=").map(decodeURIComponent))
+        );
+        L("Parsed hash keys:", Object.keys(params));
+
+        const { data, error } = await supabase.auth.setSession({
+          access_token: params.access_token,
+          refresh_token: params.refresh_token,
+        });
+
+        if (error) {
+          L("Manual setSession error:", error.message);
+        } else {
+          L("Manual setSession success:", data);
+          navigate("/");
+        }
+      } catch (e: any) {
+        L("Manual hash parse error:", e && (e.message || e));
+      }
+    } else {
+      L("Hash does NOT contain access_token.");
+    }
+  };
+
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="bg-white p-6 rounded shadow text-left max-w-xl">
@@ -114,6 +144,9 @@ export default function AuthCallback() {
             ))
           )}
         </div>
+        <Button onClick={handleManualParse} className="w-full mt-4">
+          Manually Parse Hash
+        </Button>
       </div>
     </div>
   );
