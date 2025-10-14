@@ -26,34 +26,92 @@ export default function AuthCallback() {
   useEffect(() => {
     const handleAuthCallback = async () => {
       L("Component mounted. Checking for auth hash...");
-      const hash = sessionStorage.getItem('supabase_oauth_hash');
+
+      // Restore any saved hash (inline script may have stashed it)
+      let hash = sessionStorage.getItem("supabase_oauth_hash") || window.location.hash || "";
+      if (hash && !hash.startsWith("#")) hash = `#${hash}"`;
 
       if (hash) {
-        L("Found hash in sessionStorage:", hash);
-        // Clear the hash from storage so we don't re-process it
-        sessionStorage.removeItem('supabase_oauth_hash');
+        L("Found hash (short):", (hash || "").slice(0, 200) + (hash.length > 200 ? "…" : ""));
+        // clear the storage early so we don't re-process it accidentally
+        sessionStorage.removeItem("supabase_oauth_hash");
 
-        // Use the stored hash to get the session
-        const { error } = await supabase.auth.getSessionFromUrl({ 
-          url: `${window.location.origin}${window.location.pathname}${hash}`
-        });
+        // Manual parse & setSession approach (robust against SDK helper failures)
+        try {
+          const raw = hash.startsWith("#") ? hash.slice(1) : hash;
+          const params = Object.fromEntries(
+            raw.split("&").map((p) => {
+              const [k, v] = p.split("=");
+              return [k, decodeURIComponent(v || "")];
+            })
+          ) as Record<string, string>;
 
-        if (error) {
-          L("Error getting session from stored hash:", error.message);
-          navigate("/auth/invalid-link");
-        } else {
-          L("Successfully got session from stored hash. Navigating to home.");
-          // On success, Supabase redirects, but we can navigate just in case.
-          navigate("/");
+          L("Parsed keys:", Object.keys(params));
+
+          if (params.access_token) {
+            L("Using supabase.auth.setSession to apply tokens...");
+            const { data, error } = await supabase.auth.setSession({
+              access_token: params.access_token,
+              refresh_token: params.refresh_token,
+            } as any);
+
+            if (error) {
+              L("setSession error:", error.message || error);
+              // fallback: try getSessionFromUrl guarded
+            } else {
+              L("Manual setSession success:", data);
+              // cleanup url & redirect home
+              try {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+              } catch {}
+              navigate("/");
+              return;
+            }
+          } else {
+            L("Parsed hash contains no access_token — falling back to SDK helper.");
+          }
+        } catch (e: any) {
+          L("Manual parse/setSession threw:", e && (e.message || e));
+          // continue to try SDK helper below
         }
-      } else {
-        L("No auth hash found in sessionStorage or current URL. This may be an invalid callback.");
-        // If there's no hash, it's an invalid visit to this page.
+
+        // Guarded attempt using SDK helper as a last resort
+        if ((supabase.auth as any).getSessionFromUrl) {
+          try {
+            L("Attempting getSessionFromUrl as fallback (guarded)");
+            const res = await (supabase.auth as any).getSessionFromUrl?.({
+              url: `${window.location.origin}${window.location.pathname}${hash}`,
+              storeSession: true,
+            });
+            L("getSessionFromUrl result:", res);
+            if (res?.data?.session) {
+              L("getSessionFromUrl succeeded — redirecting to /");
+              try {
+                sessionStorage.removeItem("supabase_oauth_hash");
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+              } catch {}
+              navigate("/");
+              return;
+            }
+          } catch (err: any) {
+            L("getSessionFromUrl error (caught):", err && (err.message || err));
+            navigate("/auth/invalid-link");
+            return;
+          }
+        }
+
+        // If we reached here, nothing worked
+        L("❌ Unable to establish session from hash — navigating to /auth/invalid-link");
         navigate("/auth/invalid-link");
+        return;
       }
+
+      L("No auth hash found in sessionStorage or current URL. This may be an invalid callback.");
+      navigate("/auth/invalid-link");
     };
 
     handleAuthCallback();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]);
 
   const handleManualParse = async () => {
