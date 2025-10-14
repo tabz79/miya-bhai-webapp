@@ -37,24 +37,21 @@ export default function AuthCallback() {
         return;
       }
 
-      L("Auth hash found. Processing...");
+      L("Auth hash found. Processing with URLSearchParams...");
 
       try {
-        const params = Object.fromEntries(
-          initialHash.substring(1).split('&').map(p => {
-            const [key, val] = p.split('=');
-            return [key, decodeURIComponent(val || '')];
-          })
-        );
+        const params = new URLSearchParams(initialHash.substring(1));
+        const accessToken = params.get('access_token');
+        const refreshToken = params.get('refresh_token');
 
-        if (!params.access_token || !params.refresh_token) {
+        if (!accessToken || !refreshToken) {
           throw new Error('Hash fragment is missing access_token or refresh_token.');
         }
 
         L("Tokens parsed. Calling setSession...");
         const { error } = await supabase.auth.setSession({
-          access_token: params.access_token,
-          refresh_token: params.refresh_token,
+          access_token: accessToken,
+          refresh_token: refreshToken,
         });
 
         if (error) {
