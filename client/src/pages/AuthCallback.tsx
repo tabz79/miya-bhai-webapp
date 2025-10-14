@@ -26,92 +26,51 @@ export default function AuthCallback() {
   useEffect(() => {
     const handleAuthCallback = async () => {
       L("Component mounted. Checking for auth hash...");
+      const hash = sessionStorage.getItem('supabase_oauth_hash');
 
-      // Restore any saved hash (inline script may have stashed it)
-      let hash = sessionStorage.getItem("supabase_oauth_hash") || window.location.hash || "";
-      if (hash && !hash.startsWith("#")) hash = `#${hash}"`;
-
-      if (hash) {
-        L("Found hash (short):", (hash || "").slice(0, 200) + (hash.length > 200 ? "…" : ""));
-        // clear the storage early so we don't re-process it accidentally
-        sessionStorage.removeItem("supabase_oauth_hash");
-
-        // Manual parse & setSession approach (robust against SDK helper failures)
-        try {
-          const raw = hash.startsWith("#") ? hash.slice(1) : hash;
-          const params = Object.fromEntries(
-            raw.split("&").map((p) => {
-              const [k, v] = p.split("=");
-              return [k, decodeURIComponent(v || "")];
-            })
-          ) as Record<string, string>;
-
-          L("Parsed keys:", Object.keys(params));
-
-          if (params.access_token) {
-            L("Using supabase.auth.setSession to apply tokens...");
-            const { data, error } = await supabase.auth.setSession({
-              access_token: params.access_token,
-              refresh_token: params.refresh_token,
-            } as any);
-
-            if (error) {
-              L("setSession error:", error.message || error);
-              // fallback: try getSessionFromUrl guarded
-            } else {
-              L("Manual setSession success:", data);
-              // cleanup url & redirect home
-              try {
-                history.replaceState(null, "", window.location.pathname + window.location.search);
-              } catch {}
-              navigate("/");
-              return;
-            }
-          } else {
-            L("Parsed hash contains no access_token — falling back to SDK helper.");
-          }
-        } catch (e: any) {
-          L("Manual parse/setSession threw:", e && (e.message || e));
-          // continue to try SDK helper below
-        }
-
-        // Guarded attempt using SDK helper as a last resort
-        if ((supabase.auth as any).getSessionFromUrl) {
-          try {
-            L("Attempting getSessionFromUrl as fallback (guarded)");
-            const res = await (supabase.auth as any).getSessionFromUrl?.({
-              url: `${window.location.origin}${window.location.pathname}${hash}`,
-              storeSession: true,
-            });
-            L("getSessionFromUrl result:", res);
-            if (res?.data?.session) {
-              L("getSessionFromUrl succeeded — redirecting to /");
-              try {
-                sessionStorage.removeItem("supabase_oauth_hash");
-                history.replaceState(null, "", window.location.pathname + window.location.search);
-              } catch {}
-              navigate("/");
-              return;
-            }
-          } catch (err: any) {
-            L("getSessionFromUrl error (caught):", err && (err.message || err));
-            navigate("/auth/invalid-link");
-            return;
-          }
-        }
-
-        // If we reached here, nothing worked
-        L("❌ Unable to establish session from hash — navigating to /auth/invalid-link");
+      if (!hash) {
+        L("No auth hash found in sessionStorage. This may be an invalid callback.");
         navigate("/auth/invalid-link");
         return;
       }
 
-      L("No auth hash found in sessionStorage or current URL. This may be an invalid callback.");
-      navigate("/auth/invalid-link");
+      L("Found hash in sessionStorage. Processing...");
+      sessionStorage.removeItem('supabase_oauth_hash');
+
+      try {
+        const params = Object.fromEntries(
+          hash.substring(1).split('&').map(p => {
+            const [key, val] = p.split('=');
+            return [key, decodeURIComponent(val || '')];
+          })
+        );
+
+        if (!params.access_token || !params.refresh_token) {
+          throw new Error('Hash fragment is missing access_token or refresh_token.');
+        }
+
+        L("Tokens parsed. Calling setSession...");
+        const { error } = await supabase.auth.setSession({
+          access_token: params.access_token,
+          refresh_token: params.refresh_token,
+        });
+
+        if (error) {
+          // Throw the error to be caught by the catch block
+          throw error;
+        }
+
+        L("Session successfully set. Navigating to home page.");
+        navigate("/");
+
+      } catch (e: any) {
+        L("ERROR during auth callback:", e.message || 'An unknown error occurred.');
+        console.error("Auth Callback Failure Details:", e);
+        navigate("/auth/invalid-link");
+      }
     };
 
     handleAuthCallback();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]);
 
   const handleManualParse = async () => {
