@@ -24,159 +24,36 @@ export default function AuthCallback() {
   };
 
   useEffect(() => {
-    L("[AuthCallback] starting diagnostics");
-    L("window.location.href:", window.location.href);
-    L("location.hash:", window.location.hash || "<empty>");
-    L("location.search:", window.location.search || "<empty>");
+    const handleAuthCallback = async () => {
+      L("Component mounted. Checking for auth hash...");
+      const hash = sessionStorage.getItem('supabase_oauth_hash');
 
-    let unsub: any = null;
-    let guardTimeout: any = null;
+      if (hash) {
+        L("Found hash in sessionStorage:", hash);
+        // Clear the hash from storage so we don't re-process it
+        sessionStorage.removeItem('supabase_oauth_hash');
 
-    const cleanup = () => {
-      try {
-        (unsub as any)?.data?.subscription?.unsubscribe?.();
-      } catch {}
-      clearTimeout(guardTimeout);
-    };
+        // Use the stored hash to get the session
+        const { error } = await supabase.auth.getSessionFromUrl({ 
+          url: `${window.location.origin}${window.location.pathname}${hash}`
+        });
 
-    (async () => {
-      try {
-        // 0) If fragment present, try standard supabase extractor first
-        if (window.location.hash && window.location.hash.includes("access_token")) {
-          L("Hash contains access_token — attempting getSessionFromUrl / manual setSession.");
-
-          if ((supabase.auth as any).getSessionFromUrl) {
-            L("Calling supabase.auth.getSessionFromUrl({ storeSession: true })");
-            try {
-              const r = await (supabase.auth as any).getSessionFromUrl?.({ storeSession: true });
-              L("getSessionFromUrl result:", r);
-              if (r?.data?.session) {
-                L("✅ session obtained via getSessionFromUrl — redirecting to /");
-                // clean url
-                const u = new URL(window.location.href);
-                u.hash = "";
-                u.search = "";
-                window.history.replaceState({}, document.title, u.pathname);
-                navigate("/");
-                return;
-              }
-            } catch (e: any) {
-              L("getSessionFromUrl threw:", e && (e.message || e));
-            }
-          }
-
-          // fallback: manual parse + setSession
-          try {
-            const h = window.location.hash.replace("#", "");
-            const params = Object.fromEntries(h.split("&").map((p) => p.split("=").map(decodeURIComponent)) as any);
-            L("Manual parsed hash keys:", Object.keys(params));
-            if (params.access_token) {
-              const { data, error } = await supabase.auth.setSession({
-                access_token: params.access_token,
-                refresh_token: params.refresh_token,
-              } as any);
-              if (error) {
-                L("manual setSession error:", error.message || error);
-              } else {
-                L("manual setSession success:", data);
-                // clear url
-                const u = new URL(window.location.href);
-                u.hash = "";
-                u.search = "";
-                window.history.replaceState({}, document.title, u.pathname);
-                navigate("/");
-                return;
-              }
-            }
-          } catch (e: any) {
-            L("manual parse/setSession threw:", e && (e.message || e));
-          }
-        }
-
-        // 1) Try getSessionFromUrl even if no fragment — some libs still handle
-        if ((supabase.auth as any).getSessionFromUrl) {
-          try {
-            L("Attempting getSessionFromUrl({ storeSession: true }) even if no fragment");
-            const r = await (supabase.auth as any).getSessionFromUrl?.({ storeSession: true });
-            L("getSessionFromUrl result:", r);
-            if (r?.data?.session) {
-              L("✅ session via getSessionFromUrl — redirecting to /");
-              navigate("/");
-              return;
-            }
-          } catch (e: any) {
-            L("getSessionFromUrl threw:", e && (e.message || e));
-          }
-        }
-
-        // 2) Check cookie-based session (supabase may set cookie on /auth/v1/callback proxy)
-        try {
-          L("Calling supabase.auth.getSession() to check cookie-based session");
-          const sess = await supabase.auth.getSession();
-          L("getSession() result:", sess);
-          if (sess?.data?.session) {
-            L("✅ session present via getSession() — redirecting to /");
-            navigate("/");
-            return;
-          }
-        } catch (e: any) {
-          L("getSession() threw:", e && (e.message || e));
-        }
-
-        // 3) Log getUser for extra clue
-        try {
-          L("Calling supabase.auth.getUser()");
-          const user = await supabase.auth.getUser?.();
-          L("getUser result:", user);
-        } catch (e: any) {
-          L("getUser threw:", e && (e.message || e));
-        }
-
-        // 4) Print code param if present (auth code flow)
-        try {
-          const q = new URL(window.location.href).searchParams;
-          if (q.has("code")) {
-            const code = String(q.get("code"));
-            L("Query param 'code' present (first 120 chars):", code.slice(0, 120));
-          } else {
-            L("No 'code' present in query params.");
-          }
-        } catch (e: any) {
-          L("Failed reading query params:", e && (e.message || e));
-        }
-
-        // 5) Subscribe to auth state changes
-        try {
-          L("Subscribing to onAuthStateChange to detect SIGNED_IN events");
-          const sub = supabase.auth.onAuthStateChange((event, session) => {
-            L("onAuthStateChange event:", event, "sessionPresent:", !!session);
-            if (event === "SIGNED_IN" && session) {
-              L("✅ SIGNED_IN detected — redirecting to /");
-              cleanup();
-              navigate("/");
-            }
-          });
-          unsub = sub;
-        } catch (e: any) {
-          L("onAuthStateChange subscription threw:", e && (e.message || e));
-        }
-
-        // 6) final guard -> invalid link after short wait
-        guardTimeout = setTimeout(() => {
-          L("❌ No session found after checks — navigating to /auth/invalid-link");
-          cleanup();
+        if (error) {
+          L("Error getting session from stored hash:", error.message);
           navigate("/auth/invalid-link");
-        }, 5000);
-      } catch (err) {
-        L("Unhandled error in AuthCallback run:", err);
-        cleanup();
+        } else {
+          L("Successfully got session from stored hash. Navigating to home.");
+          // On success, Supabase redirects, but we can navigate just in case.
+          navigate("/");
+        }
+      } else {
+        L("No auth hash found in sessionStorage or current URL. This may be an invalid callback.");
+        // If there's no hash, it's an invalid visit to this page.
+        navigate("/auth/invalid-link");
       }
-    })();
-
-    return () => {
-      cleanup();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    handleAuthCallback();
   }, [navigate]);
 
   const handleManualParse = async () => {

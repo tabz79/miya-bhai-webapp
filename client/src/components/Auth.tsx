@@ -57,13 +57,12 @@ export function Auth() {
     console.log('[login] GitHub OAuth started...');
 
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'github',
-        options: {
-          // IMPORTANT: route callback to our client callback so AuthCallback can capture session
-          redirectTo: `${window.location.origin}/auth/callback`,
-        },
-      });
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'github',
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback?hash={hash}`,
+      },
+    });
 
       if (error) {
         console.error('[login] GitHub OAuth error:', error.message);
