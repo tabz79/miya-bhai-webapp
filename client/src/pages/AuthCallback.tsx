@@ -1,4 +1,8 @@
 // client/src/pages/AuthCallback.tsx
+
+// CAPTURE HASH AT MODULE LOAD TIME - this is the key to winning the race condition
+const initialHash = window.location.hash;
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabaseClient";
@@ -25,21 +29,19 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const handleAuthCallback = async () => {
-      L("Component mounted. Checking for auth hash...");
-      const hash = sessionStorage.getItem('supabase_oauth_hash');
+      L("Component mounted. Checking for pre-captured auth hash...");
 
-      if (!hash) {
-        L("No auth hash found in sessionStorage. This may be an invalid callback.");
+      if (!initialHash || !initialHash.includes("access_token")) {
+        L("No auth hash was captured when the module loaded.");
         navigate("/auth/invalid-link");
         return;
       }
 
-      L("Found hash in sessionStorage. Processing...");
-      sessionStorage.removeItem('supabase_oauth_hash');
+      L("Auth hash found. Processing...");
 
       try {
         const params = Object.fromEntries(
-          hash.substring(1).split('&').map(p => {
+          initialHash.substring(1).split('&').map(p => {
             const [key, val] = p.split('=');
             return [key, decodeURIComponent(val || '')];
           })
@@ -56,11 +58,12 @@ export default function AuthCallback() {
         });
 
         if (error) {
-          // Throw the error to be caught by the catch block
           throw error;
         }
 
         L("Session successfully set. Navigating to home page.");
+        // Clear the hash from the URL bar without reloading
+        window.history.replaceState(null, '', window.location.pathname);
         navigate("/");
 
       } catch (e: any) {
