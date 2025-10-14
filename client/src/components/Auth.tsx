@@ -56,23 +56,34 @@ export function Auth() {
     setLoading(true);
     console.log('[login] GitHub OAuth started...');
 
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'github',
-      options: {
-        redirectTo: `${window.location.origin}/`
-      },
-    });
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'github',
+        options: {
+          // IMPORTANT: route callback to our client callback so AuthCallback can capture session
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
 
-    if (error) {
-      console.error('[login] GitHub OAuth error:', error.message);
+      if (error) {
+        console.error('[login] GitHub OAuth error:', error.message);
+        toast({
+          title: 'GitHub login failed',
+          description: error.message,
+          variant: 'destructive',
+        });
+        setLoading(false);
+      } else {
+        console.log('[login] Redirecting to GitHub OAuth...');
+      }
+    } catch (err) {
+      console.error('[login] GitHub OAuth unexpected error:', err);
       toast({
         title: 'GitHub login failed',
-        description: error.message,
+        description: 'Unexpected error. Check console.',
         variant: 'destructive',
       });
       setLoading(false);
-    } else {
-      console.log('[login] Redirecting to GitHub OAuth...');
     }
   };
 
@@ -81,23 +92,34 @@ export function Auth() {
     setLoading(true);
     console.log('[login] Google OAuth started...');
 
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/`,
-      },
-    });
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          // IMPORTANT: route callback to our client callback so AuthCallback can capture session
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
 
-    if (error) {
-      console.error('[login] Google OAuth error:', error.message);
+      if (error) {
+        console.error('[login] Google OAuth error:', error.message);
+        toast({
+          title: 'Google login failed',
+          description: error.message,
+          variant: 'destructive',
+        });
+        setLoading(false);
+      } else {
+        console.log('[login] Redirecting to Google OAuth...');
+      }
+    } catch (err) {
+      console.error('[login] Google OAuth unexpected error:', err);
       toast({
         title: 'Google login failed',
-        description: error.message,
+        description: 'Unexpected error. Check console.',
         variant: 'destructive',
       });
       setLoading(false);
-    } else {
-      console.log('[login] Redirecting to Google OAuth...');
     }
   };
 
