@@ -59,7 +59,7 @@ export function Auth() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: 'https://google.com',
+        redirectTo: `${window.location.origin}/auth/callback`, // 👈 absolute URL required
       },
     });
 
@@ -73,6 +73,31 @@ export function Auth() {
       setLoading(false);
     } else {
       console.log('[login] Redirecting to GitHub OAuth...');
+    }
+  };
+
+  // 🔹 Google OAuth Login
+  const handleGoogleLogin = async () => {
+    setLoading(true);
+    console.log('[login] Google OAuth started...');
+
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      console.error('[login] Google OAuth error:', error.message);
+      toast({
+        title: 'Google login failed',
+        description: error.message,
+        variant: 'destructive',
+      });
+      setLoading(false);
+    } else {
+      console.log('[login] Redirecting to Google OAuth...');
     }
   };
 
@@ -115,6 +140,16 @@ export function Auth() {
         disabled={loading}
       >
         {loading ? 'Redirecting...' : 'Sign in with GitHub'}
+      </Button>
+
+      {/* Google Login */}
+      <Button
+        onClick={handleGoogleLogin}
+        className="w-full mt-4"
+        variant="outline"
+        disabled={loading}
+      >
+        {loading ? 'Redirecting...' : 'Sign in with Google'}
       </Button>
     </div>
   );
