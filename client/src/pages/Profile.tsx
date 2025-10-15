@@ -43,10 +43,15 @@ export function Profile() {
     if (!userId) return null;
     try {
       setIsFetchingProfile(true);
+
+      // --- BEGIN TEMPORARY DEBUG LOG ---
+      console.log(`[DEBUG] Preparing to fetch profile for user_id: ${userId}. PO: Check fetch-logger for headers on the following request.`);
+      // --- END TEMPORARY DEBUG LOG ---
+
       const { data, error } = await supabase
         .from<ProfileRecord>('profiles')
         .select('*')
-        .eq('id', userId)
+        .eq('user_id', userId) // ✅ FIXED: Query by user_id to satisfy RLS policy
         .single();
 
       if (error && (error as any).code !== 'PGRST116') {
