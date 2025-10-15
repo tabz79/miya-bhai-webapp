@@ -51,10 +51,9 @@ export function Profile() {
       const { data, error } = await supabase
         .from<ProfileRecord>('profiles')
         .select('*')
-        .eq('user_id', userId) // ✅ FIXED: Query by user_id to satisfy RLS policy
-        .single();
+        .eq('user_id', userId);
 
-      if (error && (error as any).code !== 'PGRST116') {
+      if (error) {
         console.error('Error fetching profile:', error);
         toast?.({
           title: 'Profile load failed',
@@ -62,7 +61,8 @@ export function Profile() {
           variant: 'destructive',
         });
       }
-      return data ?? null;
+      // If data is not null and has entries, return the first one. Otherwise, return null.
+      return data?.[0] ?? null;
     } catch (err) {
       console.error('Unexpected fetchProfile error', err);
       toast?.({
@@ -76,48 +76,19 @@ export function Profile() {
     }
   };
 
-  // ⚙️ Defensive fetch: only query Supabase if user.id exists.
-  // If user exists but id is missing, attempt to re-fetch /api/user to get updated data.
   useEffect(() => {
     let mounted = true;
 
     const run = async () => {
-      if (!user) {
+      // This check is now based on user.id, which is a stable primitive
+      if (!user?.id) {
         if (mounted) setProfile(null);
         return;
       }
 
-      // If user has no id, try to refresh the server-side session /user endpoint
-      if (!user.id) {
-        console.warn('[Profile] Skipping profile fetch: user.id is missing — attempting server re-check');
-        try {
-          const resp = await fetch('/api/user', { credentials: 'include' });
-          if (resp.ok) {
-            const body = await resp.json();
-            const returnedUser = body?.user;
-            if (returnedUser?.id) {
-              // we now have an id — fetch the profile data
-              const fetched = await fetchProfileById(returnedUser.id);
-              if (mounted) setProfile(fetched);
-              return;
-            }
-          } else {
-            // server says not authenticated or similar — keep fallback UX
-            if (mounted) setProfile(null);
-            return;
-          }
-        } catch (e) {
-          console.warn('[Profile] server re-check failed', e);
-          if (mounted) setProfile(null);
-          return;
-        }
-      }
-
       // Normal path: user.id exists — fetch profile directly
-      if (user.id) {
-        const fetched = await fetchProfileById(user.id);
-        if (mounted) setProfile(fetched);
-      }
+      const fetched = await fetchProfileById(user.id);
+      if (mounted) setProfile(fetched);
     };
 
     run();
@@ -125,7 +96,7 @@ export function Profile() {
     return () => {
       mounted = false;
     };
-  }, [user, toast]);
+  }, [user?.id]);
 
   const handleSignOut = async () => {
     if (isSigningOut) return;
