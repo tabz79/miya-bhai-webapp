@@ -28,13 +28,6 @@ export default function AuthCallback() {
   };
 
   useEffect(() => {
-    // Final diagnostic: Add a global listener to catch the invisible error.
-    const handleRejection = (event: PromiseRejectionEvent) => {
-      L("GLOBAL UNHANDLED REJECTION:", event.reason);
-      console.error("Auth Callback Unhandled Rejection Details:", event.reason);
-    };
-    window.addEventListener('unhandledrejection', handleRejection);
-
     const handleAuthCallback = async () => {
       L("Component mounted. Checking for pre-captured auth hash...");
 
@@ -81,11 +74,6 @@ export default function AuthCallback() {
     };
 
     handleAuthCallback();
-
-    // Cleanup the listener when the component unmounts
-    return () => {
-      window.removeEventListener('unhandledrejection', handleRejection);
-    };
   }, [navigate]);
 
   const handleManualParse = async () => {
