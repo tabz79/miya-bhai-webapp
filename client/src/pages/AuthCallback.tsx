@@ -52,6 +52,12 @@ export default function AuthCallback() {
         const { error } = await supabase.auth.setSession({
           access_token: accessToken,
           refresh_token: refreshToken,
+        }).catch(err => {
+          // This is a low-level catch block just in case the try/catch is bypassed.
+          L("FATAL: setSession promise was rejected unexpectedly.", err);
+          console.error("setSession promise rejection details:", err);
+          // Return an error object to be handled by the main logic
+          return { error: err }; 
         });
 
         if (error) {
