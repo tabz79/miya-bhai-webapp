@@ -28,6 +28,13 @@ export default function AuthCallback() {
   };
 
   useEffect(() => {
+    // Final diagnostic: Add a global listener to catch the invisible error.
+    const handleRejection = (event: PromiseRejectionEvent) => {
+      L("GLOBAL UNHANDLED REJECTION:", event.reason);
+      console.error("Auth Callback Unhandled Rejection Details:", event.reason);
+    };
+    window.addEventListener('unhandledrejection', handleRejection);
+
     const handleAuthCallback = async () => {
       L("Component mounted. Checking for pre-captured auth hash...");
 
@@ -53,10 +60,8 @@ export default function AuthCallback() {
           access_token: accessToken,
           refresh_token: refreshToken,
         }).catch(err => {
-          // This is a low-level catch block just in case the try/catch is bypassed.
           L("FATAL: setSession promise was rejected unexpectedly.", err);
           console.error("setSession promise rejection details:", err);
-          // Return an error object to be handled by the main logic
           return { error: err }; 
         });
 
@@ -65,7 +70,6 @@ export default function AuthCallback() {
         }
 
         L("Session successfully set. Navigating to home page.");
-        // Clear the hash from the URL bar without reloading
         window.history.replaceState(null, '', window.location.pathname);
         navigate("/");
 
@@ -77,6 +81,11 @@ export default function AuthCallback() {
     };
 
     handleAuthCallback();
+
+    // Cleanup the listener when the component unmounts
+    return () => {
+      window.removeEventListener('unhandledrejection', handleRejection);
+    };
   }, [navigate]);
 
   const handleManualParse = async () => {
