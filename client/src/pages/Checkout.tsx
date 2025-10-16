@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/hooks/useCartStore';
-import { Link, useLocation } from 'wouter';
+import { Link, useNavigate } from 'react-router-dom';
 import { api } from '@/services/api';
 
 export function Checkout() {
   const { items, coupon: cartCoupon, clearCart } = useCartStore();
-  const [, setLocation] = useLocation();
+  const navigate = useNavigate();
   const [customer, setCustomer] = useState({ name: '', phone: '', email: '' });
   const [authChoice, setAuthChoice] = useState(''); // 'guest' or 'login'
   const [error, setError] = useState('');
@@ -116,14 +116,12 @@ export function Checkout() {
   const handlePlaceOrder = async () => {
     if (!validateForm()) return;
 
-    // Prefer the raw cart string coupon if present, otherwise prefer activeCoupon.code
     const rawCoupon = (typeof cartCoupon === 'string' && cartCoupon)
       ? cartCoupon
       : (activeCoupon?.code ?? null);
 
     const couponCodeToSend = rawCoupon ? String(rawCoupon).toUpperCase() : null;
 
-    // Build order payload — include discount_amount and payable_amount so server persists final amounts
     const orderDetails = {
       items,
       customer,
@@ -135,31 +133,13 @@ export function Checkout() {
       delivery_address: address,
       delivery_lat: location?.lat,
       delivery_lng: location?.lng,
-      coupon_code: couponCodeToSend, // normalized uppercase string or null
+      coupon_code: couponCodeToSend,
     };
 
     try {
-      const response = await fetch('/api/orders/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(orderDetails),
-      });
-
-      const text = await response.text();
-      let result;
-      try {
-        result = JSON.parse(text);
-      } catch (e) {
-        setError('Invalid or empty response from server');
-        return;
-      }
-
-      if (response.ok) {
-        clearCart();
-        setLocation(`/confirmation?orderId=${result.orderId}`);
-      } else {
-        setError(result.error?.message || result.error || 'Failed to place order.');
-      }
+      const result = await api.createOrder(orderDetails);
+      clearCart();
+      navigate(`/confirmation?orderId=${result.orderId}`);
     } catch (err: any) {
       console.error(err);
       setError(err?.message || 'Network error while placing order.');
@@ -169,7 +149,7 @@ export function Checkout() {
   return (
     <div className="w-full min-h-screen bg-app-background text-app-foreground">
       <div className="p-4 border-b border-gray-200">
-        <Link href="/cart" className="flex items-center text-brand-teak hover:underline">&larr; Back to Cart</Link>
+        <Link to="/cart" className="flex items-center text-brand-teak hover:underline">&larr; Back to Cart</Link>
         <h1 className="font-bold text-xl text-center -mt-6">Checkout</h1>
       </div>
 
