@@ -1,13 +1,14 @@
 // client/src/admin/services/api.ts
 import { Order, Driver, Customer, Summary, ChartData } from '../types';
 
-const API_BASE_URL = '/api/admin';
-
 type OrdersResp = { items: Order[]; meta: { total: number; page: number; limit: number }; raw?: any };
 
 // tiny helper to centralize fetch + error parsing
 async function safeFetch(input: RequestInfo, init?: RequestInit) {
-  const res = await fetch(input, init);
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
+  const url = typeof input === 'string' ? (input.startsWith('http') ? input : `${baseUrl}${input}`) : input;
+
+  const res = await fetch(url, init);
   const text = await res.text();
   let json: any = null;
   try { json = text ? JSON.parse(text) : null; } catch (e) { json = null; }
@@ -27,19 +28,19 @@ async function safeFetch(input: RequestInfo, init?: RequestInit) {
 
 export const adminApi = {
   getSummary: async (token?: string): Promise<Summary> => {
-    const url = `${API_BASE_URL}/summary`;
+    const url = '/api/admin/summary';
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json;
   },
 
   getOrdersOverTime: async (from: string, to: string, interval: 'day' | 'week' | 'month'): Promise<ChartData[]> => {
-    const url = `${API_BASE_URL}/charts/orders-over-time?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&interval=${encodeURIComponent(interval)}`;
+    const url = `/api/admin/charts/orders-over-time?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&interval=${encodeURIComponent(interval)}`;
     const { json } = await safeFetch(url);
     return json?.data ?? [];
   },
 
   getPaymentMethods: async (): Promise<ChartData[]> => {
-    const url = `${API_BASE_URL}/charts/payment-methods`;
+    const url = '/api/admin/charts/payment-methods';
     const { json } = await safeFetch(url);
     return json?.data ?? [];
   },
@@ -50,7 +51,7 @@ export const adminApi = {
     params.set('limit', String(limit ?? 10));
     if (opts?.status) params.set('status', String(opts.status));
     if (opts?.search) params.set('search', String(opts.search));
-    const url = `${API_BASE_URL}/orders?${params.toString()}`;
+    const url = `/api/admin/orders?${params.toString()}`;
 
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     const items = json?.data ?? json?.items ?? json?.orders ?? [];
@@ -59,7 +60,7 @@ export const adminApi = {
   },
 
   updateOrderStatus: async (orderId: string, status: string, token?: string): Promise<Order> => {
-    const url = `${API_BASE_URL}/orders/${orderId}/status`;
+    const url = `/api/admin/orders/${orderId}/status`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
@@ -72,7 +73,7 @@ export const adminApi = {
   },
 
   assignDriverToOrder: async (orderId: string, driverId: string | null, token?: string): Promise<Order> => {
-    const url = `${API_BASE_URL}/orders/${orderId}/assign`;
+    const url = `/api/admin/orders/${orderId}/assign`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
@@ -85,13 +86,13 @@ export const adminApi = {
   },
 
   getDrivers: async (token?: string): Promise<Driver[]> => {
-    const url = `${API_BASE_URL}/drivers`;
+    const url = '/api/admin/drivers';
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json?.data ?? json?.items ?? json ?? [];
   },
 
   createDriver: async (driver: Omit<Driver, 'id'>, token?: string): Promise<Driver> => {
-    const url = `${API_BASE_URL}/drivers`;
+    const url = '/api/admin/drivers';
     const { json } = await safeFetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
@@ -101,7 +102,7 @@ export const adminApi = {
   },
 
   updateDriver: async (driverId: string, driver: Partial<Driver>, token?: string): Promise<Driver> => {
-    const url = `${API_BASE_URL}/drivers/${driverId}`;
+    const url = `/api/admin/drivers/${driverId}`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
@@ -111,7 +112,7 @@ export const adminApi = {
   },
 
   deleteDriver: async (driverId: string, token?: string): Promise<void> => {
-    const url = `${API_BASE_URL}/drivers/${driverId}`;
+    const url = `/api/admin/drivers/${driverId}`;
     await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
   },
 
@@ -123,7 +124,7 @@ export const adminApi = {
    * - Normalizes a variety of server shapes so the frontend is resilient.
    */
   getDeliveries: async (token?: string): Promise<any[]> => {
-    const url = `${API_BASE_URL}/deliveries`;
+    const url = '/api/admin/deliveries';
     try {
       const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
       // The server-side view now provides the normalized shape directly
@@ -136,19 +137,19 @@ export const adminApi = {
   },
 
   getCustomers: async (token?: string): Promise<Customer[]> => {
-    const url = `${API_BASE_URL}/customers`;
+    const url = '/api/admin/customers';
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json?.data ?? json?.customers ?? json ?? [];
   },
 
   getCustomerById: async (customerId: string, token?: string): Promise<{ customer: Customer; orders: Order[] }> => {
-    const url = `${API_BASE_URL}/customers/${customerId}`;
+    const url = `/api/admin/customers/${customerId}`;
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json;
   },
 
   exportReports: async (from?: string, to?: string, status?: string, token?: string): Promise<Blob> => {
-    let url = `${API_BASE_URL}/reports/export`;
+    let url = '/api/admin/reports/export';
     const params = new URLSearchParams();
     if (from) params.append('from', from);
     if (to) params.append('to', to);
@@ -159,13 +160,13 @@ export const adminApi = {
   },
 
   getSettings: async (token?: string): Promise<any> => {
-    const url = `${API_BASE_URL}/settings`;
+    const url = '/api/admin/settings';
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json;
   },
 
   updateSettings: async (settings: any, token?: string): Promise<any> => {
-    const url = `${API_BASE_URL}/settings`;
+    const url = '/api/admin/settings';
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
@@ -184,13 +185,13 @@ export const adminApi = {
   },
 
   getCoupons: async (token?: string): Promise<any[]> => {
-    const url = `${API_BASE_URL}/coupons`;
+    const url = '/api/admin/coupons';
     const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
     return json;
   },
 
   createCoupon: async (coupon: any, token?: string): Promise<any> => {
-    const url = `${API_BASE_URL}/coupons`;
+    const url = '/api/admin/coupons';
     const { json } = await safeFetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
@@ -200,7 +201,7 @@ export const adminApi = {
   },
 
   updateCoupon: async (id: string, coupon: any, token?: string): Promise<any> => {
-    const url = `${API_BASE_URL}/coupons/${id}`;
+    const url = `/api/admin/coupons/${id}`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
@@ -210,12 +211,12 @@ export const adminApi = {
   },
 
   deleteCoupon: async (id: string, token?: string): Promise<void> => {
-    const url = `${API_BASE_URL}/coupons/${id}`;
+    const url = `/api/admin/coupons/${id}`;
     await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
   },
 
   updateCouponStatus: async (id: string, isActive: boolean, token?: string): Promise<any> => {
-    const url = `${API_BASE_URL}/coupons/${id}/status`;
+    const url = `/api/admin/coupons/${id}/status`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
