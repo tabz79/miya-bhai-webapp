@@ -25,7 +25,7 @@ const adminAuth = (req, res, next) => {
  * Create order
  * POST /api/orders/create
  */
-router.post('/orders/create', async (req, res) => {
+router.post('/orders', async (req, res) => {
   try {
     // Normalize and validate incoming payload to avoid simple client/server mismatches
     const incoming = req.body || {};
