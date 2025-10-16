@@ -33,6 +33,7 @@ if (!loaded) {
 // -------------------------------------------------
 
 import express from 'express';
+import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
@@ -90,20 +91,22 @@ app.use((req, res, next) => {
 const rawAllowed = process.env.CORS_ALLOWED_ORIGINS || 'http://localhost:5173';
 const allowedOrigins = rawAllowed.split(',').map(s => s.trim()).filter(Boolean);
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  if (origin && allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-    res.setHeader('Access-Control-Allow-Credentials', 'true'); // needed if frontend sends credentials
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS');
-  }
-  if (req.method === 'OPTIONS') {
-    // Preflight short-circuit
-    return res.sendStatus(204);
-  }
-  next();
-});
+console.log('[CORS] Allowed origins:', allowedOrigins);
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 // --------------------------------------------------------------------------------
 
 app.use(cookieParser());
