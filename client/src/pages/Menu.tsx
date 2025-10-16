@@ -14,6 +14,7 @@ import { slugify } from "@/lib/utils";
 import { useCartStore } from "@/hooks/useCartStore";
 import { CategoryJumpPill } from "../components/Menu/CategoryJumpPill";
 import { resolveImage } from "@/lib/image-resolver";
+import { api } from "@/services/api";
 
 type MenuItem = any;
 
@@ -29,16 +30,8 @@ export function Menu(): JSX.Element {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch("/api/menu?limit=1000"); // Fetch all items
-
-        if (!response.ok) {
-          console.warn(`Menu fetch returned HTTP ${response.status} ${response.statusText}`);
-          setMenu(canonicalMenu as MenuItem[]);
-          return;
-        }
-
-        const data = await response.json();
-        const items = data?.payload?.items ?? [];
+        const menuData = await api.getMenu();
+        const items = menuData?.payload?.items ?? [];
 
         // Sanity check: fallback if data is empty or only has one category
         const categories = new Set(items.map(i => i.category));

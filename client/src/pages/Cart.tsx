@@ -5,6 +5,8 @@ import { useCartStore } from '@/hooks/useCartStore';
 import { Link } from 'wouter';
 import { Trash2 } from 'lucide-react';
 
+import { api } from '@/services/api';
+
 interface Coupon {
   code: string;
   type: 'percentage' | 'flat';
@@ -20,9 +22,8 @@ export function Cart() {
   useEffect(() => {
     const fetchCoupons = async () => {
       try {
-        const response = await fetch('/api/coupons');
-        const data = await response.json();
-        setCoupons(data);
+        const data = await api.getCoupons();
+        setCoupons(data || []);
       } catch (err) {
         console.error('Failed to fetch coupons', err);
       }

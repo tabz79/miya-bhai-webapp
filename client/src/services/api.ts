@@ -8,11 +8,8 @@ type AnyObj = Record<string, any>;
  * Small fetch wrapper that always tries to send/receive JSON and throws clear errors.
  */
 async function safeFetch(url: string, opts: RequestInit = {}) {
-  console.log('[DEBUG] VITE_API_BASE_URL:', import.meta.env.VITE_API_BASE_URL);
   const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
   const finalUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
-  console.log('[DEBUG] Final URL:', finalUrl);
-
   const merged: RequestInit = {
     credentials: 'include',
     headers: {
@@ -57,6 +54,10 @@ export const api = {
   // Get public menu
   async getMenu() {
     return await safeFetch('/api/menu', { method: 'GET' });
+  },
+
+  async getCoupons() {
+    return await safeFetch('/api/coupons', { method: 'GET' });
   },
 
   // Create an order (checkout). Payload should be the order object expected by backend.
