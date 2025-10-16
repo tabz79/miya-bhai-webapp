@@ -66,9 +66,14 @@ const AdminOrdersPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const adminToken: string | undefined = undefined; // TODO: wire real token
+  const [adminToken, setAdminToken] = useState<string | undefined>(() => sessionStorage.getItem('admin-token') || undefined);
 
-  const loadOrders = useCallback(async () => {
+  const loadOrders = useCallback(async (token: string | undefined) => {
+    if (!token) {
+      setError('Admin token not provided.');
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     setError(null);
     try {
@@ -78,7 +83,7 @@ const AdminOrdersPage: React.FC = () => {
         currentPage,
         ORDERS_PER_PAGE,
         { status: statusParam, search: searchQuery },
-        adminToken
+        token
       );
 
       const data = (resp && (resp.items || resp.data || resp.orders)) || [];
@@ -95,16 +100,40 @@ const AdminOrdersPage: React.FC = () => {
       setTotalPages(Math.max(1, Math.ceil(total / ORDERS_PER_PAGE)));
     } catch (err: any) {
       setError(err?.message || 'Failed to load orders');
+      if (err?.message?.includes('Unauthorized')) {
+        sessionStorage.removeItem('admin-token');
+        setAdminToken(undefined);
+        setError('Invalid admin token. Please refresh and try again.');
+      }
       setOrders([]);
       setTotalPages(1);
     } finally {
       setLoading(false);
     }
-  }, [currentPage, statusFilter, searchQuery, adminToken]);
+  }, [currentPage, statusFilter, searchQuery]);
 
   useEffect(() => {
-    loadOrders();
-  }, [loadOrders]);
+    if (adminToken) {
+      loadOrders(adminToken);
+    } else {
+      const token = window.prompt('Please enter the admin password:');
+      if (token) {
+        sessionStorage.setItem('admin-token', token);
+        setAdminToken(token);
+      } else {
+        setError('Admin password is required to view orders.');
+        setLoading(false);
+      }
+    }
+  }, [adminToken, loadOrders]);
+
+  // This effect re-runs the loadOrders call whenever the token, page, or filters change.
+  useEffect(() => {
+    if (adminToken) {
+      loadOrders(adminToken);
+    }
+  }, [adminToken, currentPage, statusFilter, searchQuery, loadOrders]);
+
 
   // ---------------------------
   // Supabase realtime subscription (replaces polling)
