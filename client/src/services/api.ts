@@ -8,8 +8,10 @@ type AnyObj = Record<string, any>;
  * Small fetch wrapper that always tries to send/receive JSON and throws clear errors.
  */
 async function safeFetch(url: string, opts: RequestInit = {}) {
+  console.log('[DEBUG] VITE_API_BASE_URL:', import.meta.env.VITE_API_BASE_URL);
   const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
   const finalUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  console.log('[DEBUG] Final URL:', finalUrl);
 
   const merged: RequestInit = {
     credentials: 'include',
