@@ -44,14 +44,11 @@ export function Profile() {
     try {
       setIsFetchingProfile(true);
 
-      // --- BEGIN TEMPORARY DEBUG LOG ---
-      console.log(`[DEBUG] Preparing to fetch profile for user_id: ${userId}. PO: Check fetch-logger for headers on the following request.`);
-      // --- END TEMPORARY DEBUG LOG ---
-
       const { data, error } = await supabase
         .from<ProfileRecord>('profiles')
         .select('*')
-        .eq('user_id', userId);
+        .eq('user_id', userId)
+        .maybeSingle(); // ✅ FINAL FIX: Use maybeSingle() to gracefully handle 0 rows.
 
       if (error) {
         console.error('Error fetching profile:', error);
@@ -60,9 +57,9 @@ export function Profile() {
           description: 'Check console for details.',
           variant: 'destructive',
         });
+        return null;
       }
-      // If data is not null and has entries, return the first one. Otherwise, return null.
-      return data?.[0] ?? null;
+      return data;
     } catch (err) {
       console.error('Unexpected fetchProfile error', err);
       toast?.({

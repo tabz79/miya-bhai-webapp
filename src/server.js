@@ -33,7 +33,6 @@ if (!loaded) {
 // -------------------------------------------------
 
 import express from 'express';
-import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { requestId } from './middleware/requestId.js';
 import healthRouter from './routes/health.js';
@@ -84,7 +83,29 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
   next();
 });
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+
+// --- CORS: dynamic whitelist based on env (supports localhost + production Pages domain) ---
+// Set CORS_ALLOWED_ORIGINS as a comma-separated list, e.g.:
+// CORS_ALLOWED_ORIGINS="http://localhost:5173,https://miya-bhai-webapp-v1.pages.dev"
+const rawAllowed = process.env.CORS_ALLOWED_ORIGINS || 'http://localhost:5173';
+const allowedOrigins = rawAllowed.split(',').map(s => s.trim()).filter(Boolean);
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Credentials', 'true'); // needed if frontend sends credentials
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS');
+  }
+  if (req.method === 'OPTIONS') {
+    // Preflight short-circuit
+    return res.sendStatus(204);
+  }
+  next();
+});
+// --------------------------------------------------------------------------------
+
 app.use(cookieParser());
 
 // routes
