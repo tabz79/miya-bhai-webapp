@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { BottomNav } from '../components/BottomNav';
 import { useCartStore } from '@/hooks/useCartStore';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 import { Trash2 } from 'lucide-react';
 
 import { api } from '@/services/api';
@@ -161,7 +161,7 @@ export function Cart() {
 
           {/* Checkout Button */}
           <div className="p-4">
-            <Link href="/checkout" className="block text-center bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors w-full">
+            <Link to="/checkout" className="block text-center bg-brand-teak text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-tobacco transition-colors w-full">
               Proceed to Checkout
             </Link>
           </div>
