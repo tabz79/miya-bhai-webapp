@@ -372,6 +372,7 @@ export async function createOrder(cart) {
 
     // Build a payload for upsert + create
     const payload = {
+      user_id: cart.user_id || null, // Pass user_id if it exists
       customer_name: denormName,
       customer_email: denormEmail,
       customer_phone: denormPhone,

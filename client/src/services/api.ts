@@ -2,20 +2,32 @@
 // Public web-site API wrapper.
 // Exports both named `api` and default export for compatibility.
 
+import { supabase } from "@/lib/supabaseClient";
+
 type AnyObj = Record<string, any>;
 
 /**
  * Small fetch wrapper that always tries to send/receive JSON and throws clear errors.
  */
-async function safeFetch(url: string, opts: RequestInit = {}) {
+async function safeFetch(url: string, opts: RequestInit = {}, authenticated = false) {
   const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
   const finalUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  
+  const headers: Record<string, string> = {
+    Accept: 'application/json',
+    ...(opts.headers || {}),
+  };
+
+  if (authenticated) {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session?.access_token) {
+      headers.Authorization = `Bearer ${session.access_token}`;
+    }
+  }
+
   const merged: RequestInit = {
     credentials: 'include',
-    headers: {
-      Accept: 'application/json',
-      ...(opts.headers || {}),
-    },
+    headers,
     ...opts,
   };
 
@@ -62,10 +74,14 @@ export const api = {
 
   // Create an order (checkout). Payload should be the order object expected by backend.
   async createOrder(orderPayload: AnyObj) {
+    // Check if user is logged in to send authenticated request
+    const { data: { session } } = await supabase.auth.getSession();
+    const isAuthenticated = !!session;
+
     return await safeFetch('/api/orders', {
       method: 'POST',
       body: JSON.stringify(orderPayload),
-    });
+    }, isAuthenticated);
   },
 
   // Get public settings (used by checkout to validate delivery pins etc)
@@ -88,6 +104,19 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(payload),
     });
+  },
+
+  // Get user profile (authenticated)
+  async getUserProfile() {
+    return await safeFetch('/api/user/profile', { method: 'GET' }, true);
+  },
+
+  // Update user address (authenticated)
+  async updateUserProfileAddress(addressData: AnyObj) {
+    return await safeFetch('/api/user/profile/address', {
+      method: 'PUT',
+      body: JSON.stringify(addressData),
+    }, true);
   },
 };
 

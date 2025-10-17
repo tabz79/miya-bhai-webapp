@@ -27,9 +27,17 @@ const adminAuth = (req, res, next) => {
  */
 router.post('/orders', async (req, res) => {
   try {
+    // The requireAuth middleware (if used on this route) will attach req.user
+    const user = req.user || null;
+
     // Normalize and validate incoming payload to avoid simple client/server mismatches
     const incoming = req.body || {};
     const payload = { ...incoming };
+
+    // If the user is authenticated, ensure their ID is part of the payload
+    if (user) {
+      payload.user_id = user.id;
+    }
 
     // Normalize coupon_code to uppercase string (or null)
     if (payload.coupon_code) {

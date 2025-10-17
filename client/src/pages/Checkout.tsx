@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/hooks/useCartStore';
 import { Link, useNavigate } from 'react-router-dom';
 import { api } from '@/services/api';
+import { useAuth } from '@/hooks/useAuth';
 
 export function Checkout() {
   const { items, coupon: cartCoupon, clearCart } = useCartStore();
   const navigate = useNavigate();
-  const [customer, setCustomer] = useState({ name: '', phone: '', email: '' });
+  const { session, user } = useAuth();
+  const [customer, setCustomer] = useState({ name: user?.user_metadata?.full_name ?? '', phone: '', email: user?.email ?? '' });
   const [authChoice, setAuthChoice] = useState(''); // 'guest' or 'login'
   const [error, setError] = useState('');
   const [settings, setSettings] = useState<any>(null);
@@ -21,7 +23,24 @@ export function Checkout() {
 
   useEffect(() => {
     api.getPublicSettings().then(setSettings).catch(() => {});
-  }, []);
+    if (user) {
+      setAuthChoice('login');
+      api.getUserProfile().then(profile => {
+        if (profile) {
+          // Pre-fill from profile
+          setCustomer(c => ({ ...c, name: profile.full_name || c.name, phone: profile.phone || c.phone }));
+          const savedAddress = profile.addresses?.[0];
+          if (savedAddress) {
+            setAddress(savedAddress.line1 || '');
+            setPincode(savedAddress.postal_code || '');
+            // You might need to re-validate the pincode here
+            const isValid = settings?.delivery?.allowed_pincodes?.includes(savedAddress.postal_code);
+            setPincodeValid(isValid);
+          }
+        }
+      }).catch(err => console.warn('No profile found or error fetching:', err));
+    }
+  }, [user, settings?.delivery?.allowed_pincodes]);
 
   // If cart already has a coupon (you pasted it in the cart), prefer that
   useEffect(() => {
@@ -115,6 +134,20 @@ export function Checkout() {
 
   const handlePlaceOrder = async () => {
     if (!validateForm()) return;
+
+    // If user is logged in, save their address for next time
+    if (user) {
+      try {
+        await api.updateUserProfileAddress({ 
+          line1: address, 
+          postal_code: pincode, 
+          phone: customer.phone 
+        });
+      } catch (err) {
+        console.warn('Could not save user address:', err);
+        // Non-fatal, so we continue with order placement
+      }
+    }
 
     const rawCoupon = (typeof cartCoupon === 'string' && cartCoupon)
       ? cartCoupon
