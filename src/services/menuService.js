@@ -1,9 +1,15 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 // In-memory cache for menu data
 let menuCache = null;
 let menuStats = { source: 'none', count: 0, lastUpdated: null };
+
+// Helper to get the project root directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); // This is /src/services
+const projectRoot = path.resolve(__dirname, '..', '..'); // Moves up two levels to the project root
 
 /**
  * Safely loads and parses a JSON file.
@@ -25,8 +31,8 @@ async function loadJson(filePath) {
  */
 export async function initMenuService() {
   const useMock = process.env.USE_MOCK === 'true';
-  const canonicalPath = path.resolve(process.cwd(), 'client', 'src', 'data', 'menu.canonical.json');
-  const mockPath = path.resolve(process.cwd(), 'data', 'menu.json');
+  const canonicalPath = path.resolve(projectRoot, 'client', 'src', 'data', 'menu.canonical.json');
+  const mockPath = path.resolve(projectRoot, 'data', 'menu.json');
 
   if (useMock) {
     console.log('Initializing menu service with MOCK data.');
