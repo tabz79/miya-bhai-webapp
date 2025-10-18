@@ -7,25 +7,41 @@ import { supabase } from '../lib/supabaseClient.js';
  * @returns {Promise<object|null>}
  */
 export async function getUserProfile(userId) {
-  const { data: profile, error } = await supabase
-    .from('profiles')
-    .select(`
-      *,
-      addresses (
-        *
-      )
-    `)
-    .eq('id', userId)
-    .order('created_at', { foreignTable: 'addresses', ascending: false })
-    .limit(1, { foreignTable: 'addresses' })
-    .single();
+  try {
+    // 1. Fetch the user profile
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .single();
 
-  if (error && error.code !== 'PGRST116') { // PGRST116 = single row not found
+    if (profileError && profileError.code !== 'PGRST116') {
+      throw profileError;
+    }
+
+    // 2. Fetch the user's addresses
+    const { data: addresses, error: addressesError } = await supabase
+      .from('addresses')
+      .select('*')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false });
+
+    if (addressesError) {
+      throw addressesError;
+    }
+
+    // 3. Combine the results
+    if (!profile) return null;
+    
+    return {
+      ...profile,
+      addresses: addresses || [],
+    };
+
+  } catch (error) {
     console.error('[userService.getUserProfile] Error:', error);
     throw new Error('Could not fetch user profile.');
   }
-
-  return profile;
 }
 
 /**
