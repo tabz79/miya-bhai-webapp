@@ -1,36 +1,17 @@
-// lib/supabaseClient.js
+// src/lib/supabaseClient.js
+// SERVER-ONLY Supabase client: NO import.meta usage.
+// Node parses entire file; any mention of "import.meta" would crash parsing.
+
 import { createClient } from '@supabase/supabase-js';
 
-// --- Universal env resolver (works in both Vite + Node) ---
-const getEnv = () => {
-  // Server-side (Node)
-  if (typeof process !== 'undefined' && process.env) {
-    return {
-      SUPABASE_URL:
-        (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').trim(),
-      SUPABASE_ANON_KEY:
-        (process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || '').trim(),
-    };
-  }
+const supabaseUrl =
+  (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').trim();
+const supabaseAnonKey =
+  (process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || '').trim();
 
-  // Browser / Vite build
-  if (typeof import !== 'undefined' && typeof import.meta !== 'undefined' && import.meta.env) {
-    return {
-      SUPABASE_URL: (import.meta.env.VITE_SUPABASE_URL || '').trim(),
-      SUPABASE_ANON_KEY: (import.meta.env.VITE_SUPABASE_ANON_KEY || '').trim(),
-    };
-  }
+if (!supabaseUrl || !supabaseAnonKey) {
+  // Do not print secrets — just indicate presence
+  console.error('[supabaseServer] Missing env vars (SUPABASE_URL or SUPABASE_ANON_KEY). Check Render environment.');
+}
 
-  return { SUPABASE_URL: '', SUPABASE_ANON_KEY: '' };
-};
-
-const { SUPABASE_URL, SUPABASE_ANON_KEY } = getEnv();
-
-// === create supabase client ===
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true,
-  },
-});
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
