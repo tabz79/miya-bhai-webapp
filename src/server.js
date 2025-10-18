@@ -123,7 +123,7 @@ app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
 app.use('/api', couponsRouter);
-app.use('/api', userRouter);
+app.use('/api/user', userRouter);
 
 // 404 + error
 app.use((req, res) => res.status(404).json({ status: 'error', message: 'Not Found' }));

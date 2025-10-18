@@ -1,72 +1,229 @@
 console logs:
-index-DzhhEkID.js:212 Supabase client initialized (client-side anon).
-index-DzhhEkID.js:330 [App] supabase client ready: true
+index-B0lHmt8f.js:211 Supabase client initialized (client-side anon).
+index-B0lHmt8f.js:330 [App] supabase client ready: true
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+tz @ index-B0lHmt8f.js:40
+go @ index-B0lHmt8f.js:40
+UP @ index-B0lHmt8f.js:40
+Xi @ index-B0lHmt8f.js:38
+(anonymous) @ index-B0lHmt8f.js:40
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+tz @ index-B0lHmt8f.js:40
+go @ index-B0lHmt8f.js:40
+UP @ index-B0lHmt8f.js:40
+Xi @ index-B0lHmt8f.js:38
+(anonymous) @ index-B0lHmt8f.js:40
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+tz @ index-B0lHmt8f.js:40
+go @ index-B0lHmt8f.js:40
+UP @ index-B0lHmt8f.js:40
+Xi @ index-B0lHmt8f.js:38
+(anonymous) @ index-B0lHmt8f.js:40
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+tz @ index-B0lHmt8f.js:40
+go @ index-B0lHmt8f.js:40
+UP @ index-B0lHmt8f.js:40
+Xi @ index-B0lHmt8f.js:38
+(anonymous) @ index-B0lHmt8f.js:40
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/profile 404 (Not Found)
+fa @ index-B0lHmt8f.js:211
+await in fa
+getUserProfile @ index-B0lHmt8f.js:211
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
+index-B0lHmt8f.js:258 No profile found or error fetching: Error: HTTP 404 — Not Found
+    at fa (index-B0lHmt8f.js:211:37870)
+    at async Object.getUserProfile (index-B0lHmt8f.js:211:38591)
+(anonymous) @ index-B0lHmt8f.js:258
+Promise.catch
+Tre.x.useEffect.Te @ index-B0lHmt8f.js:258
+Ug @ index-B0lHmt8f.js:40
+hl @ index-B0lHmt8f.js:40
+(anonymous) @ index-B0lHmt8f.js:40
+_ @ index-B0lHmt8f.js:25
+O @ index-B0lHmt8f.js:25
 
-network logs:
-https://miya-bhai-webapp-v1.pages.dev/
-https://miya-bhai-webapp.onrender.com/api/orders
-https://miya-bhai-webapp.onrender.com/api/orders
+console network logs:
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)
-https://miya-bhai-webapp-v1.pages.dev/assets/index-DzhhEkID.js
-https://miya-bhai-webapp-v1.pages.dev/assets/index-Bm4dr5_j.css
-https://replit.com/public/js/replit-dev-banner.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BP20Y95P.js
-https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2
-https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2
-https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2
-https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2
-https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-DtApmIaH.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-BNXd1yEL.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index-ljv-RBOm.js
-https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png
-https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
-https://miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png
-https://miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png
-https://miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png
-https://miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png
-https://miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png
-https://miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2.js-Dys2fie4.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/commonScrapper.js-CqNa2ukz.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/searchHTMLscrapper.js-DQMZVuLO.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/categoryScrapper.js-BIcr14bU.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/filterScrapper.js-Bv7kyKPD.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/spendCalculate.js-BYAVpPk-.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitor.js-Cmu4Xp9o.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitorGrafana.js-DahCi2Mw.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/wishlistScrapper.js-BsFUwQsD.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/couponCollection.js-Dx90621a.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/untrustedPriceComparison.js-DnlIJIE0.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/checkoutScrapper.js-eerzatx5.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/savedPricePopUp.js-C_-PCAea.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/ctUtils.js-WhLDDocR.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/counter.js-D17vkf9D.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index.ts-BA_uI1ra.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/content.ts-D_Y-Jt4b.js
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg
-https://miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785479/miya_bhai/dishes/nonveg-chicken-lollipop.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785481/miya_bhai/dishes/nonveg-chicken-wings.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/nonveg-chili-chicken.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/seafood-chili-prawns.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785491/miya_bhai/dishes/veg-paneer-65.jpg
-https://res.cloudinary.com/dnefyrllm/image/upload/v1758785494/miya_bhai/dishes/seafood-prawns-manchuria.jpg
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DftN9C2f.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-Bd1eSsOK.js
+https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://miya-bhai-webapp-v1.pages.dev/banners.json
 https://miya-bhai-webapp.onrender.com/api/menu
@@ -79,6 +236,9 @@ https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/b
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/dishes/chicken-tikka-masala.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/dishes/kadai-paneer.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/dishes/paneer-butter-masala.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/dishes/prawns-biryani.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/dishes/chicken-fry-piece-biryani.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/single-chicken-biryani.jpg
@@ -90,6 +250,11 @@ https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/e
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-single.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-full.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-fp.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-mini.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-half.jpg
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-chicken-juicy-3piece.jpg
@@ -159,82 +324,126 @@ https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://miya-bhai-webapp.onrender.com/api/coupons
 https://miya-bhai-webapp.onrender.com/api/settings/public
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://miya-bhai-webapp.onrender.com/api/orders
-https://miya-bhai-webapp.onrender.com/api/orders
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/settings/public
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://miya-bhai-webapp.onrender.com/api/user/profile
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg
+https://miya-bhai-webapp.onrender.com/api/coupons
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
+https://miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png
+https://miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png
+https://miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png
+https://miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png
+https://miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg
+https://miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785479/miya_bhai/dishes/nonveg-chicken-lollipop.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785481/miya_bhai/dishes/nonveg-chicken-wings.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/nonveg-chili-chicken.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/seafood-chili-prawns.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785491/miya_bhai/dishes/veg-paneer-65.jpg
+https://res.cloudinary.com/dnefyrllm/image/upload/v1758785494/miya_bhai/dishes/seafood-prawns-manchuria.jpg
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage4-8Y8oVtwn.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage5-DBGOGOXc.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage6-ByAw_F-e.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage4-8Y8oVtwn.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage5-DBGOGOXc.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage6-ByAw_F-e.png
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
 
 network fetch logs:
-fetch("https://miya-bhai-webapp-v1.pages.dev/", {
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png", {
   "headers": {
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "cache-control": "max-age=0",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
-    "priority": "u=0, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "if-none-match": "\"728f6532cb8ef7358500811467207028\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "document",
-    "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-user": "?1",
-    "upgrade-insecure-requests": "1"
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
   },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
   "body": null,
   "method": "GET",
   "mode": "cors",
   "credentials": "include"
 }); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
+fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
   "headers": {
     "accept": "application/json",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "content-type": "application/json",
+    "accept-profile": "public",
+    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "cross-site",
-    "sec-fetch-storage-access": "active"
+    "x-client-info": "supabase-js-web/2.74.0"
   },
   "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": "{\"items\":[{\"id\":\"seafood-apollo-fish\",\"name\":\"Apollo Fish\",\"price\":220,\"image\":\"https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg\",\"quantity\":1}],\"customer\":{\"name\":\"Tabrez Shaik\",\"phone\":\"9866962092\",\"email\":\"tabrez.ataher@gmail.com\"},\"totals\":{\"subtotal\":220,\"discount\":0,\"taxableAmount\":220,\"gst\":11,\"deliveryCharge\":0,\"total\":231},\"discount_amount\":0,\"payable_amount\":231,\"payment_method\":\"COD\",\"pincode\":\"507001\",\"delivery_address\":\"Hno: 11-7-63,khammam\",\"delivery_lat\":17.2521755,\"delivery_lng\":80.1464629,\"coupon_code\":null}",
-  "method": "POST",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/confirmation?orderId=43acfea9-634c-410d-a1ac-8d51cd95bca4",
   "body": null,
   "method": "GET",
   "mode": "cors",
@@ -244,700 +453,9 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-DzhhEkID.js", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"35d86724e2e11f0af86aee29077e052f\"",
-    "priority": "u=1",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "script",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-Bm4dr5_j.css", {
-  "headers": {
-    "accept": "text/css,*/*;q=0.1",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"397dcd24e8143a02911cbda91ed0e6ef\"",
-    "priority": "u=0",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "style",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://replit.com/public/js/replit-dev-banner.js", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BP20Y95P.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://fonts.googleapis.com/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://fonts.googleapis.com/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://fonts.googleapis.com/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://fonts.googleapis.com/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://fonts.googleapis.com/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-DtApmIaH.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-BNXd1yEL.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index-ljv-RBOm.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"58dafb5ad53e036978c49eef3c39c2fa\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"12ed9ca9896fe17bf18565d8bdf27953\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"80dd3da57d0dd3b219e17ff6e03d0698\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"c9fbfb4b45a02afba5e839b3a4e8f1c3\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"8defbf87d3b89e88e4628c16c22cba25\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"d4178a717b956e4e6d1c67e38c0bb663\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"8197ab5eed4fe954050d5a6784907836\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2.js-Dys2fie4.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/commonScrapper.js-CqNa2ukz.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/searchHTMLscrapper.js-DQMZVuLO.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/categoryScrapper.js-BIcr14bU.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/filterScrapper.js-Bv7kyKPD.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/spendCalculate.js-BYAVpPk-.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitor.js-Cmu4Xp9o.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitorGrafana.js-DahCi2Mw.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/wishlistScrapper.js-BsFUwQsD.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/couponCollection.js-Dx90621a.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/untrustedPriceComparison.js-DnlIJIE0.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/checkoutScrapper.js-eerzatx5.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/savedPricePopUp.js-C_-PCAea.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/ctUtils.js-WhLDDocR.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/counter.js-D17vkf9D.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index.ts-BA_uI1ra.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/content.ts-D_Y-Jt4b.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"6f595570721bfe6fb8ac289f587f5f94\"",
-    "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785479/miya_bhai/dishes/nonveg-chicken-lollipop.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785481/miya_bhai/dishes/nonveg-chicken-wings.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/nonveg-chili-chicken.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/seafood-chili-prawns.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785491/miya_bhai/dishes/veg-paneer-65.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785494/miya_bhai/dishes/seafood-prawns-manchuria.jpg", {
-  "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DftN9C2f.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-Bd1eSsOK.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -956,7 +474,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/banners.json", {
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "W/\"b9c1e46fed57fa19beb85ad5131509de\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
@@ -975,7 +493,7 @@ fetch("https://miya-bhai-webapp.onrender.com/api/menu", {
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "W/\"20e82-7TyhKj/B/SPe6XTqKIMJ9l8jPgw\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
@@ -995,7 +513,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/images/banners/biryani-gen-offer.pn
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"173612e9b2a368ff5287ae8335bc280f\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -1014,7 +532,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/images/banners/mandi-single-offer.p
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"a7a1c3a4b3f3ed7bc1ac24a2f0c93426\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -1033,7 +551,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/images/banners/tiffin-offer.png", {
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"2b45996ce3e2c15c1998bdeb0ed593c7\"",
     "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -1052,7 +570,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/images/banners/shawarma-offer.png",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"65118f051b4c960da69ca1b4f081ab5f\"",
     "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -1069,9 +587,9 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.pn
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -1086,7 +604,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.pn
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/butter-chicken.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1098,7 +616,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/dishes/chicken-tikka-masala.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1110,7 +628,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785446/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/dishes/kadai-paneer.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1122,7 +640,43 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785450/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/dishes/paneer-butter-masala.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1134,7 +688,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785457/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/dishes/prawns-biryani.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1146,7 +700,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785406/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/dishes/chicken-fry-piece-biryani.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1158,7 +712,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785520/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/single-chicken-biryani.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1170,7 +724,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/dishes/full-chicken-biryani.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1182,7 +736,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785533/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-biryani-fp.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1194,7 +748,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/dishes/chicken-jumbo-pack.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1206,7 +760,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785534/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/chicken-fry-piece-biryani-fp.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1218,7 +772,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/dishes/extra-biryani-rice-large.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1230,7 +784,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785535/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-single.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1242,7 +796,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1254,7 +808,67 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/dishes/mutton-biryani-fp.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1266,7 +880,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785536/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-mini.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1278,7 +892,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-chicken-juicy-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1290,7 +904,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-chicken-juicy-3piece.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1302,7 +916,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785522/miya_bhai/dishes/mandi-chicken-juicy-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1314,7 +928,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785522/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/dishes/mandi-broasted-mini.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1326,7 +940,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785523/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1338,7 +952,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-3piece.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1350,7 +964,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/dishes/mandi-broasted-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1362,7 +976,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785525/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785526/miya_bhai/dishes/mandi-tandoori-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1374,7 +988,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785526/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-tandoori-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1386,7 +1000,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-mutton-mini.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1398,7 +1012,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/dishes/mandi-mutton-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1410,7 +1024,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785527/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785528/miya_bhai/dishes/mandi-mutton-3piece.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1422,7 +1036,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785528/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1434,7 +1048,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-juice-mini.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1446,7 +1060,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/dishes/mandi-mutton-juice-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1458,7 +1072,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785529/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785530/miya_bhai/dishes/mandi-mutton-juice-3piece.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1470,7 +1084,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785530/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-mutton-juice-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1482,7 +1096,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-special-mutton-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1494,7 +1108,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-special-mutton-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1506,7 +1120,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/dishes/mandi-fish-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1518,7 +1132,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785531/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/dishes/mandi-fish-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1530,7 +1144,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/dishes/mandi-mix-4p.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1542,7 +1156,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785532/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/chicken-fried-rice.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1554,7 +1168,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785405/miya_bhai/dishes/chicken-noodles.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1566,7 +1180,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785405/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785407/miya_bhai/dishes/egg-fried-rice.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1578,7 +1192,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785407/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785408/miya_bhai/dishes/egg-noodles.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1590,7 +1204,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785408/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/dishes/veg-gobi-65.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1602,7 +1216,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785409/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785412/miya_bhai/dishes/veg-gobi-manchuria-dry.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1614,7 +1228,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785412/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785411/miya_bhai/dishes/paneer-fried-rice.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1626,7 +1240,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785411/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785413/miya_bhai/dishes/veg-fried-rice.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1638,7 +1252,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785413/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785419/miya_bhai/dishes/bbq-paneer-pizza.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1650,7 +1264,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785419/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785421/miya_bhai/dishes/chicken-cheese-burger.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1662,7 +1276,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785421/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785422/miya_bhai/dishes/chicken-pizza.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1674,7 +1288,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785422/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785424/miya_bhai/dishes/grilled-paneer-sandwich.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1686,7 +1300,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785424/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785423/miya_bhai/dishes/margherita-pizza.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1698,7 +1312,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785423/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785427/miya_bhai/dishes/paneer-cheese-burger.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1710,7 +1324,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785427/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/dishes/tandoori-achari-chicken-tikka-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1722,7 +1336,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/dishes/tandoori-achari-chicken-tikka-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1734,7 +1348,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785430/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785433/miya_bhai/dishes/chicken-tikka-boneless-6pc.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1746,7 +1360,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785433/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785434/miya_bhai/dishes/tandoori-chicken-tikka-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1758,7 +1372,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785434/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785432/miya_bhai/dishes/tandoori-chicken-tikka-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1770,7 +1384,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785432/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785435/miya_bhai/dishes/tandoori-malai-kebab-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1782,7 +1396,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785435/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785439/miya_bhai/dishes/tandoori-malai-kebab-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1794,7 +1408,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785439/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/reshmi-kebab.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1806,7 +1420,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785437/miya_bhai/dishes/tandoori-reshmi-kebab-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1818,7 +1432,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785437/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785438/miya_bhai/dishes/tandoori-reshmi-kebab-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1830,7 +1444,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785438/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tandoori-chicken-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1842,7 +1456,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/dishes/tandoori-tandoori-chicken-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1854,7 +1468,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785440/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tangdi-kebab-full.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1866,7 +1480,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/dishes/tandoori-tangdi-kebab-half.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1878,7 +1492,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785441/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785460/miya_bhai/dishes/ankapur-naatu-kodi-pulusu.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1890,7 +1504,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785460/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785461/miya_bhai/dishes/bagara-rice-with-naatu-kodi.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1902,7 +1516,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785461/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785459/miya_bhai/dishes/bagara-rice-with-talakayi-curry.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1914,7 +1528,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785459/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785466/miya_bhai/dishes/nellore-vari-chepala-pulusu.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1926,7 +1540,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785466/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785470/miya_bhai/dishes/rice-with-egg-curry-sambar.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1938,7 +1552,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785470/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/paneer-shawarma.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1950,7 +1564,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/dishes/regular-chicken-shawarma.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1962,7 +1576,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785474/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785472/miya_bhai/dishes/special-chicken-shawarma.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1974,7 +1588,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785472/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785498/miya_bhai/dishes/idli.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1986,7 +1600,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785498/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785500/miya_bhai/dishes/masala-dosa.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -1998,7 +1612,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785500/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785501/miya_bhai/dishes/onion-dosa.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -2010,7 +1624,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785501/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/dishes/rava-dosa.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -2022,7 +1636,7 @@ fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/d
 }); ;
 fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785517/miya_bhai/dishes/vada.jpg", {
   "headers": {
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\""
   },
@@ -2038,7 +1652,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/assets/placeholder-menu-item-D6APIJ
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"3c5be3f6c53f261b6fece732d2ddaf90\"",
     "priority": "i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -2055,9 +1669,9 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -2076,7 +1690,7 @@ fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "W/\"479-DdmB7CD6z5AqlwcXEFdlc+7aC4o\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
@@ -2096,7 +1710,7 @@ fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
@@ -2114,9 +1728,9 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
@@ -2129,7 +1743,67 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "mode": "cors",
   "credentials": "include"
 }); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
   "headers": {
     "accept": "*/*",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
@@ -2144,13 +1818,13 @@ fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
   "mode": "cors",
   "credentials": "omit"
 }); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
   "headers": {
     "accept": "application/json",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "content-type": "application/json",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
@@ -2159,8 +1833,385 @@ fetch("https://miya-bhai-webapp.onrender.com/api/orders", {
     "sec-fetch-storage-access": "active"
   },
   "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": "{\"items\":[{\"id\":\"nonveg-chicken-65\",\"name\":\"Chicken 65\",\"price\":220,\"image\":\"https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg\",\"quantity\":1}],\"customer\":{\"name\":\"Tabrez Shaik\",\"phone\":\"9866962092\",\"email\":\"tabrez.ataher@gmail.com\"},\"totals\":{\"subtotal\":220,\"discount\":0,\"taxableAmount\":220,\"gst\":11,\"deliveryCharge\":0,\"total\":231},\"discount_amount\":0,\"payable_amount\":231,\"payment_method\":\"COD\",\"pincode\":\"507001\",\"delivery_address\":\"Hno: 11-7-63,khammam\",\"delivery_lat\":17.2521753,\"delivery_lng\":80.1464637,\"coupon_code\":null}",
-  "method": "POST",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "OPTIONS",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "OPTIONS",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/settings/public", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"77-qTi1yRLoJBYUrcMbphggljG/7Ho\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNzgxOTc1LCJpYXQiOjE3NjA3NzgzNzUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYwNjg3ODA0fV0sInNlc3Npb25faWQiOiIyYzg0MWM4YS1hNmEyLTQ1NDAtYjExZC03OTQ2ZTMwYzM0YWYiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.ZoSTq1cDb9ajCNZXkYNmlyRucZWVnofO2jqd5juGB0M",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/profile", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "OPTIONS",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785476/miya_bhai/dishes/nonveg-chicken-65.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"479-DdmB7CD6z5AqlwcXEFdlc+7aC4o\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
   "mode": "cors",
   "credentials": "omit"
 }); ;
@@ -2168,16 +2219,149 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
     "sec-fetch-mode": "no-cors",
     "sec-fetch-site": "same-origin"
   },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/confirmation?orderId=8f3c0697-b054-4639-b068-0abaa3a00997",
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/cart",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"58dafb5ad53e036978c49eef3c39c2fa\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"12ed9ca9896fe17bf18565d8bdf27953\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"80dd3da57d0dd3b219e17ff6e03d0698\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"c9fbfb4b45a02afba5e839b3a4e8f1c3\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8defbf87d3b89e88e4628c16c22cba25\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"d4178a717b956e4e6d1c67e38c0bb663\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
   "body": null,
   "method": "GET",
   "mode": "cors",
@@ -2187,9 +2371,531 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"9f5adbfbee1ae49f9e6dcf2ed295c027\"",
+    "if-none-match": "W/\"cbed49ddeb309a71de0812ca107a25e0\"",
     "priority": "u=1, i",
-    "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8197ab5eed4fe954050d5a6784907836\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785392/miya_bhai/dishes/milkshake-kitkat.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"6f595570721bfe6fb8ac289f587f5f94\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pineapple.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/juice-pomegranate.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785397/miya_bhai/dishes/milkshake-strawberry.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785399/miya_bhai/dishes/juice-watermelon.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785403/miya_bhai/dishes/extra-one-chicken-piece.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785404/miya_bhai/dishes/fish-biryani.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785401/miya_bhai/dishes/paneer-biryani.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785479/miya_bhai/dishes/nonveg-chicken-lollipop.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785481/miya_bhai/dishes/nonveg-chicken-wings.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/nonveg-chili-chicken.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785483/miya_bhai/dishes/seafood-chili-prawns.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785491/miya_bhai/dishes/veg-paneer-65.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://res.cloudinary.com/dnefyrllm/image/upload/v1758785494/miya_bhai/dishes/seafood-prawns-manchuria.jpg", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"728f6532cb8ef7358500811467207028\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"ba80e8935f0878fc40f6dfba59fe6726\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage4-8Y8oVtwn.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"68c239bda759d0f8e78fc55e42cfff48\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage5-DBGOGOXc.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"cb0f6735294458857ac28c09032e64a4\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage6-ByAw_F-e.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"a76af884274935d4bbcdca3dc3ebec88\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"728f6532cb8ef7358500811467207028\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"ba80e8935f0878fc40f6dfba59fe6726\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage4-8Y8oVtwn.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"68c239bda759d0f8e78fc55e42cfff48\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage5-DBGOGOXc.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"cb0f6735294458857ac28c09032e64a4\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage6-ByAw_F-e.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"a76af884274935d4bbcdca3dc3ebec88\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"728f6532cb8ef7358500811467207028\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"ba80e8935f0878fc40f6dfba59fe6726\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage4-8Y8oVtwn.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"68c239bda759d0f8e78fc55e42cfff48\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage5-DBGOGOXc.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"cb0f6735294458857ac28c09032e64a4\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "image",
