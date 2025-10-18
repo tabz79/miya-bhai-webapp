@@ -135,18 +135,25 @@ export function Checkout() {
   const handlePlaceOrder = async () => {
     if (!validateForm()) return;
 
-    // If user is logged in, save their address for next time
+    // If user is logged in, save their details for next time
     if (user) {
-      try {
-        await api.updateUserProfileAddress({ 
-          line1: address, 
-          postal_code: pincode, 
+      // We can make these calls in parallel and not block the order
+      Promise.allSettled([
+        api.updateUserProfile({ 
+          full_name: customer.name, 
           phone: customer.phone 
+        }),
+        api.updateUserProfileAddress({ 
+          line1: address, 
+          postal_code: pincode 
+        })
+      ]).then(results => {
+        results.forEach(result => {
+          if (result.status === 'rejected') {
+            console.warn('Failed to save user details:', result.reason);
+          }
         });
-      } catch (err) {
-        console.warn('Could not save user address:', err);
-        // Non-fatal, so we continue with order placement
-      }
+      });
     }
 
     const rawCoupon = (typeof cartCoupon === 'string' && cartCoupon)

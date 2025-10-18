@@ -46,32 +46,60 @@ export async function getUserProfile(userId) {
 
 /**
  * Updates or creates a user's address.
- * This function performs an "upsert":
- * - If an address ID is provided, it updates that address.
- * - If no ID is provided, it creates a new address and marks it as default.
+ * This function performs an "upsert" on the addresses table.
  * @param {string} userId - The UUID of the user.
- * @param {object} addressData - The address data to save.
+ * @param {object} addressData - The address data to save (e.g., line1, postal_code).
  * @returns {Promise<object>}
  */
 export async function upsertUserAddress(userId, addressData) {
-  const { id, ...data } = addressData;
-  
+  // Ensure only expected fields are sent to the addresses table
+  const { line1, line2, city, state, postal_code, country } = addressData;
   const payload = {
     user_id: userId,
-    ...data,
+    line1,
+    line2,
+    city,
+    state,
+    postal_code,
+    country,
   };
 
-  // If there's no ID, we assume it's a new address.
-  // We could also add logic to check for existing addresses to avoid duplicates.
-  const { data: result, error } = await supabase
-    .from('addresses')
-    .upsert(payload)
-    .select()
-    .single();
+  // Use a specific ID if provided, otherwise upsert will match on user_id
+  const query = addressData.id
+    ? supabase.from('addresses').update(payload).eq('id', addressData.id)
+    : supabase.from('addresses').upsert(payload, { onConflict: 'user_id' });
+
+  const { data: result, error } = await query.select().single();
 
   if (error) {
     console.error('[userService.upsertUserAddress] Error:', error);
     throw new Error('Could not save user address.');
+  }
+
+  return result;
+}
+
+/**
+ * Updates a user's profile information (e.g., name, phone).
+ * @param {string} userId - The UUID of the user.
+ * @param {object} profileData - The profile data to update.
+ * @returns {Promise<object>}
+ */
+export async function updateUserProfile(userId, profileData) {
+  // Ensure only expected fields are sent to the profiles table
+  const { full_name, phone } = profileData;
+  const payload = { full_name, phone };
+
+  const { data: result, error } = await supabase
+    .from('profiles')
+    .update(payload)
+    .eq('id', userId)
+    .select()
+    .single();
+
+  if (error) {
+    console.error('[userService.updateUserProfile] Error:', error);
+    throw new Error('Could not update user profile.');
   }
 
   return result;

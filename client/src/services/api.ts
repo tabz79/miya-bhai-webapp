@@ -111,6 +111,14 @@ export const api = {
     return await safeFetch('/api/user/profile', { method: 'GET' }, true);
   },
 
+  // Update user profile (authenticated)
+  async updateUserProfile(profileData: AnyObj) {
+    return await safeFetch('/api/user/profile', {
+      method: 'PUT',
+      body: JSON.stringify(profileData),
+    }, true);
+  },
+
   // Update user address (authenticated)
   async updateUserProfileAddress(addressData: AnyObj) {
     return await safeFetch('/api/user/profile/address', {
