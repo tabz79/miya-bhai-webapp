@@ -64,12 +64,11 @@ export async function upsertUserAddress(userId, addressData) {
     country,
   };
 
-  // Use a specific ID if provided, otherwise upsert will match on user_id
-  const query = addressData.id
-    ? supabase.from('addresses').update(payload).eq('id', addressData.id)
-    : supabase.from('addresses').upsert(payload, { onConflict: 'user_id' });
-
-  const { data: result, error } = await query.select().single();
+  const { data: result, error } = await supabase
+    .from('addresses')
+    .insert(payload)
+    .select()
+    .single();
 
   if (error) {
     console.error('[userService.upsertUserAddress] Error:', error);

@@ -1,7 +1,7 @@
 // src/routes/user.js
 import express from 'express';
 import requireAuth from '../middleware/requireAuth.js';
-import { getUserProfile, upsertUserAddress } from '../services/userService.js';
+import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
 
 const router = express.Router();
 
