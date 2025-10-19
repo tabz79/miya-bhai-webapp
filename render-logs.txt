@@ -1,0 +1,334 @@
+==> Running 'npm start'
+> rest-express@1.0.0 start
+> cd src && node server.js
+[admin routes] loaded
+[auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.2.3] injecting env (22) from ../.env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+[env] Loaded env from /opt/render/project/src/.env
+[env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+[env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+[server] trust proxy: 1
+[CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+Initializing menu service with CANONICAL data.
+Menu loaded. Source: canonical, Items: 289
+Server running → http://localhost:10000
+NODE_ENV: production
+[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+[2025-10-19T05:22:40.640Z] Request ID: 9ec805ac-4001-4d69-af19-ec62475bbd39, Path: HEAD /api/menu
+[2025-10-19T05:22:40.640Z] HEAD /api/menu
+[2025-10-19T05:22:40.649Z] Request ID: 48ba3cba-c9b9-4563-8599-7b6020aac6a2, Path: HEAD /api/menu
+[2025-10-19T05:22:40.650Z] HEAD /api/menu
+[2025-10-19T05:22:40.714Z] Request ID: 1b56d570-6c81-45c7-b909-0d69e05f6954, Path: HEAD /api/menu
+[2025-10-19T05:22:40.714Z] HEAD /api/menu
+[2025-10-19T05:22:40.717Z] Request ID: a577b25e-a1c7-423d-bfc5-07eeffa44e88, Path: HEAD /api/menu
+[2025-10-19T05:22:40.717Z] HEAD /api/menu
+[2025-10-19T05:22:40.719Z] Request ID: 24809d5b-38e5-4899-9f53-6fd9b769c19c, Path: HEAD /api/menu
+[2025-10-19T05:22:40.719Z] HEAD /api/menu
+[2025-10-19T05:22:40.770Z] Request ID: 6ba1d01a-5e0c-409a-8adb-ed7f372fc469, Path: HEAD /api/menu
+[2025-10-19T05:22:40.771Z] HEAD /api/menu
+[2025-10-19T05:22:40.793Z] Request ID: ffa3e097-ad3c-4694-8ec9-46a91e29c15f, Path: HEAD /api/menu
+[2025-10-19T05:22:40.793Z] HEAD /api/menu
+[2025-10-19T05:22:40.904Z] Request ID: ee0ecdfe-d843-476e-98ae-c40cfc28648b, Path: HEAD /api/menu
+[2025-10-19T05:22:40.904Z] HEAD /api/menu
+[2025-10-19T05:22:40.908Z] Request ID: a124a469-ff8c-4997-a2cc-c14e78d2320a, Path: HEAD /api/menu
+[2025-10-19T05:22:40.908Z] HEAD /api/menu
+[2025-10-19T05:22:40.939Z] Request ID: 026bd3d9-3c25-48f4-abb9-745ccfd89dbc, Path: HEAD /api/menu
+[2025-10-19T05:22:40.939Z] HEAD /api/menu
+[2025-10-19T05:22:41.074Z] Request ID: 88c037cc-fd1d-48b7-bc30-d15a4e14b905, Path: HEAD /api/menu
+[2025-10-19T05:22:41.074Z] HEAD /api/menu
+[2025-10-19T05:22:41.772Z] Request ID: e0c41b77-8dc2-4296-9500-853344b0aaa6, Path: HEAD /api/menu
+[2025-10-19T05:22:41.773Z] HEAD /api/menu
+[2025-10-19T05:22:42.081Z] Request ID: 3fe2a189-8f11-43e1-ac78-a99b9b1ee88b, Path: GET /api/menu
+[2025-10-19T05:22:42.081Z] GET /api/menu
+[2025-10-19T05:23:41.356Z] Request ID: 3e73a11e-3424-4dc4-a37d-1e32031a42fe, Path: GET /api/menu
+[2025-10-19T05:23:41.356Z] GET /api/menu
+[2025-10-19T05:23:46.563Z] Request ID: d3e62fbc-f619-4e36-a1f9-e8f17a7070b0, Path: GET /api/coupons
+[2025-10-19T05:23:46.563Z] GET /api/coupons
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:48.705Z] Request ID: fc321c0d-ceaa-4d98-b45b-b592ccd17391, Path: OPTIONS /api/user/profile
+[2025-10-19T05:23:48.705Z] OPTIONS /api/user/profile
+[2025-10-19T05:23:48.706Z] Request ID: 3a99594b-50ff-4a75-92d4-3d6e298f36d5, Path: OPTIONS /api/user/profile
+[2025-10-19T05:23:48.706Z] OPTIONS /api/user/profile
+[2025-10-19T05:23:48.736Z] Request ID: 9e6dff0a-2d37-4862-ac49-b6bb58f06af1, Path: GET /api/settings/public
+[2025-10-19T05:23:48.737Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:49.057Z] Request ID: 1ea4fd0b-5d5a-432b-9073-80cdb966fa10, Path: GET /api/user/profile
+[2025-10-19T05:23:49.057Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:49.624Z] Request ID: 15bf5f83-01fa-4418-bb1c-2325dfc7414f, Path: GET /api/settings/public
+[2025-10-19T05:23:49.624Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:50.355Z] Request ID: 68060951-1abb-477d-9733-4173a20452d1, Path: GET /api/settings/public
+[2025-10-19T05:23:50.355Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:51.524Z] Request ID: 0af69d1e-f97e-4f76-8d00-1035261094df, Path: GET /api/settings/public
+[2025-10-19T05:23:51.524Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:51.827Z] Request ID: 1e497f3d-cbe0-41b9-8c9b-25ce6ff67779, Path: GET /api/user/profile
+[2025-10-19T05:23:51.827Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:52.157Z] Request ID: 11d442c0-f683-4397-80c4-66d0da5699d0, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:52.157Z] GET /api/settings/public
+[2025-10-19T05:23:52.803Z] Request ID: 6624421f-648a-414c-9ce3-41d7f5510136, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:52.803Z] GET /api/settings/public
+[2025-10-19T05:23:53.504Z] Request ID: a011a181-ef23-40cd-b805-c0240a2c29ba, Path: GET /api/settings/public
+[2025-10-19T05:23:53.504Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:53.551Z] Request ID: 2afbcbe1-55bc-4621-ad14-73701dfc3b24, Path: GET /api/user/profile
+[2025-10-19T05:23:53.551Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:54.104Z] Request ID: 9b33ea28-155d-4bc8-b920-27104e3f7b9c, Path: GET /api/settings/public
+[2025-10-19T05:23:54.105Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:54.180Z] Request ID: 6e644024-ca4c-4f52-8c59-71f6510f4e76, Path: OPTIONS /api/user/profile
+[2025-10-19T05:23:54.180Z] OPTIONS /api/user/profile
+[2025-10-19T05:23:54.725Z] Request ID: a1add8ed-951e-4799-9766-60db4cb22462, Path: GET /api/settings/public
+[2025-10-19T05:23:54.726Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:54.807Z] Request ID: 89bb209a-b693-4892-a0ab-5cead08534b9, Path: GET /api/user/profile
+[2025-10-19T05:23:54.807Z] GET /api/user/profile
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:55.389Z] Request ID: d4d56cd8-42a6-4669-99e7-4ccb239f0603, Path: GET /api/settings/public
+[2025-10-19T05:23:55.389Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:56.017Z] Request ID: 82c63df1-c9d0-4cdc-8b27-00651adc4ae7, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:56.017Z] GET /api/settings/public
+[2025-10-19T05:23:56.157Z] Request ID: 6ca3a44d-4e0f-4e79-90f5-8dd406ddbf31, Path: GET /api/user/profile
+[2025-10-19T05:23:56.157Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:56.648Z] Request ID: 754446e3-708a-46c4-8225-112b6263f768, Path: GET /api/settings/public
+[2025-10-19T05:23:56.648Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:57.318Z] Request ID: 81de7eae-6189-4714-805f-8a9d41991cb3, Path: GET /api/settings/public
+[2025-10-19T05:23:57.318Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:57.353Z] Request ID: 753902fa-6735-4d0b-b938-e62dff05c349, Path: GET /api/user/profile
+[2025-10-19T05:23:57.353Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:23:58.071Z] Request ID: fab9bd6d-8fbf-4c3b-96a9-baddca5dc66b, Path: GET /api/settings/public
+[2025-10-19T05:23:58.072Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:58.530Z] Request ID: c489e545-c2aa-4b1c-958a-3a0702ac845d, Path: GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:58.530Z] GET /api/user/profile
+[2025-10-19T05:23:58.710Z] Request ID: bc4186b9-6819-4289-823d-8c71ac3c678a, Path: GET /api/settings/public
+[2025-10-19T05:23:58.710Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:59.287Z] Request ID: 70876143-7855-4bf9-b691-8aeca0b03a7f, Path: GET /api/settings/public
+[2025-10-19T05:23:59.287Z] GET /api/settings/public
+[2025-10-19T05:23:59.709Z] Request ID: 0832c381-625b-4ac7-abf9-e556a9a960d5, Path: GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:59.709Z] GET /api/user/profile
+[2025-10-19T05:23:59.857Z] Request ID: de376c59-18cc-4ebd-b053-9f4af9123db4, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:23:59.857Z] GET /api/settings/public
+[2025-10-19T05:23:59.968Z] Request ID: 9c5f8576-96ac-4dce-9ad5-d4154f754637, Path: OPTIONS /api/user/profile
+[2025-10-19T05:23:59.968Z] OPTIONS /api/user/profile
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:00.465Z] Request ID: 206638cf-be86-4662-8c59-ab790872013e, Path: GET /api/settings/public
+[2025-10-19T05:24:00.465Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:00.613Z] Request ID: fcf7c900-ee79-4747-ad7a-51ec1d781325, Path: OPTIONS /api/user/profile
+[2025-10-19T05:24:00.613Z] OPTIONS /api/user/profile
+[2025-10-19T05:24:00.669Z] Request ID: 0d097625-659c-4a74-8cb8-19616672e73a, Path: OPTIONS /api/orders
+[2025-10-19T05:24:00.669Z] OPTIONS /api/orders
+[2025-10-19T05:24:00.711Z] Request ID: 72162c38-2ae1-401e-b26c-b19ba89b4c54, Path: OPTIONS /api/user/profile/address
+[2025-10-19T05:24:00.711Z] OPTIONS /api/user/profile/address
+[2025-10-19T05:24:00.950Z] Request ID: 83b150c4-828e-4f2a-a92a-f3e888dbfe6d, Path: GET /api/user/profile
+[2025-10-19T05:24:00.950Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:01.157Z] Request ID: 1e1151f9-808a-41cf-b207-fc3771877223, Path: POST /api/orders
+[2025-10-19T05:24:01.157Z] POST /api/orders
+[orders.create] Normalized incoming payload: {"items":[{"id":"seafood-apollo-fish","name":"Apollo Fish","price":220,"image":"https://res.cloudinary.com/dnefyrllm/image/upload/v1758784492/miya_bhai/dishes/seafood-apollo-fish.jpg","quantity":1}],"customer":{"name":"Tabrez Shaik","phone":"09866962092","email":"tabrez.ataher@gmail.com"},"totals":{"subtotal":220,"discount":0,"taxableAmount":220,"gst":11,"deliveryCharge":0,"total":231},"discount_amount":0,"payable_amount":231,"payment_method":"COD","pincode":"507001","delivery_address":"Hno: 11-7-63,khammam","delivery_lat":17.2522029,"delivery_lng":80.1464281,"coupon_code":null}
+[2025-10-19T05:24:01.159Z] Request ID: e1612c2d-d17f-4b27-91b6-88f3c140bfa5, Path: PUT /api/user/profile/address
+[2025-10-19T05:24:01.159Z] PUT /api/user/profile/address
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:01.162Z] Request ID: d05db13a-a123-4c72-bf1a-3d01efd6527c, Path: GET /api/settings/public
+[2025-10-19T05:24:01.162Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:01.786Z] Request ID: 4360cd39-1809-48bc-9e27-938a97905af2, Path: GET /api/settings/public
+[2025-10-19T05:24:01.786Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:02.164Z] Request ID: 58f2d808-d86b-4d4f-8770-3ec93257814e, Path: GET /api/user/profile
+[2025-10-19T05:24:02.164Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[userService.upsertUserAddress] Error: {
+  code: '23503',
+  details: 'Key (user_id)=(a05c6e64-d220-43df-bf78-ed3ae02e0e4b) is not present in table "users".',
+  hint: null,
+  message: 'insert or update on table "addresses" violates foreign key constraint "addresses_user_id_fkey"'
+}
+[PUT /api/user/profile/address] Error for user a05c6e64-d220-43df-bf78-ed3ae02e0e4b: Error: Could not save user address.
+    at upsertUserAddress (file:///opt/render/project/src/src/services/userService.js:75:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/src/routes/user.js:55:26
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:02.891Z] Request ID: 51fb69e0-dd18-46f1-8c41-0fa1ba6e6dcb, Path: GET /api/settings/public
+[2025-10-19T05:24:02.891Z] GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:03.302Z] Request ID: 29402b8f-8f4a-47d4-9295-8999dd0a25ed, Path: GET /api/user/profile
+[2025-10-19T05:24:03.302Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:03.484Z] Request ID: 3d2aec72-a3f6-4d99-b8b5-af1b8f55c42e, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:03.484Z] GET /api/settings/public
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:04.061Z] Request ID: d8eb3012-2e81-4a00-a1ae-bba3303522be, Path: GET /api/settings/public
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:04.061Z] GET /api/settings/public
+[2025-10-19T05:24:04.538Z] Request ID: 9a033687-6cb3-40a5-9f59-6e1dd9814db5, Path: GET /api/user/profile
+[2025-10-19T05:24:04.538Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:05.711Z] Request ID: aa1ae365-92e4-4694-ba82-3a12783bf32c, Path: GET /api/user/profile
+[2025-10-19T05:24:05.711Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:06.962Z] Request ID: d2da627d-1827-4633-a792-f4b6d4417634, Path: GET /api/user/profile
+[2025-10-19T05:24:06.962Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:08.139Z] Request ID: 719bf52c-52b3-4070-b085-1e573457f3e2, Path: GET /api/user/profile
+[2025-10-19T05:24:08.139Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:09.333Z] Request ID: 17b1300e-57a3-4e49-bb65-d758f60928d2, Path: GET /api/user/profile
+[2025-10-19T05:24:09.333Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:10.562Z] Request ID: e99dc072-496b-43d0-8332-c4e4501ea7a0, Path: GET /api/user/profile
+[2025-10-19T05:24:10.563Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:11.765Z] Request ID: 3c8499e9-6bfd-44c2-bae1-9824bd78fd53, Path: GET /api/user/profile
+[2025-10-19T05:24:11.765Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:12.965Z] Request ID: 887cd1b0-603b-4750-8106-cb94d9577c62, Path: GET /api/user/profile
+[2025-10-19T05:24:12.965Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:14.158Z] Request ID: 394be5da-7390-44bd-8dc3-3c8a1018f80f, Path: PUT /api/user/profile
+[2025-10-19T05:24:14.158Z] PUT /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[userService.updateUserProfile] Error: {
+  code: 'PGRST116',
+  details: 'The result contains 0 rows',
+  hint: null,
+  message: 'Cannot coerce the result to a single JSON object'
+}
+[PUT /api/user/profile] Error for user a05c6e64-d220-43df-bf78-ed3ae02e0e4b: Error: Could not update user profile.
+    at updateUserProfile (file:///opt/render/project/src/src/services/userService.js:101:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/src/routes/user.js:34:26
+[2025-10-19T05:24:15.032Z] Request ID: 301d8147-542d-4a34-9b77-325b8e505101, Path: GET /api/user/profile
+[2025-10-19T05:24:15.032Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:24:16.671Z] Request ID: bf8e033e-2ae4-45aa-8955-42c385a51bd0, Path: GET /api/user/profile
+[2025-10-19T05:24:16.671Z] GET /api/user/profile
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[2025-10-19T05:24:17.841Z] Request ID: b863bfb8-cf63-45c3-8a00-18f8f4fe6a7f, Path: GET /api/user/profile
+[2025-10-19T05:24:17.841Z] GET /api/user/profile
+[requireAuth] Authenticated via Supabase token: {
+  id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+  email: 'tabrez.ataher@gmail.com'
+}
+[2025-10-19T05:31:35.866Z] Request ID: 77e13be8-a145-42f9-83de-12827200390e, Path: OPTIONS /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:35.866Z] OPTIONS /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:35.871Z] Request ID: 3d4ca204-f57c-4fa4-a6e5-1ed66b0c49c6, Path: OPTIONS /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:35.871Z] OPTIONS /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:36.171Z] Request ID: d4ae6a5b-4b71-41e3-bccb-702a28760a8d, Path: GET /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:36.172Z] GET /api/admin/orders?page=1&limit=10
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[admin/orders] route hit { query: { page: '1', limit: '10' } }
+[2025-10-19T05:31:37.121Z] Request ID: a4d34a22-9f5c-4223-a71a-da32f5f6d195, Path: GET /api/admin/orders?page=1&limit=10
+[2025-10-19T05:31:37.121Z] GET /api/admin/orders?page=1&limit=10
+WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+[admin/orders] route hit { query: { page: '1', limit: '10' } }
