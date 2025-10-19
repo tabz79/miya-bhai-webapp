@@ -87,12 +87,11 @@ export async function upsertUserAddress(userId, addressData) {
 export async function updateUserProfile(userId, profileData) {
   // Ensure only expected fields are sent to the profiles table
   const { full_name, phone } = profileData;
-  const payload = { full_name, phone };
+  const payload = { id: userId, full_name, phone };
 
   const { data: result, error } = await supabase
     .from('profiles')
-    .update(payload)
-    .eq('id', userId)
+    .upsert(payload)
     .select()
     .single();
 
