@@ -18,11 +18,21 @@ export default async function ensureProfileExists(supabase, userId, details = {}
   }
 
   try {
-    // 1. Check if a profile already exists
+    // 1. Ensure a record exists in public.users to satisfy foreign keys
+    const { error: userError } = await supabase
+      .from('users')
+      .upsert({ id: userId }, { onConflict: 'id' });
+
+    if (userError) {
+      console.error('[ensureProfileExists] Error upserting to public.users:', userError);
+      return { ok: false, profile: null, error: userError };
+    }
+
+    // 2. Check if a profile already exists
     const { data: existingProfile, error: selectError } = await supabase
       .from('profiles')
-      .select('*')
-      .eq('user_id', userId)
+      .select('id')
+      .eq('id', userId)
       .maybeSingle();
 
     if (selectError) {
@@ -30,17 +40,17 @@ export default async function ensureProfileExists(supabase, userId, details = {}
       return { ok: false, profile: null, error: selectError };
     }
 
-    // 2. If profile exists, return it
+    // 3. If profile exists, we're done
     if (existingProfile) {
       return { ok: true, profile: existingProfile, error: null };
     }
 
-    // 3. If no profile, create one
+    // 4. If no profile, create one
     console.log(`[ensureProfileExists] No profile found for user ${userId}. Creating one.`);
     const { data: newProfile, error: insertError } = await supabase
       .from('profiles')
       .insert({
-        user_id: userId,
+        id: userId,
         email: details.email || null,
         full_name: details.name || null,
       })

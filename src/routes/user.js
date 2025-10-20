@@ -2,8 +2,21 @@
 import express from 'express';
 import requireAuth from '../middleware/requireAuth.js';
 import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
+import ensureProfileExists from '../lib/ensureProfileExists.js';
+import { supabase } from '../lib/supabaseClient.js';
 
 const router = express.Router();
+
+// Middleware to ensure profile exists for all state-changing routes
+const checkProfile = async (req, res, next) => {
+  if (!req.user) return next(); // Should be blocked by requireAuth, but as a safeguard
+  const { id, email, user_metadata } = req.user;
+  const { ok, error } = await ensureProfileExists(supabase, id, { email, name: user_metadata.full_name });
+  if (!ok) {
+    return res.status(500).json({ error: 'Failed to ensure user profile exists.', details: error });
+  }
+  next();
+};
 
 // All routes in this file require authentication
 router.use(requireAuth);
@@ -27,7 +40,7 @@ router.get('/profile', async (req, res) => {
  * PUT /api/user/profile
  * Updates the logged-in user's profile data (name, phone).
  */
-router.put('/profile', async (req, res) => {
+router.put('/profile', checkProfile, async (req, res) => {
   try {
     const userId = req.user.id;
     const profileData = req.body;
@@ -43,7 +56,7 @@ router.put('/profile', async (req, res) => {
  * PUT /api/user/profile/address
  * Creates or updates the logged-in user's address.
  */
-router.put('/profile/address', async (req, res) => {
+router.put('/profile/address', checkProfile, async (req, res) => {
   try {
     const userId = req.user.id;
     const addressData = req.body;
