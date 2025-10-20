@@ -21,7 +21,7 @@ export default async function ensureProfileExists(supabase, userId, details = {}
     // 1. Ensure a record exists in public.users to satisfy foreign keys
     const { error: userError } = await supabase
       .from('users')
-      .upsert({ id: userId }, { onConflict: 'id' });
+      .upsert({ id: userId, email: details.email }, { onConflict: 'id' });
 
     if (userError) {
       console.error('[ensureProfileExists] Error upserting to public.users:', userError);
