@@ -85,6 +85,7 @@ export async function upsertUserAddress(userId, addressData) {
  * @returns {Promise<object>}
  */
 export async function updateUserProfile(userId, profileData) {
+  console.log('[userService] Attempting to upsert user profile...');
   // Ensure only expected fields are sent to the profiles table
   const { full_name, phone } = profileData;
   const payload = { id: userId, full_name, phone };
