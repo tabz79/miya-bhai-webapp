@@ -9,7 +9,7 @@
     "dev:client": "vite",
     "start": "cd src && node server.js",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
-    "build": "vite build",
+    "build": "echo \"VITE_API_BASE_URL is: $VITE_API_BASE_URL\" && vite build",
     "check": "tsc",
     "db:push": "drizzle-kit push",
     "build:menu": "node client/scripts/build-menu.cjs",
