@@ -1,7 +1,6 @@
 // client/src/pages/AuthCallback.tsx
 
-// CAPTURE HASH AT MODULE LOAD TIME - this is the key to winning the race condition
-const initialHash = window.location.hash;
+
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -29,10 +28,11 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const handleAuthCallback = async () => {
-      L("Component mounted. Checking for pre-captured auth hash...");
+      L("Component mounted. Checking for auth hash...");
+      const hash = window.location.hash;
 
-      if (!initialHash || !initialHash.includes("access_token")) {
-        L("No auth hash was captured when the module loaded.");
+      if (!hash || !hash.includes("access_token")) {
+        L("No auth hash found in the current URL.");
         navigate("/auth/invalid-link");
         return;
       }
@@ -40,7 +40,7 @@ export default function AuthCallback() {
       L("Auth hash found. Processing with URLSearchParams...");
 
       try {
-        const params = new URLSearchParams(initialHash.substring(1));
+        const params = new URLSearchParams(hash.substring(1));
         const accessToken = params.get('access_token');
         const refreshToken = params.get('refresh_token');
 
