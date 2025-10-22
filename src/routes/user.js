@@ -1,6 +1,13 @@
 import express from 'express';
 import requireAuth from '../middleware/requireAuth.js';
-import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
+import {
+  getUserProfile,
+  upsertUserAddress,
+  updateUserProfile,
+} from '../services/userService.js';
+import { getOrdersByUserEmail } from '../services/orderService.js';
+import ensureProfileExists from '../lib/ensureProfileExists.js';
+import { supabase } from '../lib/supabaseClient.js';
 
 const router = express.Router();
 
