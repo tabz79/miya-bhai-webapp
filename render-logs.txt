@@ -1,66 +1,50 @@
-2025-10-22T07:21:15.085412626Z ==> Deploying...
-2025-10-22T07:21:52.101976477Z ==> Running 'npm start'
-2025-10-22T07:21:53.014602546Z 
-2025-10-22T07:21:53.014622278Z > rest-express@1.0.0 start
-2025-10-22T07:21:53.014626418Z > cd src && node server.js
-2025-10-22T07:21:53.014628798Z 
-2025-10-22T07:21:55.502770299Z [admin routes] loaded
-2025-10-22T07:21:56.003229147Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-22T07:21:56.003740145Z [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-2025-10-22T07:21:56.004460579Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
-2025-10-22T07:21:56.004551676Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-22T07:21:56.005470004Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-22T07:21:56.005535099Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-22T07:21:56.005631347Z [server] trust proxy: 1
-2025-10-22T07:21:56.006969787Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-22T07:21:56.014758019Z Initializing menu service with CANONICAL data.
-2025-10-22T07:21:56.01477054Z Menu loaded. Source: canonical, Items: 289
-2025-10-22T07:21:56.01477358Z Server running → http://localhost:10000
-2025-10-22T07:21:56.014776931Z NODE_ENV: production
-2025-10-22T07:21:56.014779901Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-22T07:21:56.614382368Z [2025-10-22T07:21:56.614Z] Request ID: 2af8747c-9c4d-4357-a7ec-158eb4cd624a, Path: HEAD /
-2025-10-22T07:21:56.614422851Z [2025-10-22T07:21:56.614Z] HEAD /
-2025-10-22T07:22:05.742185392Z ==> Your service is live 🎉
-2025-10-22T07:22:05.777519999Z ==> 
-2025-10-22T07:22:05.813752886Z ==> ///////////////////////////////////////////////////////////
-2025-10-22T07:22:06.259571128Z ==> 
-2025-10-22T07:22:06.288960065Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-22T07:22:06.319519863Z ==> 
-2025-10-22T07:22:06.34938998Z ==> ///////////////////////////////////////////////////////////
-2025-10-22T07:22:07.585964292Z [2025-10-22T07:22:07.585Z] Request ID: 7968d91b-05ea-4088-890a-045ee384b639, Path: GET /
-2025-10-22T07:22:07.585983013Z [2025-10-22T07:22:07.585Z] GET /
-2025-10-22T07:27:03.446053251Z ==> Detected service running on port 10000
-2025-10-22T07:27:03.616717856Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-22T09:37:30.996221311Z ==> Deploying...
-2025-10-22T09:38:24.345700023Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-2025-10-22T09:38:24.346293724Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  suppress all logs with { quiet: true }
-2025-10-22T09:38:24.346405839Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-22T09:38:24.347156969Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-22T09:38:24.34717407Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-22T09:38:24.347324098Z [server] trust proxy: 1
-2025-10-22T09:38:24.348474148Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-22T09:38:24.349074259Z Initializing menu service with CANONICAL data.
-2025-10-22T09:38:24.354121694Z Menu loaded. Source: canonical, Items: 289
-2025-10-22T09:38:24.355697206Z Server running → http://localhost:10000
-2025-10-22T09:38:24.355717287Z NODE_ENV: production
-2025-10-22T09:38:24.355724197Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-22T09:38:24.608009353Z [2025-10-22T09:38:24.607Z] Request ID: c534ba90-672d-40b7-9b78-2bde20dafd96, Path: HEAD /
-2025-10-22T09:38:24.608052016Z [2025-10-22T09:38:24.607Z] HEAD /
-2025-10-22T09:38:31.735819404Z ==> Your service is live 🎉
-2025-10-22T09:38:31.770647522Z ==> 
-2025-10-22T09:38:31.802195159Z ==> ///////////////////////////////////////////////////////////
-2025-10-22T09:38:31.830152117Z ==> 
-2025-10-22T09:38:31.864750323Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-22T09:38:31.894128491Z ==> 
-2025-10-22T09:38:32.261497539Z ==> ///////////////////////////////////////////////////////////
-2025-10-22T09:38:33.13282245Z [2025-10-22T09:38:33.132Z] Request ID: 6250d152-eced-4d01-81a6-f0693e5826de, Path: GET /
-2025-10-22T09:38:33.132844461Z [2025-10-22T09:38:33.132Z] GET /
-2025-10-22T09:41:14.69559014Z [2025-10-22T09:41:14.695Z] Request ID: 71172ae0-7c57-461e-bf22-98612250dbf4, Path: OPTIONS /api/user/orders
-2025-10-22T09:41:14.695616112Z [2025-10-22T09:41:14.695Z] OPTIONS /api/user/orders
-2025-10-22T09:41:15.051236401Z [2025-10-22T09:41:15.051Z] Request ID: 310cebd9-d71b-43fd-9697-e6aa4ef3d919, Path: GET /api/user/orders
-2025-10-22T09:41:15.051275633Z [2025-10-22T09:41:15.051Z] GET /api/user/orders
-2025-10-22T09:41:15.052056394Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-22T09:41:16.444224933Z [requireAuth] Authenticated via Supabase token: {
-2025-10-22T09:41:16.444269756Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
-2025-10-22T09:41:16.444321388Z   email: 'tabrez.ataher@gmail.com'
-2025-10-22T09:41:16.444324698Z }
+2025-10-22T09:50:13.206301644Z ../dist/public/assets/HeroImage2-D4NonUw0.png                 5,989.64 kB
+2025-10-22T09:50:13.206305434Z ../dist/public/assets/HeroImage4-8Y8oVtwn.png                 7,599.40 kB
+2025-10-22T09:50:13.206309184Z ../dist/public/assets/HeroImage3-BafMwgkI.png                 8,166.17 kB
+2025-10-22T09:50:13.206345006Z ../dist/public/assets/HeroImage6-ByAw_F-e.png                 9,319.03 kB
+2025-10-22T09:50:13.206403349Z ../dist/public/assets/index-Bm4dr5_j.css                         98.19 kB │ gzip:  16.15 kB
+2025-10-22T09:50:13.206596108Z ../dist/public/assets/index-BHbHWZEu.js                       1,491.67 kB │ gzip: 387.19 kB
+2025-10-22T09:50:13.206761196Z 
+2025-10-22T09:50:13.206768746Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-10-22T09:50:13.206772806Z - Using dynamic import() to code-split the application
+2025-10-22T09:50:13.206776116Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-10-22T09:50:13.206778446Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-10-22T09:50:13.207220227Z ✓ built in 9.07s
+2025-10-22T09:50:16.846254493Z ==> Uploading build...
+2025-10-22T09:50:45.36038757Z ==> Uploaded in 23.6s. Compression took 4.9s
+2025-10-22T09:50:45.54881059Z ==> Build successful 🎉
+2025-10-22T09:50:49.168687121Z ==> Deploying...
+2025-10-22T09:54:32.148345998Z ==> No open ports detected, continuing to scan...
+2025-10-22T09:54:32.26842924Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-22T09:54:36.332264693Z ==> Running 'npm start'
+2025-10-22T09:54:38.445943084Z 
+2025-10-22T09:54:38.445959325Z > rest-express@1.0.0 start
+2025-10-22T09:54:38.445962265Z > cd src && node server.js
+2025-10-22T09:54:38.445963925Z 
+2025-10-22T09:54:39.853984762Z file:///opt/render/project/src/src/routes/user.js:8
+2025-10-22T09:54:39.854024175Z   getOrdersByUserId, // 👈 Import the new function
+2025-10-22T09:54:39.854028745Z   ^^^^^^^^^^^^^^^^^
+2025-10-22T09:54:39.854032265Z SyntaxError: The requested module '../services/userService.js' does not provide an export named 'getOrdersByUserId'
+2025-10-22T09:54:39.854038725Z     at ModuleJob._instantiate (node:internal/modules/esm/module_job:182:21)
+2025-10-22T09:54:39.854041946Z     at async ModuleJob.run (node:internal/modules/esm/module_job:266:5)
+2025-10-22T09:54:39.854045516Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+2025-10-22T09:54:39.854048606Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2025-10-22T09:54:39.854050986Z 
+2025-10-22T09:54:39.854053906Z Node.js v22.16.0
+2025-10-22T09:54:52.165827936Z ==> Exited with status 1
+2025-10-22T09:54:52.182144835Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-10-22T09:55:02.639070564Z ==> Running 'npm start'
+2025-10-22T09:55:03.880784319Z 
+2025-10-22T09:55:03.88080034Z > rest-express@1.0.0 start
+2025-10-22T09:55:03.88080413Z > cd src && node server.js
+2025-10-22T09:55:03.88080665Z 
+2025-10-22T09:55:05.140684911Z file:///opt/render/project/src/src/routes/user.js:8
+2025-10-22T09:55:05.140701432Z   getOrdersByUserId, // 👈 Import the new function
+2025-10-22T09:55:05.140705113Z   ^^^^^^^^^^^^^^^^^
+2025-10-22T09:55:05.140711603Z SyntaxError: The requested module '../services/userService.js' does not provide an export named 'getOrdersByUserId'
+2025-10-22T09:55:05.140716823Z     at ModuleJob._instantiate (node:internal/modules/esm/module_job:182:21)
+2025-10-22T09:55:05.140719234Z     at async ModuleJob.run (node:internal/modules/esm/module_job:266:5)
+2025-10-22T09:55:05.140722494Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+2025-10-22T09:55:05.140741285Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2025-10-22T09:55:05.140744365Z 
+2025-10-22T09:55:05.140746925Z Node.js v22.16.0

@@ -1,12 +1,8 @@
 // src/routes/user.js
 import express from 'express';
 import requireAuth from '../middleware/requireAuth.js';
-import {
-  getUserProfile,
-  upsertUserAddress,
-  updateUserProfile,
-  getOrdersByUserId, // 👈 Import the new function
-} from '../services/userService.js';
+import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
+import { getOrdersByUserId } from '../services/orderService.js';
 import ensureProfileExists from '../lib/ensureProfileExists.js';
 import { supabase } from '../lib/supabaseClient.js';
 
