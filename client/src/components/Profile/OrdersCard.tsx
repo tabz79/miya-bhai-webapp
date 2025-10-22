@@ -3,20 +3,13 @@ import React from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
-
-async function fetchOrders() {
-  const res = await fetch('/api/user/orders?limit=3');
-  if (!res.ok) {
-    throw new Error('Failed to fetch orders');
-  }
-  return res.json();
-}
+import api from '@/services/api';
 
 export function OrdersCard() {
   const { user } = useAuth();
   const { data: orders, isLoading, error } = useQuery({
-    queryKey: ['orders'],
-    queryFn: fetchOrders,
+    queryKey: ['orders', user?.id],
+    queryFn: () => api.getUserOrders(),
     enabled: !!user, // Only fetch if user is logged in
   });
 
