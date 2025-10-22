@@ -1,95 +1,97 @@
-2025-10-22T11:25:27.272458575Z ==> Downloading cache...
-2025-10-22T11:25:27.275383319Z ==> Cloning from https://github.com/tabz79/miya-bhai-webapp
-2025-10-22T11:25:33.817905451Z ==> Checking out commit ecb08ee5e8987dbc891e99216ef866a40ddbbe05 in branch f2-admin
-2025-10-22T11:25:42.72762897Z ==> Transferred 250MB in 7s. Extraction took 6s.
-2025-10-22T11:25:49.584020564Z ==> Using Node.js version 22.16.0 (default)
-2025-10-22T11:25:49.609224838Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
-2025-10-22T11:25:49.682556152Z ==> Running build command 'npm install; npm run build'...
-2025-10-22T11:25:51.219208588Z 
-2025-10-22T11:25:51.219235589Z up to date, audited 768 packages in 1s
-2025-10-22T11:25:51.219309761Z 
-2025-10-22T11:25:51.219427274Z 102 packages are looking for funding
-2025-10-22T11:25:51.219432234Z   run `npm fund` for details
-2025-10-22T11:25:51.25019275Z 
-2025-10-22T11:25:51.250217931Z 5 moderate severity vulnerabilities
-2025-10-22T11:25:51.250222901Z 
-2025-10-22T11:25:51.250228191Z To address issues that do not require attention, run:
-2025-10-22T11:25:51.250232632Z   npm audit fix
-2025-10-22T11:25:51.250236881Z 
-2025-10-22T11:25:51.250241222Z To address all issues (including breaking changes), run:
-2025-10-22T11:25:51.250246382Z   npm audit fix --force
-2025-10-22T11:25:51.250250392Z 
-2025-10-22T11:25:51.250255462Z Run `npm audit` for details.
-2025-10-22T11:25:51.409779219Z 
-2025-10-22T11:25:51.4098056Z > rest-express@1.0.0 build
-2025-10-22T11:25:51.409841191Z > vite build
-2025-10-22T11:25:51.409849171Z 
-2025-10-22T11:25:51.607603136Z vite v5.4.20 building for production...
-2025-10-22T11:25:51.659456211Z transforming...
-2025-10-22T11:25:58.681764193Z ✓ 3872 modules transformed.
-2025-10-22T11:25:59.807548129Z rendering chunks...
-2025-10-22T11:25:59.857406993Z computing gzip size...
-2025-10-22T11:25:59.892783957Z ../dist/public/index.html                                         1.72 kB │ gzip:   0.71 kB
-2025-10-22T11:25:59.892838589Z ../dist/public/assets/logo-xyvj-OlM.png                         114.57 kB
-2025-10-22T11:25:59.892860279Z ../dist/public/assets/delivery-icon-DubV78id.png                248.84 kB
-2025-10-22T11:25:59.892976362Z ../dist/public/assets/DeliveryGuy-CLppniDM.png                  508.04 kB
-2025-10-22T11:25:59.893082205Z ../dist/public/assets/chickenbiryani-bestseller-Y--3Sbya.png    515.56 kB
-2025-10-22T11:25:59.893095875Z ../dist/public/assets/HeroImage1-DweDpayE.png                   578.96 kB
-2025-10-22T11:25:59.893108306Z ../dist/public/assets/chickenbiryani-menu-CEnWXCNH.png          604.68 kB
-2025-10-22T11:25:59.893114346Z ../dist/public/assets/Shawarma-bestseller-CMLIowDT.png          737.35 kB
-2025-10-22T11:25:59.893140756Z ../dist/public/assets/kebeb-bestseller-DcMcp_ZV.png           1,330.82 kB
-2025-10-22T11:25:59.893147816Z ../dist/public/assets/arabianmandi-bestseller-COwsgazF.png    1,842.47 kB
-2025-10-22T11:25:59.893159277Z ../dist/public/assets/placeholder-menu-item-D6APIJXl.png      2,605.28 kB
-2025-10-22T11:25:59.893163017Z ../dist/public/assets/HeroImage5-DBGOGOXc.png                 5,208.21 kB
-2025-10-22T11:25:59.893175637Z ../dist/public/assets/HeroImage2-D4NonUw0.png                 5,989.64 kB
-2025-10-22T11:25:59.893182057Z ../dist/public/assets/HeroImage4-8Y8oVtwn.png                 7,599.40 kB
-2025-10-22T11:25:59.893185637Z ../dist/public/assets/HeroImage3-BafMwgkI.png                 8,166.17 kB
-2025-10-22T11:25:59.893214738Z ../dist/public/assets/HeroImage6-ByAw_F-e.png                 9,319.03 kB
-2025-10-22T11:25:59.893242629Z ../dist/public/assets/index-Bm4dr5_j.css                         98.19 kB │ gzip:  16.15 kB
-2025-10-22T11:25:59.893357962Z ../dist/public/assets/index-BHbHWZEu.js                       1,491.67 kB │ gzip: 387.19 kB
-2025-10-22T11:25:59.893424734Z 
-2025-10-22T11:25:59.893428794Z (!) Some chunks are larger than 500 kB after minification. Consider:
-2025-10-22T11:25:59.893431494Z - Using dynamic import() to code-split the application
-2025-10-22T11:25:59.893434064Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
-2025-10-22T11:25:59.893436264Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-2025-10-22T11:25:59.893720811Z ✓ built in 8.26s
-2025-10-22T11:26:01.51958594Z ==> Uploading build...
-2025-10-22T11:26:31.952746653Z ==> Uploaded in 23.2s. Compression took 7.3s
-2025-10-22T11:26:32.151477894Z ==> Build successful 🎉
-2025-10-22T11:26:43.448494834Z ==> Deploying...
-2025-10-22T11:27:16.977306634Z ==> Running 'npm start'
-2025-10-22T11:27:18.081366629Z 
-2025-10-22T11:27:18.081390239Z > rest-express@1.0.0 start
-2025-10-22T11:27:18.08139467Z > cd src && node server.js
-2025-10-22T11:27:18.08139715Z 
-2025-10-22T11:27:20.788429701Z [admin routes] loaded
-2025-10-22T11:27:20.793779Z file:///opt/render/project/src/src/routes/user.js:3
-2025-10-22T11:27:20.793793931Z const router = express.Router();
-2025-10-22T11:27:20.793796531Z                ^
-2025-10-22T11:27:20.793798711Z 
-2025-10-22T11:27:20.793801131Z ReferenceError: express is not defined
-2025-10-22T11:27:20.793803491Z     at file:///opt/render/project/src/src/routes/user.js:3:16
-2025-10-22T11:27:20.793806591Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
-2025-10-22T11:27:20.793809161Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
-2025-10-22T11:27:20.793811351Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
-2025-10-22T11:27:20.793813331Z 
-2025-10-22T11:27:20.793815531Z Node.js v22.16.0
-2025-10-22T11:27:22.631794353Z ==> Exited with status 1
-2025-10-22T11:27:22.647188582Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
-2025-10-22T11:27:27.461906556Z ==> Running 'npm start'
-2025-10-22T11:27:28.365941435Z 
-2025-10-22T11:27:28.365962005Z > rest-express@1.0.0 start
-2025-10-22T11:27:28.365967355Z > cd src && node server.js
-2025-10-22T11:27:28.365969935Z 
-2025-10-22T11:27:30.756120948Z [admin routes] loaded
-2025-10-22T11:27:30.758181106Z file:///opt/render/project/src/src/routes/user.js:3
-2025-10-22T11:27:30.758193336Z const router = express.Router();
-2025-10-22T11:27:30.758196916Z                ^
-2025-10-22T11:27:30.758199757Z 
-2025-10-22T11:27:30.758203807Z ReferenceError: express is not defined
-2025-10-22T11:27:30.758208617Z     at file:///opt/render/project/src/src/routes/user.js:3:16
-2025-10-22T11:27:30.758213827Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
-2025-10-22T11:27:30.758218237Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
-2025-10-22T11:27:30.758231737Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
-2025-10-22T11:27:30.758234677Z 
-2025-10-22T11:27:30.758237497Z Node.js v22.16.0
+2025-10-22T11:29:58.73472801Z ==> Downloading cache...
+2025-10-22T11:29:58.73669724Z ==> Cloning from https://github.com/tabz79/miya-bhai-webapp
+2025-10-22T11:30:04.975608318Z ==> Checking out commit 8a65d6069fa51cf657c93f872a59161b5c6c0ac7 in branch f2-admin
+2025-10-22T11:30:12.62490422Z ==> Transferred 250MB in 8s. Extraction took 4s.
+2025-10-22T11:30:25.56220268Z ==> Using Node.js version 22.16.0 (default)
+2025-10-22T11:30:25.585638914Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-10-22T11:30:25.641857958Z ==> Running build command 'npm install; npm run build'...
+2025-10-22T11:30:27.08135618Z 
+2025-10-22T11:30:27.081382441Z up to date, audited 768 packages in 1s
+2025-10-22T11:30:27.081393091Z 
+2025-10-22T11:30:27.081396351Z 102 packages are looking for funding
+2025-10-22T11:30:27.081423071Z   run `npm fund` for details
+2025-10-22T11:30:27.113059443Z 
+2025-10-22T11:30:27.113084824Z 5 moderate severity vulnerabilities
+2025-10-22T11:30:27.113089074Z 
+2025-10-22T11:30:27.113092904Z To address issues that do not require attention, run:
+2025-10-22T11:30:27.113095604Z   npm audit fix
+2025-10-22T11:30:27.113097864Z 
+2025-10-22T11:30:27.113100594Z To address all issues (including breaking changes), run:
+2025-10-22T11:30:27.113103934Z   npm audit fix --force
+2025-10-22T11:30:27.113106244Z 
+2025-10-22T11:30:27.113109604Z Run `npm audit` for details.
+2025-10-22T11:30:27.289151665Z 
+2025-10-22T11:30:27.289171895Z > rest-express@1.0.0 build
+2025-10-22T11:30:27.289175335Z > vite build
+2025-10-22T11:30:27.289177965Z 
+2025-10-22T11:30:27.496847877Z vite v5.4.20 building for production...
+2025-10-22T11:30:27.557228407Z transforming...
+2025-10-22T11:30:34.674998274Z ✓ 3872 modules transformed.
+2025-10-22T11:30:35.678516389Z rendering chunks...
+2025-10-22T11:30:35.728094685Z computing gzip size...
+2025-10-22T11:30:35.765628616Z ../dist/public/index.html                                         1.72 kB │ gzip:   0.71 kB
+2025-10-22T11:30:35.765659507Z ../dist/public/assets/logo-xyvj-OlM.png                         114.57 kB
+2025-10-22T11:30:35.765706098Z ../dist/public/assets/delivery-icon-DubV78id.png                248.84 kB
+2025-10-22T11:30:35.76580549Z ../dist/public/assets/DeliveryGuy-CLppniDM.png                  508.04 kB
+2025-10-22T11:30:35.765944774Z ../dist/public/assets/chickenbiryani-bestseller-Y--3Sbya.png    515.56 kB
+2025-10-22T11:30:35.765959794Z ../dist/public/assets/HeroImage1-DweDpayE.png                   578.96 kB
+2025-10-22T11:30:35.765966024Z ../dist/public/assets/chickenbiryani-menu-CEnWXCNH.png          604.68 kB
+2025-10-22T11:30:35.766000805Z ../dist/public/assets/Shawarma-bestseller-CMLIowDT.png          737.35 kB
+2025-10-22T11:30:35.766007316Z ../dist/public/assets/kebeb-bestseller-DcMcp_ZV.png           1,330.82 kB
+2025-10-22T11:30:35.766015236Z ../dist/public/assets/arabianmandi-bestseller-COwsgazF.png    1,842.47 kB
+2025-10-22T11:30:35.766032276Z ../dist/public/assets/placeholder-menu-item-D6APIJXl.png      2,605.28 kB
+2025-10-22T11:30:35.766038866Z ../dist/public/assets/HeroImage5-DBGOGOXc.png                 5,208.21 kB
+2025-10-22T11:30:35.766077817Z ../dist/public/assets/HeroImage2-D4NonUw0.png                 5,989.64 kB
+2025-10-22T11:30:35.766082967Z ../dist/public/assets/HeroImage4-8Y8oVtwn.png                 7,599.40 kB
+2025-10-22T11:30:35.766104838Z ../dist/public/assets/HeroImage3-BafMwgkI.png                 8,166.17 kB
+2025-10-22T11:30:35.766134599Z ../dist/public/assets/HeroImage6-ByAw_F-e.png                 9,319.03 kB
+2025-10-22T11:30:35.76619062Z ../dist/public/assets/index-Bm4dr5_j.css                         98.19 kB │ gzip:  16.15 kB
+2025-10-22T11:30:35.766363954Z ../dist/public/assets/index-BHbHWZEu.js                       1,491.67 kB │ gzip: 387.19 kB
+2025-10-22T11:30:35.766443256Z 
+2025-10-22T11:30:35.766447397Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-10-22T11:30:35.766449987Z - Using dynamic import() to code-split the application
+2025-10-22T11:30:35.766452827Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-10-22T11:30:35.766455057Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-10-22T11:30:35.766794776Z ✓ built in 8.24s
+2025-10-22T11:30:40.98399188Z ==> Uploading build...
+2025-10-22T11:31:09.798415527Z ==> Uploaded in 22.7s. Compression took 6.2s
+2025-10-22T11:31:10.001426301Z ==> Build successful 🎉
+2025-10-22T11:31:18.769150141Z ==> Deploying...
+2025-10-22T11:36:34.412538357Z ==> No open ports detected, continuing to scan...
+2025-10-22T11:36:34.589843441Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-22T11:36:37.097667169Z ==> Running 'npm start'
+2025-10-22T11:36:38.093748557Z 
+2025-10-22T11:36:38.093771698Z > rest-express@1.0.0 start
+2025-10-22T11:36:38.093776158Z > cd src && node server.js
+2025-10-22T11:36:38.093778788Z 
+2025-10-22T11:36:40.694390311Z [admin routes] loaded
+2025-10-22T11:36:40.69681287Z file:///opt/render/project/src/src/routes/user.js:18
+2025-10-22T11:36:40.69682797Z router.use(requireAuth);
+2025-10-22T11:36:40.696832481Z            ^
+2025-10-22T11:36:40.696836301Z 
+2025-10-22T11:36:40.696841691Z ReferenceError: requireAuth is not defined
+2025-10-22T11:36:40.696845681Z     at file:///opt/render/project/src/src/routes/user.js:18:12
+2025-10-22T11:36:40.696851281Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-10-22T11:36:40.696856441Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+2025-10-22T11:36:40.696860201Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2025-10-22T11:36:40.696863841Z 
+2025-10-22T11:36:40.696867401Z Node.js v22.16.0
+2025-10-22T11:36:48.309550677Z ==> Exited with status 1
+2025-10-22T11:36:48.326425986Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-10-22T11:36:52.090890892Z ==> Running 'npm start'
+2025-10-22T11:36:53.106597733Z 
+2025-10-22T11:36:53.106620064Z > rest-express@1.0.0 start
+2025-10-22T11:36:53.106627164Z > cd src && node server.js
+2025-10-22T11:36:53.106631054Z 
+2025-10-22T11:36:55.688921043Z [admin routes] loaded
+2025-10-22T11:36:55.787904387Z file:///opt/render/project/src/src/routes/user.js:18
+2025-10-22T11:36:55.787916167Z router.use(requireAuth);
+2025-10-22T11:36:55.787920537Z            ^
+2025-10-22T11:36:55.787924787Z 
+2025-10-22T11:36:55.787929298Z ReferenceError: requireAuth is not defined
+2025-10-22T11:36:55.787933747Z     at file:///opt/render/project/src/src/routes/user.js:18:12
+2025-10-22T11:36:55.787937648Z     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-10-22T11:36:55.787942598Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+2025-10-22T11:36:55.787947248Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2025-10-22T11:36:55.787951088Z 
+2025-10-22T11:36:55.787955388Z Node.js v22.16.0
