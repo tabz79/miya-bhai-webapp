@@ -520,6 +520,30 @@ export async function getOrdersByStaffId(staffId) {
 }
 
 /**
+ * Fetch orders for a given user id
+ */
+export async function getOrdersByUserId(userId) {
+  try {
+    if (!isUuid(userId)) return [];
+    const { data, error } = await supabase
+      .from('orders')
+      .select('*')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('getOrdersByUserId: supabase error', { error, userId });
+      return [];
+    }
+
+    return data;
+  } catch (e) {
+    console.error('getOrdersByUserId: exception', e);
+    return [];
+  }
+}
+
+/**
  * Assign order to staff and mark as ACCEPTED
  * returns single updated order object or null
  */

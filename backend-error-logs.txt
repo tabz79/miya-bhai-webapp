@@ -1,8 +1,7 @@
 console logs:
 index-BHbHWZEu.js:211 Supabase client initialized (client-side anon).
 index-BHbHWZEu.js:330 [App] supabase client ready: true
-profile:1 Access to fetch at 'https://miya-bhai-webapp.onrender.com/api/user/orders' from origin 'https://miya-bhai-webapp-v1.pages.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
-index-BHbHWZEu.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/orders net::ERR_FAILED
+index-BHbHWZEu.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/orders 404 (Not Found)
 cn @ index-BHbHWZEu.js:211
 await in cn
 getUserOrders @ index-BHbHWZEu.js:211
@@ -29,14 +28,20 @@ network logs:
 https://miya-bhai-webapp.onrender.com/api/user/orders
 https://miya-bhai-webapp.onrender.com/api/user/orders
 
-network fetch:
+network fetch logs:
 fetch("https://miya-bhai-webapp.onrender.com/api/user/orders", {
   "headers": {
     "accept": "application/json",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMTIyMjY1LCJpYXQiOjE3NjExMTg2NjUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.iMOMJJeUd1juQgDxDkZTSNNxRn1lHuTma3n7vlYAMg4",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMTI4NjUwLCJpYXQiOjE3NjExMjUwNTAsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.bSgCOsw8Cm0rRlOIMJ5Dxg7ucJrS3_tqp-paF9wfgXM",
+    "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
   },
   "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
   "body": null,

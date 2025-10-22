@@ -1,7 +1,12 @@
 // src/routes/user.js
 import express from 'express';
 import requireAuth from '../middleware/requireAuth.js';
-import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
+import {
+  getUserProfile,
+  upsertUserAddress,
+  updateUserProfile,
+  getOrdersByUserId, // 👈 Import the new function
+} from '../services/userService.js';
 import ensureProfileExists from '../lib/ensureProfileExists.js';
 import { supabase } from '../lib/supabaseClient.js';
 
@@ -33,6 +38,21 @@ router.get('/profile', async (req, res) => {
   } catch (error) {
     console.error(`[GET /api/user/profile] Error for user ${req.user.id}:`, error);
     res.status(500).json({ error: 'Could not fetch user profile.' });
+  }
+});
+
+/**
+ * GET /api/user/orders
+ * Fetches the logged-in user's order history.
+ */
+router.get('/orders', async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const orders = await getOrdersByUserId(userId);
+    res.json(orders || []); // Return orders or empty array
+  } catch (error) {
+    console.error(`[GET /api/user/orders] Error for user ${req.user.id}:`, error);
+    res.status(500).json({ error: 'Could not fetch user orders.' });
   }
 });
 
