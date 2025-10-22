@@ -1,4 +1,5 @@
-import { getOrdersByUserEmail } from '../services/orderService.js';
+import express from 'express';
+import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
 
 const router = express.Router();
 
