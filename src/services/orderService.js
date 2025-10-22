@@ -522,23 +522,23 @@ export async function getOrdersByStaffId(staffId) {
 /**
  * Fetch orders for a given user id
  */
-export async function getOrdersByUserId(userId) {
+export async function getOrdersByUserEmail(userEmail) {
   try {
-    if (!isUuid(userId)) return [];
+    if (!userEmail) return [];
     const { data, error } = await supabase
       .from('orders')
       .select('*')
-      .eq('customer_id', userId)
+      .eq('customer_email', userEmail)
       .order('created_at', { ascending: false });
 
     if (error) {
-      console.error('getOrdersByUserId: supabase error', { error, userId });
+      console.error('getOrdersByUserEmail: supabase error', { error, userEmail });
       return [];
     }
 
     return data;
   } catch (e) {
-    console.error('getOrdersByUserId: exception', e);
+    console.error('getOrdersByUserEmail: exception', e);
     return [];
   }
 }

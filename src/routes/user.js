@@ -1,10 +1,4 @@
-// src/routes/user.js
-import express from 'express';
-import requireAuth from '../middleware/requireAuth.js';
-import { getUserProfile, upsertUserAddress, updateUserProfile } from '../services/userService.js';
-import { getOrdersByUserId } from '../services/orderService.js';
-import ensureProfileExists from '../lib/ensureProfileExists.js';
-import { supabase } from '../lib/supabaseClient.js';
+import { getOrdersByUserEmail } from '../services/orderService.js';
 
 const router = express.Router();
 
@@ -43,8 +37,8 @@ router.get('/profile', async (req, res) => {
  */
 router.get('/orders', async (req, res) => {
   try {
-    const userId = req.user.id;
-    const orders = await getOrdersByUserId(userId);
+    const userEmail = req.user.email;
+    const orders = await getOrdersByUserEmail(userEmail);
     res.json(orders || []); // Return orders or empty array
   } catch (error) {
     console.error(`[GET /api/user/orders] Error for user ${req.user.id}:`, error);
