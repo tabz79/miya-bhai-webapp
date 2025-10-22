@@ -106,6 +106,7 @@ const corsOptions = {
   credentials: true,
 };
 
+app.options('*', cors(corsOptions)); // enable pre-flight
 app.use(cors(corsOptions));
 // --------------------------------------------------------------------------------
 
