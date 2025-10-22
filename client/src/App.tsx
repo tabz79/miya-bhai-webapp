@@ -93,6 +93,7 @@ function App() {
       <HelmetProvider>
         <TooltipProvider>
           <BrowserRouter>
+            <h1>DEBUG TEST v3</h1>
             <Toaster />
             <AppRoutes />
           </BrowserRouter>
