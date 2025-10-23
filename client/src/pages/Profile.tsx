@@ -161,9 +161,7 @@ export function Profile() {
         <CollapsibleCard title="About" defaultOpen>
           <div className="space-y-4 text-app-foreground text-sm leading-relaxed">
             {restaurantInfo.story
-              .split('
-
-')
+              .split('\n\n')
               .map((paragraph, index) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}
