@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/hooks/useCartStore';
 import { Link, useNavigate } from 'react-router-dom';
 import { api } from '@/services/api';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 
 export function Checkout() {
   const { items, coupon: cartCoupon, clearCart } = useCartStore();

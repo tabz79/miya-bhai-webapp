@@ -1,4 +1,4 @@
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 import React, { useEffect, useState } from 'react';
 import logo from '@/assets/logo.png';
 

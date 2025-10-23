@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import api from '@/services/api';
