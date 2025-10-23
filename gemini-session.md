@@ -6,7 +6,7 @@ Fix all bugs related to the application's user authentication, profile managemen
 ### Key Knowledge
 - **Stack**: Vite/React frontend (on Cloudflare Pages) and a Node/Express backend with Supabase DB (built and run on Render).
 - **Initial Checkout Crash Fix**: A middleware (`ensureProfileExists.js`) was created to fix checkout crashes for new users by programmatically creating records in `public.users` and `public.profiles` tables.
-- **iOS Login Fix**: A race condition in `client/src/pages/AuthCallback.tsx` was fixed by moving URL hash processing into `useEffect`.
+- **iOS Login Fix**: A race condition in `client/src/pages/AuthCallback.tsx` was fixed by moving URL hash processing inside `useEffect`.
 - **API URL Issue**: The frontend was calling the wrong API URL. This was fixed by hardcoding the production backend URL (`https://miya-bhai-webapp.onrender.com`) into the `api.ts` service for production builds.
 - **Order History Bug**: The order history page was not working because `OrdersCard.tsx` used a direct `fetch` call, bypassing the centralized API service fix. This was resolved by refactoring `OrdersCard.tsx` to use `api.getUserOrders()` and implementing `getOrdersByUserEmail` in `orderService.js` to query by email.
 - **Address Display Bug**: Similar to the order history, addresses were not displaying due to a disconnect between the Supabase authentication user and the application's profile data. The `AddressesCard.tsx` was making a rogue API call, and the `useAuth` hook was not providing the full user profile.
@@ -55,6 +55,25 @@ Fix all bugs related to the application's user authentication, profile managemen
 
 ### Current Status
 All known code-related bugs have been addressed. The application should now be fully functional, with orders and addresses displaying correctly. The remaining issues were primarily due to data integrity (old orders/addresses not linked to user IDs) and my own repeated errors in handling import statements during refactoring.
+
+### Address Issue - Detailed Analysis (for next session)
+
+**What's working at the Supabase level:**
+- The `public.addresses` table exists and contains 7 address records.
+- Each address record has a `user_id` column, and these `user_id`s correctly link to entries in the `auth.users` table (as confirmed by SQL query output showing `auth_email` for each address).
+- The `userService.upsertUserAddress` function correctly saves the `user_id` to the `addresses` table when a new address is created.
+- The `userService.getUserProfile` function correctly queries the `addresses` table using the `user_id` to fetch associated addresses.
+
+**What's lacking in the code (and needs to be fixed in the next session):**
+- The frontend's `useAuth` hook (before the `AuthProvider` refactor) only fetched basic Supabase user data and did *not* fetch the full user profile (including addresses) from our backend.
+- The `AddressesCard.tsx` component was making a rogue `fetch` call to a non-existent `/api/user/addresses` endpoint.
+- The intended fix was to introduce a new `AuthProvider` that would fetch the full user profile (including addresses) and make it available globally. This refactor was attempted but led to multiple deployment failures due to my errors in handling import statements and introducing a non-existent `ThemeProvider`.
+
+**Goal for next session:**
+- Revert the codebase to the stable version where orders are fixed.
+- Correctly implement the `AuthProvider` to fetch and provide the full user profile (including addresses).
+- Correctly refactor `AddressesCard.tsx` to use the full user profile from the `AuthProvider`.
+- Ensure all necessary imports are correctly handled to avoid deployment failures.
 
 ### Next Steps
 - User to commit and push the latest changes.

@@ -31,10 +31,10 @@ import MagicLinkRequest from "@/pages/MagicLinkRequest";
 import InvalidLink from "@/pages/InvalidLink";
 import LoginPage from "@/pages/LoginPage";
 
+// 🧠 unified callback replaces both MagicLinkCallback & OAuthCallback
 import AuthCallback from "@/pages/AuthCallback";
 
 import { supabase } from "@/lib/supabaseClient";
-import { AuthProvider } from './context/AuthContext'; // Our new AuthProvider
 
 /**
  * A helper component to handle the layout switching.
@@ -74,6 +74,7 @@ function AppRoutes() {
         <Route path="/staff" element={<Staff />} />
         <Route path="/magic-link" element={<MagicLinkRequest />} />
         <Route path="/auth/invalid-link" element={<InvalidLink />} />
+        {/* ✅ unified callback handles both GitHub OAuth & Magic Links */}
         <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
@@ -91,12 +92,10 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <TooltipProvider>
-          <AuthProvider> {/* Our new AuthProvider */}
-            <BrowserRouter>
-              <Toaster />
-              <AppRoutes />
-            </BrowserRouter>
-          </AuthProvider>
+          <BrowserRouter>
+            <Toaster />
+            <AppRoutes />
+          </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
     </QueryClientProvider>
