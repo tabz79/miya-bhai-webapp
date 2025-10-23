@@ -1,4 +1,4 @@
-'''// client/src/pages/Profile.tsx
+// client/src/pages/Profile.tsx
 import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { BottomNav } from '../components/BottomNav';
@@ -188,4 +188,3 @@ export function Profile() {
     </div>
   );
 }
-''
