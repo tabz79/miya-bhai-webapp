@@ -49,10 +49,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (_event, session) => {
+        setLoading(true); // Always start loading on auth change
         setSession(session);
         if (session?.user) {
           try {
-            setLoading(true);
             const profile = await api.getUserProfile();
             setUser({ ...session.user, ...profile });
           } catch (error) {
@@ -63,6 +63,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           }
         } else {
           setUser(null);
+          setLoading(false); // Ensure loading is false when logged out
         }
       }
     );
