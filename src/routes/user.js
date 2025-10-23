@@ -6,6 +6,7 @@ import {
   updateUserProfile,
 } from '../services/userService.js';
 import { getOrdersByUserEmail } from '../services/orderService.js';
+import { getAddressesByUserEmail } from '../services/addressService.js';
 import ensureProfileExists from '../lib/ensureProfileExists.js';
 import { supabase } from '../lib/supabaseClient.js';
 
@@ -52,6 +53,21 @@ router.get('/orders', async (req, res) => {
   } catch (error) {
     console.error(`[GET /api/user/orders] Error for user ${req.user.id}:`, error);
     res.status(500).json({ error: 'Could not fetch user orders.' });
+  }
+});
+
+/**
+ * GET /api/user/addresses
+ * Fetches the logged-in user's address history.
+ */
+router.get('/addresses', async (req, res) => {
+  try {
+    const userEmail = req.user.email;
+    const addresses = await getAddressesByUserEmail(userEmail);
+    res.json(addresses || []); // Return addresses or empty array
+  } catch (error) {
+    console.error(`[GET /api/user/addresses] Error for user ${req.user.id}:`, error);
+    res.status(500).json({ error: 'Could not fetch user addresses.' });
   }
 });
 

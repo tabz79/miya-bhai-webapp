@@ -118,6 +118,11 @@ export const api = {
     return await safeFetch('/api/user/orders', { method: 'GET' }, true);
   },
 
+  // Get user addresses (authenticated)
+  async getUserAddresses() {
+    return await safeFetch('/api/user/addresses', { method: 'GET' }, true);
+  },
+
   // Update user profile (authenticated)
   async updateUserProfile(profileData: AnyObj) {
     return await safeFetch('/api/user/profile', {
