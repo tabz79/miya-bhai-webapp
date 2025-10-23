@@ -11,8 +11,7 @@ export function AddressesCard() {
   if (!user) {
     return (
       <div className="text-center">
-        <p className="text-gray-500 mb-4">Log in to manage your addresses.</p>
-        <Button className="bg-brand-teak text-white hover:bg-brand-teak/90">Login</Button>
+        <p className="text-gray-500">Please log in to manage your addresses.</p>
       </div>
     );
   }
