@@ -83,21 +83,19 @@ function AppRoutes() {
   );
 }
 
-function App() {
-  useEffect(() => {
-    console.log("[App] supabase client ready:", Boolean(supabase));
-  }, []);
+import { AuthProvider } from './context/AuthContext';
 
+function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <TooltipProvider>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <AuthProvider>
           <BrowserRouter>
             <Toaster />
             <AppRoutes />
           </BrowserRouter>
-        </TooltipProvider>
-      </HelmetProvider>
+        </AuthProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

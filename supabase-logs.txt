@@ -1,83 +1,81 @@
-supabase logs:
 input:
--- ONE-PASTE CHECK: orders associated to a specific email
--- Change this email only:
-with params as (
-  select 'tabrez.ataher@gmail.com'::text as email
-),
-u as (
-  -- find auth user (if exists)
-  select id as user_id, email
-  from auth.users
-  where lower(email) = lower((select email from params))
-  limit 1
-),
-p as (
-  -- find profile (if exists)
-  select user_id, email as profile_email
-  from public.profiles
-  where lower(email) = lower((select email from params))
-  limit 1
-),
-candidates as (
-  -- collect all orders that match by any route
-  select
-    o.*,
-    (select email from params)              as target_email,
-    lower(o.customer_email) = lower((select email from params))                as matched_customer_email_col,
-    lower(o.customer_details->>'email') = lower((select email from params))    as matched_customer_details_json,
-    case
-      when o.customer_id is not null and o.customer_id = (select user_id from u) then true
-      when o.customer_id is not null and o.customer_id = (select user_id from p) then true
-      else false
-    end as matched_by_customer_id
-  from public.orders o
-  where
-       lower(o.customer_email) = lower((select email from params))
-    or lower(o.customer_details->>'email') = lower((select email from params))
-    or (o.customer_id is not null and o.customer_id in (
-          select user_id from u
-          union all
-          select user_id from p
-        ))
-)
--- 1) quick headline counts
 select
-  (select email from params)                                  as target_email,
-  count(*)                                                    as total_orders_for_email,
-  count(*) filter (where matched_customer_email_col)          as by_customer_email_col,
-  count(*) filter (where matched_customer_details_json)       as by_customer_details_json,
-  count(*) filter (where matched_by_customer_id)              as by_customer_id_link,
-  count(*) filter (where not matched_by_customer_id)          as missing_link_to_user_id
-from candidates;
+  a.id,
+  a.user_id,
+  u.email as auth_email,
+  a.line1,
+  a.city,
+  a.postal_code,
+  a.created_at
+from public.addresses a
+left join auth.users u
+  on u.id = a.user_id
+order by a.created_at desc;
 
--- 2) recent orders (human-friendly view). Run this second if you want details:
--- select
---   id, order_number, status, total, created_at,
---   customer_email,
---   customer_details->>'email' as json_email,
---   customer_id,
---   case
---     when matched_by_customer_id then 'linked_via_customer_id'
---     when matched_customer_email_col then 'matched_customer_email_col'
---     when matched_customer_details_json then 'matched_customer_details_json'
---     else 'unknown'
---   end as match_route
--- from candidates
--- order by created_at desc
--- limit 50;
-
--- 3) optional: group by status (uncomment to see distribution)
--- select status, count(*) from candidates group by 1 order by 2 desc;
 
 output:
 [
   {
-    "target_email": "tabrez.ataher@gmail.com",
-    "total_orders_for_email": 39,
-    "by_customer_email_col": 38,
-    "by_customer_details_json": 20,
-    "by_customer_id_link": 0,
-    "missing_link_to_user_id": 39
+    "id": "2a2c61ef-ef61-4d1d-8e39-5cae0d1065fd",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-22 11:18:57.984473+00"
+  },
+  {
+    "id": "2e30d9e5-1dda-4c37-80b5-805c01d526be",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-22 11:09:17.622106+00"
+  },
+  {
+    "id": "79f604ce-9b91-4f80-b9dd-a2e7348acb6c",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-22 11:09:10.061656+00"
+  },
+  {
+    "id": "b2431716-6e71-42b4-9743-e95332fda72d",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-22 11:09:09.914119+00"
+  },
+  {
+    "id": "2f06e05f-9976-473e-b8e4-aac09334220e",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-22 11:09:09.699115+00"
+  },
+  {
+    "id": "b7d6213a-3f23-4f8f-9637-eff387190096",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-20 11:06:34.336195+00"
+  },
+  {
+    "id": "c53c9019-0ce1-4288-9d6e-1f6888a8c964",
+    "user_id": "a05c6e64-d220-43df-bf78-ed3ae02e0e4b",
+    "auth_email": "tabrez.ataher@gmail.com",
+    "line1": "Hno: 11-7-63,khammam",
+    "city": null,
+    "postal_code": "507001",
+    "created_at": "2025-10-20 10:03:03.573585+00"
   }
 ]
