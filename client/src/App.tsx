@@ -1,11 +1,9 @@
 // client/src/App.tsx
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { MobileFrame } from "@/components/ui/MobileFrame";
 import NotFound from "@/pages/not-found";
 
@@ -31,16 +29,11 @@ import MagicLinkRequest from "@/pages/MagicLinkRequest";
 import InvalidLink from "@/pages/InvalidLink";
 import LoginPage from "@/pages/LoginPage";
 
-// 🧠 unified callback replaces both MagicLinkCallback & OAuthCallback
 import AuthCallback from "@/pages/AuthCallback";
 
-import { supabase } from "@/lib/supabaseClient";
+import { AuthProvider } from './context/AuthContext';
+import { ThemeProvider } from "@/components/theme-provider"; // 👈 THE MISSING IMPORT
 
-/**
- * A helper component to handle the layout switching.
- * Note: we explicitly render /login and /auth/callback at top-level (outside MobileFrame)
- * so they cannot be accidentally hidden by mobile/admin layout logic.
- */
 function AppRoutes() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith("/admin");
@@ -74,7 +67,6 @@ function AppRoutes() {
         <Route path="/staff" element={<Staff />} />
         <Route path="/magic-link" element={<MagicLinkRequest />} />
         <Route path="/auth/invalid-link" element={<InvalidLink />} />
-        {/* ✅ unified callback handles both GitHub OAuth & Magic Links */}
         <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
@@ -82,8 +74,6 @@ function AppRoutes() {
     </MobileFrame>
   );
 }
-
-import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
