@@ -1,7 +1,6 @@
-import { useQueryClient } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
+'''// client/src/pages/Profile.tsx
+import React, { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { supabase } from '@/lib/supabaseClient';
 import { BottomNav } from '../components/BottomNav';
 import { CollapsibleCard } from '../components/Profile/CollapsibleCard';
 import { OrdersCard } from '../components/Profile/OrdersCard';
@@ -19,205 +18,67 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-type ProfileRecord = {
-  id: string;
-  full_name?: string | null;
-  phone?: string | null;
-  avatar_url?: string | null;
-  branch?: string | null;
-};
-
+// No longer need a separate ProfileRecord, the user from useAuth is the source of truth
 export function Profile() {
-  const { session, loading, user } = useAuth();
-  const [profile, setProfile] = useState<ProfileRecord | null>(null);
-  const [isFetchingProfile, setIsFetchingProfile] = useState(false);
-  const [isSigningOut, setIsSigningOut] = useState(false);
+  // loading and user now come from the single, reliable AuthContext
+  const { loading, user, logout } = useAuth();
   const [editing, setEditing] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
-
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
-  // Helper: fetch profile by a given userId (used when user.id becomes available)
-  const fetchProfileById = async (userId: string | null) => {
-    if (!userId) return null;
-    try {
-      setIsFetchingProfile(true);
+  // This local state is for the ProfileForm, which is fine.
+  // We'll pre-fill it from the user object.
+  const [profileData, setProfileData] = useState<ProfilePayload | undefined>(undefined);
 
-      const { data, error } = await supabase
-        .from<ProfileRecord>('profiles')
-        .select('*')
-        .eq('user_id', userId)
-        .maybeSingle(); // ✅ FINAL FIX: Use maybeSingle() to gracefully handle 0 rows.
-
-      if (error) {
-        console.error('Error fetching profile:', error);
-        toast?.({
-          title: 'Profile load failed',
-          description: 'Check console for details.',
-          variant: 'destructive',
-        });
-        return null;
-      }
-      return data;
-    } catch (err) {
-      console.error('Unexpected fetchProfile error', err);
-      toast?.({
-        title: 'Profile load failed',
-        description: 'Unexpected error. See console.',
-        variant: 'destructive',
+  React.useEffect(() => {
+    if (user) {
+      setProfileData({
+        id: user.id,
+        full_name: user.user_metadata?.full_name || '',
+        phone: (user as any).phone || '', // Cast to any to access phone if it exists
       });
-      return null;
-    } finally {
-      setIsFetchingProfile(false);
+    } else {
+      setProfileData(undefined);
     }
-  };
+  }, [user]);
 
-  useEffect(() => {
-    let mounted = true;
-
-    const run = async () => {
-      // This check is now based on user.id, which is a stable primitive
-      if (!user?.id) {
-        if (mounted) setProfile(null);
-        return;
-      }
-
-      // Normal path: user.id exists — fetch profile directly
-      const fetched = await fetchProfileById(user.id);
-      if (mounted) setProfile(fetched);
-    };
-
-    run();
-
-    return () => {
-      mounted = false;
-    };
-  }, [user?.id]);
 
   const handleSignOut = async () => {
-    if (isSigningOut) return;
-    setIsSigningOut(true);
-    try {
-      // First, sign out from Supabase
-      const { error: supabaseError } = await supabase.auth.signOut();
-      if (supabaseError) {
-        console.error('Supabase sign out error:', supabaseError);
-        toast?.({
-          title: 'Sign out failed',
-          description: 'Could not sign out from Supabase. Check console.',
-          variant: 'destructive',
-        });
-        // Do not stop here; still attempt to clear the server session
-      }
-
-      // Then, hit the backend logout endpoint to clear the session cookie
-      // Use relative path to leverage Vite proxy; if proxy unreliable, replace with absolute backend URL
-      const logoutUrl = '/api/auth/logout';
-      const res = await fetch(logoutUrl, {
-        method: 'POST',
-        credentials: 'include', // critical so browser will accept Set-Cookie from backend
-      });
-
-      if (!res.ok) {
-        console.error('API logout error:', await res.text());
-        toast?.({
-          title: 'Server logout failed',
-          description: 'Session may not be fully cleared. Check console.',
-          variant: 'destructive',
-        });
-        // continue: still clear client state and invalidate cache to avoid stale UI
-      }
-
-      setProfile(null);
-      toast?.({
-        title: '✅ Signed out',
-        description: 'You have been signed out successfully.',
-      });
-
-      // Reload the page to reset the app state
-      try {
-        await queryClient.invalidateQueries(['user']);
-      } catch (e) {
-        // ignore
-      }
-
-      window.location.reload();
-
-    } catch (err) {
-      console.error('Unexpected signOut error', err);
-      toast?.({
-        title: 'Sign out failed',
-        description: 'Unexpected error. See console.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSigningOut(false);
-    }
+    await logout();
+    toast({
+      title: '✅ Signed out',
+      description: 'You have been signed out successfully.',
+    });
+    // No need to reload, the context change will re-render the app
   };
 
-  const displayName =
-    profile?.full_name ||
-    (user?.user_metadata?.name) ||
-    (user?.email ? user.email.split('@')[0] : 'User');
-
-  const avatarLetter =
-    (profile?.full_name || (user?.user_metadata?.name) || 'U')
-      .charAt(0)
-      .toUpperCase();
+  // Simplified display logic, directly from the user object
+  const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User';
+  const avatarLetter = (user?.user_metadata?.full_name || user?.email || 'U').charAt(0).toUpperCase();
 
   const handleProfileSave = (p: ProfilePayload) => {
-    setProfile((prev) => ({
-      ...(prev ?? { id: user?.id ?? p.id }),
-      ...p,
-    }));
+    // This is an optimistic update. The actual update happens in the form.
+    // We can update the local state to reflect the change immediately.
+    setProfileData(p);
     setEditing(false);
-    toast?.({
+    toast({
       title: 'Profile updated',
       description: 'Your profile changes were saved.',
     });
   };
 
-  // 🧩 If user exists but has no id and server re-check didn't find one, show fallback
-  if (user && !user.id && !profile) {
-    return (
-      <div className="w-full min-h-screen bg-app-background flex flex-col items-center justify-center p-6 text-center">
-        <h2 className="text-xl font-bold mb-2">Welcome, {user.email}</h2>
-        <p className="text-gray-600 max-w-sm mb-4">
-          We created a temporary session for you, but your account isn’t yet
-          linked to a user record in the database.
-        </p>
-        <p className="text-sm text-gray-500">
-          Please contact an admin or complete registration.
-        </p>
-        <div className="mt-6">
-          <Button onClick={() => setLoginOpen(true)} className="bg-brand-teak text-white hover:bg-brand-teak/90">
-            Log in again
-          </Button>
-        </div>
-        <Dialog open={loginOpen} onOpenChange={setLoginOpen}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Login</DialogTitle>
-            </DialogHeader>
-            <Auth />
-          </DialogContent>
-        </Dialog>
-      </div>
-    );
-  }
-
   return (
     <div className="w-full min-h-screen bg-app-background">
       <div className="p-4 border-b border-gray-200 bg-app-background">
-        {loading || isFetchingProfile ? (
-          <div className="h-16" />
+        {/* The loading logic is now much simpler */}
+        {loading ? (
+          <div className="h-16 animate-pulse bg-gray-200 rounded-md" />
         ) : user ? (
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div
                 className="w-16 h-16 bg-brand-teak rounded-full flex items-center justify-center"
-                title={profile?.full_name ?? user?.email}
+                title={displayName}
               >
                 <span className="text-white font-bold text-2xl">
                   {avatarLetter}
@@ -228,9 +89,9 @@ export function Profile() {
                   {displayName}
                 </h2>
                 <p className="text-gray-500 text-sm">{user.email}</p>
-                {profile?.phone && (
+                {(user as any).phone && (
                   <p className="text-gray-400 text-xs mt-1">
-                    📞 {profile.phone}
+                    📞 {(user as any).phone}
                   </p>
                 )}
               </div>
@@ -252,6 +113,7 @@ export function Profile() {
             </div>
           </div>
         ) : (
+          // This is the state when not loading and no user exists. The login button appears.
           <div className="flex items-center justify-between">
             <h1 className="text-app-foreground font-bold text-xl">Profile</h1>
             <Button
@@ -273,12 +135,12 @@ export function Profile() {
       </div>
 
       <div className="p-4 space-y-4">
-        {editing && user && (
+        {editing && user && profileData && (
           <CollapsibleCard title="Edit Profile" defaultOpen>
             <ProfileForm
               userId={user.id}
-              initial={profile ?? undefined}
-              onSave={(p) => handleProfileSave(p)}
+              initial={profileData}
+              onSave={handleProfileSave}
               onCancel={() => setEditing(false)}
             />
           </CollapsibleCard>
@@ -299,7 +161,9 @@ export function Profile() {
         <CollapsibleCard title="About" defaultOpen>
           <div className="space-y-4 text-app-foreground text-sm leading-relaxed">
             {restaurantInfo.story
-              .split('\n\n')
+              .split('
+
+')
               .map((paragraph, index) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}
@@ -313,9 +177,8 @@ export function Profile() {
             onClick={handleSignOut}
             variant="destructive"
             className="w-full"
-            disabled={isSigningOut}
           >
-            {isSigningOut ? 'Signing out...' : 'Sign Out'}
+            Sign Out
           </Button>
         </div>
       )}
@@ -325,3 +188,4 @@ export function Profile() {
     </div>
   );
 }
+''
