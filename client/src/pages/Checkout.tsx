@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useCartStore } from '@/hooks/useCartStore';
 import { Link, useNavigate } from 'react-router-dom';
 import { api } from '@/services/api';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 
 export function Checkout() {
   const { items, coupon: cartCoupon, clearCart } = useCartStore();
@@ -25,17 +25,20 @@ export function Checkout() {
     api.getPublicSettings().then(setSettings).catch(() => {});
     if (user) {
       setAuthChoice('login');
-      // Pre-fill from the user object from AuthContext
-      setCustomer(c => ({ ...c, name: user.user_metadata?.full_name || c.name, phone: user.phone || c.phone, email: user.email || c.email }));
-      const savedAddress = user.addresses?.[0];
-      if (savedAddress) {
-        setAddress(savedAddress.line1 || '');
-        setPincode(savedAddress.postal_code || '');
-        if (settings?.delivery?.allowed_pincodes) {
-          const isValid = settings.delivery.allowed_pincodes.includes(savedAddress.postal_code);
-          setPincodeValid(isValid);
+      api.getUserProfile().then(profile => {
+        if (profile) {
+          // Pre-fill from profile
+          setCustomer(c => ({ ...c, name: profile.full_name || c.name, phone: profile.phone || c.phone }));
+          const savedAddress = profile.addresses?.[0];
+          if (savedAddress) {
+            setAddress(savedAddress.line1 || '');
+            setPincode(savedAddress.postal_code || '');
+            // You might need to re-validate the pincode here
+            const isValid = settings?.delivery?.allowed_pincodes?.includes(savedAddress.postal_code);
+            setPincodeValid(isValid);
+          }
         }
-      }
+      }).catch(err => console.warn('No profile found or error fetching:', err));
     }
   }, [user, settings?.delivery?.allowed_pincodes]);
 

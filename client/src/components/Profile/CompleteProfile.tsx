@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import ProfileForm from './ProfileForm';
 
 export default function CompleteProfile() {

@@ -1,32 +1,44 @@
 
 import React from 'react';
-import { useAuth } from '@/context/AuthContext'; // Corrected import path
+import { useAuth } from '@/hooks/useAuth';
+import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 
-export function AddressesCard() {
-  const { user, loading } = useAuth();
+async function fetchAddresses() {
+  const res = await fetch('/api/user/addresses');
+  if (!res.ok) {
+    throw new Error('Failed to fetch addresses');
+  }
+  return res.json();
+}
 
-  if (loading) return <p>Loading addresses...</p>;
+export function AddressesCard() {
+  const { user } = useAuth();
+  const { data: addresses, isLoading, error } = useQuery({
+    queryKey: ['addresses'],
+    queryFn: fetchAddresses,
+    enabled: !!user,
+  });
 
   if (!user) {
     return (
       <div className="text-center">
-        <p className="text-gray-500">Please log in to manage your addresses.</p>
+        <p className="text-gray-500 mb-4">Log in to manage your addresses.</p>
+        <Button className="bg-brand-teak text-white hover:bg-brand-teak/90">Login</Button>
       </div>
     );
   }
 
-  // Addresses are now directly available from the user object
-  const { addresses } = user;
+  if (isLoading) return <p>Loading addresses...</p>;
+  if (error) return <p className="text-red-500">Could not load addresses.</p>;
 
   return (
     <div className="space-y-4">
       {addresses && addresses.length > 0 ? (
         addresses.map((address: any) => (
           <div key={address.id} className="p-3 border rounded-md">
-            {/* Adjust property names based on your actual address object structure */}
-            <p className="font-semibold">{address.line1}</p>
-            <p className="text-sm text-gray-600">{address.city}, {address.state} {address.postal_code}</p>
+            <p className="font-semibold">{address.street}</p>
+            <p className="text-sm text-gray-600">{address.city}, {address.state} {address.zip}</p>
             <div className="flex gap-2 mt-2">
               <Button variant="outline" size="sm">Edit</Button>
               <Button variant="destructive" size="sm">Delete</Button>

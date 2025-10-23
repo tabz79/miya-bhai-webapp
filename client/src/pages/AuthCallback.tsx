@@ -1,38 +1,128 @@
 // client/src/pages/AuthCallback.tsx
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/context/AuthContext";
 
-/**
- * This component handles the redirect from Supabase after a successful login.
- * It does NOT need to do anything manually with tokens.
- * The supabase-js client automatically handles the session from the URL hash.
- * The global AuthProvider will detect the onAuthStateChange event and update the user state.
- * We just need to wait for the user to be loaded and then redirect.
- */
+
+
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "@/lib/supabaseClient";
+import { Button } from "@/components/ui/button";
+
 export default function AuthCallback() {
-  const { user, loading } = useAuth();
   const navigate = useNavigate();
+  const [logs, setLogs] = useState<string[]>([]);
+
+  const L = (...args: any[]) => {
+    const msg = args
+      .map((a) => {
+        try {
+          if (typeof a === "string") return a;
+          return JSON.stringify(a);
+        } catch {
+          return String(a);
+        }
+      })
+      .join(" ");
+    console.log("[AuthCallback]", msg);
+    setLogs((s) => [...s, msg].slice(-60));
+  };
 
   useEffect(() => {
-    // If loading is finished and we have a user, the login was successful.
-    if (!loading && user) {
-      console.log("[AuthCallback] User found, redirecting to profile.");
-      navigate("/profile");
-    }
+    const handleAuthCallback = async () => {
+      L("Component mounted. Checking for auth hash...");
+      const hash = window.location.hash;
 
-    // If loading is finished and there's still no user, something went wrong.
-    if (!loading && !user) {
-      console.error("[AuthCallback] AuthProvider finished loading, but no user was found. Redirecting to invalid link page.");
-      navigate("/auth/invalid-link");
+      if (!hash || !hash.includes("access_token")) {
+        L("No auth hash found in the current URL.");
+        navigate("/auth/invalid-link");
+        return;
+      }
+
+      L("Auth hash found. Processing with URLSearchParams...");
+
+      try {
+        const params = new URLSearchParams(hash.substring(1));
+        const accessToken = params.get('access_token');
+        const refreshToken = params.get('refresh_token');
+
+        if (!accessToken || !refreshToken) {
+          throw new Error('Hash fragment is missing access_token or refresh_token.');
+        }
+
+        L("Tokens parsed. Calling setSession...");
+        const { error } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken,
+        }).catch(err => {
+          L("FATAL: setSession promise was rejected unexpectedly.", err);
+          console.error("setSession promise rejection details:", err);
+          return { error: err }; 
+        });
+
+        if (error) {
+          throw error;
+        }
+
+        L("Session successfully set. Navigating to home page.");
+        window.history.replaceState(null, '', window.location.pathname);
+        navigate("/");
+
+      } catch (e: any) {
+        L("ERROR during auth callback:", e.message || 'An unknown error occurred.');
+        console.error("Auth Callback Failure Details:", e);
+        navigate("/auth/invalid-link");
+      }
+    };
+
+    handleAuthCallback();
+  }, [navigate]);
+
+  const handleManualParse = async () => {
+    L("Manual parse button clicked.");
+    if (window.location.hash && window.location.hash.includes("access_token")) {
+      L("Hash contains access_token. Manual parse:");
+      try {
+        const h = window.location.hash.replace("#", "");
+        const params: any = Object.fromEntries(h.split("&").map((p) => p.split("=").map(decodeURIComponent)) as any);
+        L("Parsed hash keys:", Object.keys(params));
+
+        const { data, error } = await supabase.auth.setSession({
+          access_token: params.access_token,
+          refresh_token: params.refresh_token,
+        } as any);
+
+        if (error) {
+          L("Manual setSession error:", error.message || error);
+        } else {
+          L("Manual setSession success:", data);
+          navigate("/");
+        }
+      } catch (e: any) {
+        L("Manual hash parse error:", e && (e.message || e));
+      }
+    } else {
+      L("Hash does NOT contain access_token.");
     }
-  }, [user, loading, navigate]);
+  };
 
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="p-6 text-center">
-        <h3 className="text-lg font-semibold">Finalizing login...</h3>
-        <p className="text-sm text-gray-500">Please wait while we securely log you in.</p>
+      <div className="bg-white p-6 rounded shadow text-left max-w-xl">
+        <h3 className="font-semibold mb-2">Finalizing login — diagnostics</h3>
+        <p className="text-sm mb-4">Open the browser console for full logs. This box shows the latest logs for easy copy/paste.</p>
+        <div className="text-xs">
+          {logs.length === 0 ? (
+            <div className="text-gray-500">Waiting for logs…</div>
+          ) : (
+            logs.map((l, i) => (
+              <div key={i} className="mb-1">
+                <code>{l}</code>
+              </div>
+            ))
+          )}
+        </div>
+        <Button onClick={handleManualParse} className="w-full mt-4">
+          Manually Parse Hash
+        </Button>
       </div>
     </div>
   );
