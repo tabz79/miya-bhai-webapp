@@ -122,7 +122,7 @@ export function Home(): JSX.Element {
   };
 
   return (
-    <div className="w-[393px] min-h-screen bg-app-background mx-auto">
+    <div className="w-full min-h-screen bg-app-background mx-auto px-4 sm:px-6 lg:px-8">
       <MetaTags title="Miya Bhai Food Court - Home" description="Miya Bhai food app" />
       <JsonLD type="restaurant" />
       <Toolbar onSearch={handleSearch} initialQuery={searchQuery} />
@@ -143,9 +143,8 @@ export function Home(): JSX.Element {
         >
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
           <div
-            className="relative z-10 w-[360px] mx-auto transition-transform duration-300 ease-out"
+            className="relative z-10 w-full max-w-sm mx-auto transition-transform duration-300 ease-out"
             style={{
-              maxWidth: "360px",
               maxHeight: "70vh",
               marginTop: 56,
               transformOrigin: "center top",

@@ -39,7 +39,7 @@ export function DeliveryAd() {
 
           {/* Right contact info - minimal conservative adjustments only */}
           <div className="flex flex-col max-w-[62px] items-end relative top-[12px]">
-            <p className="h-[7px] font-typography-deliveryad-CTA font-[number:var(--typography-deliveryad-CTA-font-weight)] text-colortextdeliveryadcta text-[length:var(--typography-deliveryad-CTA-font-size)] tracking-[var(--typography-deliveryad-CTA-letter-spacing)] leading-[var(--typography-deliveryad-CTA-line-height)] whitespace-nowrap [font-style:var(--typography-deliveryad-CTA-font-style)]">
+            <p className="h-[7px] font-typography-deliveryad-CTA font-[number:var(--typography-deliveryad-CTA-font-weight)] text-colortextdeliveryadcta text-[length:var(--typography-deliveryad-CTA-font-size)] tracking-[var(--typography-deliveryad-CTA-letter-spacing)] leading-[var(--typography-deliveryad-CTA-line-height)] [font-style:var(--typography-deliveryad-CTA-font-style)]">
               Call us now :
             </p>
 

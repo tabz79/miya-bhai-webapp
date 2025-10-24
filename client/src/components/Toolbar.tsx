@@ -41,15 +41,15 @@ export function Toolbar({ onSearch, initialQuery = '' }: ToolbarProps) {
           <img
             src={logo}
             alt="Miya Bhai Food Court"
-            className="w-[70px] h-[44px] object-contain"
+            className="h-full w-auto object-contain max-h-[44px]"
             width={70}
             height={44}
           />
         </div>
 
         {/* Search bar - exact Figma specs: 180x36 */}
-        <div className="flex-shrink-0">
-          <div style={{ width: 180, height: 36 }}>
+        <div className="flex-shrink-0 w-full max-w-[180px] h-full">
+          <div>
             <SearchBarPill onSearch={onSearch} initialQuery={initialQuery} />
           </div>
         </div>

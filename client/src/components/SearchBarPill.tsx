@@ -43,7 +43,7 @@ export function SearchBarPill({ onSearch, initialQuery = '' }: SearchBarPillProp
     <div
       className={`
         relative h-[36px] bg-white shadow-searchbox rounded-[20px] flex items-center px-4
-        ${isExpanded ? 'w-full max-w-[280px]' : 'w-[180px]'}
+        w-full
         transition-all duration-200 ease-in-out
       `}
     >

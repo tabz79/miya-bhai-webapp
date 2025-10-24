@@ -6,7 +6,6 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { MobileFrame } from "@/components/ui/MobileFrame";
 import NotFound from "@/pages/not-found";
 
 import { Home } from "@/pages/Home";
@@ -62,9 +61,8 @@ function AppRoutes() {
   }
 
   return (
-    <MobileFrame>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
@@ -79,7 +77,6 @@ function AppRoutes() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </MobileFrame>
   );
 }
 
