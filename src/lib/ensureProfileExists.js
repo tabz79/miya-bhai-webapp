@@ -53,6 +53,7 @@ export default async function ensureProfileExists(supabase, userId, details = {}
         id: userId,
         email: details.email || null,
         full_name: details.name || null,
+        role: 'user', // Default role for new profiles
       })
       .select()
       .single();
