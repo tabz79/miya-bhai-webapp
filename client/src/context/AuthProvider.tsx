@@ -39,7 +39,6 @@ export const AuthProvider = ({ children }) => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (_event, session) => {
         setUser(session?.user ?? null);
-        setProfile(null); // Reset profile on auth change
         if (session?.user) {
           try {
             const { data, error, status } = await supabase
