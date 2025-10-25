@@ -1,6 +1,6 @@
 // client/src/App.tsx
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
@@ -35,35 +35,28 @@ import LoginPage from "@/pages/LoginPage";
 import AuthCallback from "@/pages/AuthCallback";
 
 import { supabase } from "@/lib/supabaseClient";
+import PrivateRoute from '@/components/PrivateRoute';
 
-/**
- * A helper component to handle the layout switching.
- * Note: we explicitly render /login and /auth/callback at top-level (outside MobileFrame)
- * so they cannot be accidentally hidden by mobile/admin layout logic.
- */
+const AdminLayout = () => <Outlet />;
+const AppLayout = () => <MobileFrame><Outlet /></MobileFrame>;
+
 function AppRoutes() {
-  const location = useLocation();
-  const isAdminRoute = location.pathname.startsWith("/admin");
-
-  if (isAdminRoute) {
-    return (
-      <Routes>
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/orders" element={<AdminOrdersPage />} />
-        <Route path="/admin/drivers" element={<AdminDriversPage />} />
-        <Route path="/admin/delivery" element={<AdminDeliveryPage />} />
-        <Route path="/admin/customers" element={<AdminCustomersPage />} />
-        <Route path="/admin/reports" element={<AdminReportsPage />} />
-        <Route path="/admin/settings" element={<AdminSettingsPage />} />
-        <Route path="/admin/coupons" element={<CouponsPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    );
-  }
-
   return (
-    <MobileFrame>
-      <Routes>
+    <Routes>
+      {/* Admin Routes */}
+      <Route path="/admin" element={<PrivateRoute><AdminLayout /></PrivateRoute>}>
+        <Route index element={<AdminDashboard />} />
+        <Route path="orders" element={<AdminOrdersPage />} />
+        <Route path="drivers" element={<AdminDriversPage />} />
+        <Route path="delivery" element={<AdminDeliveryPage />} />
+        <Route path="customers" element={<AdminCustomersPage />} />
+        <Route path="reports" element={<AdminReportsPage />} />
+        <Route path="settings" element={<AdminSettingsPage />} />
+        <Route path="coupons" element={<CouponsPage />} />
+      </Route>
+
+      {/* Public Routes */}
+      <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
@@ -74,12 +67,13 @@ function AppRoutes() {
         <Route path="/staff" element={<Staff />} />
         <Route path="/magic-link" element={<MagicLinkRequest />} />
         <Route path="/auth/invalid-link" element={<InvalidLink />} />
-        {/* ✅ unified callback handles both GitHub OAuth & Magic Links */}
-        <Route path="/auth/callback" element={<AuthCallback />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </MobileFrame>
+      </Route>
+
+      {/* Standalone Routes */}
+      <Route path="/auth/callback" element={<AuthCallback />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
