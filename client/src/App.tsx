@@ -35,7 +35,7 @@ import LoginPage from "@/pages/LoginPage";
 import AuthCallback from "@/pages/AuthCallback";
 
 import { supabase } from "@/lib/supabaseClient";
-import PrivateRoute from '@/components/PrivateRoute';
+import PrivateRoute from '@/components/PrivateRoute.tsx';
 
 const AdminLayout = () => <Outlet />;
 const AppLayout = () => <MobileFrame><Outlet /></MobileFrame>;
