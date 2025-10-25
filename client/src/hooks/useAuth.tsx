@@ -41,7 +41,7 @@ export function useAuth() {
       setLoading(true);
       const { data, error, status } = await supabase
         .from('profiles')
-        .select(`role`)
+        .select('*')
         .eq('id', userId)
         .single();
 

@@ -28,72 +28,13 @@ type ProfileRecord = {
 };
 
 export function Profile() {
-  const { session, loading, user } = useAuth();
-  const [profile, setProfile] = useState<ProfileRecord | null>(null);
-  const [isFetchingProfile, setIsFetchingProfile] = useState(false);
+  const { user, profile, loading } = useAuth();
   const [isSigningOut, setIsSigningOut] = useState(false);
   const [editing, setEditing] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
 
   const { toast } = useToast();
   const queryClient = useQueryClient();
-
-  // Helper: fetch profile by a given userId (used when user.id becomes available)
-  const fetchProfileById = async (userId: string | null) => {
-    if (!userId) return null;
-    try {
-      setIsFetchingProfile(true);
-
-      const { data, error } = await supabase
-        .from<ProfileRecord>('profiles')
-        .select('*')
-        .eq('user_id', userId)
-        .maybeSingle(); // ✅ FINAL FIX: Use maybeSingle() to gracefully handle 0 rows.
-
-      if (error) {
-        console.error('Error fetching profile:', error);
-        toast?.({
-          title: 'Profile load failed',
-          description: 'Check console for details.',
-          variant: 'destructive',
-        });
-        return null;
-      }
-      return data;
-    } catch (err) {
-      console.error('Unexpected fetchProfile error', err);
-      toast?.({
-        title: 'Profile load failed',
-        description: 'Unexpected error. See console.',
-        variant: 'destructive',
-      });
-      return null;
-    } finally {
-      setIsFetchingProfile(false);
-    }
-  };
-
-  useEffect(() => {
-    let mounted = true;
-
-    const run = async () => {
-      // This check is now based on user.id, which is a stable primitive
-      if (!user?.id) {
-        if (mounted) setProfile(null);
-        return;
-      }
-
-      // Normal path: user.id exists — fetch profile directly
-      const fetched = await fetchProfileById(user.id);
-      if (mounted) setProfile(fetched);
-    };
-
-    run();
-
-    return () => {
-      mounted = false;
-    };
-  }, [user?.id]);
 
   const handleSignOut = async () => {
     if (isSigningOut) return;
@@ -129,7 +70,6 @@ export function Profile() {
         // continue: still clear client state and invalidate cache to avoid stale UI
       }
 
-      setProfile(null);
       toast?.({
         title: '✅ Signed out',
         description: 'You have been signed out successfully.',
@@ -167,10 +107,10 @@ export function Profile() {
       .toUpperCase();
 
   const handleProfileSave = (p: ProfilePayload) => {
-    setProfile((prev) => ({
-      ...(prev ?? { id: user?.id ?? p.id }),
-      ...p,
-    }));
+    // setProfile((prev) => ({
+    //   ...(prev ?? { id: user?.id ?? p.id }),
+    //   ...p,
+    // }));
     setEditing(false);
     toast?.({
       title: 'Profile updated',
@@ -210,7 +150,7 @@ export function Profile() {
   return (
     <div className="w-full min-h-screen bg-app-background">
       <div className="p-4 border-b border-gray-200 bg-app-background">
-        {loading || isFetchingProfile ? (
+        {loading ? (
           <div className="h-16" />
         ) : user ? (
           <div className="flex items-center justify-between">
