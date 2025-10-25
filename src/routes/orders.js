@@ -10,16 +10,9 @@ import {
 } from '../services/orderService.js';
 
 import { validatePagination, requireStaffId, requireStatus, isUuid } from '../middleware/validation.js';
+import requireAdmin from '../middleware/requireAdmin.js';
 
 const router = express.Router();
-
-// Basic auth middleware for admin
-const adminAuth = (req, res, next) => {
-  if (req.headers.authorization !== process.env.ADMIN_SECRET) {
-    return res.status(401).json({ message: 'Unauthorized' });
-  }
-  next();
-};
 
 /**
  * Create order
@@ -104,7 +97,7 @@ router.get('/orders/:id', async (req, res) => {
  * Paginated orders list (admin-only)
  * GET /api/orders?page=&limit=&status=&search=
  */
-router.get('/orders', adminAuth, validatePagination, async (req, res) => {
+router.get('/orders', requireAdmin, validatePagination, async (req, res) => {
   try {
     const page = Math.max(1, parseInt(req.query.page || '1', 10));
     const limit = Math.min(100, parseInt(req.query.limit || '25', 10));
@@ -139,7 +132,7 @@ router.get('/staff/:staffId/orders', requireStaffId, async (req, res) => {
  * PUT /api/orders/:id/assign
  * body: { staffId: 'uuid' }
  */
-router.put('/orders/:id/assign', adminAuth, requireStaffId, async (req, res) => {
+router.put('/orders/:id/assign', requireAdmin, requireStaffId, async (req, res) => {
   try {
     const { staffId } = req.body;
     const id = req.params.id;

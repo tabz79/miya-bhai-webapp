@@ -138,6 +138,25 @@ export const api = {
       body: JSON.stringify(addressData),
     }, true);
   },
+
+  // Admin: Get all orders (paginated)
+  async getAdminOrders({ page = 1, limit = 25, status, search }: { page?: number; limit?: number; status?: string; search?: string; }) {
+    const params = new URLSearchParams({
+      page: String(page),
+      limit: String(limit),
+    });
+    if (status) params.set('status', status);
+    if (search) params.set('search', search);
+    return await safeFetch(`/api/orders?${params.toString()}`, { method: 'GET' }, true);
+  },
+
+  // Admin: Assign driver to order
+  async assignDriverToOrder(orderId: string, staffId: string) {
+    return await safeFetch(`/api/orders/${orderId}/assign`, {
+      method: 'PUT',
+      body: JSON.stringify({ staffId }),
+    }, true);
+  },
 };
 
 export default api;
