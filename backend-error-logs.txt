@@ -1,18 +1,23 @@
+page: https://miya-bhai-webapp-v1.pages.dev/profile
+user logged in: tabrez.ataher@gmail.com
 console logs:
-index-DN9t4sKO.js:211 Supabase client initialized (client-side anon).
-index-DN9t4sKO.js:330 [App] supabase client ready: true
-
+index-CpLh2faE.js:211 Supabase client initialized (client-side anon).
+index-CpLh2faE.js:330 [App] supabase client ready: true
 
 network logs:
-https://miya-bhai-webapp-v1.pages.dev/admin
-https://miya-bhai-webapp-v1.pages.dev/admin
+https://miya-bhai-webapp-v1.pages.dev/profile
 https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)
-https://miya-bhai-webapp-v1.pages.dev/assets/index-DN9t4sKO.js
+https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js
 https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css
 https://replit.com/public/js/replit-dev-banner.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BpLE7UnF.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js
+https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2
+https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2
+https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2
+https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2
+https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2.js-KYj8M0RS.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/commonScrapper.js-CLoHGMum.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/searchHTMLscrapper.js-B48YtZrN.js
@@ -34,8 +39,344 @@ https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DR7AKLv6.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-CTTc9I1s.js
+
+fetch logs:
+fetch("https://miya-bhai-webapp-v1.pages.dev/profile", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "cache-control": "max-age=0",
+    "if-none-match": "\"243edac709af919e719b417a94cca527\"",
+    "priority": "u=0, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8dfae4cf5d16b30d4377b28529b898cf\"",
+    "priority": "u=1",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css", {
+  "headers": {
+    "accept": "text/css,*/*;q=0.1",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8ad69869d3f850770bfa198bd2ff855c\"",
+    "priority": "u=0",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "style",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://replit.com/public/js/replit-dev-banner.js", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BpLE7UnF.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2.js-KYj8M0RS.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/commonScrapper.js-CLoHGMum.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/searchHTMLscrapper.js-B48YtZrN.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/categoryScrapper.js-qa5rN7xd.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/filterScrapper.js-ssplCSsZ.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/spendCalculate.js-BcM4BlFl.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitor.js-CCSgD45A.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitorGrafana.js-DPWQLnCi.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/wishlistScrapper.js-BWTznjfH.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/couponCollection.js-C_j0Ya19.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/untrustedPriceComparison.js-Drkl162w.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/checkoutScrapper.js-Bs8rV8ED.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/savedPricePopUp.js-CzwrDQnc.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/ctUtils.js-BVp6UjoY.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/counter.js-DexD2371.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index.ts-BIAvo6aU.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/content.ts-ox6D_Bpg.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DR7AKLv6.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-CTTc9I1s.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+
+page: https://miya-bhai-webapp-v1.pages.dev/admin
+user logged in: tabrez.ataher@gmail.com
+role: admin
+console logs:
+index-CpLh2faE.js:211 Supabase client initialized (client-side anon).
+index-CpLh2faE.js:330 [App] supabase client ready: true
+
+network:
+https://miya-bhai-webapp-v1.pages.dev/admin
 https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)
-https://miya-bhai-webapp-v1.pages.dev/assets/index-DN9t4sKO.js
+https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js
 https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css
 https://replit.com/public/js/replit-dev-banner.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BpLE7UnF.js
@@ -63,34 +404,13 @@ chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DR7AKLv6.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-CTTc9I1s.js
 
-network fetch:
+fetch:
 fetch("https://miya-bhai-webapp-v1.pages.dev/admin", {
   "headers": {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "cache-control": "max-age=0",
-    "if-none-match": "\"243edac709af919e719b417a94cca527\"",
-    "priority": "u=0, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "document",
-    "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-user": "?1",
-    "upgrade-insecure-requests": "1"
-  },
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/admin", {
-  "headers": {
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "cache-control": "max-age=0",
-    "if-none-match": "\"243edac709af919e719b417a94cca527\"",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
     "priority": "u=0, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -118,345 +438,11 @@ fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-cate
   "mode": "cors",
   "credentials": "omit"
 }); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-DN9t4sKO.js", {
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js", {
   "headers": {
     "accept": "*/*",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"420d61ee3749f945a9fd89b7d2f13fe0\"",
-    "priority": "u=1",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "script",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css", {
-  "headers": {
-    "accept": "text/css,*/*;q=0.1",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"8ad69869d3f850770bfa198bd2ff855c\"",
-    "priority": "u=0",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "style",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://replit.com/public/js/replit-dev-banner.js", {
-  "headers": {
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BpLE7UnF.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2.js-KYj8M0RS.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/commonScrapper.js-CLoHGMum.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/searchHTMLscrapper.js-B48YtZrN.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/categoryScrapper.js-qa5rN7xd.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/filterScrapper.js-ssplCSsZ.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/spendCalculate.js-BcM4BlFl.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitor.js-CCSgD45A.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/monitorGrafana.js-DPWQLnCi.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/wishlistScrapper.js-BWTznjfH.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/couponCollection.js-C_j0Ya19.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/untrustedPriceComparison.js-Drkl162w.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/checkoutScrapper.js-Bs8rV8ED.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/savedPricePopUp.js-CzwrDQnc.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/ctUtils.js-BVp6UjoY.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/counter.js-DexD2371.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/index.ts-BIAvo6aU.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/content.ts-ox6D_Bpg.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"243edac709af919e719b417a94cca527\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/logo-DR7AKLv6.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHpY.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-CTTc9I1s.js", {
-  "headers": {
-    "if-modified-since": "Fri, 10 Oct 2025 04:42:56 GMT",
-    "if-none-match": "\"wzNHfkP/pk4zmgOV4l2rUASgRo4=\""
-  },
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)", {
-  "headers": {
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\""
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-DN9t4sKO.js", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"420d61ee3749f945a9fd89b7d2f13fe0\"",
+    "if-none-match": "\"8dfae4cf5d16b30d4377b28529b898cf\"",
     "priority": "u=1",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -646,7 +632,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "\"243edac709af919e719b417a94cca527\"",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -677,6 +663,310 @@ fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/sentry-BUYDRHp
 }); ;
 fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/en-CTTc9I1s.js", {
   "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+
+page: https://miya-bhai-webapp-v1.pages.dev/profile
+user logged in: s.saber.t79@gmail.com
+console logs:
+index-CpLh2faE.js:211 Supabase client initialized (client-side anon).
+index-CpLh2faE.js:330 [App] supabase client ready: true
+
+
+network:
+https://miya-bhai-webapp-v1.pages.dev/profile
+https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)
+https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js
+https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css
+https://replit.com/public/js/replit-dev-banner.js
+https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2
+https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2
+https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2
+https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2
+https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2
+https://miya-bhai-webapp-v1.pages.dev/favicon.ico
+
+fetch:
+fetch("https://miya-bhai-webapp-v1.pages.dev/profile", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-language": "en-IN,en;q=0.9",
+    "cache-control": "max-age=0",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
+    "priority": "u=0, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"8dfae4cf5d16b30d4377b28529b898cf\"",
+    "priority": "u=1",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css", {
+  "headers": {
+    "accept": "text/css,*/*;q=0.1",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"8ad69869d3f850770bfa198bd2ff855c\"",
+    "priority": "u=0",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "style",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://replit.com/public/js/replit-dev-banner.js", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://fonts.googleapis.com/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+page: https://miya-bhai-webapp-v1.pages.dev/admin
+user logged in: s.saber.t79@gmail.com
+role: user
+console logs:
+index-CpLh2faE.js:211 Supabase client initialized (client-side anon).
+index-CpLh2faE.js:330 [App] supabase client ready: true
+
+network:
+https://miya-bhai-webapp-v1.pages.dev/admin
+https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)
+https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js
+https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css
+https://replit.com/public/js/replit-dev-banner.js
+https://miya-bhai-webapp-v1.pages.dev/favicon.ico
+
+fetch:
+fetch("https://miya-bhai-webapp-v1.pages.dev/admin", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-language": "en-IN,en;q=0.9",
+    "cache-control": "max-age=0",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
+    "priority": "u=0, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1"
+  },
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://fonts.googleapis.com/css?family=Nunito:var(--typography-menu-categorytext-font-weight),var(--typography-menu-title-font-weight),var(--typography-deliveryad-phonenumber-font-weight),var(--typography-deliveryad-highlight-font-weight),var(--typography-menu-dishname-font-weight),var(--typography-card-title-font-weight),var(--typography-deliveryad-CTA-font-weight),var(--typography-body-searchplaceholder-font-weight),var(--typography-menu-price-font-weight),400|Carattere:var(--typography-section-title-font-weight),var(--typography-deliveryad-heading-font-weight),var(--typography-card-description-font-weight)|Aref+Ruqaa:var(--typography-hero-description-font-weight),var(--typography-hero-description-b-font-weight)|Aref+Ruqaa+Ink:var(--typography-hero-h2-font-weight),var(--typography-her-tagline-font-weight),var(--typography-hero-h1-font-weight)", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-CpLh2faE.js", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"8dfae4cf5d16b30d4377b28529b898cf\"",
+    "priority": "u=1",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css", {
+  "headers": {
+    "accept": "text/css,*/*;q=0.1",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"8ad69869d3f850770bfa198bd2ff855c\"",
+    "priority": "u=0",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "style",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://replit.com/public/js/replit-dev-banner.js", {
+  "headers": {
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\""
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9",
+    "if-none-match": "\"cab57158d14982a7ac8441dc10709c5e\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/admin",
   "body": null,
   "method": "GET",
   "mode": "cors",

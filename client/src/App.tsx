@@ -77,6 +77,8 @@ function AppRoutes() {
   );
 }
 
+import { AuthProvider } from "@/context/AuthProvider";
+
 function App() {
   useEffect(() => {
     console.log("[App] supabase client ready:", Boolean(supabase));
@@ -87,8 +89,10 @@ function App() {
       <HelmetProvider>
         <TooltipProvider>
           <BrowserRouter>
-            <Toaster />
-            <AppRoutes />
+            <AuthProvider>
+              <Toaster />
+              <AppRoutes />
+            </AuthProvider>
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
