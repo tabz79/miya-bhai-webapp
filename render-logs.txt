@@ -1,94 +1,5 @@
-2025-10-26T12:05:35.121783545Z [2025-10-26T12:05:35.121Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:05:35.1219937Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:05:35.125379363Z [2025-10-26T12:05:35.125Z] Request ID: a3b1a031-ede2-49b5-bf42-ba882235a9b8, Path: GET /api/admin/summary
-2025-10-26T12:05:35.125401024Z [2025-10-26T12:05:35.125Z] GET /api/admin/summary
-2025-10-26T12:05:35.125554827Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:05:35.129811482Z [2025-10-26T12:05:35.127Z] Request ID: 8cb2262d-a714-4cf3-96e5-49659ed2bf54, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:05:35.129821122Z [2025-10-26T12:05:35.128Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:05:35.129831352Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:05:35.593836292Z [2025-10-26T12:05:35.593Z] Request ID: 549a0c39-7a5d-4f1b-8aec-bc33490c5c56, Path: GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:05:35.593860192Z [2025-10-26T12:05:35.593Z] GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:05:35.594028916Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:05:35.594160029Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
-2025-10-26T12:08:31.423989795Z ==> Detected service running on port 10000
-2025-10-26T12:08:31.511945403Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-26T12:08:36.979651934Z [2025-10-26T12:08:36.979Z] Request ID: 1f0795ef-d1fb-474a-bf1f-bbc1a5416fa2, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:08:36.979672305Z [2025-10-26T12:08:36.979Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:08:36.979833239Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:08:36.981593292Z [2025-10-26T12:08:36.981Z] Request ID: 3ab496e7-5f7f-49e1-9903-6bd7b3080759, Path: GET /api/admin/summary
-2025-10-26T12:08:36.981614822Z [2025-10-26T12:08:36.981Z] GET /api/admin/summary
-2025-10-26T12:08:36.982190816Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:08:36.990636064Z [2025-10-26T12:08:36.990Z] Request ID: e2795316-767f-4552-9383-05707dffcd2e, Path: GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:08:36.990649114Z [2025-10-26T12:08:36.990Z] GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:08:36.990799328Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:08:36.990919681Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
-2025-10-26T12:08:37.056531751Z [2025-10-26T12:08:37.056Z] Request ID: aca40a89-181d-450f-8136-b0d3c8d8b07a, Path: GET /api/admin/charts/payment-methods
-2025-10-26T12:08:37.056554701Z [2025-10-26T12:08:37.056Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:08:37.056718095Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-26T12:16:44.512978165Z ==> Deploying...
-2025-10-26T12:17:21.548691619Z ==> Running 'npm start'
-2025-10-26T12:17:23.663286997Z 
-2025-10-26T12:17:23.663313248Z > rest-express@1.0.0 start
-2025-10-26T12:17:23.663318808Z > cd src && node server.js
-2025-10-26T12:17:23.663322298Z 
-2025-10-26T12:17:26.248452757Z [admin routes] loaded
-2025-10-26T12:17:26.654290057Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-26T12:17:26.654706279Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
-2025-10-26T12:17:26.65548229Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
-2025-10-26T12:17:26.655571083Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-26T12:17:26.656615672Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-26T12:17:26.656638832Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-26T12:17:26.656767846Z [server] trust proxy: 1
-2025-10-26T12:17:26.658165135Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-26T12:17:26.743181124Z Initializing menu service with CANONICAL data.
-2025-10-26T12:17:26.748886943Z Menu loaded. Source: canonical, Items: 289
-2025-10-26T12:17:26.75055912Z Server running → http://localhost:10000
-2025-10-26T12:17:26.75058284Z NODE_ENV: production
-2025-10-26T12:17:26.750595981Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-26T12:17:27.471552272Z [2025-10-26T12:17:27.471Z] Request ID: 96a7d893-24f9-4179-abaf-4e32bfcbc1d1, Path: HEAD /
-2025-10-26T12:17:27.472258372Z [2025-10-26T12:17:27.471Z] HEAD /
-2025-10-26T12:17:35.455858407Z ==> Your service is live 🎉
-2025-10-26T12:17:35.485863024Z ==> 
-2025-10-26T12:17:35.514071741Z ==> ///////////////////////////////////////////////////////////
-2025-10-26T12:17:35.541307078Z ==> 
-2025-10-26T12:17:35.566727066Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-26T12:17:35.593385333Z ==> 
-2025-10-26T12:17:35.619724941Z ==> ///////////////////////////////////////////////////////////
-2025-10-26T12:17:36.582235289Z [2025-10-26T12:17:36.582Z] Request ID: 3ebcd0e2-2630-407c-8b19-0714518523f0, Path: GET /
-2025-10-26T12:17:36.58226017Z [2025-10-26T12:17:36.582Z] GET /
 2025-10-26T12:22:38.331097687Z ==> Detected service running on port 10000
 2025-10-26T12:22:38.443454405Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-26T12:23:21.532135745Z [2025-10-26T12:23:21.531Z] Request ID: a77f29f6-9c00-41cf-8702-90d404d7e399, Path: GET /api/admin/summary
-2025-10-26T12:23:21.532167626Z [2025-10-26T12:23:21.531Z] GET /api/admin/summary
-2025-10-26T12:23:21.535271652Z [2025-10-26T12:23:21.535Z] Request ID: 088175d5-fb48-4e9c-ba62-d1b7ce64ebae, Path: GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:23:21.535286903Z [2025-10-26T12:23:21.535Z] GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:23:21.545617681Z [2025-10-26T12:23:21.545Z] Request ID: 5281e6ff-89d4-4756-ae12-934fe1d91d38, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:21.545644991Z [2025-10-26T12:23:21.545Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:21.964628946Z [2025-10-26T12:23:21.964Z] Request ID: bd114be2-db6b-46a0-afd9-fb8fc994838d, Path: GET /api/admin/charts/payment-methods
-2025-10-26T12:23:21.964657696Z [2025-10-26T12:23:21.964Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:23:24.285064849Z [2025-10-26T12:23:24.284Z] Request ID: 52e8ac25-2892-4031-b5f8-b268dd6cd435, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:24.28509435Z [2025-10-26T12:23:24.284Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:24.288255188Z [2025-10-26T12:23:24.288Z] Request ID: 0a0afac5-171f-40bb-a3a0-0b595051ec0b, Path: GET /api/admin/charts/payment-methods
-2025-10-26T12:23:24.288291289Z [2025-10-26T12:23:24.288Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:23:24.306016873Z [2025-10-26T12:23:24.305Z] Request ID: d169de02-39d3-4cf9-ad39-7ab8cdd092c5, Path: GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:23:24.306396634Z [2025-10-26T12:23:24.305Z] GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:23:24.315713363Z [2025-10-26T12:23:24.315Z] Request ID: 7119fc13-372b-4c00-9f28-c8052493b869, Path: GET /api/admin/summary
-2025-10-26T12:23:24.315731514Z [2025-10-26T12:23:24.315Z] GET /api/admin/summary
-2025-10-26T12:23:28.114560499Z [2025-10-26T12:23:28.114Z] Request ID: 4476d295-ad9a-4422-9277-60ac209308ed, Path: GET /api/admin/summary
-2025-10-26T12:23:28.11458551Z [2025-10-26T12:23:28.114Z] GET /api/admin/summary
-2025-10-26T12:23:28.126002578Z [2025-10-26T12:23:28.125Z] Request ID: 88690451-48f1-495a-8906-d596bc3b1e40, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:28.126022569Z [2025-10-26T12:23:28.125Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:23:28.127043387Z [2025-10-26T12:23:28.126Z] Request ID: 02e3ce2c-6065-4418-8ddb-6cdd7aa970f5, Path: GET /api/admin/charts/payment-methods
-2025-10-26T12:23:28.127055977Z [2025-10-26T12:23:28.126Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:23:28.132661353Z [2025-10-26T12:23:28.132Z] Request ID: 883e3742-39ba-4267-b9bc-14b8a1169888, Path: GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:23:28.132674934Z [2025-10-26T12:23:28.132Z] GET /api/admin/orders?page=1&limit=10
-2025-10-26T12:24:47.935326046Z [2025-10-26T12:24:47.935Z] Request ID: 462aefc8-7382-41c6-9e80-8dc3c5733f4f, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:24:47.935352647Z [2025-10-26T12:24:47.935Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
-2025-10-26T12:24:47.93760344Z [2025-10-26T12:24:47.937Z] Request ID: 94556783-e54f-4d4b-97ab-6c1c88c3bf9e, Path: GET /api/admin/summary
-2025-10-26T12:24:47.93761757Z [2025-10-26T12:24:47.937Z] GET /api/admin/summary
-2025-10-26T12:24:47.939637646Z [2025-10-26T12:24:47.939Z] Request ID: d325925c-6744-41e8-852e-a5ea315e271c, Path: GET /api/admin/charts/payment-methods
-2025-10-26T12:24:47.939657067Z [2025-10-26T12:24:47.939Z] GET /api/admin/charts/payment-methods
-2025-10-26T12:24:47.971956537Z [2025-10-26T12:24:47.971Z] Request ID: cb075d7c-6b89-4758-a55f-5daa60eb5419, Path: GET /api/admin/orders?page=1&limit=10
 2025-10-26T12:24:47.971975677Z [2025-10-26T12:24:47.971Z] GET /api/admin/orders?page=1&limit=10
 2025-10-26T12:25:29.894830774Z [2025-10-26T12:25:29.894Z] Request ID: 8bc00dbf-4424-4e50-9e38-36f9251c9e35, Path: GET /api/admin/summary
 2025-10-26T12:25:29.894863825Z [2025-10-26T12:25:29.894Z] GET /api/admin/summary
@@ -98,3 +9,42 @@
 2025-10-26T12:25:29.898930618Z [2025-10-26T12:25:29.898Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
 2025-10-26T12:25:30.356206288Z [2025-10-26T12:25:30.356Z] Request ID: ce26bed4-2587-46ed-a7b6-dd42384e369a, Path: GET /api/admin/orders?page=1&limit=10
 2025-10-26T12:25:30.356226249Z [2025-10-26T12:25:30.356Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:27:22.901009657Z [2025-10-26T12:27:22.900Z] Request ID: bd713ed1-5f22-4924-b212-840b12e50ed3, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:27:22.901044338Z [2025-10-26T12:27:22.900Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:27:22.901914622Z [2025-10-26T12:27:22.901Z] Request ID: 66e5be6c-98ee-4eef-ae9e-7c8623c9da08, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:27:22.901943963Z [2025-10-26T12:27:22.901Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:27:22.904911506Z [2025-10-26T12:27:22.904Z] Request ID: c49df83c-9690-4f68-91db-1cbc8e7f6211, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:27:22.904934766Z [2025-10-26T12:27:22.904Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:27:22.918414822Z [2025-10-26T12:27:22.918Z] Request ID: 7daec3cd-a83e-4829-92fd-04a5e2132d6c, Path: GET /api/admin/summary
+2025-10-26T12:27:22.918470244Z [2025-10-26T12:27:22.918Z] GET /api/admin/summary
+2025-10-26T12:35:46.330706653Z ==> Deploying...
+2025-10-26T12:36:22.417656578Z ==> Running 'npm start'
+2025-10-26T12:36:23.42236396Z 
+2025-10-26T12:36:23.422405301Z > rest-express@1.0.0 start
+2025-10-26T12:36:23.422411961Z > cd src && node server.js
+2025-10-26T12:36:23.422416181Z 
+2025-10-26T12:36:26.016310532Z [admin routes] loaded
+2025-10-26T12:36:26.424066359Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T12:36:26.424407446Z [dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2025-10-26T12:36:26.424979929Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  override existing env vars with { override: true }
+2025-10-26T12:36:26.425075261Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T12:36:26.425828248Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T12:36:26.425851289Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T12:36:26.426015562Z [server] trust proxy: 1
+2025-10-26T12:36:26.427102747Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T12:36:26.427656849Z Initializing menu service with CANONICAL data.
+2025-10-26T12:36:26.517324563Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T12:36:26.518766016Z Server running → http://localhost:10000
+2025-10-26T12:36:26.518818737Z NODE_ENV: production
+2025-10-26T12:36:26.518827677Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T12:36:26.651069376Z [2025-10-26T12:36:26.650Z] Request ID: 6e94c10f-a857-4683-ae3f-f8d5ee13b1de, Path: HEAD /
+2025-10-26T12:36:26.651103647Z [2025-10-26T12:36:26.651Z] HEAD /
+2025-10-26T12:36:27.620397592Z ==> Your service is live 🎉
+2025-10-26T12:36:27.650659649Z ==> 
+2025-10-26T12:36:27.683515935Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T12:36:27.713203072Z ==> 
+2025-10-26T12:36:27.74006918Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T12:36:27.766603767Z ==> 
+2025-10-26T12:36:27.795618775Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T12:41:30.794510144Z ==> Detected service running on port 10000
+2025-10-26T12:41:31.11191749Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
