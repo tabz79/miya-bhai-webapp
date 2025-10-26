@@ -81,7 +81,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     logout,
   };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <div style={{
+      backgroundColor: 'red',
+      color: 'white',
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '2rem',
+      fontFamily: 'monospace',
+      textAlign: 'center',
+      padding: '2rem'
+    }}>
+      AUTH PROVIDER IS NOT UPDATING. THE BUILD IS CACHED. PLEASE CLEAR THE BUILD CACHE.
+    </div>
+  );
 };
 
 export const useAuth = () => {
