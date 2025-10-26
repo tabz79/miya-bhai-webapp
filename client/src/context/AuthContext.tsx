@@ -34,11 +34,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setSession(session);
 
         if (session?.user) {
-          // If a session exists, fetch the full profile from our backend
-          const profile = await api.getUserProfile();
-          const fullUser = { ...session.user, ...profile };
-          setUser(fullUser);
-          setIsAdmin(fullUser.role === 'admin');
+          try {
+            // If a session exists, fetch the full profile from our backend
+            const profile = await api.getUserProfile();
+            const fullUser = { ...session.user, ...profile };
+            setUser(fullUser);
+            setIsAdmin(fullUser.role === 'admin');
+          } catch (error) {
+            console.error('Error fetching profile on session fetch:', error);
+            setUser(null);
+            setIsAdmin(false);
+          }
         } else {
           setUser(null);
           setIsAdmin(false);
@@ -66,7 +72,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             setIsAdmin(fullUser.role === 'admin');
           } catch (error) {
             console.error('Error fetching profile on auth change:', error);
-            setUser(session.user); // Fallback to basic user info
+            setUser(null); // Treat as not logged in if profile fails
             setIsAdmin(false);
           } finally {
             setLoading(false);
