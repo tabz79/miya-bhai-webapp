@@ -1,116 +1,300 @@
-2025-10-23T10:32:59.482387517Z [2025-10-23T10:32:59.482Z] Request ID: d749023e-be58-4fc7-b828-cc874cdf2a5c, Path: GET /api/menu
-2025-10-23T10:32:59.482420358Z [2025-10-23T10:32:59.482Z] GET /api/menu
-2025-10-23T10:32:59.601951923Z [2025-10-23T10:32:59.601Z] Request ID: c7daab12-ed7a-4d5a-ad89-71a2b8b951ee, Path: GET /api/coupons
-2025-10-23T10:32:59.601988224Z [2025-10-23T10:32:59.601Z] GET /api/coupons
-2025-10-23T10:32:59.602829713Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:33:04.227642198Z [2025-10-23T10:33:04.227Z] Request ID: 10ee9190-2acd-4ebe-9b2e-32d3ffff7d5d, Path: GET /api/coupons
-2025-10-23T10:33:04.227671588Z [2025-10-23T10:33:04.227Z] GET /api/coupons
-2025-10-23T10:33:04.228140679Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:51:57.968227233Z ==> Deploying...
-2025-10-23T10:52:33.631527247Z ==> Running 'npm start'
-2025-10-23T10:52:34.727798016Z 
-2025-10-23T10:52:34.727827767Z > rest-express@1.0.0 start
-2025-10-23T10:52:34.727832468Z > cd src && node server.js
-2025-10-23T10:52:34.727834877Z 
-2025-10-23T10:52:37.82553813Z [admin routes] loaded
-2025-10-23T10:52:38.424202798Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-23T10:52:38.424258299Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
-2025-10-23T10:52:38.425132143Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
-2025-10-23T10:52:38.425264827Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T10:52:38.426384758Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T10:52:38.426388438Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T10:52:38.426545962Z [server] trust proxy: 1
-2025-10-23T10:52:38.428290201Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T10:52:38.429233997Z Initializing menu service with CANONICAL data.
-2025-10-23T10:52:38.434370969Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T10:52:38.436471307Z Server running → http://localhost:10000
-2025-10-23T10:52:38.436486017Z NODE_ENV: production
-2025-10-23T10:52:38.436491787Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T10:52:39.41535015Z [2025-10-23T10:52:39.414Z] Request ID: 786c3b11-a419-47d3-acf2-d371c47580d5, Path: HEAD /
-2025-10-23T10:52:39.415393741Z [2025-10-23T10:52:39.414Z] HEAD /
-2025-10-23T10:52:48.672984418Z ==> Your service is live 🎉
-2025-10-23T10:52:48.705215207Z ==> 
-2025-10-23T10:52:49.206409853Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:49.236663991Z ==> 
-2025-10-23T10:52:49.270521409Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T10:52:49.301927967Z ==> 
-2025-10-23T10:52:49.333747485Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:50.345357214Z [2025-10-23T10:52:50.345Z] Request ID: 35fbc186-81d1-49be-bb68-8b5d90401966, Path: GET /
-2025-10-23T10:52:50.345395015Z [2025-10-23T10:52:50.345Z] GET /
-2025-10-23T10:57:44.916036484Z ==> Detected service running on port 10000
-2025-10-23T10:57:45.004038188Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T13:55:49.560202146Z NODE_ENV: production
-2025-10-23T13:55:49.560212677Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T13:55:57.860620038Z [2025-10-23T13:55:57.860Z] Request ID: 6b527aa9-a843-4b28-aa23-c35c39fa97f9, Path: HEAD /api/menu
-2025-10-23T13:55:57.860657571Z [2025-10-23T13:55:57.860Z] HEAD /api/menu
-2025-10-23T13:55:57.868387625Z [2025-10-23T13:55:57.868Z] Request ID: 1fcad32c-71fd-48ca-aef9-bd7f02a845d0, Path: HEAD /api/menu
-2025-10-23T13:55:57.868478081Z [2025-10-23T13:55:57.868Z] HEAD /api/menu
-2025-10-23T13:55:57.870464311Z [2025-10-23T13:55:57.870Z] Request ID: a3a4019b-4127-43b6-8cc8-af48bbe1bf58, Path: HEAD /api/menu
-2025-10-23T13:55:57.870485893Z [2025-10-23T13:55:57.870Z] HEAD /api/menu
-2025-10-23T13:55:57.889453624Z [2025-10-23T13:55:57.889Z] Request ID: 40f43f0c-7053-4887-a28c-0a6005b8c45a, Path: HEAD /api/menu
-2025-10-23T13:55:57.889476076Z [2025-10-23T13:55:57.889Z] HEAD /api/menu
-2025-10-23T13:55:57.958859131Z [2025-10-23T13:55:57.958Z] Request ID: dc644fc8-182c-4b90-bc8f-a6bb6305cb59, Path: HEAD /api/menu
-2025-10-23T13:55:57.958884983Z [2025-10-23T13:55:57.958Z] HEAD /api/menu
-2025-10-23T13:55:57.960619104Z [2025-10-23T13:55:57.960Z] Request ID: 659a6bf0-52db-44ae-a6ff-ff1fc1bd5c81, Path: HEAD /api/menu
-2025-10-23T13:55:57.960634695Z [2025-10-23T13:55:57.960Z] HEAD /api/menu
-2025-10-23T13:55:57.962933918Z [2025-10-23T13:55:57.962Z] Request ID: 93323f66-e080-4997-a93c-78294de9580e, Path: HEAD /api/menu
-2025-10-23T13:55:57.962950269Z [2025-10-23T13:55:57.962Z] HEAD /api/menu
-2025-10-23T13:55:57.964707342Z [2025-10-23T13:55:57.964Z] Request ID: 1f77b956-74c8-4a81-944a-e4abe6e9a8de, Path: HEAD /api/menu
-2025-10-23T13:55:57.964721173Z [2025-10-23T13:55:57.964Z] HEAD /api/menu
-2025-10-23T13:55:57.993641025Z [2025-10-23T13:55:57.993Z] Request ID: f0a1c6c9-2a4c-4cd8-9abf-1c2ab2e1751a, Path: HEAD /api/menu
-2025-10-23T13:55:57.993687539Z [2025-10-23T13:55:57.993Z] HEAD /api/menu
-2025-10-23T13:55:58.005994417Z [2025-10-23T13:55:58.005Z] Request ID: fd24d8c8-89a1-4119-82ce-35a501812be6, Path: HEAD /api/menu
-2025-10-23T13:55:58.006082714Z [2025-10-23T13:55:58.005Z] HEAD /api/menu
-2025-10-23T13:55:58.051209339Z [2025-10-23T13:55:58.051Z] Request ID: 3cff46aa-df5b-426c-9dbd-ee9a69ccc48f, Path: HEAD /api/menu
-2025-10-23T13:55:58.057398566Z [2025-10-23T13:55:58.057Z] HEAD /api/menu
-2025-10-23T13:55:58.145005286Z [2025-10-23T13:55:58.144Z] Request ID: 0ad528ff-5ea5-4e50-ba72-9ba1a35c60c2, Path: HEAD /api/menu
-2025-10-23T13:55:58.145167899Z [2025-10-23T13:55:58.144Z] HEAD /api/menu
-2025-10-23T13:55:58.281749595Z [2025-10-23T13:55:58.281Z] Request ID: f3ffb374-5059-4085-a989-61c8fb943011, Path: GET /api/menu
-2025-10-23T13:55:58.281798168Z [2025-10-23T13:55:58.281Z] GET /api/menu
-2025-10-23T13:55:58.332121665Z [2025-10-23T13:55:58.331Z] Request ID: 45a7fa84-be47-48c1-9841-db74ec711318, Path: HEAD /api/menu
-2025-10-23T13:55:58.332221853Z [2025-10-23T13:55:58.332Z] HEAD /api/menu
-2025-10-23T13:55:58.352182549Z [2025-10-23T13:55:58.351Z] Request ID: e4e16a9d-5aeb-4de3-980f-03e0209d8ba3, Path: HEAD /api/menu
-2025-10-23T13:55:58.352356692Z [2025-10-23T13:55:58.352Z] HEAD /api/menu
-2025-10-23T13:55:58.381287895Z [2025-10-23T13:55:58.379Z] Request ID: 34d42612-bfed-4ca1-a558-b9cf6bc7d3a6, Path: HEAD /api/menu
-2025-10-23T13:55:58.381304316Z [2025-10-23T13:55:58.379Z] HEAD /api/menu
-2025-10-23T13:55:58.427394874Z [2025-10-23T13:55:58.426Z] Request ID: f0d56fac-90c3-4568-bee8-f2cfc3f18a87, Path: HEAD /api/menu
-2025-10-23T13:55:58.427417356Z [2025-10-23T13:55:58.426Z] HEAD /api/menu
-2025-10-23T13:55:58.544572716Z [2025-10-23T13:55:58.544Z] Request ID: baa685bf-20a1-4073-8423-3736db06470d, Path: HEAD /api/menu
-2025-10-23T13:55:58.546262213Z [2025-10-23T13:55:58.544Z] HEAD /api/menu
-2025-10-23T14:20:39.037001355Z ==> Deploying...
-2025-10-23T14:22:43.641113074Z ==> No open ports detected, continuing to scan...
-2025-10-23T14:22:43.867482215Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:22:50.781742042Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
-2025-10-23T14:22:50.782354919Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  override existing env vars with { override: true }
-2025-10-23T14:22:50.782439222Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T14:22:50.783368937Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T14:22:50.783387148Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T14:22:50.783511291Z [server] trust proxy: 1
-2025-10-23T14:22:50.78457771Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T14:22:50.785189567Z Initializing menu service with CANONICAL data.
-2025-10-23T14:22:50.78856019Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T14:22:50.790048181Z Server running → http://localhost:10000
-2025-10-23T14:22:50.790064432Z NODE_ENV: production
-2025-10-23T14:22:50.790113853Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T14:22:51.579507302Z [2025-10-23T14:22:51.578Z] Request ID: 12bc21b9-0615-4b1b-921b-42297e0a9e8a, Path: HEAD /
-2025-10-23T14:22:51.579526803Z [2025-10-23T14:22:51.578Z] HEAD /
-2025-10-23T14:23:01.227183142Z ==> Your service is live 🎉
-2025-10-23T14:23:01.262909059Z ==> 
-2025-10-23T14:23:01.297691287Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:01.340337565Z ==> 
-2025-10-23T14:23:01.370652592Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T14:23:01.4060864Z ==> 
-2025-10-23T14:23:01.438543798Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:03.098263576Z [2025-10-23T14:23:03.098Z] Request ID: 8f30a8b4-e00b-442a-906d-98785df036de, Path: GET /
-2025-10-23T14:23:03.098290017Z [2025-10-23T14:23:03.098Z] GET /
-2025-10-23T14:27:54.860696555Z ==> Detected service running on port 10000
-2025-10-23T14:27:55.002437366Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:29:54.288491151Z [2025-10-23T14:29:54.288Z] Request ID: 74842dbe-e86c-4fea-8828-bdf379820c51, Path: OPTIONS /api/user/orders
-2025-10-23T14:29:54.288516562Z [2025-10-23T14:29:54.288Z] OPTIONS /api/user/orders
-2025-10-23T14:29:54.623090002Z [2025-10-23T14:29:54.622Z] Request ID: 34d2e6ad-95a6-44cc-8f45-4f3d9a30bfd4, Path: GET /api/user/orders
-2025-10-23T14:29:54.623114533Z [2025-10-23T14:29:54.622Z] GET /api/user/orders
-2025-10-23T14:29:54.623915725Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T14:29:56.040530041Z [requireAuth] Authenticated via Supabase token: {
-2025-10-23T14:29:56.040556832Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
-2025-10-23T14:29:56.040561342Z   email: 'tabrez.ataher@gmail.com'
-2025-10-23T14:29:56.040564932Z }
+2025-10-26T08:26:03.759299011Z ==> Deploying...
+2025-10-26T08:26:43.118835519Z > rest-express@1.0.0 start
+2025-10-26T08:26:43.118840619Z > cd src && node server.js
+2025-10-26T08:26:43.118843039Z 
+2025-10-26T08:26:45.52019399Z [admin routes] loaded
+2025-10-26T08:26:46.020211369Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T08:26:46.020554715Z [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-10-26T08:26:46.021178077Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2025-10-26T08:26:46.021253948Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T08:26:46.022031332Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T08:26:46.022055382Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T08:26:46.022171694Z [server] trust proxy: 1
+2025-10-26T08:26:46.023266074Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T08:26:46.023913046Z Initializing menu service with CANONICAL data.
+2025-10-26T08:26:46.026838538Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T08:26:46.117102901Z Server running → http://localhost:10000
+2025-10-26T08:26:46.117123632Z NODE_ENV: production
+2025-10-26T08:26:46.117127142Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T08:26:46.718796529Z [2025-10-26T08:26:46.718Z] Request ID: 8120e606-b274-4cd8-926d-da56766593f9, Path: HEAD /
+2025-10-26T08:26:46.718839439Z [2025-10-26T08:26:46.718Z] HEAD /
+2025-10-26T08:26:55.897419586Z ==> Your service is live 🎉
+2025-10-26T08:26:55.930974743Z ==> 
+2025-10-26T08:26:55.96201066Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T08:26:55.990993577Z ==> 
+2025-10-26T08:26:56.019694894Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T08:26:56.047994582Z ==> 
+2025-10-26T08:26:56.075958799Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T08:26:57.009441288Z [2025-10-26T08:26:57.009Z] Request ID: bae3e6e0-665f-43be-9538-9af78f3c0e75, Path: GET /
+2025-10-26T08:26:57.009488428Z [2025-10-26T08:26:57.009Z] GET /
+2025-10-26T08:31:54.315687558Z ==> Detected service running on port 10000
+2025-10-26T08:31:54.406445447Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T09:09:56.82223692Z ==> Running 'npm start'
+2025-10-26T09:09:57.922652838Z 
+2025-10-26T09:09:57.922696589Z > rest-express@1.0.0 start
+2025-10-26T09:09:57.922702359Z > cd src && node server.js
+2025-10-26T09:09:57.922704079Z 
+2025-10-26T09:10:00.433533881Z [admin routes] loaded
+2025-10-26T09:10:00.931069752Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T09:10:00.931533411Z [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2025-10-26T09:10:00.932331178Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-26T09:10:00.93242917Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T09:10:00.934101044Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T09:10:00.934173046Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T09:10:00.934307939Z [server] trust proxy: 1
+2025-10-26T09:10:00.936237209Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T09:10:00.936689778Z Initializing menu service with CANONICAL data.
+2025-10-26T09:10:01.025041952Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T09:10:01.02735164Z Server running → http://localhost:10000
+2025-10-26T09:10:01.02736341Z NODE_ENV: production
+2025-10-26T09:10:01.02736644Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T09:10:07.233936225Z [2025-10-26T09:10:07.233Z] Request ID: 2cd8e090-4fc4-412e-903a-b8e9a7e0b710, Path: HEAD /api/menu
+2025-10-26T09:10:07.233963686Z [2025-10-26T09:10:07.233Z] HEAD /api/menu
+2025-10-26T09:10:07.240256756Z [2025-10-26T09:10:07.240Z] Request ID: 458ba61f-b61b-4a55-8ca2-6c2c059985c0, Path: HEAD /api/menu
+2025-10-26T09:10:07.240275416Z [2025-10-26T09:10:07.240Z] HEAD /api/menu
+2025-10-26T09:10:07.444342178Z [2025-10-26T09:10:07.444Z] Request ID: 445b487e-c180-4b31-b1e2-6ce94462b8a5, Path: HEAD /api/menu
+2025-10-26T09:10:07.444365389Z [2025-10-26T09:10:07.444Z] HEAD /api/menu
+2025-10-26T09:10:07.448365261Z [2025-10-26T09:10:07.448Z] Request ID: 51f53831-7a20-4627-a848-7df22ea7f018, Path: HEAD /api/menu
+2025-10-26T09:10:07.448384222Z [2025-10-26T09:10:07.448Z] HEAD /api/menu
+2025-10-26T09:10:07.467326963Z [2025-10-26T09:10:07.465Z] Request ID: 3a34bfbb-5dde-405c-8b99-d122ca39048f, Path: HEAD /api/menu
+2025-10-26T09:10:07.467340883Z [2025-10-26T09:10:07.465Z] HEAD /api/menu
+2025-10-26T09:10:07.470874926Z [2025-10-26T09:10:07.470Z] Request ID: 546225a7-91f9-427b-b047-324e2ec6a251, Path: HEAD /api/menu
+2025-10-26T09:10:07.470941337Z [2025-10-26T09:10:07.470Z] HEAD /api/menu
+2025-10-26T09:10:07.476190196Z [2025-10-26T09:10:07.475Z] Request ID: c52d2423-3211-4875-8d49-cbc26b698e3b, Path: HEAD /api/menu
+2025-10-26T09:10:07.476201426Z [2025-10-26T09:10:07.475Z] HEAD /api/menu
+2025-10-26T09:10:07.4846522Z [2025-10-26T09:10:07.484Z] Request ID: 01a487bc-616c-4eae-8303-998803abc149, Path: HEAD /api/menu
+2025-10-26T09:10:07.484839654Z [2025-10-26T09:10:07.484Z] HEAD /api/menu
+2025-10-26T09:10:07.521291216Z [2025-10-26T09:10:07.521Z] Request ID: aa395922-5388-48cf-b3a6-e3da8cdfd2f2, Path: HEAD /api/menu
+2025-10-26T09:10:07.521311967Z [2025-10-26T09:10:07.521Z] HEAD /api/menu
+2025-10-26T09:10:07.557172257Z [2025-10-26T09:10:07.557Z] Request ID: 6792d673-6650-4aac-8761-8bc934b15089, Path: HEAD /api/menu
+2025-10-26T09:10:07.557199018Z [2025-10-26T09:10:07.557Z] HEAD /api/menu
+2025-10-26T09:10:07.712617906Z [2025-10-26T09:10:07.712Z] Request ID: b8597d68-8669-4c75-899d-8b8150aa2c4b, Path: HEAD /api/menu
+2025-10-26T09:10:07.712645586Z [2025-10-26T09:10:07.712Z] HEAD /api/menu
+2025-10-26T09:10:08.20601136Z [2025-10-26T09:10:08.205Z] Request ID: e52c163b-5a15-43fc-ad80-449d73f179ab, Path: GET /api/menu
+2025-10-26T09:10:08.20602989Z [2025-10-26T09:10:08.205Z] GET /api/menu
+2025-10-26T09:18:49.648075998Z ==> Deploying...
+2025-10-26T09:19:33.900244481Z ==> Running 'npm start'
+2025-10-26T09:19:34.994723414Z 
+2025-10-26T09:19:34.994753625Z > rest-express@1.0.0 start
+2025-10-26T09:19:34.994758475Z > cd src && node server.js
+2025-10-26T09:19:34.994760835Z 
+2025-10-26T09:19:37.495179278Z [admin routes] loaded
+2025-10-26T09:19:37.991295736Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T09:19:37.991784067Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-10-26T09:19:37.992479223Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-26T09:19:37.992579185Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T09:19:37.993507856Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T09:19:37.993526516Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T09:19:37.993611248Z [server] trust proxy: 1
+2025-10-26T09:19:37.994844696Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T09:19:37.99547666Z Initializing menu service with CANONICAL data.
+2025-10-26T09:19:37.99904703Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T09:19:38.000594904Z Server running → http://localhost:10000
+2025-10-26T09:19:38.000709977Z NODE_ENV: production
+2025-10-26T09:19:38.000717677Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T09:19:38.712693094Z [2025-10-26T09:19:38.711Z] Request ID: f042bb32-8d92-4bd0-b7d4-0bc279c9ba69, Path: HEAD /
+2025-10-26T09:19:38.712707324Z [2025-10-26T09:19:38.712Z] HEAD /
+2025-10-26T09:19:40.653414989Z ==> Your service is live 🎉
+2025-10-26T09:19:40.684249286Z ==> 
+2025-10-26T09:19:40.711943474Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T09:19:40.737578172Z ==> 
+2025-10-26T09:19:40.763965719Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T09:19:40.789438507Z ==> 
+2025-10-26T09:19:40.820390564Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T09:19:41.937901841Z [2025-10-26T09:19:41.937Z] Request ID: 6fd064f8-9f85-4a98-a31c-7087da8a1641, Path: GET /
+2025-10-26T09:19:41.937918931Z [2025-10-26T09:19:41.937Z] GET /
+2025-10-26T09:24:44.974062768Z ==> Detected service running on port 10000
+2025-10-26T09:24:45.178562659Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T09:26:32.313395088Z ==> Deploying...
+2025-10-26T09:27:23.152396589Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T09:27:23.15241917Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T09:27:23.152560702Z [server] trust proxy: 1
+2025-10-26T09:27:23.153708332Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T09:27:23.154474115Z Initializing menu service with CANONICAL data.
+2025-10-26T09:27:23.244588866Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T09:27:23.246809615Z Server running → http://localhost:10000
+2025-10-26T09:27:23.246830615Z NODE_ENV: production
+2025-10-26T09:27:23.246968377Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T09:27:24.248549188Z [2025-10-26T09:27:24.248Z] Request ID: 04adcc10-57de-406f-96b1-ea16e45c90c0, Path: HEAD /
+2025-10-26T09:27:24.248585839Z [2025-10-26T09:27:24.248Z] HEAD /
+2025-10-26T09:27:32.99844192Z ==> Your service is live 🎉
+2025-10-26T09:27:33.030495887Z ==> 
+2025-10-26T09:27:33.060478414Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T09:27:33.089442541Z ==> 
+2025-10-26T09:27:33.120216018Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T09:27:33.149041906Z ==> 
+2025-10-26T09:27:33.186435392Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T09:27:34.075286205Z [2025-10-26T09:27:34.075Z] Request ID: a2fa9295-d951-4b6f-a543-ab4babdf83a2, Path: GET /
+2025-10-26T09:27:34.075343936Z [2025-10-26T09:27:34.075Z] GET /
+2025-10-26T09:28:28.754985144Z [2025-10-26T09:28:28.754Z] Request ID: 08a9f85e-1f7d-435a-b726-6e01e290c520, Path: GET /api/menu
+2025-10-26T09:28:28.755016665Z [2025-10-26T09:28:28.754Z] GET /api/menu
+2025-10-26T09:32:29.751676091Z ==> Detected service running on port 10000
+2025-10-26T09:32:29.890580129Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T11:25:42.001882844Z ==> Deploying...
+2025-10-26T11:26:38.522112207Z ==> Running 'npm start'
+2025-10-26T11:26:40.133099178Z 
+2025-10-26T11:26:40.133126379Z > rest-express@1.0.0 start
+2025-10-26T11:26:40.133131509Z > cd src && node server.js
+2025-10-26T11:26:40.133134109Z 
+2025-10-26T11:26:42.810147794Z [admin routes] loaded
+2025-10-26T11:26:43.214746207Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T11:26:43.215131927Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2025-10-26T11:26:43.215765544Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-26T11:26:43.215851017Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T11:26:43.216610297Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T11:26:43.216675289Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T11:26:43.216772532Z [server] trust proxy: 1
+2025-10-26T11:26:43.217894272Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T11:26:43.218481718Z Initializing menu service with CANONICAL data.
+2025-10-26T11:26:43.222871897Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T11:26:43.224342136Z Server running → http://localhost:10000
+2025-10-26T11:26:43.224363947Z NODE_ENV: production
+2025-10-26T11:26:43.224373737Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T11:26:44.069901094Z [2025-10-26T11:26:44.069Z] Request ID: 75857fd6-3b1d-41c6-b865-02ebf840ac6e, Path: HEAD /
+2025-10-26T11:26:44.069936785Z [2025-10-26T11:26:44.069Z] HEAD /
+2025-10-26T11:26:44.908214597Z ==> No open ports detected, continuing to scan...
+2025-10-26T11:26:45.021959811Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T11:26:52.594369337Z ==> Your service is live 🎉
+2025-10-26T11:26:52.625032744Z ==> 
+2025-10-26T11:26:52.654522351Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T11:26:52.682566069Z ==> 
+2025-10-26T11:26:52.709887766Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T11:26:52.736997584Z ==> 
+2025-10-26T11:26:52.763752851Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T11:26:53.874373466Z [2025-10-26T11:26:53.874Z] Request ID: bc4edae3-e94d-47ae-b5b5-ac3e493eff50, Path: GET /
+2025-10-26T11:26:53.874394506Z [2025-10-26T11:26:53.874Z] GET /
+2025-10-26T11:31:50.275229159Z ==> Detected service running on port 10000
+2025-10-26T11:31:50.375130221Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T12:02:46.123234602Z ==> Deploying...
+2025-10-26T12:03:20.287257649Z ==> Running 'npm start'
+2025-10-26T12:03:21.299331902Z 
+2025-10-26T12:03:21.332075655Z > rest-express@1.0.0 start
+2025-10-26T12:03:21.332091405Z > cd src && node server.js
+2025-10-26T12:03:21.332094835Z 
+2025-10-26T12:03:23.891431471Z [admin routes] loaded
+2025-10-26T12:03:24.386942199Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-26T12:03:24.387417011Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-10-26T12:03:24.388029746Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-26T12:03:24.388115428Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-26T12:03:24.388957389Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-26T12:03:24.388976159Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-26T12:03:24.389136973Z [server] trust proxy: 1
+2025-10-26T12:03:24.390459646Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-26T12:03:24.391248535Z Initializing menu service with CANONICAL data.
+2025-10-26T12:03:24.39513092Z Menu loaded. Source: canonical, Items: 289
+2025-10-26T12:03:24.39674005Z Server running → http://localhost:10000
+2025-10-26T12:03:24.39674843Z NODE_ENV: production
+2025-10-26T12:03:24.39675877Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
+2025-10-26T12:03:24.96903471Z [2025-10-26T12:03:24.968Z] Request ID: ae1f31ce-b897-4b9e-bc51-8b10d4a6a39f, Path: HEAD /
+2025-10-26T12:03:24.969053441Z [2025-10-26T12:03:24.968Z] HEAD /
+2025-10-26T12:03:26.762901567Z ==> Your service is live 🎉
+2025-10-26T12:03:26.802350264Z ==> 
+2025-10-26T12:03:26.831978131Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T12:03:26.860541358Z ==> 
+2025-10-26T12:03:26.889379115Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-26T12:03:26.918214393Z ==> 
+2025-10-26T12:03:26.94701838Z ==> ///////////////////////////////////////////////////////////
+2025-10-26T12:03:27.888329602Z [2025-10-26T12:03:27.884Z] Request ID: f48e336b-71df-46c7-aa62-fac2718ec7f3, Path: GET /
+2025-10-26T12:03:27.888352493Z [2025-10-26T12:03:27.884Z] GET /
+2025-10-26T12:03:44.107319798Z [2025-10-26T12:03:44.107Z] Request ID: fde3af0e-3a84-4b3a-885a-512a42dcf475, Path: OPTIONS /api/user/orders
+2025-10-26T12:03:44.107357159Z [2025-10-26T12:03:44.107Z] OPTIONS /api/user/orders
+2025-10-26T12:03:44.460755333Z [2025-10-26T12:03:44.460Z] Request ID: 27b6ac9b-576e-4a54-80f4-30a14c2dc5c8, Path: GET /api/user/orders
+2025-10-26T12:03:44.460783104Z [2025-10-26T12:03:44.460Z] GET /api/user/orders
+2025-10-26T12:03:44.461557713Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:03:45.78009147Z [requireAuth] Authenticated via Supabase token: {
+2025-10-26T12:03:45.780111411Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-10-26T12:03:45.780113831Z   email: 'tabrez.ataher@gmail.com'
+2025-10-26T12:03:45.780116001Z }
+2025-10-26T12:03:57.835084607Z [2025-10-26T12:03:57.834Z] Request ID: 69c70f7c-7739-45bc-bbff-6bfd60e21d6c, Path: GET /api/admin/summary
+2025-10-26T12:03:57.835110978Z [2025-10-26T12:03:57.835Z] GET /api/admin/summary
+2025-10-26T12:03:57.835727233Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:03:57.846271031Z [2025-10-26T12:03:57.846Z] Request ID: 1dea6360-1502-4200-a429-ead2823e7777, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:03:57.846292852Z [2025-10-26T12:03:57.846Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:03:57.846528218Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:03:57.846866966Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:03:57.856404489Z [2025-10-26T12:03:57.856Z] Request ID: 0560f438-54b2-4285-b80b-e8ba497606ed, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:03:57.85643094Z [2025-10-26T12:03:57.856Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:03:57.856620525Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:03:57.907079902Z [2025-10-26T12:03:57.906Z] Request ID: 6c796db3-6bf8-48a5-8dd8-4101c5c7000c, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:03:57.907106033Z [2025-10-26T12:03:57.907Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:03:57.907451061Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:06.421734761Z [2025-10-26T12:04:06.421Z] Request ID: f9ae7469-b7e6-4460-81f9-f1b019e4d1c0, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:06.421764242Z [2025-10-26T12:04:06.421Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:06.421973517Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:06.425117404Z [2025-10-26T12:04:06.425Z] Request ID: f3758db1-9969-457e-917b-5bf853a92929, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:06.425164435Z [2025-10-26T12:04:06.425Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:06.425442982Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:06.425657127Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:04:06.460629905Z [2025-10-26T12:04:06.460Z] Request ID: 6a5925af-b56b-459f-86ba-d460c5638b69, Path: GET /api/admin/summary
+2025-10-26T12:04:06.460717527Z [2025-10-26T12:04:06.460Z] GET /api/admin/summary
+2025-10-26T12:04:06.460912402Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:06.463030613Z [2025-10-26T12:04:06.462Z] Request ID: d7e6eb78-ad78-46d2-9993-cd9b3aa06b0f, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:04:06.463047954Z [2025-10-26T12:04:06.462Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:04:06.464299525Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:14.258581685Z [2025-10-26T12:04:14.258Z] Request ID: 375e5d77-cd06-4b26-b797-b88ad9ced39b, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:14.258616396Z [2025-10-26T12:04:14.258Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:14.258933424Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:14.270676362Z [2025-10-26T12:04:14.270Z] Request ID: 7deb4129-b5a0-4361-a982-5b8d518421dd, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:14.270698702Z [2025-10-26T12:04:14.270Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:14.270932638Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:14.271393719Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:04:14.279847867Z [2025-10-26T12:04:14.279Z] Request ID: e82426ea-7079-4f87-a2cb-22b89f19b6c4, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:04:14.279885207Z [2025-10-26T12:04:14.279Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:04:14.280050781Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:14.736447622Z [2025-10-26T12:04:14.736Z] Request ID: 54065d06-94f6-4d1b-b086-e77dac77ed01, Path: GET /api/admin/summary
+2025-10-26T12:04:14.736482013Z [2025-10-26T12:04:14.736Z] GET /api/admin/summary
+2025-10-26T12:04:14.73676239Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:16.081847991Z [2025-10-26T12:04:16.081Z] Request ID: f6f047d4-0949-447a-a3f7-85ff98cddec9, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:04:16.081884432Z [2025-10-26T12:04:16.081Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:04:16.082073466Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:16.088106884Z [2025-10-26T12:04:16.087Z] Request ID: ab81d68d-d8a1-4158-9ccf-70d8447dad96, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:16.088119914Z [2025-10-26T12:04:16.088Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:16.088399751Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:16.117461054Z [2025-10-26T12:04:16.117Z] Request ID: 43696f2b-bf65-4614-b79c-da8e4ae4b558, Path: GET /api/admin/summary
+2025-10-26T12:04:16.117493965Z [2025-10-26T12:04:16.117Z] GET /api/admin/summary
+2025-10-26T12:04:16.117675089Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:16.158141631Z [2025-10-26T12:04:16.157Z] Request ID: 2de94124-4cfb-4337-be7d-9a98e3693aa4, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:16.158164412Z [2025-10-26T12:04:16.158Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:16.158365027Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:16.158612233Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:04:39.749663882Z [2025-10-26T12:04:39.749Z] Request ID: 0b46b274-a66f-42f0-ae34-9fd6c689e2dc, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:39.749705553Z [2025-10-26T12:04:39.749Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:04:39.74998906Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:39.75042808Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:04:39.753161927Z [2025-10-26T12:04:39.752Z] Request ID: aacf5257-3080-4005-8ee7-ae93c6109c3a, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:39.753189378Z [2025-10-26T12:04:39.753Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:04:39.75366638Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:39.76348488Z [2025-10-26T12:04:39.763Z] Request ID: 8af83cb5-eda1-4ea1-8fa0-9aeca223c17b, Path: GET /api/admin/summary
+2025-10-26T12:04:39.763511881Z [2025-10-26T12:04:39.763Z] GET /api/admin/summary
+2025-10-26T12:04:39.763734107Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:04:39.996885364Z [2025-10-26T12:04:39.996Z] Request ID: f43f5b02-6a9d-4e8f-8f57-2f5e75e9e1ca, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:04:39.996921955Z [2025-10-26T12:04:39.996Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:04:39.99716079Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:05:35.121729454Z [2025-10-26T12:05:35.121Z] Request ID: ed7cbed5-4757-4ac5-925c-ef093a83940f, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:05:35.121783545Z [2025-10-26T12:05:35.121Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:05:35.1219937Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:05:35.125379363Z [2025-10-26T12:05:35.125Z] Request ID: a3b1a031-ede2-49b5-bf42-ba882235a9b8, Path: GET /api/admin/summary
+2025-10-26T12:05:35.125401024Z [2025-10-26T12:05:35.125Z] GET /api/admin/summary
+2025-10-26T12:05:35.125554827Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:05:35.129811482Z [2025-10-26T12:05:35.127Z] Request ID: 8cb2262d-a714-4cf3-96e5-49659ed2bf54, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:05:35.129821122Z [2025-10-26T12:05:35.128Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:05:35.129831352Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:05:35.593836292Z [2025-10-26T12:05:35.593Z] Request ID: 549a0c39-7a5d-4f1b-8aec-bc33490c5c56, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:05:35.593860192Z [2025-10-26T12:05:35.593Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:05:35.594028916Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:05:35.594160029Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:08:31.423989795Z ==> Detected service running on port 10000
+2025-10-26T12:08:31.511945403Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-26T12:08:36.979651934Z [2025-10-26T12:08:36.979Z] Request ID: 1f0795ef-d1fb-474a-bf1f-bbc1a5416fa2, Path: GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:08:36.979672305Z [2025-10-26T12:08:36.979Z] GET /api/admin/charts/orders-over-time?from=2025-09-26&to=2025-10-26&interval=day
+2025-10-26T12:08:36.979833239Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:08:36.981593292Z [2025-10-26T12:08:36.981Z] Request ID: 3ab496e7-5f7f-49e1-9903-6bd7b3080759, Path: GET /api/admin/summary
+2025-10-26T12:08:36.981614822Z [2025-10-26T12:08:36.981Z] GET /api/admin/summary
+2025-10-26T12:08:36.982190816Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:08:36.990636064Z [2025-10-26T12:08:36.990Z] Request ID: e2795316-767f-4552-9383-05707dffcd2e, Path: GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:08:36.990649114Z [2025-10-26T12:08:36.990Z] GET /api/admin/orders?page=1&limit=10
+2025-10-26T12:08:36.990799328Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
+2025-10-26T12:08:36.990919681Z [admin/orders] route hit { query: { page: '1', limit: '10' } }
+2025-10-26T12:08:37.056531751Z [2025-10-26T12:08:37.056Z] Request ID: aca40a89-181d-450f-8136-b0d3c8d8b07a, Path: GET /api/admin/charts/payment-methods
+2025-10-26T12:08:37.056554701Z [2025-10-26T12:08:37.056Z] GET /api/admin/charts/payment-methods
+2025-10-26T12:08:37.056718095Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
