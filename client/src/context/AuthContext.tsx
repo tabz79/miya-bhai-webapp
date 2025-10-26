@@ -62,7 +62,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (_event, session) => {
-        setLoading(true); // Always start loading on auth change
         setSession(session);
         if (session?.user) {
           try {
@@ -74,13 +73,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             console.error('Error fetching profile on auth change:', error);
             setUser(null); // Treat as not logged in if profile fails
             setIsAdmin(false);
-          } finally {
-            setLoading(false);
           }
         } else {
           setUser(null);
           setIsAdmin(false);
-          setLoading(false); // Ensure loading is false when logged out
         }
       }
     );
