@@ -157,11 +157,6 @@ export const api = {
       body: JSON.stringify({ staffId }),
     }, true);
   },
-
-  // Admin: Get staff list
-  async getAdminStaff() {
-    return await safeFetch('/api/staff', { method: 'GET' }, true);
-  },
 };
 
 export default api;
