@@ -26,7 +26,6 @@ import AdminCustomersPage from "@/admin/pages/customers";
 import AdminReportsPage from "@/admin/pages/reports";
 import AdminSettingsPage from "@/admin/pages/settings";
 import CouponsPage from "@/admin/pages/Coupons";
-import AdminRoute from "@/components/AdminRoute";
 
 import MagicLinkRequest from "@/pages/MagicLinkRequest";
 import InvalidLink from "@/pages/InvalidLink";
@@ -49,70 +48,14 @@ function AppRoutes() {
   if (isAdminRoute) {
     return (
       <Routes>
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <AdminDashboard />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/orders"
-          element={
-            <AdminRoute>
-              <AdminOrdersPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/drivers"
-          element={
-            <AdminRoute>
-              <AdminDriversPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/delivery"
-          element={
-            <AdminRoute>
-              <AdminDeliveryPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/customers"
-          element={
-            <AdminRoute>
-              <AdminCustomersPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/reports"
-          element={
-            <AdminRoute>
-              <AdminReportsPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/settings"
-          element={
-            <AdminRoute>
-              <AdminSettingsPage />
-            </AdminRoute>
-          }
-        />
-        <Route
-          path="/admin/coupons"
-          element={
-            <AdminRoute>
-              <CouponsPage />
-            </AdminRoute>
-          }
-        />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/orders" element={<AdminOrdersPage />} />
+        <Route path="/admin/drivers" element={<AdminDriversPage />} />
+        <Route path="/admin/delivery" element={<AdminDeliveryPage />} />
+        <Route path="/admin/customers" element={<AdminCustomersPage />} />
+        <Route path="/admin/reports" element={<AdminReportsPage />} />
+        <Route path="/admin/settings" element={<AdminSettingsPage />} />
+        <Route path="/admin/coupons" element={<CouponsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
