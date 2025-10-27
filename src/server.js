@@ -112,6 +112,17 @@ app.use(cors(corsOptions));
 
 app.use(cookieParser());
 
+// Simple root health for uptime checks (prevents noisy 404 on '/')
+app.get('/', (_req, res) => {
+  res.json({
+    status: 'ok',
+    service: process.env.RENDER_SERVICE_NAME || 'miya-bhai-api',
+    env: process.env.NODE_ENV || 'development',
+    time: new Date().toISOString(),
+  });
+});
+app.head('/', (_req, res) => res.status(200).end());
+
 // routes
 // Mount GitHub custom auth router first so /api/auth/github/* is handled
 app.use('/api', githubAuthRouter);
@@ -119,11 +130,16 @@ app.use('/api', githubAuthRouter);
 // existing auth router (other auth endpoints like /api/auth/verify remain)
 app.use('/api', authRouter);
 app.use('/api', healthRouter);
+
+// ⬇️ Mount PUBLIC coupons BEFORE generic '/api' routers to avoid shadowing
+// couponsRouter uses router.get('/') so this exposes GET /api/coupons
+app.use('/api/coupons', couponsRouter);
+
+// The rest
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
-app.use('/api', couponsRouter);
 app.use('/api/user', userRouter);
 
 // 404 + error
@@ -140,7 +156,7 @@ async function startServer() {
       console.log(`Server running → http://localhost:${PORT}`);
       console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
       // show mount confirmation
-      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)');
+      console.log('[server] mounted routes: / (root health), /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)');
     });
   }
 }
