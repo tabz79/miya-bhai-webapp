@@ -53,9 +53,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // quick sanity checks for important envs
-console.log('[env check]',
-  'SUPABASE_URL=', !!process.env.SUPABASE_URL,
-  'SUPABASE_SERVICE_KEY=', !!process.env.SUPABASE_SERVICE_KEY
+console.log(
+  '[env check]',
+  'SUPABASE_URL=',
+  !!process.env.SUPABASE_URL,
+  'SUPABASE_SERVICE_KEY=',
+  !!process.env.SUPABASE_SERVICE_KEY,
+  'SUPABASE_SERVICE_ROLE_KEY=',
+  !!process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
@@ -123,7 +128,10 @@ app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
-app.use('/api', couponsRouter);
+
+// ⬇️ Mount coupons router at /api/coupons so coupons.js `router.get('/')` => GET /api/coupons
+app.use('/api/coupons', couponsRouter);
+
 app.use('/api/user', userRouter);
 
 // 404 + error
@@ -140,7 +148,7 @@ async function startServer() {
       console.log(`Server running → http://localhost:${PORT}`);
       console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
       // show mount confirmation
-      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)');
+      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)');
     });
   }
 }

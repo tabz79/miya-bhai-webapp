@@ -1,16 +1,16 @@
 // src/routes/coupons.js
-import 'dotenv/config'; // ✅ ensure env vars are loaded before creating the client
+import 'dotenv/config'; // ensure env vars are loaded
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 import requireAdmin from '../middleware/requireAdmin.js';
 
 const router = express.Router();
 
-// ✅ robust env handling (supports either SERVICE_KEY or SERVICE_ROLE_KEY)
+// ---- Supabase (server-side) -------------------------------------------------
 const SUPABASE_URL = process.env.SUPABASE_URL?.trim() || '';
 const SUPABASE_SERVICE_ROLE_KEY =
-  process.env.SUPABASE_SERVICE_KEY?.trim() ||
   process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
+  process.env.SUPABASE_SERVICE_KEY?.trim() || // fallback if older name is used
   '';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
@@ -19,13 +19,14 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   );
 }
 
-// ✅ use service role key (backend only, full RLS bypass)
+// Use service-role key on the backend (RLS bypass). NEVER expose this to client.
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 // ---------------------------------------------------------------------------
-// GET /api/coupons → list all coupons (PUBLIC)
+// GET /api/coupons (if mounted at /api) OR GET / (if mounted at /api/coupons)
+// → PUBLIC: list coupons
 // ---------------------------------------------------------------------------
-router.get('/coupons', async (req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const { data, error } = await supabase
       .from('coupons')
@@ -41,9 +42,10 @@ router.get('/coupons', async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// POST /api/coupons → create new coupon (ADMIN ONLY)
+// POST /api/coupons  OR  POST /
+// → ADMIN ONLY: create coupon
 // ---------------------------------------------------------------------------
-router.post('/coupons', requireAdmin, async (req, res) => {
+router.post('/', requireAdmin, async (req, res) => {
   try {
     const payload = req.body;
     if (!payload || typeof payload !== 'object') {
@@ -59,7 +61,7 @@ router.post('/coupons', requireAdmin, async (req, res) => {
     const { data, error } = await supabase.from('coupons').insert([row]).select();
     if (error) throw error;
 
-    return res.status(201).json(data[0]);
+    return res.status(201).json(data?.[0] ?? null);
   } catch (err) {
     console.error('[coupons POST] error', err);
     return res.status(500).json({ error: err.message || String(err) });
@@ -67,16 +69,18 @@ router.post('/coupons', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// PUT /api/coupons/:id → update coupon (ADMIN ONLY)
+// PUT /api/coupons/:id  OR  PUT /:id
+// → ADMIN ONLY: update coupon
 // ---------------------------------------------------------------------------
-router.put('/coupons/:id', requireAdmin, async (req, res) => {
+router.put('/:id', requireAdmin, async (req, res) => {
   try {
     const { id } = req.params;
     const payload = req.body;
 
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });
-    if (!payload || typeof payload !== 'object')
+    if (!payload || typeof payload !== 'object') {
       return res.status(400).json({ error: 'Invalid payload' });
+    }
 
     const { data, error } = await supabase
       .from('coupons')
@@ -95,9 +99,10 @@ router.put('/coupons/:id', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// DELETE /api/coupons/:id → delete coupon (ADMIN ONLY)
+// DELETE /api/coupons/:id  OR  DELETE /:id
+// → ADMIN ONLY: delete coupon
 // ---------------------------------------------------------------------------
-router.delete('/coupons/:id', requireAdmin, async (req, res) => {
+router.delete('/:id', requireAdmin, async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });
