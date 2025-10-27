@@ -2,7 +2,11 @@
 import { createClient } from '@supabase/supabase-js';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!SUPABASE_SERVICE_KEY) {
+  console.error('[requireAuth] FATAL: SUPABASE_SERVICE_ROLE_KEY is not set. This middleware is disabled.');
+}
 
 /**
  * requireAuth middleware (Supabase token validation)
@@ -12,12 +16,17 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
  * Behavior:
  * 1. Extracts the token from the `Authorization: Bearer <token>` header.
  * 2. If no token is found, it returns a 401 Unauthorized error.
- * 3. It creates a temporary Supabase client initialized with the provided token.
+ * 3. It creates a temporary Supabase client initialized with the service_role key.
  * 4. It calls `supabase.auth.getUser()` to validate the token with the Supabase service.
  * 5. If the token is valid, Supabase returns the user, which is attached to `req.user`.
  * 6. If the token is invalid, expired, or the user doesn't exist, it returns a 401.
  */
 export default async function requireAuth(req, res, next) {
+  if (!SUPABASE_SERVICE_KEY) {
+    // If the key is missing, we can't perform auth. Block all requests to be safe.
+    return res.status(500).json({ error: 'Server authentication is misconfigured.' });
+  }
+
   const authHeader = req.headers.authorization;
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -28,12 +37,15 @@ export default async function requireAuth(req, res, next) {
 
   try {
     // Create a Supabase client scoped to the user's request token
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      global: { headers: { Authorization: `Bearer ${token}` } },
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
     });
 
     // Ask Supabase to validate the token and return the user
-    const { data: { user }, error } = await supabase.auth.getUser();
+    const { data: { user }, error } = await supabase.auth.getUser(token);
 
     if (error) {
       console.warn('[requireAuth] Supabase getUser error:', error.message);

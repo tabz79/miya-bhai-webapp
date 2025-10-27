@@ -1,63 +1,67 @@
 console logs:
-index-URH5fP3f.js:211 Supabase client initialized (client-side anon).
-index-URH5fP3f.js:330 [App] supabase client ready: true
-index-URH5fP3f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/orders 401 (Unauthorized)
-lr @ index-URH5fP3f.js:211
+index-BgZw9B2T.js:211 Supabase client initialized (client-side anon).
+index-BgZw9B2T.js:330 [App] supabase client ready: true
+index-BgZw9B2T.js:211 [safeFetch] Attempting to get Supabase session for authenticated request.
+index-BgZw9B2T.js:211 [safeFetch] Session found.
+index-BgZw9B2T.js:211 [safeFetch] Access token found, adding to headers.
+index-BgZw9B2T.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/orders 401 (Unauthorized)
+lr @ index-BgZw9B2T.js:211
 await in lr
-getUserOrders @ index-URH5fP3f.js:211
-queryFn @ index-URH5fP3f.js:212
-i @ index-URH5fP3f.js:51
-g @ index-URH5fP3f.js:51
-start @ index-URH5fP3f.js:51
-fetch @ index-URH5fP3f.js:51
-Au @ index-URH5fP3f.js:51
-setOptions @ index-URH5fP3f.js:51
-(anonymous) @ index-URH5fP3f.js:51
-Ug @ index-URH5fP3f.js:40
-hl @ index-URH5fP3f.js:40
-(anonymous) @ index-URH5fP3f.js:40
-_ @ index-URH5fP3f.js:25
-O @ index-URH5fP3f.js:25
-index-URH5fP3f.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/addresses 401 (Unauthorized)
-lr @ index-URH5fP3f.js:211
+getUserOrders @ index-BgZw9B2T.js:211
+queryFn @ index-BgZw9B2T.js:212
+i @ index-BgZw9B2T.js:51
+g @ index-BgZw9B2T.js:51
+start @ index-BgZw9B2T.js:51
+fetch @ index-BgZw9B2T.js:51
+Au @ index-BgZw9B2T.js:51
+setOptions @ index-BgZw9B2T.js:51
+(anonymous) @ index-BgZw9B2T.js:51
+Ug @ index-BgZw9B2T.js:40
+hl @ index-BgZw9B2T.js:40
+(anonymous) @ index-BgZw9B2T.js:40
+_ @ index-BgZw9B2T.js:25
+O @ index-BgZw9B2T.js:25
+index-BgZw9B2T.js:211 [safeFetch] Attempting to get Supabase session for authenticated request.
+index-BgZw9B2T.js:211 [safeFetch] Session found.
+index-BgZw9B2T.js:211 [safeFetch] Access token found, adding to headers.
+index-BgZw9B2T.js:211  GET https://miya-bhai-webapp.onrender.com/api/user/addresses 401 (Unauthorized)
+lr @ index-BgZw9B2T.js:211
 await in lr
-getUserAddresses @ index-URH5fP3f.js:211
-mte @ index-URH5fP3f.js:212
-i @ index-URH5fP3f.js:51
-g @ index-URH5fP3f.js:51
-start @ index-URH5fP3f.js:51
-fetch @ index-URH5fP3f.js:51
-Au @ index-URH5fP3f.js:51
-onSubscribe @ index-URH5fP3f.js:51
-subscribe @ index-URH5fP3f.js:51
-(anonymous) @ index-URH5fP3f.js:51
-TD @ index-URH5fP3f.js:38
-Ug @ index-URH5fP3f.js:40
-hl @ index-URH5fP3f.js:40
-ZU @ index-URH5fP3f.js:40
-go @ index-URH5fP3f.js:40
-FP @ index-URH5fP3f.js:40
-Xi @ index-URH5fP3f.js:38
-(anonymous) @ index-URH5fP3f.js:40
+getUserAddresses @ index-BgZw9B2T.js:211
+mte @ index-BgZw9B2T.js:212
+i @ index-BgZw9B2T.js:51
+g @ index-BgZw9B2T.js:51
+start @ index-BgZw9B2T.js:51
+fetch @ index-BgZw9B2T.js:51
+Au @ index-BgZw9B2T.js:51
+onSubscribe @ index-BgZw9B2T.js:51
+subscribe @ index-BgZw9B2T.js:51
+(anonymous) @ index-BgZw9B2T.js:51
+TD @ index-BgZw9B2T.js:38
+Ug @ index-BgZw9B2T.js:40
+hl @ index-BgZw9B2T.js:40
+ZU @ index-BgZw9B2T.js:40
+go @ index-BgZw9B2T.js:40
+FP @ index-BgZw9B2T.js:40
+Xi @ index-BgZw9B2T.js:38
+(anonymous) @ index-BgZw9B2T.js:40
 
 
 network:
+https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png
 https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
+https://miya-bhai-webapp.onrender.com/api/user/orders
+https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
+https://miya-bhai-webapp.onrender.com/api/user/orders
+https://miya-bhai-webapp.onrender.com/api/user/addresses
+https://miya-bhai-webapp.onrender.com/api/user/addresses
+https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://miya-bhai-webapp.onrender.com/api/coupons
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://miya-bhai-webapp.onrender.com/api/coupons
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png
 https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://miya-bhai-webapp-v1.pages.dev/banners.json
@@ -176,26 +180,33 @@ https://miya-bhai-webapp-v1.pages.dev/favicon.ico
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
 https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://miya-bhai-webapp.onrender.com/api/coupons
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://miya-bhai-webapp-v1.pages.dev/favicon.ico
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://miya-bhai-webapp.onrender.com/api/user/orders
-https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b
-https://miya-bhai-webapp.onrender.com/api/user/orders
-https://miya-bhai-webapp.onrender.com/api/user/addresses
-https://miya-bhai-webapp.onrender.com/api/user/addresses
 
 fetch:
+fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage2-D4NonUw0.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"728f6532cb8ef7358500811467207028\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
 fetch("https://miya-bhai-webapp-v1.pages.dev/assets/HeroImage3-BafMwgkI.png", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"ba80e8935f0878fc40f6dfba59fe6726\"",
-    "priority": "u=1, i",
+    "priority": "i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
@@ -213,176 +224,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"479-DdmB7CD6z5AqlwcXEFdlc+7aC4o\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "sec-fetch-storage-access": "active"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/cart",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
+    "if-none-match": "W/\"837e3d4189e596fe6743f31eb690f31b\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -463,6 +305,141 @@ fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=
   "mode": "cors",
   "credentials": "include"
 }); ;
+fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
+  "headers": {
+    "accept": "application/vnd.pgrst.object+json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "accept-profile": "public",
+    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "x-client-info": "supabase-js-web/2.74.0"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/orders", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
+    "if-none-match": "W/\"c157-s6hGpvfNO/Q003UyVGDt9uC0qnM\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
+  "headers": {
+    "accept": "application/vnd.pgrst.object+json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "accept-profile": "public",
+    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "x-client-info": "supabase-js-web/2.74.0"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/orders", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "OPTIONS",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/addresses", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
+    "if-none-match": "W/\"907-IbT+jqoFkKHogBeRaCx0MKKwsCE\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-webapp.onrender.com/api/user/addresses", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "OPTIONS",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"837e3d4189e596fe6743f31eb690f31b\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://miya-bhai-webapp-v1.pages.dev/cart",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
 fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
   "headers": {
     "accept": "application/json",
@@ -482,25 +459,6 @@ fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
   "method": "GET",
   "mode": "cors",
   "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/cart",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
 }); ;
 fetch("https://miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png", {
   "headers": {
@@ -525,7 +483,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
+    "if-none-match": "W/\"837e3d4189e596fe6743f31eb690f31b\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -755,7 +713,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.pn
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"8d41292b972945372cb7dcba313973c7\"",
+    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
     "priority": "i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -1932,7 +1890,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
+    "if-none-match": "W/\"837e3d4189e596fe6743f31eb690f31b\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -2008,7 +1966,7 @@ fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
+    "if-none-match": "W/\"837e3d4189e596fe6743f31eb690f31b\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -2088,244 +2046,4 @@ fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=
   "method": "GET",
   "mode": "cors",
   "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/coupons", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"479-DdmB7CD6z5AqlwcXEFdlc+7aC4o\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "sec-fetch-storage-access": "active"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/cart",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp-v1.pages.dev/favicon.ico", {
-  "headers": {
-    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "if-none-match": "W/\"3bb56000ef2511e78bc2bea74b297a0f\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "image",
-    "sec-fetch-mode": "no-cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/profile",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=*&user_id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/user/orders", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "if-none-match": "W/\"c157-s6hGpvfNO/Q003UyVGDt9uC0qnM\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "sec-fetch-storage-access": "active"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://syjowafvyvqoclipctzj.supabase.co/rest/v1/profiles?select=role&id=eq.a05c6e64-d220-43df-bf78-ed3ae02e0e4b", {
-  "headers": {
-    "accept": "application/vnd.pgrst.object+json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "accept-profile": "public",
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5am93YWZ2eXZxb2NsaXBjdHpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTYxMDksImV4cCI6MjA3NDQ3MjEwOX0.3-6LCc2j4t024qXEFke9bEu0hv1qIJKn8P2rKmTniOU",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "x-client-info": "supabase-js-web/2.74.0"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/user/orders", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/user/addresses", {
-  "headers": {
-    "accept": "application/json",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IkhrRHJFRWgxZjc5YWgrS0ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3N5am93YWZ2eXZxb2NsaXBjdHpqLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhMDVjNmU2NC1kMjIwLTQzZGYtYmY3OC1lZDNhZTAyZTBlNGIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxNTU0Mjg1LCJpYXQiOjE3NjE1NTA2ODUsImVtYWlsIjoidGFicmV6LmF0YWhlckBnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6Imdvb2dsZSIsInByb3ZpZGVycyI6WyJnb29nbGUiLCJnaXRodWIiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJlbWFpbCI6InRhYnJlei5hdGFoZXJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZ1bGxfbmFtZSI6IlRhYnJleiBBdGFoZXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiVGFicmV6IEF0YWhlciIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xzQU9jcWFEekx2VmRwS1N4Y1BFbnozby1IU1lPdVIzRDVXZkViaElxQkVyRGc5WFFYdlE9czk2LWMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWJ6NzkiLCJwcm92aWRlcl9pZCI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInN1YiI6IjEwODQ5NDcxNjIxMzgyMDkxOTI0OSIsInVzZXJfbmFtZSI6InRhYno3OSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6Im9hdXRoIiwidGltZXN0YW1wIjoxNzYxMDQ1NDU2fV0sInNlc3Npb25faWQiOiJmMzllMjQ5Mi1kMjI2LTRkMmItODEyYS1hMzU4M2ZlZmM3M2IiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.7-4WoqiAafHdhxGv9tMbbb4TVDCRSBFEMyg3n2hCMvA",
-    "if-none-match": "W/\"907-IbT+jqoFkKHogBeRaCx0MKKwsCE\"",
-    "priority": "u=1, i",
-    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "sec-fetch-storage-access": "active"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-}); ;
-fetch("https://miya-bhai-webapp.onrender.com/api/user/addresses", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
-    "priority": "u=1, i",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://miya-bhai-webapp-v1.pages.dev/",
-  "body": null,
-  "method": "OPTIONS",
-  "mode": "cors",
-  "credentials": "omit"
 });
