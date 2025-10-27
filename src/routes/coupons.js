@@ -2,6 +2,7 @@
 import 'dotenv/config'; // ✅ ensure env vars are loaded before creating the client
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
+import requireAdmin from '../middleware/requireAdmin.js';
 
 const router = express.Router();
 
@@ -22,7 +23,7 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 // ---------------------------------------------------------------------------
-// GET /api/coupons → list all coupons
+// GET /api/coupons → list all coupons (PUBLIC)
 // ---------------------------------------------------------------------------
 router.get('/coupons', async (req, res) => {
   try {
@@ -40,9 +41,9 @@ router.get('/coupons', async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// POST /api/coupons → create new coupon
+// POST /api/coupons → create new coupon (ADMIN ONLY)
 // ---------------------------------------------------------------------------
-router.post('/coupons', async (req, res) => {
+router.post('/coupons', requireAdmin, async (req, res) => {
   try {
     const payload = req.body;
     if (!payload || typeof payload !== 'object') {
@@ -66,9 +67,9 @@ router.post('/coupons', async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// PUT /api/coupons/:id → update coupon
+// PUT /api/coupons/:id → update coupon (ADMIN ONLY)
 // ---------------------------------------------------------------------------
-router.put('/coupons/:id', async (req, res) => {
+router.put('/coupons/:id', requireAdmin, async (req, res) => {
   try {
     const { id } = req.params;
     const payload = req.body;
@@ -94,9 +95,9 @@ router.put('/coupons/:id', async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// DELETE /api/coupons/:id → delete coupon
+// DELETE /api/coupons/:id → delete coupon (ADMIN ONLY)
 // ---------------------------------------------------------------------------
-router.delete('/coupons/:id', async (req, res) => {
+router.delete('/coupons/:id', requireAdmin, async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });
