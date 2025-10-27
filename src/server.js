@@ -124,13 +124,16 @@ app.use('/api', githubAuthRouter);
 // existing auth router (other auth endpoints like /api/auth/verify remain)
 app.use('/api', authRouter);
 app.use('/api', healthRouter);
+
+// ⬇️ Mount PUBLIC coupons BEFORE any '/api' router that could shadow it
+// coupons.js uses `router.get('/')`, so this exposes GET /api/coupons
+app.use('/api/coupons', couponsRouter);
+
+// The rest (these are on '/api' and must come after coupons to avoid shadowing)
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
-
-// ⬇️ Mount coupons router at /api/coupons so coupons.js `router.get('/')` => GET /api/coupons
-app.use('/api/coupons', couponsRouter);
 
 app.use('/api/user', userRouter);
 

@@ -23,11 +23,14 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 // ---------------------------------------------------------------------------
-// GET /api/coupons (if mounted at /api) OR GET / (if mounted at /api/coupons)
+// GET /api/coupons  (mounted at /api/coupons → router.get('/'))
 // → PUBLIC: list coupons
 // ---------------------------------------------------------------------------
 router.get('/', async (_req, res) => {
   try {
+    // Fingerprint header so we can prove this public handler is reached
+    res.set('x-coupons-route', 'public');
+
     const { data, error } = await supabase
       .from('coupons')
       .select('*')
@@ -42,7 +45,7 @@ router.get('/', async (_req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// POST /api/coupons  OR  POST /
+// POST /api/coupons
 // → ADMIN ONLY: create coupon
 // ---------------------------------------------------------------------------
 router.post('/', requireAdmin, async (req, res) => {
@@ -69,7 +72,7 @@ router.post('/', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// PUT /api/coupons/:id  OR  PUT /:id
+// PUT /api/coupons/:id
 // → ADMIN ONLY: update coupon
 // ---------------------------------------------------------------------------
 router.put('/:id', requireAdmin, async (req, res) => {
@@ -99,7 +102,7 @@ router.put('/:id', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// DELETE /api/coupons/:id  OR  DELETE /:id
+// DELETE /api/coupons/:id
 // → ADMIN ONLY: delete coupon
 // ---------------------------------------------------------------------------
 router.delete('/:id', requireAdmin, async (req, res) => {
