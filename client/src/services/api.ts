@@ -33,11 +33,26 @@ async function safeFetch(url: string, opts: RequestInit = {}, authenticated = fa
   };
 
   if (authenticated) {
+    console.log('[safeFetch] Attempting to get Supabase session for authenticated request.');
     const {
       data: { session },
+      error,
     } = await supabase.auth.getSession();
-    if (session?.access_token) {
-      headers.Authorization = `Bearer ${session.access_token}`;
+
+    if (error) {
+      console.error('[safeFetch] Error getting session:', error);
+    }
+
+    if (session) {
+      console.log('[safeFetch] Session found.');
+      if (session.access_token) {
+        console.log('[safeFetch] Access token found, adding to headers.');
+        headers.Authorization = `Bearer ${session.access_token}`;
+      } else {
+        console.warn('[safeFetch] Session found, but it has no access token.');
+      }
+    } else {
+      console.warn('[safeFetch] No session found for authenticated request.');
     }
   }
 

@@ -1,17 +1,6 @@
 2025-10-27T06:35:13.549863657Z ==> Deploying...
-2025-10-27T06:36:12.739963809Z ==> Running 'npm start'
-2025-10-27T06:36:16.931735539Z 
-2025-10-27T06:36:16.931774459Z > rest-express@1.0.0 start
-2025-10-27T06:36:16.931782Z > cd src && node server.js
-2025-10-27T06:36:16.93178456Z 
 2025-10-27T06:36:18.793940815Z ==> No open ports detected, continuing to scan...
 2025-10-27T06:36:18.912243924Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-27T06:36:19.937362086Z [admin routes] loaded
-2025-10-27T06:36:20.339044045Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-27T06:36:20.339420612Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
-2025-10-27T06:36:20.340217158Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-2025-10-27T06:36:20.34029835Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-27T06:36:20.341186467Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
 2025-10-27T06:36:20.341273879Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
 2025-10-27T06:36:20.341445093Z [server] trust proxy: 1
 2025-10-27T06:36:20.342772449Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
@@ -35,3 +24,77 @@
 2025-10-27T06:37:04.461207095Z [2025-10-27T06:37:04.461Z] GET /api/coupons
 2025-10-27T06:41:28.426454507Z ==> Detected service running on port 10000
 2025-10-27T06:41:28.521971599Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-27T07:17:05.733862157Z ==> Deploying...
+2025-10-27T07:18:14.797214607Z ==> No open ports detected, continuing to scan...
+2025-10-27T07:18:14.896885913Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-27T07:18:19.627335423Z ==> Running 'npm start'
+2025-10-27T07:18:20.725171818Z 
+2025-10-27T07:18:20.72519896Z > rest-express@1.0.0 start
+2025-10-27T07:18:20.72520268Z > cd src && node server.js
+2025-10-27T07:18:20.72520471Z 
+2025-10-27T07:18:23.324640239Z [admin routes] loaded
+2025-10-27T07:18:23.822345988Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-27T07:18:23.822779721Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2025-10-27T07:18:23.823361085Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-27T07:18:23.823441262Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-27T07:18:23.824237632Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true SUPABASE_SERVICE_ROLE_KEY= false
+2025-10-27T07:18:23.824386624Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-27T07:18:23.824391764Z [server] trust proxy: 1
+2025-10-27T07:18:23.825601947Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
+2025-10-27T07:18:23.826258427Z Initializing menu service with CANONICAL data.
+2025-10-27T07:18:23.82970708Z Menu loaded. Source: canonical, Items: 289
+2025-10-27T07:18:23.921090193Z Server running → http://localhost:10000
+2025-10-27T07:18:23.921120145Z NODE_ENV: production
+2025-10-27T07:18:23.921253995Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)
+2025-10-27T07:18:24.113910967Z [2025-10-27T07:18:24.113Z] Request ID: ec83bab1-a24f-4111-88f3-ce586677cbb5, Path: HEAD /
+2025-10-27T07:18:24.11395333Z [2025-10-27T07:18:24.113Z] HEAD /
+2025-10-27T07:18:26.442318887Z ==> Your service is live 🎉
+2025-10-27T07:18:26.476085834Z ==> 
+2025-10-27T07:18:26.51158274Z ==> ///////////////////////////////////////////////////////////
+2025-10-27T07:18:26.542638268Z ==> 
+2025-10-27T07:18:26.575392414Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-27T07:18:26.609440791Z ==> 
+2025-10-27T07:18:26.641694868Z ==> ///////////////////////////////////////////////////////////
+2025-10-27T07:18:27.589405555Z [2025-10-27T07:18:27.589Z] Request ID: 5f6cb350-edcf-4b67-9250-32951f1b34d7, Path: GET /
+2025-10-27T07:18:27.589521434Z [2025-10-27T07:18:27.589Z] GET /
+2025-10-27T07:18:44.041798315Z [2025-10-27T07:18:44.041Z] Request ID: 0833f56b-f799-401c-812c-0a8c45a5dc72, Path: GET /api/menu
+2025-10-27T07:18:44.041817987Z [2025-10-27T07:18:44.041Z] GET /api/menu
+2025-10-27T07:19:08.209699944Z [2025-10-27T07:19:08.209Z] Request ID: a5e6ffe5-891b-46eb-ad6c-1b295acdb8e1, Path: GET /api/coupons
+2025-10-27T07:19:08.209730227Z [2025-10-27T07:19:08.209Z] GET /api/coupons
+2025-10-27T07:23:25.140070565Z ==> Detected service running on port 10000
+2025-10-27T07:23:25.243189651Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-27T07:29:48.846392703Z ==> Deploying...
+2025-10-27T07:30:30.11986692Z Initializing menu service with CANONICAL data.
+2025-10-27T07:30:30.122825643Z Menu loaded. Source: canonical, Items: 289
+2025-10-27T07:30:30.124340096Z Server running → http://localhost:10000
+2025-10-27T07:30:30.124363188Z NODE_ENV: production
+2025-10-27T07:30:30.124370848Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)
+2025-10-27T07:30:30.825328513Z [2025-10-27T07:30:30.825Z] Request ID: fb5e3fca-90e7-4c78-929a-6ba8fa50d95d, Path: HEAD /
+2025-10-27T07:30:30.825380476Z [2025-10-27T07:30:30.825Z] HEAD /
+2025-10-27T07:30:39.630450612Z ==> Your service is live 🎉
+2025-10-27T07:30:39.662212399Z ==> 
+2025-10-27T07:30:39.691129897Z ==> ///////////////////////////////////////////////////////////
+2025-10-27T07:30:39.723649943Z ==> 
+2025-10-27T07:30:39.753292151Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
+2025-10-27T07:30:39.782056118Z ==> 
+2025-10-27T07:30:39.811102875Z ==> ///////////////////////////////////////////////////////////
+2025-10-27T07:30:40.923767579Z [2025-10-27T07:30:40.923Z] Request ID: e64d08ba-ce88-4dfe-b57e-cedb2ed1aa2b, Path: GET /
+2025-10-27T07:30:40.923793091Z [2025-10-27T07:30:40.923Z] GET /
+2025-10-27T07:35:36.565786526Z ==> Detected service running on port 10000
+2025-10-27T07:35:36.755457714Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-10-27T07:38:21.11918623Z [2025-10-27T07:38:21.118Z] Request ID: 96249c8e-c2b5-4acf-931b-b475a496de8e, Path: GET /api/coupons
+2025-10-27T07:38:21.119222542Z [2025-10-27T07:38:21.119Z] GET /api/coupons
+2025-10-27T07:38:25.438687177Z [2025-10-27T07:38:25.435Z] Request ID: da726624-842f-4084-87f6-183e29bc8163, Path: GET /api/coupons
+2025-10-27T07:38:25.43874916Z [2025-10-27T07:38:25.435Z] GET /api/coupons
+2025-10-27T07:38:26.589432864Z [2025-10-27T07:38:26.589Z] Request ID: 27c9d334-b985-4fcd-a970-f882cc69e045, Path: GET /api/menu
+2025-10-27T07:38:26.589459006Z [2025-10-27T07:38:26.589Z] GET /api/menu
+2025-10-27T07:38:33.904994808Z [2025-10-27T07:38:33.904Z] Request ID: 6b5db47d-118e-4aa7-8ee6-02a6c17c046e, Path: GET /api/coupons
+2025-10-27T07:38:33.905025789Z [2025-10-27T07:38:33.904Z] GET /api/coupons
+2025-10-27T07:38:47.068470992Z [2025-10-27T07:38:47.068Z] Request ID: 6733a2bf-046e-4bf9-a90f-051de5bd1031, Path: OPTIONS /api/user/orders
+2025-10-27T07:38:47.068526695Z [2025-10-27T07:38:47.068Z] OPTIONS /api/user/orders
+2025-10-27T07:38:47.375468943Z [2025-10-27T07:38:47.375Z] Request ID: 0a5abb85-16f3-461c-8c7a-ad45cab9711e, Path: GET /api/user/orders
+2025-10-27T07:38:47.375494335Z [2025-10-27T07:38:47.375Z] GET /api/user/orders
+2025-10-27T07:39:18.042662301Z [2025-10-27T07:39:18.042Z] Request ID: 058aa5a6-1bcf-4d7e-b69e-674dcb471e13, Path: OPTIONS /api/user/addresses
+2025-10-27T07:39:18.042681962Z [2025-10-27T07:39:18.042Z] OPTIONS /api/user/addresses
+2025-10-27T07:39:18.388210406Z [2025-10-27T07:39:18.388Z] Request ID: 42ee2a6a-2f33-4fe7-be67-b2369bb6e919, Path: GET /api/user/addresses
+2025-10-27T07:39:18.388232848Z [2025-10-27T07:39:18.388Z] GET /api/user/addresses
