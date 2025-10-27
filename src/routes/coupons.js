@@ -1,16 +1,15 @@
 // src/routes/coupons.js
-import 'dotenv/config'; // ensure env vars are loaded
+import 'dotenv/config'; // ✅ ensure env vars are loaded before creating the client
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
-import requireAdmin from '../middleware/requireAdmin.js';
 
 const router = express.Router();
 
-// ---- Supabase (server-side) -------------------------------------------------
+// ✅ robust env handling (supports either SERVICE_KEY or SERVICE_ROLE_KEY)
 const SUPABASE_URL = process.env.SUPABASE_URL?.trim() || '';
 const SUPABASE_SERVICE_ROLE_KEY =
+  process.env.SUPABASE_SERVICE_KEY?.trim() ||
   process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
-  process.env.SUPABASE_SERVICE_KEY?.trim() || // fallback if older name is used
   '';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
@@ -19,18 +18,14 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   );
 }
 
-// Use service-role key on the backend (RLS bypass). NEVER expose this to client.
+// ✅ use service role key (backend only, full RLS bypass)
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 // ---------------------------------------------------------------------------
-// GET /api/coupons  (mounted at /api/coupons → router.get('/'))
-// → PUBLIC: list coupons
+// GET /api/coupons → list all coupons
 // ---------------------------------------------------------------------------
-router.get('/', async (_req, res) => {
+router.get('/coupons', async (req, res) => {
   try {
-    // Fingerprint header so we can prove this public handler is reached
-    res.set('x-coupons-route', 'public');
-
     const { data, error } = await supabase
       .from('coupons')
       .select('*')
@@ -45,10 +40,9 @@ router.get('/', async (_req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// POST /api/coupons
-// → ADMIN ONLY: create coupon
+// POST /api/coupons → create new coupon
 // ---------------------------------------------------------------------------
-router.post('/', requireAdmin, async (req, res) => {
+router.post('/coupons', async (req, res) => {
   try {
     const payload = req.body;
     if (!payload || typeof payload !== 'object') {
@@ -64,7 +58,7 @@ router.post('/', requireAdmin, async (req, res) => {
     const { data, error } = await supabase.from('coupons').insert([row]).select();
     if (error) throw error;
 
-    return res.status(201).json(data?.[0] ?? null);
+    return res.status(201).json(data[0]);
   } catch (err) {
     console.error('[coupons POST] error', err);
     return res.status(500).json({ error: err.message || String(err) });
@@ -72,18 +66,16 @@ router.post('/', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// PUT /api/coupons/:id
-// → ADMIN ONLY: update coupon
+// PUT /api/coupons/:id → update coupon
 // ---------------------------------------------------------------------------
-router.put('/:id', requireAdmin, async (req, res) => {
+router.put('/coupons/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const payload = req.body;
 
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });
-    if (!payload || typeof payload !== 'object') {
+    if (!payload || typeof payload !== 'object')
       return res.status(400).json({ error: 'Invalid payload' });
-    }
 
     const { data, error } = await supabase
       .from('coupons')
@@ -102,10 +94,9 @@ router.put('/:id', requireAdmin, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
-// DELETE /api/coupons/:id
-// → ADMIN ONLY: delete coupon
+// DELETE /api/coupons/:id → delete coupon
 // ---------------------------------------------------------------------------
-router.delete('/:id', requireAdmin, async (req, res) => {
+router.delete('/coupons/:id', async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });

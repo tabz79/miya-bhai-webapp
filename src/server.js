@@ -53,14 +53,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // quick sanity checks for important envs
-console.log(
-  '[env check]',
-  'SUPABASE_URL=',
-  !!process.env.SUPABASE_URL,
-  'SUPABASE_SERVICE_KEY=',
-  !!process.env.SUPABASE_SERVICE_KEY,
-  'SUPABASE_SERVICE_ROLE_KEY=',
-  !!process.env.SUPABASE_SERVICE_ROLE_KEY
+console.log('[env check]',
+  'SUPABASE_URL=', !!process.env.SUPABASE_URL,
+  'SUPABASE_SERVICE_KEY=', !!process.env.SUPABASE_SERVICE_KEY
 );
 
 if (!process.env.GITHUB_CLIENT_ID || !process.env.GITHUB_CLIENT_SECRET) {
@@ -124,17 +119,11 @@ app.use('/api', githubAuthRouter);
 // existing auth router (other auth endpoints like /api/auth/verify remain)
 app.use('/api', authRouter);
 app.use('/api', healthRouter);
-
-// ⬇️ Mount PUBLIC coupons BEFORE any '/api' router that could shadow it
-// coupons.js uses `router.get('/')`, so this exposes GET /api/coupons
-app.use('/api/coupons', couponsRouter);
-
-// The rest (these are on '/api' and must come after coupons to avoid shadowing)
 app.use('/api', menuRouter);
 app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
-
+app.use('/api', couponsRouter);
 app.use('/api/user', userRouter);
 
 // 404 + error
@@ -151,7 +140,7 @@ async function startServer() {
       console.log(`Server running → http://localhost:${PORT}`);
       console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
       // show mount confirmation
-      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)');
+      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)');
     });
   }
 }

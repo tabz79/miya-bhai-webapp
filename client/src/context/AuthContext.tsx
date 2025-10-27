@@ -13,7 +13,6 @@ interface AuthContextType {
   session: Session | null;
   user: UserProfile | null;
   loading: boolean;
-  isAdmin: boolean;
   logout: () => Promise<void>;
 }
 
@@ -23,46 +22,54 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [session, setSession] = useState<Session | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    console.log('[AuthContext] Mounting and setting up listener.');
+    const fetchSessionAndProfile = async () => {
+      try {
+        setLoading(true);
+        const { data: { session }, } = await supabase.auth.getSession();
+        setSession(session);
+
+        if (session?.user) {
+          // If a session exists, fetch the full profile from our backend
+          const profile = await api.getUserProfile();
+          setUser({ ...session.user, ...profile });
+        } else {
+          setUser(null);
+        }
+      } catch (error) {
+        console.error('Error fetching session and profile:', error);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSessionAndProfile();
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (_event, session) => {
-        console.log(`[AuthContext] onAuthStateChange event: ${_event}`);
+        setLoading(true); // Always start loading on auth change
         setSession(session);
-        if (_event === 'INITIAL_SESSION') {
-          console.log('[AuthContext] Initial session event.');
-        }
-
         if (session?.user) {
-          console.log('[AuthContext] Session found. Fetching profile...');
           try {
             const profile = await api.getUserProfile();
-            const fullUser = { ...session.user, ...profile };
-            setUser(fullUser);
-            setIsAdmin(fullUser.role === 'admin');
-            console.log('[AuthContext] Profile fetched and user state set.', fullUser);
+            setUser({ ...session.user, ...profile });
           } catch (error) {
-            console.error('[AuthContext] Error fetching profile:', error);
-            setUser(null);
-            setIsAdmin(false);
+            console.error('Error fetching profile on auth change:', error);
+            setUser(session.user); // Fallback to basic user info
+          } finally {
+            setLoading(false);
           }
         } else {
-          console.log('[AuthContext] No session found.');
           setUser(null);
-          setIsAdmin(false);
+          setLoading(false); // Ensure loading is false when logged out
         }
-        setLoading(false);
-        console.log('[AuthContext] Auth processing finished. Loading set to false.');
       }
     );
 
     return () => {
-      console.log('[AuthContext] Unmounting and unsubscribing from listener.');
-      authListener?.unsubscribe();
+      authListener.subscription.unsubscribe();
     };
   }, []);
 
@@ -70,14 +77,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     await supabase.auth.signOut();
     setUser(null);
     setSession(null);
-    setIsAdmin(false);
   };
 
   const value = {
     session,
     user,
     loading,
-    isAdmin,
     logout,
   };
 
