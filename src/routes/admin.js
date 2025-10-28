@@ -9,7 +9,8 @@ const router = express.Router();
 
 console.log('[admin routes] loaded'); // debug: indicate routes file loaded
 
-router.use(requireAdmin); // Apply admin middleware to all routes in this file
+router.use(requireAuth);
+router.use(requireAdmin);
 
 // Robust env handling (accept either SERVICE_KEY name)
 const SUPABASE_URL = process.env.SUPABASE_URL?.trim() || '';
