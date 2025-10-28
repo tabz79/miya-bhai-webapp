@@ -46,9 +46,12 @@ export function Profile() {
 
       const { data, error } = await supabase
         .from<ProfileRecord>('profiles')
-        .select('*')
+        .select('*', { head: false }) // Ensure we're not sending a HEAD request
         .eq('user_id', userId)
-        .maybeSingle(); // ✅ FINAL FIX: Use maybeSingle() to gracefully handle 0 rows.
+        .maybeSingle({
+          // Explicitly set Accept header for single object
+          headers: { 'Accept': 'application/vnd.pgrst.object+json' }
+        });
 
       if (error) {
         console.error('Error fetching profile:', error);
