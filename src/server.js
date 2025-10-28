@@ -97,11 +97,27 @@ const corsOptions = {
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
+
+    // Check for exact match or wildcard subdomain match
+    const isAllowed = allowedOrigins.some(allowedOrigin => {
+      if (allowedOrigin === origin) {
+        return true;
+      }
+      // Handle wildcard subdomains like *.pages.dev
+      if (allowedOrigin.startsWith('https://*.') && origin.startsWith('https://')) {
+        const baseDomain = allowedOrigin.substring(allowedOrigin.indexOf('.') + 1); // e.g., pages.dev
+        const originDomain = origin.substring(origin.indexOf('://') + 3); // e.g., pre-mvp.miya-bhai-webapp-v1.pages.dev
+        return originDomain.endsWith(baseDomain);
+      }
+      return false;
+    });
+
+    if (isAllowed) {
+      return callback(null, true);
+    } else {
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
       return callback(new Error(msg), false);
     }
-    return callback(null, true);
   },
   credentials: true,
 };

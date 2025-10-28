@@ -1,116 +1,62 @@
-2025-10-23T10:32:59.482387517Z [2025-10-23T10:32:59.482Z] Request ID: d749023e-be58-4fc7-b828-cc874cdf2a5c, Path: GET /api/menu
-2025-10-23T10:32:59.482420358Z [2025-10-23T10:32:59.482Z] GET /api/menu
-2025-10-23T10:32:59.601951923Z [2025-10-23T10:32:59.601Z] Request ID: c7daab12-ed7a-4d5a-ad89-71a2b8b951ee, Path: GET /api/coupons
-2025-10-23T10:32:59.601988224Z [2025-10-23T10:32:59.601Z] GET /api/coupons
-2025-10-23T10:32:59.602829713Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:33:04.227642198Z [2025-10-23T10:33:04.227Z] Request ID: 10ee9190-2acd-4ebe-9b2e-32d3ffff7d5d, Path: GET /api/coupons
-2025-10-23T10:33:04.227671588Z [2025-10-23T10:33:04.227Z] GET /api/coupons
-2025-10-23T10:33:04.228140679Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:51:57.968227233Z ==> Deploying...
-2025-10-23T10:52:33.631527247Z ==> Running 'npm start'
-2025-10-23T10:52:34.727798016Z 
-2025-10-23T10:52:34.727827767Z > rest-express@1.0.0 start
-2025-10-23T10:52:34.727832468Z > cd src && node server.js
-2025-10-23T10:52:34.727834877Z 
-2025-10-23T10:52:37.82553813Z [admin routes] loaded
-2025-10-23T10:52:38.424202798Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-23T10:52:38.424258299Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
-2025-10-23T10:52:38.425132143Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
-2025-10-23T10:52:38.425264827Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T10:52:38.426384758Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T10:52:38.426388438Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T10:52:38.426545962Z [server] trust proxy: 1
-2025-10-23T10:52:38.428290201Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T10:52:38.429233997Z Initializing menu service with CANONICAL data.
-2025-10-23T10:52:38.434370969Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T10:52:38.436471307Z Server running → http://localhost:10000
-2025-10-23T10:52:38.436486017Z NODE_ENV: production
-2025-10-23T10:52:38.436491787Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T10:52:39.41535015Z [2025-10-23T10:52:39.414Z] Request ID: 786c3b11-a419-47d3-acf2-d371c47580d5, Path: HEAD /
-2025-10-23T10:52:39.415393741Z [2025-10-23T10:52:39.414Z] HEAD /
-2025-10-23T10:52:48.672984418Z ==> Your service is live 🎉
-2025-10-23T10:52:48.705215207Z ==> 
-2025-10-23T10:52:49.206409853Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:49.236663991Z ==> 
-2025-10-23T10:52:49.270521409Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T10:52:49.301927967Z ==> 
-2025-10-23T10:52:49.333747485Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:50.345357214Z [2025-10-23T10:52:50.345Z] Request ID: 35fbc186-81d1-49be-bb68-8b5d90401966, Path: GET /
-2025-10-23T10:52:50.345395015Z [2025-10-23T10:52:50.345Z] GET /
-2025-10-23T10:57:44.916036484Z ==> Detected service running on port 10000
-2025-10-23T10:57:45.004038188Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T13:55:49.560202146Z NODE_ENV: production
-2025-10-23T13:55:49.560212677Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T13:55:57.860620038Z [2025-10-23T13:55:57.860Z] Request ID: 6b527aa9-a843-4b28-aa23-c35c39fa97f9, Path: HEAD /api/menu
-2025-10-23T13:55:57.860657571Z [2025-10-23T13:55:57.860Z] HEAD /api/menu
-2025-10-23T13:55:57.868387625Z [2025-10-23T13:55:57.868Z] Request ID: 1fcad32c-71fd-48ca-aef9-bd7f02a845d0, Path: HEAD /api/menu
-2025-10-23T13:55:57.868478081Z [2025-10-23T13:55:57.868Z] HEAD /api/menu
-2025-10-23T13:55:57.870464311Z [2025-10-23T13:55:57.870Z] Request ID: a3a4019b-4127-43b6-8cc8-af48bbe1bf58, Path: HEAD /api/menu
-2025-10-23T13:55:57.870485893Z [2025-10-23T13:55:57.870Z] HEAD /api/menu
-2025-10-23T13:55:57.889453624Z [2025-10-23T13:55:57.889Z] Request ID: 40f43f0c-7053-4887-a28c-0a6005b8c45a, Path: HEAD /api/menu
-2025-10-23T13:55:57.889476076Z [2025-10-23T13:55:57.889Z] HEAD /api/menu
-2025-10-23T13:55:57.958859131Z [2025-10-23T13:55:57.958Z] Request ID: dc644fc8-182c-4b90-bc8f-a6bb6305cb59, Path: HEAD /api/menu
-2025-10-23T13:55:57.958884983Z [2025-10-23T13:55:57.958Z] HEAD /api/menu
-2025-10-23T13:55:57.960619104Z [2025-10-23T13:55:57.960Z] Request ID: 659a6bf0-52db-44ae-a6ff-ff1fc1bd5c81, Path: HEAD /api/menu
-2025-10-23T13:55:57.960634695Z [2025-10-23T13:55:57.960Z] HEAD /api/menu
-2025-10-23T13:55:57.962933918Z [2025-10-23T13:55:57.962Z] Request ID: 93323f66-e080-4997-a93c-78294de9580e, Path: HEAD /api/menu
-2025-10-23T13:55:57.962950269Z [2025-10-23T13:55:57.962Z] HEAD /api/menu
-2025-10-23T13:55:57.964707342Z [2025-10-23T13:55:57.964Z] Request ID: 1f77b956-74c8-4a81-944a-e4abe6e9a8de, Path: HEAD /api/menu
-2025-10-23T13:55:57.964721173Z [2025-10-23T13:55:57.964Z] HEAD /api/menu
-2025-10-23T13:55:57.993641025Z [2025-10-23T13:55:57.993Z] Request ID: f0a1c6c9-2a4c-4cd8-9abf-1c2ab2e1751a, Path: HEAD /api/menu
-2025-10-23T13:55:57.993687539Z [2025-10-23T13:55:57.993Z] HEAD /api/menu
-2025-10-23T13:55:58.005994417Z [2025-10-23T13:55:58.005Z] Request ID: fd24d8c8-89a1-4119-82ce-35a501812be6, Path: HEAD /api/menu
-2025-10-23T13:55:58.006082714Z [2025-10-23T13:55:58.005Z] HEAD /api/menu
-2025-10-23T13:55:58.051209339Z [2025-10-23T13:55:58.051Z] Request ID: 3cff46aa-df5b-426c-9dbd-ee9a69ccc48f, Path: HEAD /api/menu
-2025-10-23T13:55:58.057398566Z [2025-10-23T13:55:58.057Z] HEAD /api/menu
-2025-10-23T13:55:58.145005286Z [2025-10-23T13:55:58.144Z] Request ID: 0ad528ff-5ea5-4e50-ba72-9ba1a35c60c2, Path: HEAD /api/menu
-2025-10-23T13:55:58.145167899Z [2025-10-23T13:55:58.144Z] HEAD /api/menu
-2025-10-23T13:55:58.281749595Z [2025-10-23T13:55:58.281Z] Request ID: f3ffb374-5059-4085-a989-61c8fb943011, Path: GET /api/menu
-2025-10-23T13:55:58.281798168Z [2025-10-23T13:55:58.281Z] GET /api/menu
-2025-10-23T13:55:58.332121665Z [2025-10-23T13:55:58.331Z] Request ID: 45a7fa84-be47-48c1-9841-db74ec711318, Path: HEAD /api/menu
-2025-10-23T13:55:58.332221853Z [2025-10-23T13:55:58.332Z] HEAD /api/menu
-2025-10-23T13:55:58.352182549Z [2025-10-23T13:55:58.351Z] Request ID: e4e16a9d-5aeb-4de3-980f-03e0209d8ba3, Path: HEAD /api/menu
-2025-10-23T13:55:58.352356692Z [2025-10-23T13:55:58.352Z] HEAD /api/menu
-2025-10-23T13:55:58.381287895Z [2025-10-23T13:55:58.379Z] Request ID: 34d42612-bfed-4ca1-a558-b9cf6bc7d3a6, Path: HEAD /api/menu
-2025-10-23T13:55:58.381304316Z [2025-10-23T13:55:58.379Z] HEAD /api/menu
-2025-10-23T13:55:58.427394874Z [2025-10-23T13:55:58.426Z] Request ID: f0d56fac-90c3-4568-bee8-f2cfc3f18a87, Path: HEAD /api/menu
-2025-10-23T13:55:58.427417356Z [2025-10-23T13:55:58.426Z] HEAD /api/menu
-2025-10-23T13:55:58.544572716Z [2025-10-23T13:55:58.544Z] Request ID: baa685bf-20a1-4073-8423-3736db06470d, Path: HEAD /api/menu
-2025-10-23T13:55:58.546262213Z [2025-10-23T13:55:58.544Z] HEAD /api/menu
-2025-10-23T14:20:39.037001355Z ==> Deploying...
-2025-10-23T14:22:43.641113074Z ==> No open ports detected, continuing to scan...
-2025-10-23T14:22:43.867482215Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:22:50.781742042Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
-2025-10-23T14:22:50.782354919Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  override existing env vars with { override: true }
-2025-10-23T14:22:50.782439222Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T14:22:50.783368937Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T14:22:50.783387148Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T14:22:50.783511291Z [server] trust proxy: 1
-2025-10-23T14:22:50.78457771Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T14:22:50.785189567Z Initializing menu service with CANONICAL data.
-2025-10-23T14:22:50.78856019Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T14:22:50.790048181Z Server running → http://localhost:10000
-2025-10-23T14:22:50.790064432Z NODE_ENV: production
-2025-10-23T14:22:50.790113853Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T14:22:51.579507302Z [2025-10-23T14:22:51.578Z] Request ID: 12bc21b9-0615-4b1b-921b-42297e0a9e8a, Path: HEAD /
-2025-10-23T14:22:51.579526803Z [2025-10-23T14:22:51.578Z] HEAD /
-2025-10-23T14:23:01.227183142Z ==> Your service is live 🎉
-2025-10-23T14:23:01.262909059Z ==> 
-2025-10-23T14:23:01.297691287Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:01.340337565Z ==> 
-2025-10-23T14:23:01.370652592Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T14:23:01.4060864Z ==> 
-2025-10-23T14:23:01.438543798Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:03.098263576Z [2025-10-23T14:23:03.098Z] Request ID: 8f30a8b4-e00b-442a-906d-98785df036de, Path: GET /
-2025-10-23T14:23:03.098290017Z [2025-10-23T14:23:03.098Z] GET /
-2025-10-23T14:27:54.860696555Z ==> Detected service running on port 10000
-2025-10-23T14:27:55.002437366Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:29:54.288491151Z [2025-10-23T14:29:54.288Z] Request ID: 74842dbe-e86c-4fea-8828-bdf379820c51, Path: OPTIONS /api/user/orders
-2025-10-23T14:29:54.288516562Z [2025-10-23T14:29:54.288Z] OPTIONS /api/user/orders
-2025-10-23T14:29:54.623090002Z [2025-10-23T14:29:54.622Z] Request ID: 34d2e6ad-95a6-44cc-8f45-4f3d9a30bfd4, Path: GET /api/user/orders
-2025-10-23T14:29:54.623114533Z [2025-10-23T14:29:54.622Z] GET /api/user/orders
-2025-10-23T14:29:54.623915725Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T14:29:56.040530041Z [requireAuth] Authenticated via Supabase token: {
-2025-10-23T14:29:56.040556832Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
-2025-10-23T14:29:56.040561342Z   email: 'tabrez.ataher@gmail.com'
-2025-10-23T14:29:56.040564932Z }
+2025-10-28T02:53:10.115461455Z ==> Running 'npm run start'
+2025-10-28T02:53:11.214455817Z 
+2025-10-28T02:53:11.214484359Z > rest-express@1.0.0 start
+2025-10-28T02:53:11.214488389Z > cd src && node server.js
+2025-10-28T02:53:11.214490519Z 
+2025-10-28T02:53:13.81916756Z [admin routes] loaded
+2025-10-28T02:53:14.319835004Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-10-28T02:53:14.320058049Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2025-10-28T02:53:14.320765559Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-28T02:53:14.32077826Z [env] Loaded env from /opt/render/project/src/.env
+2025-10-28T02:53:14.321552684Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-10-28T02:53:14.321629979Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-10-28T02:53:14.321744237Z [server] trust proxy: 1
+2025-10-28T02:53:14.323165807Z [CORS] Allowed origins: [
+2025-10-28T02:53:14.323180017Z   'https://miya-bhai-webapp-v1.pages.dev',
+2025-10-28T02:53:14.323201239Z   'https://*.pages.dev',
+2025-10-28T02:53:14.323206559Z   'http://localhost:5173'
+2025-10-28T02:53:14.32321052Z ]
+2025-10-28T02:53:14.323971063Z Initializing menu service with CANONICAL data.
+2025-10-28T02:53:14.326849534Z Menu loaded. Source: canonical, Items: 289
+2025-10-28T02:53:14.414114871Z Server running → http://localhost:10000
+2025-10-28T02:53:14.414233669Z NODE_ENV: production
+2025-10-28T02:53:14.414379599Z [server] mounted routes: / (root health), /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)
+2025-10-28T02:53:24.522455243Z [2025-10-28T02:53:24.522Z] Request ID: 8e7fe182-800d-4ab2-b05a-7b6eb85e896e, Path: HEAD /api/health
+2025-10-28T02:53:24.522499596Z [2025-10-28T02:53:24.522Z] HEAD /api/health
+2025-10-28T02:53:24.903638786Z [2025-10-28T02:53:24.903Z] Request ID: 803e4364-8641-4ad2-8785-85c049ed8d71, Path: HEAD /
+2025-10-28T02:53:24.90369196Z [2025-10-28T02:53:24.903Z] HEAD /
+2025-10-28T02:53:24.952236356Z [2025-10-28T02:53:24.952Z] Request ID: f2f8be1d-dbdf-4140-8eb9-395ead94b0ba, Path: HEAD /
+2025-10-28T02:53:24.952277159Z [2025-10-28T02:53:24.952Z] HEAD /
+2025-10-28T02:53:24.975548638Z [2025-10-28T02:53:24.975Z] Request ID: 6f246e80-c841-4953-bb79-8b4a9f9e586c, Path: HEAD /
+2025-10-28T02:53:24.97571501Z [2025-10-28T02:53:24.975Z] HEAD /
+2025-10-28T02:53:25.001065313Z [2025-10-28T02:53:24.999Z] Request ID: bccd972c-6179-42e4-b9c2-745bd1b2be3b, Path: HEAD /
+2025-10-28T02:53:25.001096266Z [2025-10-28T02:53:24.999Z] HEAD /
+2025-10-28T02:53:25.048514584Z [2025-10-28T02:53:25.048Z] Request ID: 9ad47437-9595-478a-8091-509b0a705bcc, Path: HEAD /api/health
+2025-10-28T02:53:25.048683035Z [2025-10-28T02:53:25.048Z] HEAD /api/health
+2025-10-28T02:53:25.121822953Z [2025-10-28T02:53:25.121Z] Request ID: baa3ce00-7c91-443a-8dfa-92bbdd9e977d, Path: HEAD /api/health
+2025-10-28T02:53:25.121850155Z [2025-10-28T02:53:25.121Z] HEAD /api/health
+2025-10-28T02:53:25.180684572Z [2025-10-28T02:53:25.180Z] Request ID: bc56bbd3-ec01-4ec2-a814-e33655b7e1a5, Path: HEAD /
+2025-10-28T02:53:25.180702163Z [2025-10-28T02:53:25.180Z] HEAD /
+2025-10-28T02:53:25.355993279Z [2025-10-28T02:53:25.355Z] Request ID: e5dca8cf-d515-4ff3-9e9b-760c9ee787e6, Path: HEAD /
+2025-10-28T02:53:25.356021221Z [2025-10-28T02:53:25.355Z] HEAD /
+2025-10-28T02:53:25.399316931Z [2025-10-28T02:53:25.399Z] Request ID: b541cc50-1871-4b7a-8e81-97c38ff92a46, Path: HEAD /
+2025-10-28T02:53:25.399334372Z [2025-10-28T02:53:25.399Z] HEAD /
+2025-10-28T02:53:25.435520664Z [2025-10-28T02:53:25.435Z] Request ID: 48965557-e23f-4ac1-9716-8dad71a8b957, Path: HEAD /
+2025-10-28T02:53:25.435544115Z [2025-10-28T02:53:25.435Z] HEAD /
+2025-10-28T02:53:25.645730543Z [2025-10-28T02:53:25.645Z] Request ID: f6258eae-9e6e-4479-b9bd-098127db0b2a, Path: GET /api/health
+2025-10-28T02:53:25.645802018Z [2025-10-28T02:53:25.645Z] GET /api/health
+2025-10-28T02:53:40.21776019Z [2025-10-28T02:53:40.217Z] Request ID: e18d3428-73e6-4ee8-b7d1-b748b2f76d46, Path: GET /api/menu
+2025-10-28T02:53:40.217882399Z [2025-10-28T02:53:40.217Z] GET /api/menu
+2025-10-28T02:53:55.932226707Z [2025-10-28T02:53:55.932Z] Request ID: 767376fa-ff7c-499c-84de-eac37122834c, Path: GET /api/menu
+2025-10-28T02:53:55.93226161Z [2025-10-28T02:53:55.932Z] GET /api/menu
+2025-10-28T02:53:55.932743434Z [server error] Error: The CORS policy for this site does not allow access from the specified Origin.
+2025-10-28T02:53:55.932754635Z     at origin (file:///opt/render/project/src/src/server.js:102:23)
+2025-10-28T02:53:55.932758695Z     at /opt/render/project/src/node_modules/cors/lib/index.js:219:13
+2025-10-28T02:53:55.932763195Z     at optionsCallback (/opt/render/project/src/node_modules/cors/lib/index.js:199:9)
+2025-10-28T02:53:55.932767355Z     at corsMiddleware (/opt/render/project/src/node_modules/cors/lib/index.js:204:7)
+2025-10-28T02:53:55.932771436Z     at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/express/lib/router/layer.js:95:5)
+2025-10-28T02:53:55.932775306Z     at trim_prefix (/opt/render/project/src/node_modules/express/lib/router/index.js:328:13)
+2025-10-28T02:53:55.932779116Z     at /opt/render/project/src/node_modules/express/lib/router/index.js:286:9
+2025-10-28T02:53:55.932807558Z     at Function.process_params (/opt/render/project/src/node_modules/express/lib/router/index.js:346:12)
+2025-10-28T02:53:55.932813259Z     at next (/opt/render/project/src/node_modules/express/lib/router/index.js:280:10)
+2025-10-28T02:53:55.932817939Z     at file:///opt/render/project/src/src/server.js:85:3
