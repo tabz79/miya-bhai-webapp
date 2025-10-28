@@ -24,7 +24,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 // ---------------------------------------------------------------------------
 // GET /api/coupons → list all coupons
 // ---------------------------------------------------------------------------
-router.get('/coupons', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('coupons')
@@ -42,7 +42,7 @@ router.get('/coupons', async (req, res) => {
 // ---------------------------------------------------------------------------
 // POST /api/coupons → create new coupon
 // ---------------------------------------------------------------------------
-router.post('/coupons', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const payload = req.body;
     if (!payload || typeof payload !== 'object') {
@@ -68,7 +68,7 @@ router.post('/coupons', async (req, res) => {
 // ---------------------------------------------------------------------------
 // PUT /api/coupons/:id → update coupon
 // ---------------------------------------------------------------------------
-router.put('/coupons/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const payload = req.body;
@@ -96,7 +96,7 @@ router.put('/coupons/:id', async (req, res) => {
 // ---------------------------------------------------------------------------
 // DELETE /api/coupons/:id → delete coupon
 // ---------------------------------------------------------------------------
-router.delete('/coupons/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) return res.status(400).json({ error: 'Missing coupon ID' });

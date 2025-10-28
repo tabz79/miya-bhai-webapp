@@ -1,42 +1,26 @@
 console logs:
 index-DbBHOLZu.js:211 Supabase client initialized (client-side anon).
 index-DbBHOLZu.js:332 [App] supabase client ready: true
-menu:1 Access to fetch at 'https://miya-bhai-api-staging.onrender.com/api/menu' from origin 'https://pre-mvp.miya-bhai-webapp-v1.pages.dev' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
-index-DbBHOLZu.js:212  GET https://miya-bhai-api-staging.onrender.com/api/menu net::ERR_FAILED 500 (Internal Server Error)
+index-DbBHOLZu.js:212  GET https://miya-bhai-api-staging.onrender.com/api/coupons 404 (Not Found)
 lr @ index-DbBHOLZu.js:212
-getMenu @ index-DbBHOLZu.js:212
+getCoupons @ index-DbBHOLZu.js:212
 (anonymous) @ index-DbBHOLZu.js:213
 (anonymous) @ index-DbBHOLZu.js:213
 Ug @ index-DbBHOLZu.js:40
 hl @ index-DbBHOLZu.js:40
-FP @ index-DbBHOLZu.js:40
-Xi @ index-DbBHOLZu.js:38
-ZU @ index-DbBHOLZu.js:40
-go @ index-DbBHOLZu.js:40
-lR @ index-DbBHOLZu.js:40
+(anonymous) @ index-DbBHOLZu.js:40
 _ @ index-DbBHOLZu.js:25
 O @ index-DbBHOLZu.js:25
-index-DbBHOLZu.js:213 Failed to fetch or parse menu, falling back to canonical data TypeError: Failed to fetch
-    at lr (index-DbBHOLZu.js:212:357)
-    at Object.getMenu (index-DbBHOLZu.js:212:624)
-    at index-DbBHOLZu.js:213:811
-    at index-DbBHOLZu.js:213:1151
-    at Ug (index-DbBHOLZu.js:40:24263)
-    at hl (index-DbBHOLZu.js:40:42318)
-    at FP (index-DbBHOLZu.js:40:36565)
-    at Xi (index-DbBHOLZu.js:38:3274)
-    at ZU (index-DbBHOLZu.js:40:41221)
-    at go (index-DbBHOLZu.js:40:40215)
+index-DbBHOLZu.js:213 Failed to fetch coupons Error: HTTP 404 — Not Found
+    at lr (index-DbBHOLZu.js:212:520)
+    at async Object.getCoupons (index-DbBHOLZu.js:212:682)
+    at async index-DbBHOLZu.js:213:3249
 (anonymous) @ index-DbBHOLZu.js:213
 await in (anonymous)
 (anonymous) @ index-DbBHOLZu.js:213
 Ug @ index-DbBHOLZu.js:40
 hl @ index-DbBHOLZu.js:40
-FP @ index-DbBHOLZu.js:40
-Xi @ index-DbBHOLZu.js:38
-ZU @ index-DbBHOLZu.js:40
-go @ index-DbBHOLZu.js:40
-lR @ index-DbBHOLZu.js:40
+(anonymous) @ index-DbBHOLZu.js:40
 _ @ index-DbBHOLZu.js:25
 O @ index-DbBHOLZu.js:25
 
@@ -48,13 +32,13 @@ https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/index-DbBHOLZu.js
 https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/index-BDgQOtN_.css
 https://replit.com/public/js/replit-dev-banner.js
 chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.js-BpLE7UnF.js
+chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js
+chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js
 https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2
 https://fonts.gstatic.com/s/arefruqaaink/v11/1q2fY5WOGUFlt84GTOkP6Kdx71TmXoDxgQ.woff2
 https://fonts.gstatic.com/s/carattere/v8/4iCv6Kp1b9dXlgt_CkvjsGyN.woff2
 https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2
 https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js
-chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js
 https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png
 https://pre-mvp.miya-bhai-webapp-v1.pages.dev/banners.json
 https://miya-bhai-api-staging.onrender.com/api/menu
@@ -180,8 +164,38 @@ https://res.cloudinary.com/dnefyrllm/image/upload/v1758785513/miya_bhai/dishes/r
 https://res.cloudinary.com/dnefyrllm/image/upload/v1758785517/miya_bhai/dishes/vada.jpg
 https://pre-mvp.miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.png
 https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/placeholder-menu-item-D6APIJXl.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/banners.json
+https://miya-bhai-api-staging.onrender.com/api/menu
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/banners.json
+https://miya-bhai-api-staging.onrender.com/api/menu
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/placeholder-menu-item-D6APIJXl.png
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
+https://miya-bhai-api-staging.onrender.com/api/coupons
+https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico
 
-fatch:
+fetch:
 fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu", {
   "headers": {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
@@ -272,6 +286,20 @@ fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI.j
   "mode": "cors",
   "credentials": "omit"
 }); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js", {
+  "referrer": "",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
 fetch("https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoVQ.woff2", {
   "headers": {
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
@@ -332,20 +360,6 @@ fetch("https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdT
   "mode": "cors",
   "credentials": "omit"
 }); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/autoCouponUI-C3X1XCQ7.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
-fetch("chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/assets/utility_all2-Dxb6tNuF.js", {
-  "referrer": "",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-}); ;
 fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/logo-xyvj-OlM.png", {
   "headers": {
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
@@ -388,6 +402,7 @@ fetch("https://miya-bhai-api-staging.onrender.com/api/menu", {
   "headers": {
     "accept": "application/json",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"20e82-7TyhKj/B/SPe6XTqKIMJ9l8jPgw\"",
     "priority": "u=1, i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
@@ -565,7 +580,7 @@ fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/images/banners/mandi-single
     "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
     "accept-language": "en-IN,en;q=0.9,te;q=0.8",
     "if-none-match": "\"a7a1c3a4b3f3ed7bc1ac24a2f0c93426\"",
-    "priority": "u=1, i",
+    "priority": "i",
     "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
@@ -1811,6 +1826,578 @@ fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/placeholder-menu-ite
     "sec-fetch-site": "same-origin"
   },
   "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"12ed9ca9896fe17bf18565d8bdf27953\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"80dd3da57d0dd3b219e17ff6e03d0698\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"c9fbfb4b45a02afba5e839b3a4e8f1c3\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8defbf87d3b89e88e4628c16c22cba25\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"d4178a717b956e4e6d1c67e38c0bb663\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8197ab5eed4fe954050d5a6784907836\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"6f595570721bfe6fb8ac289f587f5f94\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/banners.json", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"b9c1e46fed57fa19beb85ad5131509de\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-api-staging.onrender.com/api/menu", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"20e82-7TyhKj/B/SPe6XTqKIMJ9l8jPgw\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/HeroImage1-DweDpayE.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8271361cc4775c1aba824daf0667c0b9\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/chickenbiryani-bestseller-Y--3Sbya.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"12ed9ca9896fe17bf18565d8bdf27953\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/arabianmandi-bestseller-COwsgazF.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"80dd3da57d0dd3b219e17ff6e03d0698\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/Shawarma-bestseller-CMLIowDT.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"c9fbfb4b45a02afba5e839b3a4e8f1c3\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/kebeb-bestseller-DcMcp_ZV.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8defbf87d3b89e88e4628c16c22cba25\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/DeliveryGuy-CLppniDM.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"d4178a717b956e4e6d1c67e38c0bb663\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/delivery-icon-DubV78id.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"8197ab5eed4fe954050d5a6784907836\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/figmaAssets/add-to-cart-button.svg", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"6f595570721bfe6fb8ac289f587f5f94\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/banners.json", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"b9c1e46fed57fa19beb85ad5131509de\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-api-staging.onrender.com/api/menu", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"20e82-7TyhKj/B/SPe6XTqKIMJ9l8jPgw\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/src/assets/placeholder-menu-item.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/assets/placeholder-menu-item-D6APIJXl.png", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "\"3c5be3f6c53f261b6fece732d2ddaf90\"",
+    "priority": "i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/menu",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/cart",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://miya-bhai-api-staging.onrender.com/api/coupons", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-storage-access": "active"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}); ;
+fetch("https://pre-mvp.miya-bhai-webapp-v1.pages.dev/favicon.ico", {
+  "headers": {
+    "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+    "accept-language": "en-IN,en;q=0.9,te;q=0.8",
+    "if-none-match": "W/\"e2d7d60982499f1350d418815917cfa6\"",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "image",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://pre-mvp.miya-bhai-webapp-v1.pages.dev/profile",
   "body": null,
   "method": "GET",
   "mode": "cors",
