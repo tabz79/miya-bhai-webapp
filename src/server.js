@@ -140,19 +140,21 @@ app.get('/', (_req, res) => {
 app.head('/', (_req, res) => res.status(200).end());
 
 // routes
-// Mount GitHub custom auth router first so /api/auth/github/* is handled
-app.use('/api', githubAuthRouter);
-
-// existing auth router (other auth endpoints like /api/auth/verify remain)
-app.use('/api', authRouter);
+// Mount PUBLIC routes first
 app.use('/api', healthRouter);
+app.use('/api', menuRouter);
 
-// ⬇️ Mount PUBLIC coupons BEFORE generic '/api' routers to avoid shadowing
+// Mount PUBLIC coupons BEFORE generic '/api' routers to avoid shadowing
 // couponsRouter uses router.get('/') so this exposes GET /api/coupons
 app.use('/api/coupons', couponsRouter);
 
-// The rest
-app.use('/api', menuRouter);
+// Mount auth-related routes next
+// Mount GitHub custom auth router first so /api/auth/github/* is handled
+app.use('/api', githubAuthRouter);
+// existing auth router (other auth endpoints like /api/auth/verify remain)
+app.use('/api', authRouter);
+
+// The rest of the authenticated routes
 app.use('/api', orderRouter);
 app.use('/api', adminRouter);
 app.use('/api', settingsRouter);
