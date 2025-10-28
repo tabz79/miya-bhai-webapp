@@ -10,6 +10,9 @@ export function Auth() {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
+  // Determine the base URL for redirects
+  const appBaseUrl = import.meta.env.VITE_APP_URL || window.location.origin;
+
   // 🔹 Magic Link Login
   const handleMagicLinkLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,7 +24,7 @@ export function Auth() {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
+          emailRedirectTo: `${appBaseUrl}/auth/callback`,
         },
       });
 
@@ -60,7 +63,7 @@ export function Auth() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?hash={hash}`,
+        redirectTo: `${appBaseUrl}/auth/callback?hash={hash}`,
       },
     });
 
@@ -96,7 +99,7 @@ export function Auth() {
         provider: 'google',
         options: {
           // IMPORTANT: route callback to our client callback so AuthCallback can capture session
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo: `${appBaseUrl}/auth/callback`,
         },
       });
 
