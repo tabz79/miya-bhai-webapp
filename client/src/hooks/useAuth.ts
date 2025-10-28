@@ -17,7 +17,7 @@ export function useAuth() {
         const { data: profileData, error } = await supabase
           .from('profiles')
           .select('id, role') // Explicitly select role and any other needed fields
-          .eq('id', currentSession.user.id)
+          .eq('user_id', currentSession.user.id)
           .maybeSingle({
             headers: { 'Accept': 'application/vnd.pgrst.object+json' } // Explicitly set Accept header
           });
