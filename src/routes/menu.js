@@ -4,7 +4,7 @@ import { validatePaginationQuery } from '../validators/queryValidator.js';
 
 const menuRouter = Router();
 
-menuRouter.get('/menu', validatePaginationQuery, async (req, res) => {
+menuRouter.get('/', validatePaginationQuery, async (req, res) => {
   const { page = 1, limit } = req.query;
 
   try {
