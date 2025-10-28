@@ -4,6 +4,7 @@ import express from 'express';
 import { createClient } from '@supabase/supabase-js';
 import { parse } from 'json2csv';
 import requireAdmin from '../middleware/requireAdmin.js';
+import requireAuth from '../middleware/requireAuth.js';
 
 const router = express.Router();
 
