@@ -65,7 +65,7 @@ export const useAdminData = (): AdminData => {
     clearAbort();
     abortRef.current = new AbortController();
     try {
-      const data = await adminApi.getOrders(page, limit, { signal: abortRef.current.signal });
+      const data = await adminApi.getOrders({ page, limit, signal: abortRef.current.signal });
       if (!mountedRef.current) return;
       setOrders(data.items || []);
       pageRef.current = page;
@@ -81,7 +81,7 @@ export const useAdminData = (): AdminData => {
 
   const fetchOrdersOverTime = useCallback(async (from?: string, to?: string, interval: 'day' | 'week' | 'month' = 'day') => {
     try {
-      const data = await adminApi.getOrdersOverTime(from, to, interval);
+      const data = await adminApi.getOrdersOverTime({ from, to, interval });
       if (!mountedRef.current) return;
       setOrdersOverTime(data || []);
     } catch (err: any) {
