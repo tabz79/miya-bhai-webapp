@@ -34,7 +34,7 @@ function toNumber(v) {
 }
 
 // GET /api/admin/summary
-router.get('/admin/summary', async (req, res) => {
+router.get('/summary', async (req, res) => {
   try {
     // total orders (all time)
     const { count: totalOrders, error: totalErr } = await supabase
@@ -71,7 +71,7 @@ router.get('/admin/summary', async (req, res) => {
 });
 
 // GET /api/admin/charts/orders-over-time
-router.get('/admin/charts/orders-over-time', async (req, res) => {
+router.get('/charts/orders-over-time', async (req, res) => {
   try {
     const { from, to, interval } = req.query; // interval: 'day', 'week', 'month'
 
@@ -118,7 +118,7 @@ router.get('/admin/charts/orders-over-time', async (req, res) => {
 });
 
 // GET /api/admin/charts/payment-methods
-router.get('/admin/charts/payment-methods', async (req, res) => {
+router.get('/charts/payment-methods', async (req, res) => {
   try {
     const { data, error } = await supabase.from('orders').select('payment_method');
     if (error) throw error;
@@ -142,7 +142,7 @@ router.get('/admin/charts/payment-methods', async (req, res) => {
 });
 
 // GET /api/admin/orders
-router.get('/admin/orders', async (req, res) => {
+router.get('/orders', async (req, res) => {
   console.log('[admin/orders] route hit', { query: req.query }); // debug: show when route is hit
   try {
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
@@ -186,7 +186,7 @@ router.get('/admin/orders', async (req, res) => {
 });
 
 // PUT /api/admin/orders/:id/status
-router.put('/admin/orders/:id/status', async (req, res) => {
+router.put('/orders/:id/status', async (req, res) => {
   try {
     const { id } = req.params;
     const { status, markPaid } = req.body;
@@ -239,7 +239,7 @@ router.put('/admin/orders/:id/status', async (req, res) => {
 });
 
 // PUT /api/admin/orders/:id/assign
-router.put('/admin/orders/:id/assign', async (req, res) => {
+router.put('/orders/:id/assign', async (req, res) => {
   try {
     const { id } = req.params;
     const { driverId } = req.body; // driverId can be null to unassign
@@ -259,7 +259,7 @@ router.put('/admin/orders/:id/assign', async (req, res) => {
 });
 
 // GET /api/admin/drivers
-router.get('/admin/drivers', async (req, res) => {
+router.get('/drivers', async (req, res) => {
   try {
     const { data, error } = await supabase.from('drivers').select('*').order('name', { ascending: true });
     if (error) throw error;
@@ -271,7 +271,7 @@ router.get('/admin/drivers', async (req, res) => {
 });
 
 // POST /api/admin/drivers
-router.post('/admin/drivers', async (req, res) => {
+router.post('/drivers', async (req, res) => {
   try {
     const { name, phone, status } = req.body;
     if (!name || !phone) {
@@ -288,7 +288,7 @@ router.post('/admin/drivers', async (req, res) => {
 });
 
 // PUT /api/admin/drivers/:id
-router.put('/admin/drivers/:id', async (req, res) => {
+router.put('/drivers/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { name, phone, status } = req.body;
@@ -310,7 +310,7 @@ router.put('/admin/drivers/:id', async (req, res) => {
 });
 
 // DELETE /api/admin/drivers/:id
-router.delete('/admin/drivers/:id', async (req, res) => {
+router.delete('/drivers/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { error } = await supabase.from('drivers').delete().eq('id', id);
@@ -323,7 +323,7 @@ router.delete('/admin/drivers/:id', async (req, res) => {
 });
 
 // GET /api/admin/deliveries
-router.get('/admin/deliveries', async (req, res) => {
+router.get('/deliveries', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('deliveries_for_admin')
@@ -343,7 +343,7 @@ router.get('/admin/deliveries', async (req, res) => {
 });
 
 // GET /api/admin/customers
-router.get('/admin/customers', async (req, res) => {
+router.get('/customers', async (req, res) => {
   try {
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
     const limit = Math.max(1, parseInt(req.query.limit, 10) || 10);
@@ -380,7 +380,7 @@ router.get('/admin/customers', async (req, res) => {
 });
 
 // GET /api/admin/customers/:id
-router.get('/admin/customers/:id', async (req, res) => {
+router.get('/customers/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { data: customer, error: customerError } = await supabase.from('customers').select('id, name, phone, email, total_spent, last_order_at').eq('id', id).single();
@@ -407,7 +407,7 @@ router.get('/admin/customers/:id', async (req, res) => {
 });
 
 // GET /api/admin/reports/export (CSV)
-router.get('/admin/reports/export', async (req, res) => {
+router.get('/reports/export', async (req, res) => {
   try {
     const { from, to, status } = req.query; // Optional filters
     let query = supabase.from('orders').select('*');
@@ -436,7 +436,7 @@ router.get('/admin/reports/export', async (req, res) => {
 });
 
 // GET /api/admin/coupons
-router.get('/admin/coupons', async (req, res) => {
+router.get('/coupons', async (req, res) => {
   try {
     const { data, error } = await supabase.from('coupons').select('*').order('created_at', { ascending: false });
     if (error) throw error;
@@ -448,7 +448,7 @@ router.get('/admin/coupons', async (req, res) => {
 });
 
 // POST /api/admin/coupons
-router.post('/admin/coupons', async (req, res) => {
+router.post('/coupons', async (req, res) => {
   try {
     const { data, error } = await supabase.from('coupons').insert([req.body]).select();
     if (error) throw error;
@@ -460,7 +460,7 @@ router.post('/admin/coupons', async (req, res) => {
 });
 
 // PUT /api/admin/coupons/:id
-router.put('/admin/coupons/:id', async (req, res) => {
+router.put('/coupons/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { data, error } = await supabase.from('coupons').update(req.body).eq('id', id).select();
@@ -473,7 +473,7 @@ router.put('/admin/coupons/:id', async (req, res) => {
 });
 
 // DELETE /api/admin/coupons/:id
-router.delete('/admin/coupons/:id', async (req, res) => {
+router.delete('/coupons/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { error } = await supabase.from('coupons').delete().eq('id', id);
@@ -486,7 +486,7 @@ router.delete('/admin/coupons/:id', async (req, res) => {
 });
 
 // PUT /api/admin/coupons/:id/status
-router.put('/admin/coupons/:id/status', async (req, res) => {
+router.put('/coupons/:id/status', async (req, res) => {
   try {
     const { id } = req.params;
     const { is_active } = req.body;
@@ -514,7 +514,7 @@ router.put('/admin/coupons/:id/status', async (req, res) => {
 });
 
 // GET /api/admin/settings
-router.get('/admin/settings', async (req, res) => {
+router.get('/settings', async (req, res) => {
   try {
     const { data, error } = await supabase.from('settings').select('key, value');
     if (error) throw error;
@@ -532,7 +532,7 @@ router.get('/admin/settings', async (req, res) => {
 });
 
 // PUT /api/admin/settings
-router.put('/admin/settings', async (req, res) => {
+router.put('/settings', async (req, res) => {
   try {
     const settings = req.body;
 

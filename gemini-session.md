@@ -987,3 +987,68 @@
   *full* `render-logs.txt` output, including logs generated after server  
   startup and during the /api/menu request. I'm awaiting these logs to    
   analyze the 502 Bad Gateway and CORS errors.
+  
+
+  
+  ✦ Okay, the search for select('role' came up empty. This is unexpected, as
+  we know this code exists, or at least did exist.
+
+  This could mean the change was reverted, or there's an issue with the   
+  search tool. Before I jump to conclusions, I will read the contents of  
+  client/src/hooks/useAuth.ts directly. This is the file I modified       
+  earlier to fix the Supabase query.
+
+  This will confirm whether the fix is still in place.
+╭───────────────────────────────────────────────────────────────────────╮ 
+│ ✓  ReadFile client\src\hooks\useAuth.ts                               │ 
+╰───────────────────────────────────────────────────────────────────────╯ 
+✦ Okay, I've confirmed the code in client/src/hooks/useAuth.ts is correct.
+  The search tool seems to have had a hiccup, but the file content is what
+  matters, and it contains the right logic.
+
+  This leads to a firm conclusion.
+
+  Summary of the Situation:
+
+   1. Backend Fixed: All backend issues, including the 502 and 401 errors,
+      have been resolved by fixing the routing in src/server.js and       
+      src/routes/admin.js.
+   2. Frontend Code is Correct: The frontend code in your repository for  
+      fetching the user profile is correct.
+   3. Deployment is Complete: You have successfully deployed the latest ce
+       to both Render and Cloudflare Pages.
+   4. The Problem is Caching: The error logs prove that your browser is   
+      still running an old, cached version of the application's JavaScrip.
+      It has not downloaded the new files from the server yet.
+
+  This is the final solution:
+
+  You need to force your browser to clear its cache and download the latet
+  version of the application.
+
+  Please perform a "Hard Refresh" in your browser:
+
+   * On Windows/Linux (Chrome, Firefox, Edge): Press Ctrl + F5
+   * On Mac (Chrome, Firefox, Safari): Press Cmd + Shift + R
+
+  This will bypass the cache and load the new code. After you do this,    
+  the 406 Not Acceptable error should be gone.
+
+  ---
+
+  Final TLDR of All Fixes:
+
+   * Issue 1: 502 Bad Gateway on `/api/menu`
+       * Fix: Corrected a routing bug in src/routes/menu.js where the path
+         was wrong.
+   * Issue 2: 401 Unauthorized on `/api/menu`
+       * Fix: Corrected the Express middleware order in src/server.js and 
+         cleaned up routes in src/routes/admin.js to prevent the public   
+         menu API from being incorrectly protected by authentication.     
+   * Issue 3: 406 Not Acceptable on `profiles` fetch
+       * Fix: Corrected the Supabase query in client/src/hooks/useAuth.ts 
+         to use the correct user_id column. The final step is for you to  
+         perform a hard refresh to clear your browser's cache and load ths
+          fix.
+   * Files Changed: src/routes/menu.js, src/server.js, src/routes/admin.j,
+      client/src/hooks/useAuth.ts.

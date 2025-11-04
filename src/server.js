@@ -156,7 +156,7 @@ app.use('/api', authRouter);
 
 // The rest of the authenticated routes
 app.use('/api', orderRouter);
-app.use('/api', adminRouter);
+app.use('/api/admin', adminRouter);
 app.use('/api', settingsRouter);
 app.use('/api/user', userRouter);
 
