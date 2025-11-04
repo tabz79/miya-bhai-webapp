@@ -1,6 +1,6 @@
 // client/src/admin/hooks/useAdminData.ts
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { adminApi } from '../services/api';
+import { adminApi } from '../../services/adminApi';
 import { Order, Summary, ChartData } from '../types';
 // Use single shared supabase client wrapper (defensive)
 import supabase, { isSupabaseReady } from '../../lib/supabaseClient';
