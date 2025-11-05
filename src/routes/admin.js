@@ -10,12 +10,6 @@ const router = express.Router();
 
 console.log('[admin routes] loaded'); // debug: indicate routes file loaded
 
-// TEMPORARY DEBUG: Log incoming headers to check for external modifications
-router.use((req, res, next) => {
-  console.log('[admin-debug] Incoming Authorization header:', req.headers.authorization);
-  next();
-});
-
 router.use(requireAuth);
 router.use(requireAdmin);
 

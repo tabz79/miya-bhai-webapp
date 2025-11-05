@@ -66,14 +66,7 @@ const AdminOrdersPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [adminToken, setAdminToken] = useState<string | undefined>(() => sessionStorage.getItem('admin-token') || undefined);
-
-  const loadOrders = useCallback(async (token: string | undefined) => {
-    if (!token) {
-      setError('Admin token not provided.');
-      setLoading(false);
-      return;
-    }
+  const loadOrders = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -82,8 +75,7 @@ const AdminOrdersPage: React.FC = () => {
       const resp = await adminApi.getOrders(
         currentPage,
         ORDERS_PER_PAGE,
-        { status: statusParam, search: searchQuery },
-        token
+        { status: statusParam, search: searchQuery }
       );
 
       const data = (resp && (resp.items || resp.data || resp.orders)) || [];
@@ -100,11 +92,8 @@ const AdminOrdersPage: React.FC = () => {
       setTotalPages(Math.max(1, Math.ceil(total / ORDERS_PER_PAGE)));
     } catch (err: any) {
       setError(err?.message || 'Failed to load orders');
-      if (err?.message?.includes('Unauthorized')) {
-        sessionStorage.removeItem('admin-token');
-        setAdminToken(undefined);
-        setError('Invalid admin token. Please refresh and try again.');
-      }
+      // The backend now handles authentication via Supabase, so no client-side token removal needed here.
+      // If unauthorized, the backend will return a 401, which the frontend should handle via global auth context.
       setOrders([]);
       setTotalPages(1);
     } finally {
@@ -113,26 +102,15 @@ const AdminOrdersPage: React.FC = () => {
   }, [currentPage, statusFilter, searchQuery]);
 
   useEffect(() => {
-    if (adminToken) {
-      loadOrders(adminToken);
-    } else {
-      const token = window.prompt('Please enter the admin password:');
-      if (token) {
-        sessionStorage.setItem('admin-token', token);
-        setAdminToken(token);
-      } else {
-        setError('Admin password is required to view orders.');
-        setLoading(false);
-      }
-    }
-  }, [adminToken, loadOrders]);
+    // TODO: Implement proper admin authentication flow.
+    // Client-side password prompt removed.
+    loadOrders();
+  }, [loadOrders]);
 
-  // This effect re-runs the loadOrders call whenever the token, page, or filters change.
+  // This effect re-runs the loadOrders call whenever the page, or filters change.
   useEffect(() => {
-    if (adminToken) {
-      loadOrders(adminToken);
-    }
-  }, [adminToken, currentPage, statusFilter, searchQuery, loadOrders]);
+    loadOrders();
+  }, [currentPage, statusFilter, searchQuery, loadOrders]);
 
 
   // ---------------------------
