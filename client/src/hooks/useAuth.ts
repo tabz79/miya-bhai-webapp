@@ -6,50 +6,51 @@ export function useAuth() {
   const { session, user, profile, setSession, setUserAndProfile } = useAuthStore(); // Get new state and action
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getSessionAndProfile = async () => {
-      setLoading(true);
+  const getSessionAndProfile = useCallback(async () => {
+    setLoading(true);
+    try {
       const { data: { session: currentSession } } = await supabase.auth.getSession();
-      setSession(currentSession); // Update session and user in store
+      setSession(currentSession);
 
       if (currentSession?.user) {
-        // Fetch profile after session is set
         const { data: profileData, error } = await supabase
           .from('profiles')
-          .select('id, role') // Explicitly select role and any other needed fields
+          .select('id, role')
           .eq('user_id', currentSession.user.id)
-          .maybeSingle({
-            headers: { 'Accept': 'application/vnd.pgrst.object+json' } // Explicitly set Accept header
-          });
+          .single();
 
         if (error) {
           console.error('Error fetching user profile:', error);
-          setUserAndProfile(currentSession.user, null); // Set user but no profile
+          setUserAndProfile(currentSession.user, null);
         } else {
-          setUserAndProfile(currentSession.user, profileData); // Set user and fetched profile
+          setUserAndProfile(currentSession.user, profileData);
         }
       } else {
-        setUserAndProfile(null, null); // No user, no profile
+        setUserAndProfile(null, null);
       }
+    } catch (error) {
+      console.error("Error in getSessionAndProfile: ", error);
+    } finally {
       setLoading(false);
-    };
+    }
+  }, [setSession, setUserAndProfile]);
 
+  useEffect(() => {
     getSessionAndProfile();
 
     const { data: authListener } = supabase.auth.onAuthStateChange((_event, newSession) => {
-      setSession(newSession); // Update session and user in store
-      if (newSession?.user) {
-        // Re-fetch profile on auth state change
-        getSessionAndProfile(); // Re-run to fetch profile
+      setSession(newSession);
+      if (newSession) {
+        getSessionAndProfile();
       } else {
-        setUserAndProfile(null, null); // Clear user and profile on logout
+        setUserAndProfile(null, null);
       }
     });
 
     return () => {
-      authListener.subscription.unsubscribe();
+      authListener?.subscription.unsubscribe();
     };
-  }, []);
+  }, [getSessionAndProfile, setSession, setUserAndProfile]);
 
   const isAdmin = profile?.role === 'admin';
 
