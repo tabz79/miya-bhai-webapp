@@ -41,13 +41,26 @@ export function getEnvSnapshot() {
 
 export const isSupabaseReady = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
-// HMR/global guard to ensure a single Supabase client instance in the browser
-declare global {
-  // eslint-disable-next-line no-var
-  var __MIYA_BHAI_SUPABASE__: SupabaseClient | undefined;
-}
-
 let supabase: SupabaseClient | null = null;
+
+export const getSupabase = () => {
+    if (supabase) {
+        return supabase;
+    }
+
+    if (!isSupabaseReady) {
+        console.warn('Supabase client not initialized. Missing envs. Snapshot:', getEnvSnapshot());
+        return null;
+    }
+
+    supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        auth: { persistSession: true },
+        realtime: { params: { eventsPerSecond: 10 } },
+    });
+
+    console.info('Supabase client initialized (client-side anon).');
+    return supabase;
+}
 
 // --- Dev-only helpful logs (won't print keys, only presence and masked info) ---
 if (import.meta.env.DEV) {
@@ -65,19 +78,4 @@ if (import.meta.env.DEV) {
 }
 // -------------------------------------------------------------------------------
 
-if (!isSupabaseReady) {
-  console.warn('Supabase client not initialized. Missing envs. Snapshot:', getEnvSnapshot());
-} else {
-  if (!(globalThis as any).__MIYA_BHAI_SUPABASE__) {
-    (globalThis as any).__MIYA_BHAI_SUPABASE__ = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: { persistSession: true },
-      realtime: { params: { eventsPerSecond: 10 } },
-    });
-  }
-  supabase = (globalThis as any).__MIYA_BHAI_SUPABASE__;
-  console.info('Supabase client initialized (client-side anon).');
-}
-
 // ✅ Export both default and named — works for all imports
-export { supabase };
-export default supabase;

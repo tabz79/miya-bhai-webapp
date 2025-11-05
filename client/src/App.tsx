@@ -33,7 +33,7 @@ import LoginPage from "@/pages/LoginPage";
 // 🧠 unified callback replaces both MagicLinkCallback & OAuthCallback
 import AuthCallback from "@/pages/AuthCallback";
 
-import { supabase } from "@/lib/supabaseClient";
+import { getSupabase } from "@/lib/supabaseClient";
 
 /**
  * A helper component to handle the layout switching.
@@ -84,6 +84,7 @@ function AppRoutes() {
 
 function App() {
   useEffect(() => {
+    const supabase = getSupabase();
     console.log("[App] supabase client ready:", Boolean(supabase));
   }, []);
 

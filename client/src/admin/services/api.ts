@@ -1,6 +1,6 @@
 // client/src/admin/services/api.ts
 import { Order, Driver, Customer, Summary, ChartData } from '../types';
-import { supabase } from '../../lib/supabaseClient';
+import { getSupabase } from '../../lib/supabaseClient';
 
 type OrdersResp = { items: Order[]; meta: { total: number; page: number; limit: number }; raw?: any };
 
@@ -10,6 +10,8 @@ async function safeFetch(input: RequestInfo, init?: RequestInit) {
   const url = typeof input === 'string' ? (input.startsWith('http') ? input : `${baseUrl}${input}`) : input;
 
   // --- START: AUTH MODIFICATION ---
+  const supabase = getSupabase();
+  if (!supabase) throw new Error("Supabase client not initialized");
   const { data: { session } } = await supabase.auth.getSession();
   const headers = new Headers(init?.headers);
   if (session?.access_token) {

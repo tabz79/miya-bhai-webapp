@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { Session, User } from '@supabase/supabase-js';
-import { supabase } from '../supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 
 interface Profile {
   id: string;
@@ -23,6 +23,8 @@ export const useAuthStore = create<AuthState>()((set, get) => ({
   loading: true,
 
   setSession: async (session) => {
+    const supabase = getSupabase();
+    if (!supabase) return;
     set({ session, user: session?.user ?? null, loading: true });
     if (session?.user) {
       try {

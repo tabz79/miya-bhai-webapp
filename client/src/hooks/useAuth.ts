@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { useAuthStore } from './useAuthStore';
 
 export function useAuth() {
   const { session, user, profile, loading, setSession } = useAuthStore();
 
   useEffect(() => {
+    const supabase = getSupabase();
+    if (!supabase) return;
     const getInitialSession = async () => {
       const { data } = await supabase.auth.getSession();
       await setSession(data.session);
