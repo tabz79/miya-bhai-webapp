@@ -49,7 +49,7 @@ export function useAuth() {
     return () => {
       authListener.subscription.unsubscribe();
     };
-  }, [setSession, setUserAndProfile]); // Add setUserAndProfile to dependency array
+  }, []);
 
   const isAdmin = profile?.role === 'admin';
 
