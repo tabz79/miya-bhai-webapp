@@ -1,6 +1,6 @@
 // client/src/components/Auth.tsx
 import React, { useState } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
@@ -20,6 +20,8 @@ export function Auth() {
 
     console.log('[login] Magic link requested for email (masked):', `${email.replace(/(.{2}).+(@.+)/, '$1***$2')}`);
 
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       const { error } = await supabase.auth.signInWithOtp({
         email,
@@ -58,7 +60,8 @@ export function Auth() {
   const handleGitHubLogin = async () => {
     setLoading(true);
     console.log('[login] GitHub OAuth started...');
-
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
@@ -93,7 +96,8 @@ export function Auth() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     console.log('[login] Google OAuth started...');
-
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
