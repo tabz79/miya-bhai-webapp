@@ -41,14 +41,15 @@ export function getEnvSnapshot() {
 
 export const isSupabaseReady = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
-let supabase: SupabaseClient | null = null;
+// Internal singleton holder (rename to avoid conflicts with exported names)
+let _supabaseClient: SupabaseClient | null = null;
 
 /**
  * Returns a singleton Supabase client instance.
  * If environment variables are missing, logs a warning and returns null.
  */
 export const getSupabase = (): SupabaseClient | null => {
-  if (supabase) return supabase;
+  if (_supabaseClient) return _supabaseClient;
 
   if (!isSupabaseReady) {
     console.warn(
@@ -58,13 +59,13 @@ export const getSupabase = (): SupabaseClient | null => {
     return null;
   }
 
-  supabase = createClient(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
+  _supabaseClient = createClient(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
     auth: { persistSession: true },
     realtime: { params: { eventsPerSecond: 10 } },
   });
 
   console.info('Supabase client initialized (client-side anon).');
-  return supabase;
+  return _supabaseClient;
 };
 
 // --- Dev-only helpful logs (won't print keys, only presence and masked info) ---
@@ -82,8 +83,7 @@ if (import.meta.env.DEV) {
 }
 // -------------------------------------------------------------------------------
 
-// ✅ Export both named and default — works for all imports.
-// Create and export a cached instance immediately (may be null if envs missing)
+// Create a cached exported instance (may be null if envs missing)
 const supabaseInstance = getSupabase();
 
 // Named export (for code that does `import { supabase } from '.../supabaseClient'`)
