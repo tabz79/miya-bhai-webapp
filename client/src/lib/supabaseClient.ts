@@ -43,33 +43,37 @@ export const isSupabaseReady = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
 let supabase: SupabaseClient | null = null;
 
-export const getSupabase = () => {
-    if (supabase) {
-        return supabase;
-    }
+/**
+ * Returns a singleton Supabase client instance.
+ * If environment variables are missing, logs a warning and returns null.
+ */
+export const getSupabase = (): SupabaseClient | null => {
+  if (supabase) return supabase;
 
-    if (!isSupabaseReady) {
-        console.warn('Supabase client not initialized. Missing envs. Snapshot:', getEnvSnapshot());
-        return null;
-    }
+  if (!isSupabaseReady) {
+    console.warn(
+      'Supabase client not initialized. Missing envs. Snapshot:',
+      getEnvSnapshot()
+    );
+    return null;
+  }
 
-    supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-        auth: { persistSession: true },
-        realtime: { params: { eventsPerSecond: 10 } },
-    });
+  supabase = createClient(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
+    auth: { persistSession: true },
+    realtime: { params: { eventsPerSecond: 10 } },
+  });
 
-    console.info('Supabase client initialized (client-side anon).');
-    return supabase;
-}
+  console.info('Supabase client initialized (client-side anon).');
+  return supabase;
+};
 
 // --- Dev-only helpful logs (won't print keys, only presence and masked info) ---
 if (import.meta.env.DEV) {
   try {
-    const hostDisplay = SUPABASE_URL ? SUPABASE_URL.replace(/^https?:\/\//, '') : '<<MISSING_URL>>';
+    const hostDisplay = SUPABASE_URL
+      ? SUPABASE_URL.replace(/^https?:\/\//, '')
+      : '<<MISSING_URL>>';
     const keyLen = SUPABASE_ANON_KEY ? SUPABASE_ANON_KEY.length : 0;
-    // Friendly one-line snapshot so devs can paste output into chat/debuggers quickly.
-    // NOTE: we intentionally do NOT log the full anon key.
-    // Example output: [dev][supabase] host=syjowaf...supabase.co keyLen=123
     console.info('[dev][supabase] host=', hostDisplay, 'keyLen=', keyLen);
     console.debug('[dev][supabase] env snapshot=', getEnvSnapshot());
   } catch (e) {
@@ -78,4 +82,12 @@ if (import.meta.env.DEV) {
 }
 // -------------------------------------------------------------------------------
 
-// ✅ Export both default and named — works for all imports
+// ✅ Export both named and default — works for all imports.
+// Create and export a cached instance immediately (may be null if envs missing)
+const supabaseInstance = getSupabase();
+
+// Named export (for code that does `import { supabase } from '.../supabaseClient'`)
+export const supabase = supabaseInstance;
+
+// Default export (for code that does `import supabase from '.../supabaseClient'`)
+export default supabaseInstance;
