@@ -1,6 +1,6 @@
 // src/lib/ensureProfileExists.js
 import 'dotenv/config';
-import { supabase } from './supabaseClient';
+
 
 /**
  * ensureProfileExists(supabaseServiceClient, userId, opts?)
