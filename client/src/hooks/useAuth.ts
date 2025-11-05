@@ -51,5 +51,7 @@ export function useAuth() {
     };
   }, [setSession, setUserAndProfile]); // Add setUserAndProfile to dependency array
 
-  return { session, loading, user, profile }; // Return profile
+  const isAdmin = profile?.role === 'admin';
+
+  return { session, loading, user, profile, isAdmin }; // Return profile and isAdmin status
 }
