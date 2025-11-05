@@ -1,7 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { BottomNav } from '../components/BottomNav';
 import { CollapsibleCard } from '../components/Profile/CollapsibleCard';
 import { OrdersCard } from '../components/Profile/OrdersCard';
@@ -41,6 +41,8 @@ export function Profile() {
   // Helper: fetch profile by a given userId (used when user.id becomes available)
   const fetchProfileById = async (userId: string | null) => {
     if (!userId) return null;
+    const supabase = getSupabase();
+    if (!supabase) return null;
     try {
       setIsFetchingProfile(true);
 
@@ -101,6 +103,8 @@ export function Profile() {
   const handleSignOut = async () => {
     if (isSigningOut) return;
     setIsSigningOut(true);
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       // First, sign out from Supabase
       const { error: supabaseError } = await supabase.auth.signOut();
