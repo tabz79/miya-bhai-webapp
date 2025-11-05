@@ -1,5 +1,5 @@
 // client/src/services/adminApi.ts
-import { supabase } from "@/lib/supabaseClient";
+import { getSupabase } from "@/lib/supabaseClient";
 
 type AnyObj = Record<string, any>;
 
@@ -14,6 +14,8 @@ async function safeFetch(url: string, opts: RequestInit = {}) {
     ...(opts.headers || {}),
   };
 
+  const supabase = getSupabase();
+  if (!supabase) throw new Error("Supabase client not initialized");
   const { data: { session } } = await supabase.auth.getSession();
   if (session?.access_token) {
     headers.Authorization = `Bearer ${session.access_token}`;
