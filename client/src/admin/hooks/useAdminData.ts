@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { adminApi } from '../../services/adminApi';
 import { Order, Summary, ChartData } from '../types';
 // Use single shared supabase client wrapper (defensive)
-import supabase, { isSupabaseReady } from '../../lib/supabaseClient';
+import { getSupabase, isSupabaseReady } from '../../lib/supabaseClient';
 
 interface AdminData {
   summary: Summary | null;
@@ -184,14 +184,14 @@ export const useAdminData = (): AdminData => {
   const subscribe = useCallback(() => {
     if (supaChannelRef.current) return; // already subscribed
 
-    if (!isSupabaseReady || !supabase) {
+    if (!isSupabaseReady || !getSupabase()) {
       console.warn('Supabase client not initialized. Cannot subscribe.');
       return;
     }
 
     try {
       // create channel for orders table realtime
-      const ch = supabase
+      const ch = getSupabase()
         .channel('public:orders')
         .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
           try {
@@ -211,7 +211,7 @@ export const useAdminData = (): AdminData => {
 
   const unsubscribe = useCallback(() => {
     try {
-      if (!isSupabaseReady || !supabase) {
+      if (!isSupabaseReady || !getSupabase()) {
         supaChannelRef.current = null;
         return;
       }
@@ -222,14 +222,14 @@ export const useAdminData = (): AdminData => {
           if (typeof supaChannelRef.current.unsubscribe === 'function') {
             // channel instance supports unsubscribe
             supaChannelRef.current.unsubscribe();
-          } else if (typeof supabase.removeChannel === 'function') {
+          } else if (typeof getSupabase().removeChannel === 'function') {
             // remove via client
-            supabase.removeChannel(supaChannelRef.current);
+            getSupabase().removeChannel(supaChannelRef.current);
           } else {
             // best-effort: try client remove by channel name/id
             // (no-op if client doesn't support it)
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (supabase as any).removeChannel?.(supaChannelRef.current);
+            (getSupabase() as any).removeChannel?.(supaChannelRef.current);
           }
         } catch (err) {
           console.warn('error while unsubscribing channel', err);
