@@ -45,10 +45,23 @@ export default async function requireAuth(req, res, next) {
       return res.status(401).json({ error: 'Unauthorized: Invalid token or session' });
     }
 
-    // Attach the validated user object to the request
-    req.user = user;
+    // Also fetch the user's profile to get their role
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', user.id)
+      .single();
 
-    console.log('[requireAuth] Authenticated via Supabase token:', { id: req.user.id, email: req.user.email });
+    if (profileError) {
+      console.warn('[requireAuth] Supabase getProfile error:', profileError.message);
+      // We don't want to fail the request if the profile is not found,
+      // but we will log the error.
+    }
+
+    // Attach the validated user object and profile to the request
+    req.user = { ...user, ...profile };
+
+    console.log('[requireAuth] Authenticated via Supabase token:', { id: req.user.id, email: req.user.email, role: req.user.role });
     next();
   } catch (err) {
     console.error('[requireAuth] Unexpected error during token validation:', err);

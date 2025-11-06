@@ -6,7 +6,7 @@ const requireAdmin = (req, res, next) => {
   }
 
   // Check if the user has the 'admin' role
-  if (req.user.user_metadata && req.user.user_metadata.role === 'admin') {
+  if (req.user.role === 'admin') {
     next(); // User is an admin, proceed to the next middleware/route handler
   } else {
     // User is authenticated but not an admin
