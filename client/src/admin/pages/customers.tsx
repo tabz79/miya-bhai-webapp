@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useMemo, useState, useRef } from "react"
 import AdminShell from "../components/AdminShell";
 import CustomerDrawer from "../components/CustomerDrawer";
 // ✅ Fixed import path — points to client/src/lib/supabaseClient.ts
-import { supabase } from "../../lib/supabaseClient";
+import { getSupabase } from "../../lib/supabaseClient";
 
 type Customer = {
   id: string;
@@ -39,7 +39,7 @@ export default function AdminCustomersPage() {
     setLoading(true);
     setError(null);
     try {
-      let q = supabase
+      let q = getSupabase()
         .from("customers")
         .select("id, name, email, phone_normalized, total_spent, last_order_at", { count: "exact" })
         .order("last_order_at", { ascending: false })
@@ -50,7 +50,7 @@ export default function AdminCustomersPage() {
         q = q.or(`name.ilike.%${raw}%,email.ilike.%${raw}%`) as any;
         const digits = raw.replace(/\D/g, "");
         if (digits.length >= 3) {
-          q = supabase
+          q = getSupabase()
             .from("customers")
             .select("id, name, email, phone_normalized, total_spent, last_order_at", { count: "exact" })
             .or(`name.ilike.%${raw}%,email.ilike.%${raw}%,phone_normalized.ilike.%${digits}%`)
@@ -80,11 +80,11 @@ export default function AdminCustomersPage() {
   const subscriptionRef = useRef<any | null>(null);
 
   useEffect(() => {
-    if (!supabase) return;
+    if (!getSupabase()) return;
     if (subscriptionRef.current) return;
 
     try {
-      const channel = supabase
+      const channel = getSupabase()
         .channel("public:customers")
         .on(
           "postgres_changes",
@@ -139,8 +139,8 @@ export default function AdminCustomersPage() {
 
     return () => {
       try {
-        if (subscriptionRef.current && supabase) {
-          supabase.removeChannel(subscriptionRef.current);
+        if (subscriptionRef.current && getSupabase()) {
+          getSupabase().removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
       } catch (e) {
@@ -150,7 +150,7 @@ export default function AdminCustomersPage() {
   }, [limit]);
 
   const fetchRecentOrders = useCallback(async (customerId: string) => {
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from("orders")
       .select("id, total, status, created_at, items, payment_status")
       .eq("customer_id", customerId)
