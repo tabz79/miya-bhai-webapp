@@ -83,11 +83,4 @@ if (import.meta.env.DEV) {
 }
 // -------------------------------------------------------------------------------
 
-// Create a cached exported instance (may be null if envs missing)
-const supabaseInstance = getSupabase();
 
-// Named export (for code that does `import { supabase } from '.../supabaseClient'`)
-export const supabase = supabaseInstance;
-
-// Default export (for code that does `import supabase from '.../supabaseClient'`)
-export default supabaseInstance;
