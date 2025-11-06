@@ -5,7 +5,7 @@ import OrderDetailsSlideOver from '../components/OrderDetailsSlideOver';
 import { fetchOrders, adminApi } from '../services/api'; // <-- service layer (adminApi used for numeric signature)
 
 // Use the shared singleton supabase client to avoid multiple GoTrue instances
-import supabase from '../../lib/supabaseClient';
+import { getSupabase } from '../../lib/supabaseClient';
 
 type Order = {
   id: string;
@@ -121,12 +121,12 @@ const AdminOrdersPage: React.FC = () => {
   useEffect(() => {
     const subscribe = () => {
       if (subscriptionRef.current) return;
-      if (!supabase) {
+      if (!getSupabase()) {
         console.warn('Supabase client not initialized. Cannot subscribe.');
         return;
       }
       try {
-        const channel = supabase
+        const channel = getSupabase()
           .channel('public:orders')
           .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
             // simple safe behavior: refetch current page; keep for cases where payload isn't aligned with client filters
@@ -141,8 +141,8 @@ const AdminOrdersPage: React.FC = () => {
 
     const unsubscribe = () => {
       try {
-        if (subscriptionRef.current && supabase) {
-          supabase.removeChannel(subscriptionRef.current);
+        if (subscriptionRef.current && getSupabase()) {
+          getSupabase().removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
       } catch (e) {
@@ -167,8 +167,8 @@ const AdminOrdersPage: React.FC = () => {
     return () => {
       document.removeEventListener('visibilitychange', onVisibility);
       try {
-        if (subscriptionRef.current && supabase) {
-          supabase.removeChannel(subscriptionRef.current);
+        if (subscriptionRef.current && getSupabase()) {
+          getSupabase().removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
       } catch (e) {
