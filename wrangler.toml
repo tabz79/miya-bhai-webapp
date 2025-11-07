@@ -1,0 +1,10 @@
+name = "miyabhai-api-proxy"
+main = "workers/api-proxy/index.js"
+compatibility_date = "2025-11-07"
+
+[triggers]
+crons = ["*/5 * * * *"]  # every 5 minutes
+
+[vars]
+# Use your fastest endpoint; if no /healthz yet, temporarily use the menu API
+PING_URL = "https://api.miyabhai.in/api/menu"
