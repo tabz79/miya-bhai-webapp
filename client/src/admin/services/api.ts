@@ -1,5 +1,6 @@
 // client/src/admin/services/api.ts
 import { Order, Driver, Customer, Summary, ChartData } from '../types';
+import { getSupabase } from '../../lib/supabaseClient';
 
 type OrdersResp = { items: Order[]; meta: { total: number; page: number; limit: number }; raw?: any };
 
@@ -8,7 +9,18 @@ async function safeFetch(input: RequestInfo, init?: RequestInit) {
   const baseUrl = import.meta.env.VITE_API_BASE_URL || '';
   const url = typeof input === 'string' ? (input.startsWith('http') ? input : `${baseUrl}${input}`) : input;
 
-  const res = await fetch(url, init);
+  // --- START: AUTH MODIFICATION ---
+  const supabase = getSupabase();
+  if (!supabase) throw new Error("Supabase client not initialized");
+  const { data: { session } } = await supabase.auth.getSession();
+  const headers = new Headers(init?.headers);
+  if (session?.access_token) {
+    headers.set('Authorization', `Bearer ${session.access_token}`);
+  }
+  const newInit = { ...init, headers };
+  // --- END: AUTH MODIFICATION ---
+
+  const res = await fetch(url, newInit); // <-- USE newInit
   const text = await res.text();
   let json: any = null;
   try { json = text ? JSON.parse(text) : null; } catch (e) { json = null; }
@@ -27,9 +39,9 @@ async function safeFetch(input: RequestInfo, init?: RequestInit) {
 }
 
 export const adminApi = {
-  getSummary: async (token?: string): Promise<Summary> => {
+  getSummary: async (): Promise<Summary> => {
     const url = '/api/admin/summary';
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json;
   },
 
@@ -45,7 +57,7 @@ export const adminApi = {
     return json?.data ?? [];
   },
 
-  getOrders: async (page: number, limit: number, opts: any = {}, token?: string): Promise<OrdersResp> => {
+  getOrders: async (page: number, limit: number, opts: any = {}): Promise<OrdersResp> => {
     const params = new URLSearchParams();
     params.set('page', String(page ?? 1));
     params.set('limit', String(limit ?? 10));
@@ -53,125 +65,113 @@ export const adminApi = {
     if (opts?.search) params.set('search', String(opts.search));
     const url = `/api/admin/orders?${params.toString()}`;
 
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     const items = json?.data ?? json?.items ?? json?.orders ?? [];
     const meta = json?.meta ?? { total: items.length, page, limit };
     return { items, meta, raw: json };
   },
 
-  updateOrderStatus: async (orderId: string, status: string, token?: string): Promise<Order> => {
+  updateOrderStatus: async (orderId: string, status: string): Promise<Order> => {
     const url = `/api/admin/orders/${orderId}/status`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       body: JSON.stringify({ status }),
     });
     return json?.order ?? json;
   },
 
-  assignDriverToOrder: async (orderId: string, driverId: string | null, token?: string): Promise<Order> => {
+  assignDriverToOrder: async (orderId: string, driverId: string | null): Promise<Order> => {
     const url = `/api/admin/orders/${orderId}/assign`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       body: JSON.stringify({ driverId }),
     });
     return json?.order ?? json;
   },
 
-  getDrivers: async (token?: string): Promise<Driver[]> => {
+  getDrivers: async (): Promise<Driver[]> => {
     const url = '/api/admin/drivers';
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json?.data ?? json?.items ?? json ?? [];
   },
 
-  createDriver: async (driver: Omit<Driver, 'id'>, token?: string): Promise<Driver> => {
+  createDriver: async (driver: Omit<Driver, 'id'>): Promise<Driver> => {
     const url = '/api/admin/drivers';
     const { json } = await safeFetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(driver),
     });
     return json?.driver ?? json;
   },
 
-  updateDriver: async (driverId: string, driver: Partial<Driver>, token?: string): Promise<Driver> => {
+  updateDriver: async (driverId: string, driver: Partial<Driver>): Promise<Driver> => {
     const url = `/api/admin/drivers/${driverId}`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(driver),
     });
     return json?.driver ?? json;
   },
 
-  deleteDriver: async (driverId: string, token?: string): Promise<void> => {
+  deleteDriver: async (driverId: string): Promise<void> => {
     const url = `/api/admin/drivers/${driverId}`;
-    await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    await safeFetch(url, { method: 'DELETE' });
   },
 
-  /**
-   * getDeliveries
-   * - Prefer calling /api/admin/deliveries (server-side view or endpoint).
-   * - If that fails due to orders.order_id missing (Postgres 42703), automatically fallback
-   *   to calling /api/admin/orders and mapping the response into a delivery-like shape.
-   * - Normalizes a variety of server shapes so the frontend is resilient.
-   */
-  getDeliveries: async (token?: string): Promise<any[]> => {
+  getDeliveries: async (): Promise<any[]> => {
     const url = '/api/admin/deliveries';
     try {
-      const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
-      // The server-side view now provides the normalized shape directly
+      const { json } = await safeFetch(url);
       return json?.data ?? [];
     } catch (err: any) {
       console.error('getDeliveries failed', err);
-      // Rethrow the error, as the server should now provide the correct shape or a clear error
       throw err;
     }
   },
 
-  getCustomers: async (token?: string): Promise<Customer[]> => {
+  getCustomers: async (): Promise<Customer[]> => {
     const url = '/api/admin/customers';
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json?.data ?? json?.customers ?? json ?? [];
   },
 
-  getCustomerById: async (customerId: string, token?: string): Promise<{ customer: Customer; orders: Order[] }> => {
+  getCustomerById: async (customerId: string): Promise<{ customer: Customer; orders: Order[] }> => {
     const url = `/api/admin/customers/${customerId}`;
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json;
   },
 
-  exportReports: async (from?: string, to?: string, status?: string, token?: string): Promise<Blob> => {
+  exportReports: async (from?: string, to?: string, status?: string): Promise<Blob> => {
     let url = '/api/admin/reports/export';
     const params = new URLSearchParams();
     if (from) params.append('from', from);
     if (to) params.append('to', to);
     if (status) params.append('status', status);
     if (params.toString()) url += `?${params.toString()}`;
-    const { res } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { res } = await safeFetch(url);
     return res.blob();
   },
 
-  getSettings: async (token?: string): Promise<any> => {
+  getSettings: async (): Promise<any> => {
     const url = '/api/admin/settings';
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json;
   },
 
-  updateSettings: async (settings: any, token?: string): Promise<any> => {
+  updateSettings: async (settings: any): Promise<any> => {
     const url = '/api/admin/settings';
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       body: JSON.stringify(settings),
     });
@@ -184,44 +184,43 @@ export const adminApi = {
     return json;
   },
 
-  getCoupons: async (token?: string): Promise<any[]> => {
+  getCoupons: async (): Promise<any[]> => {
     const url = '/api/admin/coupons';
-    const { json } = await safeFetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    const { json } = await safeFetch(url);
     return json;
   },
 
-  createCoupon: async (coupon: any, token?: string): Promise<any> => {
+  createCoupon: async (coupon: any): Promise<any> => {
     const url = '/api/admin/coupons';
     const { json } = await safeFetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(coupon),
     });
     return json;
   },
 
-  updateCoupon: async (id: string, coupon: any, token?: string): Promise<any> => {
+  updateCoupon: async (id: string, coupon: any): Promise<any> => {
     const url = `/api/admin/coupons/${id}`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(coupon),
     });
     return json;
   },
 
-  deleteCoupon: async (id: string, token?: string): Promise<void> => {
+  deleteCoupon: async (id: string): Promise<void> => {
     const url = `/api/admin/coupons/${id}`;
-    await safeFetch(url, { method: 'DELETE', headers: token ? { Authorization: `Bearer ${token}` } : undefined });
+    await safeFetch(url, { method: 'DELETE' });
   },
 
-  updateCouponStatus: async (id: string, isActive: boolean, token?: string): Promise<any> => {
+  updateCouponStatus: async (id: string, isActive: boolean): Promise<any> => {
     const url = `/api/admin/coupons/${id}/status`;
     const { json } = await safeFetch(url, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       body: JSON.stringify({ is_active: isActive }),
     });
@@ -230,9 +229,9 @@ export const adminApi = {
 };
 
 // convenient exports / aliases used by components elsewhere
-export const fetchDrivers = (token?: string) => adminApi.getDrivers(token);
-export const fetchOrders = (page: number, limit: number, opts?: any, token?: string) => adminApi.getOrders(page, limit, opts, token);
-export const assignDriver = (orderId: string, driverId: string | null, token?: string) => adminApi.assignDriverToOrder(orderId, driverId, token);
-export const updateOrderStatus = (orderId: string, status: string, token?: string) => adminApi.updateOrderStatus(orderId, status, token);
+export const fetchDrivers = () => adminApi.getDrivers();
+export const fetchOrders = (page: number, limit: number, opts?: any) => adminApi.getOrders(page, limit, opts);
+export const assignDriver = (orderId: string, driverId: string | null) => adminApi.assignDriverToOrder(orderId, driverId);
+export const updateOrderStatus = (orderId: string, status: string) => adminApi.updateOrderStatus(orderId, status);
 
 export default adminApi;

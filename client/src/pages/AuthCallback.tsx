@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/lib/supabaseClient";
+import { getSupabase } from "@/lib/supabaseClient";
 import { Button } from "@/components/ui/button";
 
 export default function AuthCallback() {
@@ -49,7 +49,7 @@ export default function AuthCallback() {
         }
 
         L("Tokens parsed. Calling setSession...");
-        const { error } = await supabase.auth.setSession({
+        const { error } = await getSupabase().auth.setSession({
           access_token: accessToken,
           refresh_token: refreshToken,
         }).catch(err => {
@@ -85,7 +85,7 @@ export default function AuthCallback() {
         const params: any = Object.fromEntries(h.split("&").map((p) => p.split("=").map(decodeURIComponent)) as any);
         L("Parsed hash keys:", Object.keys(params));
 
-        const { data, error } = await supabase.auth.setSession({
+        const { data, error } = await getSupabase().auth.setSession({
           access_token: params.access_token,
           refresh_token: params.refresh_token,
         } as any);

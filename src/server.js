@@ -97,11 +97,27 @@ const corsOptions = {
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
+
+    // Check for exact match or wildcard subdomain match
+    const isAllowed = allowedOrigins.some(allowedOrigin => {
+      if (allowedOrigin === origin) {
+        return true;
+      }
+      // Handle wildcard subdomains like *.pages.dev
+      if (allowedOrigin.startsWith('https://*.') && origin.startsWith('https://')) {
+        const baseDomain = allowedOrigin.substring(allowedOrigin.indexOf('.') + 1); // e.g., pages.dev
+        const originDomain = origin.substring(origin.indexOf('://') + 3); // e.g., pre-mvp.miya-bhai-webapp-v1.pages.dev
+        return originDomain.endsWith(baseDomain);
+      }
+      return false;
+    });
+
+    if (isAllowed) {
+      return callback(null, true);
+    } else {
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
       return callback(new Error(msg), false);
     }
-    return callback(null, true);
   },
   credentials: true,
 };
@@ -112,18 +128,36 @@ app.use(cors(corsOptions));
 
 app.use(cookieParser());
 
-// routes
-// Mount GitHub custom auth router first so /api/auth/github/* is handled
-app.use('/api', githubAuthRouter);
+// Simple root health for uptime checks (prevents noisy 404 on '/')
+app.get('/', (_req, res) => {
+  res.json({
+    status: 'ok',
+    service: process.env.RENDER_SERVICE_NAME || 'miya-bhai-api',
+    env: process.env.NODE_ENV || 'development',
+    time: new Date().toISOString(),
+  });
+});
+app.head('/', (_req, res) => res.status(200).end());
 
-// existing auth router (other auth endpoints like /api/auth/verify remain)
-app.use('/api', authRouter);
+// routes
+// Mount PUBLIC routes first
 app.use('/api', healthRouter);
 app.use('/api', menuRouter);
+
+// Mount PUBLIC coupons BEFORE generic '/api' routers to avoid shadowing
+// couponsRouter uses router.get('/') so this exposes GET /api/coupons
+app.use('/api/coupons', couponsRouter);
+
+// Mount auth-related routes next
+// Mount GitHub custom auth router first so /api/auth/github/* is handled
+app.use('/api', githubAuthRouter);
+// existing auth router (other auth endpoints like /api/auth/verify remain)
+app.use('/api', authRouter);
+
+// The rest of the authenticated routes
 app.use('/api', orderRouter);
-app.use('/api', adminRouter);
+app.use('/api/admin', adminRouter);
 app.use('/api', settingsRouter);
-app.use('/api', couponsRouter);
 app.use('/api/user', userRouter);
 
 // 404 + error
@@ -140,7 +174,7 @@ async function startServer() {
       console.log(`Server running → http://localhost:${PORT}`);
       console.log(`NODE_ENV: ${process.env.NODE_ENV || 'development'}`);
       // show mount confirmation
-      console.log('[server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)');
+      console.log('[server] mounted routes: / (root health), /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)');
     });
   }
 }

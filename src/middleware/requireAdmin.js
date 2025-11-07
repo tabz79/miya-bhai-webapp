@@ -1,8 +1,17 @@
 const requireAdmin = (req, res, next) => {
-  // TODO: Implement actual admin authentication logic here.
-  // For now, it just calls next() to allow all requests.
-  console.warn('WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.');
-  next();
+  // req.user should be populated by requireAuth middleware
+  if (!req.user) {
+    // This case should ideally be caught by requireAuth, but as a safeguard
+    return res.status(401).json({ error: 'Authentication required.' });
+  }
+
+  // Check if the user has the 'admin' role
+  if (req.user.role === 'admin') {
+    next(); // User is an admin, proceed to the next middleware/route handler
+  } else {
+    // User is authenticated but not an admin
+    return res.status(403).json({ error: 'Forbidden: Admin access required.' });
+  }
 };
 
 export default requireAdmin;

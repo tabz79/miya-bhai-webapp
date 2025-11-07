@@ -2,7 +2,7 @@
 // Public web-site API wrapper.
 // Exports both named `api` and default export for compatibility.
 
-import { supabase } from "@/lib/supabaseClient";
+import { getSupabase } from "@/lib/supabaseClient";
 
 type AnyObj = Record<string, any>;
 
@@ -10,9 +10,10 @@ type AnyObj = Record<string, any>;
  * Small fetch wrapper that always tries to send/receive JSON and throws clear errors.
  */
 async function safeFetch(url: string, opts: RequestInit = {}, authenticated = false) {
-  const baseUrl = import.meta.env.PROD
-    ? 'https://miya-bhai-webapp.onrender.com'
-    : import.meta.env.VITE_API_BASE_URL || '';
+  // Allow Cloudflare Preview to point to staging backend
+  const baseUrl =
+    import.meta.env.VITE_API_BASE_URL ||
+    (import.meta.env.PROD ? 'https://miya-bhai-webapp.onrender.com' : '');
   const finalUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
   
   const headers: Record<string, string> = {
@@ -21,6 +22,8 @@ async function safeFetch(url: string, opts: RequestInit = {}, authenticated = fa
   };
 
   if (authenticated) {
+    const supabase = getSupabase();
+    if (!supabase) throw new Error("Supabase client not initialized");
     const { data: { session } } = await supabase.auth.getSession();
     if (session?.access_token) {
       headers.Authorization = `Bearer ${session.access_token}`;
@@ -76,6 +79,8 @@ export const api = {
 
   // Create an order (checkout). Payload should be the order object expected by backend.
   async createOrder(orderPayload: AnyObj) {
+    const supabase = getSupabase();
+    if (!supabase) throw new Error("Supabase client not initialized");
     // Check if user is logged in to send authenticated request
     const { data: { session } } = await supabase.auth.getSession();
     const isAuthenticated = !!session;

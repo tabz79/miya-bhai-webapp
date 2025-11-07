@@ -1,7 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { BottomNav } from '../components/BottomNav';
 import { CollapsibleCard } from '../components/Profile/CollapsibleCard';
 import { OrdersCard } from '../components/Profile/OrdersCard';
@@ -41,14 +41,19 @@ export function Profile() {
   // Helper: fetch profile by a given userId (used when user.id becomes available)
   const fetchProfileById = async (userId: string | null) => {
     if (!userId) return null;
+    const supabase = getSupabase();
+    if (!supabase) return null;
     try {
       setIsFetchingProfile(true);
 
       const { data, error } = await supabase
         .from<ProfileRecord>('profiles')
-        .select('*')
+        .select('*', { head: false }) // Ensure we're not sending a HEAD request
         .eq('user_id', userId)
-        .maybeSingle(); // ✅ FINAL FIX: Use maybeSingle() to gracefully handle 0 rows.
+        .maybeSingle({
+          // Explicitly set Accept header for single object
+          headers: { 'Accept': 'application/vnd.pgrst.object+json' }
+        });
 
       if (error) {
         console.error('Error fetching profile:', error);
@@ -98,6 +103,8 @@ export function Profile() {
   const handleSignOut = async () => {
     if (isSigningOut) return;
     setIsSigningOut(true);
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       // First, sign out from Supabase
       const { error: supabaseError } = await supabase.auth.signOut();

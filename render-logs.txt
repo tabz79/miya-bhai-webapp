@@ -1,116 +1,507 @@
-2025-10-23T10:32:59.482387517Z [2025-10-23T10:32:59.482Z] Request ID: d749023e-be58-4fc7-b828-cc874cdf2a5c, Path: GET /api/menu
-2025-10-23T10:32:59.482420358Z [2025-10-23T10:32:59.482Z] GET /api/menu
-2025-10-23T10:32:59.601951923Z [2025-10-23T10:32:59.601Z] Request ID: c7daab12-ed7a-4d5a-ad89-71a2b8b951ee, Path: GET /api/coupons
-2025-10-23T10:32:59.601988224Z [2025-10-23T10:32:59.601Z] GET /api/coupons
-2025-10-23T10:32:59.602829713Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:33:04.227642198Z [2025-10-23T10:33:04.227Z] Request ID: 10ee9190-2acd-4ebe-9b2e-32d3ffff7d5d, Path: GET /api/coupons
-2025-10-23T10:33:04.227671588Z [2025-10-23T10:33:04.227Z] GET /api/coupons
-2025-10-23T10:33:04.228140679Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T10:51:57.968227233Z ==> Deploying...
-2025-10-23T10:52:33.631527247Z ==> Running 'npm start'
-2025-10-23T10:52:34.727798016Z 
-2025-10-23T10:52:34.727827767Z > rest-express@1.0.0 start
-2025-10-23T10:52:34.727832468Z > cd src && node server.js
-2025-10-23T10:52:34.727834877Z 
-2025-10-23T10:52:37.82553813Z [admin routes] loaded
-2025-10-23T10:52:38.424202798Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
-2025-10-23T10:52:38.424258299Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
-2025-10-23T10:52:38.425132143Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
-2025-10-23T10:52:38.425264827Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T10:52:38.426384758Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T10:52:38.426388438Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T10:52:38.426545962Z [server] trust proxy: 1
-2025-10-23T10:52:38.428290201Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T10:52:38.429233997Z Initializing menu service with CANONICAL data.
-2025-10-23T10:52:38.434370969Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T10:52:38.436471307Z Server running → http://localhost:10000
-2025-10-23T10:52:38.436486017Z NODE_ENV: production
-2025-10-23T10:52:38.436491787Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T10:52:39.41535015Z [2025-10-23T10:52:39.414Z] Request ID: 786c3b11-a419-47d3-acf2-d371c47580d5, Path: HEAD /
-2025-10-23T10:52:39.415393741Z [2025-10-23T10:52:39.414Z] HEAD /
-2025-10-23T10:52:48.672984418Z ==> Your service is live 🎉
-2025-10-23T10:52:48.705215207Z ==> 
-2025-10-23T10:52:49.206409853Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:49.236663991Z ==> 
-2025-10-23T10:52:49.270521409Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T10:52:49.301927967Z ==> 
-2025-10-23T10:52:49.333747485Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T10:52:50.345357214Z [2025-10-23T10:52:50.345Z] Request ID: 35fbc186-81d1-49be-bb68-8b5d90401966, Path: GET /
-2025-10-23T10:52:50.345395015Z [2025-10-23T10:52:50.345Z] GET /
-2025-10-23T10:57:44.916036484Z ==> Detected service running on port 10000
-2025-10-23T10:57:45.004038188Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T13:55:49.560202146Z NODE_ENV: production
-2025-10-23T13:55:49.560212677Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T13:55:57.860620038Z [2025-10-23T13:55:57.860Z] Request ID: 6b527aa9-a843-4b28-aa23-c35c39fa97f9, Path: HEAD /api/menu
-2025-10-23T13:55:57.860657571Z [2025-10-23T13:55:57.860Z] HEAD /api/menu
-2025-10-23T13:55:57.868387625Z [2025-10-23T13:55:57.868Z] Request ID: 1fcad32c-71fd-48ca-aef9-bd7f02a845d0, Path: HEAD /api/menu
-2025-10-23T13:55:57.868478081Z [2025-10-23T13:55:57.868Z] HEAD /api/menu
-2025-10-23T13:55:57.870464311Z [2025-10-23T13:55:57.870Z] Request ID: a3a4019b-4127-43b6-8cc8-af48bbe1bf58, Path: HEAD /api/menu
-2025-10-23T13:55:57.870485893Z [2025-10-23T13:55:57.870Z] HEAD /api/menu
-2025-10-23T13:55:57.889453624Z [2025-10-23T13:55:57.889Z] Request ID: 40f43f0c-7053-4887-a28c-0a6005b8c45a, Path: HEAD /api/menu
-2025-10-23T13:55:57.889476076Z [2025-10-23T13:55:57.889Z] HEAD /api/menu
-2025-10-23T13:55:57.958859131Z [2025-10-23T13:55:57.958Z] Request ID: dc644fc8-182c-4b90-bc8f-a6bb6305cb59, Path: HEAD /api/menu
-2025-10-23T13:55:57.958884983Z [2025-10-23T13:55:57.958Z] HEAD /api/menu
-2025-10-23T13:55:57.960619104Z [2025-10-23T13:55:57.960Z] Request ID: 659a6bf0-52db-44ae-a6ff-ff1fc1bd5c81, Path: HEAD /api/menu
-2025-10-23T13:55:57.960634695Z [2025-10-23T13:55:57.960Z] HEAD /api/menu
-2025-10-23T13:55:57.962933918Z [2025-10-23T13:55:57.962Z] Request ID: 93323f66-e080-4997-a93c-78294de9580e, Path: HEAD /api/menu
-2025-10-23T13:55:57.962950269Z [2025-10-23T13:55:57.962Z] HEAD /api/menu
-2025-10-23T13:55:57.964707342Z [2025-10-23T13:55:57.964Z] Request ID: 1f77b956-74c8-4a81-944a-e4abe6e9a8de, Path: HEAD /api/menu
-2025-10-23T13:55:57.964721173Z [2025-10-23T13:55:57.964Z] HEAD /api/menu
-2025-10-23T13:55:57.993641025Z [2025-10-23T13:55:57.993Z] Request ID: f0a1c6c9-2a4c-4cd8-9abf-1c2ab2e1751a, Path: HEAD /api/menu
-2025-10-23T13:55:57.993687539Z [2025-10-23T13:55:57.993Z] HEAD /api/menu
-2025-10-23T13:55:58.005994417Z [2025-10-23T13:55:58.005Z] Request ID: fd24d8c8-89a1-4119-82ce-35a501812be6, Path: HEAD /api/menu
-2025-10-23T13:55:58.006082714Z [2025-10-23T13:55:58.005Z] HEAD /api/menu
-2025-10-23T13:55:58.051209339Z [2025-10-23T13:55:58.051Z] Request ID: 3cff46aa-df5b-426c-9dbd-ee9a69ccc48f, Path: HEAD /api/menu
-2025-10-23T13:55:58.057398566Z [2025-10-23T13:55:58.057Z] HEAD /api/menu
-2025-10-23T13:55:58.145005286Z [2025-10-23T13:55:58.144Z] Request ID: 0ad528ff-5ea5-4e50-ba72-9ba1a35c60c2, Path: HEAD /api/menu
-2025-10-23T13:55:58.145167899Z [2025-10-23T13:55:58.144Z] HEAD /api/menu
-2025-10-23T13:55:58.281749595Z [2025-10-23T13:55:58.281Z] Request ID: f3ffb374-5059-4085-a989-61c8fb943011, Path: GET /api/menu
-2025-10-23T13:55:58.281798168Z [2025-10-23T13:55:58.281Z] GET /api/menu
-2025-10-23T13:55:58.332121665Z [2025-10-23T13:55:58.331Z] Request ID: 45a7fa84-be47-48c1-9841-db74ec711318, Path: HEAD /api/menu
-2025-10-23T13:55:58.332221853Z [2025-10-23T13:55:58.332Z] HEAD /api/menu
-2025-10-23T13:55:58.352182549Z [2025-10-23T13:55:58.351Z] Request ID: e4e16a9d-5aeb-4de3-980f-03e0209d8ba3, Path: HEAD /api/menu
-2025-10-23T13:55:58.352356692Z [2025-10-23T13:55:58.352Z] HEAD /api/menu
-2025-10-23T13:55:58.381287895Z [2025-10-23T13:55:58.379Z] Request ID: 34d42612-bfed-4ca1-a558-b9cf6bc7d3a6, Path: HEAD /api/menu
-2025-10-23T13:55:58.381304316Z [2025-10-23T13:55:58.379Z] HEAD /api/menu
-2025-10-23T13:55:58.427394874Z [2025-10-23T13:55:58.426Z] Request ID: f0d56fac-90c3-4568-bee8-f2cfc3f18a87, Path: HEAD /api/menu
-2025-10-23T13:55:58.427417356Z [2025-10-23T13:55:58.426Z] HEAD /api/menu
-2025-10-23T13:55:58.544572716Z [2025-10-23T13:55:58.544Z] Request ID: baa685bf-20a1-4073-8423-3736db06470d, Path: HEAD /api/menu
-2025-10-23T13:55:58.546262213Z [2025-10-23T13:55:58.544Z] HEAD /api/menu
-2025-10-23T14:20:39.037001355Z ==> Deploying...
-2025-10-23T14:22:43.641113074Z ==> No open ports detected, continuing to scan...
-2025-10-23T14:22:43.867482215Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:22:50.781742042Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
-2025-10-23T14:22:50.782354919Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  override existing env vars with { override: true }
-2025-10-23T14:22:50.782439222Z [env] Loaded env from /opt/render/project/src/.env
-2025-10-23T14:22:50.783368937Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
-2025-10-23T14:22:50.783387148Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
-2025-10-23T14:22:50.783511291Z [server] trust proxy: 1
-2025-10-23T14:22:50.78457771Z [CORS] Allowed origins: [ 'https://miya-bhai-webapp-v1.pages.dev', 'http://localhost:5173' ]
-2025-10-23T14:22:50.785189567Z Initializing menu service with CANONICAL data.
-2025-10-23T14:22:50.78856019Z Menu loaded. Source: canonical, Items: 289
-2025-10-23T14:22:50.790048181Z Server running → http://localhost:10000
-2025-10-23T14:22:50.790064432Z NODE_ENV: production
-2025-10-23T14:22:50.790113853Z [server] mounted routes: /api (githubAuth, auth, health, menu, order, admin, settings, coupons, user)
-2025-10-23T14:22:51.579507302Z [2025-10-23T14:22:51.578Z] Request ID: 12bc21b9-0615-4b1b-921b-42297e0a9e8a, Path: HEAD /
-2025-10-23T14:22:51.579526803Z [2025-10-23T14:22:51.578Z] HEAD /
-2025-10-23T14:23:01.227183142Z ==> Your service is live 🎉
-2025-10-23T14:23:01.262909059Z ==> 
-2025-10-23T14:23:01.297691287Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:01.340337565Z ==> 
-2025-10-23T14:23:01.370652592Z ==> Available at your primary URL https://miya-bhai-webapp.onrender.com
-2025-10-23T14:23:01.4060864Z ==> 
-2025-10-23T14:23:01.438543798Z ==> ///////////////////////////////////////////////////////////
-2025-10-23T14:23:03.098263576Z [2025-10-23T14:23:03.098Z] Request ID: 8f30a8b4-e00b-442a-906d-98785df036de, Path: GET /
-2025-10-23T14:23:03.098290017Z [2025-10-23T14:23:03.098Z] GET /
-2025-10-23T14:27:54.860696555Z ==> Detected service running on port 10000
-2025-10-23T14:27:55.002437366Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
-2025-10-23T14:29:54.288491151Z [2025-10-23T14:29:54.288Z] Request ID: 74842dbe-e86c-4fea-8828-bdf379820c51, Path: OPTIONS /api/user/orders
-2025-10-23T14:29:54.288516562Z [2025-10-23T14:29:54.288Z] OPTIONS /api/user/orders
-2025-10-23T14:29:54.623090002Z [2025-10-23T14:29:54.622Z] Request ID: 34d2e6ad-95a6-44cc-8f45-4f3d9a30bfd4, Path: GET /api/user/orders
-2025-10-23T14:29:54.623114533Z [2025-10-23T14:29:54.622Z] GET /api/user/orders
-2025-10-23T14:29:54.623915725Z WARNING: requireAdmin middleware is a placeholder and does not enforce authentication.
-2025-10-23T14:29:56.040530041Z [requireAuth] Authenticated via Supabase token: {
-2025-10-23T14:29:56.040556832Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
-2025-10-23T14:29:56.040561342Z   email: 'tabrez.ataher@gmail.com'
-2025-10-23T14:29:56.040564932Z }
+2025-11-06T09:01:52.87401903Z ==> Downloading cache...
+2025-11-06T09:01:52.944591382Z ==> Cloning from https://github.com/tabz79/miya-bhai-webapp
+2025-11-06T09:02:04.666383304Z ==> Checking out commit 662e273081766ff7c03da93781f808d0265796fd in branch pre-mvp
+2025-11-06T09:02:16.20688515Z ==> Downloaded 254MB in 5s. Extraction took 11s.
+2025-11-06T09:02:21.773679698Z ==> Using Node.js version 22.16.0 (default)
+2025-11-06T09:02:21.814859607Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-11-06T09:02:21.955990801Z ==> Running build command 'npm install; npm run build'...
+2025-11-06T09:02:24.709051121Z 
+2025-11-06T09:02:24.709083313Z up to date, audited 768 packages in 3s
+2025-11-06T09:02:24.709103223Z 
+2025-11-06T09:02:24.709118643Z 102 packages are looking for funding
+2025-11-06T09:02:24.709126343Z   run `npm fund` for details
+2025-11-06T09:02:24.734081951Z 
+2025-11-06T09:02:24.734094472Z 6 moderate severity vulnerabilities
+2025-11-06T09:02:24.734098122Z 
+2025-11-06T09:02:24.734101392Z To address issues that do not require attention, run:
+2025-11-06T09:02:24.734104312Z   npm audit fix
+2025-11-06T09:02:24.734107002Z 
+2025-11-06T09:02:24.734109882Z To address all issues (including breaking changes), run:
+2025-11-06T09:02:24.734112842Z   npm audit fix --force
+2025-11-06T09:02:24.734115542Z 
+2025-11-06T09:02:24.734118602Z Run `npm audit` for details.
+2025-11-06T09:02:25.064064528Z 
+2025-11-06T09:02:25.064086609Z > rest-express@1.0.0 build
+2025-11-06T09:02:25.064090869Z > vite build
+2025-11-06T09:02:25.064094249Z 
+2025-11-06T09:02:25.327657471Z vite v5.4.20 building for production...
+2025-11-06T09:02:25.392086833Z transforming...
+2025-11-06T09:02:33.784957277Z ✓ 3873 modules transformed.
+2025-11-06T09:02:37.151909365Z rendering chunks...
+2025-11-06T09:02:37.222249021Z computing gzip size...
+2025-11-06T09:02:37.268186914Z ../dist/public/index.html                                         1.72 kB │ gzip:   0.71 kB
+2025-11-06T09:02:37.268388629Z ../dist/public/assets/logo-xyvj-OlM.png                         114.57 kB
+2025-11-06T09:02:37.268397169Z ../dist/public/assets/delivery-icon-DubV78id.png                248.84 kB
+2025-11-06T09:02:37.268401869Z ../dist/public/assets/DeliveryGuy-CLppniDM.png                  508.04 kB
+2025-11-06T09:02:37.268587274Z ../dist/public/assets/chickenbiryani-bestseller-Y--3Sbya.png    515.56 kB
+2025-11-06T09:02:37.268708797Z ../dist/public/assets/HeroImage1-DweDpayE.png                   578.96 kB
+2025-11-06T09:02:37.268716427Z ../dist/public/assets/chickenbiryani-menu-CEnWXCNH.png          604.68 kB
+2025-11-06T09:02:37.268720967Z ../dist/public/assets/Shawarma-bestseller-CMLIowDT.png          737.35 kB
+2025-11-06T09:02:37.268740018Z ../dist/public/assets/kebeb-bestseller-DcMcp_ZV.png           1,330.82 kB
+2025-11-06T09:02:37.268745928Z ../dist/public/assets/arabianmandi-bestseller-COwsgazF.png    1,842.47 kB
+2025-11-06T09:02:37.268751038Z ../dist/public/assets/placeholder-menu-item-D6APIJXl.png      2,605.28 kB
+2025-11-06T09:02:37.26882348Z ../dist/public/assets/HeroImage5-DBGOGOXc.png                 5,208.21 kB
+2025-11-06T09:02:37.26883008Z ../dist/public/assets/HeroImage2-D4NonUw0.png                 5,989.64 kB
+2025-11-06T09:02:37.26883413Z ../dist/public/assets/HeroImage4-8Y8oVtwn.png                 7,599.40 kB
+2025-11-06T09:02:37.26883694Z ../dist/public/assets/HeroImage3-BafMwgkI.png                 8,166.17 kB
+2025-11-06T09:02:37.268848241Z ../dist/public/assets/HeroImage6-ByAw_F-e.png                 9,319.03 kB
+2025-11-06T09:02:37.268939733Z ../dist/public/assets/index-BDgQOtN_.css                         98.23 kB │ gzip:  16.17 kB
+2025-11-06T09:02:37.269058276Z ../dist/public/assets/index-Bq5NExCq.js                       1,493.10 kB │ gzip: 387.72 kB
+2025-11-06T09:02:37.26922234Z 
+2025-11-06T09:02:37.26922853Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-11-06T09:02:37.26923239Z - Using dynamic import() to code-split the application
+2025-11-06T09:02:37.269235771Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-11-06T09:02:37.269238631Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-11-06T09:02:37.26960022Z ✓ built in 11.92s
+2025-11-06T09:02:38.971946344Z ==> Uploading build...
+2025-11-06T09:03:23.330086783Z ==> Uploaded in 36.2s. Compression took 8.1s
+2025-11-06T09:03:23.560850774Z ==> Build successful 🎉
+2025-11-06T09:03:28.978233429Z ==> Deploying...
+2025-11-06T09:04:11.827798334Z ==> Running 'npm run start'
+2025-11-06T09:04:13.227601058Z 
+2025-11-06T09:04:13.227637159Z > rest-express@1.0.0 start
+2025-11-06T09:04:13.227641489Z > cd src && node server.js
+2025-11-06T09:04:13.227644209Z 
+2025-11-06T09:04:15.830833224Z [admin routes] loaded
+2025-11-06T09:04:16.331823025Z [auth routes] SMTP is not fully configured. Magic link emails will fail until SMTP_* env vars are provided.
+2025-11-06T09:04:16.332269365Z [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2025-11-06T09:04:16.33346639Z [dotenv@17.2.3] injecting env (22) from ../.env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-11-06T09:04:16.333559512Z [env] Loaded env from /opt/render/project/src/.env
+2025-11-06T09:04:16.422650746Z [env warning] GITHUB_CLIENT_ID or GITHUB_CLIENT_SECRET missing — githubAuth routes will fail until set.
+2025-11-06T09:04:16.422668956Z [env check] SUPABASE_URL= true SUPABASE_SERVICE_KEY= true
+2025-11-06T09:04:16.422686697Z [server] trust proxy: 1
+2025-11-06T09:04:16.422795919Z [CORS] Allowed origins: [
+2025-11-06T09:04:16.422801289Z   'https://miya-bhai-webapp-v1.pages.dev',
+2025-11-06T09:04:16.42282057Z   'https://*.pages.dev',
+2025-11-06T09:04:16.42282299Z   'http://localhost:5173'
+2025-11-06T09:04:16.42282541Z ]
+2025-11-06T09:04:16.427892566Z Initializing menu service with CANONICAL data.
+2025-11-06T09:04:16.432133866Z Menu loaded. Source: canonical, Items: 289
+2025-11-06T09:04:16.435609209Z Server running → http://localhost:10000
+2025-11-06T09:04:16.435631929Z NODE_ENV: production
+2025-11-06T09:04:16.43567719Z [server] mounted routes: / (root health), /api (githubAuth, auth, health, menu, order, admin, settings, user), /api/coupons (coupons)
+2025-11-06T09:04:17.379583581Z [2025-11-06T09:04:17.379Z] Request ID: 9d676e8b-38b9-4297-858d-4dfb3e7ccf1d, Path: HEAD /
+2025-11-06T09:04:17.379626162Z [2025-11-06T09:04:17.379Z] HEAD /
+2025-11-06T09:04:19.380603235Z [2025-11-06T09:04:19.380Z] Request ID: 1d5b9b56-78dc-4efc-bf30-5953d82be61e, Path: GET /api/health
+2025-11-06T09:04:19.380624075Z [2025-11-06T09:04:19.380Z] GET /api/health
+2025-11-06T09:04:19.383923775Z [2025-11-06T09:04:19.383Z] Request ID: e745d492-ee91-4f6f-98cd-60149421a434, Path: GET /api/health
+2025-11-06T09:04:19.383951566Z [2025-11-06T09:04:19.383Z] GET /api/health
+2025-11-06T09:04:20.551768549Z ==> Your service is live 🎉
+2025-11-06T09:04:21.438599504Z ==> 
+2025-11-06T09:04:23.145446506Z ==> ///////////////////////////////////////////////////////////
+2025-11-06T09:04:23.175435576Z ==> 
+2025-11-06T09:04:23.202629436Z ==> Available at your primary URL https://miya-bhai-api-staging.onrender.com
+2025-11-06T09:04:23.236219596Z ==> 
+2025-11-06T09:04:24.084473292Z ==> ///////////////////////////////////////////////////////////
+2025-11-06T09:04:24.382209235Z [2025-11-06T09:04:24.382Z] Request ID: 40ebff10-091a-4d93-9bd6-6741c0acf551, Path: GET /api/health
+2025-11-06T09:04:24.382235365Z [2025-11-06T09:04:24.382Z] GET /api/health
+2025-11-06T09:04:25.791838235Z [2025-11-06T09:04:25.791Z] Request ID: aa0fac5f-3e73-42ea-b919-c05f55b744b2, Path: GET /
+2025-11-06T09:04:25.791866326Z [2025-11-06T09:04:25.791Z] GET /
+2025-11-06T09:04:29.380965574Z [2025-11-06T09:04:29.380Z] Request ID: e4ce4be4-a66d-44ea-9734-9d14d0acb0a8, Path: GET /api/health
+2025-11-06T09:04:29.381005855Z [2025-11-06T09:04:29.380Z] GET /api/health
+2025-11-06T09:04:29.382351353Z [2025-11-06T09:04:29.382Z] Request ID: e88f5de1-f0c2-4537-8582-f2b6e9c7dc9b, Path: GET /api/health
+2025-11-06T09:04:29.382370154Z [2025-11-06T09:04:29.382Z] GET /api/health
+2025-11-06T09:04:34.381425228Z [2025-11-06T09:04:34.381Z] Request ID: 165ccf1d-08e4-49de-8de7-e59b9fec4fc6, Path: GET /api/health
+2025-11-06T09:04:34.381440049Z [2025-11-06T09:04:34.381Z] GET /api/health
+2025-11-06T09:04:39.381653068Z [2025-11-06T09:04:39.381Z] Request ID: cf892452-3c3a-47af-97b4-1cf998481199, Path: GET /api/health
+2025-11-06T09:04:39.381683338Z [2025-11-06T09:04:39.381Z] GET /api/health
+2025-11-06T09:04:44.386895472Z [2025-11-06T09:04:44.382Z] Request ID: 24dc2229-8043-4028-9511-5eb805a1e693, Path: GET /api/health
+2025-11-06T09:04:44.386941163Z [2025-11-06T09:04:44.382Z] GET /api/health
+2025-11-06T09:04:49.381446041Z [2025-11-06T09:04:49.381Z] Request ID: 24de0c14-1eac-4c8e-819f-bc7dc158b8f5, Path: GET /api/health
+2025-11-06T09:04:49.381478222Z [2025-11-06T09:04:49.381Z] GET /api/health
+2025-11-06T09:04:54.380518525Z [2025-11-06T09:04:54.380Z] Request ID: 247ad644-2bd3-476c-8c27-97bfebd6aed5, Path: GET /api/health
+2025-11-06T09:04:54.380610827Z [2025-11-06T09:04:54.380Z] GET /api/health
+2025-11-06T09:04:59.380927367Z [2025-11-06T09:04:59.380Z] Request ID: ec0f9995-99b6-494f-a28e-26df482f5aba, Path: GET /api/health
+2025-11-06T09:04:59.380966917Z [2025-11-06T09:04:59.380Z] GET /api/health
+2025-11-06T09:04:59.382072351Z [2025-11-06T09:04:59.381Z] Request ID: e0cd4a66-2de6-4bf8-8cb4-bdc857123022, Path: GET /api/health
+2025-11-06T09:04:59.382093081Z [2025-11-06T09:04:59.382Z] GET /api/health
+2025-11-06T09:05:04.380627953Z [2025-11-06T09:05:04.380Z] Request ID: 913f9ec2-1b6c-4547-a82e-eca33c5aef84, Path: GET /api/health
+2025-11-06T09:05:04.380682334Z [2025-11-06T09:05:04.380Z] GET /api/health
+2025-11-06T09:05:09.380323748Z [2025-11-06T09:05:09.380Z] Request ID: 06b0cca1-2c0e-4460-b6ce-c708f412f333, Path: GET /api/health
+2025-11-06T09:05:09.380379599Z [2025-11-06T09:05:09.380Z] GET /api/health
+2025-11-06T09:05:14.380871421Z [2025-11-06T09:05:14.380Z] Request ID: 204b3856-f9cc-4efd-aaf6-d2c6b116f09e, Path: GET /api/health
+2025-11-06T09:05:14.380908912Z [2025-11-06T09:05:14.380Z] GET /api/health
+2025-11-06T09:05:19.381025556Z [2025-11-06T09:05:19.380Z] Request ID: bac16c3a-4992-4b34-be99-5b4d721776b9, Path: GET /api/health
+2025-11-06T09:05:19.381058066Z [2025-11-06T09:05:19.380Z] GET /api/health
+2025-11-06T09:05:24.380112377Z [2025-11-06T09:05:24.379Z] Request ID: 9b3457f2-5d09-4500-96fb-bab2c7fa27fa, Path: GET /api/health
+2025-11-06T09:05:24.380151978Z [2025-11-06T09:05:24.380Z] GET /api/health
+2025-11-06T09:05:29.380332222Z [2025-11-06T09:05:29.380Z] Request ID: 4d5dcac3-6dc6-433c-a0c6-7594ef1155f4, Path: GET /api/health
+2025-11-06T09:05:29.380376272Z [2025-11-06T09:05:29.380Z] GET /api/health
+2025-11-06T09:05:29.381531607Z [2025-11-06T09:05:29.381Z] Request ID: c72df8a1-e2b4-48a4-b074-c26990ee84ad, Path: GET /api/health
+2025-11-06T09:05:29.381548047Z [2025-11-06T09:05:29.381Z] GET /api/health
+2025-11-06T09:05:34.381070307Z [2025-11-06T09:05:34.380Z] Request ID: 8d451730-f931-4040-b7e0-0ede05fd5861, Path: GET /api/health
+2025-11-06T09:05:34.381389954Z [2025-11-06T09:05:34.381Z] GET /api/health
+2025-11-06T09:05:39.380516474Z [2025-11-06T09:05:39.380Z] Request ID: b2549118-6312-4e63-9790-ae3ff3b544ee, Path: GET /api/health
+2025-11-06T09:05:39.380558425Z [2025-11-06T09:05:39.380Z] GET /api/health
+2025-11-06T09:05:43.160029555Z [2025-11-06T09:05:43.159Z] Request ID: 719b36d0-2664-4983-b884-440f5465447b, Path: GET /api/menu
+2025-11-06T09:05:43.160057986Z [2025-11-06T09:05:43.159Z] GET /api/menu
+2025-11-06T09:05:44.380193817Z [2025-11-06T09:05:44.379Z] Request ID: acc28c6d-9fc6-435b-a6be-831878b385cc, Path: GET /api/health
+2025-11-06T09:05:44.380227007Z [2025-11-06T09:05:44.380Z] GET /api/health
+2025-11-06T09:05:45.66032097Z [2025-11-06T09:05:45.660Z] Request ID: b1fefcf1-c794-441c-83a8-a9dd4dd61bb8, Path: GET /api/coupons
+2025-11-06T09:05:45.661917384Z [2025-11-06T09:05:45.660Z] GET /api/coupons
+2025-11-06T09:05:47.468573735Z [2025-11-06T09:05:47.468Z] Request ID: af6ff260-c3b8-4c68-92fe-14c327bfa330, Path: OPTIONS /api/user/orders
+2025-11-06T09:05:47.468601816Z [2025-11-06T09:05:47.468Z] OPTIONS /api/user/orders
+2025-11-06T09:05:47.746128565Z [2025-11-06T09:05:47.745Z] Request ID: 4049940b-db08-4140-9320-dfb99699491b, Path: GET /api/user/orders
+2025-11-06T09:05:47.746163716Z [2025-11-06T09:05:47.746Z] GET /api/user/orders
+2025-11-06T09:05:48.042875679Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:05:48.042905749Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:05:48.042909049Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:05:48.042912199Z }
+2025-11-06T09:05:49.380190915Z [2025-11-06T09:05:49.380Z] Request ID: 8a0ac272-fd94-49ae-ac82-7e467ab82b95, Path: GET /api/health
+2025-11-06T09:05:49.380218916Z [2025-11-06T09:05:49.380Z] GET /api/health
+2025-11-06T09:05:54.380759465Z [2025-11-06T09:05:54.380Z] Request ID: b9a6f161-da1a-4043-9a96-fb6e31156a87, Path: GET /api/health
+2025-11-06T09:05:54.380798166Z [2025-11-06T09:05:54.380Z] GET /api/health
+2025-11-06T09:05:59.380669701Z [2025-11-06T09:05:59.380Z] Request ID: f24fb113-9d7b-4a0e-9b4a-ccd51f1fdefc, Path: GET /api/health
+2025-11-06T09:05:59.380711122Z [2025-11-06T09:05:59.380Z] GET /api/health
+2025-11-06T09:05:59.381704833Z [2025-11-06T09:05:59.381Z] Request ID: 2366eab6-f9cc-408b-b99c-8da9cd445ab1, Path: GET /api/health
+2025-11-06T09:05:59.381734773Z [2025-11-06T09:05:59.381Z] GET /api/health
+2025-11-06T09:06:04.382229971Z [2025-11-06T09:06:04.382Z] Request ID: bdeb1de4-547d-401e-89a0-bfeaa93add4c, Path: GET /api/health
+2025-11-06T09:06:04.382271382Z [2025-11-06T09:06:04.382Z] GET /api/health
+2025-11-06T09:06:09.381270787Z [2025-11-06T09:06:09.381Z] Request ID: a866af21-eb58-4174-8dcd-f234917854fc, Path: GET /api/health
+2025-11-06T09:06:09.381297268Z [2025-11-06T09:06:09.381Z] GET /api/health
+2025-11-06T09:06:12.430204875Z [2025-11-06T09:06:12.430Z] Request ID: 49f14733-4db7-45c2-8805-1ac41a38bf6b, Path: OPTIONS /api/user/orders
+2025-11-06T09:06:12.430231365Z [2025-11-06T09:06:12.430Z] OPTIONS /api/user/orders
+2025-11-06T09:06:12.750181767Z [2025-11-06T09:06:12.749Z] Request ID: 70502b9a-bf6d-4d19-9c7f-739009477e8e, Path: GET /api/user/orders
+2025-11-06T09:06:12.750209847Z [2025-11-06T09:06:12.750Z] GET /api/user/orders
+2025-11-06T09:06:13.54739828Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:13.54742285Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:13.5474277Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:13.5474317Z }
+2025-11-06T09:06:14.380370215Z [2025-11-06T09:06:14.380Z] Request ID: 161411f6-f9fa-4d13-866a-a3e23117f56f, Path: GET /api/health
+2025-11-06T09:06:14.380402355Z [2025-11-06T09:06:14.380Z] GET /api/health
+2025-11-06T09:06:19.38083172Z [2025-11-06T09:06:19.380Z] Request ID: dba884e6-6b87-4f26-b01f-1e3a959a974d, Path: GET /api/health
+2025-11-06T09:06:19.380862191Z [2025-11-06T09:06:19.380Z] GET /api/health
+2025-11-06T09:06:24.380328725Z [2025-11-06T09:06:24.380Z] Request ID: cd29470d-4ff4-4a07-8b89-e54109bf0921, Path: GET /api/health
+2025-11-06T09:06:24.380359716Z [2025-11-06T09:06:24.380Z] GET /api/health
+2025-11-06T09:06:29.380414412Z [2025-11-06T09:06:29.380Z] Request ID: 11870c59-1f45-4ad8-92aa-52ed023e534d, Path: GET /api/health
+2025-11-06T09:06:29.380435342Z [2025-11-06T09:06:29.380Z] GET /api/health
+2025-11-06T09:06:29.381954324Z [2025-11-06T09:06:29.381Z] Request ID: 64b06c0f-9e00-4e9e-aa39-e332adb73e94, Path: GET /api/health
+2025-11-06T09:06:29.381969175Z [2025-11-06T09:06:29.381Z] GET /api/health
+2025-11-06T09:06:34.381750245Z [2025-11-06T09:06:34.381Z] Request ID: 4d919e3c-6ef9-4244-b409-f84c5efee391, Path: GET /api/health
+2025-11-06T09:06:34.381777816Z [2025-11-06T09:06:34.381Z] GET /api/health
+2025-11-06T09:06:34.495486508Z [2025-11-06T09:06:34.494Z] Request ID: 7a20199f-378a-4ec6-a4ef-0ada96738082, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.495517869Z [2025-11-06T09:06:34.494Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.497034601Z [2025-11-06T09:06:34.496Z] Request ID: 8f77b59e-18e9-47f3-a2fe-763603d0e830, Path: OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.497070271Z [2025-11-06T09:06:34.496Z] OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.497730535Z [2025-11-06T09:06:34.497Z] Request ID: a597e998-962f-476b-8306-a0e08aeaa44c, Path: OPTIONS /api/admin/summary
+2025-11-06T09:06:34.497740056Z [2025-11-06T09:06:34.497Z] OPTIONS /api/admin/summary
+2025-11-06T09:06:34.537158485Z [2025-11-06T09:06:34.536Z] Request ID: 284e1bcd-5bf1-419f-9412-f995cd95b116, Path: OPTIONS /api/admin/summary
+2025-11-06T09:06:34.537196836Z [2025-11-06T09:06:34.537Z] OPTIONS /api/admin/summary
+2025-11-06T09:06:34.54074767Z [2025-11-06T09:06:34.540Z] Request ID: 294c54d0-bda7-4c2e-8092-11dd13e6615c, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.540768341Z [2025-11-06T09:06:34.540Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.541554587Z [2025-11-06T09:06:34.541Z] Request ID: 115bd373-5e56-4d79-8fcf-6496c715326c, Path: OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.54166888Z [2025-11-06T09:06:34.541Z] OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.57353188Z [2025-11-06T09:06:34.573Z] Request ID: 80353173-9bca-46b3-828c-42cc6c4d3528, Path: OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:34.573556391Z [2025-11-06T09:06:34.573Z] OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:34.577146506Z [2025-11-06T09:06:34.577Z] Request ID: a1488ae5-412d-44a0-ada9-68a57aca0587, Path: OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:34.577178607Z [2025-11-06T09:06:34.577Z] OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:34.800139728Z [2025-11-06T09:06:34.799Z] Request ID: 3bd7da5f-0f9a-4f44-8742-42279df417b2, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.800165998Z [2025-11-06T09:06:34.800Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:34.815830258Z [2025-11-06T09:06:34.815Z] Request ID: 788a818c-8136-4f0a-b8dc-f2f5139e83df, Path: GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.815852338Z [2025-11-06T09:06:34.815Z] GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:34.826253797Z [2025-11-06T09:06:34.826Z] Request ID: eb517948-8077-4ca0-93b8-81567e67e080, Path: GET /api/admin/summary
+2025-11-06T09:06:34.826277728Z [2025-11-06T09:06:34.826Z] GET /api/admin/summary
+2025-11-06T09:06:34.866983814Z [2025-11-06T09:06:34.866Z] Request ID: 0b56113a-a8ff-40a4-a828-8148e2c0acb5, Path: GET /api/admin/charts/payment-methods
+2025-11-06T09:06:34.867006274Z [2025-11-06T09:06:34.866Z] GET /api/admin/charts/payment-methods
+2025-11-06T09:06:35.115669076Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:35.115696277Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:35.115699917Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:35.115702937Z }
+2025-11-06T09:06:35.116924452Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:35.116938013Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:35.116940223Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:35.116941983Z }
+2025-11-06T09:06:35.126274899Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:35.126289749Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:35.12629182Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:35.12629376Z }
+2025-11-06T09:06:35.424045374Z [2025-11-06T09:06:35.423Z] Request ID: 1267b5d4-b846-4c84-b74f-5af0ed351ca5, Path: GET /api/admin/summary
+2025-11-06T09:06:35.424089505Z [2025-11-06T09:06:35.423Z] GET /api/admin/summary
+2025-11-06T09:06:35.679511789Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:35.679526549Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:35.679529269Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:35.679531539Z }
+2025-11-06T09:06:35.703041344Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:35.703069164Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:35.703072994Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:35.703075464Z }
+2025-11-06T09:06:35.87968445Z [2025-11-06T09:06:35.879Z] Request ID: e7fa5eac-98a2-4c5e-ab70-b0e935345c88, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:35.879713781Z [2025-11-06T09:06:35.879Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:35.920295985Z [2025-11-06T09:06:35.920Z] Request ID: b56f88a8-52da-4265-9058-3943e426f795, Path: GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:35.920314245Z [2025-11-06T09:06:35.920Z] GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:36.031119676Z [2025-11-06T09:06:36.030Z] Request ID: 8bdb0ae0-2abd-4e46-93cb-136031102219, Path: GET /api/admin/charts/payment-methods
+2025-11-06T09:06:36.031150207Z [2025-11-06T09:06:36.031Z] GET /api/admin/charts/payment-methods
+2025-11-06T09:06:36.159693171Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:36.159720352Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:36.159723672Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:36.159726132Z }
+2025-11-06T09:06:36.193519653Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:36.193546443Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:36.193549743Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:36.193552793Z }
+2025-11-06T09:06:36.317783327Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:36.317836858Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:36.317843198Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:36.317845858Z }
+2025-11-06T09:06:39.380632686Z [2025-11-06T09:06:39.380Z] Request ID: 5b8ee772-195f-4425-859d-1d623e6a273d, Path: GET /api/health
+2025-11-06T09:06:39.380661847Z [2025-11-06T09:06:39.380Z] GET /api/health
+2025-11-06T09:06:40.03104812Z [2025-11-06T09:06:40.030Z] Request ID: 98b9c3ff-6746-41db-bfbd-6e042265b9d9, Path: OPTIONS /api/admin/summary
+2025-11-06T09:06:40.03107167Z [2025-11-06T09:06:40.030Z] OPTIONS /api/admin/summary
+2025-11-06T09:06:40.042659844Z [2025-11-06T09:06:40.042Z] Request ID: cad3af21-7e48-4a7a-a134-343dd2b924ad, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:40.042692215Z [2025-11-06T09:06:40.042Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:40.085581557Z [2025-11-06T09:06:40.085Z] Request ID: 6a5a9912-10c9-4ba9-b231-908593144aee, Path: OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:40.085612018Z [2025-11-06T09:06:40.085Z] OPTIONS /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:40.312264306Z [2025-11-06T09:06:40.312Z] Request ID: eaab0845-1283-401c-a3ca-3feb3eeb1543, Path: GET /api/admin/summary
+2025-11-06T09:06:40.312309447Z [2025-11-06T09:06:40.312Z] GET /api/admin/summary
+2025-11-06T09:06:40.32387618Z [2025-11-06T09:06:40.323Z] Request ID: 2ee00dc0-233a-42ae-8434-2dd3271aeae7, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:40.323915011Z [2025-11-06T09:06:40.323Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:40.366276943Z [2025-11-06T09:06:40.366Z] Request ID: 3d0d623f-7e9e-4875-8cca-96874d9b32db, Path: GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:40.366312233Z [2025-11-06T09:06:40.366Z] GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:40.554159905Z [2025-11-06T09:06:40.553Z] Request ID: f100377a-6864-43e4-be17-c33a1f4b5c74, Path: OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:40.554190396Z [2025-11-06T09:06:40.554Z] OPTIONS /api/admin/charts/payment-methods
+2025-11-06T09:06:40.601868109Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:40.6018896Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:40.60189312Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:40.60189593Z }
+2025-11-06T09:06:40.638913168Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:40.638935029Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:40.638938209Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:40.638944939Z }
+2025-11-06T09:06:40.677849668Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:40.677876598Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:40.677879588Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:40.677882008Z }
+2025-11-06T09:06:40.871929731Z [2025-11-06T09:06:40.871Z] Request ID: ff0298ca-2d5c-4726-a957-0ead729a2017, Path: GET /api/admin/charts/payment-methods
+2025-11-06T09:06:40.871954871Z [2025-11-06T09:06:40.871Z] GET /api/admin/charts/payment-methods
+2025-11-06T09:06:41.14754916Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:41.14757571Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:41.1475804Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:41.14758639Z }
+2025-11-06T09:06:42.276233666Z [2025-11-06T09:06:42.276Z] Request ID: b0cec52e-3dbd-4c8a-8656-36a7980df6f8, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:42.276271967Z [2025-11-06T09:06:42.276Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:42.549945764Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:42.552826895Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:42.552835835Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:42.552839625Z }
+2025-11-06T09:06:42.87059881Z [2025-11-06T09:06:42.870Z] Request ID: 8d7e4eb9-f584-45bf-aefa-ad69c19c7c88, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:42.870634931Z [2025-11-06T09:06:42.870Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:43.147613968Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:43.147643519Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:43.147648879Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:43.147653119Z }
+2025-11-06T09:06:44.380857694Z [2025-11-06T09:06:44.380Z] Request ID: f1359f9a-2f74-4273-ab18-347c146aab7d, Path: GET /api/health
+2025-11-06T09:06:44.380886195Z [2025-11-06T09:06:44.380Z] GET /api/health
+2025-11-06T09:06:45.664909809Z [2025-11-06T09:06:45.664Z] Request ID: 0ac408d5-2ac2-4522-b8d0-5de0949b4132, Path: GET /api/admin/summary
+2025-11-06T09:06:45.66493788Z [2025-11-06T09:06:45.664Z] GET /api/admin/summary
+2025-11-06T09:06:46.340003592Z [2025-11-06T09:06:46.339Z] Request ID: f7a35f70-2973-4684-872f-08f91e51fd9c, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:46.340044133Z [2025-11-06T09:06:46.339Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:06:47.575290131Z [2025-11-06T09:06:47.575Z] Request ID: 6ca2ab05-3066-422e-b04d-b52cff76e36a, Path: GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:47.575331242Z [2025-11-06T09:06:47.575Z] GET /api/admin/charts/orders-over-time?from=2025-10-07&to=2025-11-06&interval=day
+2025-11-06T09:06:48.315923353Z [2025-11-06T09:06:48.313Z] Request ID: 81aed3de-4eb5-45af-af33-91324fc56c24, Path: GET /api/admin/charts/payment-methods
+2025-11-06T09:06:48.315956944Z [2025-11-06T09:06:48.313Z] GET /api/admin/charts/payment-methods
+2025-11-06T09:06:49.381257316Z [2025-11-06T09:06:49.380Z] Request ID: c04c40e2-6837-4cc6-893f-3da563be9a4c, Path: GET /api/health
+2025-11-06T09:06:49.381275307Z [2025-11-06T09:06:49.380Z] GET /api/health
+2025-11-06T09:06:52.540914291Z [2025-11-06T09:06:52.540Z] Request ID: 3f733637-d451-46e6-b0bd-019f9c95151c, Path: OPTIONS /api/user/orders
+2025-11-06T09:06:52.540948992Z [2025-11-06T09:06:52.540Z] OPTIONS /api/user/orders
+2025-11-06T09:06:52.817483329Z [2025-11-06T09:06:52.817Z] Request ID: ea856271-3b2d-4362-bc7a-8144ad08a024, Path: GET /api/user/orders
+2025-11-06T09:06:52.81751473Z [2025-11-06T09:06:52.817Z] GET /api/user/orders
+2025-11-06T09:06:53.119091305Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:06:53.119119495Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:06:53.119122366Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:06:53.119124746Z }
+2025-11-06T09:06:54.387579302Z [2025-11-06T09:06:54.382Z] Request ID: 12d23b41-dffb-4eb2-bbae-045dc2f62aaa, Path: GET /api/health
+2025-11-06T09:06:54.387596582Z [2025-11-06T09:06:54.382Z] GET /api/health
+2025-11-06T09:06:59.380885214Z [2025-11-06T09:06:59.380Z] Request ID: d0f413f5-90cc-4fc1-820c-897389367589, Path: GET /api/health
+2025-11-06T09:06:59.380914394Z [2025-11-06T09:06:59.380Z] GET /api/health
+2025-11-06T09:06:59.381898745Z [2025-11-06T09:06:59.381Z] Request ID: 99432f72-9179-4d35-a98e-9e56f04210c2, Path: GET /api/health
+2025-11-06T09:06:59.381915715Z [2025-11-06T09:06:59.381Z] GET /api/health
+2025-11-06T09:07:04.381223813Z [2025-11-06T09:07:04.380Z] Request ID: c3d93bee-c937-4cba-a9d9-5ed5b19a3477, Path: GET /api/health
+2025-11-06T09:07:04.381251233Z [2025-11-06T09:07:04.381Z] GET /api/health
+2025-11-06T09:07:09.380472759Z [2025-11-06T09:07:09.380Z] Request ID: 64b36d46-ee8e-4230-aaaa-f44d945358b5, Path: GET /api/health
+2025-11-06T09:07:09.38050932Z [2025-11-06T09:07:09.380Z] GET /api/health
+2025-11-06T09:07:14.381766947Z [2025-11-06T09:07:14.381Z] Request ID: 63ca7f4b-902f-4e62-9ed6-7bffe8ed7991, Path: GET /api/health
+2025-11-06T09:07:14.382076304Z [2025-11-06T09:07:14.381Z] GET /api/health
+2025-11-06T09:07:19.380385879Z [2025-11-06T09:07:19.380Z] Request ID: d0498a3b-d5b4-4da7-a311-a27f0cfbeb22, Path: GET /api/health
+2025-11-06T09:07:19.38041721Z [2025-11-06T09:07:19.380Z] GET /api/health
+2025-11-06T09:07:24.381258918Z [2025-11-06T09:07:24.381Z] Request ID: 2746a768-3b66-49d6-a9be-6bd119e73d03, Path: GET /api/health
+2025-11-06T09:07:24.38135573Z [2025-11-06T09:07:24.381Z] GET /api/health
+2025-11-06T09:07:29.380938981Z [2025-11-06T09:07:29.380Z] Request ID: 0af024fa-0460-4a9a-895a-341ea8254eee, Path: GET /api/health
+2025-11-06T09:07:29.380971612Z [2025-11-06T09:07:29.380Z] GET /api/health
+2025-11-06T09:07:29.382007074Z [2025-11-06T09:07:29.381Z] Request ID: cb6122b0-db9e-4e4e-8dd6-ff3b1b8ca4b0, Path: GET /api/health
+2025-11-06T09:07:29.382033404Z [2025-11-06T09:07:29.381Z] GET /api/health
+2025-11-06T09:07:34.381760708Z [2025-11-06T09:07:34.380Z] Request ID: d591153d-0e4b-432d-b0f4-cdb67ed9766f, Path: GET /api/health
+2025-11-06T09:07:34.381793828Z [2025-11-06T09:07:34.380Z] GET /api/health
+2025-11-06T09:07:39.380923999Z [2025-11-06T09:07:39.380Z] Request ID: 79adad9f-7adf-4660-8b06-5195d565de0a, Path: GET /api/health
+2025-11-06T09:07:39.38095814Z [2025-11-06T09:07:39.380Z] GET /api/health
+2025-11-06T09:07:44.381903089Z [2025-11-06T09:07:44.380Z] Request ID: ba94c721-cb31-4d7b-9bf0-6b5414d21884, Path: GET /api/health
+2025-11-06T09:07:44.38194118Z [2025-11-06T09:07:44.380Z] GET /api/health
+2025-11-06T09:07:49.380052738Z [2025-11-06T09:07:49.379Z] Request ID: 20a34455-e66c-431c-bb88-77f7ec07c079, Path: GET /api/health
+2025-11-06T09:07:49.380079379Z [2025-11-06T09:07:49.379Z] GET /api/health
+2025-11-06T09:07:54.380869453Z [2025-11-06T09:07:54.380Z] Request ID: 12f89390-d6d5-4242-846d-ca2ed80916a5, Path: GET /api/health
+2025-11-06T09:07:54.380906344Z [2025-11-06T09:07:54.380Z] GET /api/health
+2025-11-06T09:07:59.382154808Z [2025-11-06T09:07:59.380Z] Request ID: c01d0de3-72e8-4d79-b526-eae3df6b210b, Path: GET /api/health
+2025-11-06T09:07:59.382179308Z [2025-11-06T09:07:59.380Z] GET /api/health
+2025-11-06T09:07:59.382184088Z [2025-11-06T09:07:59.381Z] Request ID: 419ddbbf-8d18-4b88-b3e5-6523de130f6b, Path: GET /api/health
+2025-11-06T09:07:59.382188329Z [2025-11-06T09:07:59.381Z] GET /api/health
+2025-11-06T09:08:04.381861669Z [2025-11-06T09:08:04.381Z] Request ID: 40b57695-dbca-48ab-a650-96ea3602e5fa, Path: GET /api/health
+2025-11-06T09:08:04.381883329Z [2025-11-06T09:08:04.381Z] GET /api/health
+2025-11-06T09:08:09.380306623Z [2025-11-06T09:08:09.380Z] Request ID: 59347a6f-543a-4698-8cb3-4d9601b36dd5, Path: GET /api/health
+2025-11-06T09:08:09.380329183Z [2025-11-06T09:08:09.380Z] GET /api/health
+2025-11-06T09:08:14.380172796Z [2025-11-06T09:08:14.379Z] Request ID: 3e4317f5-8b74-48a4-a207-d7d8edab5707, Path: GET /api/health
+2025-11-06T09:08:14.38035342Z [2025-11-06T09:08:14.380Z] GET /api/health
+2025-11-06T09:08:19.382577232Z [2025-11-06T09:08:19.380Z] Request ID: 42b80c15-6f90-42b1-a8b2-062c8047bb5c, Path: GET /api/health
+2025-11-06T09:08:19.382605033Z [2025-11-06T09:08:19.381Z] GET /api/health
+2025-11-06T09:08:24.380448063Z [2025-11-06T09:08:24.380Z] Request ID: 886499ac-bb42-4b38-8e8b-140f1cd8920c, Path: GET /api/health
+2025-11-06T09:08:24.380482704Z [2025-11-06T09:08:24.380Z] GET /api/health
+2025-11-06T09:08:29.380914278Z [2025-11-06T09:08:29.380Z] Request ID: 032a7b38-6f32-4187-9273-206b5f4331c6, Path: GET /api/health
+2025-11-06T09:08:29.380949819Z [2025-11-06T09:08:29.380Z] GET /api/health
+2025-11-06T09:08:29.38196557Z [2025-11-06T09:08:29.381Z] Request ID: 74f63b0a-7e88-40de-8e5d-ba5e1dbd50e4, Path: GET /api/health
+2025-11-06T09:08:29.381998731Z [2025-11-06T09:08:29.381Z] GET /api/health
+2025-11-06T09:08:34.380390362Z [2025-11-06T09:08:34.380Z] Request ID: 0f3dfe07-f19c-497f-9901-b2d3d63adb38, Path: GET /api/health
+2025-11-06T09:08:34.380441273Z [2025-11-06T09:08:34.380Z] GET /api/health
+2025-11-06T09:08:39.380673322Z [2025-11-06T09:08:39.380Z] Request ID: bbc2578a-6361-4ba5-a732-943b39230957, Path: GET /api/health
+2025-11-06T09:08:39.380708892Z [2025-11-06T09:08:39.380Z] GET /api/health
+2025-11-06T09:08:43.499626781Z [2025-11-06T09:08:43.499Z] Request ID: ccfb51be-d8ed-42e0-a0da-26dbfbea0a9f, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:08:43.499787864Z [2025-11-06T09:08:43.499Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:08:44.283543962Z [2025-11-06T09:08:44.283Z] Request ID: d56c8ad9-2e55-40c2-9765-4451d3368666, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:08:44.283560152Z [2025-11-06T09:08:44.283Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:08:44.380947001Z [2025-11-06T09:08:44.380Z] Request ID: 4da3917f-c192-43df-9769-dc445996d255, Path: GET /api/health
+2025-11-06T09:08:44.380983902Z [2025-11-06T09:08:44.380Z] GET /api/health
+2025-11-06T09:08:44.717532432Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:08:44.717576183Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:08:44.717581383Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:08:44.717585343Z }
+2025-11-06T09:08:49.381043046Z [2025-11-06T09:08:49.380Z] Request ID: d22fad96-59a8-4a01-a252-57cbc7179e6d, Path: GET /api/health
+2025-11-06T09:08:49.381070537Z [2025-11-06T09:08:49.380Z] GET /api/health
+2025-11-06T09:08:54.381199933Z [2025-11-06T09:08:54.380Z] Request ID: 6572e568-d5fb-4823-8771-d0f87151d33b, Path: GET /api/health
+2025-11-06T09:08:54.381289615Z [2025-11-06T09:08:54.381Z] GET /api/health
+2025-11-06T09:08:59.380551442Z [2025-11-06T09:08:59.380Z] Request ID: c787055c-d7a1-400f-9c09-a4718cbec5d0, Path: GET /api/health
+2025-11-06T09:08:59.380572222Z [2025-11-06T09:08:59.380Z] GET /api/health
+2025-11-06T09:08:59.381462221Z [2025-11-06T09:08:59.381Z] Request ID: 637dfec2-4c6f-4ecd-8361-08278a35ae93, Path: GET /api/health
+2025-11-06T09:08:59.381477231Z [2025-11-06T09:08:59.381Z] GET /api/health
+2025-11-06T09:09:04.384946587Z [2025-11-06T09:09:04.381Z] Request ID: a728dd8a-5124-409c-8d0a-6a940494c10e, Path: GET /api/health
+2025-11-06T09:09:04.384969307Z [2025-11-06T09:09:04.381Z] GET /api/health
+2025-11-06T09:09:09.381646029Z [2025-11-06T09:09:09.380Z] Request ID: 0fbc885c-1962-44dc-89d9-e00f32f46370, Path: GET /api/health
+2025-11-06T09:09:09.38167618Z [2025-11-06T09:09:09.381Z] GET /api/health
+2025-11-06T09:09:14.380462445Z [2025-11-06T09:09:14.380Z] Request ID: c67a94d8-b0fb-4355-b888-ece5c1cc8c88, Path: GET /api/health
+2025-11-06T09:09:14.380571098Z [2025-11-06T09:09:14.380Z] GET /api/health
+2025-11-06T09:09:19.381071509Z [2025-11-06T09:09:19.380Z] Request ID: c04df809-4958-4531-88dd-7f397512641b, Path: GET /api/health
+2025-11-06T09:09:19.38109625Z [2025-11-06T09:09:19.380Z] GET /api/health
+2025-11-06T09:09:25.507814964Z ==> Detected service running on port 10000
+2025-11-06T09:09:24.380893766Z [2025-11-06T09:09:24.380Z] Request ID: c8063ad7-da67-481c-bf89-9a68cfac455b, Path: GET /api/health
+2025-11-06T09:09:24.380920866Z [2025-11-06T09:09:24.380Z] GET /api/health
+2025-11-06T09:09:25.709592258Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-11-06T09:09:29.381424577Z [2025-11-06T09:09:29.381Z] Request ID: 183f328b-bc62-42e1-9925-7e4f23010dbf, Path: GET /api/health
+2025-11-06T09:09:29.381449527Z [2025-11-06T09:09:29.381Z] GET /api/health
+2025-11-06T09:09:29.382617932Z [2025-11-06T09:09:29.382Z] Request ID: cf5506c2-be31-4c67-9f5d-eb9b83aa17e8, Path: GET /api/health
+2025-11-06T09:09:29.382630002Z [2025-11-06T09:09:29.382Z] GET /api/health
+2025-11-06T09:09:34.385577974Z [2025-11-06T09:09:34.384Z] Request ID: dbf44175-711d-4b66-8454-be6588e7b57b, Path: GET /api/health
+2025-11-06T09:09:34.385600725Z [2025-11-06T09:09:34.384Z] GET /api/health
+2025-11-06T09:09:39.380087588Z [2025-11-06T09:09:39.379Z] Request ID: 534cfe15-89af-41a1-9e49-85864fabbad4, Path: GET /api/health
+2025-11-06T09:09:39.380146889Z [2025-11-06T09:09:39.379Z] GET /api/health
+2025-11-06T09:09:44.38025878Z [2025-11-06T09:09:44.380Z] Request ID: e11442f2-c592-49f2-89b9-6b4c87410659, Path: GET /api/health
+2025-11-06T09:09:44.380282171Z [2025-11-06T09:09:44.380Z] GET /api/health
+2025-11-06T09:09:49.380177218Z [2025-11-06T09:09:49.379Z] Request ID: 69e2b27b-f584-4942-991d-7683bc982b1f, Path: GET /api/health
+2025-11-06T09:09:49.380214099Z [2025-11-06T09:09:49.380Z] GET /api/health
+2025-11-06T09:09:54.380922472Z [2025-11-06T09:09:54.380Z] Request ID: e8368c7d-c1fc-477e-9382-e6950f8ef85c, Path: GET /api/health
+2025-11-06T09:09:54.381007184Z [2025-11-06T09:09:54.380Z] GET /api/health
+2025-11-06T09:09:59.38049318Z [2025-11-06T09:09:59.380Z] Request ID: ccd16baf-c1ce-4094-8be2-a3eae9ba0876, Path: GET /api/health
+2025-11-06T09:09:59.380529671Z [2025-11-06T09:09:59.380Z] GET /api/health
+2025-11-06T09:09:59.38189835Z [2025-11-06T09:09:59.381Z] Request ID: 14bb74f6-c02f-42fa-84cb-27e59df99321, Path: GET /api/health
+2025-11-06T09:09:59.38192331Z [2025-11-06T09:09:59.381Z] GET /api/health
+2025-11-06T09:10:04.384505002Z [2025-11-06T09:10:04.384Z] Request ID: 3f210a28-2a75-40e5-aeed-b1d4f81e3993, Path: GET /api/health
+2025-11-06T09:10:04.384773828Z [2025-11-06T09:10:04.384Z] GET /api/health
+2025-11-06T09:10:09.38025254Z [2025-11-06T09:10:09.380Z] Request ID: dd7f184f-504b-49f9-970b-6942ea02e915, Path: GET /api/health
+2025-11-06T09:10:09.380318391Z [2025-11-06T09:10:09.380Z] GET /api/health
+2025-11-06T09:10:14.381540113Z [2025-11-06T09:10:14.381Z] Request ID: 2f7dae7d-8878-4e41-bc58-3d60b85b0759, Path: GET /api/health
+2025-11-06T09:10:14.382631306Z [2025-11-06T09:10:14.381Z] GET /api/health
+2025-11-06T09:10:19.380388655Z [2025-11-06T09:10:19.380Z] Request ID: bfaac361-f25c-4a33-923b-ee0c6a5fb4b2, Path: GET /api/health
+2025-11-06T09:10:19.380421306Z [2025-11-06T09:10:19.380Z] GET /api/health
+2025-11-06T09:10:24.380162696Z [2025-11-06T09:10:24.379Z] Request ID: e1b349d2-543e-445c-8654-b8e4fd67ef82, Path: GET /api/health
+2025-11-06T09:10:24.380194776Z [2025-11-06T09:10:24.380Z] GET /api/health
+2025-11-06T09:10:24.707214526Z [2025-11-06T09:10:24.707Z] Request ID: 0ebda615-454f-4d6a-bdbf-1e7e9b222dc1, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:24.707241986Z [2025-11-06T09:10:24.707Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:24.71552515Z [2025-11-06T09:10:24.715Z] Request ID: b28c888b-9809-4006-bb76-00d89e2742c2, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:24.715551551Z [2025-11-06T09:10:24.715Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:25.733889452Z [2025-11-06T09:10:25.733Z] Request ID: dfc7f7f5-2d5a-466d-8928-66b3ea38833f, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:25.733930763Z [2025-11-06T09:10:25.733Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:26.231702073Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:10:26.231721524Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:10:26.231725994Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:10:26.231729954Z }
+2025-11-06T09:10:26.525781309Z [2025-11-06T09:10:26.525Z] Request ID: 309c2b55-47c7-4a7e-803d-0dd2ce01a8ce, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:26.52584475Z [2025-11-06T09:10:26.525Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:10:26.817863153Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:10:26.817901644Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:10:26.817907144Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:10:26.817912174Z }
+2025-11-06T09:10:29.380706233Z [2025-11-06T09:10:29.380Z] Request ID: af521fd8-5839-43dd-9066-147da78d244c, Path: GET /api/health
+2025-11-06T09:10:29.380735213Z [2025-11-06T09:10:29.380Z] GET /api/health
+2025-11-06T09:10:29.381934199Z [2025-11-06T09:10:29.381Z] Request ID: 58b2ed02-d696-4b46-96be-4ab7f9e5bf6f, Path: GET /api/health
+2025-11-06T09:10:29.381977139Z [2025-11-06T09:10:29.381Z] GET /api/health
+2025-11-06T09:10:34.380158176Z [2025-11-06T09:10:34.379Z] Request ID: f89e5096-e5b8-49cd-bfd6-fbdc350a30a0, Path: GET /api/health
+2025-11-06T09:10:34.380185627Z [2025-11-06T09:10:34.380Z] GET /api/health
+2025-11-06T09:10:39.380667101Z [2025-11-06T09:10:39.380Z] Request ID: 83dae915-d6ac-45ec-a315-c94dbdfbb838, Path: GET /api/health
+2025-11-06T09:10:39.380698262Z [2025-11-06T09:10:39.380Z] GET /api/health
+2025-11-06T09:10:44.380547462Z [2025-11-06T09:10:44.380Z] Request ID: e988ed7c-bc1f-45a1-8843-200c3a86541f, Path: GET /api/health
+2025-11-06T09:10:44.380602443Z [2025-11-06T09:10:44.380Z] GET /api/health
+2025-11-06T09:10:49.380681979Z [2025-11-06T09:10:49.380Z] Request ID: 45a98a79-3ed6-494c-9652-c1d37e86b080, Path: GET /api/health
+2025-11-06T09:10:49.38071743Z [2025-11-06T09:10:49.380Z] GET /api/health
+2025-11-06T09:10:54.380743733Z [2025-11-06T09:10:54.380Z] Request ID: 6cfa7ea1-3419-4e32-a5a1-5983ee43cadd, Path: GET /api/health
+2025-11-06T09:10:54.380796075Z [2025-11-06T09:10:54.380Z] GET /api/health
+2025-11-06T09:10:59.37994656Z [2025-11-06T09:10:59.379Z] Request ID: d647912f-d3c8-41d2-80da-857865312976, Path: GET /api/health
+2025-11-06T09:10:59.37997491Z [2025-11-06T09:10:59.379Z] GET /api/health
+2025-11-06T09:10:59.380744466Z [2025-11-06T09:10:59.380Z] Request ID: fc928bd7-ef7f-49a6-bb61-2ec4fe1996be, Path: GET /api/health
+2025-11-06T09:10:59.380752677Z [2025-11-06T09:10:59.380Z] GET /api/health
+2025-11-06T09:11:04.380622576Z [2025-11-06T09:11:04.380Z] Request ID: 19ca9ba4-bda5-4af1-90b5-a9fd2e714836, Path: GET /api/health
+2025-11-06T09:11:04.380667887Z [2025-11-06T09:11:04.380Z] GET /api/health
+2025-11-06T09:11:09.380379433Z [2025-11-06T09:11:09.380Z] Request ID: 5a138aa4-ff1e-4a93-875c-bfde77664806, Path: GET /api/health
+2025-11-06T09:11:09.380402554Z [2025-11-06T09:11:09.380Z] GET /api/health
+2025-11-06T09:11:14.380283553Z [2025-11-06T09:11:14.379Z] Request ID: eaaa0aaa-8efb-4504-8316-a86f9fc70e63, Path: GET /api/health
+2025-11-06T09:11:14.380310933Z [2025-11-06T09:11:14.379Z] GET /api/health
+2025-11-06T09:11:19.381069061Z [2025-11-06T09:11:19.380Z] Request ID: 21396f8b-85ef-45a1-8970-63f34829517e, Path: GET /api/health
+2025-11-06T09:11:19.381089301Z [2025-11-06T09:11:19.381Z] GET /api/health
+2025-11-06T09:11:24.38099363Z [2025-11-06T09:11:24.380Z] Request ID: a7281af8-4e54-4df5-b0d9-e00793efe5f6, Path: GET /api/health
+2025-11-06T09:11:24.382269277Z [2025-11-06T09:11:24.380Z] GET /api/health
+2025-11-06T09:11:29.380897548Z [2025-11-06T09:11:29.380Z] Request ID: 96e95fe5-aebc-4aee-9e78-45ae84a35924, Path: GET /api/health
+2025-11-06T09:11:29.38095606Z [2025-11-06T09:11:29.380Z] GET /api/health
+2025-11-06T09:11:29.381988591Z [2025-11-06T09:11:29.381Z] Request ID: b95c8964-6bce-4b2d-bb49-00f08a3ca032, Path: GET /api/health
+2025-11-06T09:11:29.382008972Z [2025-11-06T09:11:29.381Z] GET /api/health
+2025-11-06T09:11:34.381382249Z [2025-11-06T09:11:34.380Z] Request ID: 70d8abc7-225a-407f-8202-f155965e3c1e, Path: GET /api/health
+2025-11-06T09:11:34.38143459Z [2025-11-06T09:11:34.380Z] GET /api/health
+2025-11-06T09:11:39.381074132Z [2025-11-06T09:11:39.380Z] Request ID: 854228ba-6825-4ef4-b790-094c3aca9b07, Path: GET /api/health
+2025-11-06T09:11:39.381105442Z [2025-11-06T09:11:39.381Z] GET /api/health
+2025-11-06T09:11:44.380855697Z [2025-11-06T09:11:44.380Z] Request ID: 8cd07eb2-a46c-46e3-ae79-fc204637caea, Path: GET /api/health
+2025-11-06T09:11:44.380878397Z [2025-11-06T09:11:44.380Z] GET /api/health
+2025-11-06T09:11:49.380688822Z [2025-11-06T09:11:49.380Z] Request ID: 900bd7f6-ba33-4e3c-82b4-a34fa0d5a8c4, Path: GET /api/health
+2025-11-06T09:11:49.380723073Z [2025-11-06T09:11:49.380Z] GET /api/health
+2025-11-06T09:11:54.380312173Z [2025-11-06T09:11:54.380Z] Request ID: c8294300-3652-4f49-a786-2ca1d247647b, Path: GET /api/health
+2025-11-06T09:11:54.380348724Z [2025-11-06T09:11:54.380Z] GET /api/health
+2025-11-06T09:11:59.380470434Z [2025-11-06T09:11:59.380Z] Request ID: 26a6a993-9431-46d0-bf1c-e22945a55ec0, Path: GET /api/health
+2025-11-06T09:11:59.380503105Z [2025-11-06T09:11:59.380Z] GET /api/health
+2025-11-06T09:11:59.381374993Z [2025-11-06T09:11:59.381Z] Request ID: 8bb21cb3-1566-4cbd-b4bb-ea75cb45f00f, Path: GET /api/health
+2025-11-06T09:11:59.381393434Z [2025-11-06T09:11:59.381Z] GET /api/health
+2025-11-06T09:12:04.381916562Z [2025-11-06T09:12:04.380Z] Request ID: 1f1e3769-f97f-4128-b2f7-9a291330ecbb, Path: GET /api/health
+2025-11-06T09:12:04.381945133Z [2025-11-06T09:12:04.380Z] GET /api/health
+2025-11-06T09:12:09.380656093Z [2025-11-06T09:12:09.380Z] Request ID: 64bb457d-edfc-4614-a923-78c55a49d139, Path: GET /api/health
+2025-11-06T09:12:09.380690354Z [2025-11-06T09:12:09.380Z] GET /api/health
+2025-11-06T09:12:14.380376544Z [2025-11-06T09:12:14.380Z] Request ID: f0c76eed-b43a-49d4-aa49-dbd2f7f63a6b, Path: GET /api/health
+2025-11-06T09:12:14.380404655Z [2025-11-06T09:12:14.380Z] GET /api/health
+2025-11-06T09:12:19.380859911Z [2025-11-06T09:12:19.380Z] Request ID: 3463447e-cb45-45fe-be49-ae27910b6f94, Path: GET /api/health
+2025-11-06T09:12:19.380900352Z [2025-11-06T09:12:19.380Z] GET /api/health
+2025-11-06T09:12:24.380366747Z [2025-11-06T09:12:24.380Z] Request ID: 4bb5a8f1-5ae9-4ad2-aaac-1552b02fec07, Path: GET /api/health
+2025-11-06T09:12:24.380416917Z [2025-11-06T09:12:24.380Z] GET /api/health
+2025-11-06T09:12:29.380590367Z [2025-11-06T09:12:29.380Z] Request ID: 302996d9-7f43-43c0-bd97-a9553d583a47, Path: GET /api/health
+2025-11-06T09:12:29.380651538Z [2025-11-06T09:12:29.380Z] GET /api/health
+2025-11-06T09:12:29.381582828Z [2025-11-06T09:12:29.381Z] Request ID: 8e879df5-5a9c-47f4-9f0b-ed99f9b68971, Path: GET /api/health
+2025-11-06T09:12:29.381610579Z [2025-11-06T09:12:29.381Z] GET /api/health
+2025-11-06T09:12:32.64652482Z [2025-11-06T09:12:32.646Z] Request ID: c9c234ea-a1cf-4dd3-8661-868cb837f430, Path: OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:12:32.646565281Z [2025-11-06T09:12:32.646Z] OPTIONS /api/admin/orders?page=1&limit=10
+2025-11-06T09:12:32.931570305Z [2025-11-06T09:12:32.931Z] Request ID: 883c3536-3aa4-4b3e-bb6d-2b5fe8f63c7f, Path: GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:12:32.931605376Z [2025-11-06T09:12:32.931Z] GET /api/admin/orders?page=1&limit=10
+2025-11-06T09:12:33.365785498Z [requireAuth] Authenticated via Supabase token: {
+2025-11-06T09:12:33.36589357Z   id: 'a05c6e64-d220-43df-bf78-ed3ae02e0e4b',
+2025-11-06T09:12:33.365901281Z   email: 'tabrez.ataher@gmail.com'
+2025-11-06T09:12:33.36590565Z }
+2025-11-06T09:12:34.380776486Z [2025-11-06T09:12:34.380Z] Request ID: 838ff352-4c11-4d03-b1db-ff5bf4e2b94f, Path: GET /api/health
+2025-11-06T09:12:34.380832517Z [2025-11-06T09:12:34.380Z] GET /api/health

@@ -41,22 +41,40 @@ export function getEnvSnapshot() {
 
 export const isSupabaseReady = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
-// HMR/global guard to ensure a single Supabase client instance in the browser
-declare global {
-  // eslint-disable-next-line no-var
-  var __MIYA_BHAI_SUPABASE__: SupabaseClient | undefined;
-}
+// Internal singleton holder (rename to avoid conflicts with exported names)
+let _supabaseClient: SupabaseClient | null = null;
 
-let supabase: SupabaseClient | null = null;
+/**
+ * Returns a singleton Supabase client instance.
+ * If environment variables are missing, logs a warning and returns null.
+ */
+export const getSupabase = (): SupabaseClient | null => {
+  if (_supabaseClient) return _supabaseClient;
+
+  if (!isSupabaseReady) {
+    console.warn(
+      'Supabase client not initialized. Missing envs. Snapshot:',
+      getEnvSnapshot()
+    );
+    return null;
+  }
+
+  _supabaseClient = createClient(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
+    auth: { persistSession: true },
+    realtime: { params: { eventsPerSecond: 10 } },
+  });
+
+  console.info('Supabase client initialized (client-side anon).');
+  return _supabaseClient;
+};
 
 // --- Dev-only helpful logs (won't print keys, only presence and masked info) ---
 if (import.meta.env.DEV) {
   try {
-    const hostDisplay = SUPABASE_URL ? SUPABASE_URL.replace(/^https?:\/\//, '') : '<<MISSING_URL>>';
+    const hostDisplay = SUPABASE_URL
+      ? SUPABASE_URL.replace(/^https?:\/\//, '')
+      : '<<MISSING_URL>>';
     const keyLen = SUPABASE_ANON_KEY ? SUPABASE_ANON_KEY.length : 0;
-    // Friendly one-line snapshot so devs can paste output into chat/debuggers quickly.
-    // NOTE: we intentionally do NOT log the full anon key.
-    // Example output: [dev][supabase] host=syjowaf...supabase.co keyLen=123
     console.info('[dev][supabase] host=', hostDisplay, 'keyLen=', keyLen);
     console.debug('[dev][supabase] env snapshot=', getEnvSnapshot());
   } catch (e) {
@@ -65,19 +83,4 @@ if (import.meta.env.DEV) {
 }
 // -------------------------------------------------------------------------------
 
-if (!isSupabaseReady) {
-  console.warn('Supabase client not initialized. Missing envs. Snapshot:', getEnvSnapshot());
-} else {
-  if (!(globalThis as any).__MIYA_BHAI_SUPABASE__) {
-    (globalThis as any).__MIYA_BHAI_SUPABASE__ = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: { persistSession: true },
-      realtime: { params: { eventsPerSecond: 10 } },
-    });
-  }
-  supabase = (globalThis as any).__MIYA_BHAI_SUPABASE__;
-  console.info('Supabase client initialized (client-side anon).');
-}
 
-// ✅ Export both default and named — works for all imports
-export { supabase };
-export default supabase;

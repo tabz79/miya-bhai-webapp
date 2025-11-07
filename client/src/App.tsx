@@ -1,6 +1,5 @@
-// client/src/App.tsx
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
@@ -34,7 +33,7 @@ import LoginPage from "@/pages/LoginPage";
 // 🧠 unified callback replaces both MagicLinkCallback & OAuthCallback
 import AuthCallback from "@/pages/AuthCallback";
 
-import { supabase } from "@/lib/supabaseClient";
+import { getSupabase } from "@/lib/supabaseClient";
 
 /**
  * A helper component to handle the layout switching.
@@ -85,6 +84,7 @@ function AppRoutes() {
 
 function App() {
   useEffect(() => {
+    const supabase = getSupabase();
     console.log("[App] supabase client ready:", Boolean(supabase));
   }, []);
 
@@ -92,10 +92,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <TooltipProvider>
-          <BrowserRouter>
-            <Toaster />
-            <AppRoutes />
-          </BrowserRouter>
+          <Toaster />
+          <AppRoutes />
         </TooltipProvider>
       </HelmetProvider>
     </QueryClientProvider>

@@ -1,28 +1,30 @@
-import { useEffect, useState } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { useEffect } from 'react';
+import { getSupabase } from '@/lib/supabaseClient';
 import { useAuthStore } from './useAuthStore';
 
 export function useAuth() {
-  const { session, setSession } = useAuthStore();
-  const [loading, setLoading] = useState(true);
+  const { session, user, profile, loading, setSession } = useAuthStore();
 
   useEffect(() => {
-    const getSession = async () => {
+    const supabase = getSupabase();
+    if (!supabase) return;
+    const getInitialSession = async () => {
       const { data } = await supabase.auth.getSession();
-      setSession(data.session);
-      setLoading(false);
+      await setSession(data.session);
     };
 
-    getSession();
+    getInitialSession();
 
-    const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
+    const { data: authListener } = supabase.auth.onAuthStateChange((_event, newSession) => {
+      setSession(newSession);
     });
 
     return () => {
-      authListener.subscription.unsubscribe();
+      authListener?.subscription.unsubscribe();
     };
   }, [setSession]);
 
-  return { session, loading, user: session?.user ?? null };
+  const isAdmin = profile?.role === 'admin';
+
+  return { session, loading, user, profile, isAdmin };
 }

@@ -1,6 +1,6 @@
 // client/src/components/Auth.tsx
 import React, { useState } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
@@ -10,6 +10,9 @@ export function Auth() {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
+  // Determine the base URL for redirects
+  const appBaseUrl = import.meta.env.VITE_APP_URL || window.location.origin;
+
   // 🔹 Magic Link Login
   const handleMagicLinkLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,11 +20,13 @@ export function Auth() {
 
     console.log('[login] Magic link requested for email (masked):', `${email.replace(/(.{2}).+(@.+)/, '$1***$2')}`);
 
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
+          emailRedirectTo: `${appBaseUrl}/auth/callback`,
         },
       });
 
@@ -55,12 +60,13 @@ export function Auth() {
   const handleGitHubLogin = async () => {
     setLoading(true);
     console.log('[login] GitHub OAuth started...');
-
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?hash={hash}`,
+        redirectTo: `${appBaseUrl}/auth/callback?hash={hash}`,
       },
     });
 
@@ -90,13 +96,14 @@ export function Auth() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     console.log('[login] Google OAuth started...');
-
+    const supabase = getSupabase();
+    if (!supabase) return;
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
           // IMPORTANT: route callback to our client callback so AuthCallback can capture session
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo: `${appBaseUrl}/auth/callback`,
         },
       });
 

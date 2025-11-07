@@ -5,7 +5,7 @@ import OrderDetailsSlideOver from '../components/OrderDetailsSlideOver';
 import { fetchOrders, adminApi } from '../services/api'; // <-- service layer (adminApi used for numeric signature)
 
 // Use the shared singleton supabase client to avoid multiple GoTrue instances
-import supabase from '../../lib/supabaseClient';
+import { getSupabase } from '../../lib/supabaseClient';
 
 type Order = {
   id: string;
@@ -66,14 +66,7 @@ const AdminOrdersPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [adminToken, setAdminToken] = useState<string | undefined>(() => sessionStorage.getItem('admin-token') || undefined);
-
-  const loadOrders = useCallback(async (token: string | undefined) => {
-    if (!token) {
-      setError('Admin token not provided.');
-      setLoading(false);
-      return;
-    }
+  const loadOrders = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -82,8 +75,7 @@ const AdminOrdersPage: React.FC = () => {
       const resp = await adminApi.getOrders(
         currentPage,
         ORDERS_PER_PAGE,
-        { status: statusParam, search: searchQuery },
-        token
+        { status: statusParam, search: searchQuery }
       );
 
       const data = (resp && (resp.items || resp.data || resp.orders)) || [];
@@ -100,11 +92,8 @@ const AdminOrdersPage: React.FC = () => {
       setTotalPages(Math.max(1, Math.ceil(total / ORDERS_PER_PAGE)));
     } catch (err: any) {
       setError(err?.message || 'Failed to load orders');
-      if (err?.message?.includes('Unauthorized')) {
-        sessionStorage.removeItem('admin-token');
-        setAdminToken(undefined);
-        setError('Invalid admin token. Please refresh and try again.');
-      }
+      // The backend now handles authentication via Supabase, so no client-side token removal needed here.
+      // If unauthorized, the backend will return a 401, which the frontend should handle via global auth context.
       setOrders([]);
       setTotalPages(1);
     } finally {
@@ -113,26 +102,15 @@ const AdminOrdersPage: React.FC = () => {
   }, [currentPage, statusFilter, searchQuery]);
 
   useEffect(() => {
-    if (adminToken) {
-      loadOrders(adminToken);
-    } else {
-      const token = window.prompt('Please enter the admin password:');
-      if (token) {
-        sessionStorage.setItem('admin-token', token);
-        setAdminToken(token);
-      } else {
-        setError('Admin password is required to view orders.');
-        setLoading(false);
-      }
-    }
-  }, [adminToken, loadOrders]);
+    // TODO: Implement proper admin authentication flow.
+    // Client-side password prompt removed.
+    loadOrders();
+  }, [loadOrders]);
 
-  // This effect re-runs the loadOrders call whenever the token, page, or filters change.
+  // This effect re-runs the loadOrders call whenever the page, or filters change.
   useEffect(() => {
-    if (adminToken) {
-      loadOrders(adminToken);
-    }
-  }, [adminToken, currentPage, statusFilter, searchQuery, loadOrders]);
+    loadOrders();
+  }, [currentPage, statusFilter, searchQuery, loadOrders]);
 
 
   // ---------------------------
@@ -143,12 +121,12 @@ const AdminOrdersPage: React.FC = () => {
   useEffect(() => {
     const subscribe = () => {
       if (subscriptionRef.current) return;
-      if (!supabase) {
+      if (!getSupabase()) {
         console.warn('Supabase client not initialized. Cannot subscribe.');
         return;
       }
       try {
-        const channel = supabase
+        const channel = getSupabase()
           .channel('public:orders')
           .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload: any) => {
             // simple safe behavior: refetch current page; keep for cases where payload isn't aligned with client filters
@@ -163,8 +141,8 @@ const AdminOrdersPage: React.FC = () => {
 
     const unsubscribe = () => {
       try {
-        if (subscriptionRef.current && supabase) {
-          supabase.removeChannel(subscriptionRef.current);
+        if (subscriptionRef.current && getSupabase()) {
+          getSupabase().removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
       } catch (e) {
@@ -189,8 +167,8 @@ const AdminOrdersPage: React.FC = () => {
     return () => {
       document.removeEventListener('visibilitychange', onVisibility);
       try {
-        if (subscriptionRef.current && supabase) {
-          supabase.removeChannel(subscriptionRef.current);
+        if (subscriptionRef.current && getSupabase()) {
+          getSupabase().removeChannel(subscriptionRef.current);
           subscriptionRef.current = null;
         }
       } catch (e) {

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { getSupabase } from '@/lib/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
@@ -17,7 +17,7 @@ export default function MagicLinkRequest() {
     setMessage('');
 
     try {
-      const { error } = await supabase.auth.signInWithOtp({
+      const { error } = await getSupabase().auth.signInWithOtp({
         email,
         options: {
           // This URL must be listed in your Supabase project's redirect URLs
